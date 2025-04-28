@@ -1,6 +1,6 @@
 %\usepackage[letterpaper,showframe]{geometry}	
 % usuwanie nagłówków/stopek z\,dokumentu
-\usepackage[skip=4pt,indent=0pt]{parskip} % ustawianie paragrafów
+\usepackage[skip=3pt,indent=0pt]{parskip} % ustawianie paragrafów
 %\setstretch{1.5} % półtorej linii odległości między wierszami
 \usepackage{titlesec} % ustawianie nagłówków
 %\usepackage{fullpage} % redukcja marginesów
@@ -25,6 +25,7 @@
 % ------------------------------ GREGORIO -----------------------------------
 % -----------------------------------------------------------------------------------
 \usepackage{gregoriotex}
+\definecolor{gregoriocolor}{RGB}{255,0,0}
 \gresetlinecolor{gregoriocolor}% Make staff lines red; remove for black:
 %\gresetgregoriofont{granapadano} %{gregorio}
 \gresetheadercapture{annotation}{greannotation}{string}% odczytuje adnotacje nad inicjałem jako ciąg, co pozwala na jego renderowanie
@@ -95,10 +96,10 @@
 %\setmainfont{Cardo}%ok
 %\setmainfont{Antykwa Torunska}%ok
 %\setmainfont{Alfios}%ok
-\setmainfont{MinionPro}
+%\setmainfont{MinionPro}
 %\setmainfont{BaskervilleF}%ok
 %\setmainfont{EB Garamond}%ok
-%\usepackage[osf,p]{libertine}
+\usepackage{libertine}
 % definiowanie fontów w  LuaLATEX':
 \setsansfont{CMU Sans Serif}
 \setmonofont{CMU Typewriter Text}
@@ -127,7 +128,7 @@
 % -----------------------------------------------------------------------------------
 \usepackage{xcolor} % kolory
 \usepackage{graphicx} % umożliwia import obrazów
-\graphicspath{{/home/w5rdshat2-h/Documents/Latex/img/}} % katalog obrazów
+\graphicspath{{../../img/}} % katalog obrazów
 \usepackage{pgfornament}% ornamenty graficzne
 % -----------------------------------------------------------------------------------
 % ----------------------------------- RUBRYKA---------------------------------
@@ -212,8 +213,9 @@
 % -----------------------------------------------------------------------------------
 %\newcommand{\firstchar}[1]{\directlua{tex.sprint(unicode.utf8.sub('#1',1,1))}}%makro pobiera pierwszy znak ze stringu
 \newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\mred}[1]{\leftskip7pt\makebox[3pt][r]{\textcolor{red}{\footnotesize{#1}}}}
 \newcommand{\black}[1]{\textcolor{black}{#1}}
-\newcommand{\numer}[1]{\noindent\makebox[1em][s]{\textcolor{red}{#1}}}
+%\newcommand{\numer}[1]{\noindent\makebox[1em][l]{\textcolor{red}{#1}}}
 % --------------------------------
 \newcommand{\tlumacz}[1]{\textpolish{\small\textit{#1}}}
 \newcommand{\inicjal}[2]{\textcolor{red}{\Large\textbf{#1}}{#2}}
