@@ -1,0 +1,221 @@
+% !TEX TS-program = lualatex+se
+% !TEX encoding = UTF-8
+\documentclass[12pt, a4paper]{book}
+
+% --- USTAWIENIA STRONY ---
+\usepackage{geometry}
+\geometry{
+%	showframe=true,
+%	showcrop=true,
+	left=20mm,
+	right=20mm,
+	top=20mm,
+	bottom=18mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+%\usepackage[letterpaper,showframe]{geometry}	
+% usuwanie nagłówków/stopek z\,dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+%\setstretch{1.5} % półtorej linii odległości między wierszami
+\usepackage{titlesec} % ustawianie nagłówków
+%\usepackage{fullpage} % redukcja marginesów
+\usepackage{setspace} % odstępy między liniami
+\usepackage{enumitem}% listy numerowane
+% -----------------------------
+
+%----------- style nagłówków ----------------
+\newcommand{\headingone}{\scshape\Large}
+\newcommand{\headingtwo}{\large}
+\newcommand{\margintext}[1]{\textit{\small #1}}
+% przesunięcia poziome
+\newcommand{\smallwidth}{\hskip 1em}
+\newcommand{\medwidth}{\hskip 3pt}
+\newcommand{\largewidth}{\hskip 12pt}
+% przesunięcia pionowe
+\newcommand{\linespace}{\vskip 6pt}
+\newcommand{\paragraphspace}{\vskip 10pt}
+\newcommand{\segmentspace}{\vskip 16pt}
+\newcommand{\sectionspace}{\vskip 28pt}
+%------------------------------------------
+
+% --- GREGORIO ---	
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\gresetheadercapture{annotation}{greannotation}{string}% odczytuje adnotacje nad inicjałem jako ciąg, co pozwala na jego renderowanie
+\gresetheadercapture{commentary}{grecommentary}{string}% odczytuje komentarz jako ciąg, co pozwala na jego renderowanie
+\grechangedim{commentaryraise}{0.3cm}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+\grechangestyle{annotation}{\color{black}\small}% format adnotacji
+\grechangestyle{commentary}{\color{gregoriocolor}\small\itshape}% format komentarza
+\grechangestyle{abovelinestext}{\color{gregoriocolor}\small\itshape}% format napisu nad liniami
+\grechangestyle{initial}{\fontsize{36}{36}\selectfont} % zmniejsza wielkość inicjału do bardziej proporcjonalnego rozmiaru (=36pt)
+\grechangedim{intersyllablespacenotes}{0.26cm}{scalable}% Minimalna odległość między nutami różnych sylab.
+
+% umieszczenie zawartości składu ich unikalnego argumentu po lewej i prawej stronie każdej linii
+\let\grelocalleftbox\localleftbox
+\let\grelocalrightbox\localrightbox
+
+\newcommand{\wstawplik}[1]{\input{/Users/Laser/Documents/Latex/include/#1}}%skraca kod
+%\newcommand{\separator}{\greseparator{3}{40}}
+%\newfontface\vectis{VectisMonumentalW01-Regular}
+%\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
+% ------------------
+
+%\usepackage[hyperindex=true]{hyperref}% przypisy dolne
+
+%---- usun konflikt między paracol i luacolor ----
+\wstawplik{include/conparlua}
+%-----------------------------------------------
+
+% --- SPIS TREŚCI -------
+%\usepackage{imakeidx}
+%\makeindex[title=Alfabetyczny spis program=texindy,options=-M styl.xdy]
+%\usepackage{filecontents}
+%\begin{filecontents*}{styl.xdy}
+%;;; xindy style file
+%(markup-locclass-list :open "\dotfill" :sep "")
+%(define-attributes (( "textbf" "default" )) )
+%(markup-locref   :attr  "textbf"     :open "\textbf{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "textit"     :open "\textit{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "textttt"     :open "\textttt{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "texttsc"     :open "\texttsc{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "default"     :open "\hyperpage{" :close "}")
+%\end{filecontents*}
+% -------------------------
+
+% ---  Konfiguracja kolumn ---
+\usepackage{paracol}
+\setcolumnwidth{.49\textwidth, .49\textwidth}
+\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{.02\textwidth}
+\colseprulecolor{red}% wymagany pakiet xcolor
+\footnotelayout{m}
+% ----------------------------
+
+\makeatletter 
+\patchcmd\pcol@hfil
+ {\copy\pcol@tempboxa}
+ {\luacolorresetboxcolor\pcol@tempboxa\copy\pcol@tempboxa}{}{\fail}
+\makeatother
+% ----------------------------
+
+\footnotelayout{m}
+
+%% --- UKŁAD DWUKOLUMNOWY Z TŁUMACZENIEM ---
+%\usepackage{tcolorbox}
+%\newtcolorbox{nutybox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=center}
+%\newtcolorbox{tlumbox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=top, fontupper=\small\itshape} 
+%\newcommand{\nuty}[1]{\begin{nutybox}#1 \end{nutybox}}
+%\newcommand{\tlum}[1]{\begin{tlumbox}\tlumacz{#1} \end{tlumbox}}
+%% ------------------------------------------------------
+
+\usepackage{Tabbing}
+\usepackage{longtable}
+\usepackage[savepos]{zref}
+
+% --- CZCIONKI DOKUMENTU ---
+\usepackage[latin,polish]{babel}
+\usepackage{fontspec}
+%\usepackage{times}
+%\usepackage[math]{anttor}
+%\usepackage{tgtermes}
+%\usepackage{mathptmx}
+\usepackage{ebgaramond}
+\usepackage{libertine}
+\defaultfontfeatures{Ligatures=TeX}
+
+%\setmainfont{TeX Gyre Termes}
+%\setmainfont{TeX Gyre Heros}
+%\setmainfont{Calluna Regular}
+\setmainfont{EB Garamond}
+%\setmainfont{Bodoni Moda}
+%\newfontfamily{\sekfont}{Times New Roman}
+\newfontfamily{\sekfont}{Libertinus Serif}
+\newcommand\sekcjafont{\fontsize{16}{16}\selectfont \sekfont}
+
+%----- Strona tytułowa -------------
+\newfontfamily{\tytfont}{JSL Ancient}
+\newcommand\tytulfont[1]{\fontsize{36}{30}\selectfont \tytfont#1\par}
+\newcommand\podtytulfont[1]{\fontsize{18}{10}\selectfont \tytfont#1\par}
+
+%\setmainfont[<font features>]{<name of font>} % sets the roman font
+%\setsansfont[<font features>]{<name of font>} % sets the sans font
+%\setmonofont[<font features>]{<name of font>} % sets the monospace font
+
+% --- KONIEC CZCIONKI DOKUMENTU ---
+
+% --- GRAFIKA I KOLORY ---
+\usepackage{xcolor} % kolory
+\usepackage{graphicx} % umożliwia import obrazów
+\graphicspath{{img/}} % katalog obrazów
+\usepackage{pgfornament}% ornamenty graficzne
+% --- KONIEC GRAFIKA I KOLORY -----------
+
+% --- KOMENDY WŁASNE ---
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+% --------------------------------
+\newcommand{\tlumacz}[1]{\textit{#1}}
+\newcommand{\inicjal}[2]{\textcolor{red}{\LARGE\textbf{#1}}{#2}}
+%--------------------------------
+\titlespacing*{\chapter}{0pt}{0pt}{5pt}	
+\titleformat{\chapter}[hang]{\filcenter\LARGE\scshape\bfseries}{}{0pt}{} % format nagłówków
+\titlespacing*{\section}{0pt}{0pt}{0pt}	
+\titleformat{\section}[hang]{\filcenter\large\scshape}{}{0pt}{} % format nagłówków
+
+% ----------- RUBRYKA -------------------
+\newcommand{\rubryka}[1]{
+	\begin{spacing}{0.8}
+	\begin{center}
+		\parbox{0.9\textwidth}{\centering\textcolor{red}{\small\textit{#1}}}
+	\end{center}
+	\end{spacing}
+	\linespace}
+% ----------- SEKCJA --------------------
+% -----------------------------------------
+%\renewcommand\fbox{\fcolorbox{red}{white}}% czerwona ramka fbox-a
+\newcommand{\sekcja}[2]{
+	\begin{spacing}{0.6}
+	\begin{center}
+		\section*{#1}
+		\linespace
+		\begin{minipage}{0.88\linewidth}
+			\red{\small\textit{#2}}
+		\end{minipage}
+	\end{center}	
+	\end{spacing}
+	\paragraphspace}
+%------------DEKOR ---------------------
+\newcommand{\dekor}[2]{
+	\begin{center}
+		\vspace*{\fill}
+		\includegraphics[width=#1\textwidth]{#2}
+		\vspace*{\fill}
+	\end{center}}
+%------- Zarządzanie wersami w psalmach z tlumaczeniem -------------------------
+\newcounter{licznik}
+\newcommand{\licznikZero}{\setcounter{licznik}{0}}% zeruj licznik
+\newcommand{\licznikUp}{\refstepcounter{licznik}}% zwiększ licznik 
+\licznikZero
+\newcommand{\BeginParallel}{\begin{spacing}{0.9} \begin{paracol}{2} \licznikZero}
+\newcommand{\lat}[1]{\selectlanguage{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}\ifnum \value{licznik}>0 \licznikUp \thelicznik .~{#1}\par \else \licznikUp{#1}\par \fi \end{minipage}\switchcolumn}
+\newcommand{\latN}[1]{\selectlanguage{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}{#1}\par\end{minipage}\switchcolumn}% kolumna bez numeracji wersów
+\newcommand{\pol}[1]{\selectlanguage{polish}\begin{minipage}[t]{\linewidth}{#1}\par\end{minipage}\switchcolumn*}
+\newcommand{\EndParallel}{\end{paracol} \end{spacing}}
+
+% --- ZNAKI SPECJALNE ---
+% 
+%\newcommand <c>†</c>
+% --------------------------
+
+\begin{document}
+\pagestyle{plain}	
+\large
+
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+
+\pagenumbering{gobble} % nie jest wyprowadzany żaden numer strony, chociaż numer jest nadal resetowany. Odniesienia do tej strony również są puste.
+
+
+\end{document}
