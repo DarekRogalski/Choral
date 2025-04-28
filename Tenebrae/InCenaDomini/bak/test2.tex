@@ -1,0 +1,277 @@
+% !TEX TS-program = lualatex+se
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[14pt, a4paper]{extbook}
+
+% --- USTAWIENIA STRONY ---
+\usepackage{geometry}
+\geometry{
+	left=15mm,
+	right=15mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+%\usepackage[letterpaper,showframe]{geometry}	
+% usuwanie nagłówków/stopek z\,dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+%\setstretch{1.5} % półtorej linii odległości między wierszami
+\usepackage{titlesec} % ustawianie nagłówków
+%\usepackage{fullpage} % redukcja marginesów
+\usepackage{setspace} % odstępy między liniami
+\usepackage{enumitem}% listy numerowane
+\usepackage{soul}
+% -----------------------------
+\renewcommand*{\thepage}{\footnotesize{\arabic{page}}}% mniejsza czcionka numeru strony, dodanie czegokolwiek przed numerem: {A--\arabic{page}}
+\newcommand{\margintext}[1]{\textit{\small #1}}
+% przesunięcia poziome
+\newcommand{\smallwidth}{\hskip 1em}
+\newcommand{\medwidth}{\hskip 3pt}
+\newcommand{\largewidth}{\hskip 12pt}
+% przesunięcia pionowe
+\newcommand{\linespace}{\vskip 7pt}
+\newcommand{\paragraphspace}{\vskip 8pt}
+\newcommand{\segmentspace}{\vskip 18pt}
+\newcommand{\sectionspace}{\vskip 28pt}
+%------------------------------------------
+\newcommand{\wstawplik}[1]{\input{/Users/Laser/Documents/Latex/include/#1}}%skraca kod
+% --- GREGORIO ---	
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}% Make staff lines red; remove for black:
+%\gresetgregoriofont{granapadano} %{gregorio}
+\gresetheadercapture{annotation}{greannotation}{string}% odczytuje adnotacje nad inicjałem jako ciąg, co pozwala na jego renderowanie
+\gresetheadercapture{commentary}{grecommentary}{string}% odczytuje komentarz jako ciąg, co pozwala na jego renderowanie
+\grechangedim{commentaryraise}{0.3cm}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+\grechangestyle{annotation}{\color{black}\small}% format adnotacji
+\grechangestyle{commentary}{\color{gregoriocolor}\small}% format komentarza
+\grechangestyle{abovelinestext}{\color{gregoriocolor}\small}% format napisu nad liniami
+\grechangestyle{initial}{\fontsize{36}{36}\selectfont} % zmniejsza wielkość inicjału do bardziej proporcjonalnego rozmiaru (=36pt)
+\grechangedim{intersyllablespacenotes}{0.2cm}{scalable}% Minimalna odległość między nutami różnych sylab.
+% Set the space around the initial:
+% See http://gregorio-project.github.io/gregoriotex/details.html for more details and options
+\grechangedim{beforeinitialshift}{0.5mm}{scalable}
+\grechangedim{afterinitialshift}{1.0mm}{scalable}
+
+% umieszczenie zawartości składu ich unikalnego argumentu po lewej i prawej stronie każdej linii
+\let\grelocalleftbox\localleftbox
+\let\grelocalrightbox\localrightbox
+
+%\newcommand{\separator}{\greseparator{3}{40}}
+%\newfontface\vectis{VectisMonumentalW01-Regular}
+%\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
+% ------------------
+
+\usepackage[hyperindex=true]{hyperref}
+
+%---- usun konflikt między paracol i luacolor ----
+%\wstawplik{conparlua}
+%-----------------------------------------------
+
+% --- SPIS TREŚCI -------
+%\usepackage{imakeidx}
+%\makeindex[title=Alfabetyczny spis program=texindy,options=-M styl.xdy]
+%\usepackage{filecontents}
+%\begin{filecontents*}{styl.xdy}
+%;;; xindy style file
+%(markup-locclass-list :open "\dotfill" :sep "")
+%(define-attributes (( "textbf" "default" )) )
+%(markup-locref   :attr  "textbf"     :open "\textbf{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "textit"     :open "\textit{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "textttt"     :open "\textttt{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "texttsc"     :open "\texttsc{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "default"     :open "\hyperpage{" :close "}")
+%\end{filecontents*}
+% -------------------------
+
+% ---  Konfiguracja kolumn ---
+\usepackage{paracol}
+\setcolumnwidth{.49\textwidth, .49\textwidth}
+\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{.02\textwidth}
+\colseprulecolor{red}% wymagany pakiet xcolor
+\footnotelayout{m}
+% ----------------------------
+
+%\makeatletter 
+%\patchcmd\pcol@hfil
+% {\copy\pcol@tempboxa}
+% {\luacolorresetboxcolor\pcol@tempboxa\copy\pcol@tempboxa}{}{\fail}
+%\makeatother
+% ----------------------------
+
+\footnotelayout{m}
+
+%% --- UKŁAD DWUKOLUMNOWY Z TŁUMACZENIEM ---
+%\usepackage{tcolorbox}
+%\newtcolorbox{nutybox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=center}
+%\newtcolorbox{tlumbox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=top, fontupper=\small\itshape} 
+%\newcommand{\nuty}[1]{\begin{nutybox}#1 \end{nutybox}}
+%\newcommand{\tlum}[1]{\begin{tlumbox}\tlumacz{#1}\end{tlumbox}}
+%% ------------------------------------------------------
+
+\usepackage{Tabbing}
+\usepackage{longtable}
+\usepackage[savepos]{zref}
+
+% --- CZCIONKI DOKUMENTU ---
+\usepackage[latin,polish]{babel}
+\usepackage{fontspec}
+%\usepackage{times}
+%\usepackage[math]{anttor}
+%\usepackage{tgtermes}
+%\usepackage{mathptmx}
+\usepackage{ebgaramond}
+\usepackage[osf,p]{libertine}
+\defaultfontfeatures{Ligatures=TeX}
+
+%\setmainfont{TeX Gyre Termes}
+%\setmainfont{TeX Gyre Heros}
+%\setmainfont{Calluna Regular}
+\setmainfont{EB Garamond}
+%\setmainfont{Bodoni Moda}
+%\newfontfamily{\sekfont}{Times New Roman}
+\newfontfamily{\sekfont}{Libertinus Serif}
+\newcommand\sekcjafont{\fontsize{16}{16}\selectfont \sekfont}
+
+%----- Strona tytułowa -------------
+\newfontfamily{\tytfont}{JSL Ancient}
+\newcommand\tytulfont[1]{\fontsize{36}{30}\selectfont \tytfont#1\par}
+\newcommand\podtytulfont[1]{\fontsize{18}{10}\selectfont \tytfont#1\par}
+
+%\setmainfont[<font features>]{<name of font>} % sets the roman font
+%\setsansfont[<font features>]{<name of font>} % sets the sans font
+%\setmonofont[<font features>]{<name of font>} % sets the monospace font
+
+% --- KONIEC CZCIONKI DOKUMENTU ---
+
+% --- GRAFIKA I KOLORY ---
+\usepackage{xcolor} % kolory
+\usepackage{graphicx} % umożliwia import obrazów
+\graphicspath{{img/}} % katalog obrazów
+\usepackage{pgfornament}% ornamenty graficzne
+% --- KONIEC GRAFIKA I KOLORY -----------
+
+% --- KOMENDY WŁASNE ---
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+% --------------------------------
+%\newcommand{\firstchar}[1]{\directlua{tex.sprint(unicode.utf8.sub('#1',1,1))}}%makro pobiera pierwszy znak ze stringu
+\newcommand{\tlumacz}[1]{\small\textit{#1}}
+\newcommand{\inicjal}[2]{\textcolor{red}{\Large\textbf{#1}}{#2}}
+\newcommand{\tlumaczenie}[3]{\selectlanguage{polish}\textcolor{red}{\Large\textbf{#1}}{#2}{#3}}%
+%--------------------------------
+% ----------- RUBRYKA -------------------
+\newcommand{\rubryka}[1]{
+		\parbox{\textwidth}{\hspace{5mm}\small\textit{\red{#1}}}
+	\linespace}
+%-----------STYLE NAGŁÓWKÓW ----------------
+%
+% ----------- ROZDZIAŁ --------------------
+\titlespacing*{\chapter}{0pt}{-40pt}{0pt}	
+\titleformat{\chapter}[hang]{\filcenter\scshape\bfseries\Large}{}{0pt}{} % format nagłówków
+\newcommand{\rozdzial}[2]{
+		\chapter{#1}
+		\vspace{-1em}
+		\begin{spacing}{0.8}
+			\begin{center}
+				\parbox{0.9\textwidth}{\centering\small\textit{\red{#2}}}
+			\end{center}
+		\end{spacing}
+		\linespace}
+
+% ----------- SEKCJA --------------------
+\titlespacing*{\section}{0pt}{0pt}{0pt}	
+\titleformat{\section}[hang]{\filcenter\scshape\normalfont}{}{0pt}{} % format nagłówków
+\newcommand{\sekcja}[2]{
+	\begin{spacing}{0.6}
+	\begin{center}
+		\segmentspace
+		\section*{#1}
+		\begin{minipage}[c]{0.88\linewidth}
+			\rubryka{#2}
+			%\centering\red{\small\textit{#2}}
+		\end{minipage}
+	\end{center}	
+	\end{spacing}
+	\linespace}
+	
+% ----------- SUBSEKCJA --------------------	
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}	
+\titleformat{\subsection}[hang]{\normalfont\scshape}{}{0pt}{} % format podnagłówków
+\newcommand{\subsekcja}[1]{
+	\segmentspace
+	\subsection*{\red{#1}}		
+	\segmentspace}
+%------------ Tytuł -----------------------
+\newcommand{\tytul}[1]{
+	\red{\large\scshape{#1}\linespace}}
+%------------ Podytuł -----------------------
+\newcommand{\podtytul}[1]{
+	\red{\normalfont\scshape{#1}\linespace}}
+%------------DEKOR ---------------------
+\newcommand{\dekor}[2]{
+	\begin{center}
+		\vspace*{\fill}
+		\includegraphics[width=#1\textwidth]{#2}
+		\vspace*{\fill}
+	\end{center}}
+%------- Zarządzanie wersami w psalmach z tlumaczeniem -------------------------
+\newcounter{licznik}
+\newcommand{\licznikZero}{\setcounter{licznik}{0}}% zeruj licznik
+\newcommand{\licznikUp}{\refstepcounter{licznik}}% zwiększ licznik 
+\licznikZero
+\newcommand{\BeginParallel}{\begin{spacing}{0.8}\begin{paracol}{2}\licznikZero}
+\newcommand{\lat}[1]{\selectlanguage{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}\ifnum \value{licznik}>0 \licznikUp \thelicznik .~#1 \else \licznikUp#1 \fi \end{minipage}\switchcolumn}
+\newcommand{\latN}[1]{\selectlanguage{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}#1\end{minipage}\switchcolumn}% kolumna bez numeracji wersów
+\newcommand{\pol}[1]{\selectlanguage{polish}\begin{minipage}[t]{\linewidth}#1\end{minipage}\switchcolumn*}
+\newcommand{\EndParallel}{\end{paracol}\end{spacing}}
+
+% --- ZNAKI SPECJALNE ---
+% 
+%\newcommand †
+% --------------------------
+
+\begin{document}
+\pagestyle{plain}% nagłówek i stopka pusta	
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+\gresetinitiallines{0}\gabcsnippet{<c>7. </c>Ut(f) si(gh)ne(h) ti(h)mó(h)re,(h) de(h) ma(h)nu(h) in(h)i(h)mi(h)có(h)rum(h) nos(h)tró(h)<i><ul>rum</i></ul>(hg) <i><ul>li</i></ul>(ixgi)<i><ul>be</i></ul>(h hr[ocb:1{])<b>rá</b>(hg[ocb:0}])ti,(gh..) <c>*</c>(:) ser(h)vi(h)<i><ul>á</i></ul>(g)<i><ul>mus</i></ul>(f) <b>il</b>(gh gr)li.(g.) (::)}
+\red{8.} In sanctitáte, et justíti\ul{\textit{a}} \ul{\textit{co}}\ul{\textit{ram}} \textbf{ip}so,~* ómnibus di\ul{\textit{é}}\ul{\textit{bus}} \textbf{nos}tris.\\
+\red{9.} Et tu, puer, Prophéta Altís\ul{\textit{si}}\ul{\textit{mi}} \ul{\textit{vo}}\textbf{cá}\textbf{be}ris:~* præíbis enim ante fáciem Dómini, paráre \ul{\textit{vi}}\ul{\textit{as}} \textbf{e}jus:\\
+\red{10.} Ad dandam sciéntiam salú\ul{\textit{tis}} \ul{\textit{ple}}\ul{\textit{bi}} \textbf{e}jus:~* in remissiónem peccató\ul{\textit{rum}} \ul{\textit{e}}\textbf{ó}rum:\\
+\red{11.} Per víscera misericórdi\ul{\textit{æ}} \ul{\textit{De}}\ul{\textit{i}} \textbf{nos}tri:~* in quibus visitávit nos, óri\ul{\textit{ens}} \ul{\textit{ex}} \textbf{al}to:\\
+\red{12.} Illumináre his, qui in ténebris, et in um\ul{\textit{bra}} \ul{\textit{mor}}\ul{\textit{tis}} \textbf{se}dent:~* ad dirigéndos pedes nostros in \ul{\textit{vi}}\ul{\textit{am}} \textbf{pa}cis.
+\gresetinitiallines{1}\greannotation{Ad Bene-}\greannotation{dictus}\greannotation{1. g}\gabcsnippet{(c4) TRá(f)di(c')tor(d) au(dh)tem(ixh_i) () de(h')dit(g) e(e')is(f) si(g)gnum,(fe~) di(d.)cens :(d.) (;) Quem(d) o(fe)scu(d)lá(e')tus(f) fú(gh)e(g)ro,(f.) (,) i(f_g)pse(f) est,(c.) (;) te(e)né(g_[oh:h]e)te(f_e) e(d.)um.(d.) (::)}
+\rubryka{Flexis genibus:}\relax
+\gresetinitiallines{1}\greannotation{5.}\gabcsnippet{(c4) CHri(ffg)stus(f.) <c>*</c>(,) fa(fg)ctus(f) est(f') pro(f) no(ghF'ED.g_[oh:h]e/fg)bis(f.) (;) ob(f)é(hf/gh!jj/kjk)di(jij)ens(h_g) (,) us(h!jjh)que(f.) ad(ixfiH'Gh) mor(f_[oh:h]g_[oh:h]f_[oh:h])tem,(f.) (::)}
+%% --- Pater noster ---
+\hspace{5mm}Pater noster.~\textit{\red{secreto}}\\
+\rubryka{Aliquantulum altius:}
+\subsekcja{Psalm 50}
+\red{1.} Miserére mei Deus, \red{*} secúndum magnam misericórdiam tuam.\hfill\break
+\red{2.} Et secúndum multitúdinem miseratiónum tuárum, \red{*} dele iniquitátem meam.\hfill\break
+\red{3.} Amplius lava me ab iniquitáte mea: \red{*} et a peccáto meo munda me.\hfill\break
+\red{4.} Quóniam iniquitátem meam ego cognósco: \red{*} et peccátum meum contra me est semper.\hfill\break
+\red{5.} Tibi soli peccávi, et malum coram te feci: \red{*} ut justificéris in sermónibus tuis, et vincas cum judicáris.\hfill\break
+\red{6.} Ecce enim in iniquitátibus concéptus sum: \red{*} et in peccátis concépit me mater mea.\hfill\break
+\red{7.} Ecce enim veritátem dilexísti: \red{*} incérta et occúlta sapiéntiæ tuæ manifestásti mihi.\hfill\break
+\red{8.} Aspérges me hyssópo, et mundábor: \red{*} lavábis me, et super nivem dealbábor.\hfill\break
+\red{9.} Audítui meo dabis gáudium et lætítiam: \red{*} et exsultábunt ossa humiliáta.\hfill\break
+\red{10.} Avérte fáciem tuam a peccátis meis: \red{*} et omnes iniquitátes meas dele.\hfill\break
+\red{11.} Cor mundum crea in me, Deus: \red{*} et spíritum rectum ínnova in viscéribus meis.\hfill\break
+\red{12.} Ne projícias me a fácie tua: \red{*} et spíritum sanctum tuum ne áuferas a me.\hfill\break
+\red{13.} Redde mihi lætítiam salutáris tui: \red{*} et spíritu principáli confírma me.\hfill\break
+\red{14.} Docébo iníquos vias tuas: \red{*} et ímpii ad te converténtur.\hfill\break
+\red{15.} Líbera me de sanguínibus, Deus, Deus salútis meæ: \red{*} et exsultábit lingua mea justítiam tuam.\hfill\break
+\red{16.} Dómine, lábia mea apéries: \red{*} et os meum annuntiábit laudem tuam.\hfill\break
+\red{17.} Quóniam si voluísses sacrifícium, dedíssem útique: \red{*} holocáustis non delectáberis.\hfill\break
+\red{18.} Sacrifícium Deo spíritus contribulátus: \red{*} cor contrítum et humiliátum, Deus, non despícies.\hfill\break
+\red{19.} Benígne fac, Dómine, in bona voluntáte tua Sion: \red{*} ut ædificéntur muri Jerúsalem.\hfill\break
+\red{20.} Tunc acceptábis sacrifícium justítiæ, oblatiónes, et holocáusta: \red{*} tunc impónent super altáre tuum vítulos.
+\subsekcja{Oratio}
+\red{\hspace{5mm}\small\textit{Sine \textup{Oremus}, simili voce:}}
+\parbox{\textwidth}{\inicjal{R}{éspice}, quǽsumus, Dómine, super hanc famíliam tuam, pro qua Dóminus noster Jesus Christus non dubitávit mánibus tradi nocéntium, et crucis subíre torméntum:}
+\rubryka{Et sub silentio concluditur:}
+\parbox{\textwidth}{\inicjal{Q}{ui} tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. \red{\Rbar.}~Amen.}
+\end{document}

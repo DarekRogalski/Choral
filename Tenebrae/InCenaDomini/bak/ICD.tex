@@ -1,0 +1,246 @@
+% !TEX TS-program = lualatex+se
+% !TEX encoding = UTF-8
+\documentclass[12pt, a4paper]{book}
+
+% --- USTAWIENIA STRONY ---
+\usepackage{geometry}
+\geometry{
+%	showframe=true,
+%	showcrop=true,
+	left=15mm,
+	right=15mm,
+	top=15mm,
+	bottom=18mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+%\usepackage[letterpaper,showframe]{geometry}	
+% usuwanie nagłówków/stopek z\,dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+%\setstretch{1.5} % półtorej linii odległości między wierszami
+\usepackage{titlesec} % ustawianie nagłówków
+%\usepackage{fullpage} % redukcja marginesów
+\usepackage{setspace} % odstępy między liniami
+%\usepackage{enumitem}% listy numerowane
+\usepackage{ulem}
+% -----------------------------
+
+%----------- style nagłówków ----------------
+\newcommand{\headingone}{\scshape\Large}
+\newcommand{\headingtwo}{\large}
+\newcommand{\margintext}[1]{\textit{\small #1}}
+% przesunięcia poziome
+\newcommand{\smallwidth}{\hskip 1em}
+\newcommand{\medwidth}{\hskip 3pt}
+\newcommand{\largewidth}{\hskip 12pt}
+% przesunięcia pionowe
+\newcommand{\linespace}{\vskip 6pt}
+\newcommand{\paragraphspace}{\vskip 10pt}
+\newcommand{\segmentspace}{\vskip 16pt}
+\newcommand{\sectionspace}{\vskip 28pt}
+%------------------------------------------
+
+% --- GREGORIO ---	
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\gresetheadercapture{annotation}{greannotation}{string}% odczytuje adnotacje nad inicjałem jako ciąg, co pozwala na jego renderowanie
+\gresetheadercapture{commentary}{grecommentary}{string}% odczytuje komentarz jako ciąg, co pozwala na jego renderowanie
+\grechangedim{commentaryraise}{0.3cm}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+\grechangestyle{annotation}{\color{black}\small}% format adnotacji
+\grechangestyle{commentary}{\color{gregoriocolor}\small}% format komentarza
+%\grechangestyle{commentary}{\color{gregoriocolor}\small\itshape}% format komentarza
+\grechangestyle{abovelinestext}{\color{gregoriocolor}\small\itshape}% format napisu nad liniami
+\grechangestyle{initial}{\fontsize{36}{36}\selectfont} % zmniejsza wielkość inicjału do bardziej proporcjonalnego rozmiaru (=36pt)
+\grechangedim{intersyllablespacenotes}{0.21cm}{scalable}% Minimalna odległość między nutami różnych sylab.
+
+% umieszczenie zawartości składu ich unikalnego argumentu po lewej i prawej stronie każdej linii
+\let\grelocalleftbox\localleftbox
+\let\grelocalrightbox\localrightbox
+
+\newcommand{\wstawplik}[1]{\input{/Users/Laser/Documents/Latex/include/#1}}%skraca kod
+
+
+\usepackage{Tabbing}
+\usepackage{longtable}
+\usepackage[savepos]{zref}
+
+% --- CZCIONKI DOKUMENTU ---
+\usepackage[latin,polish]{babel}
+\usepackage{fontspec}
+\usepackage{ebgaramond}
+\usepackage{libertine}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{EB Garamond}
+\newfontfamily{\sekfont}{Libertinus Serif}
+\newcommand\sekcjafont{\fontsize{16}{16}\selectfont \sekfont}
+
+%----- Strona tytułowa -------------
+\newfontfamily{\tytfont}{JSL Ancient}
+\newcommand\tytulfont[1]{\fontsize{36}{30}\selectfont \tytfont#1\par}
+\newcommand\podtytulfont[1]{\fontsize{18}{10}\selectfont \tytfont#1\par}
+% --- KONIEC CZCIONKI DOKUMENTU ---
+
+% --- GRAFIKA I KOLORY ---
+\usepackage{xcolor} % kolory
+\usepackage{graphicx} % umożliwia import obrazów
+\graphicspath{{img/}} % katalog obrazów
+\usepackage{pgfornament}% ornamenty graficzne
+% --- KONIEC GRAFIKA I KOLORY -----------
+
+% --- KOMENDY WŁASNE ---
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+% --------------------------------
+\newcommand{\tlumacz}[1]{\textit{#1}}
+\newcommand{\inicjal}[2]{\textcolor{red}{\LARGE\textbf{#1}}{#2}}
+%--------------------------------
+\titlespacing*{\chapter}{0pt}{0pt}{5pt}	
+\titleformat{\chapter}[hang]{\filcenter\LARGE\scshape\bfseries}{}{0pt}{} % format nagłówków
+\titlespacing*{\section}{0pt}{0pt}{0pt}	
+\titleformat{\section}[hang]{\filcenter\large\scshape\bfseries}{}{0pt}{} % format nagłówków
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}	
+\titleformat{\subsection}[hang]{\normalfont\scshape}{}{0pt}{} % format podnagłówków
+\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}	
+\titleformat{\subsubsection}[hang]{\normalfont\scshape}{}{0pt}{} % format podpodnagłówków
+
+% ----------- RUBRYKA -------------------
+\newcommand{\rubryka}[1]{
+	\begin{spacing}{0.8}
+	\begin{center}
+		\parbox{0.9\textwidth}{\centering\textcolor{red}{\small\textit{#1}}}
+	\end{center}
+	\end{spacing}
+	\linespace}
+% ----------- SEKCJA --------------------
+%\newcommand{\sekcja}[2]{
+%	\begin{spacing}{0.6}
+%	\begin{center}
+%		\section*{#1}
+%		\linespace
+%		\begin{minipage}{\linewidth}
+%			\centering\red{\small\textit{#2}}
+%		\end{minipage}
+%	\end{center}	
+%	\end{spacing}
+%	\paragraphspace}
+%------------DEKOR ---------------------
+%\newcommand{\dekor}[2]{
+%	\begin{center}
+%		\vspace*{\fill}
+%		\includegraphics[width=#1\textwidth]{#2}
+%		\vspace*{\fill}
+%	\end{center}}
+%------- Zarządzanie wersami w psalmach z tlumaczeniem -------------------------
+%\newcounter{licznik}
+%\newcommand{\licznikZero}{\setcounter{licznik}{0}}% zeruj licznik
+%\newcommand{\licznikUp}{\refstepcounter{licznik}}% zwiększ licznik 
+%\licznikZero
+%\newcommand{\BeginParallel}{\begin{spacing}{0.9} \begin{paracol}{2} \licznikZero}
+%\newcommand{\lat}[1]{\selectlanguage{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}\ifnum \value{licznik}>0 \licznikUp \thelicznik .~{#1}\par \else \licznikUp{#1}\par \fi \end{minipage}\switchcolumn}
+%\newcommand{\latN}[1]{\selectlanguage{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}{#1}\par\end{minipage}\switchcolumn}% kolumna bez numeracji wersów
+%\newcommand{\pol}[1]{\selectlanguage{polish}\begin{minipage}[t]{\linewidth}{#1}\par\end{minipage}\switchcolumn*}
+%\newcommand{\EndParallel}{\end{paracol} \end{spacing}}
+
+% --- ZNAKI SPECJALNE ---
+% 
+%\newcommand <c>†</c>
+% --------------------------
+
+\begin{document}
+\large
+\chapter*{Feria Quinta in Cena Domini}
+
+%\setlength{\parindent}{0pt}
+
+\section{IN I. NOCTURNO}
+\linespace
+%% -------- 1. Ant. Zelus -----------
+\greannotation{1. Ant.}\greannotation{8 c}\gabcsnippet{(c4)ZE(j)lus(j) do(j)mus(j) tu(j_k)ae(ji/jkj') * com(h)é(j')dit(i) me,(g.) (;) et(f) op(h)pró(j')bri(i)a(g_[uh:l]h) ex(f)pro(h)brán(j')ti(k)um(i') ti(j)bi(h.) (,) ce(h)ci(g)dé(hi)runt(h') su(g)per(fg~) me.(g.) (::)}
+\linespace
+\subsection{Psalm 68}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c>1. </c>Sal(g)vum(h) me(j) fac,(j) <b>De</b>(k jr)us:(j.) <c><v>\greheightstar</v></c>(:) quón(j)i(j)am(j) in(j)tra(j)vé(j)runt(j) a(j)quæ(j) us(j)que(j) ad(j) á(j)<i><ul>ni</ul></i>(h)<i><ul>mam</ul></i>(j) <b>me</b>(k jr)am.(j.) (::)}
+\begin{spacing}{0.8}
+\red{2.} Infíxus sum in limo pro\textbf{fún}di:~* et non \textit{\uline{est}} \textit\uline{sub}\textbf{stán}tia.
+
+\red{3.} Veni in altitúdinem \textbf{ma}ris:~* et tempés\textit\uline{tas} \textit\uline{de}\textbf{mér}sit me.
+
+\red{4.} Laborávi clamans, raucæ factæ sunt fauces \textbf{me}æ:~* defecérunt óculi mei, dum spero in \textit\uline{De}\textit\uline{um} \textbf{me}um.
+
+\red{5.} Multiplicáti sunt super capíllos cápitis \textbf{me}i,~* qui odé\textit\uline{runt} \textit\uline{me} \textbf{gra}tis.
+
+\red{6.} Confortáti sunt qui persecúti sunt me inimíci mei in\textbf{jús}te:~* quæ non rápui, tunc \textit\uline{ex}\textit\uline{sol}\textbf{vé}bam.
+
+\red{7.} Deus, tu scis insipiéntiam \textbf{me}am:~* et delícta mea a te non \textit\uline{sunt} \textit\uline{abs}\textbf{cón}dita.
+
+\red{8.} Non erubéscant in me qui exspéctant te, \textbf{Dó}mine,~* Dómi\textit\uline{ne} \textit\uline{vir}\textbf{tú}tum
+
+\red{9.} Non confundántur \textbf{su}per me~* qui quærunt te, \textit\uline{De}\textit\uline{us} \textbf{Is}raël.
+
+\red{10.} Quóniam propter te sustínui op\textbf{pró}brium:~* opéruit confúsio fá\textit\uline{ci}\textit\uline{em} \textbf{me}am.
+
+\red{11.} Extráneus factus sum frátribus \textbf{me}is,~* et peregrínus fíliis \textit\uline{ma}\textit\uline{tris} \textbf{me}æ.
+
+\red{12.} Quóniam zelus domus tuæ com\textbf{é}dit me:~* et oppróbria exprobrántium tibi ceci\textit\uline{dé}\textit\uline{runt} \textbf{su}per me.
+
+\red{13.} Et opérui in jejúnio ánimam \textbf{me}am:~* et factum est in oppró\textit\uline{bri}\textit\uline{um} \textbf{mi}hi.
+
+\red{14.} Et pósui vestiméntum meum ci\textbf{lí}cium:~* et factus sum illis \textit\uline{in} \textit\uline{pa}\textbf{rá}bolam.
+
+\red{15.} Advérsum me loquebántur, qui sedébant in \textbf{por}ta:~* et in me psallébant qui bi\textit\uline{bé}\textit\uline{bant} \textbf{vi}num.
+
+\red{16.} Ego vero oratiónem meam ad te, \textbf{Dó}mine:~* tempus beneplá\textit\uline{ci}\textit\uline{ti}, \textbf{De}us.
+
+\red{17.} In multitúdine misericórdiæ tuæ ex\textbf{áu}di me,~* in veritáte sa\textit\uline{lú}\textit\uline{tis} \textbf{tu}æ:
+
+\red{18.} Eripe me de luto, ut non in\textbf{fí}gar:~* líbera me ab iis, qui odérunt me, et de profún\textit\uline{dis} \textit\uline{a}\textbf{quá}rum.
+
+\red{19.} Non me demérgat tempéstas aquæ,~† neque absórbeat me pro\textbf{fún}dum:~* neque úrgeat super me púte\textit\uline{us} \textit\uline{os} \textbf{su}um.
+
+\red{20.} Exáudi me, Dómine, quóniam benígna est misericórdia \textbf{tu}a:~* secúndum multitúdinem miseratiónum tuárum ré\textit\uline{spi}\textit\uline{ce} \textbf{in} me.
+
+\red{21.} Et ne avértas fáciem tuam a púero \textbf{tu}o:~* quóniam tríbulor, velóci\textit\uline{ter} \textit\uline{ex}\textbf{áu}di me.
+
+\red{22.} Inténde ánimæ meæ, et líbera \textbf{e}am:~* propter inimícos meos \textit\uline{é}\textit\uline{ri}\textbf{pe} me.
+
+\red{23.} Tu scis impropérium meum, et confusiónem \textbf{me}am,~* et reverén\textit\uline{ti}\textit\uline{am} \textbf{me}am.
+
+\red{24.} In conspéctu tuo sunt omnes qui tríbu\textbf{lant} me:~* impropérium exspectávit cor meum, \textit\uline{et} \textit\uline{mi}\textbf{sé}riam.
+
+\red{25.} Et sustínui qui simul contristarétur, et non \textbf{fu}it:~* et qui consolarétur, et \textit\uline{non} \textit\uline{in}\textbf{vé}ni.
+
+\red{26.} Et dedérunt in escam \textbf{me}am fel:~* et in siti mea potavérunt \textit\uline{me} \textit\uline{a}\textbf{cé}to.
+
+\red{27.} Fiat mensa eórum coram ipsis in \textbf{lá}queum,~* et in retributiónes, \textit\uline{et} \textit\uline{in} \textbf{scán}dalum.
+
+\red{28.} Obscuréntur óculi eórum ne \textbf{ví}deant:~* et dorsum eórum sem\textit\uline{per} \textit\uline{in}\textbf{cúr}va.
+
+\red{29.} Effúnde super eos iram \textbf{tu}am:~* et furor iræ tuæ compre\textit\uline{hén}\textit\uline{dat} \textbf{e}os.
+
+\red{30.} Fiat habitátio eórum de\textbf{sér}ta:~* et in tabernáculis eórum non sit \textit\uline{qui} \textit\uline{in}\textbf{há}bitet.
+
+\red{31.} Quóniam quem tu percussísti, perse\textbf{cú}ti sunt:~* et super dolórem vúlnerum meórum \textit\uline{ad}\textit\uline{di}\textbf{dé}runt.
+
+\red{32.} Appóne iniquitátem super iniquitátem e\textbf{ó}rum:~* et non intrent in justí\textit\uline{ti}\textit\uline{am} \textbf{tu}am.
+
+\red{33.} Deleántur de libro vi\textbf{vén}tium:~* et cum justis \textit\uline{non} \textit\uline{scri}\textbf{bán}tur.
+
+\red{34.} Ego sum pauper et \textbf{do}lens:~* salus tua, De\textit\uline{us}, \textit\uline{su}\textbf{scé}pit me.
+
+\red{35.} Laudábo nomen Dei cum \textbf{cán}tico:~* et magnificábo e\textit\uline{um} \textit\uline{in} \textbf{lau}de:
+
+\red{36.} Et placébit Deo super vítulum no\textbf{vél}lum:~* córnua producén\textit\uline{tem} \textit\uline{et} \textbf{ún}gulas.
+
+\red{37.} Vídeant páuperes et læ\textbf{tén}tur:~* quǽrite Deum, et vivet á\textit\uline{ni}\textit\uline{ma} \textbf{ves}tra.
+
+\red{38.} Quóniam exaudívit páuperes \textbf{Dó}minus:~* et vinctos suos \textit\uline{non} \textit\uline{de}\textbf{spé}xit.
+
+\red{39.} Laudent illum cæli et \textbf{ter}ra,~* mare et ómnia reptíli\textit\uline{a} \textit\uline{in} \textbf{e}is.
+
+\red{40.} Quóniam Deus salvam fáciet \textbf{Si}on:~* et ædificabúntur civi\textit\uline{tá}\textit\uline{tes} \textbf{Ju}da.
+
+\red{41.} Et inhabitábunt \textbf{i}bi,~* et hereditáte ac\textit\uline{quí}\textit\uline{rent} \textbf{e}am.
+
+\red{42.} Et semen servórum ejus possidébit \textbf{e}am:~* et qui díligunt nomen ejus, habitá\textit\uline{bunt} \textit\uline{in} \textbf{e}a.
+\end{spacing}
+
+\end{document}
