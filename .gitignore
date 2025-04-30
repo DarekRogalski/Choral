@@ -21,3 +21,5 @@
 *.gz
 *.bz2
 *.iso
+*.DS_Store
+*.out
