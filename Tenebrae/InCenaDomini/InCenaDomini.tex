@@ -1,7 +1,7 @@
 % !TEX TS-program = lualatex+se
 % !TEX encoding = UTF-8 Unicode
 
-\documentclass[17pt, a4paper]{extreport}
+\documentclass[17pt, twoside, a4paper]{extreport}
 % -----------------------------------------------------------------------------------
 % ------------------------- USTAWIENIA STRONY--------------------------
 % -----------------------------------------------------------------------------------
@@ -20,6 +20,7 @@
 \begin{document}
 % -----------------------------------------------------------------------------------
 % ------------------------- STRONA TYTUŁOWA  --------------------------
+\thispagestyle{empty}
 \begin{center}
 	\includegraphics[width=1.0\linewidth]{HolyThursday03.jpg}
 	\vfill
@@ -27,373 +28,120 @@
 	\tytulfont{ Feria Quinta\\in C\oe{}na Domini}
 	\vfill
 	\large\textit{Liber usualis, Solesmes, 1961, p.626}
-\end{center}
-
+\end{center}%
 \newpage
+\thispagestyle{empty}
 \wstawplik{modlitwy_wstepne_has}
 \newpage
-\pagestyle{plain}% nagłówek i stopka pusta	
+\setcounter{page}{1}
+\fancyhead{}% wyczyść wszystkie pola nagłówka
+\pagestyle{plain}% nagłówek i stopka pusta - UWAGA: przedefiniowany styl przez polecenie fancypagestyle w header.tex	
 %\setlength{\parindent}{0pt}
 \gresetbracerendering{font}
 \sekcja{In I. Nocturno}{}
 %% -------- 1. Ant. Zelus -----------
 \greannotation{1. Ant.}\greannotation{8 c}\gabcsnippet{(c4)ZE(j)lus(j) do(j)mus(j) tu(j_k)æ(ji/jkj') <c><v>*</v></c> com(h)é(j')dit(i) me,(g.) (;) et(f) op(h)pró(j')bri(i)a(g_[uh:l]h) ex(f)pro(h)brán(j')ti(k)um(i') ti(j)bi(h.) (,) ce(h)ci(g)dé(hi)runt(h') su(g)per(fg~) me.(g.) (::)}
+\tlumaczR{Gryzła mnie żarliwość~\red{*} domu twego i urągania urągających tobie na mnie spadły.}
 \subsekcja{Psalm 68}
-\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Be(f)á(gh)ti(h) im(h)ma(h)cu(h)<b>lá</b>(ixi)ti(hr) in(h) <b>vi</b>(g hr)a:(h.) <c><v>*</v></c>(:) qui(h) ám(h)bu(h)lant(h) in(h) <i><ul>le</ul></i>(g)<i><ul>ge</ul></i>(f) <b>Dó</b>(gh)mi(gr)ni.(gvFED.) (::)}
-\mred{2.} Beáti, qui scrutántur testi\textbf{mó}nia \textbf{e}jus:~\red{*} in toto corde ex\textit{\ul{quí}}\textit{\ul{runt}} \textbf{e}um.
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Sal(g)vum(h) me(j) fac,(j) <b>De</b>(k jr)us:(j.) <c>*</c>(:) quón(j)i(j)am(j) in(j)tra(j)vé(j)runt(j) a(j)quæ(j) us(j)que(j) ad(j) á(j)<i><ul>ni</i></ul>(h)<i><ul>mam</i></ul>(j) <b>me</b>(k jr)am.(j.) (::) <i>Flex:</i>()  tem(j)pés(j)tas(j) a(j)quæ, <c>†</c>(h. j j j  ::)}
+\tlumaczR{Wybaw mię, Boże:~\red{*} boć weszły wody aż do duszy mojéj.}\linespace
+\columnratio{0.7}
+\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{.02\textwidth}
+\BeginParallel
+\latN{\mred{2.} Infíxus sum in \ul{\textit{li}}\ul{\textit{mo}} \ul{\textit{pro}}\textbf{fún}di:~\red{*} et non \ul{\textit{est}} \ul{\textit{sub}}\textbf{stán}tia.}\polPs{Ulgnąłem w błocie głębokości:~\red{*} i dna niemasz.}%
 
-\mred{3.} Non enim qui operántur in\textbf{i}qui\textbf{tá}tem,~\red{*} in viis ejus am\textit{\ul{bu}}\textit{\ul{la}}\textbf{vé}runt.
+\latN{\mred{3.} Veni in alti\ul{\textit{tú}}\ul{\textit{di}}\ul{\textit{nem}} \textbf{ma}ris:~\red{*} et tempés\ul{\textit{tas}} \ul{\textit{de}}\textbf{mér}sit me.}\polPs{Przyszedłem na głębokość morską:~\red{*} a nawałność mię ponurzyła.}%
 
-\mred{4.} \textbf{Tu} man\textbf{dás}ti~\red{*} mandáta tua custo\textit{\ul{dí}}\textit{\ul{ri}} \textbf{ni}mis.
+\latN{\mred{4.} Laborávi clamans, raucæ factæ \ul{\textit{sunt}} \ul{\textit{fau}}\ul{\textit{ces}} \textbf{me}æ:~\red{*} defecérunt óculi mei, dum spero in \ul{\textit{De}}\ul{\textit{um}} \textbf{me}um.}\polPs{Spracowałem się wołając, ochrapiało gardło moje:~\red{*} ustały oczy moje, gdy mam nadzieję w Bogu moim.}%
 
-\mred{5.} Utinam dirigántur \textbf{vi}æ \textbf{me}æ,~\red{*} ad custodiéndas justificati\textit{\ul{ó}}\textit{\ul{nes}} \textbf{tu}as!
+\latN{\mred{5.} Multiplicáti sunt super capíllos \ul{\textit{cá}}\ul{\textit{pi}}\ul{\textit{tis}} \textbf{me}i,~\red{*} qui odé\ul{\textit{runt}} \ul{\textit{me}} \textbf{gra}tis.}\polPs{Rozmnożyli się nad włosy głowy mojéj,~\red{*} którzy mię mają w nienawiści bez przyczyny.}%
 
-\mred{6.} Tunc \textbf{non} con\textbf{fún}dar,~\red{*} cum perspéxero in ómnibus man\textit{\ul{dá}}\textit{\ul{tis}} \textbf{tu}is.
+\latN{\mred{6.} Confortáti sunt qui persecúti sunt me inimíci \ul{\textit{me}}\ul{\textit{i}} \ul{\textit{in}}\textbf{jús}te:~\red{*} quæ non rápui, tunc \ul{\textit{ex}}\ul{\textit{sol}}\textbf{vé}bam.}\polPs{Zmocnili się, którzy mię niesprawiedliwie prześladowali, nieprzyjaciele moi:~\red{*} czegom nie wydarł, tedym płacił.}%
 
-\mred{7.} Confitébor tibi in directi\textbf{ó}ne \textbf{cor}dis:~\red{*} in eo quod dídici judícia justí\textit{\ul{ti}}\textit{\ul{æ}} \textbf{tu}æ.
+\latN{\mred{7.} Deus, tu scis insipi\ul{\textit{én}}\ul{\textit{ti}}\ul{\textit{am}} \textbf{me}am:~\red{*} et delícta mea a te non \ul{\textit{sunt}} \ul{\textit{abs}}\textbf{cón}dita.}\polPs{Boże, ty znasz głupstwo moje:~\red{*} a występki moje nie są tobie tajne.}%
 
-\mred{8.} Justificatiónes \textbf{tu}as cus\textbf{tó}diam:~\red{*} non me derelínquas \textit{\ul{us}}\textit{\ul{que}}\textbf{quá}que.
+\latN{\mred{8.} Non erubéscant in me qui ex\ul{\textit{spéc}}\ul{\textit{tant}} \ul{\textit{te}}, \textbf{Dó}mine,~\red{*} Dómi\ul{\textit{ne}} \ul{\textit{vir}}\textbf{tú}tum}\polPs{Niech nie będą zawstydzeni dla mnie ci, którzy cię oczekiwają, Panie,~\red{*} Panie zastępów.}%
 
-\mred{9.} In quo córrigit adolescéntior \textbf{vi}am \textbf{su}am?~\red{*} in custodiéndo ser\textit{\ul{mó}}\textit{\ul{nes}} \textbf{tu}os.
+\latN{\mred{9.} Non con\ul{\textit{fun}}\ul{\textit{dán}}\ul{\textit{tur}} \textbf{su}per me~\red{*} qui quærunt te, \ul{\textit{De}}\ul{\textit{us}} \textbf{Is}raël.}\polPs{Niech nie będą pohańbieni dla mnie,~\red{*} którzy cię szukają, Boże Izraelski.}%
+\EndParallel
+%\latN{\mred{10.} Quóniam propter te sustí\ul{\textit{nu}}\ul{\textit{i}} \ul{\textit{op}}\textbf{pró}brium:~\red{*} opéruit confúsio fá\ul{\textit{ci}}\ul{\textit{em}} \textbf{me}am.}\polPs{Bom dla ciebie znaszał urąganie:~\red{*} zelżywość okrywała oblicze moje.}%
 
-\mred{10.} In toto corde meo \textbf{ex}qui\textbf{sí}vi te:~\red{*} ne repéllas me a man\textit{\ul{dá}}\textit{\ul{tis}} \textbf{tu}is.
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{10. }</v></c>Quón(j)i(j)am(j) prop(j)ter(j) te(j) sus(j)tí(j)nu(j)i(j) op(j)<b>pró</b>(k)bri(jr)um:(j.) <c>*</c>(:) o(j)pé(j)ru(j)it(j) con(j)fú(j)si(j)o(j) fá(j)<i><ul>ci</i></ul>(h)<i><ul>em</i></ul>(j) <b>me</b>(k jr)am.(j.) (::)}%
+\tlumaczR{Bom dla ciebie znaszał urąganie:~\red{*} zelżywość okrywała oblicze moje.}\linespace
+\BeginParallel
+\latN{\mred{11.} Extráneus factus sum \ul{\textit{frá}}\ul{\textit{tri}}\ul{\textit{bus}} \textbf{me}is,~\red{*} et peregrínus fíliis \ul{\textit{ma}}\ul{\textit{tris}} \textbf{me}æ.}\polPs{Stałem się obcym braciéj mojéj,~\red{*} i cudzoziemcem synom matki mojéj.}%
 
-\mred{11.} In corde meo abscóndi e\textbf{ló}quia \textbf{tu}a:~\red{*} ut non \textit{\ul{pec}}\textit{\ul{cem}} \textbf{ti}bi.
+\latN{\mred{12.} Quóniam zelus domus \ul{\textit{tu}}\ul{\textit{æ}} \ul{\textit{com}}\textbf{é}dit me:~\red{*} et oppróbria exprobrántium tibi ceci\ul{\textit{dé}}\ul{\textit{runt}} \textbf{su}per me.}\polPs{Bo mię zawisna miłość domu twego gryzła:~\red{*} a urągania urągających tobie spadły na mię.
+I okryłem w poście duszę moję:~\red{*} i stało mi się urąganiem.}%
 
-\mred{12.} Bene\textbf{díc}tus es, \textbf{Dó}mine:~\red{*} doce me justificati\textit{\ul{ó}}\textit{\ul{nes}} \textbf{tu}as.
+\latN{\mred{13.} Et opérui in jejúnio \ul{\textit{á}}\ul{\textit{ni}}\ul{\textit{mam}} \textbf{me}am:~\red{*} et factum est in oppró\ul{\textit{bri}}\ul{\textit{um}} \textbf{mi}hi.}\polPs{I oblokłem miasto szaty włosień:~\red{*} i stałem się im przypowieścią.}%
 
-\mred{13.} In \textbf{lá}biis \textbf{me}is,~\red{*} pronuntiávi ómnia judícia \textit{\ul{o}}\textit{\ul{ris}} \textbf{tu}i.
+\latN{\mred{14.} Et pósui vestiméntum \ul{\textit{me}}\ul{\textit{um}} \ul{\textit{ci}}\textbf{lí}cium:~\red{*} et factus sum illis \ul{\textit{in}} \ul{\textit{pa}}\textbf{rá}bolam.}\polPs{I oblokłem miasto szaty włosień:~\red{*} i stałem się im przypowieścią.}%
 
-\mred{14.} In via testimoniórum tuórum \textbf{de}lec\textbf{tá}tus sum,~\red{*} sicut in ómni\textit{\ul{bus}} \textit{\ul{di}}\textbf{ví}tiis.
+\latN{\mred{15.} Advérsum me loquebántur, qui se\ul{\textit{dé}}\ul{\textit{bant}} \ul{\textit{in}} \textbf{por}ta:~\red{*} et in me psallébant qui bi\ul{\textit{bé}}\ul{\textit{bant}} \textbf{vi}num.}\polPs{Mówili przeciwko mnie, którzy siedzieli w bramie:~\red{*} i śpiewali przeciw mnie, którzy pili wino.}%
 
-\mred{15.} In mandátis tuis \textbf{ex}er\textbf{cé}bor:~\red{*} et considerábo \textit{\ul{vi}}\textit{\ul{as}} \textbf{tu}as.
+\latN{\mred{16.} Ego vero oratiónem me\ul{\textit{am}} \ul{\textit{ad}} \ul{\textit{te}}, \textbf{Dó}mine:~\red{*} tempus beneplá\ul{\textit{ci}}\ul{\textit{ti}}, \textbf{De}us.}\polPs{Ale ja modlitwę moję do ciebie, Panie:~\red{*} czas upodobania, Boże.}%
 
-\mred{16.} In justificatiónibus tuis \textbf{me}di\textbf{tá}bor:~\red{*} non oblivíscar ser\textit{\ul{mó}}\textit{\ul{nes}} \textbf{tu}os.
+\latN{\mred{17.} In multitúdine misericórdiæ \ul{\textit{tu}}\ul{\textit{æ}} \ul{\textit{ex}}\textbf{áu}di me,~\red{*} in veritáte sa\ul{\textit{lú}}\ul{\textit{tis}} \textbf{tu}æ:}\polPs{W wielkości miłosierdzia twego wysłuchaj mię,~\red{*} w prawdzie zbawienia twego:}%
 
-\mred{17.} Retríbue servo tuo, vi\textbf{ví}fi\textbf{ca} me:~\red{*} et custódiam ser\textit{\ul{mó}}\textit{\ul{nes}} \textbf{tu}os.
+\latN{\mred{18.} Eripe me de luto, \ul{\textit{ut}} \ul{\textit{non}} \ul{\textit{in}}\textbf{fí}gar:~\red{*} líbera me ab iis, qui odérunt me, et de profún\ul{\textit{dis}} \ul{\textit{a}}\textbf{quá}rum.}\polPs{Wyrwij mię z błota, abych nie ulgnął:~\red{*} wybaw mię od tych, którzy mię nienawidzą, i z głębokości wód.}%
 
-\mred{18.} Revéla \textbf{ó}culos \textbf{me}os:~\red{*} et considerábo mirabília de \textit{\ul{le}}\textit{\ul{ge}} \textbf{tu}a.
+\latN{\mred{19.} Non me demérgat tempéstas aquæ,~† neque absórbe\ul{\textit{at}} \ul{\textit{me}} \ul{\textit{pro}}\textbf{fún}dum:~\red{*} neque úrgeat super me púte\ul{\textit{us}} \ul{\textit{os}} \textbf{su}um.}\polPs{Niech mię nie zatapia nawałność wody, ani mię niech nie pożera głębokość:~\red{*} ani niech nie zawiera nademną studnia wierzchu swego.}%
 
-\mred{19.} Incola ego \textbf{sum} in \textbf{ter}ra:~\red{*} non abscóndas a me man\textit{\ul{dá}}\textit{\ul{ta}} \textbf{tu}a.
+\latN{\mred{20.} Exáudi me, Dómine, quóniam benígna est miseri\ul{\textit{cór}}\ul{\textit{di}}\ul{\textit{a}} \textbf{tu}a:~\red{*} secúndum multitúdinem miseratiónum tuárum ré\ul{\textit{spi}}\ul{\textit{ce}} \textbf{in} me.}\polPs{Wysłuchaj mię, Panie; bo łaskawe jest miłosierdzie twoje:~\red{*} według mnóstwa litości twoich wejrzyj na mię.}%
 
-\mred{20.} Concupívit ánima mea desideráre justificati\textbf{ó}nes \textbf{tu}as,~\red{*} in \textit{\ul{om}}\textit{\ul{ni}} \textbf{tém}pore.
+\latN{\mred{21.} Et ne avértas fáciem tuam a \ul{\textit{pú}}\ul{\textit{e}}\ul{\textit{ro}} \textbf{tu}o:~\red{*} quóniam tríbulor, velóci\ul{\textit{ter}} \ul{\textit{ex}}\textbf{áu}di me.}\polPs{A nie odwracaj oblicza twego od sługi swego:~\red{*} bom jest w utrapieniu: prędko wysłuchaj mię.}%
 
-\mred{21.} Incre\textbf{pás}ti su\textbf{pér}bos:~\red{*} maledícti qui declínant a man\textit{\ul{dá}}\textit{\ul{tis}} \textbf{tu}is.
+\latN{\mred{22.} Inténde ánimæ meæ, et \ul{\textit{lí}}\ul{\textit{be}}\ul{\textit{ra}} \textbf{e}am:~\red{*} propter inimícos meos \ul{\textit{é}}\ul{\textit{ri}}\textbf{pe} me.}\polPs{Przybliż się ku duszy mojéj, a wybaw ją:~\red{*} dla nieprzyjaciół moich wyrwij mię.}%
 
-\mred{22.}~Aufer a me oppróbrium, \textbf{et} con\textbf{témp}tum:~\red{*} quia testimónia tua \textit{\ul{ex}}\textit{\ul{qui}}\textbf{sí}vi.
+\latN{\mred{23.} Tu scis impropérium meum, et confu\ul{\textit{si}}\ul{\textit{ó}}\ul{\textit{nem}} \textbf{me}am,~\red{*} et reverén\ul{\textit{ti}}\ul{\textit{am}} \textbf{me}am.}\polPs{Ty znasz pohańbienie moje i zelżywość moję,~\red{*} i wstyd mój.}%
+\EndParallel
+%\latN{\mred{24.} In conspéctu tuo sunt omnes \ul{\textit{qui}} \ul{\textit{trí}}\ul{\textit{bu}}\textbf{lant} me:~\red{*} impropérium exspectávit cor meum, \ul{\textit{et}} \ul{\textit{mi}}\textbf{sé}riam.}\polPs{Przed oczyma twemi są wszyscy, którzy mię trapią:~\red{*} urągania i nędze czekało serce moje.}%
 
-\mred{23.}~Etenim sedérunt príncipes, et advérsum me \textbf{lo}que\textbf{bán}tur:~\red{*} servus autem tuus exercebátur in justificatió\textit{\ul{ni}}\textit{\ul{bus}} \textbf{tu}is.
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{24. }</v></c>In(j) con(j)spéc(j)tu(j) tu(j)o(j) sunt(j) om(j)nes(j) qui(j) trí(j)bu(j)<b>lant</b>(k jr) me:(j.) <c>*</c>(:) im(j)pro(j)pé(j)ri(j)um(j) ex(j)spec(j)tá(j)vit(j) cor(j) me(j)um,(j) <i><ul>et</i></ul>(h) <i><ul>mi</i></ul>(j)<b>sé</b>(k)ri(jr)am.(j.) (::)}%
+\tlumaczR{Przed oczyma twemi są wszyscy, którzy mię trapią:~\red{*} urągania i nędze czekało serce moje.}\linespace
+\BeginParallel
+\latN{\mred{25.} Et sustínui qui simul contristaré\ul{\textit{tur}}, \ul{\textit{et}} \ul{\textit{non}} \textbf{fu}it:~\red{*} et qui consolarétur, et \ul{\textit{non}} \ul{\textit{in}}\textbf{vé}ni.}\polPs{I czekałem, ktoby się społem smęcił, a nie było:~\red{*} i ktoby pocieszył, a nie znalazłem.}%
 
-\mred{24.} Nam et testimónia tua medi\textbf{tá}tio \textbf{me}a est:~\red{*} et consílium meum justificati\textit{\ul{ó}}\textit{\ul{nes}} \textbf{tu}æ.
+\latN{\mred{26.} Et dedérunt \ul{\textit{in}} \ul{\textit{es}}\ul{\textit{cam}} \textbf{me}am fel:~\red{*} et in siti mea potavérunt \ul{\textit{me}} \ul{\textit{a}}\textbf{cé}to.}\polPs{I dali żółć na pokarm mój:~\red{*} a w pragnieniu mojem napawali mię octem.}%
 
-\mred{25.} Adhǽsit paviménto \textbf{á}nima \textbf{me}a:~\red{*} vivífica me secúndum \textit{\ul{ver}}\textit{\ul{bum}} \textbf{tu}um.
+\latN{\mred{27.} Fiat mensa eórum coram \ul{\textit{ip}}\ul{\textit{sis}} \ul{\textit{in}} \textbf{lá}queum,~\red{*} et in retributiónes, \ul{\textit{et}} \ul{\textit{in}} \textbf{scán}dalum.}\polPs{Niechaj będzie stół ich przed nimi sidłem,~\red{*} i zapłaty, i na upadek.}%
 
-\mred{26.} Vias meas enuntiávi et \textbf{ex}au\textbf{dís}ti me:~\red{*} doce me justificati\textit{\ul{ó}}\textit{\ul{nes}} \textbf{tu}as.
+\latN{\mred{28.} Obscuréntur óculi e\ul{\textit{ó}}\ul{\textit{rum}} \ul{\textit{ne}} \textbf{ví}deant:~\red{*} et dorsum eórum sem\ul{\textit{per}} \ul{\textit{in}}\textbf{cúr}va.}\polPs{Niech się zaćmią oczy ich, aby nie widzieli:~\red{*} a grzbietu ich zawżdy nachylaj.}%
 
-\mred{27.} Viam justificatiónum tuárum \textbf{ín}stru\textbf{e} me:~\red{*} et exercébor in mirabí\textit{\ul{li}}\textit{\ul{bus}} \textbf{tu}is.
+\latN{\mred{29.} Effúnde super e\ul{\textit{os}} \ul{\textit{i}}\ul{\textit{ram}} \textbf{tu}am:~\red{*} et furor iræ tuæ compre\ul{\textit{hén}}\ul{\textit{dat}} \textbf{e}os.}\polPs{Wyléj na nie gniew twój:~\red{*} i zapalczywość gniewu twego niech je ogarnie.}%
 
-\mred{28.} Dormitávit ánima \textbf{me}a præ \textbf{tǽ}dio:~\red{*} confírma me in \textit{\ul{ver}}\textit{\ul{bis}} \textbf{tu}is.
+\latN{\mred{30.} Fiat habitátio e\ul{\textit{ó}}\ul{\textit{rum}} \ul{\textit{de}}\textbf{sér}ta:~\red{*} et in tabernáculis eórum non sit \ul{\textit{qui}} \ul{\textit{in}}\textbf{há}bitet.}\polPs{Mieszkanie ich niech się stanie puste:~\red{*} a w przybytkach ich niechaj nie będzie, ktoby mieszkał.}%
 
-\mred{29.} Viam iniquitátis \textbf{á}move \textbf{a} me:~\red{*} et de lege tua mise\textit{\ul{ré}}\textit{\ul{re}} \textbf{me}i.
+\latN{\mred{31.} Quóniam quem tu percussís\ul{\textit{ti}}, \ul{\textit{per}}\ul{\textit{se}}\textbf{cú}ti sunt:~\red{*} et super dolórem vúlnerum meórum \ul{\textit{ad}}\ul{\textit{di}}\textbf{dé}runt.}\polPs{Bo, któregoś ty zranił, prześladowali:~\red{*} a na boleści ran moich naddawali.}%
 
-\mred{30.} Viam veri\textbf{tá}tis e\textbf{lé}gi:~\red{*} judícia tua non \textit{\ul{sum}} \textit{\ul{ob}}\textbf{lí}tus.
+\latN{\mred{32.} Appóne iniquitátem super iniqui\ul{\textit{tá}}\ul{\textit{tem}} \ul{\textit{e}}\textbf{ó}rum:~\red{*} et non intrent in justí\ul{\textit{ti}}\ul{\textit{am}} \textbf{tu}am.}\polPs{Przydajże nieprawość ku nieprawości ich:~\red{*} a niech nie wchodzą do sprawiedliwości twojéj.}%
 
-\mred{31.} Adhǽsi testimóniis \textbf{tu}is \textbf{Dó}mine:~\red{*} noli \textit{\ul{me}} \textit{\ul{con}}\textbf{fún}dere.
+\latN{\mred{33.} Deleántur de \ul{\textit{li}}\ul{\textit{bro}} \ul{\textit{vi}}\textbf{vén}tium:~\red{*} et cum justis \ul{\textit{non}} \ul{\textit{scri}}\textbf{bán}tur.}\polPs{Niechaj będą wymazani z ksiąg żywiących:~\red{*} a niech z sprawiedliwymi nie będą wspisani.}%
 
-\mred{32.} Viam mandatórum tu\textbf{ó}rum cu\textbf{cúr}ri:~\red{*} cum dilatás\textit{\ul{ti}} \textit{\ul{cor}} \textbf{me}um.
+\latN{\mred{34.} Ego sum \ul{\textit{pau}}\ul{\textit{per}} \ul{\textit{et}} \textbf{do}lens:~\red{*} salus tua, De\ul{\textit{us}}, \ul{\textit{su}}\textbf{scé}pit me.}\polPs{Jamci jest ubogi i zbolały:~\red{*} zbawienie twoje, Boże, wspomogło mię.}%
 
-\mred{33.} Legem pone mihi, Dómine, viam justificati\textbf{ó}num tu\textbf{á}rum:~\red{*} et exquíram \textit{\ul{e}}\textit{\ul{am}} \textbf{sem}per.
+\latN{\mred{35.} Laudábo nomen \ul{\textit{De}}\ul{\textit{i}} \ul{\textit{cum}} \textbf{cán}tico:~\red{*} et magnificábo e\ul{\textit{um}} \ul{\textit{in}} \textbf{lau}de:}\polPs{Będę chwalił imię Boże pieśnią:~\red{*} i wielbić go będę chwałą.}%
 
-\mred{34.} Da mihi intelléctum, et scrutábor \textbf{le}gem \textbf{tu}am:~\red{*} et custódiam illam in toto \textit{\ul{cor}}\textit{\ul{de}} \textbf{me}o.
+\latN{\mred{36.} Et placébit Deo super ví\ul{\textit{tu}}\ul{\textit{lum}} \ul{\textit{no}}\textbf{vél}lum:~\red{*} córnua producén\ul{\textit{tem}} \ul{\textit{et}} \textbf{ún}gulas.}\polPs{A przyjemniéj będzie Panu, niźli młode cielę:~\red{*} któremu rogi i kopyta podrastają.}%
 
-\mred{35.} Deduc me in sémitam manda\textbf{tó}rum tu\textbf{ó}rum:~\red{*} quia \textit{\ul{ip}}\textit{\ul{sam}} \textbf{vó}lui.
+\latN{\mred{37.} Vídeant páupe\ul{\textit{res}} \ul{\textit{et}} \ul{\textit{læ}}\textbf{tén}tur:~\red{*} quǽrite Deum, et vivet á\ul{\textit{ni}}\ul{\textit{ma}} \textbf{ves}tra.}\polPs{Niech widzą ubodzy, a niech się weselą:~\red{*} szukajcie Boga, a będzie żyła dusza wasza.}%
 
-\mred{36.} Inclína cor meum in testi\textbf{mó}nia \textbf{tu}a:~\red{*} et non in \textit{\ul{a}}\textit{\ul{va}}\textbf{rí}tiam.
+\latN{\mred{38.} Quóniam exaudívit \ul{\textit{páu}}\ul{\textit{pe}}\ul{\textit{res}} \textbf{Dó}minus:~\red{*} et vinctos suos \ul{\textit{non}} \ul{\textit{de}}\textbf{spé}xit.}\polPs{Albowiem Pan wysłuchał ubogich:~\red{*} a więźniami swymi nie wzgardził.}%
 
-\mred{37.} Avérte óculos meos ne vídeant \textbf{va}ni\textbf{tá}tem:~\red{*} in via tua vi\textit{\ul{ví}}\textit{\ul{fi}}\textbf{ca} me.
+\latN{\mred{39.} Laudent illum \ul{\textit{cæ}}\ul{\textit{li}} \ul{\textit{et}} \textbf{ter}ra,~\red{*} mare et ómnia reptíli\ul{\textit{a}} \ul{\textit{in}} \textbf{e}is.}\polPs{Niechaj go chwalą niebiosa, i ziemia,~\red{*} morze i wszystek płaz na nich.}%
+\EndParallel
+%\latN{\mred{40.} Quóniam Deus salvam \ul{\textit{fá}}\ul{\textit{ci}}\ul{\textit{et}} \textbf{Si}on:~\red{*} et ædificabúntur civi\ul{\textit{tá}}\ul{\textit{tes}} \textbf{Ju}da.}\polPs{Albowiem Bóg zbawi Syon:~\red{*} i będą zbudowane miasta Juda.}%
 
-\mred{38.} Státue servo tuo e\textbf{ló}quium \textbf{tu}um,~\red{*} in ti\textit{\ul{mó}}\textit{\ul{re}} \textbf{tu}o.
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{40. }</v></c>Quón(j)i(j)am(j) De(j)us(j) sal(j)vam(j) fá(j)ci(j)et(j) <b>Si</b>(k jr)on:(j.) <c>*</c>(:) et(j) æ(j)di(j)fi(j)ca(j)bún(j)tur(j) ci(j)vi(j)<i><ul>tá</i></ul>(h)<i><ul>tes</i></ul>(j) <b>Ju</b>(k jr)da.(j.) (::)}%
+\tlumaczR{Albowiem Bóg zbawi Syon:~\red{*} i będą zbudowane miasta Juda.}\linespace
+\BeginParallel
+\latN{\mred{41.} Et inhabitábunt \textbf{i}bi,~* et hereditáte ac\ul{\textit{quí}}\ul{\textit{rent}} \textbf{e}am.}\polPs{I będą tam mieszkać,~\red{*} i dostaną jéj dziedzictwem.}%
 
-\mred{39.} Amputa oppróbrium meum quod \textbf{su}spi\textbf{cá}tus sum:~\red{*} quia judícia tu\textit{\ul{a}} \textit{\ul{ju}}\textbf{cún}da.
-
-\mred{40.} Ecce concupívi man\textbf{dá}ta \textbf{tu}a:~\red{*} in æquitáte tua vi\textit{\ul{ví}}\textit{\ul{fi}}\textbf{ca} me.
-
-\mred{41.} Et véniat super me misericórdia \textbf{tu}a, \textbf{Dó}mine:~\red{*} salutáre tuum secúndum eló\textit{\ul{qui}}\textit{\ul{um}} \textbf{tu}um.
-
-\mred{42.} Et respondébo exprobrántibus \textbf{mi}hi \textbf{ver}bum:~\red{*} quia sperávi in sermó\textit{\ul{ni}}\textit{\ul{bus}} \textbf{tu}is.
-
-\mred{43.} Et ne áuferas de ore meo verbum veritátis \textbf{us}que\textbf{quá}que:~\red{*} quia in judíciis tuis su\textit{\ul{per}}\textit{\ul{spe}}\textbf{rá}vi.
-
-\mred{44.} Et custódiam legem \textbf{tu}am \textbf{sem}per:~\red{*} in sǽculum et in sǽ\textit{\ul{cu}}\textit{\ul{lum}} \textbf{sǽ}culi.
-
-\mred{45.} Et ambulábam in \textbf{la}ti\textbf{tú}dine:~\red{*} quia mandáta tua \textit{\ul{ex}}\textit{\ul{qui}}\textbf{sí}vi.
-
-\mred{46.} Et loquébar in testimóniis tuis in con\textbf{spéc}tu \textbf{re}gum:~\red{*} et non \textit{\ul{con}}\textit{\ul{fun}}\textbf{dé}bar.
-
-\mred{47.} Et meditábar in man\textbf{dá}tis \textbf{tu}is,~\red{*} \textit{\ul{quæ}} \textit{\ul{di}}\textbf{lé}xi.
-
-\mred{48.} Et levávi manus meas ad mandáta tua, \textbf{quæ} di\textbf{lé}xi:~\red{*} et exercébar in justificatió\textit{\ul{ni}}\textit{\ul{bus}} \textbf{tu}is.
-
-\mred{49.} Memor esto verbi tui \textbf{ser}vo \textbf{tu}o,~\red{*} in quo mihi \textit{\ul{spem}} \textit{\ul{de}}\textbf{dís}ti.
-
-\mred{50.} Hæc me consoláta est in humili\textbf{tá}te \textbf{me}a:~\red{*} quia elóquium tuum vi\textit{\ul{vi}}\textit{\ul{fi}}\textbf{cá}vit me.
-
-\mred{51.} Supérbi iníque agébant \textbf{us}que\textbf{quá}que:~\red{*} a lege autem tua non \textit{\ul{de}}\textit{\ul{cli}}\textbf{ná}vi.
-
-\mred{52.} Memor fui judiciórum tuórum a \textbf{sǽ}culo, \textbf{Dó}mine:~\red{*} et \textit{\ul{con}}\textit{\ul{so}}\textbf{lá}tus sum.
-
-\mred{53.} Deféctio \textbf{té}nu\textbf{it} me,~\red{*} pro peccatóribus derelinquéntibus \textit{\ul{le}}\textit{\ul{gem}} \textbf{tu}am.
-
-\mred{54.} Cantábiles mihi erant justificati\textbf{ó}nes \textbf{tu}æ,~\red{*} in loco peregrinati\textit{\ul{ó}}\textit{\ul{nis}} \textbf{me}æ.
-
-\mred{55.} Memor fui nocte nóminis \textbf{tu}i, \textbf{Dó}mine:~\red{*} et custodívi \textit{\ul{le}}\textit{\ul{gem}} \textbf{tu}am.
-
-\mred{56.} Hæc \textbf{fac}ta est \textbf{mi}hi:~\red{*} quia justificatiónes tuas \textit{\ul{ex}}\textit{\ul{qui}}\textbf{sí}vi.
-
-\mred{57.} Pórtio \textbf{me}a, \textbf{Dó}mine,~\red{*} dixi custodíre \textit{\ul{le}}\textit{\ul{gem}} \textbf{tu}am.
-
-\mred{58.} Deprecátus sum fáciem tuam in toto \textbf{cor}de \textbf{me}o:~\red{*} miserére mei secúndum eló\textit{\ul{qui}}\textit{\ul{um}} \textbf{tu}um.
-
-\mred{59.} Cogitávi \textbf{vi}as \textbf{me}as:~\red{*} et convérti pedes meos in testimó\textit{\ul{ni}}\textit{\ul{a}} \textbf{tu}a.
-
-\mred{60.} Parátus sum, et non \textbf{sum} tur\textbf{bá}tus:~\red{*} ut custódiam man\textit{\ul{dá}}\textit{\ul{ta}} \textbf{tu}a.
-
-\mred{61.} Funes peccatórum circum\textbf{plé}xi \textbf{sunt} me:~\red{*} et legem tuam non \textit{\ul{sum}} \textit{\ul{ob}}\textbf{lí}tus.
-
-\mred{62.} Média nocte surgébam ad confi\textbf{tén}dum \textbf{ti}bi:~\red{*} super judícia justificati\textit{\ul{ó}}\textit{\ul{nis}} \textbf{tu}æ.
-
-\mred{63.} Párticeps ego sum ómnium ti\textbf{mén}ti\textbf{um} te:~\red{*} et custodiéntium man\textit{\ul{dá}}\textit{\ul{ta}} \textbf{tu}a.
-
-\mred{64.} Misericórdia tua, Dómine, \textbf{ple}na est \textbf{ter}ra:~\red{*} justificatiónes \textit{\ul{tu}}\textit{\ul{as}} \textbf{do}ce me.
-
-\mred{65.} Bonitátem fecísti cum servo \textbf{tu}o, \textbf{Dó}mine:~\red{*} secúndum \textit{\ul{ver}}\textit{\ul{bum}} \textbf{tu}um.
-
-\mred{66.} Bonitátem et disciplínam et sci\textbf{én}tiam \textbf{do}ce me:~\red{*} quia mandátis \textit{\ul{tu}}\textit{\ul{is}} \textbf{cré}didi.
-
-\mred{67.} Priúsquam humiliárer \textbf{e}go de\textbf{lí}qui:~\red{*} proptérea elóquium tuum \textit{\ul{cus}}\textit{\ul{to}}\textbf{dí}vi.
-
-\mred{68.} \textbf{Bo}nus \textbf{es} tu:~\red{*} et in bonitáte tua doce me justificati\textit{\ul{ó}}\textit{\ul{nes}} \textbf{tu}as.
-
-\mred{69.} Multiplicáta est super me iníquitas \textbf{su}per\textbf{bó}rum:~\red{*} ego autem in toto corde meo scrutábor man\textit{\ul{dá}}\textit{\ul{ta}} \textbf{tu}a.
-
-\mred{70.} Coagulátum est sicut lac \textbf{cor} e\textbf{ó}rum:~\red{*} ego vero legem tuam \textit{\ul{me}}\textit{\ul{di}}\textbf{tá}tus sum.
-
-\mred{71.} Bonum mihi quia hu\textbf{mi}li\textbf{ás}ti me:~\red{*} ut discam justificati\textit{\ul{ó}}\textit{\ul{nes}} \textbf{tu}as.
-
-\mred{72.} Bonum mihi lex \textbf{o}ris \textbf{tu}i:~\red{*} super míllia auri \textit{\ul{et}} \textit{\ul{ar}}\textbf{gén}ti.
-
-\mred{73.} Manus tuæ fecérunt me, et \textbf{plas}ma\textbf{vé}runt me:~\red{*} da mihi intelléctum, et discam man\textit{\ul{dá}}\textit{\ul{ta}} \textbf{tu}a.
-
-\mred{74.} Qui timent te vidébunt me et \textbf{læ}ta\textbf{bún}tur:~\red{*} quia in verba tua su\textit{\ul{per}}\textit{\ul{spe}}\textbf{rá}vi.
-
-\mred{75.} Cognóvi, Dómine, quia ǽquitas ju\textbf{dí}cia \textbf{tu}a:~\red{*} et in veritáte tua hu\textit{\ul{mi}}\textit{\ul{li}}\textbf{ás}ti me.
-
-\mred{76.} Fiat misericórdia tua ut \textbf{con}so\textbf{lé}tur me:~\red{*} secúndum elóquium tuum \textit{\ul{ser}}\textit{\ul{vo}} \textbf{tu}o.
-
-\mred{77.} Véniant mihi miseratiónes \textbf{tu}æ, et \textbf{vi}vam:~\red{*} quia lex tua meditá\textit{\ul{ti}}\textit{\ul{o}} \textbf{me}a est.
-
-\mred{78.} Confundántur supérbi, quia injúste iniquitátem fe\textbf{cé}runt \textbf{in} me:~\red{*} ego autem exercébor in man\textit{\ul{dá}}\textit{\ul{tis}} \textbf{tu}is.
-
-\mred{79.} Convertántur \textbf{mi}hi ti\textbf{mén}tes te:~\red{*} et qui novérunt testimó\textit{\ul{ni}}\textit{\ul{a}} \textbf{tu}a.
-
-\mred{80.} Fiat cor meum immaculátum in justificati\textbf{ó}nibus \textbf{tu}is,~\red{*} ut \textit{\ul{non}} \textit{\ul{con}}\textbf{fún}dar.
-
-\mred{81.} Defécit in salutáre tuum \textbf{á}nima \textbf{me}a:~\red{*} et in verbum tuum su\textit{\ul{per}}\textit{\ul{spe}}\textbf{rá}vi.
-
-\mred{82.} Defecérunt óculi mei in e\textbf{ló}quium \textbf{tu}um:~\red{*} dicéntes: Quando conso\textit{\ul{lá}}\textit{\ul{be}}\textbf{ris} me?
-
-\mred{83.} Quia factus sum sicut uter \textbf{in} pru\textbf{í}na:~\red{*} justificatiónes tuas non \textit{\ul{sum}} \textit{\ul{ob}}\textbf{lí}tus.
-
-\mred{84.} Quot sunt dies \textbf{ser}vi \textbf{tu}i?~\red{*} quando fácies de persequéntibus \textit{\ul{me}} \textit{\ul{ju}}\textbf{dí}cium?
-
-\mred{85.} Narravérunt mihi iníqui fabu\textbf{la}ti\textbf{ó}nes:~\red{*} sed non \textit{\ul{ut}} \textit{\ul{lex}} \textbf{tu}a.
-
-\mred{86.} Omnia mandáta \textbf{tu}a \textbf{vé}ritas:~\red{*} iníque persecúti sunt me, \textit{\ul{ád}}\textit{\ul{ju}}\textbf{va} me.
-
-\mred{87.} Paulo minus consummavérunt \textbf{me} in \textbf{ter}ra:~\red{*} ego autem non derelíqui man\textit{\ul{dá}}\textit{\ul{ta}} \textbf{tu}a.
-
-\mred{88.} Secúndum misericórdiam tuam vi\textbf{ví}fi\textbf{ca} me:~\red{*} et custódiam testimónia \textit{\ul{o}}\textit{\ul{ris}} \textbf{tu}i.
-
-\mred{89.} In æ\textbf{tér}num, \textbf{Dó}mine,~\red{*} verbum tuum pérma\textit{\ul{net}} \textit{\ul{in}} \textbf{cæ}lo.
-
-\mred{90.} In generatiónem et generatiónem \textbf{vé}ritas \textbf{tu}a:~\red{*} fundásti ter\textit{\ul{ram}}, \textit{\ul{et}} \textbf{pér}manet.
-
-\mred{91.} Ordinatióne tua perse\textbf{vé}rat \textbf{di}es:~\red{*} quóniam ómnia sér\textit{\ul{vi}}\textit{\ul{unt}} \textbf{ti}bi.
-
-\mred{92.} Nisi quod lex tua medi\textbf{tá}tio \textbf{me}a est:~\red{*} tunc forte periíssem in humili\textit{\ul{tá}}\textit{\ul{te}} \textbf{me}a.
-
-\mred{93.} In ætérnum non oblivíscar justificati\textbf{ó}nes \textbf{tu}as:~\red{*} quia in ipsis vi\textit{\ul{vi}}\textit{\ul{fi}}\textbf{cás}ti me.
-
-\mred{94.} Tuus sum ego, \textbf{sal}vum \textbf{me} fac:~\red{*} quóniam justificatiónes tuas \textit{\ul{ex}}\textit{\ul{qui}}\textbf{sí}vi.
-
-\mred{95.} Me exspectavérunt peccatóres ut \textbf{pér}de\textbf{rent} me:~\red{*} testimónia tua \textit{\ul{in}}\textit{\ul{tel}}\textbf{lé}xi.
-
-\mred{96.} Omnis consummatiónis \textbf{vi}di \textbf{fi}nem:~\red{*} latum mandátum \textit{\ul{tu}}\textit{\ul{um}} \textbf{ni}mis.
-
-\mred{97.} Quómodo diléxi legem \textbf{tu}am, \textbf{Dó}mine?~\red{*} tota die meditá\textit{\ul{ti}}\textit{\ul{o}} \textbf{me}a est.
-
-\mred{98.} Super inimícos meos prudéntem me fecísti man\textbf{dá}to \textbf{tu}o:~\red{*} quia in æ\textit{\ul{tér}}\textit{\ul{num}} \textbf{mi}hi est.
-
-\mred{99.} Super omnes docéntes me \textbf{in}tel\textbf{lé}xi:~\red{*} quia testimónia tua meditá\textit{\ul{ti}}\textit{\ul{o}} \textbf{me}a est.
-
-\mred{100.} Super senes \textbf{in}tel\textbf{lé}xi:~\red{*} quia mandáta tu\textit{\ul{a}} \textit{\ul{quæ}}\textbf{sí}vi.
-
-\mred{101.} Ab omni via mala prohíbui \textbf{pe}des \textbf{me}os:~\red{*} ut custódiam \textit{\ul{ver}}\textit{\ul{ba}} \textbf{tu}a.
-
-\mred{102.} A judíciis tuis non \textbf{de}cli\textbf{ná}vi:~\red{*} quia tu legem posu\textit{\ul{ís}}\textit{\ul{ti}} \textbf{mi}hi.
-
-\mred{103.} Quam dúlcia fáucibus meis e\textbf{ló}quia \textbf{tu}a,~\red{*} super mel \textit{\ul{o}}\textit{\ul{ri}} \textbf{me}o!
-
-\mred{104.} A mandátis tuis \textbf{in}tel\textbf{lé}xi:~\red{*} proptérea odívi omnem viam in\textit{\ul{i}}\textit{\ul{qui}}\textbf{tá}tis.
-
-\mred{105.} Lucérna pédibus meis \textbf{ver}bum \textbf{tu}um,~\red{*} et lumen sé\textit{\ul{mi}}\textit{\ul{tis}} \textbf{me}is.
-
-\mred{106.} Ju\textbf{rá}vi, et \textbf{stá}tui~\red{*} custodíre judícia justí\textit{\ul{ti}}\textit{\ul{æ}} \textbf{tu}æ.
-
-\mred{107.} Humiliátus sum usque\textbf{quá}que, \textbf{Dó}mine:~\red{*} vivífica me secúndum \textit{\ul{ver}}\textit{\ul{bum}} \textbf{tu}um.
-
-\mred{108.} Voluntária oris mei benepláci\textbf{ta} fac, \textbf{Dó}mine:~\red{*} et judícia \textit{\ul{tu}}\textit{\ul{a}} \textbf{do}ce me.
-
-\mred{109.} Anima mea in mánibus \textbf{me}is \textbf{sem}per:~\red{*} et legem tuam non \textit{\ul{sum}} \textit{\ul{ob}}\textbf{lí}tus.
-
-\mred{110.} Posuérunt peccatóres \textbf{lá}queum \textbf{mi}hi:~\red{*} et de mandátis tuis \textit{\ul{non}} \textit{\ul{er}}\textbf{rá}vi.
-
-\mred{111.} Hereditáte acquisívi testimónia tua \textbf{in} æ\textbf{tér}num:~\red{*} quia exsultátio \textit{\ul{cor}}\textit{\ul{dis}} \textbf{me}i sunt.
-
-\mred{112.} Inclinávi cor meum ad faciéndas justificatiónes tuas \textbf{in} æ\textbf{tér}num,~\red{*} propter retri\textit{\ul{bu}}\textit{\ul{ti}}\textbf{ó}nem.
-
-\mred{113.} Iníquos \textbf{ó}dio \textbf{há}bui:~\red{*} et legem tu\textit{\ul{am}} \textit{\ul{di}}\textbf{lé}xi.
-
-\mred{114.} Adjútor et suscéptor \textbf{me}us \textbf{es} tu:~\red{*} et in verbum tuum su\textit{\ul{per}}\textit{\ul{spe}}\textbf{rá}vi.
-
-\mred{115.} Declináte a \textbf{me}, ma\textbf{lí}gni:~\red{*} et scrutábor mandáta \textit{\ul{De}}\textit{\ul{i}} \textbf{me}i.
-
-\mred{116.} Súscipe me secúndum elóquium \textbf{tu}um, et \textbf{vi}vam:~\red{*} et non confúndas me ab exspectati\textit{\ul{ó}}\textit{\ul{ne}} \textbf{me}a.
-
-\mred{117.} Adjuva me, et \textbf{sal}vus \textbf{e}ro:~\red{*} et meditábor in justificatiónibus \textit{\ul{tu}}\textit{\ul{is}} \textbf{sem}per.
-
-\mred{118.} Sprevísti omnes discedéntes a ju\textbf{dí}ciis \textbf{tu}is:~\red{*} quia injústa cogitáti\textit{\ul{o}} \textit{\ul{e}}\textbf{ó}rum.
-
-\mred{119.} Prævaricántes reputávi omnes pecca\textbf{tó}res \textbf{ter}ræ:~\red{*} ídeo diléxi testimó\textit{\ul{ni}}\textit{\ul{a}} \textbf{tu}a.
-
-\mred{120.} Confíge timóre tuo \textbf{car}nes \textbf{me}as:~\red{*} a judíciis enim \textit{\ul{tu}}\textit{\ul{is}} \textbf{tí}mui.
-
-\mred{121.} Feci judícium \textbf{et} jus\textbf{tí}tiam:~\red{*} non tradas me calumni\textit{\ul{án}}\textit{\ul{ti}}\textbf{bus} me.
-
-\mred{122.} Súscipe servum \textbf{tu}um in \textbf{bo}num:~\red{*} non calumniéntur \textit{\ul{me}} \textit{\ul{su}}\textbf{pér}bi.
-
-\mred{123.} Oculi mei defecérunt in salu\textbf{tá}re \textbf{tu}um:~\red{*} et in elóquium justí\textit{\ul{ti}}\textit{\ul{æ}} \textbf{tu}æ.
-
-\mred{124.} Fac cum servo tuo secúndum miseri\textbf{cór}diam \textbf{tu}am:~\red{*} et justificatiónes \textit{\ul{tu}}\textit{\ul{as}} \textbf{do}ce me.
-
-\mred{125.} Servus \textbf{tu}us sum \textbf{e}go:~\red{*} da mihi intelléctum, ut sciam testimó\textit{\ul{ni}}\textit{\ul{a}} \textbf{tu}a.
-
-\mred{126.} Tempus faci\textbf{én}di, \textbf{Dó}mine:~\red{*} dissipavérunt \textit{\ul{le}}\textit{\ul{gem}} \textbf{tu}am.
-
-\mred{127.} Ideo diléxi man\textbf{dá}ta \textbf{tu}a,~\red{*} super aurum \textit{\ul{et}} \textit{\ul{to}}\textbf{pá}zion.
-
-\mred{128.} Proptérea ad ómnia mandáta tua \textbf{di}ri\textbf{gé}bar:~\red{*} omnem viam iníquam ó\textit{\ul{di}}\textit{\ul{o}} \textbf{há}bui.
-
-\mred{129.} Mirabília testi\textbf{mó}nia \textbf{tu}a:~\red{*} ídeo scrutáta est ea á\textit{\ul{ni}}\textit{\ul{ma}} \textbf{me}a.
-
-\mred{130.} Declarátio sermónum tu\textbf{ó}rum il\textbf{lú}minat:~\red{*} et intelléc\textit{\ul{tum}} \textit{\ul{dat}} \textbf{pár}vulis.
-
-\mred{131.} Os meum apérui, et at\textbf{trá}xi \textbf{spí}ritum:~\red{*} quia mandáta tua de\textit{\ul{si}}\textit{\ul{de}}\textbf{rá}bam.
-
-\mred{132.} Aspice in me, et mise\textbf{ré}re \textbf{me}i:~\red{*} secúndum judícium diligéntium \textit{\ul{no}}\textit{\ul{men}} \textbf{tu}um.
-
-\mred{133.} Gressus meos dírige secúndum e\textbf{ló}quium \textbf{tu}um:~\red{*} et non dominétur mei omnis \textit{\ul{in}}\textit{\ul{jus}}\textbf{tí}tia.
-
-\mred{134.} Rédime me a ca\textbf{lúm}niis \textbf{hó}minum:~\red{*} ut custódiam man\textit{\ul{dá}}\textit{\ul{ta}} \textbf{tu}a.
-
-\mred{135.} Fáciem tuam illúmina super \textbf{ser}vum \textbf{tu}um:~\red{*} et doce me justificati\textit{\ul{ó}}\textit{\ul{nes}} \textbf{tu}as.
-
-\mred{136.} Exitus aquárum deduxérunt \textbf{ó}culi \textbf{me}i:~\red{*} quia non custodiérunt \textit{\ul{le}}\textit{\ul{gem}} \textbf{tu}am.
-
-\mred{137.} \textbf{Jus}tus es, \textbf{Dó}mine:~\red{*} et rectum judí\textit{\ul{ci}}\textit{\ul{um}} \textbf{tu}um.
-
-\mred{138.} Mandásti justítiam testi\textbf{mó}nia \textbf{tu}a:~\red{*} et veritátem \textit{\ul{tu}}\textit{\ul{am}} \textbf{ni}mis.
-
-\mred{139.} Tabéscere me fecit \textbf{ze}lus \textbf{me}us:~\red{*} quia oblíti sunt verba tua ini\textit{\ul{mí}}\textit{\ul{ci}} \textbf{me}i.
-
-\mred{140.} Ignítum elóquium tuum \textbf{ve}he\textbf{mén}ter:~\red{*} et servus tuus di\textit{\ul{lé}}\textit{\ul{xit}} \textbf{il}lud.
-
-\mred{141.} Adolescéntulus sum ego \textbf{et} con\textbf{témp}tus:~\red{*} justificatiónes tuas non \textit{\ul{sum}} \textit{\ul{ob}}\textbf{lí}tus.
-
-\mred{142.} Justítia tua, justítia \textbf{in} æ\textbf{tér}num:~\red{*} et lex \textit{\ul{tu}}\textit{\ul{a}} \textbf{vé}ritas.
-
-\mred{143.} Tribulátio, et angústia \textbf{in}ve\textbf{né}runt me:~\red{*} mandáta tua meditá\textit{\ul{ti}}\textit{\ul{o}} \textbf{me}a est.
-
-\mred{144.} Æquitas testimónia tua \textbf{in} æ\textbf{tér}num:~\red{*} intelléctum da mi\textit{\ul{hi}}, \textit{\ul{et}} \textbf{vi}vam.
-
-\mred{145.} Clamávi in toto corde meo, ex\textbf{áu}di me, \textbf{Dó}mine:~\red{*} justificatiónes tu\textit{\ul{as}} \textit{\ul{re}}\textbf{quí}ram.
-
-\mred{146.} Clamávi ad te, \textbf{sal}vum \textbf{me} fac:~\red{*} ut custódiam man\textit{\ul{dá}}\textit{\ul{ta}} \textbf{tu}a.
-
-\mred{147.} Prævéni in maturitáte, \textbf{et} cla\textbf{má}vi:~\red{*} quia in verba tua su\textit{\ul{per}}\textit{\ul{spe}}\textbf{rá}vi.
-
-\mred{148.} Prævenérunt óculi mei ad \textbf{te} di\textbf{lú}culo:~\red{*} ut meditárer eló\textit{\ul{qui}}\textit{\ul{a}} \textbf{tu}a.
-
-\mred{149.} Vocem meam audi secúndum misericórdiam \textbf{tu}am, \textbf{Dó}mine:~\red{*} et secúndum judícium tuum vi\textit{\ul{ví}}\textit{\ul{fi}}\textbf{ca} me.
-
-\mred{150.} Appropinquavérunt persequéntes me in\textbf{i}qui\textbf{tá}ti:~\red{*} a lege autem tua \textit{\ul{lon}}\textit{\ul{ge}} \textbf{fac}ti sunt.
-
-\mred{151.} Prope \textbf{es} tu, \textbf{Dó}mine:~\red{*} et omnes viæ \textit{\ul{tu}}\textit{\ul{æ}} \textbf{vé}ritas.
-
-\mred{152.} Inítio cognóvi de testi\textbf{mó}niis \textbf{tu}is:~\red{*} quia in ætérnum fun\textit{\ul{dás}}\textit{\ul{ti}} \textbf{e}a.
-
-\mred{153.} Vide humilitátem meam, et \textbf{é}ri\textbf{pe} me:~\red{*} quia legem tuam non \textit{\ul{sum}} \textit{\ul{ob}}\textbf{lí}tus.
-
-\mred{154.} Júdica judícium meum, et \textbf{réd}i\textbf{me} me:~\red{*} propter elóquium tuum vi\textit{\ul{ví}}\textit{\ul{fi}}\textbf{ca} me.
-
-\mred{155.} Longe a pecca\textbf{tó}ribus \textbf{sa}lus:~\red{*} quia justificatiónes tuas non ex\textit{\ul{qui}}\textit{\ul{si}}\textbf{é}runt.
-
-\mred{156.} Misericórdiæ tuæ \textbf{mul}tæ, \textbf{Dó}mine:~\red{*} secúndum judícium tuum vi\textit{\ul{ví}}\textit{\ul{fi}}\textbf{ca} me.
-
-\mred{157.} Multi qui persequúntur me, et \textbf{trí}bu\textbf{lant} me:~\red{*} a testimóniis tuis non \textit{\ul{de}}\textit{\ul{cli}}\textbf{ná}vi.
-
-\mred{158.} Vidi prævaricántes, et \textbf{ta}be\textbf{scé}bam:~\red{*} quia elóquia tua non cus\textit{\ul{to}}\textit{\ul{di}}\textbf{é}runt.
-
-\mred{159.} Vide quóniam mandáta tua di\textbf{lé}xi, \textbf{Dó}mine:~\red{*} in misericórdia tua vi\textit{\ul{ví}}\textit{\ul{fi}}\textbf{ca} me.
-
-\mred{160.} Princípium verbórum tu\textbf{ó}rum, \textbf{vé}ritas:~\red{*} in ætérnum ómnia judícia justí\textit{\ul{ti}}\textit{\ul{æ}} \textbf{tu}æ.
-
-\mred{161.} Príncipes persecúti \textbf{sunt} me \textbf{gra}tis:~\red{*} et a verbis tuis formidá\textit{\ul{vit}} \textit{\ul{cor}} \textbf{me}um.
-
-\mred{162.} Lætábor ego super e\textbf{ló}quia \textbf{tu}a:~\red{*} sicut qui invénit spó\textit{\ul{li}}\textit{\ul{a}} \textbf{mul}ta.
-
-\mred{163.} Iniquitátem ódio hábui, et ab\textbf{o}mi\textbf{ná}tus sum:~\red{*} legem autem tu\textit{\ul{am}} \textit{\ul{di}}\textbf{lé}xi.
-
-\mred{164.} Sépties in die laudem \textbf{di}xi \textbf{ti}bi,~\red{*} super judícia justí\textit{\ul{ti}}\textit{\ul{æ}} \textbf{tu}æ.
-
-\mred{165.} Pax multa diligéntibus \textbf{le}gem \textbf{tu}am:~\red{*} et non est \textit{\ul{il}}\textit{\ul{lis}} \textbf{scán}dalum.
-
-\mred{166.} Exspectábam salutáre \textbf{tu}um, \textbf{Dó}mine:~\red{*} et mandáta tu\textit{\ul{a}} \textit{\ul{di}}\textbf{lé}xi.
-
-\mred{167.} Custodívit ánima mea testi\textbf{mó}nia \textbf{tu}a:~\red{*} et diléxit ea \textit{\ul{ve}}\textit{\ul{he}}\textbf{mén}ter.
-
-\mred{168.} Servávi mandáta tua, et testi\textbf{mó}nia \textbf{tu}a:~\red{*} quia omnes viæ meæ in con\textit{\ul{spéc}}\textit{\ul{tu}} \textbf{tu}o.
-
-\mred{169.} Appropínquet deprecátio mea in conspéctu \textbf{tu}o, \textbf{Dó}mine:~\red{*} juxta elóquium tuum da mihi \textit{\ul{in}}\textit{\ul{tel}}\textbf{léc}tum.
-
-\mred{170.} Intret postulátio mea in con\textbf{spéc}tu \textbf{tu}o:~\red{*} secúndum elóquium tuum \textit{\ul{é}}\textit{\ul{ri}}\textbf{pe} me.
-
-\mred{171.} Eructábunt lábia \textbf{me}a \textbf{hym}num,~\red{*} cum docúeris me justificati\textit{\ul{ó}}\textit{\ul{nes}} \textbf{tu}as.
-
-\mred{172.} Pronuntiábit lingua mea e\textbf{ló}quium \textbf{tu}um:~\red{*} quia ómnia mandáta \textit{\ul{tu}}\textit{\ul{a}} \textbf{ǽ}quitas.
-
-\mred{173.} Fiat manus \textbf{tu}a ut \textbf{sal}vet me:~\red{*} quóniam mandáta tu\textit{\ul{a}} \textit{\ul{e}}\textbf{lé}gi.
-
-\mred{174.} Concupívi salutáre \textbf{tu}um, \textbf{Dó}mine:~\red{*} et lex tua meditá\textit{\ul{ti}}\textit{\ul{o}} \textbf{me}a est.
-
-\mred{175.} Vivet ánima mea, \textbf{et} lau\textbf{dá}bit te:~\red{*} et judícia tua \textit{\ul{ad}}\textit{\ul{ju}}\textbf{vá}bunt me.
-
-\mred{176.} Errávi, sicut \textbf{o}vis, quæ \textbf{pér}iit:~\red{*} quære servum tuum, quia mandáta tua non \textit{\ul{sum}} \textit{\ul{ob}}\textbf{lí}tus.
+\latN{\mred{42.} Et semen servórum ejus possidébit \textbf{e}am:~* et qui díligunt nomen ejus, habitá\ul{\textit{bunt}} \ul{\textit{in}} \textbf{e}a.}\polPs{I nasienie sług jego otrzymają:~\red{*} a którzy miłują imię jego, będą w niéj mieszkać.}%
+\EndParallel
 \newpage
 \sloppy
 \wstawplik{modlitwy_koncowe}
-\newpage
-\wstawplik{modlitwy_wstepne_has}
-\newpage
-\wstawplik{modlitwy_wstepne_hanc}
 \end{document}
