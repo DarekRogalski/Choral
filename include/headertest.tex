@@ -6,11 +6,22 @@
 %\usepackage{fullpage} % redukcja marginesów
 \usepackage{setspace} % odstępy między liniami
 \usepackage{enumitem}% listy numerowane
-\usepackage{soul}% dodaje \ul
+%\usepackage{soul}% dodaje \ul
 %\usepackage{ulem}% dodaje \uline
 \usepackage{hanging}%obsługa akapitów
 % --------------------------------------------------------------------------------------
-\renewcommand*{\thepage}{\footnotesize{\arabic{page}}}% mniejsza czcionka numeru strony, dodanie czegokolwiek przed numerem: {A--\arabic{page}}
+% ------------------ USTAWIENIE NUMERÓW STRON ----------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancypagestyle{plain}{%
+	\fancyhf{}% wyczyść wszystkie nagłówki i stopki
+	\fancyfoot[LE,RO]{\footnotesize\thepage}% pozycja numeru strony LE - left on even, RO - right on odd
+	\renewcommand{\headrulewidth}{0pt}%
+	\renewcommand{\footrulewidth}{0pt}%
+	}
+%\renewcommand*{\thepage}{\footnotesize{\arabic{page}}}% mniejsza czcionka numeru strony, dodanie czegokolwiek przed numerem: {A--\arabic{page}}
+
+% --------------------------------------------------------------------------------------
 \newcommand{\margintext}[1]{\textit{\small #1}}
 % przesunięcia poziome
 \newcommand{\smallwidth}{\hskip 1em}
@@ -22,13 +33,13 @@
 \newcommand{\segmentspace}{\vskip 18pt}
 \newcommand{\sectionspace}{\vskip 28pt}
 % -----------------------------------------------------------------------------------
-% ------------------------------ GREGORIO -----------------------------------
+% --------------------------------- GREGORIO --------------------------------------
 % -----------------------------------------------------------------------------------
 \usepackage{gregoriotex}
 \gresetlinecolor{gregoriocolor}% Make staff lines red; remove for black:
 %\gresetgregoriofont{granapadano} %{gregorio}
 \gresetheadercapture{annotation}{greannotation}{string}% odczytuje adnotacje nad inicjałem jako ciąg, co pozwala na jego renderowanie
-\gresetheadercapture{commentary}{grecommentary}{string}% odczytuje komentarz jako ciąg, co pozwala na jego renderowanie
+\gresetheadercapture{commentary}{grecommentary}{string}% odczytuje komentarz jako ciąg, co pozwala na jego renderowanie; wstawianie komentarza: \grecommentary{}
 \grechangedim{commentaryraise}{0.3cm}{scalable} % podnosi komentarz wystarczająco ponad górną linię
 \grechangestyle{annotation}{\color{black}\small}% format adnotacji
 \grechangestyle{commentary}{\color{gregoriocolor}\small}% format komentarza
@@ -233,7 +244,8 @@
 \newcommand{\black}[1]{\textcolor{black}{#1}}
 %\newcommand{\numer}[1]{\noindent\makebox[1em][l]{\textcolor{myRed}{#1}}}
 % --------------------------------
-\newcommand{\tlumacz}[1]{\textpolish{\small\textit{#1}}}
+\newcommand{\tlumacz}[1]{\textpolish{\textit{#1}}}% normalna czcionka justowana do lewej
+\newcommand{\tlumaczR}[1]{\mbox{}\hfill\textpolish{\footnotesize\textit{#1}}}% mała czcionka justowana do prawej 
 \newcommand{\inicjal}[2]{\textcolor{myRed}{\Large\textbf{#1}}{#2}}
 \newcounter{licznik}
 \newcommand{\licznikZero}{\setcounter{licznik}{0}}% zeruj licznik
@@ -261,6 +273,7 @@
 \newcommand{\lat}[1]{\begin{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}\ifnum \value{licznik}>0 \licznikUp \thelicznik .~#1 \else \licznikUp#1 \fi \end{minipage}\end{latin}\switchcolumn}
 \newcommand{\latN}[1]{\begin{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}#1\end{minipage}\end{latin}\switchcolumn}% kolumna bez numeracji wersów
 \newcommand{\pol}[1]{\begin{polish}\begin{minipage}[t]{\linewidth}\textit{#1}\end{minipage}\end{polish}\switchcolumn*}
+\newcommand{\polPs}[1]{\begin{polish}\begin{minipage}[t]{\linewidth}\footnotesize\textit{#1}\end{minipage}\end{polish}\switchcolumn*}% wersja dla tłumaczenia psalmów z mniejszą czcionką
 \newcommand{\EndParallel}{\end{paracol}\end{spacing}}
 % ------------------------------------------------------------------------------------------
 
