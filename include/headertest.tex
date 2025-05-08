@@ -28,6 +28,7 @@
 \newcommand{\medwidth}{\hskip 3pt}
 \newcommand{\largewidth}{\hskip 12pt}
 % przesunięcia pionowe
+\newcommand{\minispace}{\vskip 4pt}
 \newcommand{\linespace}{\vskip 7pt}
 \newcommand{\paragraphspace}{\vskip 8pt}
 \newcommand{\segmentspace}{\vskip 18pt}
@@ -42,7 +43,7 @@
 \gresetheadercapture{commentary}{grecommentary}{string}% odczytuje komentarz jako ciąg, co pozwala na jego renderowanie; wstawianie komentarza: \grecommentary{}
 \grechangedim{commentaryraise}{0.3cm}{scalable} % podnosi komentarz wystarczająco ponad górną linię
 \grechangestyle{annotation}{\color{black}\small}% format adnotacji
-\grechangestyle{commentary}{\color{gregoriocolor}\small}% format komentarza
+\grechangestyle{commentary}{\color{gregoriocolor}\small\itshape}% format komentarza
 \grechangestyle{abovelinestext}{\color{gregoriocolor}\small}% format napisu nad liniami
 % --- inicjał
 \grechangestyle{initial}{\greIni\fontsize{50}{36}\selectfont} % ustawia czcionkę zdefiniowaną w sekcji czcionek o zmniejsza wielkość inicjału do rozmiaru 46pt a baseline do 36pt
@@ -244,7 +245,7 @@
 \newcommand{\black}[1]{\textcolor{black}{#1}}
 %\newcommand{\numer}[1]{\noindent\makebox[1em][l]{\textcolor{myRed}{#1}}}
 % --------------------------------
-\newcommand{\tlumacz}[1]{\textpolish{\textit{#1}}}% normalna czcionka justowana do lewej
+\newcommand{\tlumacz}[1]{\textpolish{\footnotesize\textit{#1}}}% normalna czcionka justowana do lewej
 \newcommand{\tlumaczR}[1]{\mbox{}\hfill\textpolish{\footnotesize\textit{#1}}}% mała czcionka justowana do prawej 
 \newcommand{\inicjal}[2]{\textcolor{myRed}{\Large\textbf{#1}}{#2}}
 \newcounter{licznik}
