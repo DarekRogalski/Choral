@@ -245,8 +245,8 @@
 \newcommand{\black}[1]{\textcolor{black}{#1}}
 %\newcommand{\numer}[1]{\noindent\makebox[1em][l]{\textcolor{myRed}{#1}}}
 % --------------------------------
-\newcommand{\tlumacz}[1]{\textpolish{\footnotesize\textit{#1}}}% normalna czcionka justowana do lewej
-\newcommand{\tlumaczR}[1]{\mbox{}\hfill\textpolish{\footnotesize\textit{#1}}}% mała czcionka justowana do prawej 
+\newcommand{\tlumacz}[1]{\begin{spacing}{0.5}\textpolish{\footnotesize\textit{#1}}\end{spacing}}% normalna czcionka justowana do lewej
+\newcommand{\tlumaczR}[1]{\begin{spacing}{0.5}\mbox{}\hfill\textpolish{\footnotesize\textit{#1}}\end{spacing}}% mała czcionka justowana do prawej 
 \newcommand{\inicjal}[2]{\textcolor{myRed}{\Large\textbf{#1}}{#2}}
 \newcounter{licznik}
 \newcommand{\licznikZero}{\setcounter{licznik}{0}}% zeruj licznik
