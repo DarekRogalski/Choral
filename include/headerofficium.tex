@@ -15,7 +15,7 @@
 \pagestyle{fancy}
 \fancypagestyle{plain}{%
 	\fancyhf{}% wyczyść wszystkie nagłówki i stopki
-	\fancyfoot[LE,RO]{\footnotesize\thepage}% pozycja numeru strony LE - left on even, RO - right on odd
+	\fancyfoot[LO,RE]{\footnotesize\thepage}% pozycja numeru strony LE - left on even, RO - right on odd
 	\renewcommand{\headrulewidth}{0pt}%
 	\renewcommand{\footrulewidth}{0pt}%
 	}
@@ -36,7 +36,7 @@
 % -----------------------------------------------------------------------------------
 % --------------------------------- GREGORIO --------------------------------------
 % -----------------------------------------------------------------------------------
-\usepackage{gregoriotex}
+\usepackage[autocompile]{gregoriotex}
 \gresetlinecolor{gregoriocolor}% Make staff lines red; remove for black:
 %\gresetgregoriofont{granapadano} %{gregorio}
 \gresetheadercapture{annotation}{greannotation}{string}% odczytuje adnotacje nad inicjałem jako ciąg, co pozwala na jego renderowanie
@@ -44,7 +44,7 @@
 \grechangedim{commentaryraise}{0.3cm}{scalable} % podnosi komentarz wystarczająco ponad górną linię
 \grechangestyle{annotation}{\color{black}\small}% format adnotacji
 \grechangestyle{commentary}{\color{gregoriocolor}\small\itshape}% format komentarza
-\grechangestyle{abovelinestext}{\color{gregoriocolor}\small}% format napisu nad liniami
+\grechangestyle{abovelinestext}{\color{gregoriocolor}\small\itshape}% format napisu nad liniami
 % --- inicjał
 \grechangestyle{initial}{\greIni\fontsize{50}{36}\selectfont} % ustawia czcionkę zdefiniowaną w sekcji czcionek o zmniejsza wielkość inicjału do rozmiaru 46pt a baseline do 36pt
 % -----
@@ -59,7 +59,7 @@
 \let\grelocalleftbox\localleftbox
 \let\grelocalrightbox\localrightbox
 
-%\newcommand{\separator}{\greseparator{3}{40}}
+\newcommand{\separator}{\begin{center}\greseparator{3}{40}\end{center}}
 %\newfontface\vectis{VectisMonumentalW01-Regular}
 %\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
 % ------------------
@@ -163,7 +163,9 @@
 \newcommand{\rubryka}[1]{
 	\begin{spacing}{0.8}
 	\begin{center}
-		\parbox{0.9\textwidth}{\centering\small\textit{\red{#1}}}
+	\begin{polish}
+		\parbox{\textwidth}{\centering\footnotesize\textit{\red{#1}}}
+	\end{polish}	
 	\end{center}
 	\end{spacing}
 	\linespace}
@@ -191,10 +193,7 @@
 	\begin{latin}
 		\segmentspace
 		\section*{#1}
-		\begin{minipage}[c]{0.88\linewidth}
-			\rubryka{#2}
-			%\centering\red{\small\textit{#2}}
-		\end{minipage}
+		\rubryka{#2}
 	\end{latin}
 	\end{center}	
 	\end{spacing}
