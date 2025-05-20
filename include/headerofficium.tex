@@ -46,7 +46,7 @@
 \grechangestyle{commentary}{\color{gregoriocolor}\small\itshape}% format komentarza
 \grechangestyle{abovelinestext}{\color{gregoriocolor}\small\itshape}% format napisu nad liniami
 % --- inicjał
-\grechangestyle{initial}{\greIni\fontsize{50}{36}\selectfont} % ustawia czcionkę zdefiniowaną w sekcji czcionek o zmniejsza wielkość inicjału do rozmiaru 46pt a baseline do 36pt
+\grechangestyle{initial}{\greIni\fontsize{40}{26}\selectfont} % ustawia czcionkę zdefiniowaną w sekcji czcionek o zmniejsza wielkość inicjału do rozmiaru 46pt a baseline do 36pt
 % -----
 \grechangedim{intersyllablespacenotes}{0.05cm}{scalable}% Minimalna odległość między nutami różnych sylab.
 % Set the space around the initial:
@@ -89,6 +89,7 @@
 %\newcommand{\tlum}[1]{\begin{tlumbox}\tlumacz{#1}\end{tlumbox}}
 %% ------------------------------------------------------
 \usepackage{Tabbing}
+\usepackage{tabularx}% tabelki z kontrolowaną szerokością
 \usepackage{longtable}
 \usepackage[savepos]{zref}
 % -----------------------------------------------------------------------------------
