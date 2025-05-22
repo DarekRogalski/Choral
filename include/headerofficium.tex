@@ -15,7 +15,7 @@
 \pagestyle{fancy}
 \fancypagestyle{plain}{%
 	\fancyhf{}% wyczyść wszystkie nagłówki i stopki
-	\fancyfoot[LO,RE]{\footnotesize\thepage}% pozycja numeru strony LE - left on even, RO - right on odd
+	\fancyfoot[LE,RO]{\footnotesize\thepage}% pozycja numeru strony LE - left on even, RO - right on odd
 	\renewcommand{\headrulewidth}{0pt}%
 	\renewcommand{\footrulewidth}{0pt}%
 	}
@@ -29,7 +29,7 @@
 \newcommand{\largewidth}{\hskip 12pt}
 % przesunięcia pionowe
 \newcommand{\minispace}{\vskip 4pt}
-\newcommand{\linespace}{\vskip 7pt}
+\newcommand{\linespace}{\vskip 6pt}
 \newcommand{\paragraphspace}{\vskip 8pt}
 \newcommand{\segmentspace}{\vskip 18pt}
 \newcommand{\sectionspace}{\vskip 28pt}
@@ -41,14 +41,17 @@
 %\gresetgregoriofont{granapadano} %{gregorio}
 \gresetheadercapture{annotation}{greannotation}{string}% odczytuje adnotacje nad inicjałem jako ciąg, co pozwala na jego renderowanie
 \gresetheadercapture{commentary}{grecommentary}{string}% odczytuje komentarz jako ciąg, co pozwala na jego renderowanie; wstawianie komentarza: \grecommentary{}
-\grechangedim{commentaryraise}{0.3cm}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+\grechangedim{commentaryraise}{10pt}{scalable} % podnosi komentarz wystarczająco ponad górną linię
 \grechangestyle{annotation}{\color{black}\small}% format adnotacji
-\grechangestyle{commentary}{\color{gregoriocolor}\small\itshape}% format komentarza
-\grechangestyle{abovelinestext}{\color{gregoriocolor}\small\itshape}% format napisu nad liniami
+\grechangestyle{commentary}{\color{gregoriocolor}\footnotesize\itshape}% format komentarza
+\grechangestyle{abovelinestext}{\color{gregoriocolor}\footnotesize\itshape}% format napisu nad liniami
+\grechangedim{abovelinestextraise}{-6pt}{scalable} % wysokość tekstu <alt></alt> nad linią
+%\grechangedim{spacelinestext}{0.5cm}{scalable} % odstęp między linią a dołem tekstu
+%\grechangedim{spacebeneathtext}{0.1cm}{scalable} % odstęp poniżej tekstu
 % --- inicjał
 \grechangestyle{initial}{\greIni\fontsize{40}{26}\selectfont} % ustawia czcionkę zdefiniowaną w sekcji czcionek o zmniejsza wielkość inicjału do rozmiaru 46pt a baseline do 36pt
 % -----
-\grechangedim{intersyllablespacenotes}{0.05cm}{scalable}% Minimalna odległość między nutami różnych sylab.
+\grechangedim{intersyllablespacenotes}{0.08cm}{scalable}% Minimalna odległość między nutami różnych sylab.
 % Set the space around the initial:
 % See http://gregorio-project.github.io/gregoriotex/details.html for more details and options
 \grechangedim{beforeinitialshift}{0.5mm}{scalable}
@@ -145,11 +148,12 @@
 % ------------------ CZCIONKA SEKCJI I SUBSEKCJI --------------------
 \newcommand\sekcjafont{\fontsize{20}{16}\selectfont\scshape}
 \newcommand\subsekcjafont{\fontsize{16}{10}\selectfont\scshape}
+\newcommand\subsubsekcjafont{\fontsize{15}{10}\selectfont\itshape}
 % -----------------------------------------------------------------------------------
 % ------------------ CZCIONKA STRONY TYTUŁOWej ------------------
 \newfontfamily{\tytfont}{JSL Ancient}
-\newcommand\tytulfont[1]{\fontsize{36}{30}\selectfont\tytfont#1\par}
-\newcommand\podtytulfont[1]{\fontsize{18}{10}\selectfont\tytfont#1\par}
+\newcommand\tytulfont[1]{\fontsize{50}{60}\selectfont\tytfont#1\par}
+\newcommand\podtytulfont[1]{\fontsize{38}{28}\selectfont\tytfont#1\par}
 
 % -----------------------------------------------------------------------------------
 % ---------------------------- GRAFIKA I KOLORY---------------------------
@@ -184,7 +188,7 @@
 		\rubryka{#2}
 	\end{latin}}
 % -----------------------------------------------------------------------------------
-% -----------------------------------SEKCJA -------------------------------------
+% ----------------------------------- SEKCJA -------------------------------------
 % -----------------------------------------------------------------------------------
 \titlespacing*{\section}{0pt}{0pt}{0pt}	
 \titleformat{\section}[hang]{\filcenter\scshape\normalfont\sekcjafont}{}{0pt}{} % format nagłówków
@@ -200,7 +204,7 @@
 	\end{spacing}
 	\linespace}	
 % -----------------------------------------------------------------------------------
-% -----------------------------------SUBSEKCJA -------------------------------
+% ----------------------------------- SUBSEKCJA -------------------------------
 % -----------------------------------------------------------------------------------	
 \titlespacing*{\subsection}{0pt}{0pt}{0pt}	
 \titleformat{\subsection}[hang]{\scshape\normalfont\subsekcjafont}{}{0pt}{} % format podnagłówków
@@ -210,6 +214,17 @@
 		\subsection*{\red{#1}}
 	\end{latin}		
 	\segmentspace}
+% -----------------------------------------------------------------------------------
+% ----------------------------------- SUBSUBSEKCJA -------------------------------
+% -----------------------------------------------------------------------------------		
+\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}	
+\titleformat{\subsubsection}[hang]{\normalfont\subsubsekcjafont}{}{0pt}{} % format podnagłówków
+\newcommand{\subsubsekcja}[1]{
+	\linespace
+	\begin{latin}
+		\subsubsection*{#1}
+	\end{latin}		
+	\linespace}
 % -----------------------------------------------------------------------------------
 % ----------------------------------- TYTUŁ -------------------------------------
 % -----------------------------------------------------------------------------------
@@ -244,7 +259,7 @@
 \newcommand{\black}[1]{\textcolor{black}{#1}}
 %\newcommand{\numer}[1]{\noindent\makebox[1em][l]{\textcolor{myRed}{#1}}}
 % --------------------------------
-\newcommand{\tlumacz}[1]{\begin{spacing}{0.5}\textpolish{\footnotesize\textit{#1}}\end{spacing}}% normalna czcionka justowana do lewej
+\newcommand{\tlumacz}[1]{\begin{spacing}{0.5}\textpolish{\footnotesize\textit{\hspace{20pt} #1}}\end{spacing}}% normalna czcionka justowana do lewej
 \newcommand{\tlumaczR}[1]{\begin{spacing}{0.5}\mbox{}\hfill\textpolish{\footnotesize\textit{#1}}\end{spacing}}% mała czcionka justowana do prawej 
 \newcommand{\inicjal}[2]{\textcolor{myRed}{\Large\textbf{#1}}{#2}}
 \newcounter{licznik}

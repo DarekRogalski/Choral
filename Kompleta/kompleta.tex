@@ -1,7 +1,7 @@
 % !TEX TS-program = lualatex+se+debug
 % !TEX encoding = UTF-8 Unicode
 
-\documentclass[14pt, twoside, a4paper]{extreport}
+\documentclass[17pt, twoside, a4paper]{extreport}
 % -----------------------------------------------------------------------------------
 % ------------------------- USTAWIENIA STRONY--------------------------
 % -----------------------------------------------------------------------------------
@@ -18,7 +18,7 @@
 \wstawplik{headerofficium}
 % elementy zmienne co do headerofficium:
 \graphicspath{{../img/}} % katalog obrazów
-\grechangestaffsize{20}%rozmiar wyniku GregorioTEX
+\grechangestaffsize{22}%rozmiar wyniku GregorioTEX
 % koniec 
 
 % debugowanie:
@@ -32,33 +32,35 @@
 % ------------------------- STRONA TYTUŁOWA  --------------------------
 \thispagestyle{empty}
 \begin{center}
-	\includegraphics[width=1.0\linewidth]{singers_okładka.jpg}
+	\includegraphics[width=1.0\textwidth]{divina_psalmodia.jpg}
 	\vfill
-	\tytulfont{COMPLETORIUM}
+	\tytulfont{DOMINICA\\AD COMPLETORIUM}
 	\vfill
-	\podtytulfont{Kompleta niedzielna\\wraz\\z~modlitwami wieczornymi}
+	\podtytulfont{wraz\\z~modlitwami wieczornymi}
 	\vfill
-	\large\textit{Liber usualis, Solesmes, 1961, p.262}
+	\includegraphics[width=0.6\textwidth]{singers_okładka.jpg}
 \end{center}%
 \newpage
-%\thispagestyle{empty}
+\thispagestyle{empty}
 \wstawplik{aperi_domine}
+\dekor{0.4}{anioly.jpg}
+\newpage
 \setcounter{page}{1}
 \fancyhead{}% wyczyść wszystkie pola nagłówka
 \pagestyle{plain}% nagłówek i stopka pusta - UWAGA: przedefiniowany styl przez polecenie fancypagestyle w header.tex	
 %\setlength{\parindent}{0pt}
 \gresetbracerendering{font}
-\sectionspace
-\separator
 \sekcja{Incipit}{Wszyscy wstają. Lektor wychodzi na środek, przyklęka i skłaniając się w kierunku ołtarza prosi o błogosławieństwo. W~obecności kapłana: ``Jube domne benedicere''~w jego kierunku. Błogosławieństwo - odpowiada kapłan lub pod jego nieobecność hebdomadariusz.}
 \gresetinitiallines{0}\gabcsnippet{(c3)<c><sp>V/</sp>.</c> Ju([alt:Lector]h)be(h) Do(h)mi(h)ne(g'_) be(h)ne(h)di(h)ce(d)re(f.::)}
-\vspace{-5mm}
+\vspace{-14pt}
 \tlumaczR{\Vbar. Pobłogosław, ojcze.}\segmentspace% 
 \gresetinitiallines{0}\gabcsnippet{(c3)Noc([alt:Hebdomadarius]h)tem(h) qui(h)ét(h)am(h) et(h) fi(h)nem(g) per(f)féc(h)tum(h.;) con(h)cé(h)dat(h) no(h)bis(h) Do(h)mi(h)nus(h) o(h)mni(h)po(d)tens(d.::) <c><sp>R/</sp>.</c> A([alt:Chorus]g.)men(h.::)}
+\vspace{-12pt}
 \tlumaczR{Noc spokojną i koniec doskonały niech nam da Pan wszechmogący. \Rbar. Amen.}\segmentspace% 
-\gresetinitiallines{1}\grecommentary{1 Petr. 5, 8-9}\gabcsnippet{(c3) Frá([alt:Lector]h)tres:(h.)(,) Só(h)bri(h)i(h) e(h)stó(h)te(h), et(h) vi(h)gi(h)lá(h)te:(f.;) qui(h)a(h) a(h)dver(h)sá(h)ri(h)us(h) vés(h)ter(h) diá(h)bo(h)lus,(h'_)(,) tam(h)quam(h) lé(h)o(h) rú(h)gi(h)ens,(h'_)(,) cír(h)cu(h)it(h), quaé(h)rens(g) quem(f) dé(h)vo(h)ret:(h.;) cú(h)i(h) re(h)sí(h)sti(h)te(h) fór(h)tes(h) in(h) fí(h.)de.(d.:) Tu(h) au(g)tem(f) Dó(h)mi(h)ne(h._), mi(h)se(h)ré(h)re(h) nó(h.)bis.(d.::) <c><sp>R/</sp>.</c> De([alt:Chorus]h)o(h) grá(h)ti(d)as.(d.::)}
+\sekcja{Lectio brevis}{}
+\gresetinitiallines{1}\grecommentary{1 Petr. 5, 8-9~~~~~}\gabcsnippet{(c3) Frá([alt:Lector]h)tres:(h.)(,) Só(h)bri(h)i(h) e(h)stó(h)te(h), et(h) vi(h)gi(h)lá(h)te:(f.;) qui(h)a(h) a(h)dver(h)sá(h)ri(h)us(h) vés(h)ter(h) diá(h)bo(h)lus,(h'_)(,) tam(h)quam(h) lé(h)o(h) rú(h)gi(h)ens,(h'_)(,) cír(h)cu(h)it(h), quaé(h)rens(g) quem(f) dé(h)vo(h)ret:(h.;) cú(h)i(h) re(h)sí(h)sti(h)te(h) fór(h)tes(h) in(h) fí(h.)de.(d.:) Tu(h) au(g)tem(f) Dó(h)mi(h)ne(h._), mi(h)se(h)ré(h)re(h) nó(h.)bis.(d.::) <c><sp>R/</sp>.</c> De([alt:Chorus]h)o(h) grá(h)ti(d)as.(d.::)}\linespace
 \tlumaczR{Bracia: Trzeźwymi bądźcie, a czujcie: boć przeciwnik wasz djabeł jako lew ryczący krąży, szukając, kogoby pożarł: któremu się sprzeciwiajcie mocni w wierze. \Vbar. Ty zaś, Panie, zmiłuj się nad nami. \Rbar. Bogu niech będą dzięki.}\segmentspace% 
-\gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> Ad(h[alt:Hebdomadarius])ju(h)to(h)ri(h)um(h) nos(h)trum(h) <c><v>\grecross</v></c> in(h) no(h)mi(h)ne(h) Do(h)mi(f)ni(f) (::) <c><sp>R/</sp>.</c> Qui fe(h[alt:Chorus])cit(h) cae(h)lum(h) et(h) ter(h)ram.(f') (::)}
+\gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> Ad(h[alt:Hebdomadarius])ju(h)to(h)ri(h)um(h) nos(h)trum(h) <c><v>\grecross</v></c> in(h) no(h)mi(h)ne(h) Do(h)mi(f)ni(f) (::) <c><sp>R/</sp>.</c> Qui fe(h[alt:Chorus])cit(h) cae(h)lum(h) et(h) ter(h)ram.(f') (::)}\linespace
 \tlumaczR{\Vbar. Wspomożenie nasze \grecross~w imieniu Pana. \Rbar. Który stworzył niebo i ziemię.}
 \newpage
 \rubryka{Odmawia się \emph{Pater noster} po cichu, oraz czyni rachunek sumienia. W przypadku obecności kapłana, może on poprowadzić rachunek sumienia, wówczas pierwszy odmawia  \emph{Confiteor}, a~następnie wszyscy (analogicznie jak przy modlitwach u stopni ołtarza).}
@@ -72,24 +74,24 @@
 \latN{\inicjal{I}{ndulgéntiam}, \grecross~absolutiónem et remissiónem peccatórum nostrórum tríbuat nobis omnípotens et miséricors Dóminus. Amen.}\pol{\inicjal{P}{rzebaczenia}, \grecross~rozgrzeszenia i odpuszczenia grzechów naszych, niech nam udzieli Pan wszechmogący i miłosierny. Amen.}%
 \EndParallel
 \rubryka{Czyni się znak krzyża na klatce piersiowej.}
-\gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> Con(h[alt:Hebdomadarius])vér(h)te(h) nos(h) <c><v>\grecross</v></c> Déus(h) sa(h)lu(h)tá(g)ris(f) nó(h)ster(h) (::) <c><sp>R/</sp>.</c> Et(h[alt:Chorus]) a(h)vér(h)te(h) í(h)ram(h)  tú(h)am(g) a(f) nó(h)bis.(h) (::)}
+\vspace{-10pt}
+\gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> Con(h[alt:Hebdomadarius])vér(h)te(h) nos(h) <c><v>\grecross</v></c> Déus(h) sa(h)lu(h)tá(g)ris(f) nó(h)ster(h) (::) <c><sp>R/</sp>.</c> Et(h[alt:Chorus]) a(h)vér(h)te(h) í(h)ram(h)  tú(h)am(g) a(f) nó(h)bis.(h) (::)}\linespace
 \tlumaczR{\Vbar. Nawróć nas \grecross~Boże, nasz zbawco. \Rbar. I odwróć swój gniew od nas.}\segmentspace% 
-\gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> De(h)us(h'_) <c><v>\grecross</v></c> (,) in(h) ad(h)ju(h)tó(i)ri(h)um(h) me(h)um(h'_) in(h)tén(g)de.(h.) (::) <c><sp>R/</sp>.</c> Dó(h)mi(h)ne(h'_) (,) ad(h) ad(h)ju(h)ván(h)dum(h) me(h'_) fe(h)stí(g)na.(h.) (:) Gló(h)ri(h)a(h) Pa(h)tri,(h) et(h) Fí(h)li(h)o,(h'_) (,) et(h) Spi(h)rí(h)tu(h)i(h) San(g)cto.(h.) (:) Sic(h)ut(h) e(h)rat(h) in(h) prin(h)cí(h)pi(h)o,(h) et(h) nunc,(h) et(h) sem(h)per,(h.) (,) et(h) in(h) saé(h)cu(h)la(h) sae(h)cu(h)ló(h)rum.(h) A(g)men.(h.) (;) Al(h)le(i)lú(hg~){ia}.(g.) (::) <i>Vel :</i>() Laus(h) ti(h)bi(h) Dó(h)mi(h)ne(h'_) Rex(h) ae(h)tér(h)nae(i) gló(h')ri(h)ae.(g.) (::)}
-\tlumaczR{\Vbar. Boże, \grecross~wejrzyj ku wspomożeniu memu. \Rbar. Panie, pośpiesz ku ratunkowi memu. Chwała Ojcu i Synowi, i Duchowi Świętemu. \newline Jak była na początku, teraz i zawsze, i na wieki wieków. Amen. Alleluja.~\emph{Lub:} Chwała Tobie Panie, Królu wiecznej chwały.}\newpage
-\rubryka{Po zaintonowaniu antyfony, oficjant rozpoczyna pierwszy wers psalmu, wszyscy siadają, po czym drugi chór wspólnie śpiewa kolejny wers. Drugi psalm intonuje kantor (wstając), trzeci ponownie oficjant.}
+\gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> De(h)us(h'_) <c><v>\grecross</v></c> (,) in(h) ad(h)ju(h)tó(i)ri(h)um(h) me(h)um(h'_) in(h)tén(g)de.(h.) (::) <c><sp>R/</sp>.</c> Dó(h)mi(h)ne(h'_) (,) ad(h) ad(h)ju(h)ván(h)dum(h) me(h'_) fe(h)stí(g)na.(h.) (:) Gló(h)ri(h)a(h) Pa(h)tri,(h) et(h) Fí(h)li(h)o,(h'_) (,) et(h) Spi(h)rí(h)tu(h)i(h) San(g)cto.(h.) (:) Sic(h)ut(h) e(h)rat(h) in(h) prin(h)cí(h)pi(h)o,(h) et(h) nunc,(h) et(h) sem(h)per,(h.) (,) et(h) in(h) saé(h)cu(h)la(h) sae(h)cu(h)ló(h)rum.(h) A(g)men.(h.) (;) Al(h)le(i)lú(hg~){ia}.(g.) (::) (z-) <alt>A Septuagesima usque ad Pascha, loco Alleluia, dicitur :</alt> Laus(h) ti(h)bi(h) Dó(h)mi(h)ne(h'_) Rex(h) ae(h)tér(h)nae(i) gló(h')ri(h)ae.(g.) (::)}\linespace
+\tlumaczR{\Vbar. Boże, \grecross~wejrzyj ku wspomożeniu memu. \Rbar. Panie, pośpiesz ku ratunkowi memu. Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen. Alleluja.~\emph{Lub:} Chwała Tobie Panie, Królu wiecznej chwały.}
+\sekcja{Psalmi}{Po zaintonowaniu antyfony, oficjant rozpoczyna pierwszy wers psalmu, wszyscy siadają, po czym drugi chór wspólnie śpiewa kolejny wers. Drugi psalm intonuje kantor (wstając), trzeci ponownie oficjant.}
+\vspace{-12pt}
 \begin{center}
-\begin{tabularx}{0.8\textwidth}{ p{150pt} p{50pt} p{150pt} p{50pt}}
- \small\emph{Per Annum} &  & \small\emph{Tempore Paschali} \\ 
-\begin{minipage}{150pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) MI(g)se-(g')ré-(h)re(gf) (::)}\end{minipage}  & & \begin{minipage}{150pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) AL(g)le-(g')lú-(h)ia(gf) (::)}\end{minipage}  & \\
-\tlumaczR{Zmiłuj się} & & &
+\begin{tabularx}{0.8\textwidth}{ p{150pt} p{50pt} p{150pt}}
+ \small\emph{Per Annum} &  & \small\emph{Tempore Paschali}\\ 
+\begin{minipage}{150pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) MI(g)se-(g')ré-(h)re(gf) (::)}\end{minipage}  & & \begin{minipage}{150pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) AL(g)le-(g')lú-(h)ia(gf) (::)}\end{minipage}\\
+\tlumaczR{Zmiłuj się} & & \\
 \end{tabularx}
 \end{center}
-\vspace{-12mm}
+\vspace{-36pt}
 \subsekcja{Psalm 4}
-\vspace{-2mm}
-\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Cum(g) in(h)vo(j)cá(j)rem(j) ex(j)au(j)dí(j)vit(j) me(j) De(j)us(j) jus(j)tí(j)ti(j)æ(j) <b>me</b>(k jr)æ:(j.) <c><v>*</v></c> (:) in(j) tri(j)bu(j)la(j)ti(j)ó(j)ne(j) di(j)la(j)<i><ul>tás</i></ul>(i)<i><ul>ti</i></ul>(j) <b>mi</b>(h gr)hi.(g.) (::)
-<i>Flex:</i>()  pec(j)cá(j)re: <c><v>†</v></c>(h. j j j  ::)}
-\vspace{-5mm}
+\vspace{-8pt}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Cum(g) in(h)vo(j)cá(j)rem(j) ex(j)au(j)dí(j)vit(j) me(j) De(j)us(j) jus(j)tí(j)ti(j)æ(j) <b>me</b>(k jr)æ:(j.) <c><v>*</v></c> (:) in(j) tri(j)bu(j)la(j)ti(j)ó(j)ne(j) di(j)la(j)<i><ul>tás</i></ul>(i)<i><ul>ti</i></ul>(j) <b>mi</b>(h gr)hi.(g.) (::) ()<c><i>Flex:</i></c>()  pec(j)cá(j)re: <c><v>†</v></c>(h. j j j  ::)}\linespace
 \tlumaczR{Kiedym wzywał, wysłuchał mię Bóg sprawiedliwości mojéj:~\red{*} w uciśnieniu rozprzestrzeniłeś mi.}\segmentspace
 \columnratio{0.7}
 \setlength{\columnseprule}{0.4pt}
@@ -118,10 +120,8 @@
 \latN{\mred{12.}~Sicut erat in princípio, et nunc, et \textbf{sem}per,~\red{*}  et in sǽcula sæcu\underline{\textit{ló}}\underline{\textit{rum}}. \textbf{A}men.}\polPs{Jak była na początku, teraz i zawsze,~\red{*}  i na wieki wieków. Amen.}%
 \EndParallel
 \subsekcja{Psalm 90}
-\vspace{-2mm}
-\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Qui(g) há(h)bi(j)tat(j) in(j) ad(j)ju(j)tó(j)ri(j)o(j) Al(j)<b>tís</b>(k)si(jr)mi,(j.) <c><v>*</v></c> (:) in(j) pro(j)tec(j)ti(j)ó(j)ne(j) De(j)i(j) cæ(j)li(j) <i><ul>com</i></ul>(i)<i><ul>mo</i></ul>(j)<b>rá</b>(h)bi(gr)tur.(g.) (::)
-<i>Flex:</i>()  in(j) di(j)e, <c><v>†</v></c>(h. j j j  ::)}
-\vspace{-5mm}
+\vspace{-8pt}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Qui(g) há(h)bi(j)tat(j) in(j) ad(j)ju(j)tó(j)ri(j)o(j) Al(j)<b>tís</b>(k)si(jr)mi,(j.) <c><v>*</v></c> (:) in(j) pro(j)tec(j)ti(j)ó(j)ne(j) De(j)i(j) cæ(j)li(j) <i><ul>com</i></ul>(i)<i><ul>mo</i></ul>(j)<b>rá</b>(h)bi(gr)tur.(g.) (::) ()<c><i>Flex:</i></c>()  in(j) di(j)e, <c><v>†</v></c>(h. j j j  ::)}\linespace
 \tlumaczR{Kto mieszka w spomożeniu Najwyższego,~\red{*}  w obronie Boga niebieskiego będzie przebywał.}\segmentspace
 \columnratio{0.7}
 \setlength{\columnseprule}{0.4pt}
@@ -162,8 +162,8 @@
 \latN{\mred{18.}~Sicut erat in princípio, et nunc, et \textbf{sem}per,~\red{*}  et in sǽcula sæcu\underline{\textit{ló}}\underline{\textit{rum}}. \textbf{A}men.}\polPs{Jak była na początku, teraz i zawsze,~\red{*}  i na wieki wieków. Amen.}%
 \EndParallel
 \subsekcja{Psalm 133}
-\vspace{-2mm}
-\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Ec(g)ce(h) nunc(j) be(j)ne(j)dí(j)ci(j)te(j) <b>Dó</b>(k)mi(jr)num,(j.) <c><v>*</v></c> (:) om(j)nes(j) <i><ul>ser</i></ul>(i)<i><ul>vi</i></ul>(j) <b>Dó</b>(h)mi(gr)ni:(g.) (::)}
+\vspace{-8pt}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Ec(g)ce(h) nunc(j) be(j)ne(j)dí(j)ci(j)te(j) <b>Dó</b>(k)mi(jr)num,(j.) <c><v>*</v></c> (:) om(j)nes(j) <i><ul>ser</i></ul>(i)<i><ul>vi</i></ul>(j) <b>Dó</b>(h)mi(gr)ni:(g.) (::)}\linespace
 \tlumaczR{Otóż teraz błogosławcie Pana,~\red{*}  wszyscy słudzy Pańscy:}\segmentspace
 \columnratio{0.7}
 \setlength{\columnseprule}{0.4pt}
@@ -179,14 +179,26 @@
 
 \latN{\mred{6.}~Sicut erat in princípio, et nunc, et \textbf{sem}per,~\red{*}  et in sǽcula sæcu\underline{\textit{ló}}\underline{\textit{rum}}. \textbf{A}men.}\polPs{Jak była na początku, teraz i zawsze,~\red{*}  i na wieki wieków. Amen.}%
 \EndParallel
+\begin{center}
+\begin{tabularx}{\textwidth}{p{250pt}p{10pt}p{250pt}}
+\small\emph{Per Annum} & & \small\emph{Tempore Paschali}\\ 
+\begin{minipage}{250pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) MI(g)se(g')ré(h)re(gf) () mi(gh)hi(h') Dó(g)mi(fg)ne,(g.) (;) et(h) ex(j)áu(i_[uh:l]j)di(h) o(h)ra(hg)ti(f)ó(gh)nem(h) me(g.)am.(g.) (::)}\end{minipage}  & & \begin{minipage}{250pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) AL(g)le-(g')lú(h)ia,(gf__) (,) al(h)le-(j)lú-(i_j)ia,(h_GF) (z) al(gh)le-(h)lú-(g.)ia.(g.) (::)}\end{minipage}\\
+\tlumaczR{Zmiłuj się nademną, Panie, a wysłuchaj modlitwę moją.} & & \\
+\end{tabularx}
+\end{center}
+\vspace{-26pt}
+\sekcja{Hymnus}{Wszyscy wstają. Po zaintonowaniu, pierwszą zwrotkę śpiewa pierwszy chór, drugą - drugi chór, trzecią - wspólnie.}
+\vspace{-8pt}
+\subsubsekcja{Per Annum}
+\gresetinitiallines{1}\greannotation{8.}\gabcsnippet{(c4) TE(g) lu(i')cis(h) an(j)te(j) tér(j')mi(i)num,(h) (,) Re(h)rum(j') Cre(j)á(j)tor,(g) pó(h')sci(g)mus,(f.) (;) Ut(h) pro(h') tu(g)a(j) cle(i)mén(h')ti(g)a,(hih') (,) Sis(h) prae(h')sul(g) et(f) cu(g)stó(h')di(g)a.(g.) (::) <c><v>\footnotesize{2. }</v></c> Pro(g)cul(i') re(h)cé(j)dant(j) só(j')mni(i)a,(h) (,) Et(h) nó(j')cti(j)um(j) phan(g)tás(h')ma(g)ta :(f.) (;) Ho(h)stém(h')que(g) no(j)strum(i) cóm(h')pri(g)me,(hih') (,) Ne(h) pol(h')lu(g)án(f)tur(g) cór(h')po(g)ra.(g.) (::) <c><v>\footnotesize{3. }</v></c> Prae(g)sta,(i') Pa(h)ter(j) pi(j)ís(j')si(i)me,(h) (,) Pa(h)trí(j')que(j) com(j)par(g) U(h')ni(g)ce,(f.) (;) Cum(h) Spí(h')ri(g)tu(j) Pa(i)rá(h')cli(g)to,(hih') (,) Re(h)gnans(h') per(g) o(f)mne(g) saé(h')cu(g)lum.(g.) (::) A(ghg)men.(fg..) (::)}\linespace
+\tlumacz{1.~Ciebie przed zanikiem światła, Stwórco wszechrzeczy, prosimy, Abyś według twej miłościwości, Był nam obrońcą i strażą. 2.~Niechaj daleko od nas odstąpią,
+Widziadła senne i zjawy nocne; Powstrzymaj nieprzyjaciela naszego, By ciała nie uległy zmazaniu. 3.~Udziel nam tego, Ojcze najmiłościwszy, I Ty Jedyny, równy Ojcu, Z Duchem Pocieszycielem Królujący po wszystek wiek. Amen.}
+\subsubsekcja{Tempore Paschalis}
+\gresetinitiallines{1}\greannotation{8.}\gabcsnippet{(c4) TE(g) lu(g')cis(e) an(g)te(h) tér(i')mi(j)num,(h) (,) Re(g)rum(i') Cre(h)á(j)tor,(g) pó(hi)sci(i)mus,(i.) (;) Ut(h) pro(j') tu(k)a(ih) cle(j)mén(i')ti(j)a,(hvGF') (,) Sis(h) prae(hg)sul(j) et(ij) cu(h)stó(g)di(fg)a.(g.) (::) <c><v>\footnotesize{2. }</v></c> Pro(g)cul(g') re(e)cé(g)dant(h) só(i')mni(j)a,(h) (,) Et(g) nó(i')cti(h)um(j) phan(g)tás(hi)ma(i)ta :(i.) (;) Ho(h)stém(j')que(k) no(ih)strum(j) cóm(i')pri(j)me,(hvGF') (,) Ne(h) pol(hg)lu(j)án(ij)tur(h) cór(g)po(fg)ra.(g.) (::) <c><v>\footnotesize{3. }</v></c>  De(g)o(g') Pa(e)tri(g) sit(h) gló(i')ri(j)a,(h) (,) Et(g) Fí(i')li(h)o,(j) qu<i>i</i>(g) a(g) mór(hi)tu(i)is(i.) (;) Sur(h)ré(j')xit,(k) ac(ih) Pa(j)rá(i')cli(j)to,(hvGF') (,) In(h) sem(hg)pi(j)tér(ij)na(h) saé(g)cu(fg)la.(g.) (::) A(ghg)men.(fg..) (::)}\linespace
+\tlumacz{1.~Ciebie przed zanikiem światła, Stwórco wszechrzeczy, prosimy, Abyś według twej miłościwości, Był nam obrońcą i strażą. 2.~Niechaj daleko od nas odstąpią,
+Widziadła senne i zjawy nocne; Powstrzymaj nieprzyjaciela naszego, By ciała nie uległy zmazaniu. 3.~Bądź Ojcze Boże chwalony, Z Synem, który pogrzebiony Wstał z martwych, i Duch światłości Niech ma chwałę na wieczności. Amen.}
 \newpage
- \small\emph{Per Annum}\linespace
-\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) MI(g)se(g')ré(h)re(gf) *() mi(gh)hi(h') Dó(g)mi(fg)ne,(g.) (;) et(h) ex(j)áu(i_[uh:l]j)di(h) o(h)ra(hg)ti(f)ó(gh)nem(h) me(g.)am.(g.) (::)}
-\tlumaczR{Zmiłuj się nademną, Panie, a wysłuchaj modlitwę moją.}
-\small\emph{Tempore Paschali}\linespace
-\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) AL(g)le-(g')lú(h)ia,(gf__) (,) al(h)le-(j)lú-(i_j)ia,(h_GF) al(gh)le-(h)lú-(g.)ia.(g.) (::)}
 \sekcja{Modlitwy końcowe}{Odmawia się po cichu w pozycji klęczącej.}
-\sloppy
 \wstawplik{modlitwy_koncowe_credo}
 
 \end{document}
