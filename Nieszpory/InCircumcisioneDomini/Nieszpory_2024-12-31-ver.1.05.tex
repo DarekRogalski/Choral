@@ -1,0 +1,347 @@
+% !TEX TS-program = lualatex+se
+% !TEX encoding = UTF-8
+
+\documentclass[oneside, 12pt, a4paper]{book}
+%\usepackage[letterpaper,showframe]{geometry}
+\usepackage{fullpage} % redukcja marginesów
+\usepackage{setspace} % odstępy między liniami
+\usepackage{enumitem}% listy numerowane
+\usepackage{geometry}
+\geometry{
+	left=15mm,
+	right=15mm,
+	top=12mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+	
+% --- GREGORIO ---	
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\gresetheadercapture{annotation}{greannotation}{string}
+% Format annotation above initial
+\grechangestyle{annotation}{\small\bfseries}%
+\grechangedim{intersyllablespacenotes}{0.18cm}{scalable}%
+
+\let\grelocalleftbox\localleftbox
+\let\grelocalrightbox\localrightbox
+
+% ------------------
+
+\usepackage[hyperindex=true]{hyperref}
+
+
+% --- SPIS TREŚCI -------
+%\usepackage{imakeidx}
+%\makeindex[title=Alfabetyczny spis program=texindy,options=-M styl.xdy]
+%\usepackage{filecontents}
+%\begin{filecontents*}{styl.xdy}
+%;;; xindy style file
+%(markup-locclass-list :open "\dotfill" :sep "")
+%(define-attributes (( "textbf" "default" )) )
+%(markup-locref   :attr  "textbf"     :open "\textbf{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "textit"     :open "\textit{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "textttt"     :open "\textttt{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "texttsc"     :open "\texttsc{\hyperpage{" :close "}}")
+%(markup-locref   :attr  "default"     :open "\hyperpage{" :close "}")
+%\end{filecontents*}
+% -------------------------
+
+\usepackage{fullpage}
+\usepackage{multicol}
+
+% ---  Konfiguracja kolumn ---
+\usepackage{paracol}
+% \setlength{\columnseprule}{0.4pt}
+\colseprulecolor{red}
+\setcolumnwidth{.48\textwidth, .48\textwidth}
+\setlength{\columnsep}{.03\textwidth}
+\setlength{\columnseprule}{.1mm}
+% ----------------------------
+
+\footnotelayout{m}
+
+% --- UKŁAD DWUKOLUMNOWY Z TŁUMACZENIEM ---
+%\usepackage{tcolorbox}
+%\newtcolorbox{nutybox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=center}
+%\newtcolorbox{tlumbox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=top}
+% ------------------------------------------------------
+
+\usepackage{Tabbing}
+\usepackage{longtable}
+\usepackage[savepos]{zref}
+
+% --- CZCIONKI DOKUMENTU ---
+\usepackage[latin,polish]{babel}
+\usepackage{fontspec}
+\usepackage{times}
+\defaultfontfeatures{Ligatures=TeX}
+
+%\setmainfont[<font features>]{<name of font>} % sets the roman font
+%\setsansfont[<font features>]{<name of font>} % sets the sans font
+%\setmonofont[<font features>]{<name of font>} % sets the monospace font
+
+
+%\setmainfont{Libertinus Serif}
+%\newfontface\vectis{VectisMonumentalW01-Regular}
+%\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
+% --------------------------------
+
+% --- USTAWIENIA STRONY ---
+% usuwanie nagłówków/stopek z\,dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+%\usepackage{setspace} % odstępy między liniami
+%\setstretch{1.5} % półtorej linii odległości między wierszami
+\usepackage{titlesec} % ustawianie nagłówków
+% -----------------------------
+
+% --- GRAFIKA I KOLORY ---
+\usepackage{xcolor} % kolory
+\usepackage{graphicx} % umożliwia import obrazów
+\graphicspath{{img/}} % katalog obrazów
+\usepackage{pgfornament}% ornamenty graficzne
+% --------------------------
+
+% --- KOMENDY WŁASNE ---
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+% --------------------------------
+\newcommand{\rubryka}[1]{
+	\begin{spacing}{0.8}
+	\centering 
+	\parbox{0.9\textwidth}{\centering\textcolor{red}{\small\textit{#1}}}
+	\end{spacing}
+	\vspace{3mm}
+	\normalsize\normalfont}
+\newcommand{\tlumacz}[1]{\textit{#1}}
+\newcommand{\inicjal}[2]{\textcolor{red}{\large\textbf{#1}}{#2}}
+% --------------------------------
+\newcommand{\sekcja}[1]{
+	\begin{spacing}{0.7}
+	\begin{center}
+	\fontspec{Libertinus Serif}
+	\section*{#1}
+%	\red{\small\textit{#2}}
+	\vspace{7mm}
+\end{center}	
+\end{spacing}}
+%---------------------------------
+\newcommand{\dekor}[2]{
+	\begin{center}
+		\vspace*{\fill}
+		\includegraphics[width=#1\textwidth]{#2}
+		\vspace*{\fill}
+	\end{center}}
+
+% --- ZNAKI SPECJALNE ---
+% 
+%\newcommand †
+% --------------------------
+
+\begin{document}
+\pagestyle{plain}	
+\fontspec{times}
+\large
+\titlespacing*{\chapter}{0pt}{0pt}{5pt}	
+\titleformat{\chapter}[hang]{\filcenter\LARGE\scshape\bfseries}{}{0pt}{} % format nagłówków
+\titlespacing*{\section}{0pt}{0pt}{0pt}	
+\titleformat{\section}[hang]{\filcenter\large\scshape}{}{0pt}{} % format nagłówków
+
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+
+\pagenumbering{gobble} % nie jest wyprowadzany żaden numer strony, chociaż numer jest nadal resetowany. Odniesienia do tej strony również są puste.
+
+%% ----------------- STRONA TYTUŁOWA  ---------------------
+\begin{center}
+	\includegraphics[width=1.0\textwidth]{InCircumcisione01.jpg}
+	\vfill
+	\fontspec{jsl-ancient.ttf}
+	\fontsize{18}{10}\selectfont
+	{AD VESPERAS}\par
+	\fontsize{36}{30}\selectfont
+	{IN CIRCUMCISIONE\\DOMINI\\et\\Die Octava\\Nativitatis Domini}\par
+	\vfill
+	\large\textit{Liber usualis, Solesmes, 1961, p.440}
+\end{center}
+\newpage
+\pagenumbering{arabic}
+%% ----------------- Modlitwy wstępne -----------
+\input{~/Documents/Latex/include/modlitwy_wstepne.tex}
+\dekor{0.4}{amdg800x533.jpg}
+\newpage
+%% -----------------  INCIPIT ---------------------
+\large
+\setstretch{1.1} 
+\sekcja{Incipit}
+\input{include/incipit_solemnis}
+\vspace{6mm}
+%% -----------------  PSALMI ---------------------
+\sekcja{Psalmi}
+%% --- 1. Psalm 109 - 1 g2------
+\red{\large{Psalm 109}\vspace{4mm}}
+\gresetinitiallines{1}\greannotation{1. Ant.}\greannotation{6. F}\gabcsnippet{(c4) O(ffddc) ad(f')mi(f)rá(fg)bi(g)le(g') com(f)mér(gh)ci(gf)um!(f.) <c><v>\greheightstar</v></c> (;) Cre(f)á(g')tor(f) gé(g')ne(f)ris(g) hu(gh)má(f)ni,(f.) (;) a(f)ni(f)má(ixfh'_!iv_H'G)tum(g') ()() cor(ixi)pus(h') su(g)mens,(f.) (;) de(f) Vír(g')gi(f)ne(f') na(g)sci(f') di(f)gná(ixfh'_!iv_H'G)tus(hg) est :(g.) (:) et(g) pro(g)cé(h')dens(g) ho(fg)mo(f) si(fe)ne(d!ewf) sé(f_g)mi(f)ne,(c.) (;) lar(c_[ll:1]d)gí(f')tus(f) est(f) no(g_[uh:l]h)bis(g') su(h)am(hj) de(hg)i(h)tá(f.)tem.(f.) (::)}
+\vspace{4mm}
+\greannotation{Psalm}\greannotation{109}\gabcsnippet{(c4) Di(f)xit(gh) Dó(h)mi(h)nus(h) Dó(h)mi(h)<i>no</i>(g) <b>me</b>(h fr)o:(f.) <c><v>\greheightstar</v></c>(:) Se(h)de(h) a(h) <i>dex</i>(f)<i>tris</i>(gh) <b>me</b>(g fr)is:(f.) (::)}
+\begin{enumerate}[start=2]
+\begin{spacing}{0.8}
+\item Donec ponam inimí\textit{\underline{cos}} \textbf{tu}os,~\red{*} scabéllum pe\textit{\underline{dum}} \textit{\underline{tu}}\textbf{ó}rum.
+\item Virgam virtútis tuæ emíttet Dóminus \textit{\underline{ex}} \textbf{Si}on:~\red{*} domináre in médio inimicó\textit{\underline{rum}} \textit{\underline{tu}}\textbf{ó}rum.
+\item Tecum princípium in die virtútis tuæ in splendóribus \textit{\underline{sanc}}\textbf{tó}rum:~\red{*} ex útero ante lucíferum \textit{\underline{gé}}\textit{\underline{nu}}\textbf{i} te.
+\item Jurávit Dóminus, et non pœnité\textit{\underline{bit}} \textbf{e}um:~\red{*} Tu es sacérdos in ætérnum secúndum órdi\textit{\underline{nem}} \textit{\underline{Mel}}\textbf{chí}sedech.
+\item Dóminus a dex\textit{\underline{tris}} \textbf{tu}is,~\red{*} confrégit in die iræ \textit{\underline{su}}\textit{\underline{æ}} \textbf{re}ges.
+\item Judicábit in natiónibus, implébit \textit{\underline{ru}}\textbf{í}nas:~\red{*} conquassábit cápita in ter\textit{\underline{ra}} \textit{\underline{mul}}\textbf{tó}rum.
+\item De torrénte in vi\textit{\underline{a}} \textbf{bi}bet:~\red{*} proptérea exal\textit{\underline{tá}}\textit{\underline{bit}} \textbf{ca}put.
+\item Glória Patri, \textit{\underline{et}} \textbf{Fí}lio,~\red{*} et Spirí\textit{\underline{tu}}\textit{\underline{i}} \textbf{Sanc}to.
+\item Sicut erat in princípio, et nunc, \textit{\underline{et}} \textbf{sem}per,~\red{*} et in sǽcula sæcu\textit{\underline{ló}}\textit{\underline{rum}}. \textbf{A}men.
+\end{spacing}
+\end{enumerate}
+\gresetinitiallines{1}\greannotation{1. Ant.}\greannotation{6. F}\gabcsnippet{(c4) O(f+ ffddc) ad(f')mi(f)rá(fg)bi(g)le(g') com(f)mér(gh)ci(gf)um!(f.) (;) Cre(f)á(g')tor(f) gé(g')ne(f)ris(g) hu(gh)má(f)ni,(f.) (;) a(f)ni(f)má(ixfh'_!iv_H'G)tum(g') cor(ixi)pus(h') su(g)mens,(f.) (;) de(f) Vír(g')gi(f)ne(f') na(g)sci(f') di(f)gná(ixfh'_!iv_H'G)tus(hg) est :(g.) (:) et(g) pro(g)cé(h')dens(g) ho(fg)mo(f) si(fe)ne(d!ewf) sé(f_g)mi(f)ne,(c.) (;) lar(c_[ll:1]d)gí(f')tus(f) est(f) no(g_[uh:l]h)bis(g') su(h)am(hj) de(hg)i(h)tá(f.)tem.(f.) (::)}
+\vspace{6mm}
+
+%% --- 2. Psalm 112 - 8G ---
+\red{\large{Psalm 112}\vspace{4mm}}
+\gresetinitiallines{1}\greannotation{2. Ant.}\greannotation{3. a2}\gabcsnippet{(c4) QUan(e)do(e[ll:1]d) na(g)tus(hj) es(j'_) <c><v>\greheightstar</v></c> (,) in(j)ef(i')fa(g)bí(i')li(j)ter(h) ex(gf) Vír(g_[uh:l]h)gi(h)ne,(g.) (;) tunc(g) im(g)plé(i)tae(j) sunt(hgh___) Scri(gh)ptú(e.)rae :(e.) (:) sic(g)ut(h) plú(j')vi(i)a(jkj) in(i') vel(j)lus(h') de(h)scen(g')dí(i)sti,(h.) (;) ut(h) sal(j')vum(i) fá(j')ce(i)res(g) ge(hv_GF)nus(g) hu(gf)má(e.)num :(e.) (:) te(h_i) lau(g)dá(gf)mus(d_e) De(g)us(ghg) no(e.)ster.(e.) (::)}
+\vspace{4mm}
+\greannotation{Psalm}\greannotation{112}\gabcsnippet{(c4) Lau(g)dá(hj)te,(j) <b>pú</b>(k)e(jr)ri,(j) <b>Dó</b>(jr[ocb:1{])<b>mi</b>(ih[ocb:0}])num:(j.) <c><v>\greheightstar</v></c>(:) lau(j)dá(j)te(j) <i>no</i>(ji)<i>men</i>(hi) <b>Dó</b>(h)mi(gr)ni.(gh..) (::)}
+\begin{enumerate}[start=2]
+\begin{spacing}{0.8}
+\item \red{\footnotesize(fit reverentia)} Sit nomen Dómini \textbf{be}ne\textbf{díc}tum,~\red{*} ex hoc nunc, et us\textit{\underline{que}} \textit{\underline{in}} \textbf{sǽ}culum.
+\item A solis ortu usque \textbf{ad} oc\textbf{cá}sum,~\red{*} laudábile \textit{\underline{no}}\textit{\underline{men}} \textbf{Dó}mini.
+\item Excélsus super omnes \textbf{gen}tes \textbf{Dó}\textbf{mi}nus,~\red{*} et super cælos gló\textit{\underline{ri}}\textit{\underline{a}} \textbf{e}jus.
+\item Quis sicut Dóminus, Deus noster, qui in \textbf{al}tis \textbf{há}\textbf{bi}tat,~\red{*} et humília réspicit in cælo \textit{\underline{et}} \textit{\underline{in}} \textbf{ter}ra?
+\item Súscitans a \textbf{ter}ra \textbf{ín}\textbf{o}pem,~\red{*} et de stércore é\textit{\underline{ri}}\textit{\underline{gens}} \textbf{páu}perem:
+\item Ut cóllocet eum \textbf{cum} prin\textbf{cí}\textbf{pi}bus,~\red{*} cum princípibus pó\textit{\underline{pu}}\textit{\underline{li}} \textbf{su}i.
+\item Qui habitáre facit stéri\textbf{lem} in \textbf{do}mo,~\red{*} matrem filió\textit{\underline{rum}} \textit{\underline{læ}}\textbf{tán}tem.
+\item Glória \textbf{Pa}tri, et \textbf{Fí}\textbf{li}o,~\red{*} et Spirí\textit{\underline{tu}}\textit{\underline{i}} \textbf{Sanc}to.
+\item Sicut erat in princípio, et \textbf{nunc}, et \textbf{sem}per,~\red{*} et in sǽcula sæcu\textit{\underline{ló}}\textit{\underline{rum}}. \textbf{A}men.
+\end{spacing}
+\end{enumerate}
+\newpage
+\gresetinitiallines{1}\greannotation{2. Ant.}\greannotation{3. a2}\gabcsnippet{(c4) QUan(h+ e)do(e[ll:1]d) na(g)tus(hj) es(j'_) (,) in(j)ef(i')fa(g)bí(i')li(j)ter(h) ex(gf) Vír(g_[uh:l]h)gi(h)ne,(g.) (;) tunc(g) im(g)plé(i)tae(j) sunt(hgh___) Scri(gh)ptú(e.)rae :(e.) (:) sic(g)ut(h) plú(j')vi(i)a(jkj) in(i') vel(j)lus(h') de(h)scen(g')dí(i)sti,(h.) (;) ut(h) sal(j')vum(i) fá(j')ce(i)res(g) ge(hv_GF)nus(g) hu(gf)má(e.)num :(e.) (:) te(h_i) lau(g)dá(gf)mus(d_e) De(g)us(ghg) no(e.)ster.(e.) (::)}
+\vspace{6mm}
+%% --- 3. Psalm 121 - 8c ---
+\red{\large{Psalm 121}\vspace{5mm}}
+\gresetinitiallines{1}\greannotation{3. Ant.}\greannotation{4. E}\gabcsnippet{(c4) RU(d)bum(e') quem(f) ví(g')de(g)rat(g) <c><v>\greheightstar</v></c> Mó(gvFDef)y(e)ses(e') in(e)com(f)bú(g)stum,(g.) (;) con(g)ser(g)vá(g')tam(f) a(gh~)gnó(h)vi(gh)mus(e.) (;) tu(dh)am(h) lau(h)dá(ixhi)bi(h)lem(g') vir(f)gi(g)ni(gf)tá(e)tem :(e.) (:) De(h)i(g_[oh:h]f) Gé(g)ni(fe)trix,(d'_) (,) in(f)ter(g)cé(h')de(g) pro(f') no(g)bis.(e.) (::)}
+\vspace{5mm}
+\greannotation{Psalm}\greannotation{121}\gabcsnippet{(c4) Læ(h)tá(gh)tus(h) sum(h) in(h) his,(h) quæ(h) dic(h)<i>ta</i>(g) <i>sunt</i>(h) <b>mi</b>(i hr)hi:(h.) <c><v>\greheightstar</v></c>(:) In(h) do(h)mum(h) <i>Dó</i>(g)<i>mi</i>(h)<i>ni</i>(ih) <b>í</b>(gr[ocb:1{])<b>bi</b>(gf[ocb:0}])mus.(e.) (::)}
+\begin{enumerate}[start=2]
+\begin{spacing}{0.8}
+\item Stantes erant \textit{\underline{pe}}\textit{\underline{des}} \textbf{nos}tri,~\red{*} in átriis \textit{\underline{tu}}\textit{\underline{is}}, \textit{\underline{Je}}\textbf{rú}\textbf{sa}lem.
+\item Jerúsalem, quæ ædificá\textit{\underline{tur}} \textit{\underline{ut}} \textbf{cí}vitas:~\red{*} cujus participátio e\textit{\underline{jus}} \textit{\underline{in}} \textit{\underline{id}}\textbf{íp}sum.
+\item Illuc enim ascendérunt tribus, \textit{\underline{tri}}\textit{\underline{bus}} \textbf{Dó}mini:~\red{*} testimónium Israël ad confiténdum \textit{\underline{nó}}\textit{\underline{mi}}\textit{\underline{ni}} \textbf{Dó}\textbf{mi}ni.
+\item Quia illic sedérunt sedes \textit{\underline{in}} \textit{\underline{ju}}\textbf{dí}cio,~\red{*} sedes su\textit{\underline{per}} \textit{\underline{do}}\textit{\underline{mum}} \textbf{Da}vid.
+\item Rogáte quæ ad pacem \textit{\underline{sunt}} \textit{\underline{Je}}\textbf{rú}salem:~\red{*} et abundántia di\textit{\underline{li}}\textit{\underline{gén}}\textit{\underline{ti}}\textbf{bus} te:
+\item Fiat pax in vir\textit{\underline{tú}}\textit{\underline{te}} \textbf{tu}a:~\red{*} et abundántia in \textit{\underline{túr}}\textit{\underline{ri}}\textit{\underline{bus}} \textbf{tu}is.
+\item Propter fratres meos, et pró\textit{\underline{xi}}\textit{\underline{mos}} \textbf{me}os,~\red{*} loqué\textit{\underline{bar}} \textit{\underline{pa}}\textit{\underline{cem}} \textbf{de} te:
+\item Propter domum Dómini, \textit{\underline{De}}\textit{\underline{i}} \textbf{nos}tri,~\red{*} quæsí\textit{\underline{vi}} \textit{\underline{bo}}\textit{\underline{na}} \textbf{ti}bi.
+\item Glória Pa\textit{\underline{tri}}, \textit{\underline{et}} \textbf{Fí}lio,~\red{*} et Spi\textit{\underline{rí}}\textit{\underline{tu}}\textit{\underline{i}} \textbf{Sanc}to.
+\item Sicut erat in princípio, et \textit{\underline{nunc}}, \textit{\underline{et}} \textbf{sem}per,~\red{*} et in sǽcula sæ\textit{\underline{cu}}\textit{\underline{ló}}\textit{\underline{rum}}. \textbf{A}men.
+\end{spacing}
+\end{enumerate}
+\newpage
+\gresetinitiallines{1}\greannotation{3. Ant.}\greannotation{4. E}\gabcsnippet{(c4) RU(e+ d)bum(e') quem(f) ví(g')de(g)rat(g) Mó(gvFDef)y(e)ses(e') in(e)com(f)bú(g)stum,(g.) (;) con(g)ser(g)vá(g')tam(f) a(gh~)gnó(h)vi(gh)mus(e.) (;) tu(dh)am(h) lau(h)dá(ixhi)bi(h)lem(g') vir(f)gi(g)ni(gf)tá(e)tem :(e.) (:) De(h)i(g_[oh:h]f) Gé(g)ni(fe)trix,(d'_) (,) in(f)ter(g)cé(h')de(g) pro(f') no(g)bis.(e.) (::)}
+\vspace{6mm}
+%% --- 4. Psalm 126 - 7a ---
+\red{\large{Psalm 126}\vspace{4mm}}
+\gresetinitiallines{1}\greannotation{4. Ant.}\greannotation{1. f}\gabcsnippet{(c4) GEr(d)mi(e_[uh:l]f)ná(g)vit(ge~) <c><v>\greheightstar</v></c> () ra(gh)dix(fe) Jes(d)se,(d_fddc.) (;) or(dc~)ta(f') est(g) stel(h)la(f_g) ex(h) Ja(g)cob :(f.) (:) Vir(f')go(g) pé(h')pe(g)rit(f') Sal(g)va(f)tó(f_gF'D)rem :(d.) (;) te(g_[uh:l]h) lau(f)dá(fe)mus,(c_[ll:1]e) De(g_[oh:h]e)us(f_e) no(d.)ster.(d.) (::)}
+\vspace{4mm}
+\greannotation{Psalm}\greannotation{126}\gabcsnippet{(c4) Ni(f)si(gh) Dó(h)mi(h)nus(h) æ(h)di(h)fi(h)<b>cá</b>(ixi)ve(hr)rit(h) <b>do</b>(g hr)mum,(h.) <c><v>\greheightstar</v></c>(:) in(h) va(h)num(h) la(h)bo(h)ra(h)vé(h)runt(h) qui(h) æ(h)dí(h)<i>fi</i>(g)<i>cant</i>(f) <b>e</b>(gh gr)am.(gf..) (::)}
+\begin{enumerate}[start=2]
+\begin{spacing}{0.8}
+\item Nisi Dóminus custodíerit \textbf{ci}vi\textbf{tá}tem,~\red{*} frustra vígilat qui cus\textit{\underline{tó}}\textit{\underline{dit}} \textbf{e}am.
+\item Vanum est vobis ante \textbf{lu}cem \textbf{súr}gere:~\red{*} súrgite postquam sedéritis, qui manducátis pa\textit{\underline{nem}} \textit{\underline{do}}\textbf{ló}ris.
+\item Cum déderit diléctis \textbf{su}is \textbf{som}num:~\red{*} ecce heréditas Dómini fílii: merces, \textit{\underline{fruc}}\textit{\underline{tus}} \textbf{ven}tris.
+\item Sicut sagíttæ in \textbf{ma}nu pot\textbf{én}tis:~\red{*} ita fílii \textit{\underline{ex}}\textit{\underline{cus}}\textbf{só}rum.
+\item Beátus vir qui implévit desidérium \textbf{su}um ex \textbf{ip}sis:~\red{*} non confundétur cum loquétur inimícis su\textit{\underline{is}} \textit{\underline{in}} \textbf{por}ta.
+\item Glória \textbf{Pa}tri, et \textbf{Fí}lio,~\red{*} et Spirí\textit{\underline{tu}}\textit{\underline{i}} \textbf{Sanc}to.
+\item Sicut erat in princípio, et \textbf{nunc}, et \textbf{sem}per,~\red{*} et in sǽcula sæcu\textit{\underline{ló}}\textit{\underline{rum}}. \textbf{A}men.
+\end{spacing}
+\end{enumerate}
+\gresetinitiallines{1}\greannotation{4. Ant.}\greannotation{1. f}\gabcsnippet{(c4) GEr(f+ d)mi(e_[uh:l]f)ná(g)vit(ge~) () ra(gh)dix(fe) Jes(d)se,(d_fddc.) (;) or(dc~)ta(f') est(g) stel(h)la(f_g) ex(h) Ja(g)cob :(f.) (:) Vir(f')go(g) pé(h')pe(g)rit(f') Sal(g)va(f)tó(f_gF'D)rem :(d.) (;) te(g_[uh:l]h) lau(f)dá(fe)mus,(c_[ll:1]e) De(g_[oh:h]e)us(f_e) no(d.)ster.(d.) (::)}
+\vspace{6mm}
+
+%% --- 5. Psalm 147 - 3a2 ---
+\red{\large{Psalm 147}\vspace{4mm}}
+\gresetinitiallines{1}\greannotation{5. Ant.}\greannotation{2. D}\gabcsnippet{(f3) EC(g)ce(e') Ma(f)rí(f)a(f'_) <c><v>\greheightstar</v></c> (,) gé(h)nu(g)it(f') no(g)bis(fe) Sal(fg)va(g')tó(f)rem,(f.) (:) quem(e') Jo(f)án(h)nes(h') vi(g)dens(i_[uh:l]jIG') (,) ex(e)cla(f)má(h_g)vit,(hih) di(f.)cens :(f.) (:) Ec(h)ce(g') A(h)gnus(f') De(g)i,(f.) (;) ec(h)ce(hg) qui(f') tol(g)lit(f') pec(e)cá(fg)ta(g') mun(f)di,(fv_EC') al(e)le(ef)lú(f.){ia}.(f.) (::)}
+\vspace{4mm}
+\greannotation{Psalm}\greannotation{147}\gabcsnippet{(f3) Lau(e)da,(f) Je(h)rú(h)sa(h)lem,(h) <b>Dó</b>(i)mi(hr)num:(h.) <c><v>\greheightstar</v></c>(:) lau(h)da(h) De(h)um(h) tu(h)<i>um</i>,(g) <b>Si</b>(e fr)on.(f.) (::)}
+\begin{enumerate}[start=2]
+\begin{spacing}{0.8}
+\item Quóniam confortávit seras portárum tu\textbf{á}rum:~\red{*} benedíxit fíliis tu\textit{\underline{is}} \textbf{in} te.
+\item Qui pósuit fines tuos \textbf{pa}cem:~\red{*} et ádipe fruménti sá\textit{\underline{ti}}\textbf{at} te.
+\item Qui emíttit elóquium suum \textbf{ter}ræ:~\red{*} velóciter currit ser\textit{\underline{mo}} \textbf{e}jus.
+\item Qui dat nivem sicut \textbf{la}nam:~\red{*} nébulam sicut cíne\textit{\underline{rem}} \textbf{spar}git.
+\item Mittit crystállum suam sicut buc\textbf{cél}las:~\red{*} ante fáciem frígoris ejus quis sus\textit{\underline{ti}}\textbf{né}bit?
+\item Emíttet verbum suum, et liquefáciet \textbf{e}a:~\red{*} flabit spíritus ejus, et flu\textit{\underline{ent}} \textbf{a}quæ.
+\item Qui annúntiat verbum suum \textbf{Ja}cob:~\red{*} justítias, et judícia su\textit{\underline{a}} \textbf{Is}raël.
+\item Non fecit táliter omni nati\textbf{ó}ni:~\red{*} et judícia sua non manifestá\textit{\underline{vit}} \textbf{e}is.
+\item Glória Patri, et \textbf{Fí}lio,~\red{*} et Spirítu\textit{\underline{i}} \textbf{Sanc}to.
+\item Sicut erat in princípio, et nunc, et \textbf{sem}per,~\red{*} et in sǽcula sæculó\textit{\underline{rum}}. \textbf{A}men.
+\end{spacing}
+\end{enumerate}
+\gresetinitiallines{1}\greannotation{5. Ant.}\greannotation{2. D}\gabcsnippet{(f3) EC(f+ g)ce(e') Ma(f)rí(f)a(f'_) (,) gé(h)nu(g)it(f') no(g)bis(fe) Sal(fg)va(g')tó(f)rem,(f.) (:) quem(e') Jo(f)án(h)nes(h') vi(g)dens(i_[uh:l]jIG') (,) ex(e)cla(f)má(h_g)vit,(hih) di(f.)cens :(f.) (:) Ec(h)ce(g') A(h)gnus(f') De(g)i,(f.) (;) ec(h)ce(hg) qui(f') tol(g)lit(f') pec(e)cá(fg)ta(g') mun(f)di,(fv_EC') al(e)le(ef)lú(f.){ia}.(f.) (::)}
+\vspace{6mm}
+%% --- Capitulum---
+\sekcja{Capitulum}
+\gresetinitiallines{1}\gabcsnippet{(c3)Ap(h)pá(h)ru(h)it(h) grá(h)ti(h)a(h) De(h)i(h) Sal(h)va(h)tó(h)ris(h) nos(h)tri(h) óm(h)ni(h)bus(h) ho(h)mí(h)ni(f)bus,(f.) (;)<c>†</c> e(h)rú(h)di(h)ens(h) nos,(h) ut(h) ab(h)ne(h)gán(h)tes(h) im(h)pi(h)e(h)tá(h)tem,(h) et(h) sæ(h)cu(h)lá(h)ri(h)a(h) de(g)si(f)dé(h)ri(h)a,(h;) <c><v>\greheightstar</v></c> só(h)bri(h)e,(h) et(h) ius(h)te,(h) et(h) pi(h)e(h) vi(h)vá(h)mus(h) in(h) hoc(h) sǽ(f)cu(e){lo}.(ef..) (::) <c><sp>R/</sp>.</c> De(h)o(h) grá(f)ti(e)as.(ef.) (::)}
+%% --- Hymnus ---
+\sekcja{Hymnus}
+\gresetinitiallines{1}\greannotation{1.}\gabcsnippet{(c4) JE(c)su(d) Red(eg)ém(gf)ptor(ede) ó(f')mni(e)um,(d.) (;) Quem(ce) lu(g')cis(h) an(h)t{<e>e</e>}() o(g)rí(h!iwj)gi(ivHG)nem,(h.) (:) Pa(hi)rem(g) pa(fg)tér(e)nae(dc) gló(d)ri(de)ae,(e.) (;) Pa(c)ter(d) su(eg)pré(gf)mus(ede) é(f')di(e)dit.(d.) (::) 
+<c>2.</c> Tu(c) lu(d)men(eg) et(gf) splen(ede)dor(f') Pa(e)tris,(d.) (;) Tu(ce) spes(g') per(h)én(h)nis(g) ó(h!iwj)mni(ivHG)um :(h.) (:) In(hi)tén(g)de(fg) quas(e) fun(dc)dunt(d) pre(de)ces(e.) (;) Tu(c)i(d) per(eg) or(gf)bem(ede) sér(f')vu(e)li.(d.) (::) 
+<c>3.</c> Me(c)mén(d)to,(eg) re(gf)rum(ede) Cón(f')di(e)tor,(d.) (;) No(ce)stri(g') quod(h) o(h)lim(g) cór(h!iwj)po(ivHG)ris,(h.) (:) Sac(hi)rá(g)t{<e>a</e>}() ab(fg) al(e)vo(dc) Vír(d)gi(de)nis(e.) (;) Na(c)scén(d)do,(eg) for(gf)mam(ede) súm(f')pse(e)ris.(d.) (::) 
+<c>4.</c> Te(c)stá(d)tur(eg) hoc(gf) prae(ede)sens(f') di(e)es,(d.) (;) Cur(ce)rens(g') per(h) an(h)ni(g) cír(h!iwj)cu(ivHG)lum,(h.) (:) Quod(hi) so(g)lus(fg) e(e) si(dc)nu(d) Pa(de)tris(e.) (;) Mun(c)di(d) sa(eg)lus(gf) ad(ede)vé(f')ne(e)ris.(d.) (::) 
+<c>5.</c> Hunc(c) a(d)stra,(eg) tel(gf)lus,(ede) aé(f')quo(e)ra,(d.) (;) Hunc(ce) o(g')mne(h) quod(h) cae(g)lo(h!iwj) sub(ivHG)est,(h.) (:) Sa(hi)lú(g)tis(fg) au(e)ctó(dc)rem(d) no(de)vae(e.) (;) No(c)vo(d) sa(eg)lú(gf)tat(ede) cán(f')ti(e)co.(d.) (::) 
+<c>6.</c> Et(c) nos,(d) be(eg)á(gf)ta(ede) quos(f') sa(e)cri(d.) (;) Ri(ce)gá(g')vit(h) un(h)da(g) sán(h!iwj)gui(ivHG)nis,(h.) (:) Na(hi)tá(g)lis(fg) ob(e) di(dc)em(d) tu(de)i,(e.) (;) Hy(c)mni(d) tri(eg)bú(gf)tum(ede) sól(f')vi(e)mus.(d.) (::) 
+<c>7.</c> Je(c)su,(d) ti(eg)bi(gf) sit(ede) gló(f')ri(e)a,(d.) (;) Qui(ce) na(g')tus(h) es(h) de(g) Vír(h!iwj)gi(ivHG)ne,(h.) (:) Cum(hi) Pa(g)tr{<e>e</e>}() et(fg) al(e)mo(dc) Spí(d)ri(de)tu,(e.) (;) In(c) sem(d)pi(eg)tér(gf)na(ede) saé(f')cu(e)la.(d.) (::) A(ded)men.(cd..) (::)}
+\vspace{4mm}
+%% --- Versus - Respons (simple)---
+\sekcja{Versus}
+\gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> Ver(h)bum(h) ca(h)ro(h) fac(h)tum(hi) est,(h'_) (,) al(h)le(fe)-lú(f_h)-ia.(hiH'Ghih.ghG'FE'fggf.) (::)}
+\gresetinitiallines{0}\gabcsnippet{(c3)  <c><sp>R/</sp>.</c> Et(h) ha(h)bi(h)tá(h)vit(h) in(h) no(hi)bis,(h'_) (,) al(h)le(fe)lú(f_h)ia.(hiH'Ghih.ghG'FE'fggf.) (::)}
+%% --- End Versus - Respons (simple)---
+\vspace{7mm}
+%% --- Magnificat ---ó á é ú 
+\sekcja{Magnificat}
+\gresetinitiallines{1}\greannotation{Ant. 8. G}\gabcsnippet{(c4) PRo(g_[oh:h]ff)pter(d') ní(f)mi(fg)am(ghg') <c><v>\greheightstar</v></c> (,) ca(f)ri(gh)tá(h)tem(h') su(h)am,(hg/hih.) (;) qua(f) di(h)lé(ji)xit(hg) nos(fg) De(g)us,(g.) (:) Fí(h)li(f)um(hgh) su(g)um(f) mi(ff)sit(d!ew!fv_EDC.) (;) in(c) si(d)mi(fd)li(f)tú(hg)di(fg)nem(g) (,) car(i_[uh:l]j)nis(h) pec(g)cá(hg)ti,(f) al(gh)le(h)lú(g.){ia}.(g.) (::)}
+\vspace{8mm}
+\greannotation{Cant.}\gabcsnippet{(c4) Ma(g)gní(hg)fi(gj)cat(j.) <c><v>\grecross</v></c> <c><v>\greheightstar</v></c>(:) á(j)ni(j)ma(j) <i>me</i>(i)<i>a</i>(j) <b>Dó</b>(h)mi(g)num.(g.) (::)
+<c>2. </c>Et(g) ex(hg)sul(gj)tá(j)vit(j) <i>spí</i>(ji)<i>ri</i>(jk)<i>tus</i>(k) <b>me</b>(jk)us(j.) <c><v>\greheightstar</v></c>(:) in(j) De(j)o(j) sa(j)lu(j)<i>tá</i>(i)<i>ri</i>(j) <b>me</b>(h)o.(g.) (::)
+<c>3. </c>Qui(g)a(hg) re(gj)spé(j)xit(j) hu(j)mi(j)li(j)tá(j)tem(j) <i>an</i>(ji)<i>cíl</i>(jk)<i>læ</i>(k) <b>su</b>(jk)æ:(j.) <c><v>\greheightstar</v></c>(:) ec(j)ce(j) e(j)nim(j) ex(j) hoc(j) be(j)á(j)tam(j) me(j) di(j)cent(j) om(j)nes(j) ge(j)ne(j)<i>ra</i>(i)<i>ti</i>(j)<b>ó</b>(h)nes.(g.) (::)
+<c>4. </c>Qui(g)a(hg) fe(gj)cit(j) mi(j)hi(j) <i>ma</i>(ji)<i>gna</i>(jk) <i>qui</i>(k) <b>pot</b>(jk)ens(j) est:(j.) <c><v>\greheightstar</v></c>(:) et(j) sanc(j)tum(j) <i>no</i>(i)<i>men</i>(j) <b>e</b>(h)jus.(g.) (::)
+<c>5. </c>Et(g) mi(hg)se(gj)ri(j)cór(j)di(j)a(j) e(j)jus(j) a(j) pro(j)gé(j)ni(j)<i>e</i>(ji) <i>in</i>(jk) <i>pro</i>(k)<b>gé</b>(jk)ni(j)es(j.) <c><v>\greheightstar</v></c>(:) ti(j)mén(j)<i>ti</i>(i)<i>bus</i>(j) <b>e</b>(h)um.(g.) (::)
+<c>6. </c>Fe(g)cit(hg) pot(gj)én(j)ti(j)am(j) in(j) <i>brá</i>(ji)<i>chi</i>(jk)<i>o</i>(k) <b>su</b>(jk)o:(j.) <c><v>\greheightstar</v></c>(:) di(j)spér(j)sit(j) su(j)pér(j)bos(j) men(j)te(j) <i>cor</i>(i)<i>dis</i>(j) <b>su</b>(h)i.(g.) (::)
+<c>7. </c>De(g)pó(hg)su(gj)it(j) pot(j)<i>én</i>(ji)<i>tes</i>(jk) <i>de</i>(k) <b>se</b>(jk)de,(j.) <c><v>\greheightstar</v></c>(:) et(j) ex(j)al(j)<i>tá</i>(i)<i>vit</i>(j) <b>hú</b>(h)mi(g)les.(g.) (::)
+<c>8. </c>E(g)su(hg)ri(gj)én(j)tes(j) <i>im</i>(ji)<i>plé</i>(jk)<i>vit</i>(k) <b>bo</b>(jk)nis:(j.) <c><v>\greheightstar</v></c>(:) et(j) dí(j)vi(j)tes(j) di(j)mí(j)<i>sit</i>(i) <i>in</i>(j)<b>á</b>(h)nes.(g.) (::)
+<c>9. </c>Su(g)scé(hg)pit(gj) Is(j)ra(j)ël(j) <i>pú</i>(ji)<i>e</i>(jk)<i>rum</i>(k) <b>su</b>(jk)um,(j.) <c><v>\greheightstar</v></c>(:) re(j)cor(j)dá(j)tus(j) mi(j)se(j)ri(j)cór(j)<i>di</i>(i)<i>æ</i>(j) <b>su</b>(h)æ.(g.) (::)
+<c>10. </c>Sic(g)ut(hg) lo(gj)cú(j)tus(j) est(j) <i>ad</i>(ji) <i>pa</i>(jk)<i>tres</i>(k) <b>nos</b>(jk)tros,(j.) <c><v>\greheightstar</v></c>(:) A(j)bra(j)ham(j) et(j) sé(j)mi(j)ni(j) e(j)<i>jus</i>(i) <i>in</i>(j) <b>sǽ</b>(h)cu(g)la.(g.) (::)
+<c>11. </c>Gló(g)ri(hg)a(gj) <i>Pa</i>(ji)<i>tri</i>,(jk) <i>et</i>(k) <b>Fí</b>(jk)li(j)o,(j.) <c><v>\greheightstar</v></c>(:) et(j) Spi(j)rí(j)<i>tu</i>(i)<i>i</i>(j) <b>Sanc</b>(h)to.(g.) (::)
+<c>12. </c>Sic(g)ut(hg) e(gj)rat(j) in(j) prin(j)cí(j)pi(j)o,(j) <i>et</i>(ji) <i>nunc</i>,(jk) <i>et</i>(k) <b>sem</b>(jk)per,(j.) <c><v>\greheightstar</v></c>(:) et(j) in(j) sǽ(j)cu(j)la(j) sæ(j)cu(j)<i>ló</i>(i)<i>rum</i>.(j) <b>A</b>(h)men.(g.) (::)
+}
+ \newpage
+\gresetinitiallines{1}\greannotation{Ant. 8. G}\gabcsnippet{(c4) PRo(g+ g_[oh:h]ff)pter(d') ní(f)mi(fg)am(ghg') (,) ca(f)ri(gh)tá(h)tem(h') su(h)am,(hg/hih.) (;) qua(f) di(h)lé(ji)xit(hg) nos(fg) De(g)us,(g.) (:) Fí(h)li(f)um(hgh) su(g)um(f) mi(ff)sit(d!ew!fv_EDC.) (;) in(c) si(d)mi(fd)li(f)tú(hg)di(fg)nem(g) (,) car(i_[uh:l]j)nis(h) pec(g)cá(hg)ti,(f) al(gh)le(h)lú(g.){ia}.(g.) (::)}
+\vspace{7mm}
+%% --- Oratio ---
+\sekcja{Oratio}
+\input{include/dominus_vobiscum_solemnis}
+\vspace{4mm}
+\gresetinitiallines{0}\gabcsnippet{(c3) O(i)re(hi)mus.(i.) (::) De(h)us,(i) qui(i) sa(i)lú(i)tis(i) æ(i)tér(i)næ,(i) be(i)á(i)tæ(i) Ma(i)rí(i)æ(i) vir(i)gi(i)ni(i)tá(i)te(i) fe(i)cún(i)da,(i) hu(i)má(i)no(i) gé(i)ne(i)ri(i) prǽ(i)mi(i)a(i) præ(i)sti(i)tís(i)ti:(h.) (;)<c>†</c> trí(h)bu(i)e,(i) quǽ(i)su(i)mus;(i.)(,) ut(i) ip(i)sam(i) pro(i) no(i)bis(i) in(i)ter(i)cé(i)de(i)re(i) sen(i)ti(i)á(i)mus,(h.) (;) <c><v>\greheightstar</v></c> per(h) quam(i) me(i)rú(i)i(i)mus(i) auc(i)tó(i)rem(i) vi(i)tæ(i) su(i)scí(i)pe(i.)re, (,) (i) Dó(i)mi(i)num(i) nos(i)trum(i) Ie(i)sum(i) Chris(i)tum(i) Fí(i)li(h)um(h) tu(i)um:(i.) (:) Qui(h) te(i)cum(i) vi(i)vit(i) et(i) re(i)gnat(i) in(i) u(i)ni(i)tá(i)te(i) Spí(i)ri(i)tus(i) Sanc(h)ti,(h) De(i)us,(i.)(;) per(h) óm(i)ni(i)a(i) sǽ(i)cu(i)la(i) sæ(h)cu(i)ló(ih)rum.(h.) (::) <c><sp>R/</sp>.</c> A(h)men(i.) (::)}
+\vspace{4mm}
+%% --- Commemoratio ---
+%% --- Conclusio ---
+\sekcja{Conclusio}
+\input{include/dominus_vobiscum_solemnis}
+\input{include/benedicamus_domino_solemnis}
+\input{include/fidelium_animae}
+\newpage
+%% --- Modlitwy końcowe ---
+\sekcja{Modlitwy końcowe}
+%	\red{\footnotesize\textit{Odmawia się po cichu w~pozycji klęczącej jako dziękczynienie po oficjum.}}
+\input{include/modlitwy_koncowe}
+\dekor{0.3}{anioly.jpg}
+\newpage
+\pagenumbering{gobble}
+\dekor{0.45}{logo_ua.jpg}
+%% -----------------
+\end{document}
