@@ -28,6 +28,7 @@
 % \errorcontextlines
 
 \begin{document}
+%\iffalse%
 % -----------------------------------------------------------------------------------
 % ------------------------- STRONA TYTUŁOWA  --------------------------
 \thispagestyle{empty}
@@ -45,11 +46,13 @@
 \wstawplik{aperi_domine}
 \dekor{0.4}{anioly.jpg}
 \newpage
+%\fi%
 \setcounter{page}{1}
 \fancyhead{}% wyczyść wszystkie pola nagłówka
 \pagestyle{plain}% nagłówek i stopka pusta - UWAGA: przedefiniowany styl przez polecenie fancypagestyle w header.tex	
 %\setlength{\parindent}{0pt}
 \gresetbracerendering{font}
+%\iffalse%
 \sekcja{Incipit}{Wszyscy wstają. Lektor wychodzi na środek, przyklęka i skłaniając się w kierunku ołtarza prosi o błogosławieństwo. W~obecności kapłana: ``Jube domne benedicere''~w jego kierunku. Błogosławieństwo - odpowiada kapłan lub pod jego nieobecność hebdomadariusz.}
 \gresetinitiallines{0}\gabcsnippet{(c3)<c><sp>V/</sp>.</c> Ju([alt:Lector]h)be(h) Do(h)mi(h)ne(g'_) be(h)ne(h)di(h)ce(d)re(f.::)}
 \vspace{-14pt}
@@ -191,12 +194,25 @@
 \vspace{-8pt}
 \subsubsekcja{Per Annum}
 \gresetinitiallines{1}\greannotation{8.}\gabcsnippet{(c4) TE(g) lu(i')cis(h) an(j)te(j) tér(j')mi(i)num,(h) (,) Re(h)rum(j') Cre(j)á(j)tor,(g) pó(h')sci(g)mus,(f.) (;) Ut(h) pro(h') tu(g)a(j) cle(i)mén(h')ti(g)a,(hih') (,) Sis(h) prae(h')sul(g) et(f) cu(g)stó(h')di(g)a.(g.) (::) <c><v>\footnotesize{2. }</v></c> Pro(g)cul(i') re(h)cé(j)dant(j) só(j')mni(i)a,(h) (,) Et(h) nó(j')cti(j)um(j) phan(g)tás(h')ma(g)ta :(f.) (;) Ho(h)stém(h')que(g) no(j)strum(i) cóm(h')pri(g)me,(hih') (,) Ne(h) pol(h')lu(g)án(f)tur(g) cór(h')po(g)ra.(g.) (::) <c><v>\footnotesize{3. }</v></c> Prae(g)sta,(i') Pa(h)ter(j) pi(j)ís(j')si(i)me,(h) (,) Pa(h)trí(j')que(j) com(j)par(g) U(h')ni(g)ce,(f.) (;) Cum(h) Spí(h')ri(g)tu(j) Pa(i)rá(h')cli(g)to,(hih') (,) Re(h)gnans(h') per(g) o(f)mne(g) saé(h')cu(g)lum.(g.) (::) A(ghg)men.(fg..) (::)}\linespace
-\tlumacz{1.~Ciebie przed zanikiem światła, Stwórco wszechrzeczy, prosimy, Abyś według twej miłościwości, Był nam obrońcą i strażą. 2.~Niechaj daleko od nas odstąpią,
-Widziadła senne i zjawy nocne; Powstrzymaj nieprzyjaciela naszego, By ciała nie uległy zmazaniu. 3.~Udziel nam tego, Ojcze najmiłościwszy, I Ty Jedyny, równy Ojcu, Z Duchem Pocieszycielem Królujący po wszystek wiek. Amen.}
+\tlumacz{1.~Ciebie przed zanikiem światła, Stwórco wszechrzeczy, prosimy, Abyś według twej miłościwości, Był nam obrońcą i strażą. 2.~Niechaj daleko od nas odstąpią, Widziadła senne i zjawy nocne; Powstrzymaj nieprzyjaciela naszego, By ciała nie uległy zmazaniu. 3.~Udziel nam tego, Ojcze najmiłościwszy, I Ty Jedyny, równy Ojcu, Z Duchem Pocieszycielem Królujący po wszystek wiek. Amen.}
+\grechangedim{spacelinestext}{17pt}{scalable} % odstęp między linią a dołem tekstu
+\subsubsekcja{In Adventu}
+\gresetinitiallines{1}\greannotation{8.}\gabcsnippet{(c3) TE(d) lu(e)cis(fh) an(h)te(e) tér(f')mi(d)num,(e'_[oh:h]) (,) Re(h)rum(h') Cre(f)á(h)tor,(e) pó(f)sci(de)mus,(e.) (;) Ut(h) pro(h') tu(i)a(j) cle(h)mén(i')ti(h)a,(f_e) (,) Sis(e) prae(e')sul(d) et(c) cu(d)stó(f)di(de)a.(e.) (::) <c><v>\footnotesize{2. }</v></c> Pro(d)cul(e) re(fh)cé(h)dant(e) só(f')mni(d)a,(e'_[oh:h]) (,) Et(h) nó(h')cti(f)um(h) phan(e)tás(f)ma(de)ta :(e.) (;) Ho(h)stém(h')que(i) no(j)strum(h) cóm(i')pri(h)me,(f_e) (,) Ne(e) pol(e')lu(d)án(c)tur(d) cór(f)po(de)ra.(e.) (::) <c><v>\footnotesize{3. }</v></c> Prae(d)sta,(e) Pa(fh)ter(h) pi(e)ís(f')si(d)me,(e'_[oh:h]) (,) Pa(h)trí(h')que(f) com(h)par(e) U(f)ni(de)ce,(e.) (;) Cum(h) Spí(h')ri(i)tu(j) Pa(h)rá(i')cli(h)to,(f_e) (,) Re(e)gnans(e') per(d) o(c)mne(d) saé(f)cu(de)lum.(e.) (::) 
+A(efe)men.(de..) (::)}\linespace
+\segmentspace
+\subsubsekcja{In Epiphania Domini}
+\gresetinitiallines{1}\greannotation{2.}\gabcsnippet{(c4) TE(h) lu(h_g)cis(ed) an(g)te(hj) tér(ji)mi(h)num,(i.) (;) Re(hk)rum(k) Cre(i)á(ji)tor,(h) pó(ih)sci(g)mus,(h.) (:) Ut(k) pro(k') tu(i)a(k) cle(klk)mén(ji)ti(hi)a,(ivHG.) (;) Sis(ji) prae(jk)sul(i) et(ji) cu(h)stó(ih)di(g)a.(h.)
+<c><v>\footnotesize{2. }</v></c> (::) Pro(h)cul(h_g) re(ed)cé(g)dant(hj) só(ji)mni(h)a,(i.) (;) Et(hk) nó(k)cti(i)um(ji) phan(h)tás(ih)ma(g)ta:(h.) (:) Ho(k)stém(k')que(i) no(k)strum(klk) cóm(ji)pri(hi)me,(ivHG.) (;) Ne(ji) pol(jk)lu(i)án(ji)tur(h) cór(ih)po(g)ra.(h.)
+<c><v>\footnotesize{3. }</v></c> (::) Je(h)su,(h_g) ti(ed)bi(g) sit(hj) gló(ji)ri(h)a,(i.) (;) Qui(hk) na(k)tus(i) es(ji) de(h) Vír(ih)gi(g)ne,(h.) (:) Cum(k) Pa(k')tr<i>e</i>(i) et(i) al(k)mo(klk) Spí(ji)ri(hi)tu,(ivHG.) (;) In(ji) sem(jk)pi(i)tér(ji)na(h) saæ(ih)cu(g)la.(h.) (::) A(hih)men.(gh..) (::)}\linespace
+\tlumacz{3.~Jezusie bądź pochwalony, Z Przeczystej Panny zrodzony: Z Ojcem, i Duchem światłości, Na nieskończone wieczności. Amen.}
 \subsubsekcja{Tempore Paschalis}
 \gresetinitiallines{1}\greannotation{8.}\gabcsnippet{(c4) TE(g) lu(g')cis(e) an(g)te(h) tér(i')mi(j)num,(h) (,) Re(g)rum(i') Cre(h)á(j)tor,(g) pó(hi)sci(i)mus,(i.) (;) Ut(h) pro(j') tu(k)a(ih) cle(j)mén(i')ti(j)a,(hvGF') (,) Sis(h) prae(hg)sul(j) et(ij) cu(h)stó(g)di(fg)a.(g.) (::) <c><v>\footnotesize{2. }</v></c> Pro(g)cul(g') re(e)cé(g)dant(h) só(i')mni(j)a,(h) (,) Et(g) nó(i')cti(h)um(j) phan(g)tás(hi)ma(i)ta :(i.) (;) Ho(h)stém(j')que(k) no(ih)strum(j) cóm(i')pri(j)me,(hvGF') (,) Ne(h) pol(hg)lu(j)án(ij)tur(h) cór(g)po(fg)ra.(g.) (::) <c><v>\footnotesize{3. }</v></c>  De(g)o(g') Pa(e)tri(g) sit(h) gló(i')ri(j)a,(h) (,) Et(g) Fí(i')li(h)o,(j) qu<i>i</i>(g) a(g) mór(hi)tu(i)is(i.) (;) Sur(h)ré(j')xit,(k) ac(ih) Pa(j)rá(i')cli(j)to,(hvGF') (,) In(h) sem(hg)pi(j)tér(ij)na(h) saé(g)cu(fg)la.(g.) (::) A(ghg)men.(fg..) (::)}\linespace
-\tlumacz{1.~Ciebie przed zanikiem światła, Stwórco wszechrzeczy, prosimy, Abyś według twej miłościwości, Był nam obrońcą i strażą. 2.~Niechaj daleko od nas odstąpią,
-Widziadła senne i zjawy nocne; Powstrzymaj nieprzyjaciela naszego, By ciała nie uległy zmazaniu. 3.~Bądź Ojcze Boże chwalony, Z Synem, który pogrzebiony Wstał z martwych, i Duch światłości Niech ma chwałę na wieczności. Amen.}
+\tlumacz{3.~Bądź Ojcze Boże chwalony, Z Synem, który pogrzebiony Wstał z martwych, i Duch światłości Niech ma chwałę na wieczności. Amen.}\segmentspace
+\subsubsekcja{In Festis B.M. Virginis, ac infra eorum Octavas}
+\gresetinitiallines{1}\greannotation{2.}\gabcsnippet{(c4) TE(h) lu(h_g)cis(ed) an(g)te(hj) tér(ji)mi(h)num,(i.) (;) Re(hk)rum(k) Cre(i)á(ji)tor,(h) pó(ih)sci(g)mus,(h.) (:) Ut(k) pro(k') tu(i)a(k) cle(klk)mén(ji)ti(hi)a,(ivHG.) (;) Sis(ji) prae(jk)sul(i) et(ji) cu(h)stó(ih)di(g)a.(h.)
+<c><v>\footnotesize{2. }</v></c> (::) Pro(h)cul(h_g) re(ed)cé(g)dant(hj) só(ji)mni(h)a,(i.) (;) Et(hk) nó(k)cti(i)um(ji) phan(h)tás(ih)ma(g)ta:(h.) (:) Ho(k)stém(k')que(i) no(k)strum(klk) cóm(ji)pri(hi)me,(ivHG.) (;) Ne(ji) pol(jk)lu(i)án(ji)tur(h) cór(ih)po(g)ra.(h.)
+<c><v>\footnotesize{3. }</v></c> (::) Je(h)su,(h_g) ti(ed)bi(g) sit(hj) gló(ji)ri(h)a,(i.) (;) Qui(hk) na(k)tus(i) es(ji) de(h) Vír(ih)gi(g)ne,(h.) (:) Cum(k) Pa(k')tr<i>e</i>(i) et(i) al(k)mo(klk) Spí(ji)ri(hi)tu,(ivHG.) (;) In(ji) sem(jk)pi(i)tér(ji)na(h) saæ(ih)cu(g)la.(h.) (::) A(hih)men.(gh..) (::)}\linespace
+\tlumacz{3.~Jezusie bądź pochwalony, Z Przeczystej Panny zrodzony: Z Ojcem, i Duchem światłości, Na nieskończone wieczności. Amen.}
 \newpage
 \sekcja{Modlitwy końcowe}{Odmawia się po cichu w pozycji klęczącej.}
 \wstawplik{modlitwy_koncowe_credo}
