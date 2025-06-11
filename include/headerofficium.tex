@@ -292,7 +292,11 @@
 \newcommand{\polPs}[1]{\begin{polish}\begin{minipage}[t]{\linewidth}\footnotesize\textit{#1}\end{minipage}\end{polish}\switchcolumn*}% wersja dla tłumaczenia psalmów z mniejszą czcionką
 \newcommand{\EndParallel}{\end{paracol}\end{spacing}}
 % ------------------------------------------------------------------------------------------
-
+% ------------------------ pokazuje bieżącą wielkość czcionki -----------------------------
+\makeatletter
+\newcommand\thefontsize{The current font size is: \f@size pt}
+\makeatother
+\newcommand\thefont{\expandafter\string\the\font}% informacje o czcionce
 % --- ZNAKI SPECJALNE ---
 % 
 %\newcommand †
