@@ -148,7 +148,7 @@
 % -----------------------------------------------------------------------------------
 % ------------------ CZCIONKA SEKCJI I SUBSEKCJI --------------------
 \newcommand\sekcjafont{\fontsize{20}{16}\selectfont\scshape}
-\newcommand\subsekcjafont{\fontsize{16}{10}\selectfont\scshape}
+\newcommand\subsekcjafont{\fontsize{14}{10}\selectfont\scshape}
 \newcommand\subsubsekcjafont{\fontsize{15}{10}\selectfont\itshape}
 % -----------------------------------------------------------------------------------
 % ------------------ CZCIONKA STRONY TYTUŁOWej ------------------
@@ -208,12 +208,14 @@
 % ----------------------------------- SUBSEKCJA -------------------------------
 % -----------------------------------------------------------------------------------	
 \titlespacing*{\subsection}{0pt}{0pt}{0pt}	
-\titleformat{\subsection}[hang]{\scshape\normalfont\subsekcjafont}{}{0pt}{} % format podnagłówków
+\titleformat{\subsection}[hang]{\centering\scshape\normalfont\subsekcjafont}{}{0pt}{} % format podnagłówków
 \newcommand{\subsekcja}[1]{
 	\segmentspace
+%	\begin{center}
 	\begin{latin}
 		\subsection*{\red{#1}}
 	\end{latin}		
+%	\end{center}
 	\segmentspace}
 % -----------------------------------------------------------------------------------
 % ----------------------------------- SUBSUBSEKCJA -------------------------------
@@ -288,7 +290,7 @@
 \newcommand{\BeginParallel}{\begin{spacing}{0.8}\begin{paracol}{2}\licznikZero}
 \newcommand{\lat}[1]{\begin{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}\ifnum \value{licznik}>0 \licznikUp \thelicznik .~#1 \else \licznikUp#1 \fi \end{minipage}\end{latin}\switchcolumn}
 \newcommand{\latN}[1]{\begin{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}#1\end{minipage}\end{latin}\switchcolumn}% kolumna bez numeracji wersów
-\newcommand{\pol}[1]{\begin{polish}\begin{minipage}[t]{\linewidth}\textit{#1}\end{minipage}\end{polish}\switchcolumn*}
+\newcommand{\pol}[1]{\begin{polish}\begin{minipage}[t]{\linewidth}\itshape#1\end{minipage}\end{polish}\switchcolumn*}
 \newcommand{\polPs}[1]{\begin{polish}\begin{minipage}[t]{\linewidth}\footnotesize\textit{#1}\end{minipage}\end{polish}\switchcolumn*}% wersja dla tłumaczenia psalmów z mniejszą czcionką
 \newcommand{\EndParallel}{\end{paracol}\end{spacing}}
 % ------------------------------------------------------------------------------------------
