@@ -9,6 +9,17 @@
 %\usepackage{soul}% dodaje \ul
 %\usepackage{ulem}% dodaje \uline
 \usepackage{hanging}%obsługa akapitów
+\usepackage{pdfpages}% dołączanie plików pdf
+%%the following code makes \pdfstrcmp and \pdffilemoddate available for LuaTeX to use svg
+%\usepackage{ifluatex}
+%\ifluatex
+%  \usepackage{pdftexcmds}
+%  \makeatletter
+%  \let\pdfstrcmp\pdf@strcmp
+%  \let\pdffilemoddate\pdf@filemoddate
+%  \makeatother
+%\fi
+%\usepackage{svg}%obsługa plików svg: \includesvg{some_svg_file}
 % --------------------------------------------------------------------------------------
 % ------------------ USTAWIENIE NUMERÓW STRON ----------------------------------
 \usepackage{fancyhdr}
@@ -58,7 +69,7 @@
 \grechangedim{beforeinitialshift}{0.5mm}{scalable}
 \grechangedim{afterinitialshift}{1.0mm}{scalable}
 \grechangestaffsize{24}%rozmiar wyniku GregorioTEX
-
+%\grechangedim{spaceafterlineclef}{1pt}{scalable}% Minimalna odległość między kluczem a nutami 
 % umieszczenie zawartości składu ich unikalnego argumentu po lewej i prawej stronie każdej linii
 \let\grelocalleftbox\localleftbox
 \let\grelocalrightbox\localrightbox
@@ -67,48 +78,48 @@
 %\newfontface\vectis{VectisMonumentalW01-Regular}
 %\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
 %% ------------------ Zarządzanie litaniami ---------------------------
-%\makeatletter  
-%\newcounter{score}
-%\newcounter{tabstop}[score]
-%\newcommand{\grealign}{%
-%	\@bsphack%
-%	\ifgre@boxing\else%
-%		\kern\gre@dimen@begindifference%
-%		\stepcounter{tabstop}%
-%		\expandafter\zsavepos{stop-\thescore-\thetabstop}%
-%		\kern-\gre@dimen@begindifference%
-%	\fi%
-%	\@esphack%
-%}
-%
-%\newcommand{\setstops}{%
-%  \gdef\nstabbing@stops{%
-%    \hspace*{-\oddsidemargin}\hspace{-1in}%
-%    \hspace*{\zposx{stop-\thescore-1} sp}\=%
-%  }%
-%  \count@=\@ne
-%  \loop\ifnum\count@<\value{tabstop}%
-%    \begingroup\edef\x{\endgroup
-%      \noexpand\g@addto@macro\noexpand\nstabbing@stops{%
-%        \noexpand\hspace{-\noexpand\zposx{stop-\thescore-\the\count@} sp}%
-%        \noexpand\hspace{\noexpand\zposx{stop-\thescore-\the\numexpr\count@+1} sp}\noexpand\=%
-%      }%
-%    }\x
-%    \advance\count@\@ne
-%  \repeat
-%  \nstabbing@stops\kill
-%}
-%\makeatother
-%
-%\newenvironment{nstabbing}
-%  {\setlength{\topsep}{0pt}%
-%   \setlength{\partopsep}{0pt}%
-%   \tabbing%
-%   \setstops}
-%  {\endtabbing\stepcounter{score}}
-%
-%\gresetinitiallines{0}
-%\gresetlastline{justified}
+\makeatletter  
+\newcounter{score}
+\newcounter{tabstop}[score]
+\newcommand{\grealign}{%
+	\@bsphack%
+	\ifgre@boxing\else%
+		\kern\gre@dimen@begindifference%
+		\stepcounter{tabstop}%
+		\expandafter\zsavepos{stop-\thescore-\thetabstop}%
+		\kern-\gre@dimen@begindifference%
+	\fi%
+	\@esphack%
+}
+
+\newcommand{\setstops}{%
+  \gdef\nstabbing@stops{%
+    \hspace*{-\oddsidemargin}\hspace{-1in}%
+    \hspace*{\zposx{stop-\thescore-1} sp}\=%
+  }%
+  \count@=\@ne
+  \loop\ifnum\count@<\value{tabstop}%
+    \begingroup\edef\x{\endgroup
+      \noexpand\g@addto@macro\noexpand\nstabbing@stops{%
+        \noexpand\hspace{-\noexpand\zposx{stop-\thescore-\the\count@} sp}%
+        \noexpand\hspace{\noexpand\zposx{stop-\thescore-\the\numexpr\count@+1} sp}\noexpand\=%
+      }%
+    }\x
+    \advance\count@\@ne
+  \repeat
+  \nstabbing@stops\kill
+}
+\makeatother
+
+\newenvironment{nstabbing}
+  {\setlength{\topsep}{0pt}%
+   \setlength{\partopsep}{0pt}%
+   \tabbing%
+   \setstops}
+  {\endtabbing\stepcounter{score}}
+
+\gresetinitiallines{0}
+\gresetlastline{justified}
 %% ------------------ Zarządzanie litaniami ---------------------------
 
 \usepackage[hyperindex=true]{hyperref}
@@ -140,6 +151,7 @@
 %\usepackage{booktabs}
 \usepackage{longtable}
 \usepackage[savepos]{zref}
+\usepackage{ragged2e}
 % -----------------------------------------------------------------------------------
 % ---------------------- CZCIONKI DOKUMENTU ------------------------
 % -----------------------------------------------------------------------------------
@@ -189,29 +201,43 @@
 %\setmainfont{Calluna}
 % ----
 %\newfontfamily{\sekfont}{Times New Roman}
-% -----------------------------------------------------------------------------------
+% -----------------------------------------------------------------------
 % ------------------ CZCIONKA SEKCJI I SUBSEKCJI --------------------
 \newcommand\sekcjafont{\fontsize{20}{16}\selectfont\scshape}
 \newcommand\subsekcjafont{\fontsize{14}{10}\selectfont\scshape}
 \newcommand\subsubsekcjafont{\fontsize{15}{10}\selectfont\itshape}
-% -----------------------------------------------------------------------------------
+% ----------------------------------------------------------------------
 % ------------------ CZCIONKA STRONY TYTUŁOWej ------------------
 \newfontfamily{\tytfont}{JSL Ancient}
 \newcommand\tytulfont[1]{\fontsize{50}{60}\selectfont\tytfont#1\par}
 \newcommand\podtytulfont[1]{\fontsize{38}{28}\selectfont\tytfont#1\par}
-
-% -----------------------------------------------------------------------------------
+% -------------------- POKAŻ CZCIONKĘ -----------------------------------
+\makeatletter
+\newcommand{\showfont}
+{%
+%        encoding: \the\encoding,
+%        family: \the\family,
+%        series: \the\series,
+%        shape: \the\shape,
+%        size: \the\size,
+%        baseline: \the\baselineskip,
+%        linespread: \the\linespread,
+        linespacing: \the\baselineskip%
+        parskip: \the\parskip%
+}
+\makeatother
+% ---------------------------------------------------------------------------
 % ---------------------------- GRAFIKA I KOLORY---------------------------
-% -----------------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
 \usepackage{xcolor} % kolory
 \definecolor{myRed}{RGB}{229,53,44}%
 \usepackage{graphicx} % umożliwia import obrazów
 \usepackage{pgfornament}% ornamenty graficzne
-% -----------------------------------------------------------------------------------
-% ----------------------------------- RUBRYKA---------------------------------
-% -----------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------
+% ----------------------------------- RUBRYKA ---------------------------------
+% -------------------------------------------------------------------------------
 \newcommand{\rubryka}[1]{
-	\begin{spacing}{0.8}
+	\begin{spacing}{1}
 	\begin{center}
 	\begin{polish}
 		\parbox{\textwidth}{\centering\footnotesize\textit{\red{#1}}}
@@ -307,7 +333,7 @@
 %\newcommand{\numer}[1]{\noindent\makebox[1em][l]{\textcolor{myRed}{#1}}}
 % --------------------------------
 \newcommand{\tlumacz}[1]{\begin{spacing}{0.5}\textpolish{\footnotesize\textit{\hspace{20pt} #1}}\end{spacing}}% normalna czcionka justowana do lewej
-\newcommand{\tlumaczR}[1]{\begin{spacing}{0.5}\mbox{}\hfill\textpolish{\footnotesize\textit{#1}}\end{spacing}}% mała czcionka justowana do prawej 
+\newcommand{\tlumaczR}[1]{\begin{spacing}{0.5}\mbox{}\hfill\textpolish{\footnotesize\textit{#1}}\end{spacing}}% mała czcionka justowana do prawej  \noindent\hrulefill 
 \newcommand{\inicjal}[2]{\textcolor{myRed}{\Large\textbf{#1}}{#2}}
 \newcounter{licznik}
 \newcommand{\licznikZero}{\setcounter{licznik}{0}}% zeruj licznik
@@ -331,7 +357,7 @@
  {\luacolorresetboxcolor\pcol@tempboxa\copy\pcol@tempboxa}{}{\fail}
 \makeatother
  %-----------------------------------------------------------------------------------------------------
-\newcommand{\BeginParallel}{\begin{spacing}{0.8}\begin{paracol}{2}\licznikZero}
+\newcommand{\BeginParallel}{\begin{spacing}{1}\begin{paracol}{2}\licznikZero}
 \newcommand{\lat}[1]{\begin{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}\ifnum \value{licznik}>0 \licznikUp \thelicznik .~#1 \else \licznikUp#1 \fi \end{minipage}\end{latin}\switchcolumn}
 \newcommand{\latN}[1]{\begin{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}#1\end{minipage}\end{latin}\switchcolumn}% kolumna bez numeracji wersów
 \newcommand{\pol}[1]{\begin{polish}\begin{minipage}[t]{\linewidth}\itshape#1\end{minipage}\end{polish}\switchcolumn*}
