@@ -1,0 +1,164 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[oneside, 12pt, a4paper]{book}
+%\usepackage[letterpaper,showframe]{geometry}
+\usepackage{fullpage} % redukcja marginesów
+\usepackage{geometry}
+\geometry{
+	left=12mm,
+	right=12mm,
+	top=12mm,
+	bottom=12mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\gresetheadercapture{annotation}{greannotation}{string}
+% Format annotation above initial
+\grechangestyle{annotation}{\small\bfseries}%
+\grechangedim{intersyllablespacenotes}{0.18cm}{scalable}%
+
+\usepackage{fullpage}
+\usepackage{multicol}
+\usepackage{setspace} % odstępy między liniami
+
+%  Konfiguracja kolumn
+\usepackage{paracol}
+\setcolumnwidth{14cm,4cm}
+\setlength{\columnsep}{0.4cm}
+% \setlength{\columnseprule}{0.4pt}
+% \colseprulecolor{red}
+
+\usepackage{tcolorbox}
+\newtcolorbox{nutybox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=center}
+\newtcolorbox{tlumbox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=top}
+
+\usepackage{Tabbing}
+\usepackage{longtable}
+\usepackage[savepos]{zref}
+
+\let\grelocalleftbox\localleftbox
+\let\grelocalrightbox\localrightbox
+
+\usepackage[latin,polish]{babel}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Libertinus Serif}
+
+\usepackage{libertine} % ust. czcionki
+\pagestyle{empty}	% usuwanie nagłówków/stopek z dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+%\setstretch{1.5} 
+
+\usepackage{graphicx} % umożliwia import obrazów
+\graphicspath{{img/}} % katalog obrazów
+\usepackage{pgfornament}% ornamenty graficzne
+
+\usepackage{titlesec} % ustawianie nagłówków
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}	
+\titleformat{\chapter}[hang]{\filcenter\LARGE\scshape\bfseries}{}{0pt}{} % format nagłówków
+\titlespacing*{\section}{0pt}{0pt}{0mm}	
+\titleformat{\section}[hang]{\filcenter\large\scshape\bfseries}{}{0pt}{} % format nagłówków
+
+%\newfontface\vectis{VectisMonumentalW01-Regular}
+%\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
+
+% --- komendy własne ---
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+
+\newcommand{\ornament}[1]{
+	\begin{center}
+		\vspace{25mm}
+		\pgfornament[width=0.6cm]{#1}
+		\newpage
+	\end{center}}
+
+\begin{document}
+
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+
+\pagenumbering{gobble} % nie jest wyprowadzany żaden numer strony, chociaż numer jest nadal resetowany. Odniesienia do tej strony również są puste.
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Jesu Redemptor omnium}
+	\small\textit{Liber Usualis, Solesmes, 1961, p.365}
+	\vspace{5mm}
+\end{center}	
+\end{spacing}
+\begin{paracol}{2}
+	\ensurevspace{4cm}
+	\begin{nutybox}\greannotation{Hymn.}\greannotation{1.} \gabcsnippet{(c4) JE(c)su(d) Red(eg)ém(gf)ptor(ede) ó(f')mni(e)um,(d.) (;) Quem(ce) lu(g')cis(h) an(h)t{<e>e</e>}(g) o(g)rí(h!iwj)gi(ivHG)nem,(h.) (:) Pa(hi)rem(g) pa(fg)tér(e)nae(dc) gló(d)ri(de)ae,(e.) (;) Pa(c)ter(d) su(eg)pré(gf)mus(ede) é(f')di(e)dit.(d.) (::) }
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Jezu, Odkupicielu wszystkich, którego przed powstaniem światła (jako) równego chwale Ojcowskiej Ojciec zrodził najwyższy.
+	\end{tlumbox}
+  	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4) <c>2.</c> Tu(c) lu(d)men(eg) et(gf) splen(ede)dor(f') Pa(e)tris,(d.) (;) Tu(ce) spes(g') per(h)én(h)nis(g) ó(h!iwj)mni(ivHG)um :(h.) (:) In(hi)tén(g)de(fg) quas(e) fun(dc)dunt(d) pre(de)ces(e.) (;) Tu(c)i(d) per(eg) or(gf)bem(ede) sér(f')vu(e)li.(d.) (::) }
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Ty światłości i~odblasku Ojcowski, Ty nadziejo nieustanna wszystkich, wysłuchaj modłów, jakie słudzy twoi wylewają po (całym) świecie.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4) <c>3.</c> Me(c)mén(d)to,(eg) re(gf)rum(ede) Cón(f')di(e)tor,(d.) (;) No(ce)stri(g') quod(h) o(h)lim(g) cór(h!iwj)po(ivHG)ris,(h.) (:) Sac(hi)rá(g)t{<e>a</e>}(g) ab(fg) al(e)vo(dc) Vír(d)gi(de)nis(e.) (;) Na(c)scén(d)do,(eg) for(gf)mam(ede) súm(f')pse(e)ris.(d.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Pomnij, Stwórco (wszech)rzeczy, żeś ongiś, rodząc się z~świętego Dziewicy żywota, przyjął postać ciała naszego.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4) <c>4.</c> Te(c)stá(d)tur(eg) hoc(gf) prae(ede)sens(f') di(e)es,(d.) (;) Cur(ce)rens(g') per(h) an(h)ni(g) cír(h!iwj)cu(ivHG)lum,(h.) (:) Quod(hi) so(g)lus(fg) e(e) si(dc)nu(d) Pa(de)tris(e.) (;) Mun(c)di(d) sa(eg)lus(gf) ad(ede)vé(f')ne(e)ris.(d.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Świadczy o~tem dzień dzisiejszy, wracający w~biegu roku, żeś sam jeden z~łona Ojca przyszedł na zbawienie świata.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4) <c>5.</c> Hunc(c) a(d)stra,(eg) tel(gf)lus,(ede) aé(f')quo(e)ra,(d.) (;) Hunc(ce) o(g')mne(h) quod(h) cae(g)lo(h!iwj) sub(ivHG)est,(h.) (:) Sa(hi)lú(g)tis(fg) au(e)ctó(dc)rem(d) no(de)vae(e.) (;) No(c)vo(d) sa(eg)lú(gf)tat(ede) cán(f')ti(e)co.(d.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Jego gwiazdy, ziemia, morza, Jego wszystko, co jest pod niebem, (jako) Sprawcę nowego zbawienia nową pozdrawia pieśnią.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4) <c>6.</c> Et(c) nos,(d) be(eg)á(gf)ta(ede) quos(f') sa(e)cri(d.) (;) Ri(ce)gá(g')vit(h) un(h)da(g) sán(h!iwj)gui(ivHG)nis,(h.) (:) Na(hi)tá(g)lis(fg) ob(e) di(dc)em(d) tu(de)i,(e.) (;) Hy(c)mni(d) tri(eg)bú(gf)tum(ede) sól(f')vi(e)mus.(d.) (::) }
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	I~my, których zrosił strumień krwi świętej, z~powodu dnia narodzenia twego składamy daninę pieśni.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4) <c>7.</c> Je(c)su,(d) ti(eg)bi(gf) sit(ede) gló(f')ri(e)a,(d.) (;) Qui(ce) na(g')tus(h) es(h) de(g) Vír(h!iwj)gi(ivHG)ne,(h.) (:) Cum(hi) Pa(g)tr{<e>e</e>}(g) et(fg) al(e)mo(dc) Spí(d)ri(de)tu,(e.) (;) In(c) sem(d)pi(eg)tér(gf)na(ede) saé(f')cu(e)la.(d.) (::)  A(ded)men.(cd..) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Jezu, Tobie niechaj będzie chwała, który narodziłeś się z~Dziewicy, oraz Ojcu i~dobroczynnemu Duchowi, po nieskończone wieki. Amen.\footnotemark
+	\end{tlumbox}
+\end{paracol}	
+\footnotetext{tłum. Ks. Bronisław Gładysz, "Hymny brewiarza rzymskiego oraz patronału polskiego. Przekład i objaśnienia", Poznań 1933}
+\end{document}

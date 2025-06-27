@@ -1,0 +1,75 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, a4paper]{article}
+\usepackage[latin, polish]{babel} % ustawienia języka
+\usepackage[T1]{fontenc} % przełączenie na fonty EC (256 znaków)
+\usepackage[utf8]{luainputenc} % kodowanie
+\usepackage{fullpage} % redukcja marginesów
+\usepackage{setspace} % odstępy między liniami
+\usepackage{geometry} 
+\geometry{
+	left=12mm,
+	right=12mm,
+	top=12mm,
+	bottom=12mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+
+\usepackage{fontspec}
+\usepackage{libertine} % ust. czcionki
+\pagestyle{empty}	% usuwanie nagłówków/stopek z dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+\setstretch{1.5} 
+
+%  Konfiguracja kolumn
+\usepackage{paracol}
+\setcolumnwidth{8.3cm,4.3cm}
+\setlength{\columnsep}{0.4cm}
+
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\grechangestyle{initial}{\setmainfont{VectisMonumentalW01-Regular}\fontsize{23}{23}\selectfont}
+% \grechangedim{spacelinestext}{0.7 cm}{scalable}
+% \grechangedim{spaceabovelines}{0.43 cm}{scalable}
+% \gresetheadercapture{commentary}{grecommentary}{string}
+% \grecommentary{}
+\gresetheadercapture{annotation}{greannotation}{string}
+% Format annotation above initial
+\grechangestyle{annotation}{\small\bfseries}%
+%\grechangedim{intersyllablespacenotes}{0.18cm}{scalable}%
+%\grechangestyle{commentary}{\it}
+%\gresetmodenumbersystem{roman-majuscule}
+\usepackage{titlesec} % ustawianie nagłówków
+\titlespacing*{\section}{0pt}{0pt}{3mm}	
+\titleformat{\section}[hang]{\filcenter\large\scshape\bfseries}{}{0pt}{} % format nagłówków
+
+\newfontface\vectis{VectisMonumentalW01-Regular}
+\def\greinitialformat#1{%
+{\fontsize{24}{24}\vectis #1}}
+
+\titlespacing*{\section}
+{0pt}{0pt}{0pt}
+
+\begin{document}
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Jesu dulcis memoria}
+	\small\textit{Liber Usualis, Solesmes, 1961, p. 452}
+	\vspace{15mm}
+\end{center}	
+\end{spacing}
+\greannotation{Hymn.} 
+\greannotation{1.} 
+\gabcsnippet{QUem(df) ter(e[ll:1]d)ra,(e) pon(g)tus,(g) sí(ef)de(e[ll:1]d)ra(d'_) (,) Co(e)lunt,(g') ad(h)ó(h)rant,(g) praé(hj)di(ivHG)cant,(h.) (;) Tri(g)nam(fe) re(d)gén(e[ll:1]d)tem(c) má(d')chi(d)nam,(e'_[oh:h]) (,) Clau(dh'/ig)strum(h') Ma(d)rí(e)ae(g) bá(fe)ju(d)lat.(e.) (::)}
+
+\vspace{5mm}
+\setstretch{1}% odstęp między liniami
+1. Jezusa słodkie wspomnienie, Daje duszy pocieszenie: Wszystkie słodycze przechodzi, Kiedy Jezus wśród nas chodzi, wśród nas chodzi.\\
+2. Ani wdzięcznych śpiewów pienie, Ani miłe uszom brzmienie, Świętych myśli nie pomnoży Jak ty Jezu Synu Boży!\\
+3. Jezu grzeszników nadziejo! Gdy w pokucie łzy swe leją: Kto cię szuka, kto cię prosi, Skarb twej łaski w sobie nosi.\\
+4. Żaden język nie opowi: Żaden wyraz nie wysłowi: Samo uczy doświadczanie, Co jest Jezu! twe kochanie.\footnote{M. M. Mioduszewski, Śpiewnik kościelny, Kraków 1838, s. 160–161.}\\
+5. Jezu, bądź naszą radością, Który jesteś przyszłą nagrodą, Niech będzie nasza w Tobie chwała na wszystkie wieki wieków.\footnote{tłum. DR}
+\end{document}

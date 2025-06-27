@@ -1,0 +1,214 @@
+% !TEX TS-program = lualatex+se
+% !TEX encoding = UTF-8
+
+\documentclass[oneside, 12pt, a4paper]{book}
+%\usepackage[letterpaper,showframe]{geometry}
+\usepackage{fullpage} % redukcja marginesów
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=12mm,
+	bottom=12mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+% --- GREGORIO ---	
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\gresetheadercapture{annotation}{greannotation}{string}% odczytuje adnotacje nad inicjałem jako ciąg, co pozwala na jego renderowanie
+\gresetheadercapture{commentary}{grecommentary}{string}% odczytuje komentarz jako ciąg, co pozwala na jego renderowanie
+\grechangedim{commentaryraise}{0.3cm}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+\grechangestyle{annotation}{\color{black}\small}% format adnotacji
+\grechangestyle{commentary}{\color{gregoriocolor}\small}% format komentarza
+\grechangestyle{abovelinestext}{\color{gregoriocolor}\small}% format napisu nad liniami
+\grechangestyle{initial}{\fontsize{36}{36}\selectfont} % zmniejsza wielkość inicjału do bardziej proporcjonalnego rozmiaru (=36pt)
+\grechangedim{intersyllablespacenotes}{0.26cm}{scalable}% Minimalna odległość między nutami różnych sylab.
+
+% umieszczenie zawartości składu ich unikalnego argumentu po lewej i prawej stronie każdej linii
+\let\grelocalleftbox\localleftbox
+\let\grelocalrightbox\localrightbox
+
+%\newcommand{\separator}{\greseparator{3}{40}}
+\newfontface\vectis{VectisMonumentalW01-Regular}
+\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
+% --- format pierwszej linii 
+% \setfirstannotation{\fontsize{10}{10}\textcolor{red}{Ant.}}%
+% --- format drugiej linii
+% \setsecondannotation{\fontsize{10}{10}\sc{\textcolor{red}8.}}%
+% --- dodawanie spacji
+% \tolerance=9999 %(or less)
+% \pretolerance=500  %default is -1  This will spread your chant out over the bars
+% --- wymuś hypheny między sylabami
+% \grechangedim{\gremaximumspacewithoutdash}{0pt}
+% --- redukcja spacji między sylabami i glyphami: \hspace{-.2ex}
+% --- lub wstam sylaby lub glyphy między to: \mbox{...}
+% --- lub użyj ( z), aby przesunąć neum bliżej początku pięciolinii. Im więcej spacji w nawiasach, tym bardziej zawęża spację.
+% ------------------
+
+%  Konfiguracja kolumn
+\usepackage{paracol}
+\setcolumnwidth{13cm,5cm}
+\setlength{\columnsep}{0.5cm}
+\footnotelayout{m}
+% \setlength{\columnseprule}{0.4pt}
+% \colseprulecolor{red}
+\usepackage{tcolorbox}
+\newtcolorbox{nutybox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=center}
+\newtcolorbox{tlumbox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=top, fontupper=\linespread{.8}\selectfont}
+
+\usepackage{Tabbing}
+\usepackage{longtable}
+\usepackage[savepos]{zref}
+
+\usepackage[latin,polish]{babel}
+\usepackage{fontspec}
+%\usepackage{times}
+%\usepackage[math]{anttor}
+%\usepackage{tgtermes}
+%\usepackage{mathptmx}
+\usepackage{ebgaramond}
+\setmainfont{EB Garamond}
+%\usepackage{libertine}
+%\setmainfont{Libertinus Serif}
+\defaultfontfeatures{Ligatures=TeX}
+
+\pagestyle{plain}	% usuwanie nagłówków/stopek z\,dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+\usepackage{setspace} % odstępy między liniami
+%\setstretch{1.5} % półtorej linii odległości między wierszami
+
+\usepackage{graphicx} % umożliwia import obrazów
+\graphicspath{{img/}} % katalog obrazów
+\usepackage{pgfornament}% ornamenty graficzne
+
+\usepackage{titlesec} % ustawianie nagłówków
+
+% --- komendy własne ---
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+
+\newcommand{\koniec}{
+	\begin{center}
+%		\vspace{5mm}
+%		\pgfornament[width=0.6cm]{#1}
+		\newpage
+	\end{center}}
+
+\begin{document}
+\titlespacing*{\chapter}{0pt}{0pt}{5pt}	
+\titleformat{\chapter}[hang]{\filcenter\LARGE\scshape\bfseries}{}{0pt}{} % format nagłówków
+\titlespacing*{\section}{0pt}{0pt}{0pt}	
+\titleformat{\section}[hang]{\filcenter\large\scshape}{}{0pt}{} % format nagłówków
+
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+
+\pagenumbering{gobble} % nie jest wyprowadzany żaden numer strony, chociaż numer jest nadal resetowany. Odniesienia do tej strony również są puste.
+\large
+\begin{spacing}{0.8}
+\begin{center}
+	\section*{Veni veni Emmanuel}
+	\small\textit{Psalteriolum Cantionum Catholicarum, Kolonia, 1710r.}
+\end{center}	
+\end{spacing}
+\begin{paracol}{2}
+	\ensurevspace{4cm}
+	\begin{nutybox}
+	\greannotation{Hymnus}\greannotation{1.}\gabcsnippet{(cb4) VE(d)ni,(f') ve(h)ni,(h) Em(h)má(gih)nu(g)el,(f_) (,) Cap(g)tí(h')vum(f) sol(d)ve(f) Is(gvED)ra(c)el,(d.) (;) Qui(g) ge(g')mit(d) in(d) ex(e)sí(f_e)li(d)o(c_) (,) Pri(f)vá(g')tus(h) De(h)i(h) Fí(gih)li(g)o.(f.) (::) <c><sp>R/</sp>.</c> Gau(j)de,(j_) gau(h)de,(h_) Em(h)má(gih)nu(g)el(f_) (,) Na(g)scé(h')tur(f) pro(d) te,(f) Is(gvED)ra(c)el.(d.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	\red{1}.~O przyjdź, o przyjdź, Emanuelu,
+z niewoli wyrwij Izraela;
+za grzech wygnanie cierpi lud.
+Jednorodzony Synu Boży!
+\red{\Rbar.}~Rozraduj się, rozraduj się,
+bo przyjdzie twój Emmanuel!
+	\end{tlumbox}
+  	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4)  <c>2.</c> Ve(d)ni,(f') ve(h)ni,(h) Rex(h) gén(gih)ti(g)um,(f_) (,) Ve(g)ni,(h') Red(f)ém(d)ptor(f) óm(gvED)ni(c)um:(d.) (;) Ut(g) sal(g')ves(d) tu(d)os(e) fá(f_e)mu(d)los(c_) (,) Pec(f)cá(g')ti(h) si(h)bi(h) cón(gih)sci(g)os.(f.) (::) <c><sp>R/</sp>.</c> Gau(j)de,(j_) gau(h)de...(h_)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	\red{2}.~O przyjdź, o przyjdź, o Królu królów,
+przyjdź Zbawicielu, przyjdź i ocal świat,
+uwolnij nas z niewoli zła 
+i Twoją bliskość odczuć nam daj.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4)  <c>3.</c> Ve(d)ni,(f') ve(h)ni,(h) O(h) O(gih)ri(g)ens,(f_) (,) So(g)lá(h')re(f) nos(d) ad(f)vé(gvED)ni(c)ens:(d.) (;) No(g)ctis(g') de(d)pél(d)le(e) né(f_e)bu(d)las,(c_) (,) Di(f)rás(g')que(h) no(h)ctis(h) té(gih)ne(g)bras.(f.) (::) <c><sp>R/</sp>.</c> Gau(j)de,(j_) gau(h)de...(h_)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	\red{3}.~O przyjdź, o przyjdź, o Wschodzie Słońca,
+i oświeć ziemię Światłem Twym,
+niech przezwycięży nocne mgły
+rozproszy ciemność nocy mej.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4)  <c>4.</c> Ve(d)ni,(f') Cla(h)vis(h) Da(h)ví(gih)di(g)ca,(f_) (,) Re(g)gna(h') re(f)clú(d)de(f) c<sp>'ae</sp>(gvED)li(c)ca;(d.) (;) Fac(g) i(g')ter(d) tu(d)tum(e) sú(f_e)pe(d)rum,(c_) (,) Et(f) clau(g')de(h) vi(h)as(h) ín(gih)fe(g)rum.(f.) (::) <c><sp>R/</sp>.</c> Gau(j)de,(j_) gau(h)de...(h_)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	\red{4}.~O przyjdź, o przyjdź, Kluczu Dawida,
+niebo otworzyć w mocy Twej jest;
+bezpieczną drogą prowadź wzwyż
+na zawsze zamknij piekła drzwi.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4)  <c>5.</c> Ve(d)ni,(f') O(h) Jes(h)se(h) Vír(gih)gu(g)la:(f_) (,) Ex(g) ho(h')stis(f) tu(d)os(f) ún(gvED)gu(c)la,(d.) (;) De(g) spe(g')cu(d) tu(d)os(e) tár(f_e)ta(d)ri(c_) (,) E(f)duc,(g') et(h) an(h)tro(h) bá(gih)ra(g)thri.(f.) (::) <c><sp>R/</sp>.</c> Gau(j)de,(j_) gau(h)de...(h_)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	\red{5}.~O przyjdź, o przyjdź, Różdżko Jessego,
+z rąk nieprzyjaciół wyzwól nas,
+z przepaści i otchłani zła
+z czeluści śmierci wyrwij nas.
+%\footnotemark
+	\end{tlumbox}	
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4)  <c>6.</c> Ve(d)ni,(f') ve(h)ni,(h) Ad(h)o(gih)ná(g)i,(f_) (,) Qui(g) pó(h')pu(f)lo(d) in(f) Sí(gvED)na(c)i,(d.) (;) Le(g)gem(g') de(d)dí(d)sti(e) vér(f_e)ti(d)ce,(c_) (,) In(f) ma(g')je(h)stá(h)te(h) gló(gih)ri(g)æ.(f.) (::) <c><sp>R/</sp>.</c> Gau(j)de,(j_) gau(h)de,(h_) Em(h)má(gih)nu(g)el(f_) (,) Na(g)scé(h')tur(f) pro(d) te,(f) Is(gvED)ra(c)el.(d.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	\red{6}.~O przyjdź, o przyjdź, o święty Adonaj,
+coś Twemu ludowi Prawo dał
+na górze Synaj, najwyższej z gór,
+niech Słowo Twe na nowo stworzy nas.
+\red{\Rbar.}~Rozraduj się, rozraduj się,
+bo przyjdzie twój Emmanuel!
+%\footnotemark
+	\end{tlumbox}	
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4)  <c>7.</c> Ve(d)ni,(f') O(h) Sa(h)pi(h)én(gih)ti(g)a,(f_) (,) Quæ(g) hic(h') di(f)spó(d)nis(f) óm(gvED)ni(c)a:(d.) (;) Ve(g)ni,(g') vi(d)am(d) pru(e)dén(f_e)ti(d)æ(c_) (,) Ut(f) dó(g')ce(h)as(h) et(h) gló(gih)ri(g)æ.(f.) (::) <c><sp>R/</sp>.</c> Gau(j)de,(j_) gau(h)de...(h_)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	\red{7}.~O przyjdź, Mądrości, Słowo Boże,
+nad wszystkim obejmij rządy Twe.
+Naucz nas roztropności, przyjdź,
+ścieżkami życia prowadź nas.\footnotemark
+	\end{tlumbox}	
+	\footnotetext{tłum. ze strony: https://www.pjthe3.com/o-przyjdz-o-przyjdz-emmanuelu/} 
+\end{paracol}	
+\end{document}

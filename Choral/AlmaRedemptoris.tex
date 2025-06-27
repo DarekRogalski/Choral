@@ -1,0 +1,173 @@
+% !TEX TS-program = lualatex+se
+% !TEX encoding = UTF-8
+
+\documentclass[oneside, 12pt, a4paper]{book}
+%\usepackage[letterpaper,showframe]{geometry}
+\usepackage{fullpage} % redukcja marginesów
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=12mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\gresetheadercapture{annotation}{greannotation}{string}
+% Format annotation above initial
+\grechangestyle{annotation}{\small\bfseries}%
+\grechangedim{intersyllablespacenotes}{0.18cm}{scalable}%
+
+\usepackage{fullpage}
+\usepackage{multicol}
+
+%  Konfiguracja kolumn
+\usepackage{paracol}
+\setcolumnwidth{14cm,4cm}
+\setlength{\columnsep}{0.5cm}
+\footnotelayout{m}
+% \setlength{\columnseprule}{0.4pt}
+% \colseprulecolor{red}
+\usepackage{tcolorbox}
+\newtcolorbox{nutybox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=center}
+\newtcolorbox{tlumbox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=top, fontupper=\linespread{.8}\selectfont}
+
+\usepackage{Tabbing}
+\usepackage{longtable}
+\usepackage[savepos]{zref}
+
+\let\grelocalleftbox\localleftbox
+\let\grelocalrightbox\localrightbox
+
+\usepackage[latin,polish]{babel}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Libertinus Serif}
+
+\pagestyle{plain}	% usuwanie nagłówków/stopek z\,dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+\usepackage{setspace} % odstępy między liniami
+%\setstretch{1.5} % półtorej linii odległości między wierszami
+
+\usepackage{graphicx} % umożliwia import obrazów
+\graphicspath{{img/}} % katalog obrazów
+\usepackage{pgfornament}% ornamenty graficzne
+
+\usepackage{titlesec} % ustawianie nagłówków
+
+\newfontface\vectis{VectisMonumentalW01-Regular}
+\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
+% --- format pierwszej linii 
+% \setfirstannotation{\fontsize{10}{10}\textcolor{red}{Ant.}}%
+% --- format drugiej linii
+% \setsecondannotation{\fontsize{10}{10}\sc{\textcolor{red}8.}}%
+% --- dodawanie spacji
+% \tolerance=9999 %(or less)
+% \pretolerance=500  %default is -1  This will spread your chant out over the bars
+% --- wymuś hypheny między sylabami
+% \grechangedim{\gremaximumspacewithoutdash}{0pt}
+% --- redukcja spacji między sylabami i glyphami: \hspace{-.2ex}
+% --- lub wstam sylaby lub glyphy między to: \mbox{...}
+% --- lub użyj ( z), aby przesunąć neum bliżej początku pięciolinii. Im więcej spacji w nawiasach, tym bardziej zawęża spację.
+
+% --- komendy własne ---
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+
+\newcommand{\koniec}{
+	\begin{center}
+%		\vspace{5mm}
+%		\pgfornament[width=0.6cm]{#1}
+		\newpage
+	\end{center}}
+
+\begin{document}
+\titlespacing*{\chapter}{0pt}{0pt}{5pt}	
+\titleformat{\chapter}[hang]{\filcenter\LARGE\scshape\bfseries}{}{0pt}{} % format nagłówków
+\titlespacing*{\section}{0pt}{0pt}{0pt}	
+\titleformat{\section}[hang]{\filcenter\large\scshape}{}{0pt}{} % format nagłówków
+
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+
+\pagenumbering{gobble} % nie jest wyprowadzany żaden numer strony, chociaż numer jest nadal resetowany. Odniesienia do tej strony również są puste.
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Rorate caeli desuper}
+	\small\textit{Liber Usualis, Solesmes, 1961, p. 1868}
+\end{center}	
+\end{spacing}
+\begin{paracol}{2}
+	\ensurevspace{4cm}
+	\begin{nutybox}
+	\greannotation{Hymnus}\greannotation{1.}\gabcsnippet{(cb4) VE(d)ni,(f') ve(h)ni,(h) Em(h)má(gih)nu(g)el,(f_) (,) Cap(g)tí(h')vum(f) sol(d)ve(f) Is(gvED)ra(c)el,(d.) (;) Qui(g) ge(g')mit(d) in(d) ex(e)sí(f_e)li(d)o(c_) (,) Pri(f)vá(g')tus(h) De(h)i(h) Fí(gih)li(g)o.(f.) (::) <c><sp>R/</sp>.</c> Gau(j)de,(j_) gau(h)de,(h_) Em(h)má(gih)nu(g)el(f_) (,) Na(g)scé(h')tur(f) pro(d) te,(f) Is(gvED)ra(c)el.(d.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Spuśćcie rosę niebiosa i obłoki niech wyleją sprawiedliwego. 
+	\end{tlumbox}
+  	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4)  <c>2.</c> Ve(d)ni,(f') ve(h)ni,(h) Rex(h) gén(gih)ti(g)um,(f_) (,) Ve(g)ni,(h') Red(f)ém(d)ptor(f) óm(gvED)ni(c)um:(d.) (;) Ut(g) sal(g')ves(d) tu(d)os(e) fá(f_e)mu(d)los(c_) (,) Pec(f)cá(g')ti(h) si(h)bi(h) cón(gih)sci(g)os.(f.) (::) <c><sp>R/</sp>.</c> Gau(j)de,(j_) gau(h)de...(h_)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Nie bądź zagniewany, Panie!
+Nie pamiętaj dłużej naszych grzechów!
+Oto miasto Świętego opuszczone, Syjon stał się pustkowiem,
+Jerozolima wyludniona
+Świątynia Twoja i dom chwały Twojej,
+gdzie wielbili Cię nasi ojcowie. 
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4)  <c>3.</c> Ve(d)ni,(f') ve(h)ni,(h) O(h) O(gih)ri(g)ens,(f_) (,) So(g)lá(h')re(f) nos(d) ad(f)vé(gvED)ni(c)ens:(d.) (;) No(g)ctis(g') de(d)pél(d)le(e) né(f_e)bu(d)las,(c_) (,) Di(f)rás(g')que(h) no(h)ctis(h) té(gih)ne(g)bras.(f.) (::) <c><sp>R/</sp>.</c> Gau(j)de,(j_) gau(h)de...(h_)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Zgrzeszyliśmy i staliśmy się jak nieczysty
+I opadliśmy wszyscy niczym zwiędłe liście
+A nieprawości nasze jak wiatr nas rozniosły
+Zakryłeś przed nami swą twarz i wydałeś na pastwę naszych grzechów. 
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4) <c>3.</c> Vi(f)de(gh) Dó(h)mi(h)ne,(h'_) af(h)fli(h)cti(h)ó(h)nem(h) pó(h)pu(g)li(j) tu(ixji)i,(h.) (;) et(h) mit(hk)te(j.) quem(ixi) mis(h)sú(hg)rus(f) es :(f.) (:) e(h)mít(ixi)te(j) A(j)gnum(j'_) do(j)mi(j)na(j)tó(jk)rem(j) ter(ixji)rae,(h.) (;) de(h) Pe(h)tra(h) de(h)sér(h)ti(h'_) ad(h) mon(h')tem(h) fí(ixgi)li(h)ae(h) Si(hg)on :(f.) (:) ut(f) áu(gh)fe(h)rat(h') i(h)pse(h'_) ju(h)gum(h') ca(h)pti(ixhi)vi(h)tá(hvGF')tis(e) no(fe)strae.(d.) (::) (Z-) }
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	Spójrz, Panie, na udrękę twego ludu
+I poślij tego, którego masz posłać
+Ześlij Baranka, Władcę ziemi, ze skały pustyni do góry Córy Syjonu
+By on sam zdjął z nas jarzmo niewoli.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4) <c>4.</c> Con(f)so(g)lá(h')mi(h)ni,(h.) con(f)so(g)lá(h')mi(h)ni,(h.) pó(h)pu(g)le(j) me(ixji)us :(h.) (;) ci(h')to(h) vé(k')ni(j)et(j.) sa(ixi)lus(h) tu(hg)a :(f.) (:) qua(h)re(ixi) moe(j)ró(j)re(jk) con(j)sú(ixji)me(h)ris,(h.) (;) qui(h)a(h) in(h)no(h)vá(h)vit(h) te(gf) do(ixfi)lor?(h.) (:) Sal(k)vá(ixji)bo(h) te,(h'_) (,) no(h)li(g') ti(h)mé(fg)re,(fe..) (:) e(f)go(gh) e(h)nim(h'_) sum(h) Dó(k')mi(j)nus(j') De(ixi)us(h) tu(hg)us,(f.) (;) San(h)ctus(h) Is(ixhi)ra(h)el,(h'_) Red(g)ém(gf)ptor(e) tu(fe)us.(d.) (::) (Z-)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	Pocieszcie się, pocieszcie się, ludu mój
+Wkrótce nadejdzie twoje zbawienie
+Czy dlatego tracisz ducha, że odnowiła się twoja boleść?
+Ocalę cię, nie bój się
+Jam jest bowiem Pan, Bóg twój, Święty Izraela,
+twój Odkupiciel.
+%\footnotemark
+	\end{tlumbox}	
+%	\footnotetext{https://www.spiewnikniepodleglosci.pl/teksty/tekst-utworu-gaude-mater-polonia/} 
+\end{paracol}	
+\end{document}

@@ -1,0 +1,120 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, a4paper]{article}
+\usepackage[latin, polish]{babel} % ustawienia języka
+\usepackage[T1]{fontenc} % przełączenie na fonty EC (256 znaków)
+\usepackage[utf8]{luainputenc} % kodowanie
+\usepackage{fullpage} % redukcja marginesów
+\usepackage{setspace} % odstępy między liniami
+\usepackage{geometry} 
+\geometry{
+	left=15mm,
+	right=15mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+
+\usepackage{fontspec}
+\usepackage{libertine} % ust. czcionki
+\pagestyle{empty}	% usuwanie nagłówków/stopek z dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+\setstretch{1.5} 
+
+%  Konfiguracja kolumn
+\usepackage{paracol}
+\setcolumnwidth{8.3cm,4.3cm}
+\setlength{\columnsep}{0.4cm}
+
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\grechangestyle{initial}{\setmainfont{VectisMonumentalW01-Regular}\fontsize{23}{23}\selectfont}
+% \grechangedim{spacelinestext}{0.7 cm}{scalable}
+% \grechangedim{spaceabovelines}{0.43 cm}{scalable}
+% \gresetheadercapture{commentary}{grecommentary}{string}
+% \grecommentary{}
+\gresetheadercapture{annotation}{greannotation}{string}
+% Format annotation above initial
+\grechangestyle{annotation}{\small\bfseries}%
+%\grechangedim{intersyllablespacenotes}{0.18cm}{scalable}%
+%\grechangestyle{commentary}{\it}
+%\gresetmodenumbersystem{roman-majuscule}
+\usepackage{titlesec} % ustawianie nagłówków
+\titlespacing*{\section}{0pt}{0pt}{3mm}	
+\titleformat{\section}[hang]{\filcenter\large\scshape\bfseries}{}{0pt}{} % format nagłówków
+
+\newfontface\vectis{VectisMonumentalW01-Regular}
+\def\greinitialformat#1{%
+{\fontsize{24}{24}\vectis #1}}
+
+\titlespacing*{\section}
+{0pt}{0pt}{0pt}
+
+\begin{document}
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Alma Redemptoris}
+	\small\textit{Liber Usualis, Solesmes, 1961, p. 273}
+	\vspace{22mm}
+\end{center}	
+\end{spacing}
+%%\grechangenextscorelinedim{4}{spaceabovelines}{1cm plus 0.36461cm minus 0.09114cm}{scalable} 
+%\grechangedim{annotationraise}{-2mm}{scalable}
+%\grechangedim{beforeinitialshift}{2mm}{scalable}%
+%\grechangedim{afterinitialshift}{2mm}{scalable}%
+%\greseteolhyphen{normal}
+%\grechangedim{moraadjustment}{0.05 cm}{scalable}%
+%\grechangedim{moraadjustmentbar}{0.05 cm}{scalable}%
+%%\grechangedim{alterationadjustmentbar}{0.07 cm}{scalable}%
+%\grechangedim{bar@virgula@standalone@notext}{0.2 cm}{scalable}%
+%\grechangedim{bar@minima@standalone@notext}{0.2 cm}{scalable}%
+%\grechangedim{bar@minor@standalone@notext}{0.2323 cm}{scalable}%
+%\grechangedim{bar@dominican@standalone@notext}{0.2323 cm}{scalable}%
+%\grechangedim{bar@maior@standalone@notext}{0.2323 cm}{scalable}%
+%\grechangedim{bar@finalis@standalone@notext}{0.2323 cm}{scalable}%
+%\grechangedim{bar@finalfinalis@standalone@notext}{0.29169 cm}{scalable}%
+%\grechangedim{bar@rubber}{0 cm plus 0.025cm minus 0.025 cm}{scalable}%
+%\grechangedim{bar@minima@short}{0.12 cm plus 0.05 cm minus 0.00469 cm}{scalable}%
+%\grechangedim{bar@virgula@short}{0.13 cm plus 0.05 cm minus 0.00469 cm}{scalable}%
+%%\grechangedim{bar@finalfinalis@standalone@notext}{0.2323 cm}{scalable}%
+%\grechangedim{interwordspacetext@bars@notext}{0.19 cm}{scalable}%
+%\grechangedim{interwordspacetext@bars@notext@euouae}{0.18 cm}{scalable}%
+%\grechangedim{interwordspacetext}{0.17 cm plus 0.05 cm minus 0.05 cm}{scalable}%
+%\grechangedim{interwordspacenotes@euouae}{0.23 cm plus 0.1 cm minus 0.05 cm}{scalable}%
+%\grechangedim{interwordspacenotes}{0.29 cm plus 0.05 cm minus 0.05 cm}{scalable}%
+%\grechangedim{interwordspacetext@euouae}{0.21 cm plus 0.1 cm minus 0.05 cm}{fixed}%
+%\grechangedim{maxbaroffsettextright}{0.15 cm}{scalable}%
+%\grechangedim{maxbaroffsettextleft}{0.3 cm}{scalable}%
+%\grechangedim{spaceafterlineclef}{0.23 cm plus 0 cm minus 0.01367 cm}{scalable}%
+%\grechangedim{spacebeforeeolcustos}{0.23 cm plus 0 cm minus 0 cm}{scalable}%
+%\grechangedim{shortspaceafterlineclef}{0.18 cm plus 0 cm minus 0.01367 cm}{scalable}%
+%\grechangedim{spaceabovelines}{0.45576 cm plus 0.45576 cm minus 0.20114 cm}{scalable}%
+%\grechangedim{emergencystretch}{1mm}{scalable}
+%\grechangedim{baselineskip}{11.5pt}{scalable}%
+%\gresetcustosalteration{invisible}
+\grechangedim{spaceabovelines}{0.5 cm}{scalable}%
+\grechangedim{emergencystretch}{1mm}{scalable}
+\grechangedim{parskip}{1pt plus 1pt}{scalable}%
+\grechangedim{lineskip}{0pt plus 1pt}{scalable}%
+\grechangedim{baselineskip}{55pt plus 5pt minus 5pt}{scalable}%
+\greannotation{Ant.} 
+\greannotation{5.} 
+\gabcsnippet{(cb4) AL(d.0f!gwhhv//ikkvJ'IH'Ghih'h)ma(fef.) *(,) Red(h)em(h')ptó(d)ris(ef) Ma(gvED)ter,(d.) (;) quae(h) pér(jk)vi(ih)a(gh) cae(h)li(h.) (,) por(de!fg)ta(f) ma(h.d!ewf'!gv)nes,(f.) (::) Et(k) stel(jki'ih~)la(g) ma(hif)ris,(f.) (;) suc(d)cúr(eg)re(g') ca(g)dén(fge'ed~)ti(d.) (,) súr(h')ge(h)re(h') qui(g) cu(hih)rat(gf) pó(e')pu(f)lo :(f.) (::) Tu(kvIH) quae(k') ge(j)nu(kl)í(kj)sti,(i_[oh:h]h_[oh:h]) (,) na(gh)tú(hvGF)ra(f') mi(g)rán(fge'ed~)te,(d.) (;) tu(d)um(ef) san(f)ctum(fe~) Ge(gf)ni(ed)tó(e)rem :(d.) (::) Vir(kvIG'h)go(h.) pri(hfgvE'D)us(d.) (,) ac(h) po(jk)sté(ih)ri(gh)us,(h.) (;) Ga(h')bri(h)é(hg)lis(f) ab(gh) o(hg)re(e_[oh:h]d_[oh:h]) (,) su(d)mens(ef) il(g)lud(ed) A(ef)ve,(f.) *(,) pec(h)ca(g')tó(h)rum(de) mi(f')se(e)ré(d.)re.(d.) (::)}
+\vspace{14mm}
+%\setstretch{1.3}% odstęp między liniami
+\leftskip 145pt
+\begin{spacing}{2}
+Święta Odkupiciela Matko, \\
+któraś otwartą nieba bramą pozostała \\
+Gwiazdo morza! Wspomóż upadły\\
+lud, gdy powstać usiłuje. \\
+Tyś zrodziła ku zdumieniu całej natury\\
+Twojego Świętego Stworzyciela,\\
+Panną będąc przedtem i potem,\\
+Pozdrowiona usty Gabriela,\\
+okaż miłosierdzie grzesznikom.
+\end{spacing}
+\end{document}

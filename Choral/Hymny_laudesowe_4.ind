@@ -1,0 +1,88 @@
+\begin{theindex}
+  \providecommand*\lettergroupDefault[1]{}
+  \providecommand*\lettergroup[1]{%
+      \par\textbf{#1}\par
+      \nopagebreak
+  }
+
+  \lettergroup{A}
+  \item A solis ortus cardine\dotfill\hyperpage{18}
+  \item Aeterna caeli gloria\dotfill\hyperpage{12}
+  \item Aeterne Rector siderum\dotfill\hyperpage{25}
+  \item Aeterne rerum\dotfill\hyperpage{4}
+  \item Ales diei nuntius\dotfill\hyperpage{8}
+  \item Alto ex Olympi vertice\dotfill\hyperpage{48}
+  \item Angularis fundamentum\dotfill\hyperpage{50}
+  \item Aurora Jam Spargit Polum (aestivalis, mod.4)\dotfill\hyperpage{15}
+  \item Aurora Jam Spargit Polum (hiemalis, mod.1)\dotfill\hyperpage{14}
+
+  \indexspace
+
+  \lettergroup{C}
+  \item Christe Sanctorum\dotfill\hyperpage{24}
+
+  \indexspace
+
+  \lettergroup{E}
+  \item Ecce jam noctis tenuatur\dotfill\hyperpage{3}
+  \item En clara vox\dotfill\hyperpage{17}
+  \item Exsultet caelum laudibus (mod.1)\dotfill\hyperpage{36}
+  \item Exsultet caelum laudibus (mod.4)\dotfill\hyperpage{34}
+  \item Exultet orbis gaudiis (mod.1)\dotfill\hyperpage{33}
+  \item Exultet orbis gaudiis (mod.4)\dotfill\hyperpage{31}
+
+  \indexspace
+
+  \lettergroup{F}
+  \item Fortem virili pectore\dotfill\hyperpage{47}
+
+  \indexspace
+
+  \lettergroup{I}
+  \item Invicte Martyr\dotfill\hyperpage{41}
+  \item Iste Confessor\dotfill\hyperpage{38}
+  \item Iste quem laeti\dotfill\hyperpage{22}
+
+  \indexspace
+
+  \lettergroup{J}
+  \item Jam morte victor obruta\dotfill\hyperpage{27}
+  \item Jesu Corona celsior\dotfill\hyperpage{39}
+  \item Jesu corona Virginum\dotfill\hyperpage{46}
+  \item Jesu Redemptor omnium\dotfill\hyperpage{37}
+
+  \indexspace
+
+  \lettergroup{L}
+  \item Lustra sex qui jam\dotfill\hyperpage{44}
+  \item Lux ecce surgit\dotfill\hyperpage{11}
+
+  \indexspace
+
+  \lettergroup{M}
+  \item Martyr Dei qui unicum\dotfill\hyperpage{42}
+
+  \indexspace
+
+  \lettergroup{N}
+  \item Nox et tenebrae (aestivalis, mod.4)\dotfill\hyperpage{10}
+  \item Nox et tenebrae (hiemalis, mod.1)\dotfill\hyperpage{9}
+
+  \indexspace
+
+  \lettergroup{O}
+  \item O gloriosa virginum\dotfill\hyperpage{30}
+  \item O sol salutis intimis\dotfill\hyperpage{20}
+
+  \indexspace
+
+  \lettergroup{R}
+  \item Rex gloriose Martyrum\dotfill\hyperpage{43}
+
+  \indexspace
+
+  \lettergroup{S}
+  \item Splendor paternae gloriae\dotfill\hyperpage{6}
+  \item Summae Deus clementiae\dotfill\hyperpage{23}
+
+\end{theindex}

@@ -1,0 +1,62 @@
+\babel@toc {polish}{}\relax 
+\contentsline {part}{I\hspace {1em}PSALTERIUM}{2}{part.1}%
+\contentsline {chapter}{\numberline {1}Dominica}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Ecce jam noctis tenuatur}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Aeterne rerum}{4}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Feria Secunda}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Splendor paternae gloriae}{6}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Feria Tertia}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Ales diei nuntius}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Nox et tenebrae (hiemalis, mod.1)}{9}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Feria Quarta}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Nox et tenebrae (aestivalis, mod.4)}{10}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Feria Quinta}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Lux ecce surgit}{11}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Feria Sexta}{12}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Aeterna caeli gloria}{12}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Aurora Jam Spargit Polum (hiemalis, mod.1)}{14}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Aurora Jam Spargit Polum (aestivalis, mod.4)}{15}{section.6.3}%
+\contentsline {part}{II\hspace {1em}PROPRIUM DE TEMPORE}{16}{part.2}%
+\contentsline {chapter}{\numberline {1}Dominica in Adventus et in Vigilia Nativitatis Domini}{17}{chapter.1}%
+\contentsline {section}{\numberline {1.1}En clara vox}{17}{section.1.1}%
+\contentsline {chapter}{\numberline {2}In Nativitate Domini}{18}{chapter.2}%
+\contentsline {section}{\numberline {2.1}A solis ortus cardine}{18}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Dominica in Quadragesima}{20}{chapter.3}%
+\contentsline {section}{\numberline {3.1}O sol salutis intimis}{20}{section.3.1}%
+\contentsline {part}{III\hspace {1em}PROPRIUM SANCTORUM}{21}{part.3}%
+\contentsline {chapter}{\numberline {1}Festa Martii}{22}{chapter.1}%
+\contentsline {section}{\numberline {1.1}19. Iste quem laeti (Festum S. Joseph Sponsi B.M.V.)}{22}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Festa Septembris}{23}{chapter.2}%
+\contentsline {section}{\numberline {2.1}15. Summae Deus clementiae (Festum Septem Dolorum B.M.V.)}{23}{section.2.1}%
+\contentsline {section}{\numberline {2.2}29. Christe Sanctorum (In Dedicatione S. Michaëlis Archangelis)}{24}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Festa Octobris}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}2. Aeterne Rector siderum (Sanctorum Angelorum Custodum)}{25}{section.3.1}%
+\contentsline {section}{\numberline {3.2}7. Jam morte victor obruta}{27}{section.3.2}%
+\contentsline {part}{IV\hspace {1em}COMMUNE SANCTORUM}{29}{part.4}%
+\contentsline {chapter}{\numberline {1}In Festis B.Mariae Virginis}{30}{chapter.1}%
+\contentsline {section}{\numberline {1.1}O gloriosa virginum}{30}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Commune Apostolorum}{31}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Exultet orbis gaudiis (mod.4)}{31}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Exultet orbis gaudiis (mod.1)}{33}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Exsultet caelum laudibus (mod.4)}{34}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Exsultet caelum laudibus (mod.1)}{35}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Commune Confessoris Pontificis}{36}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Jesu Redemptor omnium (T. Nativitatis)}{36}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Jesu Redemptor omnium}{38}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Commune Confessoris non Pontificis}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Iste Confessor}{39}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Jesu Corona celsior}{40}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Unius Martyris}{42}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Invicte Martyr}{42}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Martyr Dei qui unicum}{43}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Commune Plurimorum Martyrum}{44}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Rex gloriose Martyrum}{44}{section.6.1}%
+\contentsline {chapter}{\numberline {7}In Tempore Passionis}{45}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Lustra sex qui jam}{45}{section.7.1}%
+\contentsline {chapter}{\numberline {8}Commune Virginum}{47}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Jesu corona Virginum}{47}{section.8.1}%
+\contentsline {chapter}{\numberline {9}Commune non Virginum}{48}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Fortem virili pectore}{48}{section.9.1}%
+\contentsline {chapter}{\numberline {10}Commune Dedicationis Ecclesiae}{49}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Alto ex Olympi vertice}{49}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Angularis fundamentum}{51}{section.10.2}%

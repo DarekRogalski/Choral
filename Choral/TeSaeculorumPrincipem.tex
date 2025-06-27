@@ -1,0 +1,78 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, a4paper]{article}
+\usepackage[latin, polish]{babel} % ustawienia języka
+\usepackage[T1]{fontenc} % przełączenie na fonty EC (256 znaków)
+\usepackage[utf8]{luainputenc} % kodowanie
+\usepackage{fullpage} % redukcja marginesów
+\usepackage{setspace} % odstępy między liniami
+\usepackage{geometry} 
+\geometry{
+	left=12mm,
+	right=12mm,
+	top=12mm,
+	bottom=12mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+
+\usepackage{fontspec}
+\usepackage{libertine} % ust. czcionki
+\pagestyle{empty}	% usuwanie nagłówków/stopek z dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+\setstretch{1.5} 
+
+%  Konfiguracja kolumn
+\usepackage{paracol}
+\setcolumnwidth{8.3cm,4.3cm}
+\setlength{\columnsep}{0.4cm}
+
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\grechangestyle{initial}{\setmainfont{VectisMonumentalW01-Regular}\fontsize{23}{23}\selectfont}
+% \grechangedim{spacelinestext}{0.7 cm}{scalable}
+% \grechangedim{spaceabovelines}{0.43 cm}{scalable}
+% \gresetheadercapture{commentary}{grecommentary}{string}
+% \grecommentary{}
+\gresetheadercapture{annotation}{greannotation}{string}
+% Format annotation above initial
+\grechangestyle{annotation}{\small\bfseries}%
+%\grechangedim{intersyllablespacenotes}{0.18cm}{scalable}%
+%\grechangestyle{commentary}{\it}
+%\gresetmodenumbersystem{roman-majuscule}
+\usepackage{titlesec} % ustawianie nagłówków
+\titlespacing*{\section}{0pt}{0pt}{3mm}	
+\titleformat{\section}[hang]{\filcenter\large\scshape\bfseries}{}{0pt}{} % format nagłówków
+
+\newfontface\vectis{VectisMonumentalW01-Regular}
+\def\greinitialformat#1{%
+{\fontsize{24}{24}\vectis #1}}
+
+\titlespacing*{\section}
+{0pt}{0pt}{0pt}
+
+\begin{document}
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Te saeculorum Principem}
+	\small\textit{Liber antiphonarius, Solesmes, 1960, p. 894.2}
+	\vspace{15mm}
+\end{center}	
+\end{spacing}
+\greannotation{Hymn.} 
+\greannotation{1.} 
+\gabcsnippet{(c4) Te(cd) sae(ixdh'!iv)cu(h')ló(h)rum(hg) Prín(gh)ci(g)pem,(g_f) (,) Te,(h) Chri(h')ste,(g) Re(fe)gem(d) Gén(ef)ti(dc)um,(cd..) (;) Te(a) mén(cd)ti(d)um,(df) Te(fd) cór(e')di(d)um(c_') (,) U(g)num(g') fa(f)té(ghg)mur(ed) ár(ef)bi(dc)trum.(cd..) 2.(::z) Sce(cd)lé(ixdh'!iv)sta(h') tur(h)ba(hg) clá(gh)mi(g)tat:(g_f) (,) Re(h)gná(h')re(g) Chri(fe)stum(d) nó(ef)lu(dc)mus:(cd..) (;) Te(a) nos(cd) o(d)ván(df)tes(fd) ó(e')mni(d)um(c_') (,) Re(g)gem(g') su(f)pré(ghg)mum(ed) dí(ef)ci(dc)mus.(cd..) 3.(::z) O(cd) Chri(ixdh'!iv)ste,(h') Prin(h)ceps(hg) Pá(gh)ci(g)fer,(g_f) (,) Men(h)tes(h') re(g)bél(fe)les(d) súb(ef)ji(dc)ce:(cd..) (;) Tu(a)ó(cd)qu<i>e</i>() a(d)mó(df)re(fd) dé(e')vi(d)os,(c_') (,) O(g)vi(g')l<i>e</i>() in(f) u(ghg)num(ed) cón(ef)gre(dc)ga.(cd..) 4.(::z) Ad(cd) hoc(ixdh'!iv) cru(h')én(h)t<i>a</i>() ab(hg) á(gh)bo(g)re,(g_f) (,) Pen(h)des(h') a(g)pér(fe)tis(d) brá(ef)chi(dc)is:(cd..) (;) Di(a)rá(cd)que(d) fos(df)sum(fd) cú(e')spi(d)de(c_') (,) Cor(g) i(g')gne(f) fla(ghg)grans(ed) éx(ef)hi(dc)bes.(cd..) 5.(::z) Ad(cd) hoc(ixdh'!iv) in(h') a(h)ris(hg) áb(gh)de(g)ris(g_f) (,) Vi(h)ni(h') da(g)pí(fe)squ<i>e</i>() i(d)má(ef)gi(dc)ne,(cd..) (;) Fun(a)dens(cd) sa(d)lú(df)tem(fd) fí(e')li(d)is(c_') (,) Trans(g)ver(g')be(f)rá(ghg)to(ed) pé(ef)cto(dc)re.(cd..) 6.(::z) Te(cd) na(ixdh'!iv)ti(h')ó(h)num(hg) Praé(gh)si(g)des(g_f) (,) Ho(h)nó(h')re(g) tol(fe)lant(d) pú(ef)bli(dc)co,(cd..) (;) Co(a)lant(cd) ma(d)gí(df)stri,(fd) jú(e')di(d)ces,(c_') (,) Le(g)ges(g') et(f) ar(ghg)tes(ed) éx(ef)pri(dc)mant.(cd..) 7.(::z) Sub(cd)mís(ixdh'!iv)sa(h') re(h)gum(hg) fúl(gh)ge(g)ant(g_f) (,) Ti(h)bi(h') di(g)cá(fe)t<i>a</i>() in(d)sí(ef)gni(dc)a:(cd..) (;) Mi(a)tí(cd)que(d) sce(df)ptro(fd) pá(e')tri(d)am(c_') (,) Do(g)mó(g')sque(f) sub(ghg)de(ed) cí(ef)vi(dc)um.(cd..) 8.(::z) Je(cd)su,(ixdh'!iv) ti(h')bi(h) sit(hg) gló(gh)ri(g)a,(g_f) (,) Qui(h) sce(h')ptra(g) mun(fe)di(d) tém(ef)pe(dc)ras,(cd..) (;) Cum(a) Pa(cd)tr<i>e</i>,() et(d) al(df)mo(fd) Spí(e')ri(d)tu,(c_') (,) In(g) sem(g')pi(f)tér(ghg)na(ed) saé(ef)cu(dc)la.(cd..) (::z) A(ded)men.(cd..) (::z)}
+
+\vspace{5mm}
+\setstretch{1}% odstęp między liniami
+1. Ufamy Tobie, o Chryste, głosimy, żeś władcą wieków, Królem narodów i Panem, zarządcą serc i umysłów.\\
+2. Dyszący złością tłum woła: „Nie chcemy, by nam był królem”, a my Ciebie królem zwiemy, co wszystko w ręku swym trzyma.\\
+3. Jezu, nasz Książe pokoju, panuj nad duchem złowrogim, miłości głosem sprowadzaj owce do jednej owczarni.\\
+4. Dla nich ramiona rozpiąłeś, na drzewie krwią pomazanym, a serce ostrzem otwarte spłonęło ogniem miłości.\\
+5. To dla nich w chleba postaci i w winie skryłeś oblicze, aby zbawieniem nakarmić z serca otwartej rany.\\
+6. Niech Ciebie władcy narodów na placach pieniem swym chwalą, uczeni, sędziowie niech wielbią, niech prawa i prace sławią.\\
+7. Niechaj insygnia królewskie błyszczą pod Twymi stopami, niech miłe Twoje władanie obejmie ojczyznę całą.\\
+8. Niech chwała, Jezu, Ci będzie, Co świata rządzisz berłami, Wraz z ojcem, Duchem Najświętszym Na wieczne wieki bez końca.\footnote{tłum. Michał Gołębiowski}
+\end{document}

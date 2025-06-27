@@ -1,0 +1,205 @@
+% !TEX TS-program = lualatex+se
+% !TEX encoding = UTF-8
+
+\documentclass[oneside, 12pt, a4paper]{book}
+%\usepackage[letterpaper,showframe]{geometry}
+\usepackage{fullpage} % redukcja marginesów
+\usepackage{geometry}
+\geometry{
+	left=15mm,
+	right=10mm,
+	top=12mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\gresetheadercapture{annotation}{greannotation}{string}
+% Format annotation above initial
+\grechangestyle{annotation}{\small\bfseries}%
+\grechangedim{intersyllablespacenotes}{0.18cm}{scalable}%
+
+\usepackage{fullpage}
+\usepackage{multicol}
+
+%  Konfiguracja kolumn
+\usepackage{paracol}
+\setcolumnwidth{13cm,5cm}
+\setlength{\columnsep}{0.5cm}
+\footnotelayout{m}
+% \setlength{\columnseprule}{0.4pt}
+% \colseprulecolor{red}
+\usepackage{tcolorbox}
+\newtcolorbox{nutybox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=center}
+\newtcolorbox{tlumbox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=top, fontupper=\linespread{.8}\selectfont}
+
+\usepackage{Tabbing}
+\usepackage{longtable}
+\usepackage[savepos]{zref}
+
+\let\grelocalleftbox\localleftbox
+\let\grelocalrightbox\localrightbox
+
+\usepackage[latin,polish]{babel}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Libertinus Serif}
+
+\pagestyle{plain}	% usuwanie nagłówków/stopek z\,dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+\usepackage{setspace} % odstępy między liniami
+%\setstretch{1.5} % półtorej linii odległości między wierszami
+
+\usepackage{graphicx} % umożliwia import obrazów
+\graphicspath{{img/}} % katalog obrazów
+\usepackage{pgfornament}% ornamenty graficzne
+
+\usepackage{titlesec} % ustawianie nagłówków
+
+\newfontface\vectis{VectisMonumentalW01-Regular}
+\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
+
+% --- komendy własne ---
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+
+\newcommand{\koniec}{
+	\begin{center}
+%		\vspace{5mm}
+%		\pgfornament[width=0.6cm]{#1}
+		\newpage
+	\end{center}}
+
+\begin{document}
+\titlespacing*{\chapter}{0pt}{0pt}{5pt}	
+\titleformat{\chapter}[hang]{\filcenter\LARGE\scshape\bfseries}{}{0pt}{} % format nagłówków
+\titlespacing*{\section}{0pt}{0pt}{0pt}	
+\titleformat{\section}[hang]{\filcenter\large\scshape}{}{0pt}{} % format nagłówków
+
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+
+\pagenumbering{gobble} % nie jest wyprowadzany żaden numer strony, chociaż numer jest nadal resetowany. Odniesienia do tej strony również są puste.
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Gaude Mater Polonia}
+	\small\textit{Proprium Poloniae}
+\end{center}	
+\end{spacing}
+\vspace{15mm}
+\begin{paracol}{2}
+	\ensurevspace{4cm}
+	\begin{nutybox}\greannotation{Hymn.} \greannotation{6.} \gabcsnippet{(cb4)GAu(f)de,(gvFE) ma(f)ter(g) Po(f)ló(gh/ih)ni(gf)a,(f) (;) Pro(h)le(j) fœ(i)cún(hg)da(f) nó(g)bi(e)li,(f) (:) Sum(h)mi(j) Re(j)gis(k) ma(j)gná(i)li(h)a(ghf) (;) Lau(f)de(gvFE) fre(f)quén(g)ta(f) ví(gh/ih)gi(gf)li.(ff)  (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	O ciesz się, Matko-Polsko w sławne potomstwo płodna! Króla królów i najwyższego Pana wielkość uwielbiaj chwałą przynależną.
+	\end{tlumbox}
+  	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4)  <c>2.</c> Cu(f)ius(gvFE) be(f)ní(g)gna(f) grá(gh/ih)ti(gf)a(f) (;) Sta(h)nis(j)lá(i)i(hg) Pon(f)tí(g)fi(e)cis(f) (:) Pas(h)si(j)ó(j)nis(k) in(j)sí(i)gni(h)a(ghf) (;) Si(f)gnis(gvFE) ful(f)gens(g) mi(f)rí(gh/ih)fi(gf)cis.(ff) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Albowiem z Jego łaskawości biskupa Stanisława męki niezmierne, jakie on wycierpiał jaśnieją cudownymi znaki.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{ (cb4) <c>3.</c> Hic(f) cer(gvFE)tans(f) pro(g) ius(f)tí(gh/ih)ti(gf)a(f) (;) Re(h)gis(j) non(i) ce(hg)dit(f) fú(g)ri(e)æ:(f) (:) Stat(h) pro(j) ple(j)bis(k) in(j)iú(i)ri(h)a(ghf) (;) Chri(f)sti(gvFE) mi(f)les(g) in(f) á(gh/ih)ci(gf)e.(ff) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Potykał się za sprawiedliwość, przed gniewem króla nie ustąpił: i staje żołnierz Chrystusowy za krzywdę ludu sam do walki.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4) <c>4.</c> Ty(f)rán(gvFE)ni(f) tru(g)cu(f)lén(gh/ih)ti(gf)am(f) (;) Qui(h) dum(j) con(i)stán(hg)ter(f) ár(g)gu(e)it,(f) (:) Mar(h)tý(j)ri(j)i(k) vic(j)tó(i)ri(h)am(ghf) (;) Mem(f)brá(gvFE)tim(f) cæ(g)sus(f) mé(gh/ih)ru(gf)it.(ff) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	Ponieważ stale wypominał on okrucieństwo tyranowi, koronę zdobył męczennika, padł posiekany na kawałki.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4) <c>5.</c> No(f)vum(gvFE) pan(f)dit(g) mi(f)rá(gh/ih)cu(gf)lum(f) (;) Splen(h)dor(j) in(i) San(hg)cto(f) cœ́(g)li(e)tus, (f) (:) Red(h)ín(j)te(j)grat(k) cor(j)pús(i)cu(h)lum(ghf) (;) Spar(f)sum(gvFE) cœ(f)lés(g)tis(f) mé(gh/ih)di(gf)cus.(ff) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	Niebiosa nowy cud zdziałały, bo mocą swą Niebieski Lekarz poćwiartowane jego ciało przedziwne znowu w\,jedno złączył.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4)  <c>6.</c> Sic(f) Sta(gvFE)nis(f)lá(g)us(f) Pón(gh/ih)ti(gf)fex(f) (;) Tran(h)sit(j) ad(i) cœ(hg)li(f) cú(g)ri(e)am,(f) (:) Ut(h) a(j)pud(j) De(k)um(j) ó(i)pi(h)fex(ghf) (;) No(f)bis(gvFE) im(f)pló(g)ret(f) vé(gh/ih)ni(gf)am.(ff) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Tak to Stanisław biskup przeszedł w przybytki Króla niebieskiego, aby u Boga Stworzyciela nam wyjednać przebaczenie.
+	\end{tlumbox}
+  	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4)  <c>7.</c> Pos(f)cén(gvFE)tes(f) e(g)ius(f) mé(gh/ih)ri(gf)ta,(f) (;) Sa(h)lú(j)tis(i) do(hg)na(f) ré(g)fe(e)runt:(f) (:) Mor(h)te(j) præ(j)vén(k)ti(j) sú(i)bi(h)ta(ghf) (;) Ad(f) vi(gvFE)tæ(f) por(g)tum(f) ré(gh/ih)de(gf)unt.(ff) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Gdy kto dla zasług jego prosi, wnet otrzymuje zbawcze dary: ci, co pomarli nagłą śmiercią, do życia znowu powracają.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{ (cb4) <c>8.</c> Cu(f)ius(gvFE) ad(f) tac(g)tum(f) án(gh/ih)nu(gf)li(f) (;) Mor(h)bi(j) fu(i)gán(hg)tur(f) túr(g)gi(e)di;(f) (:) Ad(h) lo(j)cum(j) san(k)cti(j) tú(i)mu(h)li(ghf) (;) Mul(f)ti(gvFE) cu(f)rán(g)tur(f) lán(gh/ih)gui(gf)di.(ff) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Choroby wszelkie pod dotknięciem pierścienia jego uciekają, przy jego świętym grobie zdrowie niemocnych wielu odzyskuje.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4) <c>9.</c> Sur(f)dis(gvFE) au(f)dí(g)tus(f) réd(gh/ih)di(gf)tur,(f) (;) Clau(h)dis(j) gres(i)sus(hg) of(f)fí(g)ci(e)um:(f) (:) Mu(h)to(j)rum(j) lin(k)gua(j) sól(i)vi(h)tur(ghf) (;) Et(f) fu(gvFE)gá(f)tur(g) dæ(f)mó(gh/ih)ni(gf)um.(ff) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	Słuch głuchym bywa przywrócony, a\,chromy kroki stawia raźno, niemowom język się rozwiązał, w\,popłochu szatan precz ucieka.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4) <c>10.</c> Er(f)go,(gvFE) fe(f)lix(g) Cra(f)có(gh/ih)vi(gf)a,(f) (;) Sac(h)ro(j) do(i)tá(hg)ta(f) cór(g)po(e)re,(f) (:) De(h)um,(j) qui(j) fe(k)cit(j) ó(i)mni(h)a,(ghf) (;) Bé(f)ne(gvFE)dic(f) om(g)ni(f) tém(gh/ih)po(gf)re.(ff) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	A przeto szczęsny ty, Krakowie, uposażony świętym ciałem, błogosław po wsze czasy Boga, który z\,niczego wszystko stworzył.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(cb4) <c>11.</c> Sit(f) Tri(gvFE)ni(f)tá(g)ti(f) gló(gh/ih)ri(gf)a,(f) (;) Laus,(h) ho(j)nor,(i) iu(hg)bi(f)lá(g)ti(e)o:(f) (:) De(h) Már(j)ty(j)ris(k) vic(j)tó(i)ri(h)a(ghf) (;) Sit(f) no(gvFE)bis(f) ex(g)sul(f)tá(gh/ih)ti(gf)o.(ff) (::) A(fgf/e)men.(ff) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Niech Trójcy Przenajświętszej zabrzmi cześć, chwała, sława, uwielbienie: a\,nam tryumfy męczennika niech wyjednają radość wieczną. Amen
+	\footnotemark
+	\end{tlumbox}	
+	\footnotetext{https://www.spiewnikniepodleglosci.pl/teksty/tekst-utworu-gaude-mater-polonia/} 
+\end{paracol}	
+\end{document}

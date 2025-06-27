@@ -1,0 +1,169 @@
+% !TEX TS-program = lualatex+se
+% !TEX encoding = UTF-8
+
+\documentclass[12pt, a4paper]{extarticle}
+%\usepackage[letterpaper,showframe]{geometry}
+\usepackage{fullpage} % redukcja marginesów
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=12mm,
+	bottom=12mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+	
+% ------------- FONTY ------------
+\usepackage[latin,polish]{babel}
+\usepackage{fontspec}
+%\usepackage{times}
+%\usepackage[math]{anttor}
+%\usepackage{tgtermes}
+%\usepackage{mathptmx}
+\usepackage{ebgaramond}
+\setmainfont{EB Garamond}
+%\usepackage{libertine}
+%\setmainfont{Libertinus Serif}
+\defaultfontfeatures{Ligatures=TeX}	
+% --- GREGORIO ---	
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\gresetheadercapture{annotation}{greannotation}{string}% odczytuje adnotacje nad inicjałem jako ciąg, co pozwala na jego renderowanie
+\gresetheadercapture{commentary}{grecommentary}{string}% odczytuje komentarz jako ciąg, co pozwala na jego renderowanie
+\grechangedim{commentaryraise}{0.3cm}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+\grechangestyle{annotation}{\color{black}\small}% format adnotacji
+\grechangestyle{commentary}{\color{gregoriocolor}\small}% format komentarza
+\grechangestyle{abovelinestext}{\color{gregoriocolor}\small}% format napisu nad liniami
+\grechangestyle{initial}{\fontsize{36}{36}\selectfont} % zmniejsza wielkość inicjału do bardziej proporcjonalnego rozmiaru (=36pt)
+\grechangedim{intersyllablespacenotes}{0.26cm}{scalable}% Minimalna odległość między nutami różnych sylab.
+
+% umieszczenie zawartości składu ich unikalnego argumentu po lewej i prawej stronie każdej linii
+\let\grelocalleftbox\localleftbox
+\let\grelocalrightbox\localrightbox
+
+%\newcommand{\separator}{\greseparator{3}{40}}
+\newfontfamily\vectis{../fonts/VectisW01-Bold.ttf}
+%\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
+% --- format pierwszej linii 
+% \setfirstannotation{\fontsize{10}{10}\textcolor{red}{Ant.}}%
+% --- format drugiej linii
+% \setsecondannotation{\fontsize{10}{10}\sc{\textcolor{red}8.}}%
+% --- dodawanie spacji
+% \tolerance=9999 %(or less)
+% \pretolerance=500  %default is -1  This will spread your chant out over the bars
+% --- wymuś hypheny między sylabami
+% \grechangedim{\gremaximumspacewithoutdash}{0pt}
+% --- redukcja spacji między sylabami i glyphami: \hspace{-.2ex}
+% --- lub wstam sylaby lub glyphy między to: \mbox{...}
+% --- lub użyj ( z), aby przesunąć neum bliżej początku pięciolinii. Im więcej spacji w nawiasach, tym bardziej zawęża spację.
+% ------------------
+
+%  Konfiguracja kolumn
+\usepackage{paracol}
+\setcolumnwidth{12.5cm,5.5cm}
+\setlength{\columnsep}{0.5cm}
+\footnotelayout{m}
+% \setlength{\columnseprule}{0.4pt}
+% \colseprulecolor{red}
+\usepackage{tcolorbox}
+\newtcolorbox{nutybox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=center}
+\newtcolorbox{tlumbox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=top, fontupper=\linespread{.8}\selectfont}
+
+\usepackage{Tabbing}
+\usepackage{longtable}
+\usepackage[savepos]{zref}
+
+\pagestyle{plain}	% usuwanie nagłówków/stopek z\,dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+\usepackage{setspace} % odstępy między liniami
+%\setstretch{1.5} % półtorej linii odległości między wierszami
+
+\usepackage{graphicx} % umożliwia import obrazów
+\graphicspath{{img/}} % katalog obrazów
+\usepackage{pgfornament}% ornamenty graficzne
+
+\usepackage{titlesec} % ustawianie nagłówków
+
+% --- komendy własne ---
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+
+\newcommand{\koniec}{
+	\begin{center}
+%		\vspace{5mm}
+%		\pgfornament[width=0.6cm]{#1}
+		\newpage
+	\end{center}}
+
+\begin{document}
+\titlespacing*{\chapter}{0pt}{0pt}{5pt}	
+\titleformat{\chapter}[hang]{\filcenter\LARGE\scshape\bfseries}{}{0pt}{} % format nagłówków
+\titlespacing*{\section}{0pt}{0pt}{0pt}	
+\titleformat{\section}[hang]{\filcenter\large\scshape}{}{0pt}{} % format nagłówków
+
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+
+\pagenumbering{gobble} % nie jest wyprowadzany żaden numer strony, chociaż numer jest nadal resetowany. Odniesienia do tej strony również są puste.
+\large
+\begin{spacing}{0.8}
+\begin{center}
+	\section*{Te Joseph celebrent}
+	\small\textit{Liber Usualis, Solesmes, 1961, p. 1447}
+\end{center}	
+\end{spacing}
+\begin{paracol}{2}
+	\ensurevspace{4cm}
+	\begin{nutybox}
+	\greannotation{Hymnus}\greannotation{1.}\gabcsnippet{(c4) TE(d) Jo(fe)seph(f) cé(g')le(h)brent(dc) á(f)gmi(e')na(f) caé(d)li(c)tum :(cd..) (;) Te(dh) cun(g)cti(fe) ré(f')so(g)nent(gh) chri(hg)stí(h')a(i)dum(j) cho(ih)ri,(h.) (:) Qui(hk) cla(ji)rus(hg) mé(h')ri(g)tis,(fe) jun(dg)ctus(f') es(d) ín(e)cly(dc)tae(c.) (;) Ca(e)sto(gh) foé(dc)de(d')re(e) Vír(f)gi(e[ll:1]d)ni.(d.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	\red{1}.~Ciebie, Józefie, niechaj uwielbiają zastępy niebian, Ciebie niechaj wychwalają wszystkie chóry chrześcijan, który jaśniejący zasługami, połączony jesteś czystym węzłem z~Dziewicą.
+	\end{tlumbox}
+  	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4)  <c>2.</c> Al(d)mo(fe) cum(f) tú(g')mi(h)dam(dc) gér(f)mi(e')ne(f) cón(d)ju(c)gem(cd..) (;) Ad(dh)mí(g)rans,(fe) dú(f')bi(g)o(gh) tán(hg)ge(h')ris(i) án(j)xi(ih)us,(h.) (:) Af(hk)flá(ji)tu(hg) sú(h')pe(g)ri(fe) Flá(dg)mi(f')nis(d) An(e)ge(dc)lus(c.) (;) Con(e)cé(gh)ptum(dc) pú(d')e(e)rum(f) do(e[ll:1]d)cet.(d.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	\red{2}.~Gdy dziwiąc się małżonce brzemiennej błogosławionym potomkiem, strapiony doznajesz wątpliwości, Anioł poucza (Cię, że) Dziecię poczęte jest z~tchnienia Ducha Najwyższego.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4)  <c>3.</c> Tu(d) na(fe)tum(f) Dó(g')mi(h)num(dc) strin(f)gis,(e') ad(f) éx(d)te(c)ras(cd..) (;) Ae(dh)gý(g)pti(fe) pró(f')fu(g)gum(gh) tu(hg) sé(h')que(i)ris(j) pla(ih)gas :(h.) (:) A(hk)mís(ji)sum(hg) Só(h')ly(g)mis(fe) quae(dg)ris,(f') et(d) ín(e)ve(dc)nis,(c.) (;) Mi(e)scens(gh) gáu(dc)di(d')a(e) flé(f)ti(e[ll:1]d)bus.(d.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	\red{3}.~Ty Pana (nowo) narodzonego obwijasz, do obcych Egiptu krain towarzyszysz uciekającemu; zgubionego w~Jerozolimie szukasz i~znajdujesz, mieszając radość z~płaczem.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4)  <c>4.</c> Post(d) mor(fe)tem(f) ré(g')li(h)quos(dc) sors(f) pi(e')a(f) cón(d)se(c)crat,(cd..) (;) Pal(dh)mám(g)qu{<e>e</e>}(f') e(e)mé(f')ri(g)tos(gh) gló(hg)ri(h')a(i) sús(j)ci(ih)pit :(h.) (:) Tu(hk) vi(ji)vens,(hg) Sú(h')pe(g)ris(fe) par,(dg) frú(f')e(d)ris(e) De(dc)o,(c.) (;) Mi(e)ra(gh) sor(dc)te(d') be(e)á(f)ti(e[ll:1]d)or.(d.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	\red{4}.~Innych los zbożny uszczęśliwia (dopiero) po śmierci, i zasługują­cych na (wieniec) palmowy przyjmuje chwała; Ty za życia (już), równy niebianom, przedziwnym losem szczęśliwszy, przestajesz z~Bogiem.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4)  <c>5.</c> No(d)bis,(fe) sum(f)ma(g') Tri(h)as,(dc) par(f)ce(e') pre(f)cán(d)ti(c)bus :(cd..) (;) Da(dh) Jo(g)seph(fe) mé(f')ri(g)tis(gh) sí(hg)de(h')ra(i) scán(j)de(ih)re,(h.) (:) Ut(hk) tan(ji)dem(hg) lí(h')ce(g)at(fe) nos(dg) ti(f')bi(d) pér(e)pe(dc)tim(c.) (;) Gra(e)tum(gh) pró(dc)me(d')re(e) cán(f)ti(e[ll:1]d)cum.(d.) (::) 
+A(ded)men.(cd..) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	\red{5}.~Wybacz nam błagającym , Trójco najwyższa, daj (nam) dla zasług Józefa wstąpić na niebiosa, aby nam wkońcu wolno było głosić Ci ustawicznie wdzięczną pieśń, Amen.\footnotemark
+	\end{tlumbox}	
+	\footnotetext{tłum. Ks. Bronisław Gładysz, "Hymny brewiarza rzymskiego oraz patronału polskiego. Przekład i objaśnienia", Poznań 1933} 
+\end{paracol}	
+\end{document}

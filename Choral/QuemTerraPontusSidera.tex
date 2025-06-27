@@ -1,0 +1,115 @@
+% !TEX TS-program = lualatex+se
+% !TEX encoding = UTF-8
+
+\documentclass[oneside, 12pt, a4paper]{book}
+%\usepackage[letterpaper,showframe]{geometry}
+\usepackage{fullpage} % redukcja marginesów
+\usepackage{geometry}
+\geometry{
+	left=20mm,
+	right=15mm,
+	top=12mm,
+	bottom=12mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\gresetheadercapture{annotation}{greannotation}{string}
+% Format annotation above initial
+\grechangestyle{annotation}{\small\bfseries}%
+\grechangedim{intersyllablespacenotes}{0.18cm}{scalable}%
+
+\usepackage{fullpage}
+\usepackage{multicol}
+
+%  Konfiguracja kolumn
+\usepackage{paracol}
+\setcolumnwidth{12.6cm,5cm}
+\setlength{\columnsep}{0.4cm}
+% \setlength{\columnseprule}{0.4pt}
+% \colseprulecolor{red}
+
+\usepackage{Tabbing}
+\usepackage{longtable}
+\usepackage[savepos]{zref}
+
+\let\grelocalleftbox\localleftbox
+\let\grelocalrightbox\localrightbox
+
+\usepackage[latin,polish]{babel}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Libertinus Serif}
+
+\pagestyle{empty}	% usuwanie nagłówków/stopek z dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+%\usepackage{setspace} % odstępy między liniami
+%\setstretch{1.5} % półtorej linii odległości między wierszami
+
+\usepackage{graphicx} % umożliwia import obrazów
+\graphicspath{{img/}} % katalog obrazów
+\usepackage{pgfornament}% ornamenty graficzne
+
+\usepackage{titlesec} % ustawianie nagłówków
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}	
+\titleformat{\chapter}[hang]{\filcenter\LARGE\scshape\bfseries}{}{0pt}{} % format nagłówków
+\titlespacing*{\section}{0pt}{0pt}{0pt}	
+\titleformat{\section}[hang]{\filcenter\large\scshape}{}{0pt}{} % format nagłówków
+
+\newfontface\vectis{VectisMonumentalW01-Regular}
+\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
+
+% --- komendy własne ---
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+
+\newcommand{\ornament}[1]{
+	\begin{center}
+		\vspace{25mm}
+		\pgfornament[width=0.6cm]{#1}
+		\newpage
+	\end{center}}
+
+\begin{document}
+
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+
+\pagenumbering{gobble} % nie jest wyprowadzany żaden numer strony, chociaż numer jest nadal resetowany. Odniesienia do tej strony również są puste.
+
+\chapter{Quem terra pontus sidera}
+\begin{center}
+	\noindent\small\textit{Cantus selecti, Solesmes, 1957, p.164}
+\end{center}	
+\vspace{5mm}
+\begin{paracol}{2}
+	\ensurevspace{5cm}
+	{\greannotation{Hymn.}\greannotation{4.} \gabcsnippet{(c4) Quem(df) ter(ed)ra,(e) pon(g)tus,(g) sí(ef)de(ed)ra(d'_) (,) Co(e)lunt,(g') ad(h)ó(h)rant,(g) praé(hj)di(ivHG)cant,(h.) (;) Tri(g)nam(fe) re(d)gén(ed)tem(c) má(d')chi(d)nam,(e'_) (,) Clau(dh'/ig)strum(h') Ma(d)rí(e)ae(g) bá(fe)ju(d)lat.(e.) (::)}}
+	\switchcolumn
+	{\parbox[c]{4cm}{1. Którego ziemia, morze, gwiazdy czczą, uwielbiają, wysławiają, trojaką kierującego budową (świata Tego) zamknięty nosi (żywot) Marji.}}
+  	\ensurevspace{5cm}
+	\switchcolumn*
+	{\gresetinitiallines{0}\gabcsnippet{2. C{ui}(df) lu(e[ll:1]d)na,(e) sol(g) et(g) ó(ef)mni(e[ll:1]d)a(d'_) (,) De(e)sér(g')vi(h)unt(h) per(g) tém(hj)po(ivHG)ra,(h.) (;) Per(g)fú(fe)sa(d) cae(e[ll:1]d)li(c) grá(d')ti(d)a,(e'_[oh:h]) (,) Ge(dh'/ig)stant(h') pu(d)él(e)lae(g) ví(fe)sce(d)ra.(e.) (::) }}
+	\switchcolumn
+	{\parbox[c]{4cm}{2. Któremu księżyc, słońce i wszystko służy po (wszystkie) czasy, (Tego) łaską niebieską przepełnione noszą wnętrzności dziewicy.}}
+	\ensurevspace{5cm}
+	\switchcolumn*
+	{\gresetinitiallines{0}\gabcsnippet{3. Be(df)á(e[ll:1]d)ta(e) Ma(g)ter(g) mú(ef)ne(e[ll:1]d)re,(d'_) (,) Cu(e)jus,(g') su(h)pér(h)nus(g) Ar(hj)ti(ivHG)fex(h.) (;) Mun(g)dum(fe) pu(d)gíl(e[ll:1]d)lo(c) cón(d')ti(d)nens,(e'_[oh:h]) (,) Ven(dh'/ig)tris(h') sub(d) ar(e)ca(g) clau(fe)sus(d) est.(e.) (::) }}
+	\switchcolumn
+	{\parbox[c]{4cm}{3. Błogosławiona darem Matka, w której żywota arce zamknięty jest najwyższy Stwórca, dłonią obejmujący świat.}}
+	\ensurevspace{5cm}
+	\switchcolumn*
+	{\gresetinitiallines{0}\gabcsnippet{4. Be(df)á(e[ll:1]d)ta(e) cae(g)li(g) nún(ef)ti(e[ll:1]d)o,(d'_) (,) Fe(e)cún(g')da(h) San(h)cto(g) Spí(hj)ri(ivHG)tu,(h.) (;) De(g)si(fe)de(d)rá(e[ll:1]d)tus(c) gén(d')ti(d)bus(e'_[oh:h]) (,) Cu(dh'/ig)jus(h') per(d) al(e)vum(g) fu(fe)sus(d) est.(e.) (::)}}
+	\switchcolumn
+	{\parbox[c]{4cm}{4. Błogosławiona przez posła niebieskiego, płodna z Ducha Świętego, przez której żywot zesłany został pożądany narodów.}}
+	\ensurevspace{5cm}
+	\switchcolumn*
+	{\gresetinitiallines{0}\gabcsnippet{5. Je(df)su,(e[ll:1]d) ti(e)bi(g) sit(g) gló(ef)ri(e[ll:1]d)a,(d'_) (,) Qui(e) na(g')tus(h) es(h) de(g) Vír(hj)gi(ivHG)ne,(h.) (;) Cum(g) Patr<e>e</e>(fe) et(d) al(e[ll:1]d)mo(c) Spí(d')ri(d)tu,(e'_[oh:h]) (,) In(dh'/ig) sem(h')pi(d)tér(e)na(g) saé(fe)cu(d)la.(e.) (::) 
+A(efe)men.(de..) (::)}}
+	\switchcolumn
+	{\parbox[c]{4cm}{5. Jezu, Tobie niechaj będzie chwała, który narodziłeś się z Dziewicy, oraz Ojcu i dobroczynnemu Duchowi, po nieskończone wieki. Amen.}}
+\end{paracol}	
+\ornament{6}
+\end{document}

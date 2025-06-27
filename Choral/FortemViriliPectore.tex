@@ -1,0 +1,146 @@
+% !TEX TS-program = lualatex+se
+% !TEX encoding = UTF-8
+
+\documentclass[oneside, 12pt, a4paper]{book}
+%\usepackage[letterpaper,showframe]{geometry}
+\usepackage{fullpage} % redukcja marginesów
+\usepackage{geometry}
+\geometry{
+	left=15mm,
+	right=10mm,
+	top=12mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\usepackage{gregoriotex}
+\gresetlinecolor{gregoriocolor}
+\gresetheadercapture{annotation}{greannotation}{string}
+% Format annotation above initial
+\grechangestyle{annotation}{\small\bfseries}%
+\grechangedim{intersyllablespacenotes}{0.18cm}{scalable}%
+
+\usepackage{fullpage}
+\usepackage{multicol}
+
+%  Konfiguracja kolumn
+\usepackage{paracol}
+\setcolumnwidth{13cm,5cm}
+\setlength{\columnsep}{0.5cm}
+\footnotelayout{m}
+% \setlength{\columnseprule}{0.4pt}
+% \colseprulecolor{red}
+\usepackage{tcolorbox}
+\newtcolorbox{nutybox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=center}
+\newtcolorbox{tlumbox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=top, fontupper=\linespread{.8}\selectfont}
+
+\usepackage{Tabbing}
+\usepackage{longtable}
+\usepackage[savepos]{zref}
+
+\let\grelocalleftbox\localleftbox
+\let\grelocalrightbox\localrightbox
+
+\usepackage[latin,polish]{babel}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Libertinus Serif}
+
+\pagestyle{plain}	% usuwanie nagłówków/stopek z\,dokumentu
+\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
+\usepackage{setspace} % odstępy między liniami
+%\setstretch{1.5} % półtorej linii odległości między wierszami
+
+\usepackage{graphicx} % umożliwia import obrazów
+\graphicspath{{img/}} % katalog obrazów
+\usepackage{pgfornament}% ornamenty graficzne
+
+\usepackage{titlesec} % ustawianie nagłówków
+
+\newfontface\vectis{VectisMonumentalW01-Regular}
+\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
+
+% --- komendy własne ---
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\black}[1]{\textcolor{black}{#1}}
+
+\newcommand{\koniec}{
+	\begin{center}
+%		\vspace{5mm}
+%		\pgfornament[width=0.6cm]{#1}
+		\newpage
+	\end{center}}
+
+\begin{document}
+\titlespacing*{\chapter}{0pt}{0pt}{5pt}	
+\titleformat{\chapter}[hang]{\filcenter\LARGE\scshape\bfseries}{}{0pt}{} % format nagłówków
+\titlespacing*{\section}{0pt}{0pt}{0pt}	
+\titleformat{\section}[hang]{\filcenter\large\scshape}{}{0pt}{} % format nagłówków
+
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+
+\pagenumbering{gobble} % nie jest wyprowadzany żaden numer strony, chociaż numer jest nadal resetowany. Odniesienia do tej strony również są puste.
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Fortem virili pectore (Commune non Virginum)}
+	\small\textit{Liber Usualis, 1961, p.1234 \& Liber antiphonarius, 1960, p.99}
+\end{center}	
+\end{spacing}
+\vspace{15mm}
+\begin{paracol}{2}
+	\ensurevspace{4cm}
+	\begin{nutybox}\greannotation{Hymn.} \greannotation{2.} \gabcsnippet{(f3) FOr(f)tem(h) vi(hg)rí(i)li(hf) pé(g')cto(i)re(h'_) (,) Lau(h)dé(f')mus(g) o(h)mnes(gh) fé(f')mi(g)nam,(f.) (;) Quae(f) san(h)cti(hg)tá(i)tis(ji) gló(g')ri(i)a(h'_) (,) U(h)bí(f')que(g) ful(h)get(gh) ín(f')cly(e)ta.(f.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Niewiastę mężną serca odważnego wysławiajmy wszyscy, która chwałą świętości jaśnieje wszędzie sławna.
+	\end{tlumbox}
+  	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4)  <c>2.</c> Haec(f) san(h)ct{<e>o</e>}(h) a(hg)mó(i)re(hf) sáu(g')ci(i)a,(h'_) (,) Dum(h) mun(f')d{<e>i</e>}(g) a(g)mó(h)rem(gh) nó(f')xi(g)um(f.) (;) Hor(f)ré(h)scit,(hg) ad(i) cae(ji)lé(g')sti(i)a(h'_) (,) I(h)ter(f') per(g)é(h)git(gh) ár(f')du(e)um.(f.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Ona (to) zraniona miłością świętą, gdy wzdrygała się przed zgubną miłością świata, przeszła stromą drogę do niebios.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{ (c4) <c>3.</c> Car(f)nem(h) do(hg)mans(i) je(hf)jú(g')ni(i)is,(h'_) (,) Dul(h)cí(f')que(g) men(h)tem(gh) pá(f')bu(g)lo(f.) (;) O(f)ra(h)ti(hg)ó(i)nis(ji) nú(g')tri(i)ens,(h'_) (,) Cae(h)li(f') po(g)tí(h)tur(gh) gáu(f')di(e)is.(f.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Ciało poskramiając postami i\,ducha karmiąc słodkim pokarmem modlitwy, bierze w posiadanie radości niebieskie.
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4) <c>4.</c> Rex(f) Chri(h)ste,(hg) vir(i)tus(hf) fór(g')ti(i)um,(h'_) (,) Qui(h) ma(f')gna(g) so(h)lus(gh) éf(f')fi(g)cis,(f.) (;) Hu(f)jus(h) pre(hg)cá(i)tu,(ji) quaé(g')su(i)mus,(h'_) (,) Au(h)di(f') be(g)ní(h)gnus(gh) súp(f')pli(e)ces.(f.) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm}
+	Królu Chryste, dzielności mężnych który sam sprawiasz (rzeczy) wielkie, za jej orędownictwem, prosimy, wysłuchaj łaskawie korzących się. 
+	\end{tlumbox}
+	\ensurevspace{4cm}
+	\switchcolumn*
+	\begin{nutybox}
+	\gresetinitiallines{0}\gabcsnippet{(c4) <c>5.</c> De(f)o(h) Pa(hg)tri(i) sit(hf) gló(g')ri(i)a,(h'_) (,) E(h)jús(f')que(g) so(h)li(gh) Fí(f')li(g)o,(f.) (;) Cum(f) Spí(h)ri(hg)tu(i) Pa(ji)rá(g')cli(i)to,(h'_) (,) Nunc(h) et(f') per(g) o(h)mne(gh) saé(f')cu(e)lum.(f.) (::) 
+A(fgf)men.(ef..) (::)}
+	\end{nutybox}
+	\switchcolumn
+	\begin{tlumbox}
+	\vspace{3.5mm} 
+	Bogu Ojcu niechaj będzie chwała i\,jedynemu jego Synowi wraz z\,Duchem Pocieszycielem teraz i\,po wszystek wiek. Amen.\footnotemark
+	\end{tlumbox}
+	\footnotetext{tłum. Ks. Bronisław Gładysz, "Hymny brewiarza rzymskiego oraz patronału polskiego. Przekład i objaśnienia", Poznań 1933} 
+\end{paracol}	
+\koniec		
+\end{document}
