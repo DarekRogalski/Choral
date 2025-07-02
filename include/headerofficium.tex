@@ -356,13 +356,15 @@
  {\copy\pcol@tempboxa}
  {\luacolorresetboxcolor\pcol@tempboxa\copy\pcol@tempboxa}{}{\fail}
 \makeatother
+% ----------------------------- sztuczny znak (linia) wymuszająca wysokość pierwszej linii tekstu -----------------------------------
+\newcommand\mystrut{\rule{0pt}{17pt}} 
  %-----------------------------------------------------------------------------------------------------
-\newcommand{\BeginParallel}{\begin{spacing}{1}\begin{paracol}{2}\licznikZero}
-\newcommand{\lat}[1]{\begin{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}\ifnum \value{licznik}>0 \licznikUp \thelicznik .~#1 \else \licznikUp#1 \fi \end{minipage}\end{latin}\switchcolumn}
-\newcommand{\latN}[1]{\begin{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}#1\end{minipage}\end{latin}\switchcolumn}% kolumna bez numeracji wersów
-\newcommand{\pol}[1]{\begin{polish}\begin{minipage}[t]{\linewidth}\itshape#1\end{minipage}\end{polish}\switchcolumn*}
-\newcommand{\polPs}[1]{\begin{polish}\begin{minipage}[t]{\linewidth}\footnotesize\textit{#1}\end{minipage}\end{polish}\switchcolumn*}% wersja dla tłumaczenia psalmów z mniejszą czcionką
-\newcommand{\EndParallel}{\end{paracol}\end{spacing}}
+\newcommand{\BeginParallel}{\begin{sloppypar}\begin{paracol}{2}\licznikZero}
+\newcommand{\lat}[1]{\begin{latin}\ifnum \value{licznik}>0 \licznikUp \thelicznik .~#1 \else \licznikUp#1 \fi \end{latin}\switchcolumn}
+\newcommand{\latN}[1]{\begin{latin}#1\end{latin}\switchcolumn}% kolumna bez numeracji wersów
+\newcommand{\pol}[1]{\ensurevspace{2\baselineskip}\begin{polish}\itshape#1\end{polish}\switchcolumn*}
+\newcommand{\polPs}[1]{\ensurevspace{2\baselineskip}\begin{minipage}[c]{\columnwidth}\fontsize{12}{12}\selectfont\begin{polish}\textit{#1}\end{polish}\end{minipage}\switchcolumn*}% wersja dla tłumaczenia psalmów z mniejszą czcionką
+\newcommand{\EndParallel}{\end{paracol}\end{sloppypar}}
 % ------------------------------------------------------------------------------------------
 % ------------------------ pokazuje bieżącą wielkość czcionki -----------------------------
 \makeatletter
