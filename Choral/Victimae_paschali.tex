@@ -1,0 +1,91 @@
+% !TEX TS-program = lualatex+se+debug
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[14pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{21}%rozmiar wyniku GregorioTEX
+% koniec 
+
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+%\def\mydebug{1}
+\begin{document}
+\makeatletter
+\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+\makeatother
+
+\pagestyle{plain}	
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Victimae paschali laudes (Dominica Resurrectionis)}
+	\small\textit{Liber Usualis, 1961, p. 780}
+\end{center}	
+\end{spacing}
+\vspace{7mm}
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+
+\pagenumbering{gobble} % nie jest wyprowadzany żaden numer strony, chociaż numer jest nadal resetowany. Odniesienia do tej strony również są puste.
+\gresetinitiallines{1}\greannotation{Seq.} \greannotation{1.} \gabcsnippet{(c4) VI(d)cti(c)mae(d) pa(f)schá(g)li(f) lau(e)des(d.) *(,) ím(h)mo(g)lent(e) Chri(g)sti(f)á(e)ni.(d.) (::) A(h)gnus(j) red(k)é(h)mit(g) o(h)ves :(h.) (;) Chri(h)stus(g) ín(h)no(g)cens(f) Pa(e)tri(d.) (,) re(f)con(g)ci(d)li(e)á(d)vit(c.) pec(e)ca(f)tó(e)res.(d.) (::) Mors(h) et(j) vi(k)ta(h) du(g)él(h)lo(h.) (,) con(h)fli(g)xé(h)re(g) mi(f)rán(e)do :(d.) (;) dux(f) vi(g)tae(d) mór(e)tu(d)us,(c.) re(e)gnat(f) vi(e)vus.(d.) (::) Dic(a) no(c)bis(d) Ma(f)rí(g)a,(e_[oh:h][ll:1]d) (,) quid(c) vi(f)dí(e)sti(d) in(e) vi(c)a?(d.) (::) Se(f)púl(h)crum(g) Chri(h)sti(f) vi(g)vén(fe~)tis,(d.) (;) et(d) gló(g)ri(f)am(g) vi(h)di(g) re(f)sur(g)gén(fe~)tis :(d.) (::) An(a)gé(c)li(d)cos(f) te(g)stes,(e_[oh:h][ll:1]d) (,) su(c)dá(f)ri(e)um,(d) et(e) ve(c)stes.(d.) (::) Sur(f)ré(h)xit(g) Chri(h)stus(f) spes(g) me(fe)a :(d.) (;) prae(d)cé(g)det(f) su(g)os(h) in(g) Ga(f)li(g)laé(fe)am.(d.) (::) Sci(h)mus(j) Chri(k)stum(h) sur(h)re(g)xís(h)se(h.) (,) a(h) mór(j)tu(g)is(f) ve(e)re :(d.) (;) tu(c) no(f)bis,(e) vi(g)ctor(h) Rex,(h.) (,) mi(f)se(g)ré(fe)re.(d.) (::) A(ded)men.(cd..) (,) Al(c)le(f)lú(e[ll:1]d~){ia}.(d.) (::)}
+\sectionspace
+\small
+
+% Whereas \sloppy will loosen the alignment constraints on the whole document, the sloppypar environment can limit the effect of the damage to a localized area.
+%\sloppy
+%
+\begin{sloppypar}
+%\begin{spacing}{0.9}
+\columnratio{0.33}
+\begin{paracol}{3}
+\switchcolumn[0]
+Ofiarujmy chwałę w wierze,\\
+Wielkonocnej ofierze.\\
+
+Baranek owce zbawił,\\
+Chrystus nam pokój sprawił\\
+z Ojcem naszym Panem,\\
+rozgniewanym.
+\switchcolumn[1]
+Śmierc i żywot przeciwną\\
+bitwę zwiedli, a dziwną.\\
+Żywot acz prawdziwie\\
+zabit, żywie.\\
+
+Marya powiedz nam,\\
+Coś widziała, żywli Pan?\\
+Widziałam grób już żywego,\\
+Patrzałam na chwalebną twarz Jego.
+\switchcolumn[2]
+Widziałam widzenie,\\
+Aniołów i odzienie.\\
+Powstał Pan kochanie moje,\\
+Uprzedzi do Galilei swoje.\\
+
+Wierzym, że Chrystus\\
+powstał od umarłych żywy\\
+Zwycięzco królu\\
+bądź miłościwy.\footnote{tłum. z "Himny, prozy i cantica kościelne" ks. Stanisława Grochowskiego, 1599}
+\end{paracol}	
+\end{sloppypar}
+%\end{spacing}
+\end{document}
