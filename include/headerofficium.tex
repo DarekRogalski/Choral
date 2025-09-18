@@ -77,6 +77,8 @@
 \newcommand{\separator}{\begin{center}\greseparator{3}{40}\end{center}}
 %\newfontface\vectis{VectisMonumentalW01-Regular}
 %\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
+\gresetinitiallines{0}% bez inicjału - domyślnie
+\gresetlastline{justified}% wyjustowana ostatnia czterolinia - domyślnie
 %% ------------------ Zarządzanie litaniami ---------------------------
 \makeatletter  
 \newcounter{score}
@@ -116,13 +118,12 @@
    \setlength{\partopsep}{0pt}%
    \tabbing%
    \setstops}
-  {\endtabbing\stepcounter{score}}
+  {\endtabbing\stepcounter{score}}%
 
-\gresetinitiallines{0}
-\gresetlastline{justified}
+
 %% ------------------ Zarządzanie litaniami ---------------------------
 
-\usepackage[hyperindex=true]{hyperref}
+\usepackage[hyperindex=true, hidelinks]{hyperref}% hidelinks usuwa czerwoną ramkę wokół indeksu
 
 % --- SPIS TREŚCI -------
 %\usepackage{imakeidx}

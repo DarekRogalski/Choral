@@ -1,0 +1,99 @@
+% !TEX TS-program = lualatex+se+debug
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[14pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{18}%rozmiar wyniku GregorioTEX
+% koniec 
+
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+%\def\mydebug{1}
+\begin{document}
+\makeatletter
+\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+\makeatother
+
+\pagestyle{plain}	
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Stabat Mater (Septem Dolorum B.M.V. - 15 IX)}
+	\small\textit{Liber Usualis, Solesmes, 1961, p. 1634V}
+\end{center}	
+\end{spacing}
+\vspace{7mm}
+\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+%<c><v>\footnotesize{2. }</v></c>
+\pagenumbering{gobble} % nie jest wyprowadzany żaden numer strony, chociaż numer jest nadal resetowany. Odniesienia do tej strony również są puste.
+\gresetinitiallines{1}\greannotation{Seq. }\greannotation{2. }\gabcsnippet{(f3) STa(f)bat(e) Ma(f)ter(fg) do(i)lo(h)ró(g)sa(f.) (;) Jux(h)ta(g) cru(f)cem(fe) la(f)cri(g)mó(f)sa,(e.) (;) Dum(g) pen(h)dé(g)bat(f) Fí(e)li(f)us.(f.) (::)
+<c><v>\footnotesize{2. }</v></c>Cu(f)jus(e) á(f)ni(fg)mam(i) ge(h)mén(g)tem,(f.) (;) Con(h)tri(g)stá(f)tam(fe) et(f) do(g)lén(f)tem,(e.) (;) Per(g)trans(h)í(g)vit(f) glá(e)di(f)us.(f.) (::)
+<c><v>\footnotesize{3. }</v></c>O(j) quam(h) tri(j)stis(ji) et(g) af(h)flí(g)cta(f.) (;) Fu(g)it(h) il(i)la(hg) be(h)ne(g)dí(i)cta(j.) (;) Ma(j)ter(i) U(h)ni(g)gé(f)ni(e)ti!(f.) (::)
+<c><v>\footnotesize{4. }</v></c>Quae(j) mae(h)ré(j)bat(ji) et(g) do(h)lé(g)bat,(f.) (;) Pi(g)a(h) Ma(i)ter,(hg) dum(h) vi(g)dé(i)bat(j.) (;) Na(j)ti(i) poe(h)nas(g) ín(f)cly(e)ti.(f.) (::)
+<c><v>\footnotesize{5. }</v></c>Quis(f) est(h) ho(i)mo(hg) qui(f) non(e) fle(f)ret,(g.) (;) Ma(h)trem(g) Chri(f)sti(fe) si(f) vi(e)dé(dxd)ret(c.) (;) In(f) tan(e)to(g) sup(h)plí(g)ci(f)o?(f.) (::)
+<c><v>\footnotesize{6. }</v></c>Quis(f) non(h) pos(i)set(hg) con(f)tri(e)stá(f)ri,(g.) (;) Chri(h)sti(g) Ma(f)trem(fe) con(f)tem(e)plá(dxd)ri(c.) (;) Do(f)lén(e)tem(g) cum(h) Fí(g)li(f)o?(f.) (::)
+<c><v>\footnotesize{7. }</v></c>Pro(f) pec(e)cá(c)tis(fe) su(g)ae(h) gen(g)tis(f.) (;) Vi(h)dit(j) Je(i)sum(hg) in(h) tor(g)mén(f)tis,(e.) (;) Et(g) fla(i)gél(g)lis(h) súb(g)di(f)tum.(f.) (::)
+<c><v>\footnotesize{8. }</v></c>Vi(f)dit(e) su(c)um(fe) dul(g)cem(h) na(g)tum(f.) (;) Mo(h)ri(j)én(i)do(hg) de(h)so(g)lá(f)tum,(e.) (;) Dum(g) e(i)mí(g)sit(h) spí(g)ri(f)tum.(f.) (::)
+<c><v>\footnotesize{9. }</v></c>E(f){ia}(f) Ma(h)ter,(hg) fons(f) a(g)mó(f)ris,(e.) (;) Me(g) sen(g)tí(h)re(gf) vim(h) do(i)ló(j)ris(j.) (;) Fac,(h) ut(h) te(g)cum(f) lú(e)ge(f)am.(f.) (::)
+<c><v>\footnotesize{10. }</v></c>Fac(f) ut(f) ár(h)de(hg)at(f) cor(g) me(f)um(e.) (;) In(g) a(g)mán(h)do(gf) Chri(h)stum(i) De(j)um,(j.) (;) Ut(h) si(h)bi(g) com(f)plá(e)ce(f)am.(f.) (::)
+<c><v>\footnotesize{11. }</v></c>San(j)cta(i) Ma(h)ter,(hg) i(h)stud(g) a(f)gas,(e.) (;) Cru(g)ci(h)fí(i)xi(hg) fi(i)ge(j) pla(h)gas(g.) (;) Cor(h)di(g) me(f)o(g) vá(h)li(g)de.(f.) (::)
+<c><v>\footnotesize{12. }</v></c>Tu(j)i(i) na(h)ti(hg) vul(h)ne(g)rá(f)ti,(e.) (;) Tam(g) di(h)gná(i)ti(hg) pro(i) me(j) pa(h)ti,(g.) (;) Poe(h)nas(g) me(f)cum(g) dí(h)vi(g)de.(f.) (::)
+<c><v>\footnotesize{13. }</v></c>Fac(f) me(j) te(j)cum(ih) pi(j)e(i) fle(h)re,(g.) (;) Cru(h)ci(g)fí(i)xo(ih) con(g)do(h)lé(g)re,(f.) (;) Do(e)nec(f) e(g)go(h) ví(g)xe(f)ro.(f.) (::)
+<c><v>\footnotesize{14. }</v></c>Jux(f)ta(j) cru(j)cem(ih) te(j)cum(i) sta(h)re,(g.) (;) Et(h) me(g) ti(i)bi(ih) so(g)ci(h)á(g)re(f.) (;) In(e) plan(f)ctu(g) de(h)sí(g)de(f)ro.(f.) (::)
+<c><v>\footnotesize{15. }</v></c>Vir(h)go(hi) vír(j)gi(ji)num(j) prae(i)clá(h)ra,(g.) (;) Mi(h)hi(i) jam(h) non(hg) sis(h) a(g)má(f)ra :(e.) (;) Fac(g) me(i) te(g)cum(h) plán(g)ge(f)re.(f.) (::)
+<c><v>\footnotesize{16. }</v></c>Fac(h) ut(hi) por(j)tem(ji) Chri(j)sti(i) mor(h)tem,(g.) (;) Pas(h)si(i)ó(h)nis(hg) fac(h) con(g)sór(f)tem,(e.) (;) Et(g) pla(i)gas(g) re(h)có(g)le(f)re.(f.) (::)
+<c><v>\footnotesize{17. }</v></c>Fac(f) me(h) pla(g)gis(gh) vul(i)ne(h)rá(g)ri,(f.) (;) Fac(e) me(h) cru(i)ce(i) in(h)e(g)bri(h)á(i)ri,(j.) (;) Et(h) cru(g)ó(f)re(e) Fí(g)li(f)i.(f.) (::)
+<c><v>\footnotesize{18. }</v></c>Flam(f)mis(h) ne(g) u(gh)rar(i) suc(h)cén(g)sus,(f.) (;) Per(e) te(h) Vir(i)go,(ih) sim(g) de(h)fén(i)sus(j.) (;) In(h) di(g)e(f) ju(e)dí(g)ci(f)i.(f.) (::)
+<c><v>\footnotesize{19. }</v></c>Chri(h)ste,(f) cum(f) sit(fe) hinc(f) ex(g)í(h)re,(g.) (;) Da(h) per(j) Ma(j)trem(ji) me(j) ve(h)ní(g)re(f.) (;) Ad(e) pal(f)mam(g) vi(i)ctó(h)ri(g)ae.(f.) (::)
+<c><v>\footnotesize{20. }</v></c>Quan(h)do(f) cor(f)pus(fe) mo(f)ri(g)é(h)tur,(g.) (;) Fac(h) ut(j) á(j)ni(ji)mae(j) do(h)né(g)tur(f.) (;) Pa(e)ra(f)dí(g)si(i) gló(h)ri(g)a.(f.) (::)
+A(fgf)men.(ef..) (::)}
+\sectionspace
+\small
+% Whereas \sloppy will loosen the alignment constraints on the whole document, the sloppypar environment can limit the effect of the damage to a localized area.
+%\sloppy
+%
+%\begin{sloppypar}
+\begin{spacing}{0.9}
+\mred{1.}~Bolejąca Matka stała~* U stóp krzyża, we łzach cała,~* Kiedy na nim zawisł Syn.~
+\mred{2.}~A w Jej pełnej jęku duszy,~* Od męczarni i katuszy,~* Tkwił miecz ostry naszych win.~
+\mred{3.}~Jakże smutna i strapiona~* Była ta błogosławiona,~* Z której się narodził Bóg.~
+\mred{4.}~Jak cierpiała i bolała,~* Jakże drżała gdy widziała~* Dziecię swe wśród śmierci trwóg.~
+\mred{5.}~Któryż człowiek nie zapłacze,~* Widząc męki i rozpacze~* Matki Bożej w żalu tym? 
+\mred{6.}~Któż od smutku się powstrzyma,~* Mając matkę przed oczyma,~* Która cierpi z Synem swym? 
+\mred{7.}~Widzi, jak za ludzkie winy~* Znosi męki Syn jedyny,~* Jezus – jak Go smaga bat.~
+\mred{8.}~Widzi jak samotnie kona~* Owoc Jej czystego łona,~* Dając życie za ten świat.~
+\mred{9.}~Matko, coś miłości zdrojem,~* Przejmij mnie cierpieniem swoim~* Abym boleć z Tobą mógł.~
+\mred{10.}~Niechaj serce moje pała,~* By radością mą się stała~* Miłość, którą – Chrystus Bóg.~~
+\mred{11.}~Matko święta, srogie rany,~* Które zniósł Ukrzyżowany,~* Wyryj mocno w duszy mej.~~
+\mred{12.}~Męką, Syna rodzonego,~* Co dla dobra cierpiał mego,~* Ze mną się podzielić chciej.~~
+\mred{13.}~Pragnę płakać w Twym pobliżu,~* Cierpiąc z Tym, co zmarł na krzyżu~* Po mojego życia kres.~~
+\mred{14.}~Chcę pod krzyżem stać przy Tobie,~* Z Tobą łączyć się w żałobie,~* I wylewać zdroje łez.~~
+\mred{15.}~Panno czysta nad pannami,~* Niechaj dobroć Twoja da mi~* Płakać z żalu z Tobą współ.~~
+\mred{16.}~Bym z Chrystusem konał razem,~* Męki Jego był obrazem,~* Rany Jego w sobie czuł.~~
+\mred{17.}~Niech mnie do krwi rani zgraja,~* Niech mnie męki krzyż upaja~* I Twojego Syna krew.~~
+\mred{18.}~W ogniu Panno, niech nie płonę,~* Więc mnie w swoją weź obronę,~* Gdy nadejdzie sądu gniew.~~
+\mred{19.}~Gdy kres dni przede mną stanie,~* Przez Twą Matkę dojść mi Panie,~* Do zwycięstwa palmy daj.~~
+\mred{20.}~Kiedy umrze moje ciało, * Niechaj duszę ma z swą chwałą * Czeka Twój wieczysty raj.~~*~Amen.\footnote{Mszał Rzymski 1963 (oprac. Benedyktyni Tynieccy), tłum. L.Staff}
+\end{spacing}
+%\end{sloppypar}
+\end{document}
