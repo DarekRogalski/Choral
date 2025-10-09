@@ -66,7 +66,9 @@
 \grechangedim{intersyllablespacenotes}{0.08cm}{scalable}% Minimalna odległość między nutami różnych sylab.
 % Set the space around the initial:
 % See http://gregorio-project.github.io/gregoriotex/details.html for more details and options
-\grechangedim{beforeinitialshift}{0.5mm}{scalable}
+%\grechangedim{afterclefnospace}{0pt}{scalable}% An extensible space for the beginning of lines.
+\grechangedim{minimalspaceatlinebeginning}{0pt}{scalable}%Minimal space in front of the lyrics at the beginning of a line when bolshifts are enabled, default 0,05cm
+\grechangedim{beforeinitialshift}{0.0mm}{scalable}
 \grechangedim{afterinitialshift}{1.0mm}{scalable}
 \grechangestaffsize{24}%rozmiar wyniku GregorioTEX
 %\grechangedim{spaceafterlineclef}{1pt}{scalable}% Minimalna odległość między kluczem a nutami 
@@ -212,21 +214,26 @@
 \newfontfamily{\tytfont}{JSL Ancient}
 \newcommand\tytulfont[1]{\fontsize{50}{60}\selectfont\tytfont#1\par}
 \newcommand\podtytulfont[1]{\fontsize{38}{28}\selectfont\tytfont#1\par}
+% ----------------------------------------------------------------------
+% ------------------------- CZCIONKA TEKSTU ------------------------
+\newcommand\latinfont{\fontsize{\fsize}{\fblsize}\selectfont}
+\newcommand\polishfontBig{\fontsize{\fsize}{\fblsize}\selectfont\itshape}
+\newcommand\polishfontSmall{\fontsize{11}{6}\selectfont\itshape}
 % -------------------- POKAŻ CZCIONKĘ -----------------------------------
-\makeatletter
-\newcommand{\showfont}
-{%
-%        encoding: \the\encoding,
-%        family: \the\family,
-%        series: \the\series,
-%        shape: \the\shape,
-%        size: \the\size,
-%        baseline: \the\baselineskip,
+%\makeatletter
+%\newcommand{\showfont}
+%{%
+%        encoding: \f@encoding,
+%        family: \f@family,
+%        series: \f@series,
+%        shape: \f@shape,
+%        size: \f@size,
+%        baseline: \f@baselineskip,
 %        linespread: \the\linespread,
-        linespacing: \the\baselineskip%
-        parskip: \the\parskip%
-}
-\makeatother
+%       linespacing: \the\baselineskip%
+%        parskip: \the\parskip%
+%}
+%\makeatother
 % ---------------------------------------------------------------------------
 % ---------------------------- GRAFIKA I KOLORY---------------------------
 % ---------------------------------------------------------------------------
@@ -234,6 +241,7 @@
 \definecolor{myRed}{RGB}{229,53,44}%
 \usepackage{graphicx} % umożliwia import obrazów
 \usepackage{pgfornament}% ornamenty graficzne
+\usepackage{tikz}%linie
 % -------------------------------------------------------------------------------
 % ----------------------------------- RUBRYKA ---------------------------------
 % -------------------------------------------------------------------------------
@@ -325,16 +333,26 @@
 		\vspace*{\fill}
 	\end{center}}
 % -----------------------------------------------------------------------------------
+% ---------------------------------- ŚRODOWISKA ----------------------------------
+% -----------------------------------------------------------------------------------	
+
+%\newenvironment{tlumaczenie}% do środowiska przekazuję sposób justowania
+%{\begin{spacing}{0.5}
+%\fontsize{11}{10}\itshape\textpolish
+%}
+%{\end{spacing}
+%\normalfont\selectfont}
+% -----------------------------------------------------------------------------------
 % ---------------------------------- WERSETY ----------------------------------
 % -----------------------------------------------------------------------------------
 %\newcommand{\firstchar}[1]{\directlua{tex.sprint(unicode.utf8.sub('#1',1,1))}}%makro pobiera pierwszy znak ze stringu
 \newcommand{\red}[1]{\textcolor{myRed}{#1}}
-\newcommand{\mred}[1]{\leftskip7pt\makebox[3pt][r]{\textcolor{myRed}{\footnotesize{#1}}}}
+\newcommand{\mred}[1]{\leftskip6pt\makebox[3pt][r]{\textcolor{myRed}{\footnotesize{#1}}}}
 \newcommand{\black}[1]{\textcolor{black}{#1}}
 %\newcommand{\numer}[1]{\noindent\makebox[1em][l]{\textcolor{myRed}{#1}}}
 % --------------------------------
-\newcommand{\tlumacz}[1]{\begin{spacing}{0.5}\textpolish{\footnotesize\textit{\hspace{20pt} #1}}\end{spacing}}% normalna czcionka justowana do lewej
-\newcommand{\tlumaczR}[1]{\begin{spacing}{0.5}\mbox{}\hfill\textpolish{\footnotesize\textit{#1}}\end{spacing}}% mała czcionka justowana do prawej  \noindent\hrulefill 
+\newcommand{\tlumacz}[1]{\begin{justify}\polishfontSmall\textpolish{#1}\end{justify}}% normalna czcionka justowana do lewej
+\newcommand{\tlumaczR}[1]{\begin{flushright}\polishfontSmall\textpolish{#1}\end{flushright}}%
 \newcommand{\inicjal}[2]{\textcolor{myRed}{\Large\textbf{#1}}{#2}}
 \newcounter{licznik}
 \newcommand{\licznikZero}{\setcounter{licznik}{0}}% zeruj licznik
@@ -344,6 +362,7 @@
 % --------------------------------- KOLUMNY ---------------------------------
 % -----------------------------------------------------------------------------------
 \usepackage{paracol}
+%	\twosided[pc]% kolumny są po zewn. cz. strony
 \wstawplik{conparlua}%---- usun konflikt między paracol i luacolor
 \columnratio{0.5}
 %\setcolumnwidth{.49\textwidth, .49\textwidth}
@@ -358,20 +377,46 @@
  {\luacolorresetboxcolor\pcol@tempboxa\copy\pcol@tempboxa}{}{\fail}
 \makeatother
 % ----------------------------- sztuczny znak (linia) wymuszająca wysokość pierwszej linii tekstu -----------------------------------
-\newcommand\mystrut{\rule{0pt}{17pt}} 
+\newcommand\mystrut{\rule{0pt}{17pt}} %\tikz[overlay]\draw[red](0,0)--++(16,0)%\footnotesize
  %-----------------------------------------------------------------------------------------------------
 \newcommand{\BeginParallel}{\begin{sloppypar}\begin{paracol}{2}\licznikZero}
-\newcommand{\lat}[1]{\begin{latin}\ifnum \value{licznik}>0 \licznikUp \thelicznik .~#1 \else \licznikUp#1 \fi \end{latin}\switchcolumn}
-\newcommand{\latN}[1]{\begin{latin}#1\end{latin}\switchcolumn}% kolumna bez numeracji wersów
-\newcommand{\pol}[1]{\ensurevspace{2\baselineskip}\begin{polish}\itshape#1\end{polish}\switchcolumn*}
-\newcommand{\polPs}[1]{\ensurevspace{2\baselineskip}\begin{minipage}[c]{\columnwidth}\fontsize{12}{12}\selectfont\begin{polish}\textit{#1}\end{polish}\end{minipage}\switchcolumn*}% wersja dla tłumaczenia psalmów z mniejszą czcionką
+% dwie kolumny z automatyczną numeracją:
+\newcommand{\lat}[1]{
+		\begin{leftcolumn*}[]\noindent\mystrut
+			\ifnum \value{licznik}>0 
+				\licznikUp
+				\latinfont\textlatin{\thelicznik .~#1}
+			\else
+				\licznikUp
+				\latinfont#1 
+			\fi
+		\end{leftcolumn*}
+}
+\newcommand{\pol}[1]{
+	\begin{rightcolumn}\noindent\mystrut
+				\ensurevspace{2\baselineskip}
+				\polishfontBig\textpolish{#1}
+	\end{rightcolumn}	
+}% wersja dla tłumaczenia psalmów z dużą czcionką
+
+\newcommand{\latN}[1]{% kolumna lat bez aut. numeracji:
+	\begin{leftcolumn*}[]\noindent\mystrut
+			\hspace{6pt}\latinfont\textlatin{#1}
+	\end{leftcolumn*}
+}
+\newcommand{\polPs}[1]{% kolumna pl bez numeracji wersów
+	\begin{rightcolumn}\noindent\mystrut
+				\ensurevspace{2\baselineskip}
+				\polishfontSmall\textpolish{#1}
+	\end{rightcolumn}	
+}% wersja dla tłumaczenia psalmów z mniejszą czcionką
 \newcommand{\EndParallel}{\end{paracol}\end{sloppypar}}
 % ------------------------------------------------------------------------------------------
 % ------------------------ pokazuje bieżącą wielkość czcionki -----------------------------
 \makeatletter
-\newcommand\thefontsize{The current font size is: \f@size pt}
+\newcommand\fblsize{\f@baselineskip}
+\newcommand\fsize{\f@size pt}% informacje o czcionce: rozmiar
 \makeatother
-\newcommand\thefont{\expandafter\string\the\font}% informacje o czcionce
 % --- ZNAKI SPECJALNE ---
 % 
 %\newcommand †

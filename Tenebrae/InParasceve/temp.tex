@@ -1,7 +1,7 @@
 % !TEX TS-program = lualatex+se+debug
 % !TEX encoding = UTF-8 Unicode
 
-\documentclass[14pt, twoside, a4paper]{extreport}
+\documentclass[17pt, twoside, a4paper]{extreport}
 % -----------------------------------------------------------------------------------
 % ------------------------- USTAWIENIA STRONY--------------------------
 % -----------------------------------------------------------------------------------
@@ -17,7 +17,7 @@
 \newcommand{\wstawplik}[1]{\input{../../include/#1}}%skraca kod
 \wstawplik{headerofficium}
 % elementy zmienne co do headerofficium:
-\graphicspath{{../img/}} % katalog obrazów
+\graphicspath{{../../img/}} % katalog obrazów
 %\svgpath{{../include/}}
 \grechangestaffsize{20}%rozmiar wyniku GregorioTEX
 \gresetlastline{ragged}% justowanie do lewej
@@ -35,90 +35,145 @@
 \grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
 \makeatother
 \pagestyle{empty}
-%\pagestyle{plain}	
-\large
-\begin{spacing}{0.7}
+% -----------------------------------------------------------------------------------
+% ------------------------------ STRONA TYTUŁOWA  ------------------------------
+\thispagestyle{empty}
 \begin{center}
-	\section*{In Parasceve}
-%	\small\textit{Liber Usualis, p.688}
-%	\small\textit{}
-%	\vspace{3mm}
-\end{center}	
-\end{spacing}
-% <c>*</c>
+	\includegraphics[width=1.0\linewidth]{Parasceve03.jpg}
+	\vfill
+	\podtytulfont{Ad Matutinum et Laudes}
+	\tytulfont{ Feria Sexta\\in Parasceve}
+	\vfill
+	\large\textit{Liber usualis, Solesmes, 1961, p.688}
+\end{center}%
+\newpage
+% <c><v>*</v></c>
+% <c><v>†</v></c>
 % <c><i>Ps.</i></c> 
 % <c><sp>V/</sp>.</c>
 % <c><i>ij.</i></c>
+% \tikz[overlay]\draw[red](-10,0)--++(15,0);
 % -------------------- I. Nocturno -------------------- 
 % ---------------------- Resp. 1 ---------------------- 
-%\greannotation{} 
-%\vspace{-20pt}
+\thispagestyle{empty}
+\wstawplik{modlitwy_wstepne_has}
+\newpage
+\setcounter{page}{1}
+\fancyhead{}% wyczyść wszystkie pola nagłówka
+\pagestyle{plain}% nagłówek i stopka pusta - UWAGA: przedefiniowany styl przez polecenie fancypagestyle w header.tex	
+%\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
 \sekcja{In I. Nocturno}{}
 \vspace{-44pt}
 %% -------- 1. Ant. Astitérunt reges terræ -----------
-\gresetinitiallines{1}\greannotation{1. Ant.}\greannotation{8 G}\gabcsnippet{(c4) A(g)sti(g)té(g)runt(g') *() re(g)ges(g') ter(ixi)rae,(gg) (,) et(f) prín(g')ci(h)pes(g'_[oh:h]) con(g)ve(f')né(g)runt(h') in(ixi) u(h)num,(f.) (;) ad(h)vér(f')sus(h) Dó(j')mi(j)num,(i_[oh:h]g_[oh:h]) (,) et(i') ad(j)vér(h)sus(gf) Chri(gh)stum(h) e(g.)jus.(g.) (::)}
-\vspace{-26pt}
-\tlumaczR{Stanęli wespół królowie~\red{*} i książęta zeszli się \newline}
-\tlumaczR{gromadnie przeciw Panu i przeciw Chrystusowi jego.}
-\subsekcja{Psalm 2}
+\gresetinitiallines{1}\greannotation{1. Ant.}\greannotation{8 G}\gabcsnippet{(c4) A(g)sti(g)té(g)runt(g') <c><v>*</v></c>() re(g)ges(g') ter(ixi)rae,(gg) (,) et(f) prín(g')ci(h)pes(g'_[oh:h]) con(g)ve(f')né(g)runt(h') in(ixi) u(h)num,(f.) (;) ad(h)vér(f')sus(h) Dó(j')mi(j)num,(i_[oh:h]g_[oh:h]) (,) et(i') ad(j)vér(h)sus(gf) Chri(gh)stum(h) e(g.)jus.(g.) (::)}
+\vspace{-25pt}
+\tlumaczR{Stanęli wespół królowie~\red{*} i książęta zeszli się\\gromadnie przeciw Panu i przeciw Chrystusowi jego.}\minispace
+\noindent\subsekcja{Psalm 2}
 \vspace{-16pt}
-\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Qua(g)re(h) fre(j)mu(j)é(j)runt(j) <b>Gen</b>(k jr)tes:(j.) <c>*</c> (:) et(j) pó(j)pu(j)li(j) me(j)di(j)tá(j)ti(j) <i><ul>sunt</i></ul>(i) <i><ul>in</i></ul>(j)<b>á</b>(h)ni(gr)a?(g.) (::)}\minispace
-\tlumaczR{Czemu się wzburzyli poganie:~\red{*} a ludzie rozmyślali próżne rzeczy?}\segmentspace
-\columnratio{0.7}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Qua(g)re(h) fre(j)mu(j)é(j)runt(j) <b>Gen</b>(k jr)tes:(j.) <c><v>*</v></c> (:) et(j) pó(j)pu(j)li(j) me(j)di(j)tá(j)ti(j) <i><ul>sunt</i></ul>(i) <i><ul>in</i></ul>(j)<b>á</b>(h)ni(gr)a?(g.) (::)}\minispace
+\tlumaczR{Czemu się wzburzyli poganie:~\red{*} a ludzie rozmyślali próżne rzeczy?}\paragraphspace
+\columnratio{0.75}
 \setlength{\columnseprule}{0.4pt}
 \setlength{\columnsep}{.02\textwidth}
 \BeginParallel
 \latN{\mred{2.}~Astitérunt reges terræ, et príncipes convenérunt in \textbf{u}num~\red{*} advérsus Dóminum, et advérsus \underline{\textit{Chris}}\underline{\textit{tum}} \textbf{e}jus.}\polPs{Stanęli wespół królowie ziemscy, a książęta zeszli się w gromadę * przeciw Panu, i przeciw Chrystusowi jego.}%
-
 \latN{\mred{3.}~Dirumpámus víncula e\textbf{ó}rum:~\red{*} et projiciámus a nobis ju\underline{\textit{gum}} \underline{\textit{ip}}\textbf{só}rum.}\polPs{Potargajmy związki ich: * i zrzućmy z siebie jarzmo ich.}%
-
 \latN{\mred{4.}~Qui hábitat in cælis, irridébit \textbf{e}os:~\red{*} et Dóminus subsan\underline{\textit{ná}}\underline{\textit{bit}} \textbf{e}os.}\polPs{Który mieszka w niebiesiech, naśmieje się z nich: * a Pan szydzić z nich będzie.}%
-
 \latN{\mred{5.}~Tunc loquétur ad eos in ira \textbf{su}a,~\red{*} et in furóre suo contur\underline{\textit{bá}}\underline{\textit{bit}} \textbf{e}os.}\polPs{Tedy będzie mówił do nich w gniewie swoim, * i w zapalczywości swéj potrwoży je.}%
-
 \latN{\mred{6.}~Ego autem constitútus sum Rex ab eo super Sion montem sanctum \textbf{e}jus,~\red{*} prǽdicans præ\underline{\textit{cép}}\underline{\textit{tum}} \textbf{e}jus.}\polPs{A jam jest postanowion królem od niego nad Syonem, górą świętą jego, * opowiadając przykazanie jego.}%
-
 \latN{\mred{7.}~Dóminus dixit \textbf{ad} me:~\red{*} Fílius meus es tu, ego hódie \underline{\textit{gé}}\underline{\textit{nu}}\textbf{i} te.}\polPs{Pan rzekł do mnie: * Tyś jest synem moim, Jam ciebie dziś zrodził.}%
-
 \latN{\mred{8.}~Póstula a me, et dabo tibi Gentes hereditátem \textbf{tu}am,~\red{*} et possessiónem tuam tér\underline{\textit{mi}}\underline{\textit{nos}} \textbf{ter}ræ.}\polPs{Żądaj odemnie, i dam ci pogany dziedzictwo twoje, * a osiadłość twą kraje ziemie.}%
-
 \latN{\mred{9.}~Reges eos in virga \textbf{fér}rea,~\red{*} et tamquam vas fíguli con\underline{\textit{frín}}\underline{\textit{ges}} \textbf{e}os.}\polPs{Będziesz je rządził laską żelazną: * a jako naczynie garncarskie pokruszysz je.}%
-
 \latN{\mred{10.}~Et nunc, reges, intel\textbf{lí}gite:~\red{*} erudímini, qui judi\underline{\textit{cá}}\underline{\textit{tis}} \textbf{ter}ram.}\polPs{A teraz królowie rozumiejcie: * ćwiczcie się, którzy sądzicie ziemię.}%
-
-\latN{\mred{11.}~Servíte Dómino in ti\textbf{mó}re:~\red{*} et exsultáte ei \underline{\textit{cum}} \underline{\textit{tre}}\textbf{mó}re.}\polPs{Służcie Panu w bojaźni: * a radujcie się mu ze drżeniem.}%
-
+\EndParallel
+\newpage
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{11. }</v></c>Ser(j)ví(j)te(j) Dó(j)mi(j)no(j) in(j) ti(j)<b>mó</b>(k jr)re:(j.) <c>*</c> (:) et(j) ex(j)sul(j)tá(j)te(j) e(j)i(j) <i><ul>cum</i></ul>(i) <i><ul>tre</i></ul>(j)<b>mó</b>(h gr)re.(g.) (::)}\minispace
+\tlumaczR{Służcie Panu w bojaźni:~\red{*} a radujcie się mu ze drżeniem.}\paragraphspace
+%\latN{\mred{11.}~Servíte Dómino in ti\textbf{mó}re:~\red{*} et exsultáte ei \underline{\textit{cum}} \underline{\textit{tre}}\textbf{mó}re.}\polPs{Służcie Panu w bojaźni: * a radujcie się mu ze drżeniem.}%
+\BeginParallel
 \latN{\mred{12.}~Apprehéndite disciplínam, nequándo irascátur \textbf{Dó}minus,~\red{*} et pereátis de \underline{\textit{vi}}\underline{\textit{a}} \textbf{jus}ta.}\polPs{Chwyćcie się nauki, by się kiedy nie rozgniewał Pan: * i nie poginęliście z drogi sprawiedliwéj.}%
-
 \latN{\mred{13.}~Cum exárserit in brevi ira \textbf{e}jus:~\red{*} beáti omnes qui confí\underline{\textit{dunt}} \underline{\textit{in}} \textbf{e}o.}\polPs{Gdyby się w krótce zapalił gniew jego: * błogosławieni wszyscy, którzy w nim ufają.}%
 \EndParallel
-\gresetinitiallines{1}\greannotation{1. Ant.}\greannotation{8 G}\gabcsnippet{(c4) A(g)sti(g)té(g)runt(g') *() re(g)ges(g') ter(ixi)rae,(gg) (,) et(f) prín(g')ci(h)pes(g'_[oh:h]) con(g)ve(f')né(g)runt(h') in(ixi) u(h)num,(f.) (;) ad(h)vér(f')sus(h) Dó(j')mi(j)num,(i_[oh:h]g_[oh:h]) (,) et(i') ad(j)vér(h)sus(gf) Chri(gh)stum(h) e(g.)jus.(g.) (::)}\minispace
-\tlumaczR{Stanęli wespół królowie~\red{*} i książęta zeszli się gromadnie przeciw Panu i przeciw Chrystusowi jego.}
-\greannotation{Resp. 1} 
-\greannotation{3.} 
+\paragraphspace
+\gresetinitiallines{1}\greannotation{2. Ant.}\greannotation{8 G}\gabcsnippet{(c4) A(g)sti(g)té(g)runt(g') () re(g)ges(g') ter(ixi)rae,(gg) (,) et(f) prín(g')ci(h)pes(g'_[oh:h]) con(g)ve(f')né(g)runt(h') in(ixi) u(h)num,(f.) (;) ad(h)vér(f')sus(h) Dó(j')mi(j)num,(i_[oh:h]g_[oh:h]) (,) et(i') ad(j)vér(h)sus(gf) Chri(gh)stum(h) e(g.)jus.(g.) (::)}
+\vspace{-25pt}
+\tlumaczR{Stanęli wespół królowie~\red{*} i książęta zeszli się\\gromadnie przeciw Panu i przeciw Chrystusowi jego.}\segmentspace
+%% -------- 2. Ant. Divisérunt sibi vestiménta mea, et super vestem meam misérunt sortem. -----------
+\gresetinitiallines{1}\greannotation{1. Ant.}\greannotation{8 G}\gabcsnippet{(c4) DI(g)vi(g')sé(h)runt(h') si(g)bi(g'_[oh:h]) *(,) ve(i)sti(h')mén(j)ta(i') me(h)a,(h.) (;) et(h) su(j')per(i) ve(jk)stem(h) me(h_g)am(g.) (,) mi(g_[oh:h]f)sé(gh)runt(h) sor(g.)tem.(g.) (::)}
+\vspace{-10pt}
+\tlumaczR{Rozdzielili sobie~\red{*} szaty moje, a o suknię moją los miotali.}\minispace
+\noindent\subsekcja{Psalm 21}
+\vspace{-16pt}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c> De(g)us,(h) De(j)us(j) me(j)us,(j) ré(j)spi(j)ce(j) in(j) me: <c><v>†</v></c>(h.) qua(j)re(j) me(j) de(j)re(j)li(j)<b>quís</b>(k jr)ti?(j.)  <c><v>*</v></c> (:) lon(j)ge(j) a(j) sa(j)lú(j)te(j) me(j)a(j) ver(j)ba(j) de(j)lic(j)tó(j)<i><ul>rum</i></ul>(i) <i><ul>me</i></ul>(j)<b>ó</b>(h gr)rum.(g.) (::)}\paragraphspace
+\BeginParallel
+\latN{\mred{2.}~Deus meus, clamábo per diem, et non ex\textbf{áu}dies:~* et nocte, et non ad insipién\underline{\textit{ti}}\underline{\textit{am}} \textbf{mi}hi.}\polPs{}%
+\latN{\mred{3.}~Tu autem in sancto \textbf{há}bitas:~* \underline{\textit{laus}} \textbf{Is}raël.}\polPs{}%
+\latN{\mred{4.}~In te speravérunt patres \textbf{nos}tri:~* speravérunt, et libe\underline{\textit{rás}}\underline{\textit{ti}} \textbf{e}os.}\polPs{}%
+\latN{\mred{5.}~Ad te clamavérunt, et salvi \textbf{fac}ti sunt:~* in te speravérunt, et non \underline{\textit{sunt}} \underline{\textit{con}}\textbf{fú}si.}\polPs{}%
+\latN{\mred{6.}~Ego autem sum vermis, et non \textbf{ho}mo:~* oppróbrium hóminum, et abjéc\underline{\textit{ti}}\underline{\textit{o}} \textbf{ple}bis.}\polPs{}%
+\latN{\mred{7.}~Omnes vidéntes me deri\textbf{sé}runt me:~* locúti sunt lábiis, et mo\underline{\textit{vé}}\underline{\textit{runt}} \textbf{ca}put.}\polPs{}%
+\latN{\mred{8.}~Sperávit in Dómino, erípiat \textbf{e}um:~* salvum fáciat eum, quóni\underline{\textit{am}} \underline{\textit{vult}} \textbf{e}um.}\polPs{}%
+\latN{\mred{9.}~Quóniam tu es, qui extraxísti me de \textbf{ven}tre:~* spes mea ab ubéribus matris meæ. In te projéctus \underline{\textit{sum}} \underline{\textit{ex}} \textbf{ú}tero.}\polPs{}%
+\latN{\mred{10.}~De ventre matris meæ Deus meus \textbf{es} tu,~* ne discés\underline{\textit{se}}\underline{\textit{ris}} \textbf{a} me:}\polPs{}%
+\latN{\mred{11.}~Quóniam tribulátio próxi\textbf{ma} est:~* quóniam non \underline{\textit{est}} \underline{\textit{qui}} \textbf{ád}juvet.}\polPs{}%
+\latN{\mred{12.}~Circumdedérunt me vítuli \textbf{mul}ti:~* tauri pingues \underline{\textit{ob}}\underline{\textit{se}}\textbf{dé}runt me.}\polPs{}%
+\latN{\mred{13.}~Aperuérunt super me os \textbf{su}um:~* sicut leo rápi\underline{\textit{ens}} \underline{\textit{et}} \textbf{rú}giens.}\polPs{}%
+\latN{\mred{14.}~Sicut aqua ef\textbf{fú}sus sum:~* et dispérsa sunt ómnia \underline{\textit{os}}\underline{\textit{sa}} \textbf{me}a.}\polPs{}%
+\latN{\mred{15.}~Factum est cor meum tamquam cera li\textbf{qué}scens:~* in médio \underline{\textit{ven}}\underline{\textit{tris}} \textbf{me}i.}\polPs{}%
+\latN{\mred{16.}~Aruit tamquam testa virtus mea,~† et lingua mea adhǽsit fáucibus \textbf{me}is:~* et in púlverem mortis \underline{\textit{de}}\underline{\textit{du}}\textbf{xís}ti me.}\polPs{}%
+\latN{\mred{17.}~Quóniam circumdedérunt me canes \textbf{mul}ti:~* concílium malignánti\underline{\textit{um}} \underline{\textit{ob}}\textbf{sé}dit me.}\polPs{}%
+\latN{\mred{18.}~Fodérunt manus meas et pedes \textbf{me}os:~* dinumeravérunt ómnia \underline{\textit{os}}\underline{\textit{sa}} \textbf{me}a.}\polPs{}%
+\latN{\mred{19.}~Ipsi vero consideravérunt et inspe\textbf{xé}runt me:~* divisérunt sibi vestiménta mea, et super vestem meam mi\underline{\textit{sé}}\underline{\textit{runt}} \textbf{sor}tem.}\polPs{}%
+\latN{\mred{20.}~Tu autem, Dómine, ne elongáveris auxílium tuum \textbf{a} me:~* ad defensiónem \underline{\textit{me}}\underline{\textit{am}} \textbf{cón}spice.}\polPs{}%
+\latN{\mred{21.}~Erue a frámea, Deus, ánimam \textbf{me}am:~* et de manu canis ú\underline{\textit{ni}}\underline{\textit{cam}} \textbf{me}am.}\polPs{}%
+\latN{\mred{22.}~Salva me ex ore le\textbf{ó}nis:~* et a córnibus unicórnium humili\underline{\textit{tá}}\underline{\textit{tem}} \textbf{me}am.}\polPs{}%
+\latN{\mred{23.}~Narrábo nomen tuum frátribus \textbf{me}is:~* in médio Ecclési\underline{\textit{æ}} \underline{\textit{lau}}\textbf{dá}bo te.}\polPs{}%
+\latN{\mred{24.}~Qui timétis Dóminum, laudáte \textbf{e}um:~* univérsum semen Jacob, glorifi\underline{\textit{cá}}\underline{\textit{te}} \textbf{e}um.}\polPs{}%
+\latN{\mred{25.}~Tímeat eum omne semen \textbf{Is}raël:~* quóniam non sprevit, neque despéxit deprecati\underline{\textit{ó}}\underline{\textit{nem}} \textbf{páu}peris:}\polPs{}%
+\latN{\mred{26.}~Nec avértit fáciem suam \textbf{a} me:~* et cum clamárem ad eum, \underline{\textit{ex}}\underline{\textit{au}}\textbf{dí}vit me.}\polPs{}%
+\latN{\mred{27.}~Apud te laus mea in ecclésia \textbf{ma}gna:~* vota mea reddam in conspéctu timén\underline{\textit{ti}}\underline{\textit{um}} \textbf{e}um.}\polPs{}%
+\latN{\mred{28.}~Edent páuperes, et saturabúntur:~† et laudábunt Dóminum qui requírunt \textbf{e}um:~* vivent corda eórum in sǽ\underline{\textit{cu}}\underline{\textit{lum}} \textbf{sǽ}culi.}\polPs{}%
+\latN{\mred{29.}~Reminiscéntur et converténtur ad \textbf{Dó}minum~* univérsi \underline{\textit{fi}}\underline{\textit{nes}} \textbf{ter}ræ:}\polPs{}%
+\latN{\mred{30.}~Et adorábunt in conspéctu \textbf{e}jus~* univérsæ famí\underline{\textit{li}}\underline{\textit{æ}} \textbf{Gén}tium.}\polPs{}%
+\latN{\mred{31.}~Quóniam Dómini est \textbf{re}gnum:~* et ipse dominá\underline{\textit{bi}}\underline{\textit{tur}} \textbf{Gén}tium.}\polPs{}%
+\latN{\mred{32.}~Manducavérunt et adoravérunt omnes pingues \textbf{ter}ræ:~* in conspéctu ejus cadent omnes qui descén\underline{\textit{dunt}} \underline{\textit{in}} \textbf{ter}ram.}\polPs{}%
+\latN{\mred{33.}~Et ánima mea illi \textbf{vi}vet:~* et semen meum sér\underline{\textit{vi}}\underline{\textit{et}} \textbf{ip}si.}\polPs{}%
+\latN{\mred{34.}~Annuntiábitur Dómino generátio ven\textbf{tú}ra:~* et annuntiábunt cæli justítiam ejus pópulo qui nascétur, quem \underline{\textit{fe}}\underline{\textit{cit}} \textbf{Dó}minus.}\polPs{}%
+\EndParallel
+%% ---
+%% --- Resp. 1. Omnes amici mei ------
+%% ---
+\subsekcja{Responsorium 1}
+\vspace{-10pt}
+\greannotation{Resp. 1} \greannotation{3.} 
 %\grecommentary[4mm]{Gal 6: 14; Ps 66: 1}
-\gresetinitiallines{1}\gabcsnippet{(c4) O(g_[uh:l]i)mnes(i') <c>*</c>() a(i)mí(j')ci(h) me(h!iwjI'_[oh:h]HG)i(g.h!iwjIHijgg/efe.) (,) de(h)re(ghg')li(g)qué(gf/gff)runt(fv.df!gvFE'f) me,(fe..) (;) et(iij) prae(h!iwjjvIH'h)va(g)lu(h')é(i/j'k/ikjj)runt(ji..) (,) in(g)si(h')di(j)án(jijg~)tes(h!iwj) mi(ikjj)hi :(ji..) (:) trá(i)di(k)dit(jk!lvlV!kl~) me(i.) (,) quem(jj//jg~) di(h')li(j)gé(j_h_2iv_[oh:h]HG'h)bam :(hg..) (:) <c>*</c> Et(g) ter(g')ri(h)bí(j')li(i)bus(hg) ó(hjh___!iwj)cu(gh_G'_3FE'f)lis(fe..) (;) pla(e!fwg_[oh:h]/hi)ga(h') cru(h)dé(h!iwj)li(g') per(g)cu(gf/g_[uh:l]h)ti(f)én(e)tes,(eef.) (;) a(d_e)cé(g_[uh:l]h//g.h!iwj)to(jj//jvH'_GF'ghhg.) po(h)tá(hg/hff)bant(fv.df!gvFE'f) me.(fe..) (::) <c><sp>V/</sp>.</c> In(ikjj)ter(h!iwj_ihhg) in(i)í(ij)quos(hg) pro(h')je(j)cé(i)runt(ikjj) me,(ji..) (;) et(hg~) non(hi) pe(i)per(i)cé(ij)runt(i.) á(i_[hl:1]k_[hl:1]j'_2[hl:1]jv_I_H'_3iwj_i)ni(hg)mae(g.h!iwj) me(ji'ihiv_[oh:h]HG'h)ae.(hg..) (::) <c>*</c> Et(g) ter(g')ri(h)bí(j')li(i)bus.(hg) (::)}
+\gresetinitiallines{1}\gabcsnippet{(c4) O(g_[uh:l]i)mnes(i') <c><v>*</v></c>() a(i)mí(j')ci(h) me(h!iwjI'_[oh:h]HG)i(g.h!iwjIHijgg/efe.) (,) de(h)re(ghg')li(g)qué(gf/gff)runt(fv.df!gvFE'f) me,(fe..) (;) et(iij) prae(h!iwjjvIH'h)va(g)lu(h')é(i/j'k/ikjj)runt(ji..) (,) in(g)si(h')di(j)án(jijg~)tes(h!iwj) mi(ikjj)hi :(ji..) (:) trá(i)di(k)dit(jk!lvlV!kl~) me(i.) (,) quem(jj//jg~) di(h')li(j)gé(j_h_2iv_[oh:h]HG'h)bam :(hg..) (:) <c><v>*</v></c> Et(g) ter(g')ri(h)bí(j')li(i)bus(hg) ó(hjh___!iwj)cu(gh_G'_3FE'f)lis(fe..) (;) pla(e!fwg_[oh:h]/hi)ga(h') cru(h)dé(h!iwj)li(g') per(g)cu(gf/g_[uh:l]h)ti(f)én(e)tes,(eef.) (;) a(d_e)cé(g_[uh:l]h//g.h!iwj)to(jj//jvH'_GF'ghhg.) po(h)tá(hg/hff)bant(fv.df!gvFE'f) me.(fe..) (::) <c><sp>V/</sp>.</c> In(ikjj)ter(h!iwj_ihhg) in(i)í(ij)quos(hg) pro(h')je(j)cé(i)runt(ikjj) me,(ji..) (;) et(hg~) non(hi) pe(i)per(i)cé(ij)runt(i.) á(i_[hl:1]k_[hl:1]j'_2[hl:1]jv_I_H'_3iwj_i)ni(hg)mae(g.h!iwj) me(ji'ihiv_[oh:h]HG'h)ae.(hg..) (::) <c><v>*</v></c> Et(g) ter(g')ri(h)bí(j')li(i)bus.(hg) (::)}
 \linespace
 \tlumacz{\red{\Rbar.}~Wszyscy przyjaciele moi opuścili mię i przechwalali się czyhający na mnie. Wydał mnie, którego miłowałem: \red{*}~Zadawszy mi srogie rany, straszliwemi oczy patrzyli na mnie i octem poili mnie. \red{\Vbar.}~Porzucili mnie między łotrami i nie przepuścili duszy mojej. \red{\Rbar.}~Zadawszy mi ...}\paragraphspace
-%
-% ---------------------- Resp. 2 ----------------------  
-%
+%% ---
+%% --- Resp. 2. Velum templi ------
+%% ---
+\subsekcja{Responsorium 2}
+\vspace{-10pt}
 %\greannotation{} 
 \greannotation{Resp. 2} 
 \greannotation{2.} 
 %\grecommentary[4mm]{Philipp 2: 8-9}
-\gresetinitiallines{1}\gabcsnippet{(f3) VE(f)lum(e_[uh:l]fE'C) tem(ef~)pli(f.) <c>*</c>() scis(hg/h_i)sum(f!gwhG'_[oh:h]FE'f) est,(fe..) <c>*</c>(;) Et(e) o(f)mnis(h) ter(hv_G_F'_3Ef)ra(f!gwh/ih'hg') tré(f)mu(fg!hvGF'g)it :(gf..) (:) la(f_i)tro(ih'hg) de(fe) cru(f!gwhGFgv_[oh:h]FEf)ce(fe__) (,) cla(e)má(g')bat,(ihh) di(f!gwhG'_[oh:h]FE'f)cens :(fe..) (;) Me(e)mén(f)to(h) me(hg)i,(ef) Dó(f)mi(fg!hvGF'g)ne,(gf..) (;) dum(fc~) vé(e_0[uh:l]fg)ne(f)ris(f_0//ghf'_1[oh:h]/g_[oh:h]f'_3[oh:h]fe.) (,) in(e_[uh:l]f) re(h_i)gnum(ghi_[oh:h]jhiv_[oh:h]H_[oh:h]G_3[oh:h]) tu(f!gwhgh)um.(gf..) (::) <c><sp>V/</sp>.</c> Pe(e.f!gwhhi)trae(h) scis(ij)sae(i) sunt,(h.) (,) et(h) mo(h)nu(h)mén(hg~)ta(hi) a(gh)pér(f)ta(f!gwh_g) sunt,(gf..) (;) et(f) mul(ef~)ta(f) cór(f)po(f)ra(f) san(f)ctó(fg)rum,(f'_) (,) qui(f) dor(f)mí(f)e(f)rant,(f!gwhGF'~E~) sur(f)re(hg/hih)xé(hv_GF'g)runt.(ffe.) (::) <c>*</c> Et(e) o(f)mnis.(h) (::)}
+\gresetinitiallines{1}\gabcsnippet{(f3) VE(f)lum(e_[uh:l]fE'C) tem(ef~)pli(f.) <c><v>*</v></c>() scis(hg/h_i)sum(f!gwhG'_[oh:h]FE'f) est,(fe..) <c><v>*</v></c>(;) Et(e) o(f)mnis(h) ter(hv_G_F'_3Ef)ra(f!gwh/ih'hg') tré(f)mu(fg!hvGF'g)it :(gf..) (:) la(f_i)tro(ih'hg) de(fe) cru(f!gwhGFgv_[oh:h]FEf)ce(fe__) (,) cla(e)má(g')bat,(ihh) di(f!gwhG'_[oh:h]FE'f)cens :(fe..) (;) Me(e)mén(f)to(h) me(hg)i,(ef) Dó(f)mi(fg!hvGF'g)ne,(gf..) (;) dum(fc~) vé(e_0[uh:l]fg)ne(f)ris(f_0//ghf'_1[oh:h]/g_[oh:h]f'_3[oh:h]fe.) (,) in(e_[uh:l]f) re(h_i)gnum(ghi_[oh:h]jhiv_[oh:h]H_[oh:h]G_3[oh:h]) tu(f!gwhgh)um.(gf..) (::) <c><sp>V/</sp>.</c> Pe(e.f!gwhhi)trae(h) scis(ij)sae(i) sunt,(h.) (,) et(h) mo(h)nu(h)mén(hg~)ta(hi) a(gh)pér(f)ta(f!gwh_g) sunt,(gf..) (;) et(f) mul(ef~)ta(f) cór(f)po(f)ra(f) san(f)ctó(fg)rum,(f'_) (,) qui(f) dor(f)mí(f)e(f)rant,(f!gwhGF'~E~) sur(f)re(hg/hih)xé(hv_GF'g)runt.(ffe.) (::) <c><v>*</v></c> Et(e) o(f)mnis.(h) (::)}
 \linespace
 \tlumacz{\red{\Rbar.}~Zasłona kościelna rozdarła się. \red{*}~I wszystka ziemia zadrżała: łotr z krzyża wołał, mówiąc: Panie, pomnij na mnie, gdy przyjdziesz do Królestwa Twego. \red{\Vbar.}~Skały się popadały i groby się otworzyły i wiele ciał świętych, którzy byli posnęli, powstało. \red{\Rbar.}~I wszystka ziemia ...}\paragraphspace
-%
-% ---------------------- Resp. 3 ----------------------  
-%
+%% -----------------------------
+%% --- Resp. 3. Vinea mea ------
+%% -----------------------------
+\subsekcja{Responsorium 3}
+\vspace{-10pt}
 %\greannotation{} 
 \grecommentary[4mm]{Philipp 2: 8-9}
 \greannotation{Resp. 3} 
 \greannotation{8.} 
 \grecommentary[4mm]{}
-\gresetinitiallines{1}\gabcsnippet{(c4) VI(f_0gh)ne(g)a(g') me(g)a(gf) <c>*</c>() e(h!iwj)lé(j.i!jwkjk)cta,(kj..) (;) e(j)go(j_i_2jv_IHij) te(i) plan(i!jwkJ'_I_H'_3/!iwjIH)tá(gh!ivHG'h)vi :(hg..) (:) <c>*</c> Quó(jkj)mo(jh)do(jkj) con(jk~)vér(ki/j_k)sa(h!iwjI'_[oh:h]HG'h) es(hg__) (,) in(h) a(ig)ma(jv_2jv_)ri(kvJ'_I_2jv_I_3H'G)tú(gh)di(h_g_2hv_GF'g)nem,(gf..) (;) ut(jkj) me(jh) cru(jkj)ci(jk)fí(ki/j_k)ge(h)res,(hg/hih.) (,) et(gf~) Ba(ghg)ráb(ih)bam(jh'hg) di(hf__/g.h!iwj_I_H'_3iwjIH')mít(g)te(gh!ivHG'h)res?(hg..) (::) <c><sp>V/</sp>.</c> Se(j)pí(j)vi(ji) te,(jkjijihhg.) (,) et(hi~) lá(i)pi(i)des(i) e(ih)lé(ij)gi(hi) ex(g!hwi_[oh:h]h) te,(hg..) (;) et(g) ae(fg)di(g)fi(hi_[oh:h]HGhih)cá(ghf)vi(g_[uh:l]h) tur(h!iwji/jkJ'_IH)rim.(h_iHGhg..) (::) <c>*</c> Quó(jkj)mo(jh)do.(jkj) (::) <c><sp>R/</sp>.</c> Ví(f_0gh)ne(g)a.(g') (::)}
+\gresetinitiallines{1}\gabcsnippet{(c4) VI(f_0gh)ne(g)a(g') me(g)a(gf) <c><v>*</v></c>() e(h!iwj)lé(j.i!jwkjk)cta,(kj..) (;) e(j)go(j_i_2jv_IHij) te(i) plan(i!jwkJ'_I_H'_3/!iwjIH)tá(gh!ivHG'h)vi :(hg..) (:) <c><v>*</v></c> Quó(jkj)mo(jh)do(jkj) con(jk~)vér(ki/j_k)sa(h!iwjI'_[oh:h]HG'h) es(hg__) (,) in(h) a(ig)ma(jv_2jv_)ri(kvJ'_I_2jv_I_3H'G)tú(gh)di(h_g_2hv_GF'g)nem,(gf..) (;) ut(jkj) me(jh) cru(jkj)ci(jk)fí(ki/j_k)ge(h)res,(hg/hih.) (,) et(gf~) Ba(ghg)ráb(ih)bam(jh'hg) di(hf__/g.h!iwj_I_H'_3iwjIH')mít(g)te(gh!ivHG'h)res?(hg..) (::) <c><sp>V/</sp>.</c> Se(j)pí(j)vi(ji) te,(jkjijihhg.) (,) et(hi~) lá(i)pi(i)des(i) e(ih)lé(ij)gi(hi) ex(g!hwi_[oh:h]h) te,(hg..) (;) et(g) ae(fg)di(g)fi(hi_[oh:h]HGhih)cá(ghf)vi(g_[uh:l]h) tur(h!iwji/jkJ'_IH)rim.(h_iHGhg..) (::) <c><v>*</v></c> Quó(jkj)mo(jh)do.(jkj) (::) <c><sp>R/</sp>.</c> Ví(f_0gh)ne(g)a.(g') (::)}
 \linespace
 \tlumacz{\red{\Rbar.}~Winnico moja wybrana, jam Cię zasadził \red{*}~Jakoż obróciłaś się w gorzkość, abyś mię ukrzyżowała, a Barabasza wypuściła? \red{\Vbar.}~Ogrodziłem ciebie i wy brałem z ciebie kamienie i zbudowałem wieżę. \red{\Rbar.}~Jakoż obróciłaś się w gorzkość, abyś mię ukrzyżowała, a Barabasza wypuściła? \red{\Rbar.}~Winnico moja ...}\sectionspace
 %
@@ -128,7 +183,7 @@
 %\greannotation{Offert.} 
 %\greannotation{2.} 
 %\grecommentary[4mm]{}
-%\gresetinitiallines{1}\gabcsnippet{(f3) PRó(fffvEC//ef/gf)te(ef)ge,(f.) <c>*</c>(,) Dó(ef/hgh)mi(gf)ne,(g'hvGE.gefghf.1) (,) ple(gf)bem(ef~) tu(f_g_f_)am,(f.) (;) per(f) si(ghiihivHF'g)gnum(g/hhg.) (,) sanc(eg'!ivH'GF//hvGFgf)tæ(ef) Cru(fggf)cis,(f.) (;) ab(fe) óm(ffe/fhGE.gh/ih~)ni(fg)bus(g.) in(hhg)sí(fe)di(fg)is(g/hhg.) (,) in(e)i(gf)mi(hih)có(gf)rum(ghg) óm(fgf)ni(ef)um:(f.) (:)
+%\gresetinitiallines{1}\gabcsnippet{(f3) PRó(fffvEC//ef/gf)te(ef)ge,(f.) <c><v>*</v></c>(,) Dó(ef/hgh)mi(gf)ne,(g'hvGE.gefghf.1) (,) ple(gf)bem(ef~) tu(f_g_f_)am,(f.) (;) per(f) si(ghiihivHF'g)gnum(g/hhg.) (,) sanc(eg'!ivH'GF//hvGFgf)tæ(ef) Cru(fggf)cis,(f.) (;) ab(fe) óm(ffe/fhGE.gh/ih~)ni(fg)bus(g.) in(hhg)sí(fe)di(fg)is(g/hhg.) (,) in(e)i(gf)mi(hih)có(gf)rum(ghg) óm(fgf)ni(ef)um:(f.) (:)
 %ut(fe~) ti(ffvEC//ef/gf)bi(ef) gra(f_g_f_)tam(f.) (,) ex(f)hi(g)be(hi)á(i/jhiivHF.gh'ijhiivHF'g)mus(g/hhg.) (,) ser(eg'!ivH'GF//hvGFgf)vi(ef)tú(fggf)tem,(f.) (:)
 %et(fe) ac(f)cep(fe)tá(fhGE.ghi)bi(hg)le(fg) ti(fe)bi(fg) fi(g/hhg)at(g.) (;) sa(iiivHF//ghg)cri(e)fí(gh'!ivH'GF)ci(gf)um(ef) nos(f.e!fwg'!hv)trum(gf..) (:)
 %al(fe~)le(e/feggvFE'f)lú(f.e!fwg'!hv)ia.(gf..) (::)}
@@ -141,7 +196,7 @@
 %\greannotation{Comm.} 
 %\greannotation{4.} 
 %\grecommentary[4mm]{}
-%\gresetinitiallines{1}\gabcsnippet{(c3) PER(e) si(gih)gnum(g) Cru(ef)cis(efED.) (,) ~<c>*</c> de(fh) in(h)i(hf)mí(h)cis(hi!jvji) nos(gihh)tris(hg..) (:)
+%\gresetinitiallines{1}\gabcsnippet{(c3) PER(e) si(gih)gnum(g) Cru(ef)cis(efED.) (,) ~<c><v>*</v></c> de(fh) in(h)i(hf)mí(h)cis(hi!jvji) nos(gihh)tris(hg..) (:)
 %lí(f)be(ji)ra(j/ljji/jkjjij) nos,(ijHG.) (;) De(gh'i)us(h) nos(gvFEf./e!hghhg//hji/jh/iivHG)ter.(g.) (::)}
 %\paragraphspace
 %%
@@ -153,18 +208,18 @@
 %\greannotation{} 
 %\greannotation{4.} 
 %\grecommentary[4mm]{Ps 17: 2-3, 4, 18, 38-39, 41, 48-50}
-%\gresetinitiallines{0}\gabcsnippet{(c3) <c>1. </c> (g+) Dí(fe)li(ef)gam(f) te,(f) Dó(f)mi(f)ne,(f) for(f)<i>ti</i>(fe)<i>tú</i>(eg)<i>do</i>(g) <b>me</b>(fg)a:(f.) <c>*</c> (:) Dó(fe)mi(ef)nus(f) fir(f)ma(f)mén(f)tum(f) me(f)um,(f) et(f) re(f)fú(f)gi(f)um(f) me(f)um,(f) et(f) li(f)be(f)<i>rá</i>(ed)<i>tor</i>(ef) <i>me</i>(e)<i>us</i>.(c.) (:: e+ Z)
-%<c>2. </c>(g+) De(fe)us(ef) me(f)us(f) <i>ad</i>(fe)<i>jú</i>(eg)<i>tor</i>(g) <b>me</b>(fg)us,(f.) <c>*</c> (:) et(fe) spe(ef)rá(f)<i>bo</i>(ed) <i>in</i>(ef) <i>e</i>(e)<i>um</i>.(c.) (:: e+ Z)
-%<c>3. </c>(g+) Pro(fe)téc(ef)tor(f) me(f)us,(f) et(f) cor(f)nu(f) <i>sa</i>(fe)<i>lú</i>(eg)<i>tis</i>(g) <b>me</b>(fg)æ,(f.) <c>*</c> (:) et(fe) su(ef)<i>scép</i>(ed)<i>tor</i>(ef) <i>me</i>(e)<i>us</i>.(c.) (:: e+ Z)
-%<c>4. </c>(g+) Lau(fe)dans(ef) in(f)<i>vo</i>(fe)<i>cá</i>(eg)<i>bo</i>(g) <b>Dó</b>(fg)mi(f)num:(f.) <c>*</c> (:) et(fe) ab(ef) in(f)i(f)mí(f)cis(f) me(f)is(f) <i>sal</i>(ed)<i>vus</i>(ef) <i>e</i>(e)<i>ro</i>.(c.) (:: e+ Z)
-%<c>5. </c>(g+) E(fe)rí(ef)pu(f)it(f) me(f) de(f) in(f)i(f)mí(f)cis(f) me(f)is(f) for(f)tís(f)si(d)mis, <c>†</c>(d.) et(f) ab(f) <i>his</i>(fe) <i>qui</i>(eg) <i>o</i>(g)<b>dé</b>(fg)runt(f) me:(f.) <c>*</c> (:) quón(fe)i(ef)am(f) con(f)for(f)tá(f)ti(f) <i>sunt</i>(ed) <i>su</i>(ef)<i>per</i>(e) <i>me</i>.(c.) (:: e+ Z)
-%<c>6. </c>(g+) Pér(fe)se(ef)quar(f) in(f)i(f)mí(f)cos(f) me(f)os(f) et(f) com(f)<i>pre</i>(fe)<i>hén</i>(eg)<i>dam</i>(g) <b>il</b>(fg)los:(f.) <c>*</c> (:) et(fe) non(ef) con(f)vér(f)tar,(f) do(f)nec(f) <i>de</i>(ed)<i>fí</i>(ef)<i>ci</i>(e)<i>ant</i>.(c.) (:: e+ Z)
-%<c>7. </c>(g+) Con(fe)frín(ef)gam(f) il(f)los,(f) nec(f) <i>pót</i>(fe)<i>e</i>(eg)<i>runt</i>(g) <b>sta</b>(fg)re:(f.) <c>*</c> (:) ca(fe)dent(ef) sub(f)tus(f) <i>pe</i>(ed)<i>des</i>(ef) <i>me</i>(e)<i>os</i>.(c.) (:: e+ Z)
-%<c>8. </c>(g+) Et(fe) in(ef)i(f)mí(f)cos(f) me(f)os(f) de(f)dís(f)<i>ti</i>(fe) <i>mi</i>(eg)<i>hi</i>(g) <b>dor</b>(fg)sum,(f.) <c>*</c> (:) et(fe) o(ef)di(f)én(f)tes(f) me(f) dis(f)<i>per</i>(ed)<i>di</i>(ef)<i>dís</i>(e)<i>ti</i>.(c.) (:: e+ Z)
-%<c>9. </c>(g+) De(fe)us,(ef) qui(f) das(f) vin(f)díc(f)tas(f) mi(f)hi,(f) et(f) sub(f)dis(f) <i>pó</i>(fe)<i>pu</i>(eg)<i>los</i>(g) <b>sub</b>(fg) me:(f.) <c>*</c> (:) li(fe)be(ef)rá(f)tor(f) me(f)us(f) de(f) in(f)i(f)mí(f)cis(f) me(f)is(f) <i>i</i>(ed)<i>ra</i>(ef)<i>cún</i>(e)<i>dis</i>.(c.) (:: e+ Z)
-%<c>10. </c>(g+) Et(fe) ab(ef) in(f)sur(f)gén(f)ti(f)bus(f) in(f) <i>me</i>(fe) <i>ex</i>(eg)<i>al</i>(g)<b>tá</b>(fg)bis(f) me:(f.) <c>*</c> (:) a(fe) vi(ef)ro(f) in(f)í(f)quo(f) e(f)<i>rí</i>(ed)<i>pi</i>(ef)<i>es</i>(e) <i>me</i>.(c.) (:: e+ Z)
-%<c>11. </c>(g+) Prop(fe)tér(ef)e(f)a(f) con(f)fi(f)té(f)bor(f) ti(f)bi(f) in(f) na(f)ti(f)<i>ó</i>(fe)<i>ni</i>(eg)<i>bus</i>,(g) <b>Dó</b>(fg)mi(f)ne:(f.) <c>*</c> (:) et(fe) nó(ef)mi(f)ni(f) tu(f)o(f) <i>psal</i>(ed)<i>mum</i>(ef) <i>di</i>(e)<i>cam</i>.(c.) (:: e+ Z)
-%<c>12. </c>(g+) Gló(fe)ri(ef)a(f) Pa(f)tri,(f) et(f) Fí(f)li(f)o,(f) et(f) Spi(f)rí(f)tu(f)i(f) Sanc(f)to.(f)Sic(f)ut(f) e(f)rat(f) in(f) prin(f)cí(f)pi(f)o,(f) <i>et</i>(fe) <i>nunc</i>,(eg) <i>et</i>(g) <b>sem</b>(fg)per,(f.) <c>*</c> (:) et(fe) in(ef) sǽ(f)cu(f)la(f) sæ(f)cu(f)<i>ló</i>(ed)<i>rum</i>.(ef) <i>A</i>(e)<i>men</i>.(c.) (:: e+ Z)}
+%\gresetinitiallines{0}\gabcsnippet{(c3) <c>1. </c> (g+) Dí(fe)li(ef)gam(f) te,(f) Dó(f)mi(f)ne,(f) for(f)<i>ti</i>(fe)<i>tú</i>(eg)<i>do</i>(g) <b>me</b>(fg)a:(f.) <c><v>*</v></c> (:) Dó(fe)mi(ef)nus(f) fir(f)ma(f)mén(f)tum(f) me(f)um,(f) et(f) re(f)fú(f)gi(f)um(f) me(f)um,(f) et(f) li(f)be(f)<i>rá</i>(ed)<i>tor</i>(ef) <i>me</i>(e)<i>us</i>.(c.) (:: e+ Z)
+%<c>2. </c>(g+) De(fe)us(ef) me(f)us(f) <i>ad</i>(fe)<i>jú</i>(eg)<i>tor</i>(g) <b>me</b>(fg)us,(f.) <c><v>*</v></c> (:) et(fe) spe(ef)rá(f)<i>bo</i>(ed) <i>in</i>(ef) <i>e</i>(e)<i>um</i>.(c.) (:: e+ Z)
+%<c>3. </c>(g+) Pro(fe)téc(ef)tor(f) me(f)us,(f) et(f) cor(f)nu(f) <i>sa</i>(fe)<i>lú</i>(eg)<i>tis</i>(g) <b>me</b>(fg)æ,(f.) <c><v>*</v></c> (:) et(fe) su(ef)<i>scép</i>(ed)<i>tor</i>(ef) <i>me</i>(e)<i>us</i>.(c.) (:: e+ Z)
+%<c>4. </c>(g+) Lau(fe)dans(ef) in(f)<i>vo</i>(fe)<i>cá</i>(eg)<i>bo</i>(g) <b>Dó</b>(fg)mi(f)num:(f.) <c><v>*</v></c> (:) et(fe) ab(ef) in(f)i(f)mí(f)cis(f) me(f)is(f) <i>sal</i>(ed)<i>vus</i>(ef) <i>e</i>(e)<i>ro</i>.(c.) (:: e+ Z)
+%<c>5. </c>(g+) E(fe)rí(ef)pu(f)it(f) me(f) de(f) in(f)i(f)mí(f)cis(f) me(f)is(f) for(f)tís(f)si(d)mis, <c>†</c>(d.) et(f) ab(f) <i>his</i>(fe) <i>qui</i>(eg) <i>o</i>(g)<b>dé</b>(fg)runt(f) me:(f.) <c><v>*</v></c> (:) quón(fe)i(ef)am(f) con(f)for(f)tá(f)ti(f) <i>sunt</i>(ed) <i>su</i>(ef)<i>per</i>(e) <i>me</i>.(c.) (:: e+ Z)
+%<c>6. </c>(g+) Pér(fe)se(ef)quar(f) in(f)i(f)mí(f)cos(f) me(f)os(f) et(f) com(f)<i>pre</i>(fe)<i>hén</i>(eg)<i>dam</i>(g) <b>il</b>(fg)los:(f.) <c><v>*</v></c> (:) et(fe) non(ef) con(f)vér(f)tar,(f) do(f)nec(f) <i>de</i>(ed)<i>fí</i>(ef)<i>ci</i>(e)<i>ant</i>.(c.) (:: e+ Z)
+%<c>7. </c>(g+) Con(fe)frín(ef)gam(f) il(f)los,(f) nec(f) <i>pót</i>(fe)<i>e</i>(eg)<i>runt</i>(g) <b>sta</b>(fg)re:(f.) <c><v>*</v></c> (:) ca(fe)dent(ef) sub(f)tus(f) <i>pe</i>(ed)<i>des</i>(ef) <i>me</i>(e)<i>os</i>.(c.) (:: e+ Z)
+%<c>8. </c>(g+) Et(fe) in(ef)i(f)mí(f)cos(f) me(f)os(f) de(f)dís(f)<i>ti</i>(fe) <i>mi</i>(eg)<i>hi</i>(g) <b>dor</b>(fg)sum,(f.) <c><v>*</v></c> (:) et(fe) o(ef)di(f)én(f)tes(f) me(f) dis(f)<i>per</i>(ed)<i>di</i>(ef)<i>dís</i>(e)<i>ti</i>.(c.) (:: e+ Z)
+%<c>9. </c>(g+) De(fe)us,(ef) qui(f) das(f) vin(f)díc(f)tas(f) mi(f)hi,(f) et(f) sub(f)dis(f) <i>pó</i>(fe)<i>pu</i>(eg)<i>los</i>(g) <b>sub</b>(fg) me:(f.) <c><v>*</v></c> (:) li(fe)be(ef)rá(f)tor(f) me(f)us(f) de(f) in(f)i(f)mí(f)cis(f) me(f)is(f) <i>i</i>(ed)<i>ra</i>(ef)<i>cún</i>(e)<i>dis</i>.(c.) (:: e+ Z)
+%<c>10. </c>(g+) Et(fe) ab(ef) in(f)sur(f)gén(f)ti(f)bus(f) in(f) <i>me</i>(fe) <i>ex</i>(eg)<i>al</i>(g)<b>tá</b>(fg)bis(f) me:(f.) <c><v>*</v></c> (:) a(fe) vi(ef)ro(f) in(f)í(f)quo(f) e(f)<i>rí</i>(ed)<i>pi</i>(ef)<i>es</i>(e) <i>me</i>.(c.) (:: e+ Z)
+%<c>11. </c>(g+) Prop(fe)tér(ef)e(f)a(f) con(f)fi(f)té(f)bor(f) ti(f)bi(f) in(f) na(f)ti(f)<i>ó</i>(fe)<i>ni</i>(eg)<i>bus</i>,(g) <b>Dó</b>(fg)mi(f)ne:(f.) <c><v>*</v></c> (:) et(fe) nó(ef)mi(f)ni(f) tu(f)o(f) <i>psal</i>(ed)<i>mum</i>(ef) <i>di</i>(e)<i>cam</i>.(c.) (:: e+ Z)
+%<c>12. </c>(g+) Gló(fe)ri(ef)a(f) Pa(f)tri,(f) et(f) Fí(f)li(f)o,(f) et(f) Spi(f)rí(f)tu(f)i(f) Sanc(f)to.(f)Sic(f)ut(f) e(f)rat(f) in(f) prin(f)cí(f)pi(f)o,(f) <i>et</i>(fe) <i>nunc</i>,(eg) <i>et</i>(g) <b>sem</b>(fg)per,(f.) <c><v>*</v></c> (:) et(fe) in(ef) sǽ(f)cu(f)la(f) sæ(f)cu(f)<i>ló</i>(ed)<i>rum</i>.(ef) <i>A</i>(e)<i>men</i>.(c.) (:: e+ Z)}
 %\vspace{5mm}
 %\tlumaczR{}
 %%
@@ -174,7 +229,7 @@
 %\greannotation{Comm.} 
 %\greannotation{4.} 
 %\grecommentary[4mm]{}
-%\gresetinitiallines{1}\gabcsnippet{(c3) PER(e) si(gih)gnum(g) Cru(ef)cis(efED.) (,) ~<c>*</c> de(fh) in(h)i(hf)mí(h)cis(hi!jvji) nos(gihh)tris(hg..) (:)
+%\gresetinitiallines{1}\gabcsnippet{(c3) PER(e) si(gih)gnum(g) Cru(ef)cis(efED.) (,) ~<c><v>*</v></c> de(fh) in(h)i(hf)mí(h)cis(hi!jvji) nos(gihh)tris(hg..) (:)
 %lí(f)be(ji)ra(j/ljji/jkjjij) nos,(ijHG.) (;) De(gh'i)us(h) nos(gvFEf./e!hghhg//hji/jh/iivHG)ter.(g.) (::)}
 %\paragraphspace
 %Tłumaczenia:
