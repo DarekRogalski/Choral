@@ -217,6 +217,7 @@
 % ----------------------------------------------------------------------
 % ------------------------- CZCIONKA TEKSTU ------------------------
 \newcommand\latinfont{\fontsize{\fsize}{\fblsize}\selectfont}
+\newcommand\latinfontPs{\fontsize{\fsize}{18}\selectfont}
 \newcommand\polishfontBig{\fontsize{\fsize}{\fblsize}\selectfont\itshape}
 \newcommand\polishfontSmall{\fontsize{11}{6}\selectfont\itshape}
 % -------------------- POKAŻ CZCIONKĘ -----------------------------------
@@ -347,7 +348,8 @@
 % -----------------------------------------------------------------------------------
 %\newcommand{\firstchar}[1]{\directlua{tex.sprint(unicode.utf8.sub('#1',1,1))}}%makro pobiera pierwszy znak ze stringu
 \newcommand{\red}[1]{\textcolor{myRed}{#1}}
-\newcommand{\mred}[1]{\leftskip6pt\makebox[3pt][r]{\textcolor{myRed}{\footnotesize{#1}}}}
+\setlength{\fboxsep}{0pt}
+\newcommand{\mred}[1]{\begin{minipage}{14pt}\textcolor{myRed}{\footnotesize{#1}}\end{minipage}}
 \newcommand{\black}[1]{\textcolor{black}{#1}}
 %\newcommand{\numer}[1]{\noindent\makebox[1em][l]{\textcolor{myRed}{#1}}}
 % --------------------------------
@@ -382,7 +384,7 @@
 \newcommand{\BeginParallel}{\begin{sloppypar}\begin{paracol}{2}\licznikZero}
 % dwie kolumny z automatyczną numeracją:
 \newcommand{\lat}[1]{
-		\begin{leftcolumn*}[]\noindent\mystrut
+		\begin{leftcolumn*}\noindent\mystrut
 			\ifnum \value{licznik}>0 
 				\licznikUp
 				\latinfont\textlatin{\thelicznik .~#1}
@@ -394,21 +396,27 @@
 }
 \newcommand{\pol}[1]{
 	\begin{rightcolumn}\noindent\mystrut
-				\ensurevspace{2\baselineskip}
+				%\ensurevspace{2\baselineskip}
 				\polishfontBig\textpolish{#1}
 	\end{rightcolumn}	
 }% wersja dla tłumaczenia psalmów z dużą czcionką
-
-\newcommand{\latN}[1]{% kolumna lat bez aut. numeracji:
-	\begin{leftcolumn*}[]\noindent\mystrut
-			\hspace{6pt}\latinfont\textlatin{#1}
-	\end{leftcolumn*}
+\newcommand{\latN}[1]{% kolumna lat bez aut. numeracji normalny tekst
+	\begin{leftcolumn*}\begin{minipage}{\columnwidth}\noindent\mystrut
+			%\ensurevspace{2\baselineskip}
+			\latinfont\textlatin{#1}
+	\end{minipage}\end{leftcolumn*}
+}
+\newcommand{\latNPs}[1]{% kolumna lat bez aut. numeracji dla psalmów - zagęszczony tekst
+	\begin{leftcolumn*}\begin{minipage}{\columnwidth}\noindent\mystrut
+			%\ensurevspace{2\baselineskip}
+			\latinfontPs\textlatin{#1}
+	\end{minipage}\end{leftcolumn*}
 }
 \newcommand{\polPs}[1]{% kolumna pl bez numeracji wersów
-	\begin{rightcolumn}\noindent\mystrut
-				\ensurevspace{2\baselineskip}
+	\begin{rightcolumn}\begin{minipage}{\columnwidth}\noindent\mystrut
+				%\ensurevspace{2\baselineskip}
 				\polishfontSmall\textpolish{#1}
-	\end{rightcolumn}	
+	\end{minipage}\end{rightcolumn}	
 }% wersja dla tłumaczenia psalmów z mniejszą czcionką
 \newcommand{\EndParallel}{\end{paracol}\end{sloppypar}}
 % ------------------------------------------------------------------------------------------
