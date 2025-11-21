@@ -1,0 +1,72 @@
+% !TEX TS-program = lualatex+se+debug
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[17pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=20mm,
+	right=20mm,
+	top=20mm,
+	bottom=20mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{20}%rozmiar wyniku GregorioTEX
+\gresetlastline{ragged}% justowanie do lewej
+\grechangestyle{initial}{\greIni\fontsize{44}{26}\selectfont} 
+% koniec 
+
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+\def\mydebug{0}% 0 - debugowanie, 1 - bez debugowania (wyłącza bloki \if\mydebug1)
+\begin{document}
+\makeatletter
+\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+\makeatother
+\pagestyle{empty}
+% ---------------------- POMOC ------------------------
+% <c><v>*</v></c>
+% <c><v>†</v></c>
+% <c><i>Ps.</i></c> 
+% <c><sp>V/</sp>.</c>
+% <c><sp>R/</sp>.</c>
+% <c><i>ij.</i></c>
+% \tikz[overlay]\draw[red](-10,0)--++(15,0);
+% \noindent\hrulefill 
+% \red{†}~  \red{*}~ 
+% é á í ó ú ý æ ǽ œ Á, É, Í, Ó, Ú, Ý Æ Ǽ Œ \'{\oe} \'{\OE}
+% ---------------------- POMOC ------------------------
+%
+\gresetbracerendering{font}
+\grechangedim{spacelinestext}{24pt}{scalable}% zmniejszam dla lekcji do ok. 0.7cm
+\grechangestyle{initial}{\fontsize{20}{16}\selectfont} % ustawia czcionkę zdefiniowaną w sekcji czcionek o zmniejsza wielkość inicjału do rozmiaru 20pt a baseline do 16pt
+\grechangestyle{annotation}{\color{red}\LARGE}% format adnotacji
+%% ---
+%% --- Tonusy ------
+%% ---
+\sekcja{Octo Toni Psalmorum}{}
+\gresetinitiallines{1}\greannotation{~}\greannotation{1.}\gabcsnippet{(c4) <v>~</v>Prí(f)mus(gh) Tó(h)nus(h) sic(h) in(h)cí(h)pi(h)tur,(h) sic(h) fléc(h)ti(g)tur,(g.) <c><v>†</v></c>(,) et(h) sic(h) me(ixi)di(h)á(g)tur.(h.) <c><v>*</v></c>(::Z) Ma(f)gní(gh)fi(h)cat.(h.) (::) Et(f) ex(gh)sul(h)tá(h)vit.(h) (::)}\minispace
+\gresetinitiallines{1}\greannotation{~}\greannotation{2.}\gabcsnippet{(f3) <v>~</v>Se(e)cún(f)dus(h) Tó(h)nus(h) sic(h) in(h)cí(h)pi(h)tur,(h) sic(h) fléc(h)ti(f)tur,(f.) <c><v>†</v></c>(,) et(h) sic(h) me(h)di(h)á(i)tur.(h.) <c><v>*</v></c> (::Z)Ma(e)gní(fe)fi(eh)cat.(h.) (::) Et(e) ex(f)sul(h)tá(h)vit.(h) (::)}\minispace
+\gresetinitiallines{1}\greannotation{~}\greannotation{3.}\gabcsnippet{(c4) <v>~</v>Tér(g)ti(hj)us(j) Tó(j)nus(j) sic(j) in(j)cí(j)pi(j)tur,(j) sic(j) fléc(j)ti(h)tur,(h.) <c><v>†</v></c>(,) et(j) sic(j) me(k)di(j)á(ih)tur.(j.) <c><v>*</v></c>(::Z) Ma(g)gní(hj)fi(j)cat.(j.) (::) Et(g) ex(hj)sul(j)tá(j)vit.(j) (::)}\minispace
+\gresetinitiallines{1}\greannotation{~}\greannotation{4.}\gabcsnippet{(c4) <v>~</v>Quar(h)tus(gh) Tó(h)nus(h) sic(h) in(h)cí(h)pi(h)tur,(h)  sic(h) fléc(h)ti(g)tur,(g.) <c><v>†</v></c>(,)et(h) sic(h) me(g)di(h)á(i)tur.(h.) <c><v>*</v></c>(::Z)Ma(h)gní(gh)fi(h)cat.(h.) (::) Et(h) ex(gh)sul(h)tá(h)vit.(h) (::)}\minispace
+\gresetinitiallines{1}\greannotation{~}\greannotation{4.}\gabcsnippet{(c3) <alt>Altera Positio ejusdem Toni</alt><v>~</v>Quar(i)tus(hi) Tó(i)nus(i) sic(i) in(i)cí(i)pi(i)tur,(i) sic(i) fléc(i)ti(h)tur,(h.) <c><v>†</v></c>(,)et(i) sic(i) me(h)di(i)á(j)tur.(i.) <c><v>*</v></c>(::Z)Ma(i)gní(hi)fi(i)cat.(i.) (::) Et(i) ex(hi)sul(i)tá(i)vit.(i) (::)}\clearpage
+\gresetinitiallines{1}\greannotation{~}\greannotation{5.}\gabcsnippet{(c3) <v>~</v> Quín(d)tus(f) Tó(h)nus(h) sic(h) in(h)cí(h)pi(h)tur,(h)  sic(h) fléc(h)ti(f)tur,(f.) <c><v>†</v></c>(,)et(h) sic(h) me(h)di(h)á(i)tur.(h.) <c><v>*</v></c>(::Z) Ma(d)gní(f)fi(h)cat.(h.) (::) Et(d) ex(f)sul(h)tá(h)vit.(h) (::)}\minispace
+\gresetinitiallines{1}\greannotation{~}\greannotation{6.}\gabcsnippet{(c4) <v>~</v>Séx(f)tus(gh) Tó(h)nus(h) sic(h) in(h)cí(h)pi(h)tur,(h)  sic(h) fléc(h)ti(g)tur,(g.) <c><v>†</v></c>(,) et(h) sic(h) me(ixi)di(h)á(g)tur.(h.) <c><v>*</v></c>(::Z) <v>[</v>()<alt>vel alio modo</alt>et(h) sic(h) me(h)di(g)á(h)tur.(f.) <c><v>*</v></c>(::)<v>]</v> Ma(f)gní(gh)fi(h)cat.(h.) (::) Et(f) ex(gh)sul(h)tá(h)vit.(h) (::)}\minispace
+\gresetinitiallines{1}\greannotation{~}\greannotation{7.}\gabcsnippet{(c3) <v>~</v>Sép(hg)ti(hi)mu(i)s(i) Tó(i)nus(i) sic(i) in(i)cí(i)pi(i)tur,(i)sic(i) fléc(i)ti(h)tur,(h.) <c><v>†</v></c>(,) et(i) sic(i) me(k)di(j)á(i)tur.(j.) <c><v>*</v></c>(::Z) Ma(hg)gní(hi)fi(i)cat.(i.) (::) Et(hg) ex(hi)sul(i)tá(i)vit.(i) (::)}\minispace
+\gresetinitiallines{1}\greannotation{~}\greannotation{8.}\gabcsnippet{(c4) <v>~</v>Oc(g)tá(h)vus(j) Tó(j)nus(j) sic(j) in(j)cí(j)pi(j)tur,(j) sic(j) fléc(j)ti(h)tur,(h.) <c><v>†</v></c>(,)et(j) sic(j) me(j)di(j)á(k)tur.(j.) <c><v>*</v></c>(::Z)Ma(g)gní(hg)fi(gj)cat.(j.) <c><v>*</v></c>(::) Et(g) ex(h)sul(j)tá(j)vit.(j) (::)}\minispace
+\grechangestyle{annotation}{\color{red}\normalsize}% format adnotacji
+\gresetinitiallines{1}\greannotation{Ton.}\greannotation{Per.}\gabcsnippet{(c4) <v>~</v>In(ixhi) éx(h)i(h)tu(h) Is(h)ra(h)el(h) de(ixi) Ae(h)gýp(g)to,(f.) <c><v>*</v></c>(:) dó(ixhi)mus(g) Já(g)cob...(g) (::) <alt>vel ad libitum</alt>Is(h)ra(h)el(g) de(ixi) Ae(h)gýp(g)to,(f) <c><v>*</v></c>(:) dó(g)mus...(g) (::) Fác(h)ta(h) est(h) Ju(h)daé(h)a(h) sanc(h)ti(h)fi(h)cá(h)ti(ixi)o(h) é(g)jus:(f.) <c><v>*</v></c>(:z)<alt>vel</alt> ... sanc(h)ti(h)fi(h)cá(g)ti(ixi)o(h) é(g)jus:(f.) <c><v>*</v></c>(:) Is(g)ra(g)el...(g) (::) et(h) non(h) <alt>Flexa</alt>pal(h)pá(h)bunt:(g.) <c><v>†</v></c>(,)
+}
+%\gresetinitiallines{0}\greannotation{1.}\gabcsnippet{}
+\end{document}

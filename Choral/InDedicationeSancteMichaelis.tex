@@ -1,0 +1,138 @@
+% !TEX TS-program = lualatex+se+debug
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[14pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{20}%rozmiar wyniku GregorioTEX
+\gresetlastline{ragged}% justowanie do lewej
+\grechangestyle{initial}{\greIni\fontsize{46}{26}\selectfont} 
+% koniec 
+
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+%\def\mydebug{1}
+\begin{document}
+\makeatletter
+\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+\makeatother
+\pagestyle{empty}
+%\pagestyle{plain}	
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{In Dedicatione S. Michaëlis Archangelis}
+	\small\textit{Liber Usualis, p.1653\\}
+	\small\textit{}
+	\vspace{1mm}
+\end{center}	
+\end{spacing}
+% <c>*</c>
+% <c><i>Ps.</i></c> 
+% <c><sp>V/</sp>.</c>
+% <c><i>ij.</i></c>
+% -------------------- INTROIT -------------------- 
+%\greannotation{} 
+\greannotation{Intr.} 
+\greannotation{3.} 
+\grecommentary[4mm]{Ps 102: 20, 1}
+\gresetinitiallines{1}\gabcsnippet{(c4) BE(g)ne(g)dí(hj)ci(j)te(j) Dó(ij)mi(j)num(j.) <c>*</c>(,) om(j)nes(j) An(j)ge(jjj_h)li(hk) e(kj~)jus:(jkjji.) (;) pot(g)én(gh~)tes(h) vir(h)tú(jj)te,(i_h) (;) qui(gfg) fá(hg/ji)ci(j)tis(j) ver(hj~)bum(jj) e(gh~)jus,(h_i_h._) (:) ad(g) au(h)di(hkj)én(i)dam(jj//jj) vo(h_g)cem(g_f) (,) ser(fh~)mó(h_g/jjvH'G)num(g_e) e(fgF~'E~)jus.(e.) (::) <c><i>Ps.</i></c> Bé(g)ne(hj)dic(j) á(j)ni(j)ma(j) me(k)a(j) Dó(j)mi(ih)no:(jjj) <c>*</c>(:) et(ig) óm(hj)ni(j)a(j) quæ(j) in(j)tra(j) me(j) sunt,(j.) (,) nó(j)mi(j)ni(jji) sanc(hg)to(h') e(i)jus.(gh..) (::) Gló(g)ri(hj)a(j) Pa(j)tri.(j) (::) <eu>E(j) u(jji) o(hg) u(h') a(i) e.</eu>(gh..) (::)}
+\paragraphspace
+%\tlumaczR{\red{Ps 102:20} Błogosławcie Pana, wszyscy Jego Aniołowie, potężni mocą, pełniący Jego rozkazy, abyście posłuszni byli Jego słowu. \red{Ps 102:1} Błogosław, duszo moja, Pana, a wszystko, co jest we mnie, święte imię Jego. \red{℣.} Chwała Ojcu...}\sectionspace
+%
+% -------------------- GRADUALE -------------------- 
+%
+%\greannotation{} 
+\greannotation{Grad.} 
+\greannotation{3.} 
+\grecommentary[4mm]{Ps 102: 20, 1}
+\gresetinitiallines{1}\gabcsnippet{(c4) BE(f)ne(ffff_c)dí(d!ewf_e)ci(f)te(fffd/fff) <c>*</c>(,)
+Dó(e.f!gwh_g)mi(hg)num(ixg_h//e.f!gw!higff/ded.) (;) om(g)nes(hj) An(j)ge(j)li(j) e(jj//jjjvHGigh)jus:(h.) (,) (i_j_i_2/j_[hl:1]k_[hl:1]i'_[hl:1]//kvJ'IHjvIH) (,) (jj/ki'jvHG'jh'/ihhg.) (:)
+pot(g)én(hjI~H~)tes(jkJ'H) vir(jjh~)tú(jjj_g)te,(ixg_h//e.f!gw!higff/ded.) (;) qui(gji) fá(jji/j_k)ci(jkJ'Hg!ihi)tis(ij'k) ver(jk~)bum(g_f) (,) e(f!h'j~)jus.(i_g//ivHGhhf/hh) (,) (g!jj//jj//jjjvH'GF'Ef_h//ixivGFghg/hgge.) (::)
+<c><sp>V/</sp>.</c> Bé(e)ne(e)dic(ege/ghgff/ded.) (,) á(dc)ni(g)ma(hj) me(ijh)a(h.) Dó(h!jij)mi(hgh)num,(h.) (,) (i_j_i_2/j_[hl:1]k_[hl:1]i'_[hl:1]//kvJ'IHjvIH) (,) (jj/ki'jvHG'jh'/ihhg.) (:)
+et(ijg) óm(h_j)ni(j)a(jj) (,) in(ijg)te(h_i)ri(i)ó(ki/jk_[hl:1]j//ki/jk_[hl:1]jk//ij/kjkkj)ra(j_i) (,) me(jh/jjjvHG'h!jjjvHG'h)a(hv.gjh/ihhg.) (:)
+no(hji)men(jj//jjjh/ijHG.) (,) (jj//jjjh/ijHG.) (,) (jj/kh/jjk/jk/ljjj'1h/ijHG.) (,) (jg/i_j//gh!jjjvH'GF'fd.) (;) sanc(fd/ffd/ef!gh/jjj)tum(g_f) <c>*</c>() e(f!h'j~)jus.(i_g//ivHGhhf/hh) (,) (g!jj//jj//jjjvH'GF'/[-0.5]{ix}E0f_h//ivGFghg/hgge.) (::)}
+\paragraphspace
+%
+% -------------------- ALLELUIA -------------------- 
+%
+%\greannotation{} 
+\greannotation{Alleluia} 
+\greannotation{8.} 
+\grecommentary[4mm]{}
+\gresetinitiallines{1}\gabcsnippet{(c4) AL(d)le(ggf)lú(hg~)ia.(gv.efd.1) {<c>*</c>}~<c><i>ij.</i></c>(;) (df!ghhgjvIHG.) (,) (giihkvJIH'GivHG'Fgh//fefd.) (,) (df!ghhgjvIH'hg.) (::)
+<c><sp>V/</sp>.</c> Sanc(dg~)te(gh) Mí(gf)cha(de)el(ev.dec.) (,) Arch(ghi)án(ih~)ge(h/jkJH'GF'g)le,(g.) (;) de(g)fén(e)de(fe) nos(d) in(d) prœ́(ef)li(g)o:(g/iihkvJIH'hg.) (:)
+ut(gk) non(k_[hl:1]g) per(hf)e(ghi)á(i.h!iw!jvI'HG)mus(g'/hfg.) (;) in(d) tre(ggf)mén(hg~)do(g.) <c>*</c>() ju(f)dí(de)ci(ev.dec)o.(c.) (;) (df!ghhgjvIHG.) (,) (giihkvJIH'GivHG'Fgh//fefd.) (,) (df!ghhgjvIH'hg.) (::)}
+\sectionspace
+%
+% -------------------- OFFERTORIUM -------------------- 
+%
+%\greannotation{} 
+\greannotation{Offert.} 
+\greannotation{1.} 
+\grecommentary[4mm]{Apoc 8: 3, 4}
+\gresetinitiallines{1}\gabcsnippet{(c4) STe(fffvDC'dff/hgh)tit(fgf.) <c>*</c>(,) An(fg'h)ge(h)lus(ixhf/higff/ded.) (;) jux(d)ta(d!gfg) a(dgfefd/e[ll:1]d)ram(dV!cd~) tem(dv.cd'f/ef!hvGE'fd)pli,(d.) (:)
+ha(ixdf'!hv//j_hivGEf_g)bens(f.) (,) thu(de)rí(gh)bu(hggvE'DC'd)lum(d.) (,) áu(cd'f/ef'!gvE'Dfv.efd/e[ll:1]d)re(cd)um(dfddc.) (,) in(da~) ma(cd)nu(d) su(dfd___)a:(d.) (:)
+et(cd~) da(d)ta(fde) sunt(dec) e(cd'f/efd)i(d.) (,) in(da~)cén(cd~)sa(d) mul(dfd___)ta:(d.) (:)
+et(c) a(d)scén(ixdh./jjh//gih/ig.fg'hjjg,f!h_gh//fh!jvGF'fdf.//eg/hjh/jhhV!gh~)dit(f.) (;) fu(ef'!gvE'Dfv.efd)mus(dfddc.) a(cd'f/ef'g)ró(e[ll:1]d/fe)ma(d_e_d_)tum(d.) (,) in(da~) con(cd~)spéc(d)tu(d) De(d_e_d_)i,(d.) (:)
+al(cd)le(f_g_f_hv.ghFD.1//cd/fefg_e,h_gefd//fvEDe[ll:1]d)lú(cd~)ia.(d.) (::)}
+\sectionspace
+%
+% -------------------- COMMUNIO -------------------- 
+%
+%\greannotation{} 
+\greannotation{Comm.} 
+\greannotation{3.} 
+\grecommentary[4mm]{Dan 3: 58}
+\gresetinitiallines{1}\gabcsnippet{(c4) BE(eef)ne(de)dí(gh)ci(g_f)te(fff/d_e_d._) <c>*</c>(,)
+om(g)nes(g) An(iij)ge(h)li(g) Dó(h)mi(g)ni(f) Dó(hih)mi(ghg___)num:(g.) (:)
+hym(g)num(g) dí(i_j)ci(h)te,(g.h!iwjiih.0) (;) et(h) su(iji)per(g)ex(h)al(g)tá(fg'h)te(g) e(efED'e)um(e[ll:1]d..) (,) in(fv.fffdeg_h) sǽ(gv.fg/hhg)cu(egff)la.(fe..) (::)}
+%\paragraphspace
+%
+% -------------------- COMMUNIO PSALTERIUM-------------------- 
+%
+%\greseteolcustos{manual}% ręczne ustawianie custosa
+%%  (::Z-) - koniec linii bez kustosa
+%%\greannotation{} 
+%\greannotation{} 
+%\greannotation{4.} 
+%\grecommentary[4mm]{}
+%\gresetinitiallines{0}\gabcsnippet{}
+%\vspace{5mm}
+%\tlumaczR{}
+%
+% -------------------- COMMUNIO powtórzone-------------------- 
+%
+%\greannotation{} 
+%\greannotation{Comm.} 
+%\greannotation{3.} 
+%\grecommentary[4mm]{Dan 3: 58}
+%\gresetinitiallines{1}\gabcsnippet{(c4) BE(eef)ne(de)dí(gh)ci(g_f)te(fff/d_e_d._) *(,)
+%om(g)nes(g) An(iij)ge(h)li(g) Dó(h)mi(g)ni(f) Dó(hih)mi(ghg___)num:(g.) (:)
+%hym(g)num(g) dí(i_j)ci(h)te,(g.h!iwjiih.0) (;) et(h) su(iji)per(g)ex(h)al(g)tá(fg'h)te(g) e(efED'e)um(e[ll:1]d..) (,) in(fv.fffdeg_h) sǽ(gv.fg/hhg)cu(egff)la.(fe..) (::)}
+%\paragraphspace
+%Tłumaczenia:
+%\tlumacz{\red{Introit: (Ga 6:14, Ps 66:2)} A myśmy się chlubić powinni Krzyżem Pana naszego Jezusa Chrystusa; w Nim jest zbawienie, życie i zmartwychwstanie nasze; przez Niego jesteśmy zbawieni i oswobodzeni. Niech Bóg się zmiłuje nad nami i nam błogosławi: niech nam ukaże pogodne oblicze i zmiłuje się nad nami. Chwała Ojcu…\\}
+%\tlumacz{\red{Graduale (Flp 2:8-9):} Chrystus stał się dla nas posłuszny aż do śmierci, a była to śmierć krzyżowa. \red{\Vbar.} Dlatego i Bóg wywyższył Go: i nadał Mu imię, przewyższające wszelkie imię.\\}
+%\tlumacz{\red{Alleluia:} Alleluja, alleluja. \red{\Vbar.}  Słodkie drzewo, słodkie gwoździe, słodki na nich spoczął ciężar; samoś tylko było godne nosić Króla niebios i Pana. Alleluja.\\}
+%\tlumacz{\red{Offertorium:} Osłaniaj, Panie, lud swój znakiem Krzyża świętego od wszelkich zasadzek wszystkich nieprzyjaciół, abyśmy miłe Tobie hołdy składali i ofiara nasza stała się godna przyjęcia, alleluja.\\}
+%\tlumacz{\red{Communio:} Boże nasz, przez znak świętego Krzyża wyzwól nas od naszych nieprzyjaciół.}
+\end{document}

@@ -1,0 +1,46 @@
+% !TEX TS-program = lualatex+se+debug
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[14pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{20}%rozmiar wyniku GregorioTEX
+\grechangestyle{annotation}{\color{black}\large}% format adnotacji
+\gresetlastline{ragged}% justowanie do lewej
+% koniec 
+
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+\def\mydebug{1}% 0 - debugowanie, 1 - bez debugowania (wyłącza bloki \if\mydebug1)
+\begin{document}
+\makeatletter
+\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+\makeatother
+\pagestyle{empty}	
+\sekcja{Rorate caeli desuper}{}
+\vspace{-34pt}
+\gresetinitiallines{1}\greannotation{1.}\gabcsnippet{(c4) RO(d)rá(d)te(d) cae(d)li(d) dé(d)su(d)per,(c) (;) et(c) nu(c)bes(c) plu(c)ant(c) ju(c)stum.(d) (::)}
+\segmentspace
+\gresetinitiallines{0}\gabcsnippet{(c4) <c><v>\LARGE\textbf{1.}</v></c> Ne(d) i(d)ra(d)scá(d)ris(d) Dó(d)mi(d)ne,(d) (,) ne(d) ul(d)tra(d) me(d)mí(d)ne(d)ris(d) in(d)i(d)qui(d)tá(d)tis :(d) (:) ec(d)ce(d) cí(c)vi(c)tas(c) San(c)cti(c) fa(c)cta(c) est(c) de(c)sér(c)ta :(c) (,) Si(c)on(c) de(c)sér(c)ta(c) fa(c)cta(d) est :(d) (;) Je(d)rú(d)sa(d)lem(d) de(d)so(c)lá(c)ta(bxb) est :(b) (:) do(d)mus(d) san(d)cti(d)fi(d)ca(d)ti(d)ó(d)nis(d) tu(d)ae(d) et(d) gló(d)ri(d)ae(f) tu(e)ae,(d) (;) u(d)bi(d) lau(d)da(d)vé(d)runt(d) te(d) pa(c)tres(c) no(c)stri.(d) (::)
+	 <c><v>\LARGE\textbf{2.}</v></c> Pec(d)cá(d)vi(d)mus,(d) et(d) fac(d)ti(d) su(d)mus(d) tam(d)quam(d) im(d)mún(d)dus(d) nos,(d,) et(d) ce(c)cí(c)di(c)mus(d;) qua(d)si(d) fó(d)li(d)um(d) u(d)ni(d)vér(c)si :(bxb:) et(d) in(c)i(c)qui(c)tá(c)tes(c) nos(c)tra(c)e(c) qua(c)si(c) ven(c)tus(c) abs(c)tu(c)lé(c)runt(c) nos :(d;) abs(d)con(d)dís(d)ti(d) fá(d)ci(d)em(d) tu(d)am(d) a(d) no(d)bis,(c:) et(d) al(d)li(d)sís(d)ti(d) nos(d) in(d) ma(d)nu(d) in(d)i(d)qui(d)tá(c)tis(c) nos(c)tra(c)e.(d) (::)
+	 <c><v>\LARGE\textbf{3.}</v></c> Vi(d)de(d) Dó(d)mi(d)ne,(d) af(d)flic(d)ti(d)ó(d)nem(d) pó(d)pu(d)li(d) tu(d)i,(d;) et(d) mit(d)te(c) quem(c) mis(c)sú(c)rus(c) es:(d:) e(d)mít(d)te(c) A(c)gnum(c) do(c)mi(c)na(c)tó(c)rem(c) ter(c)ra(c)e,(d;) de(d) Pe(d)tra(d) de(d)sér(d)ti(d) ad(d) mon(d)tem(d) fí(f)li(f)ae(f) Si(e)on :(d:) ut(d) áu(d)fe(d)rat(d) ip(d)se(d) ju(d)gum(d) cap(d)ti(d)vi(d)tá(c)tis(c) nos(c)tra(c)e.(d) (::)
+	  <c><v>\LARGE\textbf{4.}</v></c> Con(d)so(d)lá(d)mi(d)ni,(d) con(e)so(e)lá(e)mi(e)ni,(e) pó(e)pu(e)le(f) me(f)us :(h;) ci(h)to(h) vé(g)ni(f)et(f) sa(f)lus(f) tu(e)a :(d:) qua(f)re(f) mo(f)e(f)ró(f)re(f) con(f)sú(e)me(e)ris,(d;) qui(d)a(d) in(d)no(d)vá(d)vit(d) te(c) do(c)lor?(d:) Sal(d)vá(d)bo(d) te,(d) no(d)li(d) ti(d)mé(d)re,(c:) e(d)go(d) e(d)nim(d) sum(d) Dó(c)mi(c)nus(c) De(c)us(c) tu(c)us,(bxb;) Sanc(d)tus(d) Is(d)ra(d)el,(d) Red(c)émp(c)tor(c) tu(c)us.(d) (::)}
+\end{document}

@@ -1,0 +1,64 @@
+% !TEX TS-program = lualatex+se+debug
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[17pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{20}%rozmiar wyniku GregorioTEX
+\gresetlastline{ragged}% justowanie do lewej
+\grechangestyle{initial}{\greIni\fontsize{44}{26}\selectfont} 
+%\grechangedim{translationheight}{0.3cm}{scalable} 	%The space for the translation. 	0.5 cm
+%\grechangedim{spaceabovelines}{0.01cm}{scalable} 	%The space above the lines. 	0.45576 cm plus 0.36461 cm minus 0.09114 cm
+\grechangedim{spacelinestext}{3.48471ex}{scalable} 	%The space between the lines and the bottom of the text. 	0.60617 cm plus 0 cm minus 0 cm
+%\grechangedim{spacebeneathtext}{0.06cm}{scalable} 	%The space beneath the text. 	0 cm plus 0 cm minus 0 cm
+\grechangedim{intersyllablespacenotes}{0.06cm}{scalable}% Minimalna odległość między nutami różnych sylab.
+% koniec 
+
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+\def\mydebug{1}
+\begin{document}
+\makeatletter
+\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+\makeatother
+\pagestyle{empty}
+% -----------------------------------------------------------------------------------
+% ------------------------------ STRONA TYTUŁOWA  ------------------------------
+\thispagestyle{empty}
+
+% <c><v>*</v></c>
+% <c><v>†</v></c>
+% <c><i>Ps.</i></c> 
+% <c><sp>V/</sp>.</c>
+% <c><i>ij.</i></c>
+% \tikz[overlay]\draw[red](-10,0)--++(15,0);
+\setcounter{page}{1}
+\fancyhead{}% wyczyść wszystkie pola nagłówka
+\pagestyle{plain}% nagłówek i stopka pusta - UWAGA: przedefiniowany styl przez polecenie fancypagestyle w header.tex	
+%\setlength{\parindent}{0pt}
+\gresetbracerendering{font}
+%\newcounter{x}
+%\forloop{x}{1}{\value{x} < 99}{ % value of x is 1...99
+%    \arabic{x}: \symbol{"\arabic{x}}\\    
+%    }
+%% --- Lectio prima ---
+\gresetinitiallines{1}\greannotation{Lectio 1}\grecommentary{Lam. 2,8-11}\gabcsnippet{(c3) DE(gx d) La(f)men(h)ta(h)ti(h)ó(i)ne(g) Je(g)re(g)mí(hGF)æ(ed) Pro(ef)phé(gFE)tæ.(d) (::) H<sc>eth</sc>.(df hGFh ih i jkj IH) (::) Co(d)gi(f)tá(h)vit(h) Dó(h)mi(h)nus(h) (,) dis(h)si(h)pá(i)re(h) mú(h)rum(g) fí(f)li(e)æ(d) Sí(fgFE)on :(f.) (;) te(f)tén(g)dit(h) fu(h)ní(h)cu(h)lum(h) sú(h)um,(h'_) (,) et(h) non(h) a(h)vér(h)tit(h) má(h)num(h) sú(h)am(h) a(h) per(h)di(ixi)ti(h)ó(gf)ne :(f.) (:) lu(f)xít(g)que(h) an(h)te(h)mu(h)rá(h)le,(h'_) (,) et(h) mú(h)rus(h) pá(h)ri(h)ter(h) dis(g)si(f)pá(g)tus(gf) est.(f.) (::) T<sc>eth</sc>.(hv_GFgf..) (::) De(f)fí(g)xæ(h) sunt(h) in(h) tér(h)ra(h) pór(ixi)tæ(h) é(g)jus :(h.) (;) pér(f)di(g)dit,(h) et(h) con(h)trí(h)vit(h) véc(h)tes(h) é(h)jus :(h'_) (,) ré(h)gem(h) é(h)jus(h) et(h) prín(h)ci(h)pes(h) é(ixi)jus(h) in(h) Gén(g)ti(gf)bus :(f.) (:) non(f) est(g) lex,(h'_) (,) et(h) pro(h)phé(h)tæ(h) é(h)jus(h) non(h) in(h)ve(h)né(h)runt(h) vi(h)si(h)ó(h)nem(g) a(f) Dó(g)mi(gf)no.(f.) (::) J<sc>od</sc>.(hv_GFgf..) (::) Se(f)dé(g)runt(h) in(h) tér(h)ra,(h'_) (,) con(h)ti(h)cu(h)é(h)runt(h) sé(h)nes(h) fí(ixi)li(h)æ(h) Sí(g)on :(h.) (;) con(f)sper(g)sé(h)runt(h) cí(h)ne(h)re(h) cá(h)pi(h)ta(h) sú(h)a,(h'_) (,) ac(h)cín(h)cti(h) sunt(ixi) ci(h)lí(g)ci(h)is,(h.) (;) ab(f)je(g)cé(h)runt(h) in(h) tér(h)ram(h) cá(h)pi(h)ta(h) sú(h)a(h'_) vír(h)gi(h)nes(g) Je(f)rú(g)sa(gf)lem.(f.) (::) C<sc>aph</sc>.(hv_GFgf..) (::) De(f)fe(g)cé(h)runt(h) præ(h) lá(h)cri(h)mis(h) ó(ixi)cu(h)li(h) mé(g)i,(h.) (;) con(f)tur(g)bá(h)ta(h) sunt(h) vís(ixi)ce(h)ra(h) me(gf)a :(f.) (:) ef(f)fú(g)sum(h) est(h) in(h) tér(h)ra(h) jé(h)cur(h) mé(h)um(h'_) (,) su(h)per(h) con(h)tri(h)ti(h)ó(h)ne(h) fí(h)li(h)æ(h) pó(ixi)pu(h)li(h) mé(g)i,(h.) (;) cum(f) de(g)fí(h)ce(h)ret(h) pár(h)vu(h)lus(h) et(h) lác(h)tens(h'_) in(h) pla(h)té(g)is(f) óp(g)pi(gf)di.(f.) (::) Je(f)rú(g)sa(h)lem,(h.) (,) Je(ixih)rú(g)sa(h)lem,(h.) (;) con(f)vér(g)te(h)re(h) ad(h) Dó(h)mi(h)num(h) Dé(g)um(f) tú(gf)um.(f.) (::)}
+\end{document}
