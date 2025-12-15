@@ -1,0 +1,536 @@
+% !TEX TS-program = lualatex+se+debug
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[14pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{20}%rozmiar wyniku GregorioTEX
+% koniec 
+\gresetlastline{ragged}% justowanie do lewej
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+%\def\mydebug{1}
+\begin{document}
+\makeatletter
+\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+\makeatother
+\pagestyle{empty}
+%\pagestyle{plain}	
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Cytaty biblijne}
+	%\small\textit{Fontevraud Gradual\\}
+	\small\textit{Zawsze Wierni nr 4/2001}
+	\vspace{4mm}
+\end{center}	
+\end{spacing}
+\setstretch{1}% odstęp między liniami
+\small
+\selectlanguage{polish}
+Fiat lux! – Niech się stanie światłość! (Rodz 1, 3)
+
+Jak na początku Bóg wyprowadził z ciemności światłość, tak też i teraz z niewiernych uczynił nas wiernymi, gdy oświecił nas światłem Wiary. Por. 2 Kor 4, 6: Bóg bowiem, który rozkazał, aby z ciemności zabłysła światłość, sam oświecił serca nasze, abyśmy zajaśnieli blaskiem poznania jasności Bożej w obliczu Chrystusa Jezusa (Quoniam Deus, qui dixit de tenebris lucem splendescere, ipse illuxit in cordibus nostris, ad illuminationem scientiae claritatis Dei, in facie Christi Iesu).
+Faciamus hominem ad imaginem et similitudinem nostram – Uczyńmy człowieka na obraz i na podobieństwo nasze (Rodz 1, 26)
+
+Poznajemy w tych słowach tajemnicę Trójcy Przenajświętszej.
+Et creavit Deus hominem ad imaginem suam, ad imaginem Dei creavit illum, masculum et feminam creavit eos – I stworzył Bóg człowieka na obraz swój, na obraz Boży stworzył go, mężczyzną i niewiastą stworzył ich (Rodz 1, 27)
+
+Crescite, et multiplicamini, et replete terram, et subicite eam – Rośnijcie i mnóżcie się, i napełniajcie ziemię, a czyńcie ją sobie poddaną (Rodz 1, 28)
+
+Lignum (=Arbor) vitae – Drzewo żywota (Rodz 2, 9)
+
+Było to drzewo ożywiające (arbor vivifica), zachowujące i przedłużające życie, tzn., że spożywający co jakiś czas z niego byliby nieśmiertelni, żyliby w spokoju i radości, wolni od chorób i starości.
+Lignumque (Arborque) scientiae boni et mali – I drzewo wiadomości dobrego i złego (Rodz 2, 9)
+
+Przez drzewo to człowiek nauczył się i poznał (na nieszczęście swoje) doświadczalnie (per experientiam) to, co wcześniej znał tylko teoretycznie (per speculationem), mianowicie jaka jest różnica między posłuszeństwem a nieposłuszeństwem, między dobrem a złem, i stąd nazwa: drzewo wiadomości dobrego i złego, tzn. drzewo z którego człowiek poznał przez doświadczenie dobro i zło.
+Non est bonum esse hominem solum – Nie jest dobrze być człowiekowi samemu (Rodz 2, 18)
+
+Człowiek jest istotą społeczną (zôn politikon) i stworzony jest do towarzystwa. Vae soli (Biada samotnemu) (Ekle 4, 10).
+De fructu ligni, quod est in medio paradisi, praecepit nobis Deus ne comederemus – Z owocu drzewa, które jest w środku raju, rozkazał nam Bóg, abyśmy nie jedli (Rodz 3, 3)
+
+Fructus vetitus (owoc zakazany).
+Cumque cognovissent se esse nudos, consuerunt folia ficus – A gdy poznali, że byli nagimi, pozszywali liście figowe (Rodz 3, 7)
+
+Liściem figowym zowiemy niewystarczające okrycie, które zaledwie wstydliwe części ciała zakrywa.
+In sudore vultus tui vesceris pane – W pocie oblicza twego będziesz pożywał chleba (Rodz 3, 19)
+
+Jest rozkaz Boży, że chleba z trudem dorabiać się trzeba.
+Pulvis es et in pulverem reverteris – Prochem jesteś i w proch się obrócisz (Rodz 3, 19)
+
+Num custos fratris mei sum ego? – Zalim ja jest stróżem brata mego? (Rodz 4, 9)
+
+Vox sanguinis fratris tui clamat ad Me – Głos krwi brata twego woła do Mnie (Rodz 4, 10)
+
+O ciężkim występku mówimy, że woła o pomstę do Boga. Cztery są grzechy, wołające o pomstę: Clamitat ad coelum vox sanguinis et Sodomorum, Vox oppressorum, viduae, pretium famulorum. 1. Rozmyślne zabójstwo. 2. Grzech sodomski. 3. Uciskanie wdów i sierot. 4. Zatrzymywanie zapłaty robotnikom.
+Posuitque Dominus Cain signum – I włożył Pan na Kaina znamię (Rodz 4, 15)
+
+O mordercy mówimy, że ma znak Kaina na czole.
+Et facti sunt omnes dies Mathusala nongenti sexaginta novem anni – I było wszystkich dni Matusali dziewięćset sześćdziesiąt dziewięć lat (Rodz 5, 27)
+
+Lata Matuzalowe, albo częściej matuzalemowe – przyp. red. Zawsze wierni) znaczy: wiek bardzo długi. Stąd życzenie: obyś dożył lat Matuzalowych!
+Quicumque effuderit humanum sanguinem, fundetur sanguis illius – Ktokolwiek by wylał krew człowieczą, będzie wylana krew jego (Rodz 9, 6)
+
+Krew za krew, życie za życie. Prawo odwetu.
+Ad imaginem quippe Dei factus est homo – Bo na obraz Boży uczynion jest człowiek (Rodz 9, 6)
+
+Sensus enim et cogitatio humani cordis in malum prona sunt ab adolescentia sua – Zmysł bowiem i myśl serca człowieczego skłonne są do złego od młodości jego (Rodz 8, 21)
+
+Konsekwencje grzechu pierworodnego.
+Filii Adam – Synowie Adamowi (Rodz 11, 5)
+
+Filii Adam znaczy: ludzie. To samo znaczy wyrażenie Filius hominis – Syn Człowieczy, którego Chrystus Pan lubił używać z pokory.
+Videntes filii Dei filias hominum – Widząc synowie Boży córki ludzkie (Rodz 6,2)
+
+Filii Dei znaczy tu potomków pobożnego Seta. Filius Dei w ścisłym znaczeniu jest Chrystus Pan, w dalszym znaczeniu każdy pobożny człowiek.
+Vocatum est nomen eius Babel, quia ibi confusum est labium universae terrae – Nazwano imię jego Babel, gdyż tam pomieszany został język wszystkiej ziemi (Rodz 11, 9)
+
+Babilońskie zamieszanie znaczy tyle, co: wielkie.
+Si ad sinistram ieris, ego dexteram tenebo – Jeśli na lewo pójdziesz, ja się udam na prawo (Rodz 13, 9)
+
+Da mihi animas, cetera tolle tibi – Daj mi dusze, inne rzeczy zabierz sobie (Rodz 14, 21)
+
+Dewiza św. Jana Bosco.
+Numquid perdes iustum cum impio? – Izali zatracisz sprawiedliwego z niezbożnym? (Rodz 18, 23)
+
+Da mihi de coctione hac rufa – Daj mi z warzywa tego czerwonego (Rodz 25, 30)
+
+Ezaw za misę soczewicy sprzedał bratu prawo pierworodztwa. I my o człowieku, który za lichą cenę zrzeka się ważnego prawa, mówimy, że je sprzedaje za miskę soczewicy.
+Det tibi Deus de rore coeli et de pinguedinae terrae – Dajże ci Boże z rosy niebieskiej i z tłustości ziemi (Rodz 27, 28)
+
+Niech ci Bóg da wszystko co najlepsze.
+Sint tua tibi – Miej ty swoje (Rodz 33, 9)
+
+Zatrzymaj co masz.
+[Castus Ioseph] – por. Rodz 39 (Tak zowiemy młodzieńca czystych obyczajów, który tak nieczystości unika, jak jej unikał Józef Egipski.)
+
+Memento mei, cum bene tibi fuerit – Pamiętaj na mnie, gdy się będziesz miał dobrze (Rodz 40, 14)
+
+Używamy tego cytatu, gdy się polecamy czyjejś pamięci.
+Ite ad Ioseph! – Idźcie do Józefa! (Rodz 41, 55)
+
+Hasło czcicieli św. Józefa.
+[Filius carissimus Beniamin] – por. Rodz 42, 4 (Najmłodszy i najukochańszy syn Jakuba, stąd najmilsze dziecko, pieszczocha, zowiemy Beniaminkiem.)
+
+Merito haec patimur, quia peccavimus in fratrem nostrum – Słusznie to cierpimy, bośmy zgrzeszyli przeciw bratu naszemu (Rodz 42, 21)
+
+Za grzech zawsze czeka kara.
+Vos cogitastis de me malum, sed Deus vertit illud in bonum – Wyście o mnie źle myśleli, ale Bóg obrócił to w dobre (Rodz 50, 20)
+
+Bóg nawet ze zła potrafi wyprowadzić dobro. Przysłowie: nie ma złego, które by na dobre nie wyszło.
+[Plagae AEgypti – Plagi egipskie)] (por. Wyjśc 7, 3)
+
+Tyle znaczy, co: wielkie klęski, straszne.
+Et factae sunt tenebrae horribiles in universa terra AEgypti – I nastały ciemności straszliwe po wszystkiej ziemi egipskiej (Wyjśc 10, 22)
+
+Egipskie ciemności znaczy tyle, co: wielkie, straszne.
+Digitus Dei est hic – Palec to Boży jest (Wyjśc 8, 19)
+
+Gdy stanie się coś nadzwyczajnego lub gdy ciężka kara spadnie, mówimy: to palec Boży.
+Ego sum Dominus Deus tuus, qui eduxi te de terra AEgypti, de domo servitutis – Jam jest Pan, Bóg twój, którym cię wywiódł z ziemi egipskiej, z domu niewoli ([1] Non habebis deos alienos coram me – Nie będziesz miał bogów cudzych przede Mną (...) [2] Non assumes nomen Domini Dei tui in vanum – Nie będziesz brał imienia Pana, Boga twego, nadaremno (...) [3] Memento ut diem sabbati sanctifices [- diem dominicum pro die sabbati Apostoli colendum ordinaverunt] – Pamiętaj, abyś dzień sobotni święcił [- dzień niedzielny zamiast sobotniego jest dniem świątecznym z ustanowienia Apostołów (...) [4] Honora patrem tuum et matrem tuam – Czcij ojca twego i matkę twoją (...) [5] Non occides – Nie będziesz zabijał, [6] Non moechaberis – Nie będziesz cudzołożył, [7] Non furtum facies – Nie będziesz kradzieży czynił, [8] Non loqueris contra proximum tuum falsum testimonium – Nie będziesz mówił fałszywego świadectwa przeciw bliźniemu twemu (...) [9] nec desiderabis uxorem eius [sc. proximi tui] – i nie będziesz pragnął żony jego [tj. bliźniego twego]), [10] nec omnia quae illius sunt – ani żadnej rzeczy, która jego jest: Wyjśc 20, 2-17)
+
+Powt Pr 5, 6-20. Dziesięcioro Przykazań Bożych jest treścią wszystkich praw Bożych (Decalogus legum omnium et praeceptorum divinorum est summa et epitome) – św. Augustyn, cyt. przez Katechizm rzymski.
+Feceruntque sibi vitulum conflatilem, et adoraverunt – I uczynili sobie cielca odlewanego, i pokłonili się (Wyjśc 32, 8)
+
+Złoty cielec u nas znaczy: złoto, bogactwo. Czcicieli bogactwa zowiemy czcicielami złotego cielca.
+(...) oculum pro oculo, dentem pro dente – oko za oko, ząb za ząb (Wyjśc 21, 24)
+
+Prawo odwetu.
+Ego enim sum Dominus Deus vester: sancti estote, quia ego sanctus sum – Ja bowiem jestem Pan, Bóg wasz: świętymi bądźcie, bom Ja święty jest (Kapł 11, 44)
+
+[Offeret unum hircum pro peccatis, et alterum dimittet – Będzie ofiarował jednego kozła za grzechy, a drugiego wypuści)] (por. Kapł 16, 18-21)
+
+Na głowę tego drugiego kozła składał arcykapłan wszystkie grzechy ludu, potem go wyganiano na pustynię. My kozłem ofiarnym zowiemy człowieka, na którego inni swe winy zwalają i który za nie pokutować musi.
+Testes invoco hodie coelum et terram – Za świadków biorę dziś niebo i ziemię (Powt Pr 4, 26)
+
+Wzywać na świadectwo niebo i ziemię – wszystko.
+Audi, Israel! Dominus Deus noster, Dominus unus est – Słuchaj, Izraelu! Pan, Bóg nasz, Pan jeden jest. Hebr.: Szema Israel! Adonai elachenu Adonai echad (Powt Pr 6, 4)
+
+Dominum Deum tuum timebis et illi soli servies – Pana, Boga twego, bać się będziesz i Jemu samemu służyć będziesz (Powt Pr 6, 13, por. Mt 4, 10)
+
+Non tentabis Dominum Deum tuum – Nie będziesz kusił Pana, Boga twego (Powt Pr 6, 16, Mt 4, 7)
+
+Non in solo pane vivit homo, sed in omni verbo quod procedit de ore Dei – Nie samym chlebem żyje człowiek, ale wszelkim słowem, które pochodzi z ust Bożych (Powt Pr 8, 3, Mt 4, 4)
+
+In ore duorum aut trium testium stabit omne verbum – W ustach dwu albo trzech świadków stanie każde słowo (Powt Pr 19, 15)
+
+Pro mensura peccati erit et plagarum modus – Według miary grzechu będzie i razów miara (Powt Pr 25, 2)
+
+Według miary grzechu jest i kary miara. Bo za ciężki grzech ciężka jest i kara.
+Tradidit nobis [Deus] terram lacte et melle manantem – Dał nam [Bóg ] ziemię mlekiem i miodem płynącą (Powt Pr 26, 9)
+
+Ziemia, płynąca mlekiem i miodem, znaczy: bardzo urodzajna, mająca dużo bydła i pszczół.
+Custodivit [eum Dominus] quasi pupillam oculi sui – Strzegł [go Pan] jako źrenicy oka swego (Powt Pr 32, 10)
+
+Strzec kogo jak źrenicy oka znaczy: strzec bardzo troskliwie.
+Homo Dei – Człowiek Boży (Powt Pr 33, 1)
+
+Człowiekiem Bożym zowie Pismo św. Mojżesza, Dawida, proroków – słowem wielkich świętych.
+Sicut dies iuventutis tuae, ita et senectus tua – Jako dni młodości twojej, tak i starość twoja (Powt Pr 33, 25)
+
+Jakim kto był za młodu, takim zwykle jest na starość. Przysłowie: czym za młodu skorupka nawre, tym na starość trąci.
+Sol, contra Gabaon ne movearis (...) Steteruntque sol – Słońce naprzeciw Gabaonu nie ruszaj się (...) I stanęło słońce (Joz 10, 12-13)
+
+Fakt niezwykły (cud), polegający na przedłużeniu światła słonecznego ponad czas normalny (o 12 lub 24 godziny) – tekst hebr.: jakoby cały dzień. Do tego jednak nie jest rzeczą konieczną, by słońce lub ziemia rzeczywiście zatrzymane zostały w swoim obrocie. Wystarczyło, by nastąpiła refrakcja czyli załamanie promieni słonecznych, które by nadal oświecały widnokrąg ziemski w tym samym miejscu, chociaż słońce posuwało się naprzód ku zachodowi lub też już zupełnie zaszło, na podobieństwo zjawiska naturalnego, stwierdzonego przez naukę przy wschodzie i zachodzie słońca. Dzięki bowiem temu załamaniu się promieni słonecznych widzimy rano słońce parę minut wcześniej na horyzoncie niż ono zjawi się rzeczywiście czyli według obliczeń astronomicznych, a przy zachodzie słońca widzimy je parę minut dłużej już po rzeczywistym zniknięciu z horyzontu. Otóż Pan Bóg to naturalne zjawisko w sposób cudowny mógł przedłużyć na przeciąg całego dnia, nie wstrzymując wcale naturalnego obrotu ciał niebieskich.
+Ego autem et domus mea serviemus Domino – A ja i dom mój Panu służyć będziemy (Joz 24, 15)
+
+Sicut feci [aliis], ita reddidit mihi Deus – Jakom czynił [innym], tak mi Bóg oddał (Sędz 1, 7)
+
+Jak ty bliźniemu, tak Bóg tobie.
+Si non arassetis in vitula mea, non invenissetis propositionem meam – Byście byli nie orali jałowicą moją, nie rozwiązalibyście zagadki mojej (Sędz 14, 18)
+
+Tak rzekł Samson do Filistynów, gdy z pomocą jego żony odgadli zadaną im zagadkę.
+Philisthiim super te, Samson! – Filistyni nad tobą, Samsonie! (Sędz 16, 9)
+
+Pax tecum sit! – Pokój z tobą niech będzie! (Sędz 19, 20)
+
+Haec mihi faciat Dominus et haec addat – To mi niech uczyni Pan i to niech przyczyni (Rut 1, 17)
+
+Takiej formuły używali żydzi, zaklinając się lub przysięgając.
+Deus scientiarum Dominus est – Bóg umiejętności Pan jest (1 Król 2, 3)
+
+Quicumque glorificaverit me, glorificabo eum – Ktokolwiek Mię wielbić będzie, uwielbię go (1 Król 2, 30)
+
+Ecce ego, quia vocasti me – Otom ja, boś mię wołał! (1 Król 3, 6)
+
+Samuel do Helego. Gotowość do pełnienia rozkazów Bożych.
+Loquere, Domine, quia audit servus tuus – Mów, Panie, bo słucha sługa Twój (1 Król 3, 9)
+
+Num et Saul inter prophetas? – Czyż i Saul między prorokami? (1 Król 10, 11)
+
+Coś niesłychanego.
+Quaesivit Dominus sibi virum iuxta cor suum – Poszukał sobie Pan męża według serca Swego (1 Król 13, 14)
+
+Dawida nazywa Pismo św. mężem według serca Bożego.
+Pro eo ergo quod abiecisti sermonem Domini, abiecit te Deus – Za to tedy, żeś odrzucił mowę Pańską, odrzucił cię Pan (1 Król 15, 23)
+
+Siccine separat amara mors? – Tak to rozłącza gorzka śmierć? (1 Król 15, 32)
+
+Vir (...) nomine Goliath (...), altitudinis sex cubitorum – Mąż (...) imieniem Goliat (...), wysoki na sześć łokci (1 Król 17, 4)
+
+Męża rosłego i silnego zowiemy Goliatem.
+Vivit Dominus et vivit anima tua – Żyje Pan i żyje dusza twoja (1 Król 20, 3)
+
+Formuła przysięgi żydowskiej.
+Uno tantum (ut ita dicam) gradu ego morsque dividimur – Jeden tylko, że tak rzekę, krok od śmierci mnie dzieli (1 Król 20, 3)
+
+Byłem krok od śmierci mówimy, gdyśmy uniknęli groźnego niebezpieczeństwa.
+Si inveni gratiam in oculis tuis – Jeślim znalazł łaskę w oczach twoich (1 Król 20, 29)
+
+Te słowa znaczą: jeżeli łaskę raczysz mi okazać.
+Iudicet Dominus inter me et te – Niech rozsądzi Pan między mną a tobą (1 Król 24, 13)
+
+Niech Bóg rozsądzi między nami, który z nas ma słuszność.
+Ab impiis egredietur impietas – Od niezbożnych wynijdzie niezbożność (1 Król 24, 14)
+
+Jakie drzewo, taki owoc, z ciernia nie będzie winogron.
+Tu enim tribuisti mihi bona, ego autem reddidi tibi mala – Boś ty mnie wyświadczył dobro, a jam tobie złem się odpłacił (1 Król 24, 18)
+
+Rectus es tu et bonus in conspectu meo (...) sed satrapis non places – Tyś prawy i dobry w oczach moich (...) ale książętom się nie podobasz (1 Król 29, 6)
+
+Aequa enim pars erit descendentibus ad praelium et remanentis ad sarcinas – Równy bowiem dział będzie idącego do bitwy i zostającego przy tłumokach (1 Król 30, 24)
+
+An ignoras quod periculosa sit desperatio? – Czyż nie wiesz, że bardzo niebezpieczna jest rozpacz? (2 Król 2, 26)
+
+Do rozpaczy kogo doprowadzić – rzecz niebezpieczna.
+Manete in Iericho donec crescat barba vestra – Mieszkajcie w Jerychu, aż urośnie broda wasza (2 Król 10, 5)
+
+Filius mortis est vir qui fecit hoc! – Synem śmierci jest mąż, który to uczynił! (2 Król 12, 5)
+
+Dawid do Natana.
+Tu es ille vir! – Ty jesteś tym człowiekiem! (2 Król 12, 7)
+
+Natan do Dawida.
+Peccavi Domino! – Zgrzeszyłem Panu! (2 Król 12, 13)
+
+Dawid do Natana.
+Cum sancto sanctus eris, (...) et cum perverso perverteris – Ze świętym święty będziesz, (...) a z przewrotnym przewrotny się staniesz (2 Król 22, 26-27)
+
+Z jakim przestajesz, takim się stajesz.
+Ego ingredior viam universae terrae – Ja idę w drogę wszystkiej ziemi (3 Król 2, 2)
+
+To jest: ja zdążam do śmierci, jak pozostali ludzie zamieszkujący ziemię, tak, iż z prochu (ziemi) w proch (ziemię) się obrócę. Por. Rodz 3, 19.
+[Iudicium Salomonis – Sąd Salomona lub wyrok salomonowy)] (por. 3 Król 3, 16-28)
+
+Gdy ktoś nadzwyczaj trudny wypadek dobrze i sprawiedliwie osądzi, to mówimy, że sądzi jak Salomon. Znany jest sąd Salomona w sprawie dwóch matek i ich dwojga dzieci.
+Dedit quoque Deus sapientiam Salomoni et prudentiam multam nimis (...) Et praecedebat sapientia Salomonis sapientiam omnium Orientalium et AEgyptiorum, et erat sapientior cunctis hominibus – Dał też Bóg Salomonowi mądrość i roztropność bardzo wielką (...) I przechodziła mądrość Salomona mądrość wszystkich ludzi wschodnich i Egipcjan. I był mędrszy od wszystkich ludzi (3 Król 4, 29-31)
+
+O człowieku bardzo mądrym mówimy: mądry jak Salomon.
+Dormivitque Salomon cum patribus suis – I zasnął Salomon z ojcami swymi (3 Król 11, 43)
+
+Znaczy tyle, co: umarł.
+Usquequo claudicatis in duas partes? Si Dominus est Deus, sequimini eum, si autem Baal, sequimini illum – Pókiż będziecie chromać na dwie strony? Jeśli Pan jest Bogiem, idźcie za Nim, a jeśli Baal, idźcie za nim! (3 Król 18, 21)
+
+Nie chwiejcie się na dwie strony, lecz trzymajcie się prawdy.
+Et derelinquam mihi in Israel septem millia virorum, quorum genua non sunt incurvata ante Baal – I zostawię sobie w Izraelu siedem tysięcy mężów, których kolana nie zginały się przed Baalem (3 Król 19, 18)
+
+Pan Bóg ma zawsze dusze wybrane.
+Ego odi eum, quia non prophetat mihi bonum, sed malum – Ja go nienawidzę, ponieważ mi nie prorokuje dobrego, ale zło (3 Król 22, 8)
+
+Przepowiadaczy nieszczęść zwykle niecierpimy i prześladujemy – prawda w oczy kole.
+Haeccine est illa Iezabel? – Taż to jest owa Jezabel? (4 Król 9, 37)
+
+Zaiste można tak było zawołać, gdy potężną niegdyś królową psy szarpały.
+Servi tui sumus – quaecumque iusseris faciemus (Jesteśmy służebnicy twoi, cokolwiek rozkażesz, uczynimy)
+
+4 Król 10, 5
+Nolite tangere christos meos – Nie tykajcie pomazańców Moich (1 Kron 16, 22)
+
+Nie porywajcie się na wybrańców Moich.
+Melius mihi est, ut incidam in manus Domini, quia multae sunt miserationes eius, quam in manus hominum – Lepiej mi wpaść w ręce Pańskie, bo mnogie są miłosierdzia Jego, niźli w ręce człowiecze (1 Kron 21, 13)
+
+Si quaesieris eum (sc. Deum), invenies, si autem dereliqueris eum, proiciet te in aeternum – Jeśli Go [tj. Boga] szukać będziesz, znajdziesz, ale jeśli Go opuścisz, odrzuci cię na wieki (1 Kron 28, 9)
+
+Peregrini enim sumus coram te, [Deus], et advenae, sicut omnes patres nostri – Bośmy goście przed Tobą, [Boże], i przechodnie, jako i wszyscy ojcowie nasi (1 Kron 29, 15)
+
+Tu enim solus [Domine] nosti corda filiorum hominum – Ty bowiem sam [jeden, Panie,] znasz serca synów ludzkich (2 Kron 6, 30)
+
+Oculi enim Domini contemplantur universam terram, et praebent fortitudinem his qui corde perfecto credunt in eum – Albowiem oczy Pańskie patrzą na wszystką ziemię i dodają mocy tym, którzy sercem doskonałym weń wierzą (2 Kron 16, 9)
+
+Stulte igitur egisti, et propter hoc ex praesenti tempore adversum te bella consurgent – A tak głupioś uczynił i dlatego od tego czasu powstaną przeciwko tobie walki (2 Kron 16, 9)
+
+Non est enim apud Dominum Deum nostrum iniquitas, nec personarum acceptio – Bo nie masz u Pana, Boga naszego, nieprawości ani względu na osoby (2 Kron 19, 7)
+
+Et convertit Deus noster maledictionem in benedictionem – I obrócił Bóg nasz przekleństwo w błogosławieństwo (Neh 13, 2)
+
+Et nunc, Domine, memor esto mei, et ne vindictam sumas de peccatis meis, neque reminiscaris delicta mea, vel parentum meorum – A teraz, Panie, wspomnij na mnie, nie mścij się za grzechy moje ani pamiętaj na występki moje albo rodziców moich (Tob 3, 3)
+
+Quod ab alio oderis fieri tibi, vide ne tu aliquando alteri facias – Czego byś nie chciał, aby ci kto inny czynił, patrz, abyś ty kiedy drugiemu nie czynił (Tob 4, 16)
+
+Consilium semper a sapiente perquire – Rady zawsze u mądrego szukaj (Tob 4, 19)
+
+Qui autem faciunt peccatum et iniquitatem, hostes sunt animae suae – A ci, którzy czynią grzech i nieprawość, są nieprzyjaciółmi duszy swojej (Tob 12, 10)
+
+Nuntius venit ad Iob (...) Cumque adhuc ille loqueretur, venit alter... – Przybiegł do Joba poseł (...) A gdy ten jeszcze mówił, przyszedł drugi... (Job 1, 14-19)
+
+Wieść Hiobowa znaczy tyle, co: niespodziewana a straszna. Tak samo poselstwo Jobowe znaczy tyle, co: zwiastujące nieszczęście.
+Dominus dedit, Dominus abstulit, sicut Domino placuit, ita factum est. Sit nomen Domini benedictum – Pan dał, Pan wziął: jako się Panu podobało, tak się stało. Niech będzie imię Pańskie błogosławione! (Job 1, 21)
+
+Cuncta quae habet homo dabit pro anima sua – Wszystko, co ma człowiek, da za duszę swoją (Job 2, 4)
+
+Quasi una de stultis mulieribus locuta es – Jako jedna z niewiast głupich rzekłaś (Job 2, 10)
+
+Żona Hioba uważała, że skoro Bóg zsyła cierpienia na niewinnego, to w takim razie nie warto Mu służyć, nie warto być dobrym. Hiob słusznia oburza się na takie poglądy.
+Si bona suscepimus de manu Dei, mala quare non suscipiamus? – Jeśliśmy przyjęli dobra z ręki Bożej, złego czemu byśmy przyjmować nie mieli? (Job 2, 10)
+
+Vere stultum interficit iracundia – Zaiste gniew zabija głupiego (Job 5, 2)
+
+Nihil in terra sine causa fit – Nic się na ziemi bez przyczyny nie dzieje (Job 5, 6)
+
+Militia est vita hominis super terram – Bojowaniem jest żywot człowieczy na ziemi (Job 7, 1)
+
+Hesterni quippe sumus, et ignoramus, quoniam sicut umbra dies nostri sunt super terram – Wczorajsi bowiem jesteśmy i nic nie wiemy, gdyż dni nasze na ziemi są jako cień (Job 8, 9)
+
+Deridetur enim iusti simplicitas – Naśmiewają się bowiem z prostoty sprawiedliwego (Job 12, 4)
+
+Etiam si occiderit me, in ipso sperabo – Choćby mię zabił, w Nim ufać będę (Job 13, 15)
+
+Słowa te wyrażają bezgraniczne zaufanie do Boga.
+Homo, natus de muliere, brevi vivens tempore, repletur multis miseriis – Człowiek, urodzony z niewiasty, żyjąc przez czas krótki, napełnion bywa wielu nędzami (Job 14, 1)
+
+Miseremini mei, miseremini mei, saltem vos, amici mei – Zmiłujcie się nade mną, zmiłujcie się nade mną, chociaż wy, przyjaciele moi (Job 19, 21)
+
+Hoc scio a principio, ex quo positus est homo super terram, quod laus impiorum brevis sit, et gaudium hypocritae ad instar puncti – To wiem od początku, odtąd, jako osadzon jest człowiek na ziemi, że chwała niezbożnych krótka jest, a radość obłudnika jako mgnienie oka (Job 20, 4-5)
+
+Quid prodest Deo, si iustus fueris? – Co za pożytek Bogu jest, jeśli sprawiedliwym będziesz? (Job 22, 3)
+
+Zob. komentarz św. Grzegorza Wielkiego: We wszystkim, co dobrze czynimy, nie Boga, ale nas samych wspieramy. In omni quod bene agimus nosmetipsos, non Deum iuvamus – Moral. XVI, I
+Si peccaveris, quid ei (sc. Deo) nocebis? – Jeśli zgrzeszysz, cóż Mu (tj. Bogu) zaszkodzisz? (Job 35, 6)
+
+Kto grzeszy, ten przede wszystkim szkodzi sobie samemu.
+Pepigi foedus cum oculis meis, ut ne cogitarem quidem de virgine – Uczyniłem przymierze z oczyma swymi, abym ani pomyślał o pannie (Job 31, 1)
+
+Postanowienie unikania okazji do grzechu. Najwyższy stopień czystości przejawia się w obrzydzeniu do wszelkich myśli nieskromnych (św. Bonawentura).
+Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiae non sedit – Błogosławiony mąż, który nie chodził za radą niezbożnych i na drodze grzesznych nie stał, i na stolicy zaraźliwości nie siedział (Ps 1, 1)
+
+Szczęśliwy ten człowiek, który nie idzie za radami, prawami i opiniami ludzi bezbożnych.
+Quoniam novit Dominus viam iustorum, et iter impiorum peribit – Albowiem zna Pan drogę sprawiedliwych, a droga niezbożnych zginie (Ps 1, 6)
+
+Bóg zna, tj. pochwala postępowanie sprawiedliwych, lecz postępowanie grzeszników prowadzi na zatracenie.
+Astiterunt reges terrae, et principes convenerunt in unum adversus Dominum, et adversus Christum eius – Stanęli wespół królowie ziemscy, a książęta zeszli się w gromadę przeciw Panu i przeciw Chrystusowi Jego (Ps 2, 2)
+
+Psalmista w duchu proroczym zapowiada bunt i walkę, jaką stale Chrystusowi Panu i Jego Kościołowi będą wypowiadać królowie i rządy owiane duchem doczesności.
+Servite Domino in timore, et exultate ei cum tremore – Służcie Panu w bojaźni, a radujcie się Mu ze drżeniem (Ps 2, 11)
+
+Bogu należy oddawać cześć z wielkim uszanowaniem.
+Irascimini, et nolite peccare – Gniewajcie się, ale nie grzeszcie (Ps 4, 5. Por. Ef 4, 26)
+
+Jeżeli chcecie krytykować, to i owszem, ale zanim coś powiecie wpierw nad tym dobrze się zastanówcie.
+In pace (...) dormiam, et requiescam – W pokoju będę (...) spał i odpoczywał (Ps 4, 9)
+
+My mówimy w modlitwach Kościoła o zmarłym: Requiescat in pace!
+Dixit insipiens in corde suo: Non est Deus – Rzekł głupi w sercu swoim: Nie ma Boga (Ps 13, 1)
+
+Nolite fieri sicut equus et mulus, quibus non est intellectus – Nie bądźcież jako koń i muł, które nie mają rozumu (Ps 31, 9)
+
+Abyssus abyssum invocat – Przepaść przepaści przyzywa (Ps 41, 8)
+
+Nieskończenie doskonały Bóg i otchłań naszej nędzy.
+Miserere mei, Deus, secundum magnam misericordiam tuam, et secundum multitudinem miserationum tuarum, dele iniquitatem meam – Zmiłuj się nade mną, Boże, według wielkiego miłosierdzia Twego, i według mnóstwa litości Twoich zgładź nieprawość moją! (Ps 50, 1)
+
+Cor contritum et humiliatum, Deus, non despicies – Sercem skruszonym i uniżonym, Boże, nie wzgardzisz! (Ps 50, 19)
+
+Tu [Domine] reddes unicuique iuxta opera sua – Ty [Panie] oddasz każdemu według uczynków jego (Ps 61, 13)
+
+In te, Domine, speravi, non confundar in aeternum – W Tobiem, Panie, nadzieję miał, niech nie będę pohańbion na wieki! (Ps 70, 1)
+
+Misericordias Domini in aeternum cantabo, in generationem et generationem annuntiabo veritatem tuam in ore meo – Zmiłowania Pańskie na wieki wyśpiewywać będę, od pokolenia do pokolenia prawdę Twoją usty mymi opowiadać będę (Ps 88, 2)
+
+Quoniam angelis suis mandavit de te, ut custodiant te in omnibus viis tuis. In manibus portabunt te, ne forte offendas ad lapidem pedem tuum – Albowiem aniołom twoim rozkazał o tobie, aby cię strzegli na wszystkich drogach twoich. Na ręku będą cię nosić, byś snadź nie uraził o kamień nogi twojej (Ps 90, 11-12)
+
+Na rękach kogo nosić znaczy: bardzo troskliwie się nim opiekować.
+Non nobis, Domine, non nobis, sed nomini tuo da gloriam – Nie nam, Panie, nie nam, ale imieniu Twemu daj chwałę (Ps 113B, 1)
+
+Omnis homo mendax – Każdy człowiek kłamca! (Ps 115, 11)
+
+Kłamca: zawodny, jedynie Bogu można bezpiecznie zaufać.
+Lapidem quem reprobaverunt aedificantes, hic factus est in caput anguli – Kamień, który odrzucili budujący, ten się stał kamieniem węgielnym (Ps 117, 22)
+
+Wyrażenie przysłowiowe: to, co zostało odrzucone jako nic nie warte, okazało się najlepszym i najważniejszym. Takim jest Chrystus Pan, odrzucony przez przywódców narodu żydowskiego.
+Haec est dies quam fecit Dominus – Ten jest dzień, który uczynił Pan (Ps 117, 24)
+
+Benedictus qui venit in nomine Domini – Błogosławiony, który przychodzi w imię Pańskie! (Ps 117, 26)
+
+Qui seminant in lacrymis, in exultatione metent – Którzy sieją ze łzami, będą żąć z radością (Ps 125, 5)
+
+De profundis clamavi ad te, Domine, Domine, exaudi vocem meam – Z głębokości wołałem ku Tobie, Panie, Panie, wysłuchaj głosu mego! (Ps 129, 1-2)
+
+Timor Domini principium sapientiae. Sapientiam atque doctrinam stulti despiciunt – Bojaźń Pańska początkiem mądrości, mądrością i nauką głupi gardzą (Przyp 1, 7)
+
+Disciplinam Domini, fili mi, ne abicias, nec deficias cum ab eo corriperis, quem enim diligit Deus corripit, et quasi pater in filio complacet sibi – Karania Pańskiego, synu mój, nie odrzucaj ani ustawaj, gdy od Niego karan bywasz, bo kogo Pan miłuje, karze i jako ojciec ma upodobanie w synu (Przyp 3, 11-12)
+
+Beatus homo qui invenit sapientiam, et qui affluit prudentia – Błogosławiony człowiek, który znalazł mądrość i który obfituje w roztropność (Przyp 3, 13)
+
+Noli prohibere benefacere eum qui potest, si vales, et ipse benefac – Nie zabraniaj dobrze czynić temu, który może, jeśli możesz, i sam dobrze czyń (Przyp 3, 27)
+
+Ne moliaris amico tuo malum, cum ille in te habeat fiduciam – Nie obmyślaj przeciw przyjacielowi twemu zła, gdy on w tobie ufność pokłada (Przyp 3, 29)
+
+Gloriam sapientes possidebunt, stultorum exaltatio ignominia – Chwałę mądrzy osiągną, głupich wywyższeniem zelżywość (Przyp 3, 35)
+
+Tene disciplinam, ne dimittas eam, custodi illam, quia ipsa est vita tua – Trzymaj się nauki, nie opuszczaj jej, strzeż jej, bo ona jest życiem twoim (Przyp 4, 13)
+
+Ne delecteris in semitis impiorum, nec tibi placeat malorum via – Nie kochaj się w ścieżkach bezbożników ani sobie podobaj w drodze złośników (Przyp 4, 14)
+
+Via impiorum tenebrosa, nesciunt ubi corruant – Droga bezbożnych ciemna, nie wiedzą, gdzie upadają (Przyp 4, 19)
+
+Respicit Dominus vias hominis, et omnes gressus eius considerat – Pan patrzy na drogi człowieka, i uważa na wszystkie kroki jego (Przyp 5, 21)
+
+Homo apostata vir inutilis, graditur ore perverso (...) Huic extemplo veniet perditio sua, et subito conteretur, nec habebit ultra medicinam – Człowiek odstępca, mąż nieużyteczny, chodzi z przewrotnymi ustami (...) Temu nagle przyjdzie zatracenie jego i niespodzianie skruszony [starty] będzie, a nie będzie miał więcej lekarstwa (Przyp 6, 12-15)
+
+Conserva, fili mi, praecepta patris tui, et ne dimittas legem matris tuae – Zachowaj, synu mój, przykazania Ojca twego, a nie opuszczaj wskazań Matki twojej (Przyp 6, 20, por. 1, 8)
+
+Obowiązek przestrzegania przykazań Bożych i kościelnych.
+Veritatem meditabitur guttur meum, et labia mea detestabuntur impium – Prawdę rozmyślać będzie gardło moje, a wargi moje będą się brzydzić bezbożnością (Przyp 8, 7)
+
+Melior est enim sapientia cunctis pretiosissimis, et omne desiderabile ei non potest comparari – Lepsza jest bowiem mądrość nad wszelakie najdroższe rzeczy, i wszystko, co może być pożądane, nie może być z nią porównane (Przyp 8, 11)
+
+Ubi fuerit superbia, ibi erit et contumelia. Ubi autem est humilitas, ibi est sapientia – Gdzie będzie pycha, tam będzie i hańba, a gdzie jest pokora, tam i mądrość (Przyp 11, 2)
+
+Doctrina bona dabit gratiam, in itinere contemptorum vorago – Nauka dobra da łaskę, na drodze gardzących przepaść (Przyp 13, 15)
+
+Cor sapientis quaerit doctrinam, et os stultorum pascitur imperitia – Serce mądrego szuka nauki, a usta głupich karmią się nieumiejętnością (Przyp 15, 14)
+
+Melius est nomen bonum quam divitiae multae – Lepsze jest imię dobre niż wielkie bogactwa (Przyp 22, 1)
+
+Ne transgrediaris terminos antiquos quos posuerunt patres tui – Nie przestępuj granic starych, które założyli ojcowie twoi (Przyp 22, 28)
+
+Vanitas vanitatum, et omnia vanitas – Marność nad marnościami i wszystko marność (Ekle 1, 2)
+
+Autor De imitatione Christi dodaje: praeter amare Deum et illi soli servire – oprócz [jednego:] miłować Boga i służyć Jemu samemu, lib. I, cap. 1, 3
+Melior est canis vivus leone mortuo – Lepszy jest pies żywy aniżeli lew zdechły (Ekle 9, 4)
+
+Fortis est ut mors dilectio – Mocna jest jak śmierć miłość (PnP 8, 6)
+
+Initium sapientiae timor Domini – Początkiem mądrości bojaźń Pańska (Ekli 1, 16)
+
+Initium omnis peccati est superbia – Pycha jest początkiem grzechu każdego (Ekli 10, 15)
+
+Qui tetigerit picem inquinabitur ab ea, et qui communicaverit superbo induet superbiam – Kto się smoły dotknie, pomaże się nią, a kto ma towarzystwo z pysznym, oblecze się w pychę (Ekli 13, 1)
+
+Mitte illum in operationem, ne vacet, multam enim malitiam docuit otiositas – Poślij go na robotę, aby nie próżnował, bo wielkiej złości nauczyło próżnowanie (Ekli 33, 28-29)
+
+Omnia opera Domini bona – Wszystkie dzieła Pańskie są dobre (Ekli 39, 39)
+
+Quiescite agere perverse, discite benefacere – Przestańcie źle czynić, uczcie się czynić dobrze (Iz 1, 16-17)
+
+Vae qui dicitis malum bonum, et bonum malum, ponentes tenebras lucem, et lucem tenebras, ponentes amarum in dulce, et dulce in amarum! – Biada wam, którzy nazywacie złe dobrym, a dobre złym, zamieniacie ciemność na światłość, a światłość na ciemność, zamieniacie gorzkie na słodkie, a słodkie na gorzkie! (Iz 5, 20)
+
+Vae qui sapientes estis in oculis vestris, et coram vobismetipsis prudentes! – Biada wam, którzy jesteście mądrymi w oczach waszych i sami przed sobą roztropnymi! (Iz 5, 21)
+
+Vae qui potentes estis ad bibendum vinum, et viri fortes ad miscendam ebrietatem! – Biada wam, którzy jesteście mocnymi w piciu wina, i mężami dzielnymi w mieszaniu opilstwa! (Iz 5, 22)
+
+Vae mihi, quia tacui! – Biada mnie, że milczałem! (Iz 6, 5)
+
+Comedamus et bibamus, cras enim moriemur – Jedzmy i pijmy, bo jutro pomrzemy! (Iz 22, 13, 1 Kor 15, 32)
+
+Hasło ludzi cielesnych.
+Populus hic labiis me honorat, cor autem eorum longe est a me. Sine causa autem colunt me, docentes doctrinas et mandata hominum – Lud ten czci Mię wargami, ale serce ich daleko jest ode Mnie, lecz na próżno cześć Mi oddają, gdy głoszą nauki i ustawy ludzkie (Iz 29, 13, Mt 15, 8-9)
+
+Stultus enim fatua (=stulta) loquetur – Bo głupi głupie rzeczy mówić będzie (Iz 29, 6)
+
+Omnis caro foenum, et omnis gloria eius quasi flos agri – Wszelkie ciało trawa, a wszelka chwała jego jako kwiat polny (Iz 40, 6)
+
+Non est pax impiis, dicit Dominus – Nie masz pokoju niezbożnym, mówi Pan (Iz 48, 22)
+
+Et curabant (...) dicentes: Pax, pax! et non erat pax – I leczyli (...) mówiąc: Pokój, pokój! – a nie było pokoju (Jer 6, 14)
+
+Patres comederunt uvam acerbam, et dentes filiorum obstupuerunt – Ojcowie jedli jagodę kwaśną, a zęby synów ścierpły (Jer 31, 29, Ez 18, 2)
+
+Za grzechy ojców cierpią nieraz dzieci.
+Grex perditus factus est populus meus, pastores eorum seduxerunt eos – Trzodą straconą stał się lud mój, pasterze ich zwiedli ich (Jer 50, 6)
+
+Por. przysłowie: Biada wtedy trzodzie, gdy wilcy z pasterzami w zgodzie.
+Curavimus Babylonem, et non est sanata, derelinquamus eam – Leczyliśmy Babilon, a nie jest uzdrowiony. Opuśćmy go! (Jer 51, 9)
+
+Quomodo sedet sola civitas plena populo! Facta est quasi vidua domina gentium, princeps provinciarum facta est sub tributo – Jakże samotnie siedzi miasto, pełne ludu! Stała się jakby wdową pani narodów, księżna powiatów stała się hołdowną (Lam 1, 1)
+
+Anima quae peccaverit, ipsa morietur – Dusza, która zgrzeszy, ta umrze (Ez 18, 4)
+
+Vae pastoribus (...), qui pascebant semetipsos! Nonne greges a pastoribus pascuntur? – Biada pasterzom (...), którzy paśli samych siebie! Izali nie trzody pasą pasterze? (Ez 34, 2)
+
+Mane, Thecel, Phares – Mane, Tekel, Fares (Dan 5, 25)
+
+Policzono, zważono, rozdzielono.
+Appensus es in statera, et inventus es minus habens – Zważony jesteś na wadze i znaleziono cię za lekkim (Dan 5, 27)
+
+Et polluent sanctuarium fortitudinis, et auferent iuge sacrificium, et dabunt abominationem in desolationem. Et impii in testamentum simulabunt fraudulenter – I zgwałcą świątynię mocy, i odejmą ustawiczną ofiarę, a dadzą obrzydłość na spustoszenie. A bezbożnie działający przeciw przymierzu będą postępować obłudnie i zdradliwie (Dan 11, 31-32)
+
+Propter hoc ecce ego lactabo eam, et ducam eam in solitudinem, et loquar ad cor eius – Przeto oto Ja przynęcę ją i zawiodę ją na puszczę, i będę mówił do serca jej (Oz 2, 14)
+
+Bóg powołuje niektóre dusze do życia kontemplacyjnego w samotności.
+Quia tu scientiam repulisti, repellam te – Ponieważ ty odrzuciłeś umiejętność, odrzucę cię (Oz 4, 6)
+
+Przestroga szczególnie dla kapłanów. Por. Mal 2, 7.
+Qui nesciunt quid sit inter dexteram et sinistram suam – Którzy nie rozróżniają między prawicą a lewicą swoją (Jon 4, 11)
+
+Znaczy tyle, co: małe niemowlęta.
+Domine (...) cum iratus fueris, misericordiae recordaberis – Panie (...) gdy się rozgniewasz, wspomnisz na miłosierdzie (Hab 3, 2, por. Tob 3, 13)
+
+Non sum propheta, homo agricola ego sum, quoniam Adam exemplum meum ab adolescentia mea – Nie jestem prorokiem, człowiek oracz ja jestem, bo Adam przykładem moim od młodości mojej (Zach 13, 5)
+
+Percute pastorem, et dispergentur oves – Uderz pasterza, a rozproszą się owce (Zach 13, 7, Mt 26, 31)
+
+Sicut autem fuerit voluntas in coelo, sic fiat! – A jaka będzie wola na niebie, tak niechaj się stanie! (1 Mach 3, 60)
+
+Ipsi autem non erant de semine virorum illorum per quos salus facta est in Israel – A oni nie byli z nasienia onych mężów, przez których się stało zbawienie w Izraelu (1 Mach 5, 62)
+
+Verum non propter locum gentem, sed propter gentem locum Deus elegit – Lecz nie dla miejsca naród, ale dla narodu miejsce Bóg obrał (2 Mach 5, 19)
+\end{document}

@@ -1,0 +1,1107 @@
+% !TEX TS-program = lualatex+se+debug
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[14pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{20}%rozmiar wyniku GregorioTEX
+% koniec 
+\gresetlastline{ragged}% justowanie do lewej
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+%\def\mydebug{1}
+\begin{document}
+\makeatletter
+\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+\makeatother
+\pagestyle{empty}
+%\pagestyle{plain}	
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{COMMONITORIUM}
+	%\small\textit{Fontevraud Gradual\\}
+	\small\textit{(Pamiętnik) ROZPRAWA PIELGRZYMA o starożytności i powszechności wiary katolickiej przeciw niezbożnym nowościom wszystkich kacerzy\\ŚW. WINCENTY Z LERYNU († 450)}
+	\vspace{4mm}
+\end{center}	
+\end{spacing}
+\setstretch{1}% odstęp między liniami
+\small
+\selectlanguage{polish}
+\noindent\subsekcja{ROZDZIAŁ I.}
+
+ 
+
+Powód napisania tego pamiętnika.
+
+ 
+
+1. Według słów i upomnienia Pisma: Pytaj ojców twoich i oznajmią tobie, starszych twoich i powiedzą ci (2) – i indziej: Nakłoń ucha twego a słuchaj słów mądrych (3), i jeszcze: Synu mój, nie zapominaj mów tych, a słów moich niech strzeże serce twoje (4), zda mi się, najmniejszemu ze sług Bożych, pielgrzymowi, że przy Boskiej pomocy pożyteczną rzeczą będzie, jeśli spiszę to, co przejąłem wiernie od świętych Ojców, – co najmniej nieodzowną dla własnej słabości umysłu, gdyż mieć będę pod ręką środek zaradzenia nieudolnej mej pamięci przez ustawiczne czytanie.
+
+ 
+
+2. Do tej roboty zachęca mnie nie tylko pożytek takiej pracy, lecz i uwaga na czas, i miejsce stosowne. Czas dlatego, że jak on wszystkie rzeczy ludzkie z sobą unosi, tak my też wzajem z niego wynieść winniśmy cokolwiek zasługującego na żywot wieczny, zwłaszcza gdy i straszliwe jakieś oczekiwanie zbliżającego się sądu Bożego wymaga gruntowniejszego poznawania religii, i nowych kacerzy przewrotność nakazuje wiele starania i baczności. Miejsce zaś dlatego, – że mieszkam z dala od wrzawy i zgiełku miast wielkich w ustronnej wiosce, w samotnej celi klasztornej, gdzie bez wielkiej trudności spełnić można, co psalm opiewa: Uspokójcie się a obaczcie, żem ja jest Bogiem (5). Sprzyja temu również i sprawa powołania mojego; miotany bowiem niegdyś różnymi a smutnymi przygodami światowej żołnierki, zawinąłem wreszcie za łaską Chrystusową do najpewniejszej zawsze dla wszystkich przystani religii, by tu po uciszeniu wichrów próżności i pychy, ofiarą pokory chrześcijańskiej jednając Boga, uniknąć nie tylko rozbicia w tym życiu, lecz i płomieni przyszłego wieku.
+
+ 
+
+3. Lecz już w Imię Boże do pracy zamierzonej przystępuję, bym podania przodków u siebie przechowane opisał raczej z wiernością sprawozdawcy, niż zarozumiałością autora, z zachowaniem tego w pisaniu prawidła, że bynajmniej nie wszystko, lecz tylko rzeczy konieczne zamieszczę, ani pięknym i wyszukanym stylem, ale w łatwej i zwykłej mowie, wielu rzeczy dotykając raczej niż wykładając takowe. Niech piszą wytwornie i dokładnie ci, których wiedzie do takiej pracy albo zaufanie w zdolności własne, albo wzgląd obowiązku. Mnie do wspomożenia pamięci, lub więcej z powodu zapominania mojego starczy ten ułożony pamiętnik, który powoli, odczytując to, czegom się nauczył, codziennie przy Bożej pomocy będę się starał poprawiać i uzupełniać. Zastrzegam to dlatego na początku, ażeby, jeśli się praca moja dostanie przypadkiem do rąk świętych mężów (6), niczego w niej zbyt pochopnie nie ganili, co miało ulec zapowiedzianej poprawie.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ II.}
+
+ 
+
+Zasada ogólna rozeznawania prawdy wiary katolickiej od fałszu kacerskiej nieprawości.
+
+ 
+
+4. Często z wielką usilnością, z pilnością największą wywiadując się od bardzo wielu świątobliwością i nauką sławnych mężów, w jaki sposób mógłbym według pewnej jakiejś ogólnej i nieodmiennej zasady odróżnić prawdę wiary katolickiej od fałszu kacerskiej nieprawości, tę zawsze od wszystkich niemal odbierałem odpowiedź, że czy ja, czy ktokolwiek inny chciałby wykryć podstępy powstających kacerzów, zasadzek ich uniknąć i w prawej wierze bezpiecznie i doskonale wytrwać, dwojako przy Boskiej pomocy powinien utwierdzać wiarę swoją: naprzód powagą Pisma św., a potem podaniem Kościoła katolickiego.
+
+ 
+
+5. Zapyta tu kto może: Kiedy jest całkowity zbiór Ksiąg świętych, w zupełności sobie wystarczający, na co jeszcze powaga rozumienia kościelnego? Oto dlatego, że nie wszyscy jednakowo rozumieją Pismo św. dla jego głębokości, lecz różni różnie wykładają słowa jego, że prawie ilu jest ludzi, tyle bodaj zdań z niego wysnuć można. Inaczej bowiem tłumaczy je Nowacjan (7), inaczej Sabeliusz; inaczej Donat; inaczej Ariusz, Eunomiusz, Macedoniusz; inaczej Fotyn, Apolinary, Pryscylian; inaczej Jowinian, Pelagiusz, Celestiusz; inaczej wreszcie Nestoriusz. Dlatego właśnie, dla takich tak różnorodnego błędu wykrętów potrzeba nieodzownie, by w wykładzie pism prorockich i apostolskich stosowano się ściśle do prawidła kościelnego i powszechnego rozumienia.
+
+ 
+
+6. W samym również Kościele katolickim na to najwięcej baczyć potrzeba, by trzymać się tego, co wszędzie, co zawsze, co przez wszystkich wierzono. To bowiem prawdziwie i właściwie jest katolickim, jak nazwa sama i sam rozum wskazuje, który wszystko prawie obejmuje powszechnie. A stanie się to, gdy będziemy się trzymali powszechności, starożytności i zgody. Trzymać się będziemy powszechności wówczas, jeśli tę jedną wiarę za prawdziwą uznajemy, którą cały po wszystkim świecie Kościół wyznaje; starożytności znowu, jeśli żadną miarą nie odstępujemy od tego rozumienia, o którym jawną jest rzeczą, iż się go trzymali święci przodkowie i ojcowie nasi; zgody zaś, – jeśli w samej starożytności przestrzegamy zdań i rozumienia wszystkich lub prawie wszystkich kapłanów i nauczycieli kościelnych.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ III.}
+
+ 
+
+Co czynić na wypadek różności zdań jednego lub wielu?
+
+ 
+
+7. Co tedy ma czynić chrześcijanin katolik, jeśli jaka cząstka Kościoła odłączy się od jedności wiary powszechnej? nic – jedno przełożyć zdrowie całego ciała nad zaraźliwy i zepsuty członek. Co ma czynić, jeśli nowa jaka zaraza nie już cząsteczkę tylko, lecz cały Kościół dotknąć usiłuje? Wówczas będzie się starał wytrwać przy starożytności, której żadną już miarą nie może zwieść jakikolwiek podstęp nowości.
+
+ 
+
+8. Co czynić, jeśli w samej starożytności dostrzeżony będzie błąd dwóch lub trzech ludzi, lub jednego miasta, albo nawet jakiej prowincji? wtenczas nad zuchwalstwo lub nieświadomość niewielu, winien przełożyć istniejące z dawna postanowienia Soboru powszechnego. Na wypadek zaś, gdyby takowych nie było, niech pilnie radzi się i bada przez porównanie zdania przodków, tych jeno, którzy choć w różnych czasach i miejscach, w jednego przecież Kościoła katolickiego jedności i wierze trwając, byli prawymi nauczycielami, – w tych rzeczach, o których nie jeden lub dwóch tylko, lecz wszyscy jednako i jednozgodnie, jawnie, często, stale sądzili, pisali, uczyli, czemu też i on bez wahania wierzyć powinien.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ IV.}
+
+ 
+
+Przykład przewrotności donatystów i arian jawnym jest dowodem, ile nieszczęść sprowadza narzucenie nowego dogmatu.
+
+ 
+
+9. Dla zrozumienia lepszego przykładami po szczególe objaśnić i nieco obszerniej wyłożyć to muszę, by przez chęć zbytniej zwięzłości żywość mowy nie przyniosła uszczerbku istocie rzeczy. Gdy za czasów Donata, od którego pochodzą donatyści, znaczna część Afryki rzucała się na oślep w odmęt jego błędu, i niepomna imienia, wiary i powołania swego przekładała nad Kościół Chrystusowy świętokradzkie zuchwalstwo jednego człowieka, wówczas którzykolwiek po Afryce rozrzuceni, potępiając niezbożne odszczepieństwo, łączyli się ze wszystkimi świata kościołami, sami jedni ocaleli w świątnicy wiary katolickiej, piękny wzór zostawiając potomnym, jak na przyszłość, chwalebnym obyczajem, nad szaleństwo jednego lub kilku, przenosić zdrowy rozsądek wszystkich.
+
+ 
+
+10. Podobnież gdy jad arianizmu nie już cząstkę pewną lecz cały prawie świat zaraził, tak że, kiedy wszystkich niemal biskupów łacińskich już to gwałtem już podstępem uwiedziono, mrok jakiś ogarnął umysły, czego właściwie w takim zamieszaniu należało się trzymać, wówczas każdy prawdziwy miłośnik i czciciel Chrystusa, oddając pierwszeństwo starej wierze przed nowym wiarołomstwem, pozostał wolnym od tej zarazy.
+
+ 
+
+11. Niebezpieczeństwo owych czasów aż nadto wykazało, ile ściąga nieszczęść wprowadzenie nowego dogmatu. Wówczas bowiem i małe i największe sprawy zostały zachwiane, gdyż nie tylko powinowactwa, pokrewieństwa, przyjaźni, rodziny, lecz i miasta, ludy, prowincje, narody, całe wreszcie państwo rzymskie do posad wstrząśnięte i poruszone zostało. Choć bowiem niezbożna nowość ariańska, jakoby Bellona (8) lub Furia (9) jaka, pozyskawszy naprzód cesarza (10), wszystkim potem najwyższym urzędnikom dworu narzuciła jarzmo praw nowych, nie przestała bynajmniej mieszać i wywracać spraw wszystkich, osobistych i społecznych, świętych i pospolitych, zapoznawać różnicę dobra i prawdy, każdego wedle upodobania prześladować jakoby ze stanowiska wyższego. Wtedy znieważano małżonki, osierocano wdowy, gwałcono dziewice, burzono klasztory, rozpędzano duchownych, chłostano lewitów, na wygnanie skazywano kapłanów, zapełniano świętymi ciemnice, więzienia, kopalnie; większość ich, z miast wykluczona, zmarniała i zginęła na wygnaniu i tułactwie po pustyniach i pieczarach, wśród zwierząt dzikich i skał, dla braku odzieży, z głodu i pragnienia. A wszystko to zali dla jakiego innego powodu się działo, jedno że na miejsce Boskiego dogmatu wprowadzano wymysły ludzkie, że nowość bezbożna podrywała dobrze ugruntowaną starożytność, że gwałcono ustawy zwierzchności, znoszono uchwały ojców, niweczono postanowienia przodków, że żądza niezbożnej do nowinek ciekawości nie umie się utrzymać w nieomylnych granicach starożytności świętej i nieskażonej?
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ V.}
+
+ 
+
+Winniśmy naśladować męczenników, których żadna przemoc nie mogła odwieść od obrony wiary ojców.
+
+ 
+
+12. Lecz może zmyślam to z nienawiści nowinek a zamiłowania starożytności? Kto by tak sądził, niechże przynajmniej wierzy św. Ambrożemu, który w drugiej księdze swego dzieła dla cesarza Gracjana, opłakując smutne położenie owego czasu, tak mówi: "Wszak dość już, wszechmocny Boże, zagładą naszą i krwią naszą okupiliśmy kaźni wyznawców, wygnania kapłanów i zbrodnię tak wielkiej bezbożności. Dostatecznie jawnym się stało, że gwałciciele wiary nie mogą być bezpiecznymi" (11). A w trzeciej księdze tegoż dzieła pisze: "Chowajmyż tedy przykazania przodków a nie naruszajmy pieczęci dziedzicznych w nieoględnym zuchwalstwie. Onej księgi prorockiej zapieczętowanej ani starsi, ani moce, ani aniołowie, ani archaniołowie nie ważyli się otworzyć; samemu Chrystusowi zachowane było prawo jej wykładu (12). Kto z nas ośmieli się rozpieczętować kapłańską księgę, zamknioną przez wyznawców, krwią wielu już męczenników uświęconą? którą wszyscy zmuszeni otworzyć (13), później przecież, potępieniem podstępu, zapieczętowali znowu, a ci co nie śmieli jej naruszyć, stali się wyznawcami i męczennikami. Jakże możemy odrzucać wiarę tych, których zwycięstwo sławimy?" (14).
+
+ 
+
+13. Sławimy, mówię, głośno, o św. Ambroży, sławimy głośno i z uwielbieniem podziwiamy! Bo jestże kto tyle szalony, co by nie pragnął naśladować, chociaż doścignąć nie zdoła, tych, których od obrony wiary przodków nie odwiódł gwałt żaden, ani groźby ani pochlebstwa, ani życie ani śmierć, ani dwór cesarski ani dworzanie, ani cesarz ani cesarstwo, ani ludzie ani szatani, – których za przywiązanie do starożytności w rzeczach wiary Bóg uznał godnymi takiej nagrody, że przez nich dźwignął upadłe kościoły, ożywił umarłe duchowo ludy, przywrócił kapłanom strącone korony, niecne nowej niezbożności nie głoski lecz głosek wymazanie (15) zatarł, w zdroju niebieskim łez pokutnych, biskupom udzielonym, cały wreszcie świat srogą nowopowstałego kacerstwa nawałnicą wstrząśnięty przywiódł znowu do starej wiary z nowego wiarołomstwa, do dawnego zdrowia z szaleństwa nowych wymysłów, do starodawnego światła ze ślepoty nowinek (16).
+
+ 
+
+14. A w onej świętej mocy wyznawców na to najwięcej zważać nam trzeba, że w samej starożytności Kościoła podjęli oni obronę nie cząstki jakowejś, lecz całości. Niepodobna bowiem było, by tacy i tak wielcy mężowie z taką usilnością popierali mylne i sprzeczne zdania jednego lub dwóch ludzi, albo też walczyli na korzyść zuchwałego sprzysiężenia maleńkiej jakiejś prowincji; lecz idąc za postanowieniami i orzeczeniami wszystkich Kościoła świętego kapłanów, dziedziców apostolskiej i katolickiej prawdy, woleli siebie raczej niż starożytnej powszechności wiarę na zgubę wydać. Dlatego słusznie dostąpili takiej chwały, że nie już za wyznawców tylko, lecz za książąt wyznawców słusznie i sprawiedliwie są poczytywani.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ VI.}
+
+ 
+
+Im kto więcej przywiązanym jest do wiary, ten skwapliwiej opiera się nowym wymysłom. Dlatego papież Stefan św. z wielką stanowczością wystąpił przeciw powtarzaniu chrztu.
+
+ 
+
+15. Wszyscy przeto prawi katolicy powinni w ustawicznym rozmyślaniu wspominać na wielki i prawdziwie Boży przykład tych świętych mężów, co na kształt siedmioramiennego świecznika siedmiorakim światłem Ducha Świętego jaśniejąc, świetny wzór wskazali potomnym, jak na przyszłość zuchwalstwo niezbożnej nowości tłumić powagą starożytności świętej w każdym poszczególnym wypadku kłamliwych nauk kacerskich. Ani to zresztą rzecz nowa; zawsze bowiem trwał w Kościele ten obyczaj, że im kto bardziej był przywiązanym do wiary, tym skwapliwiej opierał się wymyślonym nowinkom. Przykładów takich pełno wszędy, i za długo byłoby je wyliczać; wezmę jeden jaki, najlepiej ze św. Stolicy Apostolskiej, by wszyscy jasno poznali, jak dzielnie, jak usilnie, jak wytrwale świętych Apostołów święci następcy bronili całości przyjętej raz wiary.
+
+ 
+
+16. Niegdyś czcigodnej pamięci Agrypin (17) biskup kartagiński, pierwszy ze wszystkich ludzi utrzymywał wbrew prawu Boskiemu, wbrew zasadzie Kościoła powszechnego, wbrew zwyczajowi i ustawom przodków, że Chrzest powtarzać należy. To mniemanie sprowadziło tyle złego, że nie tylko wszystkim kacerzom dało sposobność do świętokradztwa, lecz i niektórym katolikom powód do błędu. Gdy więc zewsząd wszyscy opierali się tej nowości, i wszyscy po wszystkie miejsca kapłani wedle możności ją odpierali, wówczas świętej pamięci papież Stefan (18), biskup na Stolicy Apostolskiej, wystąpił przeciw temu wespół z innymi towarzyszami swymi lecz jednak przed innymi, za godną, jak sądzę, rzecz poczytując, by wszystkich o tyle przewyższył gorliwością w wierze, o ile przewyższał powagą stanowiska. W wysłanym da Afryki liście to ostatecznie postanowił: "Nihil novandum, nisi quod traditum est, – niczego nie odmieniać, przestrzegać podania". Rozumiał bowiem mąż święty i roztropny, że wzgląd pobożności dopuszcza to jedno tylko, by wszystko z taką wiernością było przekazane synom, z jaką wzięte od ojców, że nam za religią iść należy, nie kędy sami chcielibyśmy ją poprowadzić, lecz raczej którędy ona prowadzi, i że to jest właściwe chrześcijańskiej skromności i powadze, by nie swoje potomnym podawać, lecz wzięte od przodków zachować. Jakiż przeto był wtedy wynik całej sprawy? – praktykowany i zwykły: zatrzymano starożytność, nowość odrzucono.
+
+ 
+
+17. Lecz może zbywało na poparciu onemu wymysłowi nowemu? Przeciwnie, – miał on za sobą taką umysłu potęgę, takie wymowy potoki, tak wielką liczbę zwolenników, takie prawdy podobieństwo, takie orzeczenia Pisma Bożego, lecz zupełnie w sposób nowy i fałszywy rozumiane, iż zda mi się, że całego tego sprzysiężenia w żaden sposób nie można byłoby obalić, gdyby go nie obróciło w niwecz – jedyna wszystkich tych usiłowań pobudka, – samo właśnie ono podjęte, bronione, zachwalane wyznanie nowości. Jakież koniec końcem samegoż koncylium afrykańskiego (19) lub jego dekretu znaczenie? Żadne, za łaską Bożą, lecz wszystko jak senne widziadła, jak baśni, jak naleciałość zostało zniesione, zapomniane, zdeptane.
+
+ 
+
+18. I, o dziwna rzeczy odmiano! Twórcy tego mniemania za prawowiernych, zwolennicy za kacerzów są poczytani; mistrze przebaczenie, uczniowie potępienie odnoszą; pisarze dzieł owych będą synami królestwa, obrońców zaś piekło pochłonie. Bo któż do tyla szalony, co by wątpił, że owa ozdoba wszystkich świętych biskupów i męczenników, Cyprian św. (20) będzie na wieki królował z Chrystusem wraz z innymi towarzyszami swoimi? Albo przeciwnie, kto tyle bezbożny, co by przeczył, że donatyści i inni truciciele, którzy się chełpią, iż powagą onego koncylium chrzest powtarzają, goreć będą z diabłem na wieki?
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ VII.}
+
+ 
+
+Kacerze jak synowie Chama wyjawiają chętnie błędy mężów świętych i przywodzą na swą obronę ciemne ich wyrażenia. Pilnie strzec się należy takich, którzy śmią odmieniać wiarę.
+
+ 
+
+19. Wyrok ten zda mi się przez Boga ogłoszonym najbardziej dla przewrotności tych, co pod cudzym imieniem usiłując wytworzyć herezję, wyszukują pospolicie pism jakiegoś dawnego męża w mało znanym wydaniu, które dla samej swej zawiłości zdają się sprzyjać ich dogmatowi, ażeby wyglądało, nie wiem czemu, że cokolwiek głoszą, ani pierwsi, ani jedni oni tak rozumieją. Ich niegodziwość, ja uważam, podwójnej nienawiści godną, już dlatego że się nie lękają podawać innym trucizny kacerstwa, już że pamięć męża świętego jakoby uśpione popioły bezbożną ręką rozwiewają, i to, co milczeniem pokryć należało, rozgłaszają przez odnowienie mniemania, idąc w tym śladami swego poprzednika, Chama, który nie dość że zaniechał okryć nagości czcigodnego Noego, lecz jeszcze na pośmiewisko innym ją oznajmił. Stąd za poniewierkę czci synowskiej na taką zasłużył karę, że klątwa grzechu jego ciążyła i na jego potomkach, – wielce i dalece różny od onych błogosławionych braci, którzy nagości zacnego ojca swego ani własnymi oczyma obrazić, ani dla obcych widowiskiem być nie dopuścili, lecz tyłem obróceni, jak napisano, okryli go, to jest ani pochwalili ani wyjawili upadku świętego męża, – i dlatego właśnie obdarzeni zostali szczęśliwym błogosławieństwem i na potomstwo swoje (21).
+
+ 
+
+20. Lecz wróćmy do przedmiotu. Wielką tedy bojaźnią lękać się nam trzeba grzechu odmiany wiary i zniewagi religii, od czego nie tylko karność postanowień kościelnych, lecz i groźba powagi apostolskiej odstrasza. Wiadomo wszystkim, z jaką powagą, jak surowo i jak gwałtownie św. Paweł Apostoł strofuje tych, co z dziwną lekkomyślnością nazbyt skoro przenieśli się od tego, który ich do łaski Chrystusowej wezwał, do inszej Ewangelii, która nie jest inszą (22); – co nagromadzili sobie nauczycielów według swoich pożądliwości, od prawdy słuchanie odwracając, ku baśniom obróceni (23); mających potępienie, iż pierwszą wiarę złamali (24), uwiedzionych przez tych, o których tenże Apostoł pisze do braci rzymskich: A proszę was, bracia, abyście upatrywali tych, którzy czynią rozruchy i zgorszenia, mimo naukę, której się wy nauczyliście, i chrońcie się ich. Albowiem takowi Panu naszemu Chrystusowi nie służą, ale brzuchowi swemu, a przez łagodne mowy i pobłażania zwodzą serca niewinnych (25). Którzy wrywają się do domów, i pojmane wiodą niewiastki grzechami obciążone, które się dają uwieść rozmaitym pożądliwościom, zawsze się uczące, a nigdy ku wiadomości prawdy nie przychodzące (26). Próżnomówni i zwodziciele, którzy całe domy podwracają, ucząc co nie potrzeba dla zysku sprośnego (27). Ludzie rozumu skażonego, odrzuceni ze strony wiary (28); pyszni i nic nie umiejący, ale chorujący około gadek i sporów o słowach; którzy utracili prawdę, rozumiejący zyskiem pobożność (29); a k'temu też próżnujący, uczą się obchodzić domy; nie tylko próżnujący, ale też świegotliwi i dworni, mówiący czego nie potrzeba (30); którzy dobre sumienie odrzuciwszy, ze strony wiary rozbili się (31); których bezbożność i próżnomówność wielce pomnażają się ku niepobożności, a mowa ich szerzy się jako kancer (32). Słuszna też, co o nich napisano: Aleć więcej nie wskórają, albowiem ich szaleństwo jawne będzie wszystkim, jako i onych było (33).
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ VIII.}
+
+ 
+
+Wykład słów św. Pawła do Galatów, 8 w. I rozdz.
+
+ 
+
+21. Gdy zatem niektórzy tacy, obchodząc prowincje i miasta, i obnosząc na sprzedaż błędy swoje, przyszli też do Galatów, i gdy Galatowie po ich wysłuchaniu, jakby uprzykrzywszy sobie prawdę, odrzucając mannę apostolskiej i katolickiej nauki, rozkoszowali się kałem nowości kacerskiej, powaga władzy apostolskiej przejawiła się w jak najsurowszym wyroku: Ale choćby my, prawi, albo anioł z nieba przepowiadał wam mimo to, cośmy wam przepowiadali, niech będzie przeklęctwem (34).
+
+ 
+
+22. Co znaczą te słowa: Ale choćby my? Czemu nie raczej: Ale choćby ja? Znaczy to: choćby Piotr, choćby Andrzej, choćby Jan, choćby wreszcie całe zgromadzenie apostolskie przepowiadało wam mimo to, cośmy wam przepowiadali, niech będzie przeklęctwem. Straszliwy to wyrok, gdy w obronie nietykalności pierwszej wiary ani na siebie, ani na innych w apostolskim urzędzie towarzyszów swoich nie ma względu. Nie dość tego. Choćby i anioł z nieba przepowiadał wam mimo to, cośmy wam przepowiadali, niech będzie przeklęctwem. Nie wystarczało do straży przekazanej raz wiary wspomnieć o ułomnej naturze ludzkiej z pominięciem zacności anielskiej. Choćby my, powiada, albo anioł z nieba, – nie jakoby święte i niebieskie duchy grzeszyć jeszcze mogły, lecz znaczą te słowa: choćby stała się rzecz niepodobna, ktokolwiek kusiłby się o zmianę podanej raz wiary, niech będzie przeklęctwem.
+
+ 
+
+23. Lecz może Apostoł powiedział to mimochodem, może wyrzekł raczej w uniesieniu ludzkim, niż ze względu Boskiego postanowił? Uchowaj Boże! Prowadzi bowiem rzecz dalej i toż samo ponownie z wielką usilnością zaleca: Jakośmy przedtem powiadali i teraz zasię mówię: jeśliby kto wam opowiadał mimo to, coście wzięli, niech będzie przeklęctwem (35). Nie powiedział: jeśliby kto wam opowiadał mimo to, coście wzięli, niech będzie błogosławiony, chwalony, przyjęty, lecz niech będzie przeklęctwem, tj. oddzielony, odłączony, wykluczony, by jedna parszywa owca nie zarażała niewinnego stada Chrystusowego przez niebezpieczne obcowanie.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ IX.}
+
+ 
+
+Do wszystkich się odnosi to, co św. Paweł zalecił Galatom.
+
+ 
+
+24. Lecz może Galatom tylko było to przykazano? Więc i to jednym Galatom nakazano, co dalej w tymże liście wspomina Apostoł: Jeśli żyjemy duchem, duchem i postępujmy. Nie stawajmy się chciwi próżnej chwały, jedni drugich drażniąc, jedni drugim zazdroszcząc (36), itd. A jeślić to niedorzecznością, i wszystkim zarówno tak przykazano, stąd wniosek, że jak te przykazania obyczajów, tak też i tamte przestrogi w rzeczach wiary wszystkich jednako obejmują, i jak nie wolno nikomu drażnić innych albo innym zazdrościć, tak również nikomu nie wolno nic przyjmować mimo to, co Kościół katolicki wszędzie przepowiada.
+
+ 
+
+25. Albo może wtedy był obowiązek wyklinać, gdyby kto głosił co mimo zwykłe przepowiadanie, teraz zaś już to prawo nie obowiązuje? Zatem i to też, co tam powiedziano: A mówię: duchem chodźcie, a pożądliwości ciała nie wypełnicie (37), wtedy tylko było przykazaniem, dziś zaś już nie jest. A jeśli tak wierzyć bezbożna zarówno i zgubna jest rzecz, wniosek konieczny, że jak tego po wszystkie czasy należy przestrzegać, tak i tamten wyrok o niezmienności wiary na wszystkie czasy jest postanowiony. Przepowiadać więc cokolwiek chrześcijanom katolikom mimo to, co wzięli, nigdy nie było wolno, nigdzie nie wolno, nigdy nie będzie wolno; i wyklinać tych, którzy opowiadają mimo to, co raz wzięte, zawsze był obowiązek, i wszędzie jest obowiązek, i zawsze obowiązek będzie.
+
+ 
+
+26. Wobec tego jestże kto tyle lekkomyślny, żeby przyjmował nad to, co wziął od Kościoła? Woła i powtarza wołanie swoje, i do wszystkich, i zawsze, i wszędzie słowami listu swego woła on mąż wielki, owo naczynie wybrane, ów nauczyciel pogan, on sławny Apostoł, kaznodzieja ziemi, powiernik nieba, by przeklęctwem był, ktokolwiek by głosił dogmat nowy. W odpowiedzi na to odzywają się żaby jakieś, komary i muchy marne, jakimi są pelagianie, i to do katolików: Dla naszej, mówią, powagi, za naszym przewodem, dla wykładu naszego potępiajcie, czegoście się trzymali, trzymajcie się tego, coście potępiali, odrzućcie starą wiarę, ustawy ojcowskie, przodków dziedzictwo, i przyjmijcie – co tedy? Lękam się i wymówić, bo takie to zuchwałe, iż zda mi się, że nie tylko twierdzić, lecz nawet zbijać tego niepodobna bez jakowego grzechu.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ X.}
+
+ 
+
+Czemu często z dopuszczenia Bożego wielcy mężowie stają się sprawcami nowości w Kościele?
+
+ 
+
+27. Powie kto może: Czemu tedy nieraz dopuszcza Pan Bóg, że pewne znakomite osobistości w Kościele głoszą wiernym, rzeczy nowe? Słuszne pytanie i warte pilniejszego i szerszego omówienia, na które odpowiedzieć zamierzam nie własnym rozumieniem lecz powagą Pisma Bożego i wywodami kościelnego nauczycielstwa. Posłuchajmyż tedy św. Mojżesza, i niech on nam wyjaśni, czemu dozwala niekiedy Bóg uczonym mężom, których dla daru umiejętności Apostoł prorokami też nazywa, głosić nowe dogmaty, zwane przez Stary Testament przenośnie bogami cudzymi, dlatego że tak kacerze własne mniemania, jak poganie bożki swoje poważają.
+
+ 
+
+28. Pisze Mojżesz w Księdze Powtórzonego Prawa: Jeśli powstanie, prawi, w pośrodku ciebie prorok, albo któryby mówił, że sen widział tj. nauczyciel w Kościele postanowiony, o którym uczniowie lub słuchacze jego sądzą, że uczy z objawienia. Co potem? – i zapowiedziałby znak i cud, a stałoby się tak, jako powiedział, o wielkim, zaiste, nauczycielu tu mowa, a wiedzy takiej, że zda się zwolennikom jego, iż zna on nie tylko rzeczy ludziom dostępne, lecz nawet odgaduje nadludzkie, – za jakich prawie podają Walentyna, Donata, Fotyna, Apolinarego i innych właśni ich uczniowie. Co dalej? i rzekłby ci:, prawi, Pójdźmy a naśladujmy bogów obcych, których nie znasz, a służmy im. Jacyż to są bogowie obcy, jeżeli nie błędy narzucone, których nie znałeś, nowe i niesłyszane? i służmy im, tj. wierzmy w nie i takowych się trzymajmy. Cóż wreszcie? nie usłuchasz słów onego proroka albo snowidza. Czemu, proszę cię, nie broni Bóg tego uczyć, czego słuchać broni? Bo, prawi, kusi was Pan Bóg wasz, aby jawne było, azali Go miłujecie czy nie, ze wszystkiego serca i ze wszystkiej duszy waszej (38). Najwyraźniejszy powód, czemu niekiedy Opatrzność Boża dozwala niektórym nauczycielom kościelnym nowe jakieś przepowiadać dogmaty. By kusił (doświadczył) was, prawi, Pan Bóg wasz. I zaprawdę, wielkie to pokuszenie, gdy ten, kogo ty za proroka i ucznia proroków, kogo za nauczyciela i obrońcę prawdy uważasz, dla kogo żywisz najwyższą cześć i miłość, z nagła i skrycie rozsiewa zgubne błędy, których ani rychło wykryć nie umiesz ze względu na dawne nauczanie, ani się ważysz łatwo potępić dla przywiązania do dawnego nauczyciela.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XI.}
+
+ 
+
+Przykłady z dziejów kościelnych stwierdzają prawdziwość słów Mojżeszowych.
+
+ 
+
+29. Zażąda tu kto może przykładów jakich z dziejów Kościoła na poparcie słów Mojżesza św. Słuszne wymaganie i zwłoki nie cierpiące. Otóż od najbliższych i jawnych poczynając, za takie pokuszenie uważam, gdy niedawno nieszczęsny on Nestoriusz, nagle z owcy przemieniony w wilka, począł szarpać trzodę Chrystusową, wówczas kiedy większość przezeń kąsanych, za owcę go jeszcze poczytując, tym bardziej na jego napaść była wystawioną. Bo i któżby łatwo o błąd posądził tego, którego widział z wyroku cesarza (39) do takiej godności wyniesionego, tak usilnie popieranego przez kapłanów, który wielką miłością duchowieństwa, najwyższą czcią ludu otoczony, co dzień jawnie wykładał Pismo św., i zbijał wszelkie szkodliwe błędy żydów i pogan? Jak zresztą taki nie przekonałby każdego, że prawowiernie uczy, prawowiernie przepowiada, prawowiernie sądzi, który dla utorowania drogi jednej własnej herezji ścigał bluźnierstwa wszystkich kacerstw? Lecz było to właśnie, co mówi Mojżesz: Kusi was Pan Bóg wasz, zali Go miłujecie czy nie.
+
+ 
+
+30. Ale pomijając Nestoriusza, z którego więcej było zawsze podziwu niż pożytku, więcej rozgłosu niż zasługi, którego niegdyś wielkim w mniemaniu ogółu bardziej względy ludzkie niż łaska Boża uczyniły, tych raczej wspomnę, co dla wielu zalet i wielkich usiłowań nie małą pokusą stali się dla katolików. Tak w Panonii za pamięci przodków Fotyn, jak niesie podanie, kusił kościół w Sirmium; dokąd wezwany na biskupstwo z wielkim od wszystkich uznaniem, czas pewien po katolicku urząd swój sprawując, nagle jak zły on prorok albo snowidz, wzmiankowany przez Mojżesza, począł namawiać powierzony sobie lud Boży, by naśladował bogów obcych, tj. przyjął wymyślone, nieznane przedtem błędy. Lecz to rzecz zwykła; zgubnym zaś było to, że do takiego występku nie błahych używał środków. Był bowiem i wielkich zdolności umysłu, i rozległej nauki, i potężnej wymowy, biegły w obydwóch językach, w których i rozprawiał i pisał swobodnie i gruntownie, czego dowodem zabytki dzieł jego częścią po grecku, częścią po łacinie pisane. Na szczęście przecież powierzone mu owce Chrystusowe, troskliwe wielce o wiarę katolicką i ostrożne, rychło wspomniały na słowa upomnienia Mojżeszowe, a podziwiając wymowę proroka i pasterza swojego, nie zapoznały jednak pokuszenia, – bo tegoż samego i za którym pierwej szły jak za prowodyrem trzody, unikać poczęły jako wilka.
+
+ 
+
+31. Nie tylko Fotyna, lecz i Apolinarego przykład uczy nas o niebezpieczeństwie takiego kuszenia w Kościele, a zarazem upomina do pilniejszej straży wiary. I on słuchaczom swoim przyczynił wiele niepokoju i zamieszania, gdyż ich w jedną stronę ciągnęła powaga Kościoła, w drugą znów odciągała zażyłość z mistrzem, a tak niepewni i chwiejni nie znajdowali, co im z dwojga raczej wybrać należało. Lecz może był to mąż, który zasługiwał na lekceważenie? przeciwnie, tak wielki i tego rodzaju, że mu nazbyt, i rychło i w wielu bardzo rzeczach dawano wiarę. Bo i któż nadeń znakomitszy umysłem, wykształceniem, nauką? Jak wiele kacerstw wielu dziełami swoimi zwalczył, ile zbił wrogich wierze błędów, świadczy sławne, najznakomitsze i największe jego w trzydziestu księgach dzieło, w którym odpiera z wielkim dowodów zasobem nierozsądne potwarze Porfiriusza (40). Za długo byłoby wyliczać wszystkie jego czyny, dla których istotnie mógłby się równać z największymi działaczami w Kościele, gdyby z niezbożnej żądzy kacerskiej ciekawości nie był wymyślił jakowejś nowinki, przez co i wszystkie prace swoje jakoby trądu zarazą skaził, i sprawił, że nauka jego nie tyle zbudowaniem dla Kościoła, ile raczej kuszeniem się mieni.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XII.}
+
+ 
+
+Wykład błędów Fotyna, Apolinarego i Nestoriusza.
+
+ 
+
+32. Tutaj może kto domagać się będzie ode mnie wyłożenia herezji wspomnianych wyżej kacerzów Nestoriusza, Apolinarego i Fotyna. Wprawdzie to do rzeczy, o której teraz mowa, nie należy; nie zamierzam bowiem zbijać błędów każdego z osobna heretyka, lecz przytoczyć kilka przykładów na dowód jasny i oczywisty słów Mojżeszowych, że jeśli kiedykolwiek jaki nauczyciel kościelny, dla wykładu tajemnic prorockich za proroka nawet poczytywany, usiłuje wprowadzić do Kościoła Bożego jakową nowość, dzieje się to z dopuszczenia Boskiej Opatrzności dla naszego doświadczenia. Pożyteczną zatem rzeczą będzie przy nadarzonej sposobności wyłożyć pokrótce mniemania wzmiankowanych wyżej kacerzów: Fotyna, Apolinarego i Nestoriusza.
+
+ 
+
+33. Sekta Fotyna jest taka. Mówi on, że jeden jest tylko, jednoosobowy Bóg, którego obyczajem żydowskim wyznawać należy. Przeczy Trójcy Świętej i nie uznaje żadnej osoby Słowa Bożego lub Ducha Świętego. Chrystusa zaś podaje za zwykłego tylko człowieka, któremu początek przypisuje z Maryi. Stąd na wszelaki sposób dowodzi, ze jedną tylko osobę Boga Ojca, a Chrystusa jako człowieka jeno czcić winniśmy. Tyle Fotyn.
+
+ 
+
+34. Apolinary znów chełpi się z jednomyślnego jakoby z nami rozumienia o jedności Trójcy Świętej, a bluźni jawnie przeciw temu samemu nie całokształtem swej nauki, lecz w pojęciu o tajemnicy Wcielenia Pańskiego. Twierdzi bowiem, że w ciele Zbawiciela naszego albo zupełnie duszy ludzkiej nie było, albo przynajmniej pozbawiona władz umysłowych była. Lecz i samo ciało Pańskie według niego nie z ciała Najświętszej Panny Maryi było wzięte, lecz z nieba zstąpiło do dziewiczego łona; zawsze chwiejny i niepewny poczytywał je raz za współwieczne Słowu Bożemu, to znów za stworzone z Bóstwa Jego. Zaprzeczał bowiem dwóch natur w Chrystusie, jednej Boskiej, drugiej ludzkiej, jednej z Ojca, drugiej z Matki; lecz samąż naturę Słowa miał za rozdzieloną, jakoby jedna część jej zostawała w Bogu, druga zamieniła się w ciało; tak, iż gdy podług prawdy katolickiej jeden jest Chrystus w dwojakiej naturze, on na przekór prawdzie utrzymuje, że z jednego Bóstwa Chrystusowego dwie stały się istoty. Tyle Apolinary.
+
+ 
+
+35. Nestoriusz zaś, przez błąd wprost przeciwny Apolinarowemu, dla odróżnienia jakoby dwóch natur w Chrystusie wprowadza niespodzianie dwie osoby, i, o zbrodnio niesłychana, dwóch mieć chce Synów Bożych, dwóch Chrystusów: jednego Boga, drugiego człowieka, jednego z Ojca, drugiego z Matki zrodzonego; i dlatego dowodzi, że Najświętszą Maryję Pannę nie Bogarodzicą (Theotocos), lecz Rodzicielką Chrystusa (Christotocos) zwać należy, gdyż z Niej narodził się nie Chrystus-Bóg, lecz Chrystus-człowiek. A kto by mniemał, że Nestoriusz głosi w pismach swoich o jednym Chrystusie i jednej osobie Chrystusa, niech nie będzie łatwowiernym. Albowiem zmyśla to dla oszukania, by łatwiej przez dobre wmówić i złe, jako Apostoł powiada: Sprawił mi śmierć przez dobre (41). Albo więc, jak rzekłem, zdradliwie przechwala się tu i ówdzie w pismach swoich wiarą w jednego Chrystusa i w jedną osobę w Chrystusie, albo też dowodzi, że dwie osoby tak się złączyły w jedną osobę Chrystusa już po porodzeniu przez Dziewicę, iż w chwili poczęcia i rodzenia dziewiczego i czas jakiś potem dwóch było Chrystusów, iż na Chrystusa, który się pierwotnie zwykłym i prostym człowiekiem, nie złączony bynajmniej z osobą Słowa Bożego przez zjednoczenie, urodził, później dopiero zstąpiła osoba Słowa; i że choć teraz Chrystus wzięty do nieba pozostaje w chwale Boga, kiedyś przecież nie było żadnej między Nim a resztą ludzi różnicy.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XIII.}
+
+ 
+
+Jasny wykład nauki katolickiej o Trójcy Świętej i Wcieleniu.
+
+ 
+
+36. Tak tedy Nestoriusz, Apolinary, Fotyn ujadają jako psy wściekłe przeciwko wierze katolickiej; Fotyn nie uznając Trójcy Świętej, – Apolinary za uległą przemianie podając istotę Słowa, i przecząc dwóch natur w Chrystusie, i albo całkowicie duszy ludzkiej odmawiając Chrystusowi, albo przynajmniej władz jej umysłowych, które zastępować miało Słowo Boże; – Nestoriusz utrzymując, że albo zawsze, albo przez czas pewien dwóch było Chrystusów. Kościół zaś katolicki i o Bogu i o Zbawicielu naszym prawowiernie rozumiejąc, zniewagi Bogu nie wyrządza ani w nauce o tajemnicy Trójcy Świętej, ani w nauce o Wcieleniu Chrystusowym; czci bowiem i jedność Boskiej natury w pełności Trójcy i równość Trójcy w jednym majestacie; i jednego, nie dwóch Chrystusów wyznaje, tegoż Bogiem zarazem i człowiekiem. Jedną wprawdzie osobę, lecz dwie uznaje natury, dwie natury lecz jedną tylko osobę, – dwie natury, gdyż Słowo Boże nie podlega odmianie, by się przemieniło w ciało, – jedną zaś osobę, by snadź, dwóch Synów przyjmując, nie zdał się oddawać czci czterem osobom zamiast Trójcy Świętej.
+
+ 
+
+37. Lecz warto tęż samą naukę więcej jeszcze, a dokładniej i jaśniej rozwinąć. W Bogu jedna jest natura a trzy osoby; w Chrystusie dwie natury, lecz jedna osoba. W Trójcy każda osoba inną jest, nie innej natury; w Zbawicielu różne natury, nie inny Chrystus. Jakże w Trójcy różne osoby, nie różne istoty? Dlatego że inna jest osoba Ojca, inna Syna, inna Ducha Świętego, a jednak Ojca, i Syna, i Ducha Świętego nie różne, lecz jedna i taż sama jest natura. Jak w Zbawicielu różne natury, nie inny Chrystus? Dlatego że inna Boska, inna ludzka natura, a przecież i Bóstwo i człowieczeństwo stanowią nie dwóch lecz jednego i tego samego Chrystusa, jednego i tego samego Syna Bożego, i jedna i taż sama jest osoba jednego i tegoż Chrystusa i Syna Bożego; jako w człowieku co innego ciało, co innego dusza, lecz jeden i ten sam człowiek złożony z duszy i ciała. W Piotrze i Pawle co innego ciało, co innego dusza, a jednak nie dwóch Piotrów, Piotr-ciało i Piotr-dusza, albo inny Paweł-dusza a Paweł-ciało, lecz jeden i tenże Piotr, jeden i ten sam Paweł, z dwojakiej a różnej złożony natury: duchowej i cielesnej. Tak tedy i w jednym Chrystusie dwie są natury, lecz jedna Boska, druga ludzka; jedna z Boga Ojca, druga z Matki Dziewicy; jedna współwieczna i równa Ojcu, druga w czasie i mniejsza od Ojca; jedna współistotna Ojcu, druga współistotna Matce, – a przecież jeden i tenże Chrystus w obydwóch naturach. Nie inny przeto Chrystus-Bóg i Chrystus-człowiek; nie jeden niestworzony a drugi stworzony; nie jeden niecierpiętliwy, drugi podległy cierpieniom; nie jeden równy Ojcu, drugi od Ojca mniejszy; nie jeden z Ojca, drugi z Matki, lecz jeden i ten sam Chrystus Bóg i człowiek, ten sam niestworzony i stworzony, ten sam niepodległy zmianom i cierpieniu – a odmieniony i umęczony, ten sam równy Ojcu i od Niego mniejszy, ten sam z Ojca przed wieki zrodzony i w czasie urodzony z Matki, prawy Bóg i prawy człowiek. W Bogu zupełność Bóstwa, w człowieku całkowita natura ludzka; całkowita, mówię, natura ludzka, bo ma zarazem i duszę i ciało, a ciało prawdziwe, nasze, macierzyńskie, duszę zaś obdarzoną rozumem, z pełnią władz umysłowych. Jest przeto w Chrystusie Słowo, i dusza, i ciało, lecz wszystko to jest jeden Chrystus, jeden Syn Boży, jeden Zbawiciel i Odkupiciel nasz. Jeden zaś nie przez jakoweś skazitelne zmieszanie Bóstwa i człowieczeństwa, lecz przez doskonałą i szczególną jedność osoby. Owo połączenie bowiem nie przemieniło bynajmniej, ani nie odmieniło jednej w drugą naturę (co jest właściwym arianów błędem), lecz raczej tak obydwie złączyło w jedno, że mimo wieczną jedność tejże osoby w Chrystusie, na wieki też trwa własność każdej natury, mocą czego ani Bóg nigdy ciałem być nie pocznie, ani ciało kiedykolwiek ciałem być nie przestanie. To potwierdza się także przykładem stanu ludzkiego; nie tylko bowiem w życiu doczesnym, lecz i w przyszłym również każdy człowiek będzie się składał z duszy i ciała, a jednak nigdy ani ciało w duszę, ani dusza nie przemieni się w ciało, i jak każdy z ludzi bez końca żyć będzie, tak też bezwarunkowo w każdym bez końca będzie trwała różnica obydwóch substancji. Tak i w Chrystusie, przy jedności osoby, zostanie na wieki własność obu natur.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XIV.}
+
+ 
+
+Jezus Chrystus jest prawdziwym – nie pozornym tylko człowiekiem.
+
+ 
+
+38. Wobec częstej wzmianki osoby, i twierdzenia, że Bóg we własnej osobie stał się człowiekiem, zachodzi wielka obawa, bym się nie zdał sądzić, iż Bóg-Słowo wziął, co jest własne naturze naszej przez samo jeno naśladownictwo działania, i że właściwe ludzkie czyny spełniał jak udany, nie jako prawdziwy człowiek; jak się to zwykle dzieje w teatrach, gdzie jeden przedstawia kolejno wiele osób, a żadną z nich nie jest. Ilekroć bowiem podejmie się ktoś naśladować działanie cudze, tak bywają wykonywane powinności i czyny innych, że jednak ci, co biorą na siebie taką rolę, nie są tymi samymi, których rolę odgrywają; jak (że zwykłego użyję przykładu) i aktor, gdy przedstawia na scenie kapłana albo króla, nie jest ani kapłanem ani królem, bo z końcem aktu przestaje być osobą z roli podjętej. Chowaj mnie, Boże, od drwin takich niegodziwych i zbrodniczych. Niech to szaleństwo zostanie przy manichejczykach, którzy, jako hołdownicy wyobraźni, utrzymują, że Syn Boży Bogiem był, człowiekiem zaś w rzeczywistości nie był, lecz jeno pozornie i tylko zachowaniem swoim udawał człowieka.
+
+ 
+
+39. Wiara zaś katolicka głosi, że Słowo Boże tak stało się człowiekiem, iż przyjęło wszystko własne naturze naszej nie kłamliwie i pozornie, lecz prawdziwie i rzeczywiście, że co było w Nim ludzkiego, nie naśladowało jako cudze, lecz raczej jako swoje wykonywało, że było istotnie tym, za kogo się przedstawiało. Jak my podobnie, w tym co mówimy, rozumiemy, żyjemy, istniejemy, nie udajemy ludzi, lecz jesteśmy. Boć Piotr i Jan, że ich przed innymi wymienię, ludźmi byli nie przez udawanie, lecz istotnie; ani też Paweł nie udawał Apostoła, albo nie przedstawiał Pawła, lecz był Apostołem, był Pawłem istotnie. Tak również Bóg-Słowo przez przyjęcie i posiadanie natury ludzkiej, przez mowę, czyny, cierpienia wedle ciała, bez żadnego przecie skażenia własnej natury, to doskonale sprawić raczył, że nie udawał ani nie wyobrażał człowieka zupełnego, lecz takim się przedstawiał, tak iż nie tylko wydawał się i był poczytywany za prawego człowieka, lecz był nim istotnie. Jako więc dusza z ciałem złączona, a jednak nie zamieniona w ciało, nie udaje człowieka, ale człowiekiem jest, i to nie pozornie lecz istotnie, tak też Bóg-Słowo, bez odmiany w sobie, przez zjednoczenie z człowiekiem stał się człowiekiem nie przez zmieszanie, nie przez udawanie, lecz istotnie. Odrzućmyż przeto całkowicie rozumienie osoby takiej, której rola pozornie i zwodniczo zostaje przyjętą, gdzie zawsze co innego jest w rzeczywistości, a co innego się przedstawia, gdzie grający rolę nigdy nie jest tym, którego rolę odgrywa. Broń nas bowiem, Boże, od podobnej wiary, jakoby Bóg-Słowo w taki złudny sposób przyjął na siebie postać ludzką; lecz tak raczej, że nietkniętą zachowując własną istotę i przyjmując naturę zupełnego człowieka, On sam ciałem, sam człowiekiem, sam w ludzkiej był postaci – nie pozornej lecz prawdziwej, nie udanej lecz istotnej, nie takiej wreszcie, która by istnieć przestawała razem z działaniem, lecz trwającej nieodmiennie w istocie swojej.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XV.}
+
+ 
+
+Połączenie Słowa z naturą ludzką dokonało się w chwili dziewiczego poczęcia, dlatego Najświętszą Maryję Pannę prawdziwie Bogarodzicą wyznawać należy.
+
+ 
+
+40. Ta przeto jedność osoby w Chrystusie stała się i dokonała nie po porodzeniu Panny, lecz już w dziewiczym Jej łonie. Baczyć bowiem winniśmy usilnie, by Chrystusa nie tylko jednego, ale zawsze jednego wyznawać, gdyż bluźnierstwem to nie do darowania, byś, godząc się, iż teraz jeden jest, twierdził, że kiedyś nie jeden lecz dwóch było Chrystusów, jeden od czasu chrztu, dwóch zaś w okresie narodzenia. Tego strasznego świętokradztwa nie inaczej możemy uniknąć jeno wyznając, że człowiek z Bogiem się złączył przez jedność osoby nie od chwili Wniebowstąpienia lub Zmartwychwstania albo chrztu, lecz już w żywocie Matki, owszem w samym poczęciu dziewiczym; i dla tej jedności osoby bez różnicy jedno za drugie, co własne jest Boga, przyczytamy człowiekowi, i co własne jest ciała, przypisujemy Bogu. Stąd to, co mamy w Piśmie świętym, że i Syn człowieczy zstąpił z nieba (42), i Pan Majestatu był ukrzyżowan na ziemi (43). Stąd również i to, że gdy ciało Pańskie było uczynione, ciało Pańskie stworzone, mówimy, iż samo Słowo Boże się stało (44), samaż Mądrość Boża napełniała się umiejętnością stworzoną; jako i w proroczym widzeniu jest mowa o przebodzeniu rąk Jego i nóg Jego (45). Z tej, mówię, jedności osoby wynika i to na zasadzie podobnejże tajemnicy, że gdy ciało Słowa rodzi się z Matki nienaruszonej, po katolicku jest wierzyć, przeczyć – niezbożnością, iż sam Bóg Słowo z Panny się narodził. Wobec tego, nie daj Boże, by kto chciał odzierać świętą Maryję z przywilejów łaski Bożej i wyłącznej chwały; gdyż na mocy szczególnego daru Pana i Boga naszego a Jej Syna mamy Ją prawdziwie i radośnie wyznawać Bogarodzicą; a Bogarodzicą nie tak, jako niektóra niezbożna herezja bredzi, dowodząc, że z imienia tylko zwać Ją należy Matką Boga, gdyż porodziła człowieka, który później stał się Bogiem, – jak mówimy o matce kapłana lub o matce biskupa, nie jakoby ta kapłana już albo biskupa rodziła, lecz że na świat wydała człowieka, który potem zastał kapłanem lub biskupem. Nie tak, mówię, św. Maryja jest Bogarodzicą; lecz dlatego, że jak powiedziano wyżej, już w Jej poświęconym żywocie spełniła się owa najświętsza tajemnica, przez którą dla szczególnej i wyjątkowej jedności osoby jako Słowo w ciele ciałem, tak człowiek w Bogu – Bogiem jest.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XVI.}
+
+ 
+
+Streszczenie powyższych wywodów o wierze katolickiej i różnych kacerstwach.
+
+ 
+
+41. Lecz już krótkie powyższe wywody o wzmiankowanych kacerstwach lub katolickiej wierze, krócej jeszcze i treściwiej powtórzmy dla odnowienia w pamięci, by i dokładniej zrozumieć powtórzone, i wdrożone głębiej zachować w umyśle. Przekleństwo tedy Fotynowi, który nie przyjmuje pełności Trójcy Świętej i Chrystusa głosi zwykłym tylko człowiekiem. Przekleństwo Apolinaremu, co dowodzi skażenia przemienionego Bóstwa w Chrystusie i znosi własność zupełnego człowieczeństwa. Przekleństwo Nestoriuszowi, przeczącemu narodzenia Boga z Dziewicy, wyznającemu dwóch Chrystusów, wprowadzającemu, z obaleniem wiary w Trójcę, cztery osoby.
+
+ 
+
+42. Błogosławiony zaś niech będzie Kościół katolicki, który czci jednego Boga w pełności Trójcy i zarazem równość Trójcy w jednym Bóstwie, tak iż ani jedność istoty nie psuje własności osób, ani różność Trójcy nie dzieli jedności Bóstwa. Błogosławiony, mówię, Kościół, który wyznaje w Chrystusie dwie prawdziwe i doskonałe natury, lecz jedną osobę Chrystusa; że ani różność natur nie rozdziela jedności osoby, ani jedność osoby nie przeszkadza różności natur. Błogosławiony, mówię, Kościół w rozumieniu, że Bóg stał się człowiekiem nie przez natury własnej odmianę, lecz przez złączenie w swej osobie natury ludzkiej, nie udanej i przemijającej, lecz istotnej i trwałej. Błogosławiony, mówię, Kościół, co taką moc przyznaje tej jedności osoby, że dla niej przez dziwną i niewymowną tajemnicę i Boskie człowiekowi i Bogu ludzkie przypisuje własności. Bo dla niej nie zaprzecza, że i człowiek z nieba zstąpił według natury Boskiej, i wierzy, że Bóg wedle natury ludzkiej stał się na ziemi, był umęczony i ukrzyżowany; dla niej wreszcie i człowieka Synem Bożym i Boga Synem Dziewicy wyznaje. Szczęśliwe przeto i czcigodne, błogosławione i święte, i równe prawie onemu nadziemskiemu Aniołów uwielbieniu to wyznanie, które jednego Pana Boga trzykrotnym "Święty" wychwala; dlatego bowiem najwięcej Kościół obstaje za jednością Chrystusa, by tajemnica Trójcy nie ginęła. Dość tego tymczasem; kiedy indziej, da Pan Bóg, obszerniej to wyłożę i wyjaśnię (46). Teraz wróćmy do przedmiotu.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XVII.}
+
+ 
+
+Jako błąd Orygenesa był wielkim kuszeniem dla Kościoła.
+
+ 
+
+43. Mówiliśmy tedy wyżej, że błąd nauczyciela bywał w Kościele Bożym kuszeniem dla ludzi, a kuszeniem tym większym, im uczeńszy był, kto błądził. I to naprzód powagą Pisma, potem przykładami z dziejów kościelnych wykazałem, mianowicie wspomnieniem tych, co przez czas jakiś za prawowiernych poczytywani pod koniec jednak albo do obcej odpadli sekty, albo własną utworzyli herezję. Zaiste, rzecz to wielkiej wagi, i ku nauce pożyteczna, i dla pamięci niezbędna, którą wciąż coraz więcej gromadzeniem przykładów wyjaśniać i wpajać w umysły należy, by wszyscy prawi katolicy wiedzieli, że powinnością ich jest – za Kościołem przyjmować nauczycieli, nie za nauczycielami porzucać wiarę Kościoła.
+
+ 
+
+44. Lecz, moim zdaniem, pomimo liczbę wielką sprawców takiego kuszenia, nie ma bodaj nikogo, kto by pod tym względem dorównał Orygenesowi (47), który posiadał wiele – tak świetnych, tak wyjątkowych, tak dziwnych zalet, że w początkach każdy za obowiązek sobie poczytał wierzyć wszelkim jego wywodom. Bo jeśli życie jedna powagę, był on wielce pracowity, skromny bardzo, cierpliwy, wytrwały. Jeśli ród albo wykształcenie: któż nadeń znakomitszy, – gdyż naprzód pochodził on z domu wsławionego męczeństwem (48); później nie tylko ojca, lecz i wszystkiego mienia pozbawiony dla Chrystusa, tak się zahartował wśród przykrości świętego ubóstwa, że, jak mówią, często bardzo znosił prześladowanie dla wiary Chrystusowej. A nie tylko to go zalecało, co wszystko do kuszenia potem służyło, lecz nadto jeszcze taka potęga umysłu, tak głębokiego, tak bystrego, tak wykształconego, że wszystkich niemal o wiele przewyższył; taka przedziwna nauka i wiedza wszechstronna, iż mało było rzeczy i dziedziny nauk teologicznych, żadnej bodaj z zakresu ludzkiej mądrości, których by gruntownie nie posiadał; a do tej nauki jego przyczyniła się wiele znajomość języków greckiego i hebrajskiego.
+
+ 
+
+A cóż dopiero, gdy wspomnę o jego wymowie tak porywającej, tak miłej, tak wdzięcznej, iż zda mi się, że nie tyle słowa, ile miód raczej płynął z ust jego. Czego on, co było do pojęcia trudne, nie wyjaśnił siłą rozumowania, czego, co było do wykonania ciężkie, jako rzeczy najłatwiejszej nie przedstawił? Lecz może twierdzenia swoje opierał na ścisłym tylko związku dowodów rozumowych? Bynajmniej, nigdy żaden nauczyciel nie posługiwał się częściej przykładami z Pisma św. A może napisał niewiele? Nikt z ludzi więcej, tak iż zdaje mi się, że nie tylko przeczytać, lecz i odnaleźć nawet wszystkich pism jego niepodobna; któremu, jak gdyby do całości środków zdobycia wiedzy, dopisał nawet wiek długi. Lecz może nie miał szczęścia do uczniów? Któż kiedy był szczęśliwszy? Z pod jego ręki wyszli niezliczeni nauczyciele, niezliczeni kapłani, wyznawcy i męczennicy. A już jaki mieli dla niego wszyscy podziw, jakie uwielbienie, jakie przywiązanie, kto wypowiedzieć zdoła? Któż gorliwszy nieco w rzeczach wiary nie ściągał do niego z krańców świata? Kto z chrześcijan nie czcił go za proroka prawie, kto z filozofów za mistrza? A w jakim był poważaniu nie tylko u osób prywatnych lecz i na dworze cesarskim, świadczą dzieje, podając, że matka cesarza Aleksandra (49) przyzwała go do siebie dla tej właśnie jego niebiańskiej mądrości, której i on urokiem, i ona zamiłowaniem się odznaczali. Świadectwo o tym daje też list jego, pisany z powagą chrześcijańskiego nauczyciela do cesarza Filipa, który pierwszy z władców rzymskich był chrześcijaninem (50). Gdyby kto według mego opowiadania nie przyjmował chrześcijańskiego świadectwa o nadzwyczajnej wiedzy jego, niech choć pogańskie przyjmie zeznanie ze świadectw filozofów. Opowiada bowiem bezbożny ów Porfiriusz, że sławą jego pociągnięty, chłopięciem jeszcze podążył do Aleksandrii, i tam widział go, starca już, lecz takiego rzeczywiście olbrzyma, który, zdało się, dźwignął był gmach wszystkiej umiejętności.
+
+ 
+
+45. Dnia brakłoby mi prędzej, niżbym choć w cząstce maleńkiej przedstawił wszystkie męża tego zalety; a jednak wszystko to nie tylko ku chwale religii, lecz i do wielkości kuszenia posłużyło. Bo i któż byłby odstąpił łacno męża takiego umysłu, takiej nauki, takiego wpływu, a nie trzymał się raczej zdania, iż lepiej z Orygenesem błądzić, niż z innymi prawdę rozumieć? Lecz więcej mówić na co? Przyszło do tego, że nie zwykłe jakieś, lecz nader niebezpieczne kuszenie takiej osobistości, takiego nauczyciela, takiego proroka, odwiodło bardzo wielu od prawej wiary. Dlatego ten, taki i tak wielki Orygenes, kiedy nadużył zuchwale łaski Bożej, kiedy nazbyt puścił wodze rozumowi własnemu i sobie nadto zaufał, gdy lekceważył dawną religii chrześcijańskiej prostotę, gdy siebie za mędrszego poczytał od innych, gdy gardząc podaniem kościelnym i powagą starych nauczycieli niektóre Pisma ustępy nowym wykładał sposobem, doczekał się, że i o nim rzeczono Kościołowi Bożemu: Jeśli powstanie w pośrodku ciebie prorok... i nieco niżej: nie usłuchasz, prawi, słów onego proroka. I dalej: Bo kusi was, prawi, Pan Bóg wasz, azali Go miłujecie czy nie (51). Zaiste, nie tylko kuszeniem, lecz i wielkim było kuszeniem – oddany sobie i jak w obraz wpatrzony Kościół z podziwu dla umysłu, nauki, wymowy, postępowania i wpływu, daleki od wszelkich podejrzeń i obawy, nagle odwodzić pomału i nieznacznie od starej wiary do nowej niezbożności.
+
+ 
+
+46. Lecz powie kto, że skażono dzieła Orygenesa. Nie przeczę, i owszem wolałbym, żeby tak było; bo o tym podawali i pisali niektórzy nie tylko katolicy, ale i kacerze. Lecz obecnie na to zwracać musimy uwagę, że choć nie on sam, dzieła jednak pod jego wydane imieniem służą ku wielkiemu kuszeniu, gdyż zarażone wielu bluźnierstwami, nie jako cudze, lecz jako jego własne bywają czytane i rozchwytane; tak iż choć pomysł błędu nie powstał ze zdania Orygenesa, to jednak powaga Orygenesa wiele zda się przyczyniać do wpojenia błędu.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XVIII.}
+
+ 
+
+I Tertulian również był sprawcą wielkiego kuszenia w Kościele.
+
+ 
+
+47. Podobnie rzecz się ma i z Tertulianem (52); bo jak tamtemu (Orygenesowi) pośród greków, tak temu u nas łacinników niewątpliwie pierwszeństwo się należy. Któż bowiem nad męża tego uczeńszy, kto w rzeczach Bożych i ludzkich bieglejszy? Całą filozofię i wszystkie filozofów sekty, twórców i zwolenników sekt, i wszelkie ich nauki, wszystką rozmaitość dziejów i badań naukowych objął on dziwnie rozległym umysłem swoim. A czyż nie słynął z tak głębokiego i przenikliwego rozumu, że nie było bodaj niczego, co zwalczyć zamierzył, czego by albo nie opanował bystrością zamysłu, albo nie obalił siłą dowodów? A już kto zdoła przedstawić zalety mowy jego, opartej na tak dziwnej ścisłości wywodów, że nieprzekonanych nawet zniewalał na swoją stronę; u którego ile słów prawie, tyle zdań, – ile zdań, tyle zwycięstw. Wiedzą o tym Marcjonowie (53), Apellesowie, Prakseaszowie, Hermogenesowie, żydzi, poganie, gnostycy i inni, których bluźnierstwa wywrócił jakoby gromami wielu obszernymi tomami dzieł swoich. A jednak i ten również po tym wszystkim, ten, mówię, Tertulian, nie dość przywiązany do katolickiego dogmatu, czyli powszechnej i starej wiary, i wymowny bardziej niż szczęśliwy, z odmianą przekonań uczynił pod koniec życia to, co pisze o nim święty Hilary, wyznawca, że "przez błąd późniejszy odarł z powagi znakomite pisma swoje". I on także stał się kuszeniem wielkim dla Kościoła. Lecz więcej o nim mówić nie chcę; zaznaczę to tylko, że gdy wbrew przykazaniu Mojżeszowemu za prawdziwe proroctwa uznał powstałe w Kościele nowatorskie szaleństwa Montana i nierozsądne nierozsądnych niewiast brednie o nowych dogmatach, dosłużył się, że i o nim też i o pismach jego powiedziano: Jeśli powstanie w pośrodku ciebie prorok. I zaraz: nie usłuchasz słów onego proroka. Czemu? Bo kusi was, prawi, Pan Bóg wasz, azali Go miłujecie czy nie.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XIX.}
+
+ 
+
+Czego się mamy uczyć z tych przykładów?
+
+ 
+
+48. Z tych przeto tylu, i takich, i wszystkiego mnóstwa podobnych przykładów z dziejów kościelnych winniśmy jasno poznać i, według zasad Księgi Powtórzonego Prawa, wyrozumieć oczywiście, że jeśli kiedy jaki nauczyciel kościelny od wiary odstępuje, dzieje się to z dopuszczenia Boskiej Opatrzności dla naszego doświadczenia, zali miłujemy Boga czy nie ze wszystkiego serca i ze wszystkiej duszy naszej.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XX.}
+
+ 
+
+Kto jest prawdziwym katolikiem, i jako za powstaniem kacerskiej nowości wnet można poznać ważkie zboże a liche plewy.
+
+ 
+
+49. Gdy tedy rzeczy tak się mają, prawdziwym i rodowitym katolikiem jest ten, który kocha prawdę Bożą, i Kościół, i Ciało Chrystusowe, kto nad świętą religię, nad wiarę katolicką niczego nie przekłada, ani powagi jakiej osoby, ani umysłu, ani wymowy, ani mądrości jej, lecz tym wszystkim gardząc i w wierze mocno i stanowczo trwając, tego tylko trzymać się i w to wierzyć stanowi, o czym wie, że powszechnie, i z dawna Kościół katolicki utrzymywał; o wszystkim zaś, co by widział, że ktoś jeden, później, pomimo wszystkich, lub wbrew wszystkim świętym a rzecz nową i niesłyszaną podstępnie wprowadza, rozumie, iż to nie do pobożności lecz raczej do kuszenia prowadzi, pomny wtedy zwłaszcza słów św. Pawła Apostoła. O tym mianowicie pisze on w pierwszym liście do Koryntczyków: Muszą, prawi, być i kacerstwa: aby którzy są doświadczeni, stali się jawni między wami (54); innymi słowy: Dlatego nie zaraz wytępia Pan Bóg twórców herezji, aby doświadczeni stali się jawni, to jest by się okazało, o ile każdy jest stałym, i wiernym miłośnikiem wiary katolickiej.
+
+ 
+
+50. I w rzeczy samej, gdy nowinki jakie powstaną, zaraz się okazuje ważkość zboża i lekkość plew; wówczas bez wielkiego wysiłku bywa porywane z miejsca to, co żadnym ciężarem własnym nie trzymało się przy ziemi. Jedni bowiem odpadają całkowicie, inni znów, wykolejeni tylko, i lękają się zginąć, i wstydzą się wrócić zranieni, ponieważ wchłonęli w siebie taką ilość trucizny, która ani nie zabija, ani strawić się nie daje, śmierci nie sprowadza, i życia nie dopuszcza. Nieszczęsny stan taki! jakież trosk upalenia, jakie burze ich dręczą. Raz bowiem, kędy wiatr powieje, bywają porwani pędem gwałtownym błędu, to znowu, z przyjściem rozwagi, odrzucani jak fale powrotne; raz z zuchwałą pewnością siebie pochwalają rzeczy jawnie wątpliwe, to znów w nierozsądnej bojaźni lękają się rzeczy pewnych; niepewni, kędy iść a kędy wracać, czego się trzymać a co porzucić.
+
+ 
+
+51. To przecież wątpiącego i chwiejnego serca utrapienie jest dla nich, jeśli rozumieją, lekarstwem Bożego zmiłowania. Dlatego bowiem poza przystanią bezpieczną wiary katolickiej, przeróżne myśli nawałnice miotają, dręczą i niemal o śmierć ich przyprawiają, by ściągnęli wysoko rozwinięte wyniosłego umysłu żagle, rozdęte groźnie wichrami nowinek, a wrócili się i trzymali pewnego schroniska łaskawej i dobrej macierzy, a zbywszy pierwej gorzkie i mętne wody błędów, mogli potem pić ze źródeł wody żywej wytryskującej ku żywotowi (55). Oduczyć się dobrze wprzód winni, czego się źle nauczyli; a ze wszystkich dogmatów Kościoła, co można pojąć rozumem, pojmować, – czego nie można, wierzyć.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXI.}
+
+ 
+
+Wykład słów Pawłowych: "O Tymoteuszu, strzeż tego, co ci powierzono".
+
+ 
+
+52. Wobec takiego stanu rzeczy, ustawicznie prawdę tę przypominając i w sobie rozważając, dość się wydziwić nie mogę takiemu niektórych ludzi szaleństwu, takiej niezbożności zaślepionego umysłu, takiej wreszcie chuci błądzenia, że niezadowoleni raz podaną i z dawna przyjętą zasadą wiary, co dzień coraz to nowych rzeczy szukają, i wreszcie usiłują coś do religii dodać, zmienić, odjąć, – jak gdyby ona była nie prawdą niewzruszoną z nieba, dostateczną od chwili objawienia, lecz nauką ziemską, której udoskonalić inaczej nie można, jeno przez ciągłe poprawki, raczej naganę, choć głosi Pismo Boże: Nie przestępuj granic starych, które założyli ojcowie twoi (56), i Nie sądź przeciw sędziemu (57), i Kto rozrzuca płot, wąż go ukąsi (58); i ten wyrok apostolski, którym jako mieczem duchownym wszystkie wszystkich kacerstw występne nowinki wielokrotnie ścięte, i zawsze ścinane być mają: O Tymoteuszu, strzeż tego, co ci powierzono, warując się niezbożnych nowości słów i odporności fałszywie nazwanej umiejętności, którą niektórzy obiecując, odpadli od wiary (59).
+
+ 
+
+53. I po tym znajdują się jeszcze ludzie takiego twardego czoła, tyle bezwstydni i uparci, że się nie uginają pod ogromem owych orzeczeń niebieskich, ani ciężarowi ich nie ulegają, których nie krzeszą takie młoty, nie ścierają na proch gromy takie? Waruj się, powiada, niezbożnych nowości słów. Nie rzekł dawnych, ani starych nauk; owszem wprost przeciwną myśl wyraził. Bo, jeśli warować się trzeba nowości, to starożytności trzymać; i jeśli niezbożną jest nowość, – świętą starożytność; i odporności, mówi, fałszywie nazwanej umiejętności. Prawdziwie fałszywa nazwa u kacerzy, gdzie nieświadomość umiejętnością, mrok jasnością, cienie światłem się mienią; którą niektórzy, prawi, obiecując, odpadli od wiary. Co obiecując, odpadli, jeśli nie nową jakąś a nieznaną naukę? Posłuchaj, jak niektórzy z nich mówią: pójdźcie, nieumiejętni i nieszczęśliwi, pospolicie katolikami zwani, a uczcie się wiary prawdziwej, której prócz nas żaden nie rozumie, przez wiele dotąd wieków ukrytej, i teraz dopiero objawionej i okazanej; lecz uczcie się ukradkiem i potajemnie, bo to wam sprawi rozkosz. I znowu gdy się nauczycie sami, uczcie tajemnie, by świat nie słyszał, by Kościół nie wiedział; niewielu bowiem dano jest wyrozumieć ukryte znaczenie tajemnicy takiej. Zali nie są to słowa owej wszetecznicy, która w przypowieściach Salomona woła do siebie mijających drogą, a idących drogą swoją? Kto jest, prawi, maluczki (głupi), niechaj zstąpi do mnie. A głupców zachęca, mówiąc: Wody kradzione słodsze są, a chleb kryjomy smaczniejszy. Cóż dalej? A on nie wiedział, rzecze, że w głębokościach piekielnych są goście jej (60). Jacyż to goście? Niech odpowie Apostoł: którzy, prawi, od wiary odpadli.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXII.}
+
+ 
+
+Wykład szczegółowy tychże słów św. Pawła do Tymoteusza.
+
+ 
+
+54. Warto też roztrząsnąć pilniej cały ten przytoczony dopiero wyjątek z listu Apostoła. O Tymoteuszu, prawi, strzeż tego, co ci powierzono, warując się niezbożnych nowości słów. O! jest to wykrzyknik przewidzenia zarówno jak miłości, przewidywał bowiem przyszłe błędy i naprzód bolał nad nimi. Kto jest dziś Tymoteuszem, jeżeli nie cały Kościół w ogóle, w szczególności zaś wszyscy przełożeni, którzy mają obowiązek i sami posiadać całkowitą znajomość czci Bożej, i wpajać ją w innych? Co jest strzeż tego, co ci powierzono? Strzeż, prawi, z powodu złodziei, z powodu nieprzyjaciół, by snadź, gdy ludzie spać będą, nie posieli kąkolu między dobre ziarno pszeniczne, które Syn Człowieczy posiał na roli swojej. Tego, co ci powierzono, prawi, strzeż. Co jest to powierzone? to, co ci zwierzono, nie co wymyśliłeś, rzeczy nie dowcipu własnego, lecz nauki, nie osobistego "widzi mi się", lecz publicznego podania; rzeczy tobie przekazanej, nie wymyślonej przez ciebie, której masz być nie twórcą lecz stróżem, nie ustanowicielem lecz zwolennikiem, nie wodzem lecz naśladowcą. Strzeż, prawi, tego, co ci powierzono, pilnuj nietykalnego i nieskalanego talentu wiary katolickiej. Co ci powierzono, to trwać u ciebie, to przez ciebie ma być podawane. Złoto wziąłeś, złoto oddaj, nie chcę, byś mi w zamian podsuwał co innego; nie chcę, byś zamiast złota podawał albo bezwstydnie ołów, albo podstępnie miedź, nie chcę pozoru złota, lecz istoty. O Tymoteuszu, o kapłanie, o tłumaczu, o nauczycielu, jeśli cię łaska Boża sposobnym uczyniła pod względem umysłu, biegłości, nauki, bądź Bezeleelem (61) duchowego przybytku, drogocenne prawdy Bożej perły dobywaj, zręcznie układaj, umiejętnie ozdabiaj, przydawaj blasku, wdzięczności i krasy. Niech dzięki twemu wykładowi będzie jaśniej rozumiane, w co przedtem jako zbyt ciemne wierzono. Niech potomność zawdzięcza tobie zrozumienie tego, co nie pojęte czciła starożytność. Tegoż samego jednak, czegoś się nauczył, ucz, byś mówiąc w sposób nowy, nie mówił rzeczy nowych.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXIII.}
+
+ 
+
+O postępie w wierze, jaki bywa w Kościele uwzględniany.
+
+ 
+
+55. Ale powie kto może: czyliż już w Kościele Chrystusa żadnego co do wiary nie będzie można mieć postępu? I owszem, niech będzie choćby i największy. Bo któż jest tak zazdrosny ludziom, tak nienawistny Bogu, kto by to śmiał zakazywać? Ale jednak tak, ażeby to prawdziwie było postępem w wierze, a nie zaś odmienieniem. Wszakże bowiem do postępu należy, aby każda rzecz sama w sobie rozszerzona była; a zaś do odmiany, ażeby się co przeinaczyło z jednego na drugie. Potrzeba więc, ażeby rosły, a wiele i usilnie postępowały, tak poszczególnych jako i wszystkich, tak jednego człowieka jako i całego Kościoła, lat i wieków stopniami: rozum, umiejętność, mądrość, ale jedynie tylko w swoim rodzaju, to jest w tejże samej wierze, w tymże rozumieniu, i w tymże zdaniu.
+
+ 
+
+56. Niech religia duchowa, ciał naśladuje sposób, które chociaż za postępem w lata członki swoje rozwijają i rozszerzają, zawsze jednak takimi, jak były, trwają też same. Wielka jest różnica między kwiatem młodości a dojrzałością starości, ale jednak ciż sami stają się starcami, którzy byli młodzianami: że chociaż jednego i tegoż samego człowieka stan i postać się odmienia, jedna atoli i taż sama natura, jedna i taż sama pozostaje osoba. Małe są członki niemowląt, większe już młodzieńców, ale też same przecie. Ile mieli członków będąc dziećmi, tyleż mają, gdy stali się mężami: a jeżeli co jest, co się rozwija w dalszej porze wieku, to jakby w nasieniu zawarte wprzód było; tak, iż nic nowego potem nie tworzy się w starcach, co by jeszcze wprzód nie ukrywało się w dzieciach. A stąd bezwątpienia, takie postępowania prawidło jest proste i prawdziwe, i ten najpiękniejszy wzrostu porządek, jeżeli też same zawsze w dojrzalszych części i kształty liczba lat rozwija, które w malutkich Stwórcy utworzyła mądrość. A gdyby się zaś postać ludzka w inną na koniec nie swego rodzaju zamieniła formę, albo gdyby przybyło lub ubyło cokolwiek w członków liczbie, nastąpiłoby to koniecznie, że albo całe ciało zginąć by musiało, albo zostało dziwotworem, albo przynajmniej osłabłoby pewnie.
+
+ 
+
+57. Tak więc przyzwoicie jest, aby i chrześcijańskiej religii wiara, tych postępów trzymała się prawideł, to jest aby się umacniała z laty, rozszerzała z czasem, podnosiła z wiekiem, ale jednak, aby niezepsuta i nienaruszona trwała na zawsze: a we wszelkich części swoich miarach, we wszystkich w szczególności, jakoby w członkach i zmysłach własnych, aby zawsze pełna i doskonała była, która by żadnej przeto nie dopuszczała odmiany, żadnej własności utraty, żadnej nie ponosiła w ustawach różności.
+
+ 
+
+58. Na przykład, zasiewali przodkowie nasi w starożytnych czasach na kościelnej roli pszenicznej wiary nasiona, bardzo więc jest niegodziwie i niewłaściwie, abyśmy ich potomkowie, zamiast prawdziwości czystego zboża podłożony kąkolu błąd zbierali. Ale bardziej tak wypada i przyzwoicie jest, abyśmy nie różniąc się i pierwsi i ostatni, ze wzrostu pszenicznego siewu i pszenicznej także wiary zbierali owoce; że gdy co z owych nasion porostków zawikłało się, z przeciągiem czasu, aby teraz rozwiązane i posadzone było, nic atoli nie odmieniając z własności rośliny: a chociaż dodana będzie postawa, kształt i osada, taż sama jednak każdego rodzaju, aby pozostała natura. Dalekim niech od nas będzie, aby różne owe katolickiego rozumienia ogrody obróciły się w chwast i ciernie. Precz, mówię, aby w tym duchownym raju, z cynamonu i balsamu latorośli, lulek nagle, i blekot wyrosły. Cokolwiek więc na uprawie tej roli Kościoła Bożego wiarą ojców zasiano, właściwą jest rzeczą, aby toż samo było przesadzane i zachowane przez gospodarstwo synów: toż samo, aby kwitło i dojrzewało, toż samo, aby się polepszało i pożytkowało. Godzi się bowiem, aby dawne owe niebieskiej filozofii ustawy, wyprawiły się z czasem, wygładziły i polerowały; ale się nie godzi, aby były zamienione, nie godzi się, aby były obcinane i urywane. Niech wezmą wreszcie jasność, światłość, ozdobę; ale zatrzymać pełność, całkowitość i własność konieczną jest potrzebą.
+
+ 
+
+59. Albowiem gdy raz tylko ta wolność bezbożnej zdrady dopuszczoną zostanie, wzdrygam się powiedzieć, jakie za tym nastąpi niebezpieczeństwo wykorzenienia i zniszczenia religii. Odrzuciwszy jakąkolwiek cząstkę prawdy katolickiej, wyrzekniemy się, jakoby ze zwyczaju i godziwości, innej także i znowu innej i tak koleją po sobie jednej i drugiej. Gdy zaś pojedyncze części odrzucimy, cóż w końcu nastąpi? – Całkowite odrzucenie wszystkiego. Przeciwnie, jeżeli zaczniemy łączyć rzeczy nowe ze starymi, cudze ze swoimi i świeckie ze świętymi, zwyczaj ten z konieczności wślizgnie się do wszystkiego tak, że potem w Kościele nie zostanie nic nietkniętego, nic nieskażonego, nic całkowitego, nic niepokalanego, ale będzie tam następnie dom nierządny błędów bezbożnych i haniebnych, gdzie była poprzednio świątnica prawdy czystej i nietkniętej. Niechaj miłosierdzie Boże odwróci tę krzywdę od umysłów swoich czcicieli i niech to raczej zostanie szaleństwem bezbożnych.
+
+ 
+
+60. Kościół zaś Chrystusowy, stróż pilny i ostrożny złożonych w nim dogmatów, niczego w nich nie zmienia, niczego nie zmniejsza, niczego nie dodaje, nie znosi rzeczy niezbędnych, nie przyjmuje zbytecznych, nie traci swego, ani nie pożąda cudzego, ale najpilniej o to się tylko troszczy, aby, wiecznie i mądrze chowając rzeczy stare, co jest dawniej zestawione i poczęte, tym się zaopiekował i to wygładził, – co jest wyraźnego i już objaśnionego, utwierdził i umocnił, – co jest zatwierdzonego i określonego, przechował. Wreszcie, do czegóż nie dążył za pomocą uchwał soborowych, jeżeli nie do tego celu, aby w co poprzednio po prostu wierzono, w to potem wierzono pilniej, – co przedtem po cichu opowiadano, to następnie czynniej głoszono, – co przedtem bezpiecznie czczono, tym się potem troskliwiej zajmowano? To, mówię, Kościół katolicki, budzony (62) nowatorstwami heretyckimi, dekretami swoich soborów zawsze czynił, a nie co innego, prócz tego jednak, że, co od przodków przez podanie otrzymał, następcom w piśmie utrwalił, wielką rzeczy ilość w niewielu głoskach zawierając i po większej części, dla jasności rozumienia, nowego prawdy znaczenia nie nazywając nowym wyrazem.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXIV.}
+
+ 
+
+Objaśnia dalej słowa Apostoła z I listu do Tym. VI, 20.
+
+ 
+
+61. Wróćmy jednak do Apostoła: O Tymoteuszu, mówi, strzeż tego, co ci powierzono, warując się (wystrzegając się) niezbożnych nowości słów. Waruj się, prawi, jako żmii, jako skorpiona, jako bazyliszka, aby cię nie zabiły nie tylko dotknięciem, ale także wzrokiem i tchnieniem. Co znaczy warować się? – Z takimi nawet pokarmu nie pożywać (63). Co znaczy waruj się? Jeśli kto przychodzi do was, rzecze, a tej nauki nie przynosi... Jakiej nauki, jeżeli nie katolickiej i powszechnej, która niezepsutym prawdy podaniem trwa jedna i ta sama przez wszystkie następstwa czasów i trwać będzie bez końca na wieki? Cóż tedy? Nie przyjmujcie go do domu, powiada, ani mu, daj zdrów, mówcie; albowiem kto mu daj zdrów mówi, uczestnikiem jest uczynków jego złośliwych (64).
+
+ 
+
+62. Niezbożnych, mówi, nowości słów. Co znaczy niezbożnych? – Które nie mają nic świętego, nic religijnego i są zupełnie obce łonu Kościoła, jakim jest Świątynia Boga. Niezbożnych, powiada, nowości słów. Słów, to jest dogmatów, rzeczy, zdań, nowości, które dawności i starożytności są przeciwne; gdyby te były przyjęte, wiara Ojców byłaby pogwałconą całkowicie, a na pewno w znacznej części, i trzeba by koniecznie głosić, że przez szereg tylu wieków nie byli świadomi, błądzili, bluźnili, nie wiedzieli, w co wierzą: wierni, wszyscy cnotliwi, wszyscy czyści, wstrzemięźliwi, dziewice, duchowni wszyscy, lewici i kapłani, tyle tysięcy wyznawców, tak wielkie zastępy męczenników, wielka sława i mnogość miast i narodów, tyle wysp, prowincji, królów, ludów, państw, narodowości i wreszcie prawie cały okrąg ziemski, z Głową Chrystusem połączony.
+
+ 
+
+63. Strzeż się, mówi, niezbożnych nowości słów, które heretycy zawsze przyjmowali i naśladowali, – katolicy tego nigdy nie czynili. I rzeczywiście, któreż kiedy kacerstwo nie powstało pod pewnym nazwaniem, w pewnym miejscu, w pewnym czasie? Któż kiedy spowodował herezję, zanim sam się wprzód nie odłączył od zgody, powszechności i starożytności Kościoła katolickiego? Najjaśniejsze przykłady świadczą, że tak jest w rzeczywistości. Któż bowiem przed owym niedowiarkiem Pelagiuszem przypuszczał kiedy taką moc wolnej woli, że uważał iż dla jej wzmocnienia pojedynczymi aktami w rzeczach dobrych, łaska Boża nie jest konieczną? Kto przed potwornym uczniem jego Celestiuszem zaprzeczał, aby cały rodzaj ludzki nie był związany winą upadku Adamowego? Kto poważył się rozdzielać jedność Trójcy Świętej przed świętokradcą Ariuszem, kto mieszać jedności Trójcę przed występnym Sabeliuszem? Kto przed srogim Nowacjanem nazwał Boga okrutnym dlatego, jakoby chciał raczej śmierci umierającego, niż jego nawrócenia i życia? Kto przed czarnoksiężnikiem Szymonem, przez apostolski sąd ukaranym (od którego wypływa ów stary wir hańby ciągłym i skrytym następstwem aż do ostatniego Pryscyliana), śmiał nazwać Boga Stworzyciela twórcą złego, to jest, naszych zbrodni, bezbożności i występków? Twierdzi on bowiem, że taką własnymi rękoma ludzką stworzył naturę, że ta, jakimś popędem własnym i naleganiem jakiejś woli koniecznej, nic innego nie może, nic innego nie chce – prócz grzechu, ponieważ poruszona szaleństwami wszystkich występków i zapalona, leci z nienasyconą żądzą do przepaści wszelkiej hańby.
+
+ 
+
+64. Niezliczone są rzeczy, które dla krótkości pomijamy; z nich wszystkich jednak dość widocznie i jawnie się pokazuje, że prawie wszystkie herezje, jakoby zwykle i właściwie im, zawsze obfitują w nowości nieprawowierne, brzydzą się wiadomościami dawnymi i dla zarzutów fałszywego imienia nauki od wiary odpadają. Przeciwnie znowu właściwą jest katolikom rzeczą – przechowywać, co Ojcowie święci zostawili i poruczyli, potępiać nowości nieprawowierne, i jako rzekł i znowu przepowiedział Apostoł: Jeśliby kto wam opowiadał mimo to, coście wzięli, niech będzie przeklęctwem (65).
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXV.}
+
+ 
+
+Dla łatwiejszego oszukania kacerze używają świadectw Pisma św.
+
+ 
+
+65. Tu może kto zapytać, czyż heretycy używają świadectw Pisma Bożego. Rzeczywiście używają i to zabiegliwie. Widzisz ich bowiem latających po wszystkich Księgach świętego Prawa, po Mojżeszu, Księgach Królewskich, Psalmach, Apostołach, Ewangelistach, Prorokach. Czy to bowiem u swoich, czy obcych, – czy prywatnie, czy publicznie, – czy w mowach, czy w piśmie, – czy w czasie biesiad, czy na ulicach prawie niczego ze swoich nauk nie głoszą, czego by się nie starali zakryć słowami Pisma św. Czytaj dziełka Pawła ze Samosaty, Pryscyliana, Eunomiusza, Jowiniana i innych obacz nieskończony zbiór przykładów, jako prawie żadna stronica nie jest opuszczoną, aby zdaniami Starego i Nowego Testamentu nie była ubarwioną i pofarbowaną.
+
+ 
+
+66. Tym bardziej jednak należy się ich strzec i lękać, im pilniej się kryją pod płaszczem Prawa Bożego. Wiedzą bowiem, że wyziewy ich prawie nikomu zaraz nie mogą się podobać, jeżeli wydzielają się same i proste; dlatego też je skrapiają jakoby pewną wonnością niebiańskiej wymowy, aby, kto łatwo gardzi błędem ludzkim, nie odrzucał pochopnie wyroczni Boskich. Tak czynią jako ci zwykli, co, miarkując małym dzieciom przykre kubki, wprzód brzegi miodem smarują, aby, gdy wiek nieostrożny słodyczy spróbuje, nie lękał się goryczy. Tak również i ci o to się troszczą, co złe trawy i szkodliwe soki zakrywają nazwami lekarskimi, aby nikt prawie nie podejrzewał trucizny, gdy wypisany środek odczyta.
+
+ 
+
+67. Stąd wreszcie i Zbawiciel wołał: Strzeżcie się pilnie fałszywych proroków, którzy do was przychodzą z odzieniem owczym, a wewnątrz są wilcy drapieżni (66). Czym jest odzienie owcze, jeżeli nie Proroków i Apostołów mowami, które oni z owczą prostotą jako suknię wełnianą utkali temu Barankowi niepokalanemu, co grzech świata gładzi? Co są wilcy drapieżni, jeżeli nie rozumy heretyków dzikie i wściekłe, które zawsze napadają na owczarnie kościelne i stado Chrystusowe, o ile mogą, w kawałki rozdzierają? Aby jednak z większą zdradą podejść nieostrożne owce, zostawiają przy sobie dzikość wilków, składając wygląd wilczy, i okrywają się zdaniami Prawa Bożego, jako sukniami owczymi, iżby każdy, kto poczuje miękkość wełny, nie lękał się bynajmniej ostrza zębów. Cóż atoli mówi Zbawiciel? Z owoców ich poznacie je, to jest, gdy poczną te słowa Boże nie tylko wygłaszać, ale i tłumaczyć, nie tylko nimi się przechwalać, ale i objaśniać, wtedy zrozumiemy ową gorzkość, przykrość, wściekłość, wtedy wyleje się jad nowatorski, wtedy zdejmą okrycie z nowości bezbożnych, wtedy dopiero obaczysz płot się walący i usuwanie kamieni granicznych ojców, wtedy wiara katolicka upada, wtedy prawda kościelna niszczeje.
+
+ 
+
+68. Takimi byli ci, w których godzi Apostoł Paweł w drugim liście do Koryntian, mówiąc: Albowiem takowi fałszywi apostołowie są robotnicy zdradliwi, przemieniający się w apostołów Chrystusowych (67). Co znaczy: przemieniający się w apostołów Chrystusowych? Przedstawiali Apostołowie przykłady z Prawa Bożego, przedstawiali i oni. Przedstawiali Apostołowie powagę Psalmów, przedstawiali i oni. Przedstawiali Apostołowie wyroki Proroków i oni niemniej przedstawiali. Lecz gdy to, co równym sposobem przedstawiali, nie jednakowo poczęli wykładać, wtedy odróżniano niezepsutych od przebiegłych, niefarbowanych od farbowanych, prawych od przewrotnych, wreszcie prawdziwych Apostołów od fałszywych apostołów. A nie dziw, mówi, albowiem sam szatan przemienia się w anioła światłości. Nie jest więc rzeczą wielką, gdy słudzy jego przemieniają się jako słudzy sprawiedliwości. A zatem według Apostoła Pawła nauki, ile razy albo fałszywi apostołowie albo fałszywi doktorowie przedstawiają zdania Prawa Bożego, którymi źle takowe wykładając, błędy swoje zaświadczać usiłują, nie ma wątpliwości, że idą za rodzica swego podstępnymi knowaniami, których by ten zaiste nigdy nie wymyślił, gdyby zgoła nie widział, że nie ma łatwiejszej drogi do oszukania, jako, kiedy stoi zdrada błędu bezbożnego, zastawiać się powagą słów Boskich.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXVI.}
+
+ 
+
+W powoływaniu się na Pismo św. kacerze naśladują diabła.
+
+ 
+
+69. Ale powie kto: z czego się dowodzi, że diabeł zwykł używać przykładów z Prawa Bożego? Niech czyta Ewangelie, w których napisano: Tedy go wziął diabeł, to jest, Zbawiciela, i postawił go na ganku kościelnym i rzekł mu: Jeśliś jest Syn Boży, spuść się na dół. Albowiem napisano jest, iż aniołom swoim rozkazał o tobie, aby cię strzegli na wszystkich drogach twoich: i będą cię na ręku nosić, abyś snadź nie obraził o kamień nogi swojej (68). Czegoż nie czyni biednym ludziom, jeżeli samego Pana majestatu zaczepił świadectwem Pisma? Jeśliś jest, mówi, Syn Boży, spuść się na dół. Dlaczego? Albowiem napisano jest, rzecze. Winniśmy naukę ustępu tego pilnie zauważyć i przechować, abyśmy wcale nie wątpili, patrząc na taki przykład powagi ewangelicznej, że diabeł mówi, gdybyśmy spostrzegli, że ktoś przedstawia słowa apostolskie i prorockie przeciwko wierze katolickiej. Jak bowiem wtedy głowa głowie, tak teraz członki członkom mówią, to jest, członki diabła członkom Chrystusa, wiarołomcy wiernym, świętokradcy świętym, wreszcie kacerze katolikom.
+
+ 
+
+70. Ale cóż wreszcie mówią? Jeśliś jest Syn Boży, rzecze, spuść się na dół. To jest: Jeśli chcesz być Synem Bożym i otrzymać dziedzictwo królestwa niebieskiego, spuść się na dół, to jest, zstąp z nauki i podania tego wyniosłego Kościoła, który za świątynię Bożą także jest uważanym. Gdyby zaś kto zapytał kogokolwiek z heretyków, co by go do tego nakłaniał: czym dowodzisz, skąd uczysz, że mam opuścić powszechną i starą wiarę Kościoła katolickiego, zaraz on powie: albowiem napisano jest. I natychmiast przygotowuje tysiące świadectw, tysiące przykładów, tysiące powag z Prawa, Psalmów, Apostołów, Proroków, które gdy w nowy i zły sposób wyłożone będą, nieszczęśliwa dusza z twierdzy katolickiej do kacerskiej wpadnie przepaści. Kacerze zaś zwykli oszukiwać dziwnie nieostrożnych ludzi owymi obietnicami, za którymi sami idą. Poważają się bowiem obiecywać i uczyć, że w kościele ich, to jest, we wspólnictwa ich zebraniu znajduje się wielka i szczególna i zupełnie osobista łaska Boża tak, że bez jakiejkolwiek pracy, starania, pilności, choćby nie prosili, nie szukali, nie pukali, o ile by tylko do ich liczby należeli, z opatrzności Boskiej znajdą opiekę, że podniesieni na rękach anielskich, to jest, opieką anielską zachowani, nie będą mogli nigdy obrazić o kamień nogi swojej, to jest, nigdy się nie zgorszyć (69).
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXVII.}
+
+ 
+
+Jakiego trzymać się prawidła w tłumaczeniu Pisma św.?
+
+ 
+
+71. Ale powie kto: jeżeli Boskich wyroków, zdań, obietnic i diabeł i uczniowie jego używają, z których jedni są fałszywi apostołowie, inni fałszywi prorocy, fałszywi mistrze a wszyscy w zupełności kacerze, cóż czynić będą katoliccy ludzie i matki Kościoła synowie? Jakimże sposobem w Piśmie św. rozróżnią prawdę od fałszu? Otóż potrzeba usilnie starać się o to, cośmy według podania świętych i uczonych mężów, napisali na początku Pamiętnika tego, ażeby Boskie pismo według powszechnego Kościoła podań i katolickiej wiary prawideł wykładali; w którym Kościele katolickim potrzeba jeszcze, aby szli za powszechnością, starożytnością i zgodnością. A jeżeliby kiedy część przeciwko powszechności, nowość przeciw dawności, jednego albo i niewielkiej liczby błądzących niezgoda przeciwko wszystkich albo przynajmniej prawie wszystkich katolików zgodności bunt podniosły, niech przeniosą nad części zepsucie całość powszechności. W której to powszechności, niech przekładają starożytność religii, nad bezbożność nowości, a znowu w samejże dawności, naprzód: nad jednego albo małej liczby zuchwalstwo, niech przekładają powszechnego soboru ustawy, jeśli są w tym jakie; a potem na koniec, gdy te nie wystarczają, niech pilnują tego, co po nich następuje, to jest: wielu i wielkich mistrzów zgodne ze sobą zdania. Co, gdy przy pomocy Boga wiernie, trzeźwo i troskliwie zachowane będzie, poznamy wszelkie powstających kacerstw błędy bez wielkiej trudności.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXVIII.}
+
+ 
+
+Jakim sposobem rozpoznane i potępione być mogą nowości kacerskie po przywiedzeniu zdań dawnych Ojców, zgadzających się ze sobą?
+
+ 
+
+72. Tu już przez słuszny wniosek upatruję potrzebę, abym okazał w przykładach: jakim sposobem bezbożne kacerzów nowości przywiedzionymi, porównanymi a zgadzającymi się ze sobą dawnych mistrzów zdaniami rozpoznane i potępione być mogą. Którą atoli starożytną świętych Ojców zgodność nie we wszelkich o Bożym prawie małych wątpliwościach, ale jedynie i najszczególniej w prawidłach wiary z wielkim staraniem wynajdywać i za nią iść potrzeba. Lecz ani nie zawsze, ani nie wszystkie kacerstwa tym sposobem zbijać należy, ale tylko nowe i świeże, to jest: gdy tylko powstają, póki jeszcze sfałszować nie mogły dla krótkości czasu dawnej wiary prawidła, i póki jeszcze rozpowszechnieniem trucizny ksiąg przodków zepsuć nie zdołały. Rozszerzonych zaś i zadawnionych kacerstw bynajmniej tą drogą zaczepiać nie można, ponieważ w długim przeciągu czasu do zaciemnienia prawdy wielką miały sposobność. I dlatego, jakiekolwiek są dawne bezbożności odszczepieńców czy kacerzy możemy jedynie, jeżeli tego potrzeba, przekonywać powagą Pisma lub usuwać, jako już dawniej zostały dowiedzione i potępione powszechnymi soborami biskupów katolickich.
+
+ 
+
+73. Z tej przyczyny, gdy tylko z jakiego błędu zgnilizna okazywać się zacznie i kraść niektóre Bożego prawa słowa na swoją obronę a wykładać je fałszywie i zdradliwie, zaraz dla zrozumienia Pisma św. przodków zdania zbierać potrzeba, ażeby to, cokolwiek nowego powstaje, jako bezbożne i bez żadnej ogródki było okazanym i potępionym bez odwołania. Ale tych tylko Ojców zdania przywodzić potrzeba, którzy w wierze i społeczności katolickiej świętobliwie, mądrze i stale żyjąc, nauczając i trwając albo stali się godnymi umrzeć wiernie w Chrystusie, albo zabitymi być za Chrystusa. Którym jeszcze według tego prawidła wierzyć potrzeba, że cokolwiek albo wszyscy, albo ich wielu jednym i tymże samym rozumieniem, wyraźnie, często, nieustannie, jakby zgadzający się między sobą sobór nauczycielów, przyjmując, utrzymując, podając, mocnym uczynili, to aby za niewątpliwe, pewne i ważne miane było. Cokolwiek zaś, chociażby on był święty i uczony, chociażby biskup, choćby wyznawca, choć męczennik, a rozumiał co inaczej niż wszyscy albo przeciw wszystkim, to między własne, ukryte i prywatne opinie policzone a od powagi powszechnego, publicznego i ogólnego rozumienia oddzielone niech będzie: ażebyśmy z największym wiecznego zbawienia niebezpieczeństwem, według świętokradzkiego kacerzów i odszczepieńców zwyczaju, wiary powszechnej starożytną opuściwszy prawdę, nie poszli za nowym błędem jednego człowieka.
+
+ 
+
+74. Których to błogosławionych Ojców świętą i katolicką zgodność, ażeby kto pogardy być godną zuchwale nie rozumiał, przeto Apostoł mówi: Bógci postanowił niektórych w Kościele, naprzód Apostołów (z których liczby i on był), po wtóre Proroków (jakim w Dziejach Apostolskich jest Agab), po trzecie Nauczycieli (70), którzy się teraz kaznodziejami nazywają, a których tu tenże Apostoł często i prorokami nazywa, że oni tajemnice Proroków ludziom odkrywają. Kto by więc pogardził tymi wszystkimi w Kościele Bożym, władzą Boga na czasy i miejsca podzielonymi, a w rozumieniu katolickiej wiary na jedno się w czym zgadzającymi, nie człowiekiem pogardza, ale Bogiem; od której prawdomównej jedności, aby się kto nie różnił, usilnie obowiązuje Apostoł, mówiąc: Proszę was bracia... abyście toż mówili wszyscy, a iżby nie były między wami rozerwania, ale bądźcie doskonali w jednym rozumieniu i w jednej nauce (71). A jeśli się kto od ich uczestnictwa oddali, to znowu usłyszy od tegoż Apostoła: Albowiem Bóg nie jest rozterki, ale pokoju (to jest nie tego jest Bogiem, kto się od zgody jedności oderwał, ale tych, którzy trwają w zgodnym pokoju), jako też, mówi, we wszystkich kościołach świętych nauczam (72), to jest katolików, którzy dlatego są święci, że w jedności wiary pozostają.
+
+ 
+
+75. I żeby kto może nie żądał, aby, opuściwszy innych, jego samego słuchano i jemu wierzono, przeto dalej przydaje: Izali od was wyszło słowo Boże, mówi, albo do was samych przyszło? Aby tych słów nie rozumieć opacznie, dodał jeszcze: Jeżeli kto, mówi, zda się być Prorokiem albo duchownym, niech pozna, iż co wam piszę, są Pańskie rozkazania. Jakież to więc rozkazania? Oto, aby ten, kto jest prorokiem albo duchownym, to jest duchownych rzeczy mistrzem, starał się usilnie być czcicielem zgody i jedności; iżby ani swoich opinii nad innych nie przenosił zdania, ani od powszechnego wszystkich rozumienia nie odstępował. Jakowej rzeczy przykazów kto nie wie, mówi, i o nim wiedzieć nie będą (73), to jest ten, kto się albo nie uczy, czego nie umie, albo tym, co poznał, pogardza, znanym nie będzie, to jest będzie uznany za niegodnego, aby się mógł liczyć od Boga pomiędzy zjednoczonymi wiarą i zrównanymi pokorą, nad jakowe zło nie wiem, czy co smutniejszego pomyśleć można. Widzimy jednak według groźby Apostoła, że się to przytrafiło pelagianinowi Julianowi, który się do zdania towarzyszów albo przyłączyć zaniedbał, albo oddzielić ośmielił.
+
+ 
+
+76. Ale już czas, abyśmy obiecany okazali przykład, gdzie i jak są zebrane Ojców świętych zdania, aby według nich z ustawy i powagi Soboru, prawidło wiary kościelnej ugruntowane było. Co aby uczynić wygodniej, tu niech będzie koniec Pamiętnika tego, iżbyśmy zaczęli od czego innego to, co następuje.
+
+ 
+
+Pamiętnik drugi zaginął, pozostała z niego tylko część końcowa czyli streszczenie, które się dołącza.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXIX.}
+
+ 
+
+Streszczenie tego, co wyżej powiedziano.
+
+ 
+
+77. Co gdy tak jest, czas już, abyśmy to, co się w dwóch tych powiedziało Pamiętnikach, przy końcu tego drugiego rzecz razem zebrali. Mówiliśmy wyżej, iż ten był zawsze i teraz jest u katolików zwyczaj, że prawdziwą wiarę tymi dwoma sposobami potwierdzają; najprzód: Pisma Bożego powagą, a potem Kościoła katolickiego Podaniem; nie przeto, aby Pismo św. nie było samo do wszystkiego dostateczne, ale że tłumaczący słowa Boże często według swego upodobania, różnych opinii i błędów nabywają: i dlatego potrzeba, aby do jednego prawidła, kościelnego zdania, Pisma niebieskiego rozumienie kierowane było, w tych szczególnie najbardziej artykułach, na których całej katolickiej wiary wspierają się fundamenta.
+
+ 
+
+78. Mówiliśmy także, że w samym znowu Kościele powszechności razem i starożytności zgody szukać potrzeba, abyśmy od całkowitej jedności nie oderwali się do części odszczepieństwa, albo odłączeni od dawności religii nie pogrążyli się w nowości kacerstwa. Mówiliśmy jeszcze, że w samejże Kościoła dawności dwa niejakie prawidła pilnie i starannie zachować potrzeba, do których zupełnie przylgnąć powinni, co kacerzami nie chcieliby zostać. Pierwsze: jeżeli co jest w starożytności przez wszystkich biskupów Kościoła katolickiego powagą Soboru powszechnego ustanowione. Drugie: jeżeliby nowa jaka powstała sprzeczka, o której by tam nie było mowy, udawać się potrzeba do zdań Ojców świętych i to tych jedynie, z których każdy w swoim czasie i miejscu, a wszyscy w jedności uczestnictwa i wiary trwając, wiarogodnymi stali się mistrzami; gdy się zaś coś trafi, co oni jednym rozumieniem i zgodnością utrzymywali, wtedy należy uważać bez żadnej wątpliwości, iż to jest w Kościele prawdziwym i powszechnym.
+
+ 
+
+79. Co aby się nie zdawało, żeśmy więcej z naszego zdania własnego, aniżeli z kościelnej zaczerpnęli powagi, użyliśmy przykładu świętego Soboru, który przed trzema prawie laty w Azji w Efezie odprawiony został, za sławnych mężów Bassa i Antiocha konsulów. Gdy tam rozprawiano o ustanowieniu prawideł wiary a nie wkradła się jaka bezbożna nowość na kształt wiarołomstwa Arimineńskiego, przez wszystkich biskupów, którzy się zebrali do tego miejsca w liczbie dwustu prawie, uznano za rzecz prawdziwie katolicką, najwierniejszą i najstosowniejszą, aby wynalezione i okazane były zdania świętych Ojców, o których jest pewność, że jedni męczennikami, drudzy wyznawcami, a wszyscy biskupami katolickimi byli i do końca takimi dotrwali; a to dlatego, aby tym sposobem z ich zgody i uchwał wyznawanie dawnego dogmatu było dostatecznie i uroczyście potwierdzone jak również potępione bluźnierstwo bezbożnej nowości. Co gdy tak uczyniono, słusznie i sprawiedliwie bezbożny ów Nestoriusz za przeciwnika katolickiej dawności, a zaś błogosławiony Cyryl, za zgadzającego się ze świętą starożytnością był osądzony. I ażeby do dania temu wiary nic potrzebnego nie brakowało, opisaliśmy jak imiona, tak i liczbę tych Ojców (chociaż o porządku ich zapomnieliśmy), według których odpowiedniego i zgodnego zdania, jak święte wyroki prawa są wyłożone, tak i Boskiej wiary prawidło ustanowione zostało. O nich dla lepszej pamięci i tu jeszcze wspomnieć zbytecznym nie będzie.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXX.}
+
+ 
+
+O Soborze Efeskim.
+
+ 
+
+80. Ci więc są owi mężowie, których na owym Soborze albo jako sędziów, albo jako świadków pisma czytane były. Św. Piotr Aleksandryjski biskup, doktor najzacniejszy i męczennik błogosławiony. Św. Atanazy, tegoż miasta biskup, mistrz najwierniejszy i przesławny wyznawca. Św. Teofil także tego miasta biskup, mąż wiarą, życiem i nauką dosyć sławny: po którym nastąpił wielebny Cyryl, który teraz zaszczyca Aleksandryjski kościół. Aby nie rozumiano, że jednego tylko miasta albo prowincji taka jest nauka, użyte były i owe Kapadocji światła: św. Grzegorz biskup i wyznawca z Nazjanzu; św. Bazyli, Cezarei w Kapadocji biskup i wyznawca; także drugi św. Grzegorz Nysseński biskup, wiarą, uprzejmością, cnotą i mądrością, najgodniejszy brat Bazylego. I żeby się okazało, iż nie sama Grecja albo Wschód tylko, ale że nawet Zachodni i Łaciński okrąg tegoż jest zdania, czytane tamże były niektóre do pewnych osób listy św. Feliksa męczennika i św. Juliusza miasta Rzymu biskupów. Aby zaś nie tylko głowa świata, ale i inne strony temu zdaniu świadectwo dały, użyty został od Południa błogosławiony Cyprian biskup Kartagiński i męczennik, od Północy znowu św. Ambroży, biskup Mediolański.
+
+ 
+
+81. Ci są więc wszyscy w Efezie poświęconą dekalogiem liczbą zebrani mistrzowie, radcy, świadkowie i sędziowie, których błogosławiony ów Synod trzymając się nauki, za ich idąc radą, świadectwom wierząc, i sądowi się poddając, bez nienawiści, niechęci, uprzedzenia i sprzyjania, wydał wyrok o prawidłach wiary. A chociaż jeszcze daleko większą liczbę starszych przytoczyć było można, lecz nie było potrzeby, bo i okoliczności czasu na większe nie pozwalały zebranie świadków, i nikt nie był w powątpiewaniu, aby od tych dziesięciu (74) prawdziwego zdania różnił się którykolwiek z ich towarzyszów.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXXI.}
+
+ 
+
+Stałość Ojców efeskich w zbijaniu nowości i w starożytności obronie.
+
+ 
+
+82. Po tym wszystkim przytoczyliśmy jeszcze zdanie błogosławionego Cyryla, które w samychże dziejach kościelnych zawarte jest. Albowiem gdy był przeczytany list św. Kapreola biskupa Kartagińskiego, który niczego więcej nie żądał i nie życzył, tylko, aby zburzywszy nowość, starożytność obronioną była, tak powiedział i postanowił biskup Cyryl, co i tu jeszcze nie bez potrzeby zamieszczamy. Mówi bowiem w końcu dziejów: "I ten list przeczytany szanownego i wielce świętobliwego biskupa Kartagińskiego Kapreola, w dziejach wiary umieszczony będzie, którego zdanie jasne jest. Chce bowiem, aby starożytnej wiary prawidła potwierdzone były; nowe zaś i zbytecznie wynalezione i bezbożne – odrzucone i potępione".
+
+ 
+
+Wszyscy biskupi zawołali: "Te są wszystkich głosy, to wszyscy mówimy, takowe wszystkich żądanie jest". Jakież to wszystkich żądania, jeżeli nie te tylko: że co było w starożytności podane, aby się tego trzymano, co zaś niedawno wynalezione, aby uchylone zostało?
+
+ 
+
+83. Potem zaś dziwiliśmy się i ogłaszaliśmy, jaka była Soboru tego pokora i świętobliwość, że taka liczba biskupów, po większej części metropolitów, takiej uczoności, i takiej nauki, że prawie wszyscy o prawidłach wiary rozprawiać mogli, którym przeto samo zebranie się w jedno, mogło dodawać śmiałości, aby wymyślili i postanowili coś swojego: nic jednak nowego nie uchwalili, nic zuchwale nie uczynili, nic sobie zupełnie nie przypisywali, ale wszelką usilnością pilnowali tego, aby tylko nie podali potomnym, czego oni sami od Ojców nie wzięli, i żeby nie tylko w swoim czasie rzecz dobrze ułożyli, ale nawet aby dali przykład następcom na czasy przyszłe, to jest: ażeby i oni świętej starożytności szanowali wiarę, potępiając wynalazki bezbożnej nowości.
+
+ 
+
+84. Powstaliśmy także na zbrodniczą zuchwałość Nestoriusza, że się z tym chlubił, jakoby on pierwszy i sam tylko Pismo święte rozumiał, a wszyscy go nie rozumieli, którzy przed nim mistrzowstwa (magisterii) piastując obowiązki, Boskie wykładali wyroki, to jest: że wszyscy kapłani, wszyscy wyznawcy i męczennicy, z których jedni wykładali prawo Boga, drudzy zaś zgadzali się z wykładającymi, albo wierzyli, i że cały na koniec Kościół błądzi i błądził zawsze, który, jak mu się wydawało, nieumiejętnych i omylnych doktorów słuchał i słucha.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXXII.}
+
+ 
+
+Starania papieży Celestyna i Sykstusa około potępienia nowości.
+
+ 
+
+85. Co wszystko chociażby zupełnie i obficie dostateczne było do zepsucia i zniszczenia wszelkich bezbożnych nowości, aby jednak czego do tej pełności nie zdało się brakować, dodaliśmy na koniec dwa poważne zdania Apostolskiej Stolicy, to jest: jedno św. papieża Sykstusa, który to czcigodny obecnie zaszczyca Kościół rzymski; drugie poprzednika jego błogosławionej pamięci papieża Celestyna, które i tu umieścić za rzecz konieczną osądziliśmy. Mówi zaś święty papież Sykstus w liście, który z powodu Nestoriusza przesłał do biskupa Antiocheńskiego: "Ponieważ, jak powiada Apostoł, wiara jest jedna, którą jasno rozumiemy, co mamy mówić, wierzmy i co trzymać, mówmy". Cóż to zaś jest, w co mamy wierzyć i co mówić? Dodaje i mówi: "Nic nadal nie wolno nowości, ponieważ nie godzi się dodawać cokolwiek do starożytności. Jasna jest przodków wiara, a wierzenia żadnym błota przymieszaniem niszczyć nie należy". Wcale po Apostolsku: przodków wiarę zdobi światłem jasności a nowe bezbożności błota przymieszaniem nazywa.
+
+ 
+
+86. Ale i święty papież Celestyn równym sposobem jednegoż jest zdania. Mówi bowiem w liście, który przesłał do biskupów w Galii, strofującym ich opieszałość, że starą wiarę zaniedbując milczeniem, cierpią powstawanie bezbożnych nowości. "Słusznie, mówi, wina do nas należy, jeżeli milczeniem błąd ochraniać będziemy. Niech więc zgromieni będą takowi, niech im nie będzie wolno mówić, kiedy zechcą". Tu powątpiewać kto może, kogo tu rozumie przez tych, którym zakazuje dowolnie przemawiać: czy opowiadaczów starożytności, czy też nowości wynalazców? Niech sam mówi a wątpliwość czytających niech sam rozwiąże. Dodaje bowiem: "Niech poprzestanie, mówi, kiedy taki skład rzeczy (to jest, kiedy tak się dzieje, jak niektórzy przede mną oskarżają miasta i prowincje wasze, że milczeniem szkodliwym pozwalacie na niektóre nowości), kiedy taki skład rzeczy, mówi, niech przestanie nowość napadać na starożytność". Więc takie było błogosławionego Celestyna święte zdanie: nie żeby starożytność przestała obalać nowość, ale raczej aby nowość przestała napadać na starożytność.
+
+ 
+
+ 
+
+\noindent\subsekcja{ROZDZIAŁ XXXIII.}
+
+ 
+
+Synowie Kościoła katolickiego winni się trzymać wiary Ojców i przy niej zostawać.
+
+ 
+
+87. Którym to więc katolickim i apostolskim ustawom ktokolwiek się sprzeciwia, potrzeba, aby przede wszystkim naprzód wyszydził pamięć św. Celestyna, który stanowi, iżby poprzestała nowość napadać na starożytność; a potem aby wyśmiał ustanowienia św. Sykstusa, który sądził: ażeby nadal nic bynajmniej nowości wolno nie było dlatego, że nie wypada, aby cokolwiek dodawać do starożytności. A na koniec, aby i błogosławionego Cyryla pogardził ustawami, który gorliwość czcigodnego Kapreola bardzo pochwalił, że tenże pragnął, iżby stare ustawy wiary potwierdzone a nowe wynalazki były potępione. A dalej i Sobór Efeski, to jest, całego prawie Wschodu świętych biskupów ustanowienia niech podepce, którym z natchnienia Bożego podobało się tylko to podać potomnym do wierzenia, w co święta i zgodna ze sobą w Chrystusie Ojców świętych starożytność wierzyła; a którzy nawet krzycząc i wołając, jednomyślnie dali świadectwo, że takie są wszystkich głosy, tego żądają wszyscy, tego są zdania wszyscy: że jako wszyscy prawie przed Nestoriuszem kacerze, pogardzając starożytnością, a głosząc nowości, potępionymi byli, tak też i sam Nestoriusz, twórca nowości i burzyciel dawności, aby był potępionym. Których to (Ojców) najświętszej i niebieskiej łaski darem natchniona zgodność, jeśli się nie podoba komu, braknie tylko, aby powiedział, że bezbożność Nestoriusza niesprawiedliwie potępioną była. A na koniec całym zupełnie Chrystusa Kościołem i mistrzami jego Apostołami i Prorokami, szczególniej zaś błogosławionym Pawłem Apostołem, pogardziłby jako śmieciem. Kościołem dlatego, że on od szanowania religii i utrzymania raz sobie podanej wiary nigdy nie odstąpił; Pawłem zaś dlatego, że napisał: O Tymoteuszu, strzeż tego, co ci powierzono, warując się niezbożnych nowości słów (75). I znowu: Jeśliby kto wam opowiadał mimo to, coście wzięli, niech będzie przeklęctwem (76). A jeżeli ani apostolskimi ustawami, ani kościelnymi postanowieniami gardzić nie można, którymi według najświętszej powszechności i starożytności zgody wszyscy zawsze kacerze a na końcu Pelagiusz, Celestiusz, Nestoriusz słusznie i sprawiedliwie potępionymi zostali, potrzeba więc, aby wszyscy nadal katolicy, którzy chcą uchodzić za prawdziwych synów matki Kościoła, zupełnie przylgnęli do świętej Ojców świętych wiary i w niej umierali, a bezbożnymi bezbożników nowościami się brzydzili, ich się lękali, nastawali na nie i takowe prześladowali.
+
+ 
+
+88. To jest prawie wszystko, co w obydwóch pamiętnikach szerzej opisano, teraz zaś nieco krócej jest zebrane, ażeby pamięć moja, dla której wsparcia to napisaliśmy, umocniła się ciągłym ostrzeganiem i obszernością obarczoną nie była.
+
+ 
+
+Koniec Rozprawy Pielgrzyma przeciwko kacerzom.
+
+ 
+
+–––––––––––
+
+ 
+
+ 
+"Homiletyka". Pismo miesięczne poświęcone kaznodziejstwu i życiu duchownemu. Tom II. Włocławek 1898, ss. 571-575. – Tom III. Włocławek 1899, ss. 114-117; 158-163; 280-284; 427-430; 482-486; 667-672. – Tom V. Włocławek 1900, ss. 811-814. – Tom VII. Włocławek 1901, ss. 531-534. – Tom VIII. Włocławek 1902, ss. 11-13; 151-153; 237-240; 352-354; 467-473. ( PDF )
+
+ 
+
+Przypisy:
+
+(1) Pamiętnik św. Wincentego Leryneńskiego tłumaczony był na polski przez X. Rafała Skrzyneckiego, wyd. Kalisz 1780 in 8-vo min. str. 134. Cf. Bentkowskiego Historię literatury polskiej, T. II, str. 555. Tłumaczenie nie jest ściśle teologiczne. Nadto Commonitorium przełożył na język polski X. I. S. Krzyszkowski S. T. D. Trynitarz ("Dzieje dobroczynności" t. II, III i V 1823 i 1824 r. Wilno). Tłumacz trzymał się edycji Weneckiej z r. 1696 i Wiedeńskiej Klüpfela. Przekład dobry. W obecnym tłumaczeniu trzymamy się podziału Baluziusza wyd. Hurtera. Por. uwagę "Homiletyka" t. II, str. 337.
+
+ 
+
+(2) Powt. Pr. XXXII, 7.
+
+ 
+
+(3) Przypow. XXII, 17.
+
+ 
+
+(4) Przypow. III, 1.
+
+ 
+
+(5) Ps. XLV, 11.
+
+ 
+
+(6) tj. poświęconych służbie Bożej kapłanów i zakonników.
+
+ 
+
+(7) Imiona kacerzy i odszczepieńców z III, IV i V wieków.
+
+ 
+
+Nowacjan, antypapież za św. Korneliusza w połowie III w., z początku odszczepieniec tylko, później i heretyk, odkąd przeczył władzy Kościoła odpuszczania grzechów cięższych.
+
+ 
+
+Sabeliusz, około połowy III w. szerzył w Egipcie błędną naukę o Trójcy Świętej, przecząc troistości osób Boskich.
+
+ 
+
+Donat, z wieku IV – przywódca partii odszczepieńczej w Kościele kartagińskim, która do VII w. podtrzymywała smutne rozdwojenie religijne w Afryce.
+
+ 
+
+Ariusz, kapłan aleksandryjski, potępiony na I Soborze powszechnym w Nicei (325 r.), za naukę kacerską o Synu Bożym, którego nazywał stworzeniem, przecząc Boskiej Jego natury.
+
+ 
+
+Eunomiusz, diakon aleksandryjski, zagorzały stronnik arianizmu, którego imieniem zwało się stronnictwo w łonie samej herezji powstałe, dla odróżnienia od zwolenników złagodzonej nauki Ariuszowej, tzw. semiarianów.
+
+ 
+
+Macedoniusz, zarażony arianizmem, biskup konstantynopolitański, twórca nowej herezji, wywracającej dogmat katolicki o Bóstwie Ducha Świętego, a potępionej na II powszechnym Soborze, w Konstantynopolu w 381 r.
+
+ 
+
+Fotyn z Galacji, biskup Sirmium w Panonii, w połowie IV w., błędnie uczył, że jedna jest tylko osoba w Bogu.
+
+ 
+
+Apolinary, biskup Laodycei syryjskiej, wywracał naukę kościelną o tajemnicy Wcielenia; wraz z Macedoniuszem i Fotynem potępiony na I Konstantynopolitańskim Soborze.
+
+ 
+
+Pryscylian, kacerz z IV w., szerzył w Hiszpanii błędy swoje, z zasad gnostycyzmu wysnute, o Trójcy Świętej, tajemnicy Wcielenia, zmartwychwstaniu ciał, odwiecznej materii itd.
+
+ 
+
+Jowinian, mnich z Mediolanu, za czasów św. Hieronima, powstawał między innymi przeciw nauce Kościoła o nienaruszonym dziewictwie Matki Bożej.
+
+ 
+
+Pelagiusz i Celestiusz, dwaj zakonnicy z wysp Brytańskich, twórcy błędnej nauki o łasce i grzechu pierworodnym, w wieku V.
+
+ 
+
+Nestoriusz, patriarcha konstantynopolitański w w. V, odrzucał dogmat wiary o hipostatycznym zjednoczeniu dwóch natur w jednej osobie Boskiej Jezusa Chrystusa, odmawiając zarazem Najświętszej Maryi Pannie godności Boskiego macierzyństwa. Potępiony został na Soborze Efeskim w 431 r.
+
+ 
+
+(8) Pogańska bogini wojny.
+
+ 
+
+(9) Bóstwo pomsty i szału.
+
+ 
+
+(10) Słowa o cesarzu Konstancjuszu, synu Konstantyna Wielkiego, który prześladował Kościół katolicki w obronie arianizmu.
+
+ 
+
+(11) De fide, lib. II, c. 15, n. 141. Najznakomitsze to dzieło swoje napisał św. Ambroży na prośbę cesarza Gracjana w obronie wiary przeciw arianom, naprzód treściwie w dwóch księgach w r. 377, a w dwa lata później obszernie w trzech innych dogmat o Bóstwie Chrystusowym wykładając, skąd powstało ksiąg pięcioro.
+
+ 
+
+(12) W Objawieniu, rozdz. V.
+
+ 
+
+(13) Św. Ambroży ma tu na myśli zebranych na synod w Ariminum (dziś Rimini w Umbrii) w 359 r. tych biskupów, których cesarz Konstancjusz już to podstępną namową, już gwałtem przymusił do odrzucenia uchwalonych przedtem postanowień i potępienia uświęconych powagą pierwszego Soboru wyrazów na oznaczenie przeczonej przez arian prawdy objawionej o Bóstwie Chrystusowym: istota i współistotny: błąd swój i dane zgorszenie naprawili później wyznaniem winy i odwołaniem wymuszonej zgody.
+
+ 
+
+(14) Św. Ambroży, De fide, n. 128.
+
+ 
+
+(15) Cf. adn. n. 13.
+
+ 
+
+(16) Owymi mężami, przez których Bóg tyle dziwnych rzeczy dokonał, byli: śś. Atanazy na wschodzie, Hilary na zachodzie, Euzebiusz (wercelleński) i Ambroży w Italii.
+
+ 
+
+(17) Agrypin, w początkach III w. biskup kościoła kartagińskiego, pierwszy podał w wątpliwość ważność chrztu przez heretyków udzielanego, i postanowieniem synodalnym z 218 i 222 r. nakazał chrzcić ponownie wracających do Kościoła kacerzy.
+
+ 
+
+(18) Św. Stefan I, papież, rządził Kościołem od 253 r. do 257 r. Zginął śmiercią męczeńską za cesarza Waleriana. Zabrał on głos w długim sporze biskupów Afryki i Azji w przedmiocie ważności chrztu poza Kościołem udzielonego, stając w obronie apostolskiego i powszechnego podania, że każdy chrzest, byle udzielony z zachowaniem przepisanej formy, jest ważnym bez względu na osobę udzielającego.
+
+ 
+
+(19) Dwa głośne koncylia afrykańskie w sprawie ponawiania chrztu odbyły się: pierwsze za biskupa Agrypina z udziałem biskupów Afryki i Numidii, – drugie liczniejsze jeszcze za rządów biskupich św. Cypriana w 256 r. To ostatnie ma tu na myśli autor Pamiętnika.
+
+ 
+
+(20) Św. Cyprian, od 248 r. biskup kartagiński, podzielał zdanie o nieważności chrztu kacerskiego; odnośny w tym przedmiocie dekret synodu prowincjonalnego w Kartaginie w 256 r., przesłał św. biskup do Stolicy Apostolskiej, św. Stefanowi papieżowi. Zresztą cały ten spór poczytywano więcej za sprawę karności kościelnej, niż wiary. Znakomite dzieło św. Cypriana: De unitate Ecclesiae i męczeńska śmierć jego w obronie wiary są najlepszym dowodem jego przekonań prawowiernych.
+
+ 
+
+(21) Rodz. IX, 20-28.
+
+ 
+
+(22) Gal. I, 6-7.
+
+ 
+
+(23) II Tym. IV, 3-4.
+
+ 
+
+(24) I Tym. V, 12.
+
+ 
+
+(25) Rzym. XVI, 17-18.
+
+ 
+
+(26) II Tym. III, 6-7.
+
+ 
+
+(27) Tyt. I, 10-11.
+
+ 
+
+(28) II Tym. III, 8.
+
+ 
+
+(29) I Tym. VI, 4-5.
+
+ 
+
+(30) I Tym. V, 13.
+
+ 
+
+(31) I Tym. I, 19.
+
+ 
+
+(32) II Tym. II, 16-17.
+
+ 
+
+(33) II Tym. III, 9.
+
+ 
+
+(34) Gal. I, 8.
+
+ 
+
+(35) Gal. I, 9.
+
+ 
+
+(36) Gal. V, 25-26.
+
+ 
+
+(37) Gal. V, 16.
+
+ 
+
+(38) Powt. Pr. XIII, 1-3.
+
+ 
+
+(39) Po śmierci biskupa konstantynopolitańskiego, Syzyniusza, cesarz Teodozjusz II, dla uniknięcia wszelkich a szkodliwych sporów, pominąwszy miejscowych kandydatów, zaprosił na opróżnioną stolicę kapłana z Antiochii, Nestoriusza, który przyjął święcenia biskupie w 428 r.
+
+ 
+
+(40) Porfiriusz, rodem z Tyru (233 – 304), filozof pogański, głośny uczeń Plotyna, założyciela szkoły neoplatoników, zacięty wróg religii chrześcijańskiej.
+
+ 
+
+(41) Rzym. VII, 13.
+
+ 
+
+(42) Jan. III, 13.
+
+ 
+
+(43) I Kor. II, 8.
+
+ 
+
+(44) Jan. I, 14.
+
+ 
+
+(45) Ps. XXI, 17.
+
+ 
+
+(46) Jeden z uczonych (Antelmius w dziełku pt. Nova de symbolo Athanasiano disquisitio) utrzymuje, że św. Wincenty, pomny obietnicy, wydał później obszerny wykład tajemnic Trójcy Świętej i Wcielenia, i że pracą tą jest właśnie Symbol, przypisywany św. Atanazemu. W istocie, wielkie zachodzi podobieństwo między tzw. "Atanazjańskim składem wiary" a wykładem tych tajemnic w Pamiętniku (rozdz. XIII i następne) i ze względu na sposób wykładu i pod względem wyrażeń tu i tam użytych; samo to podobieństwo jednak nie wystarcza jeszcze do rozstrzygnięcia spornej kwestii autorstwa tego "Symbolu" na korzyść św. Wincentego.
+
+ 
+
+(47) Urodzony w Aleksandrii w r. 185, otrzymał staranne wychowanie i wykształcenie wszechstronne pod kierunkiem najsławniejszych ówczesnych nauczycieli; dla nieugiętego w przeciwnościach charakteru i niezmordowanej przez całe życie pracy przezwany "Adamantius" – (diamentowy). Najznakomitsze z dzieł jego – to prace krytyczne i egzegetyczne z zakresu Pisma św. – Umarł w Tyrze w r. 254.
+
+ 
+
+(48) Ojciec Orygenesa, Leonidas, poniósł śmierć męczeńską w Aleksandrii, w 202 r., podczas okrutnego prześladowania za Septymiusza Sewera. (Martyrologium Rzymskie pod dn. 22 kwietnia).
+
+ 
+
+(49) Julia Mammea, chrześcijanka, matka cesarza Aleksandra Sewera (222 – 235) zaprosiła Orygenesa na dwór cesarski w Antiochii dla poufnej rozmowy o rzeczach wiary z wielkim i słynnym już wówczas na świat cały filozofem chrześcijańskim.
+
+ 
+
+(50) Według "Kroniki" Euzebiusza z Cezarei dwudziesty trzeci z rzędu cesarz rzymski, Filip Arab (244 – 249 r.), pierwszy z cezarów przyjął wiarę chrześcijańską; wspomina o tym między innymi i Orozjusz w swoich Dziejach przeciw poganom (ks. VII, rozdz. XX). Pagi, historyk, zalicza to podanie do bajek, powołując się na świadectwa św. Ambrożego, Sulpicjusza i innych, którzy chwałę tego śmiałego i doniosłego czynu przypisują Konstantynowi Wielkiemu, i na dowody z numizmatyki, gdzie na monetach z czasów Filipa Araba z jego wizerunkiem znajdujemy wyraźne oznaki pogaństwa. Inni za Baroniuszem widzą w tym prostą pomyłkę z pomieszania dwóch osób jednego imienia – cesarza Filipa i syna jego, pomocnika w zarządzie państwa. Bądź co bądź, trudno lekkomyślnie odrzucać tyle i tak poważnych dowodów; najprawdopodobniej cesarz Filip przyjął chrzest św. potajemnie przed poganami; lecz że z imienia raczej był chrześcijaninem, że nie przekazał wiary prawdziwej swoim następcom ani jej nie szerzył wśród poddanych, słusznie przeto nazwa "pierwszego cesarza chrześcijańskiego" została przy synu św. Heleny.
+
+ 
+
+(51) Powt. Pr. XIII, 1. 3.
+
+ 
+
+(52) Tertulian, (Ouintus Septimius Florens) rodem z Kartaginy, chluba Zachodu dla dziwnie głębokiego umysłu i obszernej wiedzy, w podeszłym już wieku przyłączył się do sekty montanistów, których surowe na pozór zasady przypadały do jego usposobienia. Umarł w późnej starości około 220, a według innych 240 r.
+
+ 
+
+(53) Marcjon, gnostyk II w.; Apelles, najgłośniejszy uczeń jego, później twórca nowego systemu gnozy; Prakseasz, Frygijczyk, zwolennik sekty antytrynitarzów; Hermogenes, herezjarcha, z końca II i początków III w., przeciwnik gnostycyzmu a zwolennik nauki Platona i stoików, błądził w pojęciach swoich o stworzeniu świata i naturze duszy. Błędy ich zbijał Tertulian.
+
+ 
+
+(54) I Kor. XI, 19.
+
+ 
+
+(55) Cf. Jan. IV, 10. 14.
+
+ 
+
+(56) Przypow. XXII, 28.
+
+ 
+
+(57) Ekli. VIII, 17.
+
+ 
+
+(58) Ekl. X, 8.
+
+ 
+
+(59) I Tym. VI, 20-21.
+
+ 
+
+(60) Przypow. IX, 16.
+
+ 
+
+(61) Exod. XXXI, 2.
+
+ 
+
+(62) "Ani Bóg wszechmocny, mówi św. Augustyn Enchir. c. 11, mający władzę nad wszelkimi rzeczami, ponieważ jest najlepszym, w żaden sposób pozwolić nie może, aby cokolwiek złego znajdowało się w dziele Jego, chybaby tak był wszechmocnym i dobrym, iżby dobre czynił nawet ze złego". Gdybyśmy się zaś pytali, jakie dobro ma Pan Bóg z herezji, na które pozwala, Ojcowie z Wincentym naszym odpowiadają: jaśniejszy wykład prawd Wiary katolickiej. Tak szczególniej i bardzo często wyraża się św. Augustyn (De civitate Dei l. 16, c. 2, n. 1): "Gdy chytrym niepokojem heretycy zaczepiają wiele rzeczy do wiary katolickiej należących, dla obrony przeciwko nim pilniej je rozważamy i jaśniej rozumiemy i gorliwiej głosimy a sprawa, przez przeciwnika poruszona, staje się przyczyną do nauki". Enarr. in Ps. 54, n. 22: "Przez kacerzy bronionym jest (Kościół) katolicki i przez tych, co źle rozumieją, utwierdzeni są dobrze rozumiejący. Wiele było rzeczy, w Piśmie ukrytych; gdy zaś oddzielili się heretycy, sporami niepokoili Kościół Boży. Otworzono, co zamkniętym było i zrozumianą jest wola Boża... Wielu, co z Pisma mogli doskonale poznawać i zgłębiać, ukrywali się wśród ludu Bożego, ani nie kusili się rozwiązywać pytań zawiłych, ponieważ żaden oskarżyciel nie nastawał. Czyż bowiem dokładnie zajmowano się Trójcą przed napaścią arianów? Czyż zupełnie mówiono o pokucie przed sporami nowacjanów? Tak również niedokładnie zajmowano się chrztem, zanim powtórnochrzczeńcy nie zaczęli czynić zarzutów na zewnątrz; ani o samym połączeniu natur w Chrystusie dowodnie powiedziane nie było, co powiedzianym jest, dopóki rozdział nie zaczął następować na braci chorych a wtedy ci, którzy umieli mówić i rozwiązywać, mowami i rozprawami rzeczy ciemne z prawa na jaw wyprowadzali, iżby nie zginęli słabi, niepokojeni pytaniami bezbożnych". Prawie podobnie do tego czytamy w: Enarr. in Ps. 67, n. 39; De catech. rudibus n. 44; De civitate Dei l. 18, c. 5l; De dono persev. n. 53; Sermo 51 al. 63 de div. n. 11; wreszcie l. 1 de Genesi contra manichaeos c. 1, n. 2: "Opatrzność Boża dlatego zezwala istnieć wielu heretykom różnych błędów, abyśmy otrząsnęli się z lenistwa i kwapili się poznać Pismo Boże, gdy nas znieważają i pytają o to, czego nie wiemy. Dlatego i Apostoł mówi: Muszą być i kacerstwa, aby i którzy są doświadczeni (cnotliwi) stali się jawni między wami (I Kor. XI, 19). Ci bowiem dla Boga doświadczeni są, którzy mogą dobrze uczyć, – ale jawni ludziom są tylko wtedy, gdy uczą; – uczyć zaś mają jedynie tych, co nauki szukają. Wielu atoli leniwych jest do szukania, budzą się jakoby ze snu przykrościami i zniewagami kacerzy i wstydzą się nieświadomości swojej a dla tej nieświadomości czują, że są wystawieni na niebezpieczeństwo. Jeżeli ci ludzie dobrej są wiary, nie ustępują heretykom, lecz skrzętnie szukają, żeby im odpowiedzieli". W podobny sposób pisze Orygenes h. 9 in Num.: "Gdyby nauka kościelna prostą była i nieopasywana wewnątrz twierdzeniami dogmatów kacerskich, wiara nasza nie mogłaby być widzianą tak jasną i zbadaną. Ale dlatego napaść przeciwników obsacza naukę katolicką, iżby wiara nasza nie gnuśniała w spokoju, ale doskonaliła się w ćwiczeniach. W tym też celu wreszcie rzekł Apostoł: Muszą być i kacerstwa, aby i którzy są doświadczeni, stali się jawni między wami: Co znaczy: Należy otoczyć ołtarz haereticorum batillis (czyni Orygenes aluzję do Księgi Liczb XVI, 38, co alegorycznie tłumaczy), aby pewną i widoczną stała się dla wszystkich różnica między wiernymi i niewiernymi. Gdy bowiem wiara Kościoła pocznie błyszczeć jako złoto a głoszenie jej jako srebro w ogniu wypróbowane pokaże się patrzącym, wtedy z większą brzydotą i wstydem staną się plugawymi głosy kacerskie na podobieństwo niskiej ceny wątpliwej miedzi". Św. Grzegorz również o tym mówi (Epist. l. 7, ep. 3): "Kościół święty zawsze coraz ściślej w swoim nauczaniu naprzód idzie, gdy go kacerskie zaczepiają spory".
+
+ 
+
+(63) I Kor. V, 11.
+
+ 
+
+(64) II Jan. 10. 11.
+
+ 
+
+(65) Gal. I, 9.
+
+ 
+
+(66) Mt. VII, 15.
+
+ 
+
+(67) II Kor. XI, 13.
+
+ 
+
+(68) Mt. IV, 5-6.
+
+ 
+
+(69) Na te szczególniej słowa powołują się ci wszyscy, którzy twierdzą, że św. Wincenty był zarażony błędami semipelagiańskimi a do tych głównie należą: Noris, Historia pelagiana l. 2, c. 11; Antelmius, De ver. opp. ss. Leon. et Prosp., diss. 9, c. l5; Natalis Alexander, Hist. eccl., sect. V, part. 1, c. 3, a. 2. 3; Pagi, ad an. 434, § 16 sqq.; Gerard I. Vossius; Thomassinus; Berti; Ballerini, Observ. l. 1, c. 6, n. 3 ad t. 4 opp. Norisii, p. 912 i w nowszym czasie Hefele w Kwart. Tybing. 1854, p. 89 sqq. Wyznać jednak należy, że słowa te, uważane same w sobie, nie rzucają ani cienia semipelagianizmu i dlatego wielu mężów uczonych broni go od tego zarzutu, jak Baroniusz, Bellarmin, Labbe, Papebrock, pisarze historii literatury francuskiej, Brun, Neusser itd. Chociaż te słowa same w sobie nie są naganne, okoliczności jednak czynią je podejrzanymi. Wiadomo jest, że Marsylia, w której bliskości leżą wyspy leryneńskie, była ojczyzną semipelagianów, stąd ci ostatni byli zwani także marsylczykami; Wincenty zaś długi czas obcował razem z Faustusem, później biskupem z Rhegium (który był także jego niegdyś opatem), zaliczonym do wodzów tych sekciarzy (chociaż go wielu od błędów broni, jak: Taper, Driedo, Maffei, Stilting, Act. SS. Sept. t. 7, d. 28 Sept., i później Heller w dziele Fausti regiensis fides in expon. gratia Christi); w tych słowach zatem Wincenty gani to wszystko, co semipelagianie zwykli byli brać z opacznie rozumianej nauki św. Augustyna. Podejrzenie więc nie jest bez podstawy, jakoby Wincenty należał do ich obozu; z tego też powodu wyżej wymienieni pisarze przypisują mu autorstwo osławionych obwinień zwanych wincencjańskimi. W celu potwierdzenia tych zarzutów, powołują się niektórzy na to, co czytamy w rozdziale XXXII-gim, wnioski jednak, jakie stąd wyprowadzają, są tak słabe, że naprawdę się dziwimy, iż uczeni tej miary mogli takie nieprzychylne zdanie wygłosić o pisarzu, tak bardzo zasłużonym dla sprawy katolickiej. Co się tyczy samego podejrzenia, na które ten rozdział naprowadza, wyznajemy wprawdzie, że Wincenty zganił niektóre punkty nauki o łasce, jakie rzeczywiście na naganę zasługiwały, gdyby je uczony katolicki głosił, i które wtedy przez niewiadomość albo przez szykanę przypisywano obrońcom nauki katolickiej o łasce, nie dowodzi atoli to podejrzenie jedności naszego Wincentego ze semipelagianami w tym, w czym leżał ich własny błąd, później przez Kościół potępiony. Więcej zaiste należałoby mieć dowodów i to pewniejszych do utrzymania tego zarzutu. Zresztą, choćby i o ten błąd był podejrzanym, nic to jego świętości nie ujmuje, ponieważ błąd pomieniony nie był jeszcze przez Kościół uroczyście potępionym. Stąd św. Augustyn tych, którzy później nazwani byli semipelagianami, mianuje fratres ac dilectores sui (De dono persev. 24, n. 66; De praed. SS. c. 14), a św. Prosper w liście, oskarżającym tych zakonników i kapłanów marsylskich przed wielkim Biskupem z Hippony, jako utrzymujących, że człowiek sam powinien sprawować początek usprawiedliwienia swego i zbawienia, zowie ich sanctos, honoribus et meritis claros et egregios in omnium virtutum studio viros (ep. ad Augustinum). Z tego powodu Benedykt XIV (w konstytucji De nova Martyrologii Rom. editione z dnia 1 lipca 1748 r. n. 3l) mówi: "Nie mają znaczenia przeciwstawiane przykłady, jeden Hilarego, biskupa arelateńskiego, a drugi Wincentego Leryneńskiego, których obydwóch, a mianowicie: Hilarego dnia 5 a Wincentego dnia 24 maja Martyrologium Rzymskie pamięć wspomina, chociaż nauka ich splamioną jest semipelagianizmem. Jakkolwiek bowiem mężowie ci błędami semipelagiańskimi skażeni byli, czemu jednak przeczy wielu, broniących znakomicie ich zdania katolickiego, uniewinnieni atoli być winni, jeżeli w tej kwestii cokolwiek ludzkiego wypowiedzieli, ponieważ nauka katolicka nie była jeszcze określoną najwyższym wyrokiem Stolicy Apostolskiej, jak o tym mówiliśmy w dziele De canoniz. l. 2, c. 29".
+
+ 
+
+(70) I Kor. XII, 28.
+
+ 
+
+(71) I Kor. I, 10.
+
+ 
+
+(72) I Kor. XIV, 33.
+
+ 
+
+(73) I Kor. XIV, 36-38.
+
+ 
+
+(74) Nie dziesięciu ale dwunastu Ojców jest wymienionych w wiarogodnych aktach Soboru Efeskiego jako świadków i sędziów. Prócz tych, o których wspomina Wincenty, dodać należy jeszcze Attyka, biskupa konstantynopolitańskiego, i Amfilocha, biskupa z Ikonium; imion tych Ojców brakło widocznie w egzemplarzu pomienionego Soboru, z którego korzystał Wincenty. Zresztą z tego sposobu postępowania Soboru widoczną jest rzeczą, że Kościół w V-tym wieku był zupełnie przekonanym, iż do udowodnienia jakiegoś dogmatu przeciwko kacerzom nie potrzeba odwoływać się do zdania wszystkich Ojców albo do powagi Ojców wieku pierwszego i drugiego. Ponieważ taka procedura jest bardzo wielkiej wagi w polemice z heretykami, uważamy za rzecz pożyteczną objaśnić ją dowodami, zaczerpniętymi z akt Soborów i pism Ojców, czego dokonał Dionizy Petavius (Petau) w dziele: De incarnatione verbi l. 14, c. 15.
+
+
+Na zarzut nieprzyjaciół wiary: "Consentaneum esse dogmatum probandorum auctoritatem ab ultimis repeti temporibus et aetati Christi proximis, per quae nondum inventis erat hominum infecta fidei ac disciplinae velut haereditaria possessio", tak odpowiada ten znakomity teolog: "Kto pragnie dowieść jakiegoś punktu wiary chrześcijańskiej za pomocą świadectwa Ojców, w najlepszy sposób to przeprowadzi, jeżeli pójdzie za przykładem Synodów ekumenicznych i samych Ojców, których jako świadków używa. Jakąż więc powagą był uzbrojony starożytny Kościół, gdy bronił zaprzeczonego dogmatu wiary na Soborach powszechnych albo w wypadkach powstających od czasu do czasu nowych herezji? Nie możemy sądu o tym wydawać, co same akta zamilczały; czego jednak posiadamy piśmienne dokumenty, które doszły do naszych czasów, może to służyć za dowód niezbity, jako brano dowody i świadectwa nie z najdawniejszych, ale, przeciwnie, z najpóźniejszych uczonych, i których pamięć świeżą jeszcze była. Tego się trzymano na Synodach powszechnych: Efeskim, Chalcedońskim, piątym i szóstym, jeżeli inne przemilczę. Na pierwszym z nich, że z Dziewicy narodził się Bóg a nie zwykły człowiek, dowodzą z Cypriana, Piotra Aleksandryjskiego, Atanazego, Juliusza papieża, Feliksa także papieża, Teofila Aleksandryjskiego, Ambrożego, Grzegorzów Nazjanzeńskiego i Nysseńskiego, Bazylego, Attyka i Amfilocha. Z nich najdawniejszym był Cyprian, który żył na niecałe dwieście lat przed Soborem Efeskim, reszta zaś była znacznie późniejszą. Pragnąłbym obecnie, aby mi odpowiedzieli przeciwnicy, co sądzą, czy Synod ów, nie mogąc przytoczyć za swoim dekretem głosujących z pierwszych wieków i przytaczając późniejszych, niedawno zmarłych, czy był w zupełności zadowolonym z tych nowych Ojców, opuściwszy starych? Jeżeli na jedno z dwojga się zgodzą, naszej sprawie pomogą a swoją pogorszą. Przypuściwszy, że w pierwszych wiekach Kościoła nie było doktora, któryby poświadczył dogmat katolicki o Bóstwie Chrystusowym, jako to dzisiaj twierdzić należy, na próżno na nas obelgi rzucają z powodu milczenia pierwszych wieków. Jeżeli zaś rzeczywiście istnieli w owych wiekach a jednak młodzi ponad nich zostali wybrani, nie powinni nas oskarżać, że powołujemy się na najbliższych i w ich ślady wstępujemy... Tak Sobór Chalcedoński wymienia poręczycieli, którzy ledwo przed stu laty żyli, i Cyryla Aleksandryjskiego, na sześć lat przed Synodem zmarłego. Mniemam, że nie brakowało dawniejszych, których świadectwa mogli użyć, i to w tej większej liczbie Ojców o ile obfitszą mieli pod ręką ilość ksiąg, dotąd niezniszczonych. Dla dowiedzenia dwóch natur w Chrystusie badaliśmy pisma (l. 3, c. 6) najstarszych Ojców, od pierwszego wieku poczynając, jak Klemensa Rzymskiego, Ignacego Męczennika a potem innych, Justyna, Ireneusza, Klemensa Aleksandryjskiego, Hipolita Męczennika, Orygenesa, z których żadnego nie słuchano na tym Synodzie. Podobnież Synod piąty, wyliczając Ojców, za nim we wszystkim idących, wymienił Atanazego, Hilarego, Grzegorzów Nazjanzeńskiego i Nysseńskiego, Ambrożego, Augustyna, Teofila, Jana Złotoustego, Leona, Prokla, a z dawniejszych nikogo... Nie inaczej Synod szósty, zwołany do potępienia monoteletów, postąpił, powołując się na niedawnych Ojców, jak to się pokazuje z Sesji VIII-ej i X-ej, to jest, na Atanazego, Ambrożego, Augustyna, Jana Złotoustego, Leona papieża, Grzegorza Nysseńskiego, Cyryla, Epifaniusza, Efrema Antiocheńskiego, Anastazego, Jana Scytopolitańskiego. Co prawda, wymienia Synod jednego z najstarszych Ojców, tj. Justyna Męczennika, ale dzieło jego «O wykładzie wiary», tam cytowane, nie jest autentyczne. Nie inny był sposób rozumowania Ojców w zbijaniu błędów nowszych heretyków, nie wahali się bowiem przeciwstawiać świadectw Ojców późniejszych i to prawie sobie równoczesnych. Augustyn, rozprawiając z Julianem, filarem sekty pelagiańskiej, w księdze pierwszej wylicza kilku Ojców, z których żadnego z pierwszego stulecia, jednego Ireneusza Męczennika z drugiego, jednego także z trzeciego, resztę w tym wieku zmarłych, w którym sam się urodził, to jest z czwartego wieku, jak: Retycjusza Augustoduńskiego, Olimpiusza Hiszpańskiego, Hilarego, Ambrożego, Grzegorza Nazjanzeńskiego, Bazylego, Jana Złotoustego i Hieronima, który niedawno życie zakończył". Zbijając błędy semipelagiańskie, powołuje się (De dono persev. c. 19, n. 48) na Cypriana i Ambrożego, którzy, jak pisze, powinni wystarczyć (n. 49): "Sed his duobus, qui sufficere debuerunt, s. Gregorium (scil. Nazianzenum) addamus tertium, qui et credere in Deum et quod credimus confiteri Dei donum esse testatur". W ks. 4 Contra duas epistolas pelagianorum c. 8, n. 20 sqq., tylko tych dwóch przytacza na potwierdzenie dogmatu katolickiego. "Teodoret, mówi dalej Petavius, zbijając błędy Apolinarego i dowodząc dwóch natur w Chrystusie, z wieku drugiego wymienia dwóch – Ignacego i Ireneusza; z trzeciego Hipolita i Metodiusza, resztę niedawno zmarłych w wieku czwartym i piątym, to jest Eustatiusza, Atanazego, Bazylego, dwóch Grzegorzów, Flawiana, Cyryla Jerozolimskiego, Amfilocha, Ambrożego, Hilarego, Seweriana, Antiocha, Chryzostoma, Augustyna, Attyka, Gelazego, Cyryla Aleksandryjskiego... Cyryl w piśmie De recta fide, potępiając błędy Nestoriusza, wymienia Ojców nie z pierwszych wieków, ale z czwartego i piątego: Atanazego, Amfilocha, Attyka, Chryzostoma, Teofila wuja swojego i kilku innych. Sądzę, że nie brakło w tak powszechnej i utartej kwestii wielu starszych świadków, gdyż i ja ich niemało przytoczyłem, Cyryl jednak dobrze rozumiał, iż co do świadków wiary katolickiej należy nie tyle na wiek uważać, ile na powagę nauki i rzetelność. Tak Gelazy papież, mówiąc o dwóch w Chrystusie naturach i poświadczając je dowodami z Ojców, oprócz Ignacego i Hipolita resztę wymienia z wieku czwartego albo piątego. Jan II w liście tejże treści podaje Ojców wieku czwartego i piątego, oprócz Cypriana. Opuszczam innych, którzy w wyliczaniu świadków prawd katolickich zadawalają się podaniem Ojców bliższych. Nieobojętne są zaiste szykany, w ostatnim czasie wymyślone, aby rozprawę punktów spornych odnosić do wieku pierwszego i drugiego albo trzeciego i czwartego". Dotąd mówi Petavius, który opuszcza także Leona Wielkiego, przywodzącego w liście ad Leonem Augustum (ep. 165, sec. Ouesn. 134) przeciwko błędowi Eutychesa wszystkich (dziewięciu) z wieku czwartego i piątego a żadnego z pierwszych trzech stuleci. Pomija i Agatona papieża, którego list przeciwko kacerstwu monoteletów był czytany na Soborze VI (act. 4) powszechnym a w którym powołuje się tylko na świadectwo Ojców wieku piątego. Paulin diakon w księdze przeciwko Celestiuszowi, ofiarowanej papieżowi Zozymowi, dla udowodnienia grzechu pierworodnego powołuje się wyłącznie na Cypriana, Ambrożego, Grzegorza Nazjanzeńskiego i Innocentego I, z których trzech było jeszcze w świeżej pamięci. Kasjan, zbijając błędy (l. 7 De incarn. c. 24 sqq.) Nestoriusza, ośmiu tylko przywodzi świadków, z których najdawniejszy jest Atanazy. Nie innej metody trzymał się Jan Damasceński w swoich mowach o obrazach przeciwko ikonoklastom. Stąd bracia Walenburch w dziele De perpetua probatione fidei per testes c. 25, uczyniwszy porównanie między synodami protestantów, którzy gardzą taką metodą dowodową, i Soborami pierwotnego Kościoła (którego niby cztery pierwsze Synody szanują), słusznie wnioskują, że oni odpadli od prawdziwego Kościoła. "Konieczną jest rzeczą, mówią oni, aby Kościół prawdziwy i Sobory prawdziwe przyjęły ten sposób uczenia i przepowiadania, jaki Jezus Chrystus ustanowił, jaki Apostołowie zostawili i jakiego trzymał się Kościół pierwszych wieków. Ten zaś sposób zawsze zachowywał Kościół rzymsko-katolicki, to podając i tego ucząc, co otrzymał przez świadectwa swoich poprzedników, w co powszechnie w Kościele wierzono... A kościoły i synody protestanckie czy mają co podobnego? Czy kto śmie utrzymywać, że oni zachowują sposób uczenia przez Chrystusa ustanowiony i w pierwotnym Kościele zachowany?" itd. Cf. tychże cc. 23, 24, 27. Passaglia, De Ecclesia Christi l. 3, c. 20 sqq.
+
+(75) I Tym. VI, 20.
+
+(76) Gal. I, 9.
+
+© Ultra montes (www.ultramontes.pl)
+Cracovia MMXII, Kraków 2012
+\end{document}

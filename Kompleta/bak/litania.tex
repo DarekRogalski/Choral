@@ -1,0 +1,96 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+\documentclass{report}
+
+\usepackage[a5paper,margin=1cm]{geometry}
+\usepackage[autocompile]{gregoriotex}
+\usepackage[savepos]{zref}
+\usepackage{libertine}
+\usepackage{multicol}
+
+\pagestyle{empty}
+\columnseprule=0.4pt
+
+\makeatletter  
+\newcounter{score}
+\newcounter{tabstop}[score]
+\newcommand{\grealign}{%
+	\@bsphack%
+	\ifgre@boxing\else%
+		\kern\gre@dimen@begindifference%
+		\stepcounter{tabstop}%
+		\expandafter\zsavepos{stop-\thescore-\thetabstop}%
+		\kern-\gre@dimen@begindifference%
+	\fi%
+	\@esphack%
+}
+
+\newcommand{\setstops}{%
+  \gdef\nstabbing@stops{%
+    \hspace*{-\oddsidemargin}\hspace{-1in}%
+    \hspace*{\zposx{stop-\thescore-1} sp}\=%
+  }%
+  \count@=\@ne
+  \loop\ifnum\count@<\value{tabstop}%
+    \begingroup\edef\x{\endgroup
+      \noexpand\g@addto@macro\noexpand\nstabbing@stops{%
+        \noexpand\hspace{-\noexpand\zposx{stop-\thescore-\the\count@} sp}%
+        \noexpand\hspace{\noexpand\zposx{stop-\thescore-\the\numexpr\count@+1} sp}\noexpand\=%
+      }%
+    }\x
+    \advance\count@\@ne
+  \repeat
+  \nstabbing@stops\kill
+}
+\makeatother
+
+\newenvironment{nstabbing}
+  {\setlength{\topsep}{0pt}%
+   \setlength{\partopsep}{0pt}%
+   \tabbing%
+   \setstops}
+  {\endtabbing\stepcounter{score}}
+
+\gresetinitiallines{0}
+\gresetlastline{justified}
+
+\begin{document}
+
+%\gabcsnippet{(c4) Pá([em1]h)ter([em1]h) de([em1]h) (h) (h) caé([em1]h)<i>lis</i>([em1]hgh) <b>Dé</b>([em1]ji)us,([em1]h.) (;) mi([em1]h)se([em1]h)ré([em1]i)re([em1]g) nó([em1]i)bis.([em1]h.) (::)}%
+\gregorioscore{Litany-I}%
+\begin{nstabbing}
+\>Fí-\>li \>Redémptor \>mún-\>\textit{di} \>\textbf{Dé}-\>us, \>mi-\>se-\>\textit{ré}-\>\textit{re} \>nó-\>bis.\\
+\>Spí-\>ri-\>tus \>Sán-\>\textit{cte} \>\textbf{Dé}-\>us, \>mi-\>se-\>\textit{ré}-\>\textit{re} \>nó-\>bis.\\
+\>Sáncta \>\>Trínitas \>ú-\>\textit{nus} \>\textbf{Dé}-\>us, \>mi-\>se-\>\textit{ré}-\>\textit{re} \>nó-\>bis.\\
+\end{nstabbing}
+
+\gregorioscore{Litany-II}
+\begin{nstabbing}
+\>Sán-\>\>\textit{cte}\>\>\textbf{Jo-}\>seph,\>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Próles Da-\>\>\textit{vid}\>ín-\>\textbf{cly-}\>ta,\>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Lúmen Patri-\>\>\textit{ar}-\>\>\textbf{cha-}\>rum,\>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Déi Genitrí-\>\>\textit{cis} \>\>\textbf{spón}-\>se, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Cústos pudí-\>\>\textit{ce}\>Vír-\>\textbf{gi}-\>nis, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Fílii Déi\>\>\textit{nu}-\>trí-\>\textbf{ti}-\>e, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Chrísti defén-\>\>\textit{sor}\>sé-\>\textbf{du}-\>le, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Almæ Famíli-\>\>\textit{æ}\>\>\textbf{prǽ}-\>ses, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Ióseph\>\>\textit{iu}-\>stís-\>\textbf{si}-\>me, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Ióseph\>\>\textit{ca}-\>stís-\>\textbf{si}-\>me, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Ióseph pru-\>\>\textit{den}-\>tís-\>\textbf{si}-\>me, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Ióseph\>\>\textit{for}-\>tís-\>\textbf{si}-\>me, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Ióseph obedi-\>\>\textit{en}-\>tís-\>\textbf{si}-\>me, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Ióseph fi-\>\>\textit{de}-\>lís-\>\textbf{si}-\>me, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Spéculum pa-\>\>\textit{ti}-\>én-\>\textbf{ti}-\>æ, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Amátor pau-\>\>\textit{per}-\>\>\textbf{tá}-\>tis, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Exémplar\>\>\textit{o}-\>pí-\>\textbf{fi}-\>cum, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Domésticæ vi-\>\>\textit{tæ}\>\>\textbf{dé}-\>cus, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Cú-\>\>\textit{stos}\>vír-\>\textbf{gi}-\>num, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Familiá-\>\>\textit{rum}\>có-\>\textbf{lu}-\>men, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Solátium mi-\>\>\textit{se}-\>\>\textbf{ró}-\>rum, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Spes æ-\>\>\textit{gro}-\>tán-\>\textbf{ti}-\>um, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Patróne mo-\>\>\textit{ri}-\>én-\>\textbf{ti}-\>um, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Tér-\>\>\textit{ror}\>dæ-\>\textbf{mó}-\>num, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\>Protéctor sánctæ\>\>\textit{Ec}-\>clé-\>\textbf{si}-\>æ, \>ó-\>\textit{ra} \>\textit{pro} \>no-\>bis.\\
+\end{nstabbing}
+
+\end{document}

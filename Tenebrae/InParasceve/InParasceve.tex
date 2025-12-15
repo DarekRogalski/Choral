@@ -21,7 +21,7 @@
 %\svgpath{{../include/}}
 \grechangestaffsize{20}%rozmiar wyniku GregorioTEX
 \gresetlastline{ragged}% justowanie do lewej
-\grechangestyle{initial}{\greIni\fontsize{44}{26}\selectfont} 
+\grechangestyle{initial}{\greIniZallmanCaps\fontsize{44}{26}\selectfont}% do wyboru: greIniZallmanCaps, greIniPreciosa, greIniFlorana
 % koniec 
 
 % debugowanie:
@@ -206,6 +206,8 @@
 \hspace{5mm}Pater noster.~\textit{\red{secreto}}
 %% --- Lectio prima ---
 \subsekcja{Lectio 1}
+\vspace{-25pt}
+\rubryka{De Epístola beáti Pauli Apóstoli ad Hebrǽos}
 %\columnratio{0.5}
 %\setlength{\columnseprule}{0.4pt}
 %\setlength{\columnsep}{.02\textwidth}
@@ -385,6 +387,7 @@
 %% -------- 6. Alieni insurrexerunt 4.alt A -----------
 \gresetinitiallines{1}\greannotation{6. Ant.}\greannotation{4 A*}\gabcsnippet{(c3) A(e)li(f)é(h_i)ni(i'_[oh:h]) <c><v>*</v></c>(,) in(i)sur(h')re(i)xé(j)runt(ih~) in(i.) me,(i.) (;) et(i) for(f')tes(i) quae(h')si(g)é(f_e)runt(f_e) (,) á(d_e)ni(f')mam(h) me(f.)am.(f.) (::)}\minispace
 \tlumaczR{Obcy~\red{*} powstali przeciwko mnie i mocarze szukają duszy mojej.}\minispace
+%\fi% ---------------------------------------------- blok wyłączony gdy mydebug = 1 ---------------------------------------------------------------------- ↑
 \noindent\subsekcja{Psalm 53}
 \vspace{-16pt}
 \gresetinitiallines{0}\gabcsnippet{(c3)<c><v>\footnotesize{1. } </v></c> De(i)us,(hi) in(i) nó(i)mi(i)ne(i) tu(i)o(i) <i><ul>sal</i></ul>(h)<i><ul>vum</i></ul>(i) <b>me</b>(j ir) fac:(i.) <c><v>*</v></c>(:) et(i) in(i) vir(i)tú(i)te(i) tu(i)<i><ul>a</i></ul>(h) <i><ul>jú</i></ul>(i)<i><ul>di</i></ul>(j)<b>ca</b>(h fr) me.(f.) (::Z) <c><i>Flex:</i></c> () ad(i)vér(i)sum(h) me, <c><v>†</v></c>(h. )  (::)}
@@ -415,13 +418,13 @@
 %\setlength{\columnseprule}{0.4pt}
 %\setlength{\columnsep}{.02\textwidth}
 \BeginParallel
-\latN{\inicjal{P}{rotexísti} me, Deus, a convéntu malignántium, a multitúdine operántium iniquitátem. Iam ipsum caput nostrum intueámur. Multi Mártyres tália passi}
+\latN{\inicjal{P}{rotexísti} me, Deus, a convéntu malignántium, a multitúdine operántium iniquitátem. Iam ipsum caput nostrum~ intueámur. ~Multi ~Mártyres ~tália ~passi sunt,}
 %émur, quod illi expérti sunt. Protéctus est a multitúdine malignántium, protegénte se Deo, protegénte carnem suam ipso Fílio, et hómine, quem gerébat: quia fílius hóminis est, et Fílius Dei est. Fílius Dei, propter formam Dei: fílius hóminis, propter formam servi, habens in potestáte pónere ánimam suam, et recípere eam. Quid ei potuérunt fácere inimíci? Occidérunt corpus, ánimam non occidérunt. Inténdite. Parum ergo erat, Dóminum hortári Mártyres verbo, nisi firmáret exémplo.}
-\polPs{Obroniłeś mnie, Boże, od spisku złośliwych, od mnóstwa czyniących nieprawość. Tu wejrzyjmy na głowę naszą — Chrystusa. Wielu męczenników podobnie umęczonymi zostało: lecz}
+\polPs{Obroniłeś mnie, Boże, od spisku złośliwych, od mnóstwa czyniących nieprawość. Tu wejrzyjmy na głowę naszą — Chrystusa. Wielu męczenników ~podobnie \hfill umęczo-}
 %stało: lecz żaden z nich nie zajaśniał tak, jak głowa męczenników patrząc na Jego cierpienia lepiej rozumiemy, co oni przenieśli. Chrystus obroniony był od mnóstwa ludzi złych; bronił Go Bóg; bronił ciała swego Syn Boży, który się stał człowiekiem, gdyż jest i Synem człowieczym i Synem Bożym. Synem Bożym z powodu natury Boskiej; synem człowieczym z powodu natury sługi, którą wziął na siebie, mając moc wydać życie swoje lub zachować je. Cóż mogli mu uczynić nieprzyjaciele? Zabili ciało, ale duszy zabić nie mogli. Rozważcie. Mało byłoby Panu zagrzewać męczenników słowem, nie dając im przykładu.}
 \pagebreak
-\latN{sunt, sed nihil sic elúcet, quómodo caput Mártyrum: ibi mélius intuémur, quod illi expérti sunt. Protéctus est a multitúdine malignántium, protegénte se Deo, protegénte carnem suam ipso Fílio, et hómine, quem gerébat: quia fílius hóminis est, et Fílius Dei est. Fílius Dei, propter formam Dei: fílius hóminis, propter formam servi, habens in potestáte pónere ánimam suam, et recípere eam. Quid ei potuérunt fácere inimíci? Occidérunt corpus, ánimam non occidérunt. Inténdite. Parum ergo erat, Dóminum hortári Mártyres verbo, nisi firmáret exémplo.}
-\polPs{żaden z nich nie zajaśniał tak, jak głowa męczenników patrząc na Jego cierpienia lepiej rozumiemy, co oni przenieśli. Chrystus obroniony był od mnóstwa ludzi złych; bronił Go Bóg; bronił ciała swego Syn Boży, który się stał człowiekiem, gdyż jest i Synem człowieczym i Synem Bożym. Synem Bożym z powodu natury Boskiej; synem człowieczym z powodu natury sługi, którą wziął na siebie, mając moc wydać życie swoje lub zachować je. Cóż mogli mu uczynić nieprzyjaciele? Zabili ciało, ale duszy zabić nie mogli. Rozważcie. Mało byłoby Panu zagrzewać męczenników słowem, nie dając im przykładu.}
+\latN{sed nihil sic elúcet, quómodo caput Mártyrum: ibi mélius intuémur, quod illi expérti sunt. Protéctus est a multitúdine malignántium, protegénte se Deo, protegénte carnem suam ipso Fílio, et hómine, quem gerébat: quia fílius hóminis est, et Fílius Dei est. Fílius Dei, propter formam Dei: fílius hóminis, propter formam servi, habens in potestáte pónere ánimam suam, et recípere eam. Quid ei potuérunt fácere inimíci? Occidérunt corpus, ánimam non occidérunt. Inténdite. Parum ergo erat, Dóminum hortári Mártyres verbo, nisi firmáret exémplo.}
+\polPs{nymi zostało: lecz żaden z nich nie zajaśniał tak, jak głowa męczenników patrząc na Jego cierpienia lepiej rozumiemy, co oni przenieśli. Chrystus obroniony był od mnóstwa ludzi złych; bronił Go Bóg; bronił ciała swego Syn Boży, który się stał człowiekiem, gdyż jest i Synem człowieczym i Synem Bożym. Synem Bożym z powodu natury Boskiej; synem człowieczym z powodu natury sługi, którą wziął na siebie, mając moc wydać życie swoje lub zachować je. Cóż mogli mu uczynić nieprzyjaciele? Zabili ciało, ale duszy zabić nie mogli. Rozważcie. Mało byłoby Panu zagrzewać męczenników słowem, nie dając im przykładu.}
 \EndParallel
 %% -----------------------------------------
 %% --- Resp. 4. Tamquam ad latronem ------
@@ -438,16 +441,17 @@
 \paragraphspace
 \tlumacz{\red{\Rbar.}~Jako na zbójcę wyszliście z mieczami i kijmi pojmać mię: \red{*}~Na każdy dzień byłem w kościele ucząc, a nie pojmaliście mię: a oto ubiczowawszy mię, wywiedliście na ukrzyżowanie. \red{\Vbar.}~A gdy oni podnieśli ręce na Jezusa i pojmali go, rzekł im. \red{\Rbar.}~Na każdy dzień ...}
 %% --- Lectio quinta ---
+\pagebreak
 \subsekcja{Lectio 5}
 \BeginParallel
 \latN{\inicjal{N}{ostis} qui convéntus erat malignántium Judæórum, et quæ multitúdo erat operántium iniquitátem. Quam iniquitátem? Quia voluérunt occídere Dóminum Jesum Christum. Tanta ópera bona, inquit, osténdi vobis: propter quod horum me vultis occídere? Pértulit omnes infírmos eórum, curávit omnes lánguidos eórum, prædicávit regnum cælórum, non tácuit vítia eórum, ut ipsa pótius eis displicérent, non médicus, a quo sanabántur. His ómnibus curatiónibus ejus ingráti, tamquam multa febre phrenétici, insaniéntes in médicum, qui vénerat curáre eos, excogitavérunt consílium perdéndi eum: tamquam ibi voléntes probáre, utrum vere homo sit, qui mori possit, an áliquid super hómines sit, et mori se non permíttat. Verbum ipsórum agnóscimus in Sapiéntia Salomónis: Morte turpíssima, ínquiunt, condemnémus eum. Interrogémus eum: erit enim respéctus in sermónibus illíus. Si enim vere Fílius Dei est, líberet eum.}
 \polPs{Wiecie, że Zgromadzenie uczynili Żydowie przewrotni i wiecie jak wielką była liczba czyniących nieprawość? Tę iż chcieli zabić Pana Jezusa Chrystusa. Tyle dobrych dzieł uczyniłem dla was rzecze im: dla któregoż to chcecie mnie zabić? Przyjmował wszystkich ułomnych ich, uzdrawiał wszystkich chorych, opowiadał królestwo niebieskie, ale nie zamilczał występków ich. Nie podobało im się to lekarstwo, które im podawał i nie chcieli go mieć za lekarza, któryby ich uzdrowił. Nie pamiętni wszystkich dobrodziejstw Jego, podobni do szaleńców w gorączce, których drażni obecność lekarza, przychodzącego uzdrowić ich; uknuli spisek, aby Go zgubić. Zrobili to, jakby chcąc przekonać się, kim On był naprawdę: człowiekiem podległym śmierci, czy człowiekiem wyższym ponad resztę ludzi, nad którym śmierć władzy nie ma. W księdze Mądrości czytamy przepowiednię słów, które wtedy wyrzekli: Skażmy go, aby umarł śmiercią najhaniebniejszą, pytajmy go, abyśmy mogli mieć wzgląd na słowa Jego. Jeśli prawdziwie jest Synem Bożym, Bóg wybawi Go.}
 \EndParallel
+\vspace{15pt}
 %% ----------------------------
 %% --- Resp. 5. Tenebrae ------
 %% ----------------------------
 \subsekcja{Responsorium 5}
-\vspace{-10pt}
 %\greannotation{} 
 \grecommentary[1pt]{\Vbar.\ Matth.27,45.46 \Vbar.\ Luc.23,46}
 \greannotation{Resp. 5} 
@@ -462,6 +466,7 @@
 \latN{\inicjal{E}{xacuérunt} tamquam gládium linguas suas. Non dicant Judǽi: Non occídimus Christum. Etenim proptérea eum dedérunt júdici Piláto, ut quasi ipsi a morte ejus videréntur immúnes. Nam cum dixísset eis Pilátus: Vos eum occídite: respondérunt, Nobis non licet occídere quemquam. Iniquitátem facínoris sui in júdicem hóminem refúndere volébant: sed numquid Deum júdicem fallébant? Quod fecit Pilátus, in eo ipso quod fecit, aliquántum párticeps fuit: sed in comparatióne illórum multo ipse innocéntior. Institit enim quantum pótuit, ut illum ex eórum mánibus liberáret: nam proptérea flagellátum prodúxit ad eos. Non persequéndo Dóminum flagellávit, sed eórum furóri satisfácere volens: ut vel sic jam mitéscerent, et desínerent velle occídere, cum flagellátum vidérent. Fecit et hoc. At ubi perseveravérunt, nostis illum lavísse manus, et dixísse, quod ipse non fecísset, mundum se esse a morte illíus. Fecit tamen. Sed si reus, quia fecit vel invítus: illi innocéntes, qui coëgérunt ut fáceret? Nullo modo. Sed ille dixit in eum senténtiam, et jussit eum crucifígi, et quasi ipse occídit: et vos, o Judǽi, occidístis. Unde occidístis? Gládio linguæ: acuístis enim linguas vestras. Et quando percussístis, nisi quando clamástis: Crucifíge, crucifíge?}
 \polPs{Wyostrzyli języki swoje jak miecz. Niech nie mówią Żydzi: Nie myśmy zabili Chrystusa. Gdyż jeśli go zaprowadzili przed trybunał Piłata, to na to, ażeby wydać się niejako niewinnymi Jego śmierci. I w istocie, gdy Piłat im powiedział: Sami skażcie go, na śmierć, odpowiedzieli: Niewolno nam nikogo ua śmierć skazywać. Chcieli więc, by cała odpowiedzialność za zbrodnię spadła na sędziego człowieka; lecz zaliż mogli oszukać Sędziego Boga? W tem, co uczynił Piłat, stał się po części uczestnikiem zbrodni, lecz w porówaniu z nimi, nierównie mniej jest winnym: gdyż nalegał ile tylko mógł, aby go z rąk ich wyrwać: i przeto okrutnie ubiczowanego przed nimi stawił. Nie z chęci prześladowania ubiczował Pana, lecz zajadłości ich chciał dogodzić, aby się tem przynajmniej ułagodzili i zaniechali zamiaru zabicia go, gdy tak dalece ubiczowanego ujrzą. Uczynił i to. Gdy zaś uporczywie trwali w złości, wiecie, iż umył ręce swoje i oświadczył się z tem, że nie on to popełnił; że nie winien śmierci jego. Jednakże uczynił. Jeżeli więc on jest winien, chociaż niechętnie zdał go na śmierć, mająż być niewinnymi, którzy go zmusili, aby to uczynił? Żadną miarą. Lecz on wydał na niego wyrok i rozkazał, aby go ukrzyżowano, a już tem samem jakby go zabił; z tem wszystkiem wy, o Żydzi, zabiliście. Jakimże sposobem zabiliście? Oto mieczem języka, bo zaostrzyliście języki wasze. Kiedyż mianowicie zadaliście cios śmiertelny, jeśli nie wtedy, gdyście krzyczeli: Ukrzyżuj, ukrzyżuj.}
 \EndParallel
+\pagebreak
 %% ----------------------------------
 %% --- Resp. 6. Animam meam ------
 %% ----------------------------------
@@ -476,6 +481,7 @@
 \linespace
 \tlumacz{\red{\Rbar.}~Ulubioną duszę moją wydałem w ręce grzeszników i stało mi się dziedzictwo moje jako lew na puszczy: puścił przeciwko mnie głos przeciwnik, mówiąc: Przyjdźcie, zbierzcie się wszyscy, śpieszcie się na pożarcie. Postawili mię samotnego na pustyni i płakała nademną wszystka ziemia. \red{*}~Albowiem nie jest nalezion, któryby mię poznał i uczynił dobrze. \red{\Vbar.}~Powstali na mnie mężowie bez miłosierdzia i nie przepuścili duszy mojej. \red{\Rbar.}~Albowiem nie jest nalezion, któryby mię poznał i uczynił dobrze. \red{\Rbar.}~Ulubioną duszę ...}\sectionspace
 \grechangedim{spacelinestext}{3.48471ex}{scalable} 	% default size
+\pagebreak
 \fi% ---------------------------------------------- blok wyłączony gdy mydebug = 1 ---------------------------------------------------------------------- ↑
 \sekcja{In III. Nocturno}{}
 \vspace{-44pt}
@@ -662,12 +668,19 @@
 \hspace{5mm}Pater noster.~\textit{\red{secreto}}
 %% --- Lectio VII ---
 \subsekcja{Lectio 7}
-\gresetinitiallines{1}\greannotation{Lectio 7}\grecommentary[2pt]{De Epístola beáti Pauli Apóstoli ad Hebrǽos}\gabcsnippet{(c4)}\paragraphspace%
-\tlumacz{\red{11.}~Spieszmy się tedy, abyśmy weszli do onego odpoczynienia, iżby kto w tenże przykład niedowiarstwa nie wpadł.
-\red{12.}~Bo żywa jest mowa Boża i skuteczna, i przeraźliwsza niżeli wszelaki miecz po obu stron ostry i przenikająca aż do rozdzielenia dusze i ducha, stawów też i szpików, i rozeznawająca myśli i przedsięwzięcia serdeczne.
-\red{13.}~A niemasz żadnego stworzenia niewidzialnego przed oblicznością jego; lecz wszystkie rzeczy obnażone są i odkryte oczom jego, do którego nam mowa.
-\red{14.}~Mając tedy Najwyższego kapłana wielkiego, który przeszedł niebiosa, Jezusa, Syna Bożego, trzymajmy się wyznania.
-\red{15.}~Albowiem nie mamy Najwyższego kapłana, któryby się nie mógł ulitować nad krewkościami naszemi; lecz kuszonego we wszystkiem na podobieństwo oprócz grzechu.}
+\columnratio{0.72}
+\BeginParallel
+\latN{De Epístola beáti Pauli Apóstoli ad Hebrǽos\\ \mred{4,11} Festinémus íngredi in illam réquiem: ut ne in idípsum quis íncidat incredulitátis exémplum.
+\mred{4,12} Vivus est enim sermo Dei, et éfficax et penetrabílior omni gládio ancípiti: et pertíngens usque ad divisiónem ánimæ ac spíritus, compágum quoque ac medullárum, et discrétor cogitatiónum et intentiónum cordis.
+\mred{4,13} Et non est ulla creatúra invisíbilis in conspéctu ejus: ómnia autem nuda et apérta sunt óculis ejus, ad quem nobis sermo.
+\mred{4,14} Habéntes ergo Pontíficem magnum, qui penetrávit cælos, Jesum Fílium Dei: teneámus confessiónem.
+\mred{4,15} Non enim habémus Pontíficem, qui non possit cómpati infirmitátibus nostris: tentátum autem per ómnia pro similitúdine absque peccáto.}
+\polPs{11.~Spieszmy się tedy, abyśmy weszli do onego odpoczynienia, iżby kto w tenże przykład niedowiarstwa nie wpadł.
+12.~Bo żywa jest mowa Boża i skuteczna, i przeraźliwsza niżeli wszelaki miecz po obu stron ostry i przenikająca aż do rozdzielenia dusze i ducha, stawów też i szpików, i rozeznawająca myśli i przedsięwzięcia serdeczne.
+13.~A niemasz żadnego stworzenia niewidzialnego przed oblicznością jego; lecz wszystkie rzeczy obnażone są i odkryte oczom jego, do którego nam mowa.
+14.~Mając tedy Najwyższego kapłana wielkiego, który przeszedł niebiosa, Jezusa, Syna Bożego, trzymajmy się wyznania.
+15.~Albowiem nie mamy Najwyższego kapłana, któryby się nie mógł ulitować nad krewkościami naszemi; lecz kuszonego we wszystkiem na podobieństwo oprócz grzechu.}
+\EndParallel
 %% ----------------------------
 %% --- Resp. 7. Tenebrae ------
 %% ----------------------------
