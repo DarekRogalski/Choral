@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2025.4.15)  2 DEC 2025 17:08
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2025.4.15)  29 DEC 2025 12:31
  system commands enabled.
  file:line:error style messages enabled.
 **kompleta.tex
@@ -474,12 +474,12 @@ Module gregoriotex Info: capturing header annotation using greannotation, string
 =true, name=nil on input line 53
 Module gregoriotex Info: capturing header commentary using grecommentary, string
 =true, name=nil on input line 54
-Module gregoriotex Info: greciliae-hollow : gre@font@variant@B : rescaling greci
-liae-hollow to 2400000.0 on input line 73
 Module gregoriotex Info: greciliae : gre@font@variant@A : rescaling greciliae to
  2400000.0 on input line 73
 Module gregoriotex Info: greciliae-hole : gre@font@variant@C : rescaling grecili
 ae-hole to 2400000.0 on input line 73
+Module gregoriotex Info: greciliae-hollow : gre@font@variant@B : rescaling greci
+liae-hollow to 2400000.0 on input line 73
 \c@score=\count332
 \c@tabstop=\count333
 
@@ -1617,11 +1617,11 @@ Package fontspec Info: Font family 'Florana(0)' created for font 'Florana'
 File: gloss-latin.ldf polyglossia: module for Latin
 Module polyglossia Info: Language data for latin
 (polyglossia)            loader	loadhyph-la.tex
-(polyglossia)            lefthyphenmin	2
+(polyglossia)            righthyphenmin	2
 (polyglossia)            hyphenation	
-(polyglossia)            synonyms	
 (polyglossia)            patterns	hyph-la.pat.txt
-(polyglossia)            righthyphenmin	2 on input line 16
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            synonyms	 on input line 16
 Module polyglossia Info: Language latin was not yet loaded; created with id 2 on
  input line 16
 Lua-only attribute polyglossia_punct = 12
@@ -1649,11 +1649,11 @@ Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
 
 Module polyglossia Info: Language data for liturgicallatin
 (polyglossia)            loader	loadhyph-la-x-liturgic.tex
-(polyglossia)            lefthyphenmin	2
+(polyglossia)            righthyphenmin	2
 (polyglossia)            hyphenation	
-(polyglossia)            synonyms	
 (polyglossia)            patterns	hyph-la-x-liturgic.pat.txt
-(polyglossia)            righthyphenmin	2 on input line 186
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            synonyms	 on input line 186
 Module polyglossia Info: Language liturgicallatin was not yet loaded; created wi
 th id 3 on input line 186
 
@@ -1682,11 +1682,11 @@ Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
 File: gloss-polish.ldf polyglossia: module for Polish
 Module polyglossia Info: Language data for polish
 (polyglossia)            loader	loadhyph-pl.tex
-(polyglossia)            lefthyphenmin	2
+(polyglossia)            righthyphenmin	2
 (polyglossia)            hyphenation	hyph-pl.hyp.txt
-(polyglossia)            synonyms	
 (polyglossia)            patterns	hyph-pl.pat.txt
-(polyglossia)            righthyphenmin	2 on input line 14
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            synonyms	 on input line 14
 Module polyglossia Info: Language polish was not yet loaded; created with id 4 o
 n input line 14
 
@@ -2040,12 +2040,12 @@ Package: paracol 2018/12/31 v1.35
 \pcol@everyvbox=\toks46
 )
 (../include/conparlua.tex))
-Module gregoriotex Info: greciliae-hollow : gre@font@variant@B : rescaling greci
-liae-hollow to 2200000.0 on input line 22
 Module gregoriotex Info: greciliae : gre@font@variant@A : rescaling greciliae to
  2200000.0 on input line 22
 Module gregoriotex Info: greciliae-hole : gre@font@variant@C : rescaling grecili
 ae-hole to 2200000.0 on input line 22
+Module gregoriotex Info: greciliae-hollow : gre@font@variant@B : rescaling greci
+liae-hollow to 2200000.0 on input line 22
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'polyglossia' package.
  (./kompleta.aux)
@@ -3927,7 +3927,7 @@ Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
 (polyglossia)             on line 221.
 
-Module gregoriotex Info: Processing gabc snippet... on input line 225
+Module gregoriotex Info: Processing gabc snippet... on input line 224
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
 Inserting `gregoriotex.post_linebreak' in `post_linebreak_filter'.
 Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
@@ -3936,37 +3936,46 @@ Inserting `gregoriotex.disable_hyphenation' in `hyphenate'.
 Inserting `allow hyphen breaks' in `hyphenate'.
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.
-LaTeX Info: Redefining \rmfamily on input line 227.
-LaTeX Info: Redefining \sffamily on input line 227.
-LaTeX Info: Redefining \ttfamily on input line 227.
+LaTeX Info: Redefining \rmfamily on input line 226.
+LaTeX Info: Redefining \sffamily on input line 226.
+LaTeX Info: Redefining \ttfamily on input line 226.
+luaotfload | aux : font no 97 (nil) defines no feature for script latn with lang
+uage plk
+set lang polish, 4
+LaTeX Info: Redefining \rmfamily on input line 226.
+LaTeX Info: Redefining \sffamily on input line 226.
+LaTeX Info: Redefining \ttfamily on input line 226.
+LaTeX Info: Redefining \rmfamily on input line 228.
+LaTeX Info: Redefining \sffamily on input line 228.
+LaTeX Info: Redefining \ttfamily on input line 228.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 227.
+(polyglossia)             line 228.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 227.
+(polyglossia)             on line 228.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 227.
+(polyglossia)             line 228.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 227.
+(polyglossia)             on line 228.
 
-LaTeX Info: Redefining \rmfamily on input line 227.
-LaTeX Info: Redefining \sffamily on input line 227.
-LaTeX Info: Redefining \ttfamily on input line 227.
+LaTeX Info: Redefining \rmfamily on input line 228.
+LaTeX Info: Redefining \sffamily on input line 228.
+LaTeX Info: Redefining \ttfamily on input line 228.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 227.
+(polyglossia)             line 228.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 227.
+(polyglossia)             on line 228.
 
 Module gregoriotex Info: Processing gabc snippet... on input line 229
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
@@ -3975,7 +3984,7 @@ Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
 Removing  `allow hyphen breaks' from `hyphenate'.
 Inserting `gregoriotex.disable_hyphenation' in `hyphenate'.
 Inserting `allow hyphen breaks' in `hyphenate'.
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4366) has occurred while \output is active []
 
  [8]
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
@@ -4069,7 +4078,7 @@ Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
 Removing  `allow hyphen breaks' from `hyphenate'.
 Inserting `gregoriotex.disable_hyphenation' in `hyphenate'.
 Inserting `allow hyphen breaks' in `hyphenate'.
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7151) has occurred while \output is active []
 
  [9]
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
@@ -5789,150 +5798,136 @@ Underfull \vbox (badness 5490) has occurred while \output is active []
 LaTeX Info: Redefining \rmfamily on input line 383.
 LaTeX Info: Redefining \sffamily on input line 383.
 LaTeX Info: Redefining \ttfamily on input line 383.
-LaTeX Info: Redefining \rmfamily on input line 384.
-LaTeX Info: Redefining \sffamily on input line 384.
-LaTeX Info: Redefining \ttfamily on input line 384.
-luaotfload | aux : font no 97 (nil) defines no feature for script latn with lang
-uage plk
-set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 384.
-LaTeX Info: Redefining \sffamily on input line 384.
-LaTeX Info: Redefining \ttfamily on input line 384.
-LaTeX Info: Redefining \rmfamily on input line 385.
-LaTeX Info: Redefining \sffamily on input line 385.
-LaTeX Info: Redefining \ttfamily on input line 385.
-luaotfload | aux : font no 97 (nil) defines no feature for script latn with lang
-uage plk
-set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 385.
-LaTeX Info: Redefining \sffamily on input line 385.
-LaTeX Info: Redefining \ttfamily on input line 385.
-LaTeX Info: Redefining \rmfamily on input line 388.
-LaTeX Info: Redefining \sffamily on input line 388.
-LaTeX Info: Redefining \ttfamily on input line 388.
-\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 388.
-LaTeX Info: Redefining \sffamily on input line 388.
-LaTeX Info: Redefining \ttfamily on input line 388.
 
-Underfull \hbox (badness 6220) in paragraph at lines 388--388
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+LaTeX Info: Redefining \rmfamily on input line 386.
+LaTeX Info: Redefining \sffamily on input line 386.
+LaTeX Info: Redefining \ttfamily on input line 386.
+\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
+LaTeX Info: Redefining \rmfamily on input line 386.
+LaTeX Info: Redefining \sffamily on input line 386.
+LaTeX Info: Redefining \ttfamily on input line 386.
+
+Underfull \hbox (badness 6220) in paragraph at lines 386--386
 [][][]\TU/LinLibertine_R.otf(0)/m/n/17.28 V. Di-gná-re me lau-dá-re te, Vir-go
 
  []
 
-LaTeX Info: Redefining \rmfamily on input line 388.
-LaTeX Info: Redefining \sffamily on input line 388.
-LaTeX Info: Redefining \ttfamily on input line 388.
+LaTeX Info: Redefining \rmfamily on input line 386.
+LaTeX Info: Redefining \sffamily on input line 386.
+LaTeX Info: Redefining \ttfamily on input line 386.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 388.
-LaTeX Info: Redefining \sffamily on input line 388.
-LaTeX Info: Redefining \ttfamily on input line 388.
+LaTeX Info: Redefining \rmfamily on input line 386.
+LaTeX Info: Redefining \sffamily on input line 386.
+LaTeX Info: Redefining \ttfamily on input line 386.
 
-Underfull \hbox (badness 3029) in paragraph at lines 388--388
+Underfull \hbox (badness 3029) in paragraph at lines 386--386
 [][][]\TU/LinLibertine_R.otf(0)/m/it/17.28 V. Do-zwól mi chwa-lić Cię, o Pa-n
 i
  []
 
-LaTeX Info: Redefining \rmfamily on input line 389.
-LaTeX Info: Redefining \sffamily on input line 389.
-LaTeX Info: Redefining \ttfamily on input line 389.
+LaTeX Info: Redefining \rmfamily on input line 387.
+LaTeX Info: Redefining \sffamily on input line 387.
+LaTeX Info: Redefining \ttfamily on input line 387.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 389.
-LaTeX Info: Redefining \sffamily on input line 389.
-LaTeX Info: Redefining \ttfamily on input line 389.
+LaTeX Info: Redefining \rmfamily on input line 387.
+LaTeX Info: Redefining \sffamily on input line 387.
+LaTeX Info: Redefining \ttfamily on input line 387.
 
-Underfull \hbox (badness 1383) in paragraph at lines 389--389
+Underfull \hbox (badness 1383) in paragraph at lines 387--387
 [][][]\TU/LinLibertine_R.otf(0)/m/n/17.28 R. Da mi-hi vir-tú-tem con-tra hos-te
 s
  []
 
-LaTeX Info: Redefining \rmfamily on input line 389.
-LaTeX Info: Redefining \sffamily on input line 389.
-LaTeX Info: Redefining \ttfamily on input line 389.
+LaTeX Info: Redefining \rmfamily on input line 387.
+LaTeX Info: Redefining \sffamily on input line 387.
+LaTeX Info: Redefining \ttfamily on input line 387.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 389.
-LaTeX Info: Redefining \sffamily on input line 389.
-LaTeX Info: Redefining \ttfamily on input line 389.
-LaTeX Info: Redefining \rmfamily on input line 390.
-LaTeX Info: Redefining \sffamily on input line 390.
-LaTeX Info: Redefining \ttfamily on input line 390.
+LaTeX Info: Redefining \rmfamily on input line 387.
+LaTeX Info: Redefining \sffamily on input line 387.
+LaTeX Info: Redefining \ttfamily on input line 387.
+LaTeX Info: Redefining \rmfamily on input line 388.
+LaTeX Info: Redefining \sffamily on input line 388.
+LaTeX Info: Redefining \ttfamily on input line 388.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 390.
-LaTeX Info: Redefining \sffamily on input line 390.
-LaTeX Info: Redefining \ttfamily on input line 390.
-LaTeX Info: Redefining \rmfamily on input line 390.
-LaTeX Info: Redefining \sffamily on input line 390.
-LaTeX Info: Redefining \ttfamily on input line 390.
+LaTeX Info: Redefining \rmfamily on input line 388.
+LaTeX Info: Redefining \sffamily on input line 388.
+LaTeX Info: Redefining \ttfamily on input line 388.
+LaTeX Info: Redefining \rmfamily on input line 388.
+LaTeX Info: Redefining \sffamily on input line 388.
+LaTeX Info: Redefining \ttfamily on input line 388.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 390.
-LaTeX Info: Redefining \sffamily on input line 390.
-LaTeX Info: Redefining \ttfamily on input line 390.
-LaTeX Info: Redefining \rmfamily on input line 391.
-LaTeX Info: Redefining \sffamily on input line 391.
-LaTeX Info: Redefining \ttfamily on input line 391.
+LaTeX Info: Redefining \rmfamily on input line 388.
+LaTeX Info: Redefining \sffamily on input line 388.
+LaTeX Info: Redefining \ttfamily on input line 388.
+LaTeX Info: Redefining \rmfamily on input line 389.
+LaTeX Info: Redefining \sffamily on input line 389.
+LaTeX Info: Redefining \ttfamily on input line 389.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 391.
-LaTeX Info: Redefining \sffamily on input line 391.
-LaTeX Info: Redefining \ttfamily on input line 391.
+LaTeX Info: Redefining \rmfamily on input line 389.
+LaTeX Info: Redefining \sffamily on input line 389.
+LaTeX Info: Redefining \ttfamily on input line 389.
 
-Underfull \hbox (badness 1668) in paragraph at lines 391--391
+Underfull \hbox (badness 1668) in paragraph at lines 389--389
 \TU/LinLibertine_R.otf(0)/m/n/17.28 in-i-qui-tá-ti-bus re-sur-gá-mus. Per e
 úm-
  []
 
 
-Underfull \hbox (badness 3179) in paragraph at lines 391--391
+Underfull \hbox (badness 3179) in paragraph at lines 389--389
 \TU/LinLibertine_R.otf(0)/m/n/17.28 dem Chris-tum Dó-mi-num nos-trum.
  []
 
-LaTeX Info: Redefining \rmfamily on input line 391.
-LaTeX Info: Redefining \sffamily on input line 391.
-LaTeX Info: Redefining \ttfamily on input line 391.
+LaTeX Info: Redefining \rmfamily on input line 389.
+LaTeX Info: Redefining \sffamily on input line 389.
+LaTeX Info: Redefining \ttfamily on input line 389.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
+LaTeX Info: Redefining \rmfamily on input line 389.
+LaTeX Info: Redefining \sffamily on input line 389.
+LaTeX Info: Redefining \ttfamily on input line 389.
 LaTeX Info: Redefining \rmfamily on input line 391.
 LaTeX Info: Redefining \sffamily on input line 391.
 LaTeX Info: Redefining \ttfamily on input line 391.
-LaTeX Info: Redefining \rmfamily on input line 393.
-LaTeX Info: Redefining \sffamily on input line 393.
-LaTeX Info: Redefining \ttfamily on input line 393.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 393.
+(polyglossia)             line 391.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 393.
+(polyglossia)             on line 391.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 393.
+(polyglossia)             line 391.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 393.
+(polyglossia)             on line 391.
 
-LaTeX Info: Redefining \rmfamily on input line 393.
-LaTeX Info: Redefining \sffamily on input line 393.
-LaTeX Info: Redefining \ttfamily on input line 393.
+LaTeX Info: Redefining \rmfamily on input line 391.
+LaTeX Info: Redefining \sffamily on input line 391.
+LaTeX Info: Redefining \ttfamily on input line 391.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 393.
+(polyglossia)             line 391.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 393.
+(polyglossia)             on line 391.
 
-Module gregoriotex Info: Processing gabc snippet... on input line 394
+Module gregoriotex Info: Processing gabc snippet... on input line 392
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
 Inserting `gregoriotex.post_linebreak' in `post_linebreak_filter'.
 Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
@@ -5941,37 +5936,69 @@ Inserting `gregoriotex.disable_hyphenation' in `hyphenate'.
 Inserting `allow hyphen breaks' in `hyphenate'.
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.
-LaTeX Info: Redefining \rmfamily on input line 396.
-LaTeX Info: Redefining \sffamily on input line 396.
-LaTeX Info: Redefining \ttfamily on input line 396.
+LaTeX Info: Redefining \rmfamily on input line 394.
+LaTeX Info: Redefining \sffamily on input line 394.
+LaTeX Info: Redefining \ttfamily on input line 394.
 luaotfload | aux : font no 97 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 396.
-LaTeX Info: Redefining \sffamily on input line 396.
-LaTeX Info: Redefining \ttfamily on input line 396.
-LaTeX Info: Redefining \rmfamily on input line 397.
-LaTeX Info: Redefining \sffamily on input line 397.
-LaTeX Info: Redefining \ttfamily on input line 397.
+LaTeX Info: Redefining \rmfamily on input line 394.
+LaTeX Info: Redefining \sffamily on input line 394.
+LaTeX Info: Redefining \ttfamily on input line 394.
+LaTeX Info: Redefining \rmfamily on input line 395.
+LaTeX Info: Redefining \sffamily on input line 395.
+LaTeX Info: Redefining \ttfamily on input line 395.
 luaotfload | aux : font no 97 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 397.
-LaTeX Info: Redefining \sffamily on input line 397.
-LaTeX Info: Redefining \ttfamily on input line 397.
-LaTeX Info: Redefining \rmfamily on input line 400.
-LaTeX Info: Redefining \sffamily on input line 400.
-LaTeX Info: Redefining \ttfamily on input line 400.
+LaTeX Info: Redefining \rmfamily on input line 395.
+LaTeX Info: Redefining \sffamily on input line 395.
+LaTeX Info: Redefining \ttfamily on input line 395.
+LaTeX Info: Redefining \rmfamily on input line 398.
+LaTeX Info: Redefining \sffamily on input line 398.
+LaTeX Info: Redefining \ttfamily on input line 398.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 400.
-LaTeX Info: Redefining \sffamily on input line 400.
-LaTeX Info: Redefining \ttfamily on input line 400.
+LaTeX Info: Redefining \rmfamily on input line 398.
+LaTeX Info: Redefining \sffamily on input line 398.
+LaTeX Info: Redefining \ttfamily on input line 398.
 
-Underfull \hbox (badness 4634) in paragraph at lines 400--400
+Underfull \hbox (badness 4634) in paragraph at lines 398--398
 [][][]\TU/LinLibertine_R.otf(0)/m/n/17.28 V. Gau-de et læ-tá-re, Vir-go Ma-r
 ía,
  []
 
+LaTeX Info: Redefining \rmfamily on input line 398.
+LaTeX Info: Redefining \sffamily on input line 398.
+LaTeX Info: Redefining \ttfamily on input line 398.
+luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
+uage plk
+set lang polish, 4
+LaTeX Info: Redefining \rmfamily on input line 398.
+LaTeX Info: Redefining \sffamily on input line 398.
+LaTeX Info: Redefining \ttfamily on input line 398.
+LaTeX Info: Redefining \rmfamily on input line 399.
+LaTeX Info: Redefining \sffamily on input line 399.
+LaTeX Info: Redefining \ttfamily on input line 399.
+\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
+LaTeX Info: Redefining \rmfamily on input line 399.
+LaTeX Info: Redefining \sffamily on input line 399.
+LaTeX Info: Redefining \ttfamily on input line 399.
+LaTeX Info: Redefining \rmfamily on input line 399.
+LaTeX Info: Redefining \sffamily on input line 399.
+LaTeX Info: Redefining \ttfamily on input line 399.
+luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
+uage plk
+set lang polish, 4
+LaTeX Info: Redefining \rmfamily on input line 399.
+LaTeX Info: Redefining \sffamily on input line 399.
+LaTeX Info: Redefining \ttfamily on input line 399.
+LaTeX Info: Redefining \rmfamily on input line 400.
+LaTeX Info: Redefining \sffamily on input line 400.
+LaTeX Info: Redefining \ttfamily on input line 400.
+\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
+LaTeX Info: Redefining \rmfamily on input line 400.
+LaTeX Info: Redefining \sffamily on input line 400.
+LaTeX Info: Redefining \ttfamily on input line 400.
 LaTeX Info: Redefining \rmfamily on input line 400.
 LaTeX Info: Redefining \sffamily on input line 400.
 LaTeX Info: Redefining \ttfamily on input line 400.
@@ -5997,83 +6024,51 @@ set lang polish, 4
 LaTeX Info: Redefining \rmfamily on input line 401.
 LaTeX Info: Redefining \sffamily on input line 401.
 LaTeX Info: Redefining \ttfamily on input line 401.
-[19]
-LaTeX Info: Redefining \rmfamily on input line 402.
-LaTeX Info: Redefining \sffamily on input line 402.
-LaTeX Info: Redefining \ttfamily on input line 402.
-\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 402.
-LaTeX Info: Redefining \sffamily on input line 402.
-LaTeX Info: Redefining \ttfamily on input line 402.
-LaTeX Info: Redefining \rmfamily on input line 402.
-LaTeX Info: Redefining \sffamily on input line 402.
-LaTeX Info: Redefining \ttfamily on input line 402.
-luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
-uage plk
-set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 402.
-LaTeX Info: Redefining \sffamily on input line 402.
-LaTeX Info: Redefining \ttfamily on input line 402.
-LaTeX Info: Redefining \rmfamily on input line 403.
-LaTeX Info: Redefining \sffamily on input line 403.
-LaTeX Info: Redefining \ttfamily on input line 403.
-\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 403.
-LaTeX Info: Redefining \sffamily on input line 403.
-LaTeX Info: Redefining \ttfamily on input line 403.
-LaTeX Info: Redefining \rmfamily on input line 403.
-LaTeX Info: Redefining \sffamily on input line 403.
-LaTeX Info: Redefining \ttfamily on input line 403.
-luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
-uage plk
-set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 403.
-LaTeX Info: Redefining \sffamily on input line 403.
-LaTeX Info: Redefining \ttfamily on input line 403.
 
-Underfull \hbox (badness 1910) in paragraph at lines 403--403
+Underfull \hbox (badness 1910) in paragraph at lines 401--401
 []\TU/LinLibertine_R.otf(0)/b/it/24.88 B\TU/LinLibertine_R.otf(0)/m/it/17.28 o
 że, któ-ryś przez zmar-twych-wsta-
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 403--403
+Underfull \hbox (badness 1112) in paragraph at lines 401--401
 \TU/LinLibertine_R.otf(0)/m/it/17.28 nie Sy-na swo-je-go, Pa-na na-sze-go Je-
  []
 
-LaTeX Info: Redefining \rmfamily on input line 407.
-LaTeX Info: Redefining \sffamily on input line 407.
-LaTeX Info: Redefining \ttfamily on input line 407.
+[20]
+LaTeX Info: Redefining \rmfamily on input line 405.
+LaTeX Info: Redefining \sffamily on input line 405.
+LaTeX Info: Redefining \ttfamily on input line 405.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 407.
+(polyglossia)             line 405.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 407.
+(polyglossia)             on line 405.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 407.
+(polyglossia)             line 405.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 407.
+(polyglossia)             on line 405.
 
-LaTeX Info: Redefining \rmfamily on input line 407.
-LaTeX Info: Redefining \sffamily on input line 407.
-LaTeX Info: Redefining \ttfamily on input line 407.
+LaTeX Info: Redefining \rmfamily on input line 405.
+LaTeX Info: Redefining \sffamily on input line 405.
+LaTeX Info: Redefining \ttfamily on input line 405.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 407.
+(polyglossia)             line 405.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 407.
+(polyglossia)             on line 405.
 
-Module gregoriotex Info: Processing gabc snippet... on input line 410
+Module gregoriotex Info: Processing gabc snippet... on input line 408
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
 Inserting `gregoriotex.post_linebreak' in `post_linebreak_filter'.
 Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
@@ -6086,263 +6081,266 @@ Overfull \hbox (10.94257pt too wide) detected at line 854
 
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.
-LaTeX Info: Redefining \rmfamily on input line 411.
-LaTeX Info: Redefining \sffamily on input line 411.
-LaTeX Info: Redefining \ttfamily on input line 411.
+LaTeX Info: Redefining \rmfamily on input line 409.
+LaTeX Info: Redefining \sffamily on input line 409.
+LaTeX Info: Redefining \ttfamily on input line 409.
 luaotfload | aux : font no 97 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 411.
-LaTeX Info: Redefining \sffamily on input line 411.
-LaTeX Info: Redefining \ttfamily on input line 411.
-[20]
-LaTeX Info: Redefining \rmfamily on input line 414.
-LaTeX Info: Redefining \sffamily on input line 414.
-LaTeX Info: Redefining \ttfamily on input line 414.
+LaTeX Info: Redefining \rmfamily on input line 409.
+LaTeX Info: Redefining \sffamily on input line 409.
+LaTeX Info: Redefining \ttfamily on input line 409.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+LaTeX Info: Redefining \rmfamily on input line 412.
+LaTeX Info: Redefining \sffamily on input line 412.
+LaTeX Info: Redefining \ttfamily on input line 412.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 414.
-LaTeX Info: Redefining \sffamily on input line 414.
-LaTeX Info: Redefining \ttfamily on input line 414.
-LaTeX Info: Redefining \rmfamily on input line 414.
-LaTeX Info: Redefining \sffamily on input line 414.
-LaTeX Info: Redefining \ttfamily on input line 414.
+LaTeX Info: Redefining \rmfamily on input line 412.
+LaTeX Info: Redefining \sffamily on input line 412.
+LaTeX Info: Redefining \ttfamily on input line 412.
+LaTeX Info: Redefining \rmfamily on input line 412.
+LaTeX Info: Redefining \sffamily on input line 412.
+LaTeX Info: Redefining \ttfamily on input line 412.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 414.
-LaTeX Info: Redefining \sffamily on input line 414.
-LaTeX Info: Redefining \ttfamily on input line 414.
+LaTeX Info: Redefining \rmfamily on input line 412.
+LaTeX Info: Redefining \sffamily on input line 412.
+LaTeX Info: Redefining \ttfamily on input line 412.
 
-Underfull \hbox (badness 4341) in paragraph at lines 414--414
+Underfull \hbox (badness 4341) in paragraph at lines 412--412
 [][][]\TU/LinLibertine_R.otf(0)/m/it/17.28 V. Módl się za na-mi świę-ta Bo-
 ża
  []
 
-LaTeX Info: Redefining \rmfamily on input line 415.
-LaTeX Info: Redefining \sffamily on input line 415.
-LaTeX Info: Redefining \ttfamily on input line 415.
+LaTeX Info: Redefining \rmfamily on input line 413.
+LaTeX Info: Redefining \sffamily on input line 413.
+LaTeX Info: Redefining \ttfamily on input line 413.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 415.
-LaTeX Info: Redefining \sffamily on input line 415.
-LaTeX Info: Redefining \ttfamily on input line 415.
-LaTeX Info: Redefining \rmfamily on input line 415.
-LaTeX Info: Redefining \sffamily on input line 415.
-LaTeX Info: Redefining \ttfamily on input line 415.
+LaTeX Info: Redefining \rmfamily on input line 413.
+LaTeX Info: Redefining \sffamily on input line 413.
+LaTeX Info: Redefining \ttfamily on input line 413.
+LaTeX Info: Redefining \rmfamily on input line 413.
+LaTeX Info: Redefining \sffamily on input line 413.
+LaTeX Info: Redefining \ttfamily on input line 413.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 415.
-LaTeX Info: Redefining \sffamily on input line 415.
-LaTeX Info: Redefining \ttfamily on input line 415.
-LaTeX Info: Redefining \rmfamily on input line 416.
-LaTeX Info: Redefining \sffamily on input line 416.
-LaTeX Info: Redefining \ttfamily on input line 416.
+LaTeX Info: Redefining \rmfamily on input line 413.
+LaTeX Info: Redefining \sffamily on input line 413.
+LaTeX Info: Redefining \ttfamily on input line 413.
+LaTeX Info: Redefining \rmfamily on input line 414.
+LaTeX Info: Redefining \sffamily on input line 414.
+LaTeX Info: Redefining \ttfamily on input line 414.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 416.
-LaTeX Info: Redefining \sffamily on input line 416.
-LaTeX Info: Redefining \ttfamily on input line 416.
-LaTeX Info: Redefining \rmfamily on input line 416.
-LaTeX Info: Redefining \sffamily on input line 416.
-LaTeX Info: Redefining \ttfamily on input line 416.
+LaTeX Info: Redefining \rmfamily on input line 414.
+LaTeX Info: Redefining \sffamily on input line 414.
+LaTeX Info: Redefining \ttfamily on input line 414.
+LaTeX Info: Redefining \rmfamily on input line 414.
+LaTeX Info: Redefining \sffamily on input line 414.
+LaTeX Info: Redefining \ttfamily on input line 414.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 416.
-LaTeX Info: Redefining \sffamily on input line 416.
-LaTeX Info: Redefining \ttfamily on input line 416.
-LaTeX Info: Redefining \rmfamily on input line 417.
-LaTeX Info: Redefining \sffamily on input line 417.
-LaTeX Info: Redefining \ttfamily on input line 417.
+LaTeX Info: Redefining \rmfamily on input line 414.
+LaTeX Info: Redefining \sffamily on input line 414.
+LaTeX Info: Redefining \ttfamily on input line 414.
+LaTeX Info: Redefining \rmfamily on input line 415.
+LaTeX Info: Redefining \sffamily on input line 415.
+LaTeX Info: Redefining \ttfamily on input line 415.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 417.
-LaTeX Info: Redefining \sffamily on input line 417.
-LaTeX Info: Redefining \ttfamily on input line 417.
+LaTeX Info: Redefining \rmfamily on input line 415.
+LaTeX Info: Redefining \sffamily on input line 415.
+LaTeX Info: Redefining \ttfamily on input line 415.
 
-Underfull \hbox (badness 2285) in paragraph at lines 417--417
+Underfull \hbox (badness 2285) in paragraph at lines 415--415
 []\TU/LinLibertine_R.otf(0)/b/n/24.88 O\TU/LinLibertine_R.otf(0)/m/n/17.28 mn
 ípotens sem-pi-tér-ne De-us, qui
  []
 
 
-Underfull \hbox (badness 2042) in paragraph at lines 417--417
+Underfull \hbox (badness 2042) in paragraph at lines 415--415
 \TU/LinLibertine_R.otf(0)/m/n/17.28 ha-bi-tá-cu-lum éf-fi-ci me-re-ré-tur, Sp
 í-ri-
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 417--417
+Underfull \hbox (badness 2818) in paragraph at lines 415--415
 \TU/LinLibertine_R.otf(0)/m/n/17.28 stán-ti-bus ma-lis et a mor-te per-pé-
  []
 
-LaTeX Info: Redefining \rmfamily on input line 417.
-LaTeX Info: Redefining \sffamily on input line 417.
-LaTeX Info: Redefining \ttfamily on input line 417.
+LaTeX Info: Redefining \rmfamily on input line 415.
+LaTeX Info: Redefining \sffamily on input line 415.
+LaTeX Info: Redefining \ttfamily on input line 415.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 417.
-LaTeX Info: Redefining \sffamily on input line 417.
-LaTeX Info: Redefining \ttfamily on input line 417.
+LaTeX Info: Redefining \rmfamily on input line 415.
+LaTeX Info: Redefining \sffamily on input line 415.
+LaTeX Info: Redefining \ttfamily on input line 415.
 
-Underfull \hbox (badness 1694) in paragraph at lines 417--417
+Underfull \hbox (badness 1694) in paragraph at lines 415--415
 \TU/LinLibertine_R.otf(0)/m/it/17.28 aby-śmy przez ła-ska-we wsta-wien-nic-
  []
 
-LaTeX Info: Redefining \rmfamily on input line 418.
-LaTeX Info: Redefining \sffamily on input line 418.
-LaTeX Info: Redefining \ttfamily on input line 418.
+LaTeX Info: Redefining \rmfamily on input line 416.
+LaTeX Info: Redefining \sffamily on input line 416.
+LaTeX Info: Redefining \ttfamily on input line 416.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 418.
-LaTeX Info: Redefining \sffamily on input line 418.
-LaTeX Info: Redefining \ttfamily on input line 418.
-LaTeX Info: Redefining \rmfamily on input line 418.
-LaTeX Info: Redefining \sffamily on input line 418.
-LaTeX Info: Redefining \ttfamily on input line 418.
+LaTeX Info: Redefining \rmfamily on input line 416.
+LaTeX Info: Redefining \sffamily on input line 416.
+LaTeX Info: Redefining \ttfamily on input line 416.
+LaTeX Info: Redefining \rmfamily on input line 416.
+LaTeX Info: Redefining \sffamily on input line 416.
+LaTeX Info: Redefining \ttfamily on input line 416.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 418.
-LaTeX Info: Redefining \sffamily on input line 418.
-LaTeX Info: Redefining \ttfamily on input line 418.
-LaTeX Info: Redefining \rmfamily on input line 421.
-LaTeX Info: Redefining \sffamily on input line 421.
-LaTeX Info: Redefining \ttfamily on input line 421.
+LaTeX Info: Redefining \rmfamily on input line 416.
+LaTeX Info: Redefining \sffamily on input line 416.
+LaTeX Info: Redefining \ttfamily on input line 416.
+LaTeX Info: Redefining \rmfamily on input line 419.
+LaTeX Info: Redefining \sffamily on input line 419.
+LaTeX Info: Redefining \ttfamily on input line 419.
 luaotfload | aux : font no 56 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 421.
+(polyglossia)             line 419.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 421.
+(polyglossia)             on line 419.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 421.
+(polyglossia)             line 419.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 421.
+(polyglossia)             on line 419.
 
-LaTeX Info: Redefining \rmfamily on input line 421.
-LaTeX Info: Redefining \sffamily on input line 421.
-LaTeX Info: Redefining \ttfamily on input line 421.
+LaTeX Info: Redefining \rmfamily on input line 419.
+LaTeX Info: Redefining \sffamily on input line 419.
+LaTeX Info: Redefining \ttfamily on input line 419.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 421.
+(polyglossia)             line 419.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 421.
+(polyglossia)             on line 419.
 
-LaTeX Info: Redefining \rmfamily on input line 424.
-LaTeX Info: Redefining \sffamily on input line 424.
-LaTeX Info: Redefining \ttfamily on input line 424.
+LaTeX Info: Redefining \rmfamily on input line 422.
+LaTeX Info: Redefining \sffamily on input line 422.
+LaTeX Info: Redefining \ttfamily on input line 422.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 424.
-LaTeX Info: Redefining \sffamily on input line 424.
-LaTeX Info: Redefining \ttfamily on input line 424.
-LaTeX Info: Redefining \rmfamily on input line 424.
-LaTeX Info: Redefining \sffamily on input line 424.
-LaTeX Info: Redefining \ttfamily on input line 424.
+LaTeX Info: Redefining \rmfamily on input line 422.
+LaTeX Info: Redefining \sffamily on input line 422.
+LaTeX Info: Redefining \ttfamily on input line 422.
+LaTeX Info: Redefining \rmfamily on input line 422.
+LaTeX Info: Redefining \sffamily on input line 422.
+LaTeX Info: Redefining \ttfamily on input line 422.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 424.
-LaTeX Info: Redefining \sffamily on input line 424.
-LaTeX Info: Redefining \ttfamily on input line 424.
-<../img/pax_vobis.png, id=111, 308.4615pt x 190.2015pt>
+LaTeX Info: Redefining \rmfamily on input line 422.
+LaTeX Info: Redefining \sffamily on input line 422.
+LaTeX Info: Redefining \ttfamily on input line 422.
+<../img/pax_vobis.png, id=115, 308.4615pt x 190.2015pt>
 File: ../img/pax_vobis.png Graphic file (type png)
 <use ../img/pax_vobis.png>
-Package luatex.def Info: ../img/pax_vobis.png  used on input line 426.
+Package luatex.def Info: ../img/pax_vobis.png  used on input line 424.
 (luatex.def)             Requested size: 270.3012pt x 166.68129pt.
-[21<../img/pax_vobis.png>]
-LaTeX Info: Redefining \rmfamily on input line 428.
-LaTeX Info: Redefining \sffamily on input line 428.
-LaTeX Info: Redefining \ttfamily on input line 428.
+[22<../img/pax_vobis.png>]
+LaTeX Info: Redefining \rmfamily on input line 426.
+LaTeX Info: Redefining \sffamily on input line 426.
+LaTeX Info: Redefining \ttfamily on input line 426.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 428.
-LaTeX Info: Redefining \sffamily on input line 428.
-LaTeX Info: Redefining \ttfamily on input line 428.
+LaTeX Info: Redefining \rmfamily on input line 426.
+LaTeX Info: Redefining \sffamily on input line 426.
+LaTeX Info: Redefining \ttfamily on input line 426.
 luaotfload | aux : font no 56 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 428.
+(polyglossia)             line 426.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 428.
+(polyglossia)             on line 426.
 
-LaTeX Info: Redefining \rmfamily on input line 428.
-LaTeX Info: Redefining \sffamily on input line 428.
-LaTeX Info: Redefining \ttfamily on input line 428.
+LaTeX Info: Redefining \rmfamily on input line 426.
+LaTeX Info: Redefining \sffamily on input line 426.
+LaTeX Info: Redefining \ttfamily on input line 426.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 428.
+(polyglossia)             line 426.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 428.
+(polyglossia)             on line 426.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 428.
+(polyglossia)             line 426.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 428.
+(polyglossia)             on line 426.
 
-LaTeX Info: Redefining \rmfamily on input line 428.
-LaTeX Info: Redefining \sffamily on input line 428.
-LaTeX Info: Redefining \ttfamily on input line 428.
+LaTeX Info: Redefining \rmfamily on input line 426.
+LaTeX Info: Redefining \sffamily on input line 426.
+LaTeX Info: Redefining \ttfamily on input line 426.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 428.
+(polyglossia)             line 426.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 428.
+(polyglossia)             on line 426.
 
-LaTeX Info: Redefining \rmfamily on input line 429.
-LaTeX Info: Redefining \sffamily on input line 429.
-LaTeX Info: Redefining \ttfamily on input line 429.
+LaTeX Info: Redefining \rmfamily on input line 427.
+LaTeX Info: Redefining \sffamily on input line 427.
+LaTeX Info: Redefining \ttfamily on input line 427.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 429.
+(polyglossia)             line 427.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 429.
+(polyglossia)             on line 427.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 429.
+(polyglossia)             line 427.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 429.
+(polyglossia)             on line 427.
 
-LaTeX Info: Redefining \rmfamily on input line 429.
-LaTeX Info: Redefining \sffamily on input line 429.
-LaTeX Info: Redefining \ttfamily on input line 429.
+LaTeX Info: Redefining \rmfamily on input line 427.
+LaTeX Info: Redefining \sffamily on input line 427.
+LaTeX Info: Redefining \ttfamily on input line 427.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 429.
+(polyglossia)             line 427.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 429.
+(polyglossia)             on line 427.
 
-Module gregoriotex Info: Processing gabc snippet... on input line 430
+Module gregoriotex Info: Processing gabc snippet... on input line 428
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
 Inserting `gregoriotex.post_linebreak' in `post_linebreak_filter'.
 Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
@@ -6351,154 +6349,191 @@ Inserting `gregoriotex.disable_hyphenation' in `hyphenate'.
 Inserting `allow hyphen breaks' in `hyphenate'.
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.
-LaTeX Info: Redefining \rmfamily on input line 431.
-LaTeX Info: Redefining \sffamily on input line 431.
-LaTeX Info: Redefining \ttfamily on input line 431.
+LaTeX Info: Redefining \rmfamily on input line 429.
+LaTeX Info: Redefining \sffamily on input line 429.
+LaTeX Info: Redefining \ttfamily on input line 429.
 luaotfload | aux : font no 97 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 431.
-LaTeX Info: Redefining \sffamily on input line 431.
-LaTeX Info: Redefining \ttfamily on input line 431.
-LaTeX Info: Redefining \rmfamily on input line 432.
-LaTeX Info: Redefining \sffamily on input line 432.
-LaTeX Info: Redefining \ttfamily on input line 432.
+LaTeX Info: Redefining \rmfamily on input line 429.
+LaTeX Info: Redefining \sffamily on input line 429.
+LaTeX Info: Redefining \ttfamily on input line 429.
+LaTeX Info: Redefining \rmfamily on input line 430.
+LaTeX Info: Redefining \sffamily on input line 430.
+LaTeX Info: Redefining \ttfamily on input line 430.
 luaotfload | aux : font no 97 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
+LaTeX Info: Redefining \rmfamily on input line 430.
+LaTeX Info: Redefining \sffamily on input line 430.
+LaTeX Info: Redefining \ttfamily on input line 430.
 LaTeX Info: Redefining \rmfamily on input line 432.
 LaTeX Info: Redefining \sffamily on input line 432.
 LaTeX Info: Redefining \ttfamily on input line 432.
-LaTeX Info: Redefining \rmfamily on input line 434.
-LaTeX Info: Redefining \sffamily on input line 434.
-LaTeX Info: Redefining \ttfamily on input line 434.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 434.
-LaTeX Info: Redefining \sffamily on input line 434.
-LaTeX Info: Redefining \ttfamily on input line 434.
-LaTeX Info: Redefining \rmfamily on input line 434.
-LaTeX Info: Redefining \sffamily on input line 434.
-LaTeX Info: Redefining \ttfamily on input line 434.
+LaTeX Info: Redefining \rmfamily on input line 432.
+LaTeX Info: Redefining \sffamily on input line 432.
+LaTeX Info: Redefining \ttfamily on input line 432.
+LaTeX Info: Redefining \rmfamily on input line 432.
+LaTeX Info: Redefining \sffamily on input line 432.
+LaTeX Info: Redefining \ttfamily on input line 432.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 434.
-LaTeX Info: Redefining \sffamily on input line 434.
-LaTeX Info: Redefining \ttfamily on input line 434.
-LaTeX Info: Redefining \rmfamily on input line 435.
-LaTeX Info: Redefining \sffamily on input line 435.
-LaTeX Info: Redefining \ttfamily on input line 435.
+LaTeX Info: Redefining \rmfamily on input line 432.
+LaTeX Info: Redefining \sffamily on input line 432.
+LaTeX Info: Redefining \ttfamily on input line 432.
+LaTeX Info: Redefining \rmfamily on input line 433.
+LaTeX Info: Redefining \sffamily on input line 433.
+LaTeX Info: Redefining \ttfamily on input line 433.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 435.
-LaTeX Info: Redefining \sffamily on input line 435.
-LaTeX Info: Redefining \ttfamily on input line 435.
-LaTeX Info: Redefining \rmfamily on input line 435.
-LaTeX Info: Redefining \sffamily on input line 435.
-LaTeX Info: Redefining \ttfamily on input line 435.
+LaTeX Info: Redefining \rmfamily on input line 433.
+LaTeX Info: Redefining \sffamily on input line 433.
+LaTeX Info: Redefining \ttfamily on input line 433.
+LaTeX Info: Redefining \rmfamily on input line 433.
+LaTeX Info: Redefining \sffamily on input line 433.
+LaTeX Info: Redefining \ttfamily on input line 433.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 435.
-LaTeX Info: Redefining \sffamily on input line 435.
-LaTeX Info: Redefining \ttfamily on input line 435.
+LaTeX Info: Redefining \rmfamily on input line 433.
+LaTeX Info: Redefining \sffamily on input line 433.
+LaTeX Info: Redefining \ttfamily on input line 433.
 
-Underfull \hbox (badness 1412) in paragraph at lines 435--435
+Underfull \hbox (badness 1412) in paragraph at lines 433--433
 [][][]\TU/LinLibertine_R.otf(0)/m/it/17.28 R. Nad sy-nem czło-wie-czym, któ-re
 -go
  []
 
-LaTeX Info: Redefining \rmfamily on input line 439.
-LaTeX Info: Redefining \sffamily on input line 439.
-LaTeX Info: Redefining \ttfamily on input line 439.
+LaTeX Info: Redefining \rmfamily on input line 437.
+LaTeX Info: Redefining \sffamily on input line 437.
+LaTeX Info: Redefining \ttfamily on input line 437.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 439.
-LaTeX Info: Redefining \sffamily on input line 439.
-LaTeX Info: Redefining \ttfamily on input line 439.
-LaTeX Info: Redefining \rmfamily on input line 439.
-LaTeX Info: Redefining \sffamily on input line 439.
-LaTeX Info: Redefining \ttfamily on input line 439.
+LaTeX Info: Redefining \rmfamily on input line 437.
+LaTeX Info: Redefining \sffamily on input line 437.
+LaTeX Info: Redefining \ttfamily on input line 437.
+LaTeX Info: Redefining \rmfamily on input line 437.
+LaTeX Info: Redefining \sffamily on input line 437.
+LaTeX Info: Redefining \ttfamily on input line 437.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 439.
-LaTeX Info: Redefining \sffamily on input line 439.
-LaTeX Info: Redefining \ttfamily on input line 439.
-LaTeX Info: Redefining \rmfamily on input line 440.
-LaTeX Info: Redefining \sffamily on input line 440.
-LaTeX Info: Redefining \ttfamily on input line 440.
+LaTeX Info: Redefining \rmfamily on input line 437.
+LaTeX Info: Redefining \sffamily on input line 437.
+LaTeX Info: Redefining \ttfamily on input line 437.
+LaTeX Info: Redefining \rmfamily on input line 438.
+LaTeX Info: Redefining \sffamily on input line 438.
+LaTeX Info: Redefining \ttfamily on input line 438.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 440.
-LaTeX Info: Redefining \sffamily on input line 440.
-LaTeX Info: Redefining \ttfamily on input line 440.
+LaTeX Info: Redefining \rmfamily on input line 438.
+LaTeX Info: Redefining \sffamily on input line 438.
+LaTeX Info: Redefining \ttfamily on input line 438.
 
-Underfull \hbox (badness 3449) in paragraph at lines 440--440
+Underfull \hbox (badness 2126) in paragraph at lines 438--438
+\TU/LinLibertine_R.otf(0)/m/n/17.28 tor, fá-mu-lum tu-um Le-ó-nem, quem
+ []
+
+
+Underfull \hbox (badness 3449) in paragraph at lines 438--438
 \TU/LinLibertine_R.otf(0)/m/n/17.28 est, pro-fí-ce-re; * ut ad vi-tam una
  []
 
 
-Underfull \hbox (badness 4181) in paragraph at lines 440--440
+Underfull \hbox (badness 4181) in paragraph at lines 438--438
 \TU/LinLibertine_R.otf(0)/m/n/17.28 pi-tér-nam. Per Chris-tum Dó-mi-num
  []
 
-LaTeX Info: Redefining \rmfamily on input line 440.
-LaTeX Info: Redefining \sffamily on input line 440.
-LaTeX Info: Redefining \ttfamily on input line 440.
+LaTeX Info: Redefining \rmfamily on input line 438.
+LaTeX Info: Redefining \sffamily on input line 438.
+LaTeX Info: Redefining \ttfamily on input line 438.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 440.
-LaTeX Info: Redefining \sffamily on input line 440.
-LaTeX Info: Redefining \ttfamily on input line 440.
+LaTeX Info: Redefining \rmfamily on input line 438.
+LaTeX Info: Redefining \sffamily on input line 438.
+LaTeX Info: Redefining \ttfamily on input line 438.
 
-Underfull \hbox (badness 1472) in paragraph at lines 440--440
+Underfull \hbox (badness 1472) in paragraph at lines 438--438
 []\TU/LinLibertine_R.otf(0)/b/it/24.88 B\TU/LinLibertine_R.otf(0)/m/it/17.28 o
 że, wszyst-kich wier-nych Pa-ste-rzu
  []
 
 
-Underfull \hbox (badness 1205) in paragraph at lines 440--440
+Underfull \hbox (badness 1205) in paragraph at lines 438--438
 \TU/LinLibertine_R.otf(0)/m/it/17.28 i Rząd-co, wej-rzyj ła-ska-wie na słu-g
 ę
  []
 
-<../img/tiara05.jpg, id=116, 1027.84pt x 543.02875pt>
+<../img/tiara05.jpg, id=120, 1027.84pt x 543.02875pt>
 File: ../img/tiara05.jpg Graphic file (type jpg)
 <use ../img/tiara05.jpg>
-Package luatex.def Info: ../img/tiara05.jpg  used on input line 443.
+Package luatex.def Info: ../img/tiara05.jpg  used on input line 441.
 (luatex.def)             Requested size: 216.23764pt x 114.23825pt.
-[22<../img/tiara05.jpg>]
+[23<../img/tiara05.jpg>]
+LaTeX Info: Redefining \rmfamily on input line 443.
+LaTeX Info: Redefining \sffamily on input line 443.
+LaTeX Info: Redefining \ttfamily on input line 443.
+\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
+
+Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
+(polyglossia)             line 443.
+
+
+Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
+(polyglossia)             on line 443.
+
+
+Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
+(polyglossia)             line 443.
+
+
+Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
+(polyglossia)             on line 443.
+
+LaTeX Info: Redefining \rmfamily on input line 443.
+LaTeX Info: Redefining \sffamily on input line 443.
+LaTeX Info: Redefining \ttfamily on input line 443.
+\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
+
+Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
+(polyglossia)             line 443.
+
+
+Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
+(polyglossia)             on line 443.
+
 LaTeX Info: Redefining \rmfamily on input line 445.
 LaTeX Info: Redefining \sffamily on input line 445.
 LaTeX Info: Redefining \ttfamily on input line 445.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-
-Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 445.
-
-
-Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 445.
-
-
-Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 445.
-
-
-Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 445.
-
 LaTeX Info: Redefining \rmfamily on input line 445.
 LaTeX Info: Redefining \sffamily on input line 445.
 LaTeX Info: Redefining \ttfamily on input line 445.
+LaTeX Info: Redefining \rmfamily on input line 445.
+LaTeX Info: Redefining \sffamily on input line 445.
+LaTeX Info: Redefining \ttfamily on input line 445.
+luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
+uage plk
+set lang polish, 4
+LaTeX Info: Redefining \rmfamily on input line 445.
+LaTeX Info: Redefining \sffamily on input line 445.
+LaTeX Info: Redefining \ttfamily on input line 445.
+LaTeX Info: Redefining \rmfamily on input line 446.
+LaTeX Info: Redefining \sffamily on input line 446.
+LaTeX Info: Redefining \ttfamily on input line 446.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-
-Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 445.
-
-
-Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 445.
-
+LaTeX Info: Redefining \rmfamily on input line 446.
+LaTeX Info: Redefining \sffamily on input line 446.
+LaTeX Info: Redefining \ttfamily on input line 446.
+LaTeX Info: Redefining \rmfamily on input line 446.
+LaTeX Info: Redefining \sffamily on input line 446.
+LaTeX Info: Redefining \ttfamily on input line 446.
+luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
+uage plk
+set lang polish, 4
+LaTeX Info: Redefining \rmfamily on input line 446.
+LaTeX Info: Redefining \sffamily on input line 446.
+LaTeX Info: Redefining \ttfamily on input line 446.
 LaTeX Info: Redefining \rmfamily on input line 447.
 LaTeX Info: Redefining \sffamily on input line 447.
 LaTeX Info: Redefining \ttfamily on input line 447.
@@ -6547,323 +6582,323 @@ set lang polish, 4
 LaTeX Info: Redefining \rmfamily on input line 449.
 LaTeX Info: Redefining \sffamily on input line 449.
 LaTeX Info: Redefining \ttfamily on input line 449.
-LaTeX Info: Redefining \rmfamily on input line 450.
-LaTeX Info: Redefining \sffamily on input line 450.
-LaTeX Info: Redefining \ttfamily on input line 450.
-\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 450.
-LaTeX Info: Redefining \sffamily on input line 450.
-LaTeX Info: Redefining \ttfamily on input line 450.
-LaTeX Info: Redefining \rmfamily on input line 450.
-LaTeX Info: Redefining \sffamily on input line 450.
-LaTeX Info: Redefining \ttfamily on input line 450.
-luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
-uage plk
-set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 450.
-LaTeX Info: Redefining \sffamily on input line 450.
-LaTeX Info: Redefining \ttfamily on input line 450.
-LaTeX Info: Redefining \rmfamily on input line 451.
-LaTeX Info: Redefining \sffamily on input line 451.
-LaTeX Info: Redefining \ttfamily on input line 451.
-\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 451.
-LaTeX Info: Redefining \sffamily on input line 451.
-LaTeX Info: Redefining \ttfamily on input line 451.
-LaTeX Info: Redefining \rmfamily on input line 451.
-LaTeX Info: Redefining \sffamily on input line 451.
-LaTeX Info: Redefining \ttfamily on input line 451.
-luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
-uage plk
-set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 451.
-LaTeX Info: Redefining \sffamily on input line 451.
-LaTeX Info: Redefining \ttfamily on input line 451.
-<../img/MariaReginaMundi.png, id=121, 535.601pt x 157.388pt>
+<../img/MariaReginaMundi.png, id=125, 535.601pt x 157.388pt>
 File: ../img/MariaReginaMundi.png Graphic file (type png)
 <use ../img/MariaReginaMundi.png>
-Package luatex.def Info: ../img/MariaReginaMundi.png  used on input line 453.
+Package luatex.def Info: ../img/MariaReginaMundi.png  used on input line 451.
 (luatex.def)             Requested size: 540.60239pt x 158.86694pt.
-LaTeX Info: Redefining \rmfamily on input line 454.
-LaTeX Info: Redefining \sffamily on input line 454.
-LaTeX Info: Redefining \ttfamily on input line 454.
+LaTeX Info: Redefining \rmfamily on input line 452.
+LaTeX Info: Redefining \sffamily on input line 452.
+LaTeX Info: Redefining \ttfamily on input line 452.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 454.
+(polyglossia)             line 452.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 454.
+(polyglossia)             on line 452.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 454.
+(polyglossia)             line 452.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 454.
+(polyglossia)             on line 452.
+
+LaTeX Info: Redefining \rmfamily on input line 452.
+LaTeX Info: Redefining \sffamily on input line 452.
+LaTeX Info: Redefining \ttfamily on input line 452.
+\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
+
+Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
+(polyglossia)             line 452.
+
+
+Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
+(polyglossia)             on line 452.
 
 LaTeX Info: Redefining \rmfamily on input line 454.
 LaTeX Info: Redefining \sffamily on input line 454.
 LaTeX Info: Redefining \ttfamily on input line 454.
-\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-
-Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 454.
-
-
-Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 454.
-
-LaTeX Info: Redefining \rmfamily on input line 456.
-LaTeX Info: Redefining \sffamily on input line 456.
-LaTeX Info: Redefining \ttfamily on input line 456.
 luaotfload | aux : font no 56 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 456.
+(polyglossia)             line 454.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 456.
+(polyglossia)             on line 454.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 456.
+(polyglossia)             line 454.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 456.
+(polyglossia)             on line 454.
+
+LaTeX Info: Redefining \rmfamily on input line 454.
+LaTeX Info: Redefining \sffamily on input line 454.
+LaTeX Info: Redefining \ttfamily on input line 454.
+\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
+
+Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
+(polyglossia)             line 454.
+
+
+Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
+(polyglossia)             on line 454.
 
 LaTeX Info: Redefining \rmfamily on input line 456.
 LaTeX Info: Redefining \sffamily on input line 456.
 LaTeX Info: Redefining \ttfamily on input line 456.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-
-Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 456.
-
-
-Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 456.
-
-LaTeX Info: Redefining \rmfamily on input line 458.
-LaTeX Info: Redefining \sffamily on input line 458.
-LaTeX Info: Redefining \ttfamily on input line 458.
-\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 458.
-LaTeX Info: Redefining \sffamily on input line 458.
-LaTeX Info: Redefining \ttfamily on input line 458.
-LaTeX Info: Redefining \rmfamily on input line 458.
-LaTeX Info: Redefining \sffamily on input line 458.
-LaTeX Info: Redefining \ttfamily on input line 458.
+LaTeX Info: Redefining \rmfamily on input line 456.
+LaTeX Info: Redefining \sffamily on input line 456.
+LaTeX Info: Redefining \ttfamily on input line 456.
+LaTeX Info: Redefining \rmfamily on input line 456.
+LaTeX Info: Redefining \sffamily on input line 456.
+LaTeX Info: Redefining \ttfamily on input line 456.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 458.
-LaTeX Info: Redefining \sffamily on input line 458.
-LaTeX Info: Redefining \ttfamily on input line 458.
+LaTeX Info: Redefining \rmfamily on input line 456.
+LaTeX Info: Redefining \sffamily on input line 456.
+LaTeX Info: Redefining \ttfamily on input line 456.
 
-Underfull \hbox (badness 1688) in paragraph at lines 458--458
+Underfull \hbox (badness 1688) in paragraph at lines 456--456
 \TU/LinLibertine_R.otf(0)/m/it/17.28 i na zie-mi; chle-ba na-sze-go po-wsze-
  []
 
-LaTeX Info: Redefining \rmfamily on input line 459.
-LaTeX Info: Redefining \sffamily on input line 459.
-LaTeX Info: Redefining \ttfamily on input line 459.
+LaTeX Info: Redefining \rmfamily on input line 457.
+LaTeX Info: Redefining \sffamily on input line 457.
+LaTeX Info: Redefining \ttfamily on input line 457.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 459.
-LaTeX Info: Redefining \sffamily on input line 459.
-LaTeX Info: Redefining \ttfamily on input line 459.
-LaTeX Info: Redefining \rmfamily on input line 459.
-LaTeX Info: Redefining \sffamily on input line 459.
-LaTeX Info: Redefining \ttfamily on input line 459.
+LaTeX Info: Redefining \rmfamily on input line 457.
+LaTeX Info: Redefining \sffamily on input line 457.
+LaTeX Info: Redefining \ttfamily on input line 457.
+LaTeX Info: Redefining \rmfamily on input line 457.
+LaTeX Info: Redefining \sffamily on input line 457.
+LaTeX Info: Redefining \ttfamily on input line 457.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 459.
-LaTeX Info: Redefining \sffamily on input line 459.
-LaTeX Info: Redefining \ttfamily on input line 459.
+LaTeX Info: Redefining \rmfamily on input line 457.
+LaTeX Info: Redefining \sffamily on input line 457.
+LaTeX Info: Redefining \ttfamily on input line 457.
 
-Underfull \hbox (badness 2005) in paragraph at lines 459--459
+Underfull \hbox (badness 2005) in paragraph at lines 457--457
 \TU/LinLibertine_R.otf(0)/m/it/17.28 sta-mi i bło-go-sła-wio-ny owoc ży-wo-ta
 
  []
 
-[23<../img/MariaReginaMundi.png>]
-LaTeX Info: Redefining \rmfamily on input line 460.
-LaTeX Info: Redefining \sffamily on input line 460.
-LaTeX Info: Redefining \ttfamily on input line 460.
+[24<../img/MariaReginaMundi.png>]
+LaTeX Info: Redefining \rmfamily on input line 458.
+LaTeX Info: Redefining \sffamily on input line 458.
+LaTeX Info: Redefining \ttfamily on input line 458.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 460.
-LaTeX Info: Redefining \sffamily on input line 460.
-LaTeX Info: Redefining \ttfamily on input line 460.
-LaTeX Info: Redefining \rmfamily on input line 460.
-LaTeX Info: Redefining \sffamily on input line 460.
-LaTeX Info: Redefining \ttfamily on input line 460.
+LaTeX Info: Redefining \rmfamily on input line 458.
+LaTeX Info: Redefining \sffamily on input line 458.
+LaTeX Info: Redefining \ttfamily on input line 458.
+LaTeX Info: Redefining \rmfamily on input line 458.
+LaTeX Info: Redefining \sffamily on input line 458.
+LaTeX Info: Redefining \ttfamily on input line 458.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 460.
-LaTeX Info: Redefining \sffamily on input line 460.
-LaTeX Info: Redefining \ttfamily on input line 460.
+LaTeX Info: Redefining \rmfamily on input line 458.
+LaTeX Info: Redefining \sffamily on input line 458.
+LaTeX Info: Redefining \ttfamily on input line 458.
 
-Underfull \hbox (badness 2119) in paragraph at lines 460--460
+Underfull \hbox (badness 2119) in paragraph at lines 458--458
 []\TU/LinLibertine_R.otf(0)/b/it/24.88 C\TU/LinLibertine_R.otf(0)/m/it/17.28 hwa
 ła Oj-cu i Sy-no-wi, i Du-cho-wi
  []
 
-LaTeX Info: Redefining \rmfamily on input line 461.
-LaTeX Info: Redefining \sffamily on input line 461.
-LaTeX Info: Redefining \ttfamily on input line 461.
+LaTeX Info: Redefining \rmfamily on input line 459.
+LaTeX Info: Redefining \sffamily on input line 459.
+LaTeX Info: Redefining \ttfamily on input line 459.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 461.
-LaTeX Info: Redefining \sffamily on input line 461.
-LaTeX Info: Redefining \ttfamily on input line 461.
+LaTeX Info: Redefining \rmfamily on input line 459.
+LaTeX Info: Redefining \sffamily on input line 459.
+LaTeX Info: Redefining \ttfamily on input line 459.
 
-Underfull \hbox (badness 1629) in paragraph at lines 461--461
+Underfull \hbox (badness 1629) in paragraph at lines 459--459
 []\TU/LinLibertine_R.otf(0)/b/n/24.88 D\TU/LinLibertine_R.otf(0)/m/n/17.28 ómin
 e Ie-su, di-mit-te no-bis dé-bi-ta
  []
 
-LaTeX Info: Redefining \rmfamily on input line 461.
-LaTeX Info: Redefining \sffamily on input line 461.
-LaTeX Info: Redefining \ttfamily on input line 461.
+LaTeX Info: Redefining \rmfamily on input line 459.
+LaTeX Info: Redefining \sffamily on input line 459.
+LaTeX Info: Redefining \ttfamily on input line 459.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 461.
-LaTeX Info: Redefining \sffamily on input line 461.
-LaTeX Info: Redefining \ttfamily on input line 461.
-LaTeX Info: Redefining \rmfamily on input line 462.
-LaTeX Info: Redefining \sffamily on input line 462.
-LaTeX Info: Redefining \ttfamily on input line 462.
+LaTeX Info: Redefining \rmfamily on input line 459.
+LaTeX Info: Redefining \sffamily on input line 459.
+LaTeX Info: Redefining \ttfamily on input line 459.
+LaTeX Info: Redefining \rmfamily on input line 460.
+LaTeX Info: Redefining \sffamily on input line 460.
+LaTeX Info: Redefining \ttfamily on input line 460.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 462.
-LaTeX Info: Redefining \sffamily on input line 462.
-LaTeX Info: Redefining \ttfamily on input line 462.
-LaTeX Info: Redefining \rmfamily on input line 462.
-LaTeX Info: Redefining \sffamily on input line 462.
-LaTeX Info: Redefining \ttfamily on input line 462.
+LaTeX Info: Redefining \rmfamily on input line 460.
+LaTeX Info: Redefining \sffamily on input line 460.
+LaTeX Info: Redefining \ttfamily on input line 460.
+LaTeX Info: Redefining \rmfamily on input line 460.
+LaTeX Info: Redefining \sffamily on input line 460.
+LaTeX Info: Redefining \ttfamily on input line 460.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 462.
-LaTeX Info: Redefining \sffamily on input line 462.
-LaTeX Info: Redefining \ttfamily on input line 462.
-LaTeX Info: Redefining \rmfamily on input line 463.
-LaTeX Info: Redefining \sffamily on input line 463.
-LaTeX Info: Redefining \ttfamily on input line 463.
+LaTeX Info: Redefining \rmfamily on input line 460.
+LaTeX Info: Redefining \sffamily on input line 460.
+LaTeX Info: Redefining \ttfamily on input line 460.
+LaTeX Info: Redefining \rmfamily on input line 461.
+LaTeX Info: Redefining \sffamily on input line 461.
+LaTeX Info: Redefining \ttfamily on input line 461.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 463.
-LaTeX Info: Redefining \sffamily on input line 463.
-LaTeX Info: Redefining \ttfamily on input line 463.
+LaTeX Info: Redefining \rmfamily on input line 461.
+LaTeX Info: Redefining \sffamily on input line 461.
+LaTeX Info: Redefining \ttfamily on input line 461.
 
-Underfull \hbox (badness 2753) in paragraph at lines 463--463
+Underfull \hbox (badness 2753) in paragraph at lines 461--461
 []\TU/LinLibertine_R.otf(0)/b/n/24.88 S\TU/LinLibertine_R.otf(0)/m/n/17.28 ub tu
 -um pra-e-si-di-um con-fú-gi-mus,
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 463--463
+Underfull \hbox (badness 2111) in paragraph at lines 461--461
 \TU/LinLibertine_R.otf(0)/m/n/17.28 sem-per, Vir-go glo-ri-ó-sa et be-ne-dic-
  []
 
-LaTeX Info: Redefining \rmfamily on input line 463.
-LaTeX Info: Redefining \sffamily on input line 463.
-LaTeX Info: Redefining \ttfamily on input line 463.
+LaTeX Info: Redefining \rmfamily on input line 461.
+LaTeX Info: Redefining \sffamily on input line 461.
+LaTeX Info: Redefining \ttfamily on input line 461.
 luaotfload | aux : font no 89 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 463.
-LaTeX Info: Redefining \sffamily on input line 463.
-LaTeX Info: Redefining \ttfamily on input line 463.
-<../img/MARIA-monogram.png, id=127, 287.6346pt x 172.0026pt>
+LaTeX Info: Redefining \rmfamily on input line 461.
+LaTeX Info: Redefining \sffamily on input line 461.
+LaTeX Info: Redefining \ttfamily on input line 461.
+<../img/MARIA-monogram.png, id=131, 287.6346pt x 172.0026pt>
 File: ../img/MARIA-monogram.png Graphic file (type png)
 <use ../img/MARIA-monogram.png>
-Package luatex.def Info: ../img/MARIA-monogram.png  used on input line 465.
+Package luatex.def Info: ../img/MARIA-monogram.png  used on input line 463.
 (luatex.def)             Requested size: 216.23764pt x 129.31131pt.
-[24<../img/MARIA-monogram.png>]
-LaTeX Info: Redefining \rmfamily on input line 467.
-LaTeX Info: Redefining \sffamily on input line 467.
-LaTeX Info: Redefining \ttfamily on input line 467.
+[25<../img/MARIA-monogram.png>]
+LaTeX Info: Redefining \rmfamily on input line 465.
+LaTeX Info: Redefining \sffamily on input line 465.
+LaTeX Info: Redefining \ttfamily on input line 465.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 467.
+(polyglossia)             line 465.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 467.
+(polyglossia)             on line 465.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 467.
+(polyglossia)             line 465.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 467.
+(polyglossia)             on line 465.
 
-LaTeX Info: Redefining \rmfamily on input line 467.
-LaTeX Info: Redefining \sffamily on input line 467.
-LaTeX Info: Redefining \ttfamily on input line 467.
+LaTeX Info: Redefining \rmfamily on input line 465.
+LaTeX Info: Redefining \sffamily on input line 465.
+LaTeX Info: Redefining \ttfamily on input line 465.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 467.
+(polyglossia)             line 465.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 467.
+(polyglossia)             on line 465.
 
-LaTeX Info: Redefining \rmfamily on input line 470.
-LaTeX Info: Redefining \sffamily on input line 470.
-LaTeX Info: Redefining \ttfamily on input line 470.
+LaTeX Info: Redefining \rmfamily on input line 468.
+LaTeX Info: Redefining \sffamily on input line 468.
+LaTeX Info: Redefining \ttfamily on input line 468.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 470.
-LaTeX Info: Redefining \sffamily on input line 470.
-LaTeX Info: Redefining \ttfamily on input line 470.
+LaTeX Info: Redefining \rmfamily on input line 468.
+LaTeX Info: Redefining \sffamily on input line 468.
+LaTeX Info: Redefining \ttfamily on input line 468.
 
-Underfull \hbox (badness 2189) in paragraph at lines 470--470
+Underfull \hbox (badness 2189) in paragraph at lines 468--468
 []\TU/LinLibertine_R.otf(0)/m/n/16 Ký-rie, elé-i-son. Chrís-te, elé-i-son. 
 Ký-rie,
  []
 
-LaTeX Font Info:    Calculating math sizes for size <16> on input line 470.
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 468.
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
-(Font)              size <17.28> substituted on input line 470.
+(Font)              size <17.28> substituted on input line 468.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 470.
+(Font)              size <17.28> substituted on input line 468.
 
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 470.
+(Font)              size <17.28> substituted on input line 468.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 470.
+(Font)              size <17.28> substituted on input line 468.
 
-LaTeX Info: Redefining \rmfamily on input line 470.
-LaTeX Info: Redefining \sffamily on input line 470.
-LaTeX Info: Redefining \ttfamily on input line 470.
+LaTeX Info: Redefining \rmfamily on input line 468.
+LaTeX Info: Redefining \sffamily on input line 468.
+LaTeX Info: Redefining \ttfamily on input line 468.
 luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
 guage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 470.
-LaTeX Info: Redefining \sffamily on input line 470.
-LaTeX Info: Redefining \ttfamily on input line 470.
+LaTeX Info: Redefining \rmfamily on input line 468.
+LaTeX Info: Redefining \sffamily on input line 468.
+LaTeX Info: Redefining \ttfamily on input line 468.
 
-Underfull \hbox (badness 5105) in paragraph at lines 470--470
+Underfull \hbox (badness 5105) in paragraph at lines 468--468
 []\TU/LinLibertine_R.otf(0)/m/it/16 Ky-rie, ele-ison. Chry-ste, ele-ison. Kýrie
 ,
  []
 
+LaTeX Info: Redefining \rmfamily on input line 469.
+LaTeX Info: Redefining \sffamily on input line 469.
+LaTeX Info: Redefining \ttfamily on input line 469.
+\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
+LaTeX Info: Redefining \rmfamily on input line 469.
+LaTeX Info: Redefining \sffamily on input line 469.
+LaTeX Info: Redefining \ttfamily on input line 469.
+LaTeX Info: Redefining \rmfamily on input line 469.
+LaTeX Info: Redefining \sffamily on input line 469.
+LaTeX Info: Redefining \ttfamily on input line 469.
+luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
+guage plk
+set lang polish, 4
+LaTeX Info: Redefining \rmfamily on input line 469.
+LaTeX Info: Redefining \sffamily on input line 469.
+LaTeX Info: Redefining \ttfamily on input line 469.
+LaTeX Info: Redefining \rmfamily on input line 470.
+LaTeX Info: Redefining \sffamily on input line 470.
+LaTeX Info: Redefining \ttfamily on input line 470.
+\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
+LaTeX Info: Redefining \rmfamily on input line 470.
+LaTeX Info: Redefining \sffamily on input line 470.
+LaTeX Info: Redefining \ttfamily on input line 470.
+LaTeX Info: Redefining \rmfamily on input line 470.
+LaTeX Info: Redefining \sffamily on input line 470.
+LaTeX Info: Redefining \ttfamily on input line 470.
+luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
+guage plk
+set lang polish, 4
+LaTeX Info: Redefining \rmfamily on input line 470.
+LaTeX Info: Redefining \sffamily on input line 470.
+LaTeX Info: Redefining \ttfamily on input line 470.
 LaTeX Info: Redefining \rmfamily on input line 471.
 LaTeX Info: Redefining \sffamily on input line 471.
 LaTeX Info: Redefining \ttfamily on input line 471.
@@ -7312,6 +7347,7 @@ set lang polish, 4
 LaTeX Info: Redefining \rmfamily on input line 498.
 LaTeX Info: Redefining \sffamily on input line 498.
 LaTeX Info: Redefining \ttfamily on input line 498.
+[26]
 LaTeX Info: Redefining \rmfamily on input line 499.
 LaTeX Info: Redefining \sffamily on input line 499.
 LaTeX Info: Redefining \ttfamily on input line 499.
@@ -7335,6 +7371,12 @@ LaTeX Info: Redefining \ttfamily on input line 500.
 LaTeX Info: Redefining \rmfamily on input line 500.
 LaTeX Info: Redefining \sffamily on input line 500.
 LaTeX Info: Redefining \ttfamily on input line 500.
+
+Underfull \hbox (badness 2310) in paragraph at lines 500--500
+[]\TU/LinLibertine_R.otf(0)/m/n/16 Agnus Déi, quí tól-lis pec-cá-ta mún-di,
+
+ []
+
 LaTeX Info: Redefining \rmfamily on input line 500.
 LaTeX Info: Redefining \sffamily on input line 500.
 LaTeX Info: Redefining \ttfamily on input line 500.
@@ -7344,7 +7386,12 @@ set lang polish, 4
 LaTeX Info: Redefining \rmfamily on input line 500.
 LaTeX Info: Redefining \sffamily on input line 500.
 LaTeX Info: Redefining \ttfamily on input line 500.
-[25]
+
+Underfull \hbox (badness 3386) in paragraph at lines 500--500
+[]\TU/LinLibertine_R.otf(0)/m/it/16 Ba-ran-ku Bo-ży, któ-ry gła-dzisz grze-ch
+y
+ []
+
 LaTeX Info: Redefining \rmfamily on input line 501.
 LaTeX Info: Redefining \sffamily on input line 501.
 LaTeX Info: Redefining \ttfamily on input line 501.
@@ -7352,6 +7399,12 @@ LaTeX Info: Redefining \ttfamily on input line 501.
 LaTeX Info: Redefining \rmfamily on input line 501.
 LaTeX Info: Redefining \sffamily on input line 501.
 LaTeX Info: Redefining \ttfamily on input line 501.
+
+Underfull \hbox (badness 2310) in paragraph at lines 501--501
+[]\TU/LinLibertine_R.otf(0)/m/n/16 Agnus Déi, quí tól-lis pec-cá-ta mún-di,
+
+ []
+
 LaTeX Info: Redefining \rmfamily on input line 501.
 LaTeX Info: Redefining \sffamily on input line 501.
 LaTeX Info: Redefining \ttfamily on input line 501.
@@ -7361,6 +7414,12 @@ set lang polish, 4
 LaTeX Info: Redefining \rmfamily on input line 501.
 LaTeX Info: Redefining \sffamily on input line 501.
 LaTeX Info: Redefining \ttfamily on input line 501.
+
+Underfull \hbox (badness 3386) in paragraph at lines 501--501
+[]\TU/LinLibertine_R.otf(0)/m/it/16 Ba-ran-ku Bo-ży, któ-ry gła-dzisz grze-ch
+y
+ []
+
 LaTeX Info: Redefining \rmfamily on input line 502.
 LaTeX Info: Redefining \sffamily on input line 502.
 LaTeX Info: Redefining \ttfamily on input line 502.
@@ -7396,12 +7455,6 @@ LaTeX Info: Redefining \ttfamily on input line 503.
 LaTeX Info: Redefining \rmfamily on input line 503.
 LaTeX Info: Redefining \sffamily on input line 503.
 LaTeX Info: Redefining \ttfamily on input line 503.
-
-Underfull \hbox (badness 2310) in paragraph at lines 503--503
-[]\TU/LinLibertine_R.otf(0)/m/n/16 Agnus Déi, quí tól-lis pec-cá-ta mún-di,
-
- []
-
 LaTeX Info: Redefining \rmfamily on input line 503.
 LaTeX Info: Redefining \sffamily on input line 503.
 LaTeX Info: Redefining \ttfamily on input line 503.
@@ -7411,12 +7464,6 @@ set lang polish, 4
 LaTeX Info: Redefining \rmfamily on input line 503.
 LaTeX Info: Redefining \sffamily on input line 503.
 LaTeX Info: Redefining \ttfamily on input line 503.
-
-Underfull \hbox (badness 3386) in paragraph at lines 503--503
-[]\TU/LinLibertine_R.otf(0)/m/it/16 Ba-ran-ku Bo-ży, któ-ry gła-dzisz grze-ch
-y
- []
-
 LaTeX Info: Redefining \rmfamily on input line 504.
 LaTeX Info: Redefining \sffamily on input line 504.
 LaTeX Info: Redefining \ttfamily on input line 504.
@@ -7424,12 +7471,6 @@ LaTeX Info: Redefining \ttfamily on input line 504.
 LaTeX Info: Redefining \rmfamily on input line 504.
 LaTeX Info: Redefining \sffamily on input line 504.
 LaTeX Info: Redefining \ttfamily on input line 504.
-
-Underfull \hbox (badness 2310) in paragraph at lines 504--504
-[]\TU/LinLibertine_R.otf(0)/m/n/16 Agnus Déi, quí tól-lis pec-cá-ta mún-di,
-
- []
-
 LaTeX Info: Redefining \rmfamily on input line 504.
 LaTeX Info: Redefining \sffamily on input line 504.
 LaTeX Info: Redefining \ttfamily on input line 504.
@@ -7439,129 +7480,91 @@ set lang polish, 4
 LaTeX Info: Redefining \rmfamily on input line 504.
 LaTeX Info: Redefining \sffamily on input line 504.
 LaTeX Info: Redefining \ttfamily on input line 504.
-
-Underfull \hbox (badness 3386) in paragraph at lines 504--504
-[]\TU/LinLibertine_R.otf(0)/m/it/16 Ba-ran-ku Bo-ży, któ-ry gła-dzisz grze-ch
-y
- []
-
-LaTeX Info: Redefining \rmfamily on input line 505.
-LaTeX Info: Redefining \sffamily on input line 505.
-LaTeX Info: Redefining \ttfamily on input line 505.
-\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 505.
-LaTeX Info: Redefining \sffamily on input line 505.
-LaTeX Info: Redefining \ttfamily on input line 505.
-LaTeX Info: Redefining \rmfamily on input line 505.
-LaTeX Info: Redefining \sffamily on input line 505.
-LaTeX Info: Redefining \ttfamily on input line 505.
-luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
-guage plk
-set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 505.
-LaTeX Info: Redefining \sffamily on input line 505.
-LaTeX Info: Redefining \ttfamily on input line 505.
-LaTeX Info: Redefining \rmfamily on input line 506.
-LaTeX Info: Redefining \sffamily on input line 506.
-LaTeX Info: Redefining \ttfamily on input line 506.
-\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 506.
-LaTeX Info: Redefining \sffamily on input line 506.
-LaTeX Info: Redefining \ttfamily on input line 506.
-LaTeX Info: Redefining \rmfamily on input line 506.
-LaTeX Info: Redefining \sffamily on input line 506.
-LaTeX Info: Redefining \ttfamily on input line 506.
-luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
-guage plk
-set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 506.
-LaTeX Info: Redefining \sffamily on input line 506.
-LaTeX Info: Redefining \ttfamily on input line 506.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
-LaTeX Info: Redefining \rmfamily on input line 510.
-LaTeX Info: Redefining \sffamily on input line 510.
-LaTeX Info: Redefining \ttfamily on input line 510.
+ [27]
+LaTeX Info: Redefining \rmfamily on input line 508.
+LaTeX Info: Redefining \sffamily on input line 508.
+LaTeX Info: Redefining \ttfamily on input line 508.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 510.
-LaTeX Info: Redefining \sffamily on input line 510.
-LaTeX Info: Redefining \ttfamily on input line 510.
-LaTeX Info: Redefining \rmfamily on input line 510.
-LaTeX Info: Redefining \sffamily on input line 510.
-LaTeX Info: Redefining \ttfamily on input line 510.
+LaTeX Info: Redefining \rmfamily on input line 508.
+LaTeX Info: Redefining \sffamily on input line 508.
+LaTeX Info: Redefining \ttfamily on input line 508.
+LaTeX Info: Redefining \rmfamily on input line 508.
+LaTeX Info: Redefining \sffamily on input line 508.
+LaTeX Info: Redefining \ttfamily on input line 508.
 luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
 guage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 510.
-LaTeX Info: Redefining \sffamily on input line 510.
-LaTeX Info: Redefining \ttfamily on input line 510.
-LaTeX Info: Redefining \rmfamily on input line 511.
-LaTeX Info: Redefining \sffamily on input line 511.
-LaTeX Info: Redefining \ttfamily on input line 511.
+LaTeX Info: Redefining \rmfamily on input line 508.
+LaTeX Info: Redefining \sffamily on input line 508.
+LaTeX Info: Redefining \ttfamily on input line 508.
+LaTeX Info: Redefining \rmfamily on input line 509.
+LaTeX Info: Redefining \sffamily on input line 509.
+LaTeX Info: Redefining \ttfamily on input line 509.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 511.
-LaTeX Info: Redefining \sffamily on input line 511.
-LaTeX Info: Redefining \ttfamily on input line 511.
+LaTeX Info: Redefining \rmfamily on input line 509.
+LaTeX Info: Redefining \sffamily on input line 509.
+LaTeX Info: Redefining \ttfamily on input line 509.
 
-Underfull \hbox (badness 2781) in paragraph at lines 511--511
+Underfull \hbox (badness 2781) in paragraph at lines 509--509
 []\TU/LinLibertine_R.otf(0)/b/n/24.88 D\TU/LinLibertine_R.otf(0)/m/n/16 eus, qui
  in-ef-fá-bi-li pro-vi-dén-tia be-á-
  []
 
-LaTeX Info: Redefining \rmfamily on input line 511.
-LaTeX Info: Redefining \sffamily on input line 511.
-LaTeX Info: Redefining \ttfamily on input line 511.
+LaTeX Info: Redefining \rmfamily on input line 509.
+LaTeX Info: Redefining \sffamily on input line 509.
+LaTeX Info: Redefining \ttfamily on input line 509.
 luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
 guage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 511.
-LaTeX Info: Redefining \sffamily on input line 511.
-LaTeX Info: Redefining \ttfamily on input line 511.
+LaTeX Info: Redefining \rmfamily on input line 509.
+LaTeX Info: Redefining \sffamily on input line 509.
+LaTeX Info: Redefining \ttfamily on input line 509.
 
-Underfull \hbox (badness 2096) in paragraph at lines 511--511
+Underfull \hbox (badness 2096) in paragraph at lines 509--509
 \TU/LinLibertine_R.otf(0)/m/it/16 dow-nic-two w nie-bie, gdy ja-ko opie-ku-
  []
 
 
-Underfull \hbox (badness 2884) in paragraph at lines 511--511
+Underfull \hbox (badness 2884) in paragraph at lines 509--509
 \TU/LinLibertine_R.otf(0)/m/it/16 na czci-my go na zie-mi: Któ-ry ży-jesz
  []
 
-LaTeX Info: Redefining \rmfamily on input line 514.
-LaTeX Info: Redefining \sffamily on input line 514.
-LaTeX Info: Redefining \ttfamily on input line 514.
+LaTeX Info: Redefining \rmfamily on input line 512.
+LaTeX Info: Redefining \sffamily on input line 512.
+LaTeX Info: Redefining \ttfamily on input line 512.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 514.
+(polyglossia)             line 512.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 514.
+(polyglossia)             on line 512.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 514.
+(polyglossia)             line 512.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 514.
+(polyglossia)             on line 512.
 
-LaTeX Info: Redefining \rmfamily on input line 514.
-LaTeX Info: Redefining \sffamily on input line 514.
-LaTeX Info: Redefining \ttfamily on input line 514.
+LaTeX Info: Redefining \rmfamily on input line 512.
+LaTeX Info: Redefining \sffamily on input line 512.
+LaTeX Info: Redefining \ttfamily on input line 512.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 514.
+(polyglossia)             line 512.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 514.
+(polyglossia)             on line 512.
 
-Module gregoriotex Info: Processing gabc snippet... on input line 515
+Module gregoriotex Info: Processing gabc snippet... on input line 513
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
 Inserting `gregoriotex.post_linebreak' in `post_linebreak_filter'.
 Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
@@ -7570,11 +7573,11 @@ Inserting `gregoriotex.disable_hyphenation' in `hyphenate'.
 Inserting `allow hyphen breaks' in `hyphenate'.
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.
-Module gregoriotex Info: Looking in  on input line 519
-Module gregoriotex Info: Found Litany-Ioseph-I.gabc directly on input line 519
-Module gregoriotex Info: Looking in  on input line 519
+Module gregoriotex Info: Looking in  on input line 517
+Module gregoriotex Info: Found Litany-Ioseph-I.gabc directly on input line 517
+Module gregoriotex Info: Looking in  on input line 517
 Module gregoriotex Info: Found Litany-Ioseph-I-6_0_0-beta1.gtex directly on inpu
-t line 519
+t line 517
 (./Litany-Ioseph-I-6_0_0-beta1.gtex
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
 Inserting `gregoriotex.post_linebreak' in `post_linebreak_filter'.
@@ -7590,11 +7593,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--177
 
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.)
-Module gregoriotex Info: Looking in  on input line 526
-Module gregoriotex Info: Found Litany-Ioseph-II.gabc directly on input line 526
-Module gregoriotex Info: Looking in  on input line 526
+Module gregoriotex Info: Looking in  on input line 524
+Module gregoriotex Info: Found Litany-Ioseph-II.gabc directly on input line 524
+Module gregoriotex Info: Looking in  on input line 524
 Module gregoriotex Info: Found Litany-Ioseph-II-6_0_0-beta1.gtex directly on inp
-ut line 526
+ut line 524
  (./Litany-Ioseph-II-6_0_0-beta1.gtex
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
 Inserting `gregoriotex.post_linebreak' in `post_linebreak_filter'.
@@ -7612,20 +7615,20 @@ Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.)
 Underfull \vbox (badness 1769) has occurred while \output is active []
 
- [27
+ [28
 Module gregoriotex Info: saving 0f9a695dbce6abac950fd80df91125fd7c1845fd.1, 1 [1
-] (15087624,21605851) on input line 541
+] (15087624,21605851) on input line 539
 Module gregoriotex Info: saving 0f9a695dbce6abac950fd80df91125fd7c1845fd.1, 1 [2
-] (18913222,21605851) on input line 541
+] (18913222,21605851) on input line 539
 Module gregoriotex Info: computed length for 0f9a695dbce6abac950fd80df91125fd7c1
-845fd.1, 1: 3825598 on input line 541
+845fd.1, 1: 3825598 on input line 539
 ]
-Module gregoriotex Info: Looking in  on input line 542
+Module gregoriotex Info: Looking in  on input line 540
 Module gregoriotex Info: Found Litany-Ioseph-III-2.gabc directly on input line 5
-42
-Module gregoriotex Info: Looking in  on input line 542
+40
+Module gregoriotex Info: Looking in  on input line 540
 Module gregoriotex Info: Found Litany-Ioseph-III-2-6_0_0-beta1.gtex directly on 
-input line 542
+input line 540
 
 (./Litany-Ioseph-III-2-6_0_0-beta1.gtex
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
@@ -7642,11 +7645,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--160
 
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.)
-Module gregoriotex Info: Looking in  on input line 557
-Module gregoriotex Info: Found Litany-Ioseph-IV.gabc directly on input line 557
-Module gregoriotex Info: Looking in  on input line 557
+Module gregoriotex Info: Looking in  on input line 555
+Module gregoriotex Info: Found Litany-Ioseph-IV.gabc directly on input line 555
+Module gregoriotex Info: Looking in  on input line 555
 Module gregoriotex Info: Found Litany-Ioseph-IV-6_0_0-beta1.gtex directly on inp
-ut line 557
+ut line 555
  (./Litany-Ioseph-IV-6_0_0-beta1.gtex
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
 Inserting `gregoriotex.post_linebreak' in `post_linebreak_filter'.
@@ -7662,7 +7665,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--216
 
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.)
-Module gregoriotex Info: Processing gabc snippet... on input line 563
+Module gregoriotex Info: Processing gabc snippet... on input line 561
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
 Inserting `gregoriotex.post_linebreak' in `post_linebreak_filter'.
 Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
@@ -7673,47 +7676,47 @@ Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28
+ [29
 Module gregoriotex Info: saving 8dea2e1f21e9173515f5b25bd65568b55ef738b1.1, 1 [1
-] (15898505,45561832) on input line 568
+] (15898505,45561832) on input line 566
 Module gregoriotex Info: saving 8dea2e1f21e9173515f5b25bd65568b55ef738b1.1, 1 [2
-] (21438263,45561832) on input line 568
+] (21438263,45561832) on input line 566
 Module gregoriotex Info: computed length for 8dea2e1f21e9173515f5b25bd65568b55ef
-738b1.1, 1: 5539758 on input line 568
+738b1.1, 1: 5539758 on input line 566
 ]
-LaTeX Info: Redefining \rmfamily on input line 568.
-LaTeX Info: Redefining \sffamily on input line 568.
-LaTeX Info: Redefining \ttfamily on input line 568.
+LaTeX Info: Redefining \rmfamily on input line 566.
+LaTeX Info: Redefining \sffamily on input line 566.
+LaTeX Info: Redefining \ttfamily on input line 566.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 568.
+(polyglossia)             line 566.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 568.
+(polyglossia)             on line 566.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 568.
+(polyglossia)             line 566.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 568.
+(polyglossia)             on line 566.
 
-LaTeX Info: Redefining \rmfamily on input line 568.
-LaTeX Info: Redefining \sffamily on input line 568.
-LaTeX Info: Redefining \ttfamily on input line 568.
+LaTeX Info: Redefining \rmfamily on input line 566.
+LaTeX Info: Redefining \sffamily on input line 566.
+LaTeX Info: Redefining \ttfamily on input line 566.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 568.
+(polyglossia)             line 566.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 568.
+(polyglossia)             on line 566.
 
-Module gregoriotex Info: Processing gabc snippet... on input line 571
+Module gregoriotex Info: Processing gabc snippet... on input line 569
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
 Inserting `gregoriotex.post_linebreak' in `post_linebreak_filter'.
 Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
@@ -7722,7 +7725,7 @@ Inserting `gregoriotex.disable_hyphenation' in `hyphenate'.
 Inserting `allow hyphen breaks' in `hyphenate'.
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.
-Module gregoriotex Info: Processing gabc snippet... on input line 572
+Module gregoriotex Info: Processing gabc snippet... on input line 570
 Removing  `luaotfload.harf.finalize_vlist' from `post_linebreak_filter'.
 Inserting `gregoriotex.post_linebreak' in `post_linebreak_filter'.
 Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
@@ -7735,124 +7738,140 @@ Overfull \hbox (10.5733pt too wide) detected at line 231
 
 Removing  `gregoriotex.post_linebreak' from `post_linebreak_filter'.
 Removing  `gregoriotex.disable_hyphenation' from `hyphenate'.
-LaTeX Info: Redefining \rmfamily on input line 574.
-LaTeX Info: Redefining \sffamily on input line 574.
-LaTeX Info: Redefining \ttfamily on input line 574.
+LaTeX Info: Redefining \rmfamily on input line 572.
+LaTeX Info: Redefining \sffamily on input line 572.
+LaTeX Info: Redefining \ttfamily on input line 572.
 luaotfload | aux : font no 97 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 574.
-LaTeX Info: Redefining \sffamily on input line 574.
-LaTeX Info: Redefining \ttfamily on input line 574.
-LaTeX Info: Redefining \rmfamily on input line 575.
-LaTeX Info: Redefining \sffamily on input line 575.
-LaTeX Info: Redefining \ttfamily on input line 575.
+LaTeX Info: Redefining \rmfamily on input line 572.
+LaTeX Info: Redefining \sffamily on input line 572.
+LaTeX Info: Redefining \ttfamily on input line 572.
+LaTeX Info: Redefining \rmfamily on input line 573.
+LaTeX Info: Redefining \sffamily on input line 573.
+LaTeX Info: Redefining \ttfamily on input line 573.
 luaotfload | aux : font no 97 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 575.
-LaTeX Info: Redefining \sffamily on input line 575.
-LaTeX Info: Redefining \ttfamily on input line 575.
-<../img/maria02.jpg, id=149, 642.4pt x 315.1775pt>
+LaTeX Info: Redefining \rmfamily on input line 573.
+LaTeX Info: Redefining \sffamily on input line 573.
+LaTeX Info: Redefining \ttfamily on input line 573.
+<../img/maria02.jpg, id=154, 642.4pt x 315.1775pt>
 File: ../img/maria02.jpg Graphic file (type jpg)
 <use ../img/maria02.jpg>
-Package luatex.def Info: ../img/maria02.jpg  used on input line 576.
+Package luatex.def Info: ../img/maria02.jpg  used on input line 574.
 (luatex.def)             Requested size: 216.23764pt x 106.09128pt.
-[29<../img/maria02.jpg>]
-LaTeX Info: Redefining \rmfamily on input line 580.
-LaTeX Info: Redefining \sffamily on input line 580.
-LaTeX Info: Redefining \ttfamily on input line 580.
+[30<../img/maria02.jpg>]
+LaTeX Info: Redefining \rmfamily on input line 578.
+LaTeX Info: Redefining \sffamily on input line 578.
+LaTeX Info: Redefining \ttfamily on input line 578.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 580.
-LaTeX Info: Redefining \sffamily on input line 580.
-LaTeX Info: Redefining \ttfamily on input line 580.
+LaTeX Info: Redefining \rmfamily on input line 578.
+LaTeX Info: Redefining \sffamily on input line 578.
+LaTeX Info: Redefining \ttfamily on input line 578.
 luaotfload | aux : font no 56 (nil) defines no feature for script latn with lang
 uage plk
 set lang polish, 4
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 580.
+(polyglossia)             line 578.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 580.
+(polyglossia)             on line 578.
 
-LaTeX Info: Redefining \rmfamily on input line 580.
-LaTeX Info: Redefining \sffamily on input line 580.
-LaTeX Info: Redefining \ttfamily on input line 580.
+LaTeX Info: Redefining \rmfamily on input line 578.
+LaTeX Info: Redefining \sffamily on input line 578.
+LaTeX Info: Redefining \ttfamily on input line 578.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 580.
+(polyglossia)             line 578.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 580.
+(polyglossia)             on line 578.
 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 580.
+(polyglossia)             line 578.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 580.
+(polyglossia)             on line 578.
 
-LaTeX Info: Redefining \rmfamily on input line 580.
-LaTeX Info: Redefining \sffamily on input line 580.
-LaTeX Info: Redefining \ttfamily on input line 580.
+LaTeX Info: Redefining \rmfamily on input line 578.
+LaTeX Info: Redefining \sffamily on input line 578.
+LaTeX Info: Redefining \ttfamily on input line 578.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
 
 Package polyglossia Info: Activating Latin language variant "ecclesiastic" on
-(polyglossia)             line 580.
+(polyglossia)             line 578.
 
 
 Package polyglossia Info: Activating hyphenation patterns for liturgical Latin
-(polyglossia)             on line 580.
+(polyglossia)             on line 578.
 
-LaTeX Info: Redefining \rmfamily on input line 584.
-LaTeX Info: Redefining \sffamily on input line 584.
-LaTeX Info: Redefining \ttfamily on input line 584.
+LaTeX Info: Redefining \rmfamily on input line 582.
+LaTeX Info: Redefining \sffamily on input line 582.
+LaTeX Info: Redefining \ttfamily on input line 582.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 584.
-LaTeX Info: Redefining \sffamily on input line 584.
-LaTeX Info: Redefining \ttfamily on input line 584.
-LaTeX Info: Redefining \rmfamily on input line 585.
-LaTeX Info: Redefining \sffamily on input line 585.
-LaTeX Info: Redefining \ttfamily on input line 585.
+LaTeX Info: Redefining \rmfamily on input line 582.
+LaTeX Info: Redefining \sffamily on input line 582.
+LaTeX Info: Redefining \ttfamily on input line 582.
+LaTeX Info: Redefining \rmfamily on input line 583.
+LaTeX Info: Redefining \sffamily on input line 583.
+LaTeX Info: Redefining \ttfamily on input line 583.
 luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
 guage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 585.
-LaTeX Info: Redefining \sffamily on input line 585.
-LaTeX Info: Redefining \ttfamily on input line 585.
+LaTeX Info: Redefining \rmfamily on input line 583.
+LaTeX Info: Redefining \sffamily on input line 583.
+LaTeX Info: Redefining \ttfamily on input line 583.
 
-Underfull \hbox (badness 1014) in paragraph at lines 585--585
+Underfull \hbox (badness 1014) in paragraph at lines 583--583
 \TU/LinLibertine_R.otf(0)/m/it/16 twu bło-go-sła-wio-nej i naj-chwa-leb-niej-s
 zej
  []
 
-LaTeX Info: Redefining \rmfamily on input line 586.
-LaTeX Info: Redefining \sffamily on input line 586.
-LaTeX Info: Redefining \ttfamily on input line 586.
+LaTeX Info: Redefining \rmfamily on input line 584.
+LaTeX Info: Redefining \sffamily on input line 584.
+LaTeX Info: Redefining \ttfamily on input line 584.
 \l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 586.
-LaTeX Info: Redefining \sffamily on input line 586.
-LaTeX Info: Redefining \ttfamily on input line 586.
-LaTeX Info: Redefining \rmfamily on input line 587.
-LaTeX Info: Redefining \sffamily on input line 587.
-LaTeX Info: Redefining \ttfamily on input line 587.
+LaTeX Info: Redefining \rmfamily on input line 584.
+LaTeX Info: Redefining \sffamily on input line 584.
+LaTeX Info: Redefining \ttfamily on input line 584.
+LaTeX Info: Redefining \rmfamily on input line 585.
+LaTeX Info: Redefining \sffamily on input line 585.
+LaTeX Info: Redefining \ttfamily on input line 585.
 luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
 guage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 587.
-LaTeX Info: Redefining \sffamily on input line 587.
-LaTeX Info: Redefining \ttfamily on input line 587.
+LaTeX Info: Redefining \rmfamily on input line 585.
+LaTeX Info: Redefining \sffamily on input line 585.
+LaTeX Info: Redefining \ttfamily on input line 585.
 
-Underfull \hbox (badness 1715) in paragraph at lines 587--587
+Underfull \hbox (badness 1715) in paragraph at lines 585--585
 [][][]\TU/LinLibertine_R.otf(0)/m/it/16 V. Bło-go-sła-wio-ne ło-no Ma-ryi Dzi
 e-wi-cy,
  []
 
+LaTeX Info: Redefining \rmfamily on input line 586.
+LaTeX Info: Redefining \sffamily on input line 586.
+LaTeX Info: Redefining \ttfamily on input line 586.
+\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
+LaTeX Info: Redefining \rmfamily on input line 586.
+LaTeX Info: Redefining \sffamily on input line 586.
+LaTeX Info: Redefining \ttfamily on input line 586.
+LaTeX Info: Redefining \rmfamily on input line 587.
+LaTeX Info: Redefining \sffamily on input line 587.
+LaTeX Info: Redefining \ttfamily on input line 587.
+luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
+guage plk
+set lang polish, 4
+LaTeX Info: Redefining \rmfamily on input line 587.
+LaTeX Info: Redefining \sffamily on input line 587.
+LaTeX Info: Redefining \ttfamily on input line 587.
 LaTeX Info: Redefining \rmfamily on input line 588.
 LaTeX Info: Redefining \sffamily on input line 588.
 LaTeX Info: Redefining \ttfamily on input line 588.
@@ -7876,52 +7895,36 @@ LaTeX Info: Redefining \ttfamily on input line 590.
 LaTeX Info: Redefining \rmfamily on input line 590.
 LaTeX Info: Redefining \sffamily on input line 590.
 LaTeX Info: Redefining \ttfamily on input line 590.
-LaTeX Info: Redefining \rmfamily on input line 591.
-LaTeX Info: Redefining \sffamily on input line 591.
-LaTeX Info: Redefining \ttfamily on input line 591.
-luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
-guage plk
-set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 591.
-LaTeX Info: Redefining \sffamily on input line 591.
-LaTeX Info: Redefining \ttfamily on input line 591.
-LaTeX Info: Redefining \rmfamily on input line 592.
-LaTeX Info: Redefining \sffamily on input line 592.
-LaTeX Info: Redefining \ttfamily on input line 592.
-\l@ecclesiasticlatin = a dialect from \language\l@liturgicallatin 
-LaTeX Info: Redefining \rmfamily on input line 592.
-LaTeX Info: Redefining \sffamily on input line 592.
-LaTeX Info: Redefining \ttfamily on input line 592.
 
-Underfull \hbox (badness 1221) in paragraph at lines 592--592
+Underfull \hbox (badness 1221) in paragraph at lines 590--590
 \TU/LinLibertine_R.otf(0)/m/n/16 Cre-a-tó-rem cæ-li et ter-ræ. Et in Je-sum
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 592--592
+Underfull \hbox (badness 1655) in paragraph at lines 590--590
 \TU/LinLibertine_R.otf(0)/m/n/16 ca-tó-rum, car-nis re-sur-rec-ti-ó-nem, vi-ta
 m
  []
 
-LaTeX Info: Redefining \rmfamily on input line 594.
-LaTeX Info: Redefining \sffamily on input line 594.
-LaTeX Info: Redefining \ttfamily on input line 594.
+LaTeX Info: Redefining \rmfamily on input line 592.
+LaTeX Info: Redefining \sffamily on input line 592.
+LaTeX Info: Redefining \ttfamily on input line 592.
 luaotfload | aux : font no 120 (nil) defines no feature for script latn with lan
 guage plk
 set lang polish, 4
-LaTeX Info: Redefining \rmfamily on input line 594.
-LaTeX Info: Redefining \sffamily on input line 594.
-LaTeX Info: Redefining \ttfamily on input line 594.
+LaTeX Info: Redefining \rmfamily on input line 592.
+LaTeX Info: Redefining \sffamily on input line 592.
+LaTeX Info: Redefining \ttfamily on input line 592.
 
-Underfull \hbox (badness 1082) in paragraph at lines 594--594
+Underfull \hbox (badness 1082) in paragraph at lines 592--592
 \TU/LinLibertine_R.otf(0)/m/it/16 Stwo-rzy-cie-la nie-ba i zie-mi, i w Je-zu-sa
  []
 
-[30]
-<../img/logo_ua.jpg, id=159, 575.14874pt x 734.745pt>
+[31]
+<../img/logo_ua.jpg, id=163, 575.14874pt x 734.745pt>
 File: ../img/logo_ua.jpg Graphic file (type jpg)
 <use ../img/logo_ua.jpg>
-Package luatex.def Info: ../img/logo_ua.jpg  used on input line 598.
+Package luatex.def Info: ../img/logo_ua.jpg  used on input line 596.
 (luatex.def)             Requested size: 189.21413pt x 241.71544pt.
  [1<../img/logo_ua.jpg>] (./kompleta.aux)
  ***********
@@ -7938,15 +7941,15 @@ Package rerunfilecheck Info: File `kompleta.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 55663 strings out of 476447
+ 55641 strings out of 476447
  305348,1977958 words of node,token memory allocated
  5340 words of node memory still in use:
    15 hlist, 11 vlist, 11 rule, 1 local_par, 190 glue, 14 kern, 7 penalty, 7 gly
 ph, 1110 attribute, 161 glue_spec, 215 attribute_list, 2 write, 1 user_defined n
 odes
-   avail lists: 1:3,2:36720,3:5503,4:29,5:8123,6:589,7:7969,8:3,9:9371,10:19,11:
+   avail lists: 1:3,2:36843,3:5485,4:29,5:8173,6:589,7:7969,8:3,9:9365,10:19,11:
 1050
- 76824 multiletter control sequences out of 65536+600000
+ 76801 multiletter control sequences out of 65536+600000
  123 fonts using 31042631 bytes
  108i,14n,117p,1949b,1044s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/Laser/Library/Fonts/greciliae-hollow.ttf></Users/Laser/Library/Fonts/gre
@@ -7957,10 +7960,10 @@ libertine/LinLibertine_RI.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/libertine/LinLibertine
 _R.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/libertine/LinLi
 bertine_RZ.otf></Users/Laser/Library/Fonts/jsl-ancient.ttf>
-Output written on kompleta.pdf (33 pages, 2202977 bytes).
+Output written on kompleta.pdf (34 pages, 2203676 bytes).
 
-PDF statistics: 230 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 131072)
+PDF statistics: 236 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
