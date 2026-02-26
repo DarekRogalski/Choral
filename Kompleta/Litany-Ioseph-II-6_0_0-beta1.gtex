@@ -4,11 +4,11 @@
 \GreBeginHeaders %
 \GreHeader{name}{Litany II}%
 \GreEndHeaders %
-\GreBeginScore{0f9a695dbce6abac950fd80df91125fd7c1845fd}{12}{8}{0}{0}{}{4}{\GreInitialClefPosition{3}{0}}%
-\GreSetLargestClef{c}{3}{3}{c}{0}{3}%
+\GreBeginScore{283c94d6d50b3277cc8b9145c0317bb17299a22c}{12}{8}{0}{0}{}{4}{\GreInitialClefPosition{4}{0}}%
+\GreSetLargestClef{c}{4}{3}{c}{0}{3}%
 \GreScoreOpening{%
 }{%
-\GreSetInitialClef{c}{3}{3}{c}{0}{3}{1}%
+\GreSetInitialClef{c}{4}{3}{c}{0}{3}{1}%
 }{%
 }{\GreSyllable}{\GreSetFirstSyllableText{S}{a}{nc}{{}{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{a}}}}{\GreFirstWord{\GreFirstSyllable{nc}}}}{{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{S}}}}{\GreFirstWord{\GreFirstSyllable{a}}}{\GreFirstWord{\GreFirstSyllable{nc}}}}{}}{}{\GreFirstWord}{0}{\GreSetNextSyllable{\GreFirstWord{t}}{\GreFirstWord{a}}{}{\GreFirstWord{t}}{\GreFirstWord{a}}}{}{{0}{0}}{}{%
 \GreSyllableNoteCount{1}%

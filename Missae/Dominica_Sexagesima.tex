@@ -1,0 +1,170 @@
+% !TEX TS-program = lualatex+se+debug
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{22}%rozmiar wyniku GregorioTEX
+\gresetlastline{ragged}% justowanie do lewej
+\grechangestyle{initial}{\greIniZallmanCaps\fontsize{36}{20}\selectfont} 
+\grechangedim{commentaryraise}{4pt}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+% koniec 
+
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+%\def\mydebug{1}
+\begin{document}
+\makeatletter
+\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+\makeatother
+\pagestyle{empty}
+%\pagestyle{plain}	
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Dominica Septuagesima}
+	\small\textit{Liber Usualis, p.497\\}
+	\small\textit{}
+	%\vspace{1mm}
+\end{center}	
+\end{spacing}
+% <c><v>*</v></c>
+% <c><i>Ps.</i></c> 
+% <c><sp>V/</sp>.</c>
+% <c><i>ij.</i></c>
+% -------------------- INTROIT -------------------- 
+%\greannotation{} 
+\vspace{-5pt}
+\greannotation{Intr.} 
+\greannotation{1.} 
+\grecommentary[4mm]{Ps 43: 23-26, 2}
+\gresetinitiallines{1}\gabcsnippet{(c4) EX(d)súr(dfe)ge,(dcd.) <c><v>*</v></c>(,)
+qua(ffg)re(f) ob(f)dór(fg~)mis(fe) Dó(gh)mi(h)ne?(h.) (;) ex(h)súr(hhggh~)ge,(f.) (,) et(fg~) ne(f) re(f)pél(fg~)las(f) in(gvF'Ef) fi(d_e_d_)nem:(d.) (:)
+qua(df!gh)re(g) fá(gh)ci(f)em(df~) tu(f)am(fef) a(d)vér(cf~)tis,(f.) (;) ob(f)li(g)ví(hjh)sce(gh)ris(h.) (,) tri(h)bu(gf)la(gh)ti(gh)ó(fg'h)nem(gh) nos(f_g_f_)tram?(f.) (;) Ad(g)hǽ(ghg)sit(e) in(f) ter(fgf)ra(c.) ven(df)ter(ef~) nos(d_e_d_)ter:(d.) (:)
+ex(f)súr(gh~)ge,(h) Dó(h)mi(g)ne,(f.) (,) ád(h)ju(g)va(gh) nos,(f.) (;) et(df) lí(e!g'h)be(fe)ra(de!fvED'e) nos.(e[ll:1]d..) (::)
+<c><i>Ps.</i></c>De(f)us,(gh) áu(h)ri(h)bus(h) nos(hj)tris(h) au(h)dí(h)vi(hg)mus:(gh..) <c><v>*</v></c>(:)
+pa(gf)tres(gh) nos(h)tri(h) an(h)nun(h)ti(h)a(hjh)vé(g')runt(f) no(fff)bis.(d.) (::)
+Gló(f)ri(gh)a(h) Pa(h)tri,(h) et(h) Fí(h)li(h)o,(h.) (,) et(h) Spi(h)rí(hj)tu(h)i(h) Sanc(hg)to.(gh..) <c><v>*</v></c>(:) Sic(gf)ut(gh) e(h)rat(h) in(h) prin(h)cí(h)pi(h)o,(h.) (,) et(h) nunc,(hj) et(h) sem(hg~)per,(gh..) (:) et(gf) in(gh) sǽ(h)cu(h)la(h) sæ(h)cu(hjh)ló(g)rum.(f) A(fff)men.(d.) (::)}
+\linespace
+%\tlumaczR{\red{Ga 6:14} A myśmy się chlubić powinni Krzyżem Pana naszego Jezusa Chrystusa; w Nim jest zbawienie, życie i zmartwychwstanie nasze; przez Niego jesteśmy zbawieni i oswobodzeni. \red{Ps 66:2} Niech Bóg się zmiłuje nad nami i nam błogosławi: niech nam ukaże pogodne oblicze i zmiłuje się nad nami. Chwała Ojcu…}\sectionspace
+%
+% -------------------- GRADUALE -------------------- 
+%
+%\greannotation{} 
+\grechangedim{commentaryraise}{10pt}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+\greannotation{Grad.} 
+\greannotation{1.} 
+\grecommentary[4mm]{Ps 82: 19, 14}
+\gresetinitiallines{1}\gabcsnippet{(c4) SCi(dfd)ant(d/ffd/fffhvGF) gen(gff'f)tes(d/ffdev'1//fgddc.) <c><v>*</v></c>(;)
+quón(d)i(fdf)am(gfg) no(ixg_f/g/igh)men(h) ti(ixh.g!hwi)bi(h.) (;) De(ixg_f/g/igh)us:(hgi//hihiggf.0) (:)
+tu(f) so(hf/gh!jjh)lus(hghvGFg.) (,) Al(h!jij)tís(h_f)si(gf~)mus(f_g//d!f'g//fh!jvGF'fd/ff/ge'/fgd'/e[ll:1]ddc.) (:)
+su(c)per(d) om(fg/hg)nem(h!jj/hjg) ter(fv.dge//f!gwh)ram.(ghffgFE.) (,) (h_jHG'hvF'D//ff/gffd.) (::)
+<c><sp>V/</sp>.</c> De(hg)us(g) me(gh/jh/jggf)us,(f.) (;) po(hj)ne(j_i) il(jjj)los(hg__) (,) ut(gf~) ro(ixgv.fhg/hiGF.hf/gh!jj/k!mmmvKJ'jvH'G,jkjjh)tam,(hjh/jjjh..) (:)
+et(f) sic(f)ut(ghg~) stí(h_f/ghGF.,hV!ghfg./d!ewf//e!gwhg/h!jj)pu(hfg)lam(ghgff/ded.) (:)
+an(d!fffd~)te(ef) fá(ghghhghv.ixfh!ivGF'E//f!gwh!ivHG)ci(hg)em(g.) <c><v>*</v></c>(,) ven(ixhiGF'h!jjvH'G)ti.(hghF'Efg..) (,) (d!ewf!gv.fhGF'ED'ewfd.1) (::)}
+\grechangedim{commentaryraise}{4pt}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+\paragraphspace
+\grechangestaffsize{23}%rozmiar wyniku GregorioTEX
+%
+% -------------------- ALLELUIA -------------------- 
+%
+%\greannotation{} 
+\greannotation{Tractus} 
+\greannotation{8.} 
+\grecommentary[4mm]{Ps 59: 4, 6}
+\gresetinitiallines{1}\gabcsnippet{(c4) COm(e)mo(e)vís(gh/j.h!iwj)ti(k_[hl:1]j//j'jjvH'GF.) (,) (gh!jjjvIGh_g/h!iw!jvIHivHGhg..) <c><v>*</v></c>(;)
+Dó(gjjk)mi(h)ne(hg/hf//h!jhj) ter(jvIH'iw!jvI'HG'h)ram,(hg..) (:)
+et(g) con(h_g/h!iwj)tur(g_f~)bás(g)ti(h) e(j./kjjg//j./kj/!j'jj/kjjh,ji/jjvI'G//hjhjvHF.1,gh!jvvI'G//hjHF'g)am.(g/hhg.) (::)
+<c><sp>V/</sp>.</c> 2. Sa(g!jj/kljj'jg,jj/kljj'jh//ijH'GF.g.h!iwjjk)na(j.) (;) con(ij'k~)tri(k_[hl:1]i)ti(kj)ó(j_kJ'//G)nes(g_h) (,) e(fh/ji/jkhhg/hg!jjhjvG~F~)jus,(gf..) (:)
+qui(ixfh/ih/ig)a(j.) mo(jjjvHG'h)ta(g) est.(dg'//jvHG.dg'//hjhhg.) (,) (jjjg/hhfgv.dg/hg/hg/hhg.) (::)
+<c><sp>V/</sp>.</c> 3. Ut(fg) fú(g!jj)gi(j)ant(jj/kljj'jg) (,) (jj/kljj'jh//ijH'GF.g.h!iwjjv) (;) a(jj) fá(jk'l)ci(j_h)e(h_g) ar(h!jj//jjj'jk~)cus,(gv.fh/ji/jkhhg/hg/jjh/jggf.0) (:)
+ut(fg!hj~) li(igh)be(gfgh!jij)rén(j.h!iwj)tur(jjjvIHivHGhg..) (;) e(g)léc(hg/jjghvG'F)ti(f!h'j) <c><v>*</v></c>() tu(j)i.(jijHGg'g/hggfg.) (,) (jjjkvJ'IH'hg/hjI'HG'ghf.1) (,) (h!iw!jvIH'ihhg.) (::)}
+\paragraphspace
+%
+% -------------------- OFFERTORIUM -------------------- 
+%
+%\greannotation{} 
+\greannotation{Offert.} 
+\greannotation{4.} 
+\grecommentary[4mm]{Ps 16: 5, 6-7}
+\gresetinitiallines{1}\gabcsnippet{(c4) PEr(c)fi(dfe)ce(f.) <c><v>*</v></c>() gres(ff//fff_d)sus(cd'f) me(f_e)os(egff) (,) in(dg~) sé(gv.f!h'j)mi(g_e)tis(gh) tu(fdgvFE)is,(e.) (;) ut(dg) non(gfg) mo(fe)ve(d!ff)án(fff)tur(d!ff) (,) ves(d)tí(fv.ffd)gi(f)a(fhG'Fghg) me(egff)a:(fe..) (:)
+in(f)clí(ixef/hig)na(ghffe) au(fffd~)rem(f) tu(gf)am,(f.) (;) et(fffd) ex(f)áu(gf~)di(fg) ver(g)ba(fgff) me(d!ffd)a:(d!ewf.) (:)
+mi(c)rí(cd/fef)fi(f)ca(f) mi(fgf)se(f)ri(ef)cór(gh)di(g)as(ef) tu(g.f!gwhgh)as,(hg..) (;) qui(f) sal(e.f!gwh)vos(ghF'E) fa(g)cis(fff_g) (,) spe(dc)rán(df~)tes(fffddc) in(df) te,(ef'g) Dó(e)mi(egff)ne.(fe..) (::)}
+\paragraphspace
+\grechangestaffsize{23}%rozmiar wyniku GregorioTEX
+%
+% -------------------- COMMUNIO -------------------- 
+%
+% <c><v>*</v></c>
+% <c><i>Ps.</i></c> 
+% <c><c><sp>V/</sp>.</c>.</c>
+% <c><i>ij.</i></c>
+%\greannotation{} 
+\greannotation{Comm.} 
+\greannotation{8.} 
+\grecommentary[4mm]{Ps 42: 4}
+\gresetinitiallines{1}\gabcsnippet{(c4) IN(gj)tro(j)í(jhjvIG)bo(g.) <c><v>*</v></c>(,) ad(gh/ji) al(i)tá(ij'k)re(k_[hl:1]h) De(h_[hl:1]k_[hl:1]j_[hl:1])i,(ikjj/ghg.) (:)
+ad(g) De(g.h!iwj)um(j) qui(hi) læ(h_g)tí(h!iwj)fi(ghGF'g)cat(gf..) (;) ju(g)ven(hgh)tú(gh/i.h!iwj)tem(hih) me(gh!ivHG'h)am.(hg..) (::)}
+%\tlumaczR{Chlebem, który Ja dam, jest Ciało moje na życie świata.}
+\paragraphspace
+%
+% -------------------- COMMUNIO PSALTERIUM-------------------- 
+%
+\grechangestaffsize{22}%rozmiar wyniku GregorioTEX
+\greseteolcustos{manual}% ręczne ustawianie custosa
+%  <c>1. </c> (d+) - kustos przed linią
+%  (::Z-) - koniec linii bez kustosa
+%  (:: d+ Z) - koniec lini z kustosem d
+% <c><i> Ant.</i> </c> - dopisek czerwony Ant. po kustosu
+%\greannotation{} 
+\greannotation{} 
+\greannotation{8.} 
+\grecommentary[4mm]{Ps 42: 1-3, 4-6}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1.}</v></c>Jú(g)di(hg)ca(gj) me,(j) De(j)us,(j) et(j) di(j)scér(j)ne(j) cau(j)sam(j) me(j)am(j) de(j) <i><ul>gen</i></ul>(ji)<i><ul>te</i></ul>(jk) <i><ul>non</i></ul>(k) <b>sanc</b>(jk)ta,(j.) <c><v>*</v></c>(:) ab(jh) hó(hj)mi(j)ne(j) in(j)í(j)quo,(j) et(j) do(j)ló(j)<i><ul>so</i></ul>(ji) <i><ul>é</i></ul>(gh)<i><ul>ru</i></ul>(ji)<i><ul>e</i></ul>(h) <i><ul>me</i></ul>.(g.) (::)
+<c><v>\footnotesize{2.}</v></c>Qui(g)a(hg) tu(gj) es,(j) De(j)us,(j) for(j)ti(j)tú(j)do(j) me(j)a: <c>†</c>(h.) qua(j)re(j) <i><ul>me</i></ul>(ji) <i><ul>re</i></ul>(jk)<i><ul>pu</i></ul>(k)<b>lís</b>(jk)ti?(j.) <c><v>*</v></c>(:) et(jh) qua(hj)re(j) tris(j)tis(j) in(j)cé(j)do,(j) dum(j) af(j)flí(j)git(j) <i><ul>me</i></ul>(ji) <i><ul>in</i></ul>(gh)<i><ul>i</i></ul>(ji)<i><ul>mí</i></ul>(h)<i><ul>cus</i></ul>?(g.) (::)
+<c><v>\footnotesize{3.}</v></c>E(g)mít(hg)te(gj) lu(j)cem(j) tu(j)am(j) et(j) ve(j)ri(j)tá(j)tem(j) tu(j)am: <c>†</c>(h.) ip(j)sa(j) me(j) de(j)du(j)xé(j)runt,(j) et(j) ad(j)du(j)xé(j)runt(j) in(j) mon(j)<i><ul>tem</i></ul>(ji) <i><ul>sanc</i></ul>(jk)<i><ul>tum</i></ul>(k) <b>tu</b>(jk)um,(j.) <c><v>*</v></c>(:) et(jh) in(hj) ta(j)ber(j)<i><ul>ná</i></ul>(ji)<i><ul>cu</i></ul>(gh)<i><ul>la</i></ul>(ji) <i><ul>tu</i></ul>(h)<i><ul>a</i></ul>.(g.) (::)
+<c><v>\footnotesize{4.}</v></c>Et(g) in(hg)tro(gj)í(j)bo(j) ad(j) <i><ul>al</i></ul>(ji)<i><ul>tá</i></ul>(jk)<i><ul>re</i></ul>(k) <b>De</b>(jk)i:(j.) <c><v>*</v></c>(:) ad(jh) De(hj)um,(j) qui(j) læ(j)tí(j)fi(j)cat(j) ju(j)<i><ul>ven</i></ul>(ji)<i><ul>tú</i></ul>(gh)<i><ul>tem</i></ul>(ji) <i><ul>me</i></ul>(h)<i><ul>am</i></ul>.(g.) (::)
+<c><v>\footnotesize{5.}</v></c>Con(g)fi(hg)té(gj)bor(j) ti(j)bi(j) in(j) cí(j)tha(j)ra,(j) De(j)<i><ul>us</i></ul>,(ji) <i><ul>De</i></ul>(jk)<i><ul>us</i></ul>(k) <b>me</b>(jk)us:(j.) <c><v>*</v></c>(:) qua(jh)re(hj) tris(j)tis(j) es,(j) á(j)ni(j)ma(j) me(j)a?(j) et(j) qua(j)<i><ul>re</i></ul>(ji) <i><ul>con</i></ul>(gh)<i><ul>túr</i></ul>(ji)<i><ul>bas</i></ul>(h) <i><ul>me</i></ul>?(g.) (::)
+<c><v>\footnotesize{6.}</v></c>Spe(g)ra(hg) in(gj) De(j)o,(j) quón(j)i(j)am(j) ad(j)huc(j) con(j)<i><ul>fi</i></ul>(ji)<i><ul>té</i></ul>(jk)<i><ul>bor</i></ul>(k) <b>il</b>(jk)li:(j.) <c><v>*</v></c>(:) sa(jh)lu(hj)tá(j)re(j) vul(j)tus(j) me(j)i,(j) <i><ul>et</i></ul>(ji) <i><ul>De</i></ul>(gh)<i><ul>us</i></ul>(ji) <i><ul>me</i></ul>(h)<i><ul>us</i></ul>.(g.) (::)
+<c><v>\footnotesize{7.}</v></c>Gló(g)ri(hg)a(gj) Pa(j)tri,(j) et(j) Fí(j)li(j)o,(j) et(j) Spi(j)<i><ul>rí</i></ul>(ji)<i><ul>tu</i></ul>(jk)<i><ul>i</i></ul>(k) <b>Sanc</b>(jk)to.(j.) <c><v>*</v></c>(:) Sic(jh)ut(hj) e(j)rat(j) in(j) prin(j)cí(j)pi(j)o,(j) et(j) nunc,(j) et(j) sem(j)per,(j) et(j) in(j) sǽ(j)cu(j)la(j) sæ(j)<i><ul>cu</i></ul>(ji)<i><ul>ló</i></ul>(gh)<i><ul>rum</i></ul>.(ji) <i><ul>A</i></ul>(h)<i><ul>men</i></ul>.(g.) (::)
+}
+\sectionspace
+%
+% -------------------- COMMUNIO powtórzone-------------------- 
+%
+%\greannotation{} 
+%\greannotation{Comm.} 
+%\greannotation{1.} 
+%\grecommentary[4mm]{Joann 2: 7, 8, 9, 10-11}
+%\gresetinitiallines{1}\gabcsnippet{(c4) DI(fh)cit(h) Dó(ixhiHG')mi(hggfg)nus:(fg..) <c><v>*</v></c>(;) ~Im(df~)plé(f)te(df) hý(f)dri(fff)as(df) a(ff/g_f)qua(f.) (;) et(f) fer(gh~)te(h) ar(hg~)chi(h)tri(h!iwj)clí(ghGF'g)no.(gf..) (:)
+%Cum(f) gus(ghg)tás(h!jij)set(ixhhi) ar(gh~)chi(f)tri(ghgh)clí(ghGF'g)nus(gf..) (;) a(h)quam(ghg) vi(hg)num(fg) fac(ghg___)tam,(g.) (;) di(ixii//g!i'j)cit(ih~) spon(fgf~)so:(f.) (:)
+%Ser(hg~)vás(jlk)ti(j) vi(jlk)num(j) bo(i.h!iwj)num(h_g) (,) us(gh!jlk)que(j) ad(hj)huc.(jg..) (:)
+%Hoc(j) si(j)gnum(i) fe(h)cit(g) Je(g)sus(fh) pri(fg)mum(g.) (,) co(h)ram(i) di(j)scí(i_h)pu(gf)lis(gh) su(f.)is.(f.) (::)}
+%%\vspace{-22pt}
+%\tlumaczR{}
+%\sectionspace
+%%\small{Tłumaczenia:}
+%\tlumacz{\red{Introit: Ps 85: 1, 2-3, 4} Nakłoń swe ucho, wysłuchaj mnie Panie; ratuj mój Boże, sługę swego, który Ci zaufał; zmiłuj się nade mną, bo nieustannie wołam do Ciebie. Rozwesel duszę sługi Swojego, bo ku Tobie, Panie, duszę mą podnoszę. Chwała Ojcu ...\\}
+%\tlumacz{\red{Graduale: Ps 91: 2-3} Dobrze jest wysławiać Pana i śpiewać imieniu Twemu, o Najwyższy. Głosić z rana miłosierdzie Twoje, a wierność Twoją nocami.\\}
+%\tlumacz{\red{Alleluia: Ps 94: 3} Alleluja, alleluja. \red{\Vbar.}  Albowiem wielkim Bogiem jest Pan i wielkim Królem ponad całą ziemią. Alleluja.\\}
+%\tlumacz{\red{Offertorium:  Ps 39: 2, 3, 4} Ufałem, Panu ufałem, a schylił się nade mną i wysłuchał mojego wołania, i w usta moje włożył śpiew nowy, pieśń dla naszego Boga.\\}
+%\tlumacz{\red{Communio:  J 6: 52} Chlebem, który Ja dam, jest Ciało moje na życie świata.\\}
+\end{document}

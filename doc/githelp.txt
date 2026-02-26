@@ -43,3 +43,8 @@ git log -n 3
 
 # jaki kod został dodany do repozytorium, dlaczego i w jaki sposób
 git blame
+
+# usuwanie pliku z repozytorium
+git rm plik.tex
+git commit -m "usunięto plik.txt"
+git push origin
