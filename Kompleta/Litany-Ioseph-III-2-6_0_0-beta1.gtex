@@ -4,13 +4,13 @@
 \GreBeginHeaders %
 \GreHeader{name}{Litany II}%
 \GreEndHeaders %
-\GreBeginScore{09a742686d4916036ec3817820adb09579b24f7c}{12}{8}{0}{0}{}{4}{\GreInitialClefPosition{4}{0}}%
+\GreBeginScore{8dea2e1f21e9173515f5b25bd65568b55ef738b1}{12}{8}{0}{0}{}{4}{\GreInitialClefPosition{4}{0}}%
 \GreSetLargestClef{c}{4}{3}{c}{0}{3}%
 \GreScoreOpening{%
 }{%
 \GreSetInitialClef{c}{4}{3}{c}{0}{3}{1}%
 }{%
-}{\GreSyllable}{\GreSetFirstSyllableText{I}{ó}{}{{}{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{ó}}}}{}}{{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{I}}}}{\GreFirstWord{\GreFirstSyllable{ó}}}{}}{}}{}{\GreFirstWord}{0}{\GreSetNextSyllable{\GreFirstWord{s}}{\GreFirstWord{e}}{\GreFirstWord{ph}}{\GreFirstWord{s}}{\GreFirstWord{e}\GreFirstWord{ph}}}{}{{0}{0}}{}{%
+}{\GreSyllable}{\GreSetFirstSyllableText{I}{ó}{}{{}{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{ó}}}}{}}{{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{I}}}}{\GreFirstWord{\GreFirstSyllable{ó}}}{}}{}}{}{\GreFirstWord}{0}{\GreSetNextSyllable{\GreFirstWord{s}}{\GreFirstWord{e}}{\GreFirstWord{ph fi\GreForceHyphen}}{\GreFirstWord{s}}{\GreFirstWord{e}\GreFirstWord{ph fi\GreForceHyphen}}}{}{{0}{0}}{}{%
 \GreSyllableNoteCount{1}%
 % verbatim text at element level:
 \grealign%
@@ -20,7 +20,7 @@
 \GreGlyphHeights{10}{10}%
 }{}{}%
 }%
-\GreSyllable{\GreSetThisSyllable{\GreFirstWord{s}}{\GreFirstWord{e}}{\GreFirstWord{ph}}{\GreFirstWord{s}}{\GreFirstWord{e}\GreFirstWord{ph}}}{}{\GreFirstWord}{1}{\GreSetNextSyllable{}{}{}{}{}}{}{{0}{0}}{}{%
+\GreSyllable{\GreSetThisSyllable{\GreFirstWord{s}}{\GreFirstWord{e}}{\GreFirstWord{ph fi\GreForceHyphen}}{\GreFirstWord{s}}{\GreFirstWord{e}\GreFirstWord{ph fi\GreForceHyphen}}}{}{\GreFirstWord}{1}{\GreSetNextSyllable{}{}{}{}{}}{}{{0}{0}}{}{%
 \GreSyllableNoteCount{1}%
 % verbatim text at element level:
 \grealign%
@@ -31,7 +31,7 @@
 }{}{}%
 }%
 %
-\GreSetFixedNextTextFormat{1}\GreSyllable{\GreSetThisSyllable{}{}{}{}{}}{}{\GreUnstyled}{1}{\GreSetNextSyllable{}{\GreItalic{}}{}{\GreItalic{}}{}}{}{{18}{0}}{}{%
+\GreSetFixedNextTextFormat{1}\GreSyllable{\GreSetThisSyllable{}{}{}{}{}}{}{\GreUnstyled}{1}{\GreSetNextSyllable{\GreItalic{d}}{\GreItalic{e}}{\GreItalic{\GreHyph{}}}{\GreItalic{d}}{\GreItalic{e}\GreItalic{\GreHyph{}}}}{}{{2}{0}}{}{%
 \GreSyllableNoteCount{1}%
 \GreGlyph{\GreCavum{Punctum}}{10}{\GreNextCustos{10}{}}{0}%
 {%
@@ -39,10 +39,7 @@
 }{}{}%
 }%
 %
-\GreSetFixedTextFormat{1}\GreSetFixedNextTextFormat{1}\GreNoNoteSyllable{\GreSetThisSyllable{}{}{}{}{}}{}{\GreUnstyled}{0}{\GreSetNextSyllable{f}{o}{r\GreHyph{}}{f}{or\GreHyph{}}}{}{{2}{0}}{}{%
-\GreSyllableNoteCount{0}%
-}%
-\GreSetFixedTextFormat{1}\GreSyllable{\GreSetThisSyllable{f}{o}{r\GreHyph{}}{f}{or\GreHyph{}}}{}{\GreUnstyled}{1}{\GreSetNextSyllable{t}{i}{s\GreForceHyphen}{t}{is\GreForceHyphen}}{}{{0}{0}}{}{%
+\GreSetFixedTextFormat{1}\GreSyllable{\GreSetThisSyllable{d}{e}{\GreHyph{}}{d}{e\GreHyph{}}}{}{\GreUnstyled}{1}{\GreSetNextSyllable{l}{í}{s\GreForceHyphen}{l}{ís\GreForceHyphen}}{}{{0}{0}}{}{%
 \GreSyllableNoteCount{3}%
 % verbatim text at element level:
 \grealign%
@@ -53,7 +50,7 @@
 }{}{}%
 }%
 %
-\GreSyllable{\GreSetThisSyllable{t}{i}{s\GreForceHyphen}{t}{is\GreForceHyphen}}{}{\GreUnstyled}{1}{\GreSetNextSyllable{\GreBold{s}}{\GreBold{i}}{\GreBold{\GreHyph{}} }{\GreBold{s}}{\GreBold{i}\GreBold{\GreHyph{}} }}{}{{8}{0}}{}{%
+\GreSyllable{\GreSetThisSyllable{l}{í}{s\GreForceHyphen}{l}{ís\GreForceHyphen}}{}{\GreUnstyled}{1}{\GreSetNextSyllable{\GreBold{s}}{\GreBold{i}}{\GreBold{\GreHyph{}} }{\GreBold{s}}{\GreBold{i}\GreBold{\GreHyph{}} }}{}{{8}{0}}{}{%
 \GreSyllableNoteCount{1}%
 % verbatim text at element level:
 \grealign%
