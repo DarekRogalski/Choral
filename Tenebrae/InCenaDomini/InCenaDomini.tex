@@ -29,7 +29,7 @@
 % \tracingall przed problematycznym kodem - bardzo dużo informacji
 % lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
 % \errorcontextlines
-\def\mydebug{0}% 0 - debugowanie, 1 - bez debugowania (wyłącza bloki \if\mydebug1)
+\def\mydebug{1}% 0 - debugowanie, 1 - bez debugowania (wyłącza bloki \if\mydebug1)
 \begin{document}
 \makeatletter
 \grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
@@ -1115,7 +1115,7 @@
 \pagebreak
 \gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{9. }</v></c>Et(f) tu,(gh) pu(h)er,(h) Pro(h)phé(h)ta(h) Al(h)tís(h)<i><ul>si</i></ul>(hg)<i><ul>mi</i></ul>(ixgi) <i><ul>vo</i></ul>(h)<b>cá</b>(hr[ocb:1{])<b>be</b>(hg[ocb:0}])ris:(gh..) <c><v>*</v></c>(:) præ(h)í(h)bis(h) e(h)nim(h) an(h)te(h) fá(h)ci(h)em(h) Dó(h)mi(h)ni,(h) pa(h)rá(h)re(h) <i><ul>vi</i></ul>(g)<i><ul>as</i></ul>(f) <b>e</b>(gh gr)jus:(g.) (::)}
 \vspace{-25pt}
-\tlumaczR{A ty dzieciątko, prorokiem Najwyższego będziesz nazwane: *\\bo uprzedzisz przed oblicznością Pańską, abyś gotował drogi jego:}\minispace
+\tlumaczR{A ty dzieciątko, prorokiem Najwyższego będziesz nazwane: *\\bo uprzedzisz przed oblicznością Pańską, abyś gotował drogi jego:}\paragraphspace
 \BeginParallel
 \latNPs{\mred{10.}~Ad dandam sciéntiam salú\underline{\textit{tis}} \underline{\textit{ple}}\underline{\textit{bi}} \textbf{e}jus:~\red{*} in remissiónem peccató\underline{\textit{rum}} \underline{\textit{e}}\textbf{ó}rum:}\polPs{Iżbyś dał naukę zbawienia ludowi jego:~\red{*} na odpuszczenie grzechów ich:}%
 
@@ -1124,18 +1124,19 @@
 \latNPs{\mred{12.}~Illumináre his, qui in ténebris, et in um\underline{\textit{bra}} \underline{\textit{mor}}\underline{\textit{tis}} \textbf{se}dent:~\red{*} ad dirigéndos pedes nostros in \underline{\textit{vi}}\underline{\textit{am}} \textbf{pa}cis.}\polPs{Aby zaświecił tym, którzy w ciemności i w cieniu śmierci siedzą:~\red{*} ku wyprostowaniu nóg naszych na drogę pokoju.}\minispace%
 \EndParallel
 \gresetinitiallines{1}\greannotation{Ad Bened.}\greannotation{Ant. 1 g}\gabcsnippet{(c4) TRá(f)di(c')tor(d) au(dh)tem(ixh_i) () de(h')dit(g) e(e')is(f) si(g)gnum,(fe~) di(d.)cens :(d.) (;) Quem(d) o(fe)scu(d)lá(e')tus(f) fú(gh)e(g)ro,(f.) (,) i(f_g)pse(f) est,(c.) (;) te(e)né(g_[oh:h]e)te(f_e) e(d.)um.(d.) (::)}\vspace{-25pt}
-\tlumaczR{Zdrajca zaś dał im był znak mówiąc:\\Któregokolwiek pocałuję, ten jest, imajcie go.}
+\tlumaczR{Zdrajca zaś dał im był znak mówiąc:\\Któregokolwiek pocałuję, ten jest, imajcie go.}\sectionspace
 %% --- Christus  ------
 \rubryka{Flexis genibus:}
-\gresetinitiallines{1}\greannotation{5.}\gabcsnippet{(c4) CHri(ffg)stus(f.) <c><v>*</v></c>(,) fa(fg)ctus(f) est(f') pro(f) no(ghF'ED.g_[oh:h]e/fg)bis(f.) (;) ob(f)é(hf/gh!jj/kjk)di(jij)ens(h_g) (,) us(h!jjh)que(f.) ad(ixfiH'Gh) mor(f_[oh:h]g_[oh:h]f_[oh:h])tem,(f.) (::)}
-\vspace{-11pt}
-\tlumaczR{Chrystus stał się za nas posłusznym aż do śmierci.}\minispace
+\vspace{-25pt}
+\gresetinitiallines{1}\greannotation{5.}\gabcsnippet{(c4) CHri(ffg)stus(f.) <c><v>*</v></c>(,) fa(fg)ctus(f) est(f') pro(f) no(ghF'ED.g_[oh:h]e/fg)bis(f.) (;) ob(f)é(hf/gh!jj/kjk)di(jij)ens(h_g) (,) us(h!jjh)que(f.) ad(ixfiH'Gh) mor(f_[oh:h]g_[oh:h]f_[oh:h])tem,(f.) (::)}\minispace
+\tlumaczR{Chrystus stał się za nas posłusznym aż do śmierci.}\paragraphspace
 %% --- Pater noster ---
-\hspace{14pt}Pater noster.~\textit{\red{secreto}}
+\hspace{14pt}Pater noster.~\textit{\red{secreto}}\paragraphspace
 %% --- Psalm 50 ---
 \noindent\subsekcja{Psalm 50}%
-\vspace{-16pt}
+\vspace{-25pt}
 \rubryka{Aliquantulum altius:}
+\vspace{-25pt}
 \BeginParallel
 \latNPs{\mred{1.}~Miserére mei Deus,~\red{*} secúndum magnam misericórdiam tuam.}\polPs{Zmiłuj się nademną, Boże,~\red{*} według wielkiego miłosierdzia twego.}
 \latNPs{\mred{2.}~Et secúndum multitúdinem miseratiónum tuárum,~\red{*} dele iniquitátem meam.}\polPs{A według mnóstwa litości twoich,~\red{*} zgładź nieprawość moję.}
@@ -1158,16 +1159,18 @@
 \latNPs{\mred{19.}~Benígne fac, Dómine, in bona voluntáte tua Sion:~\red{*} ut ædificéntur muri Jerúsalem.}\polPs{Uczyń dobrze, Panie, Syonowi w dobréj woli twojéj:~\red{*} aby się zbudowały mury Jeruzalem.}
 \latNPs{\mred{20.}~Tunc acceptábis sacrifícium justítiæ, oblatiónes, et holocáusta:~\red{*} tunc impónent super altáre tuum vítulos.}\polPs{Tedy przyjmiesz ofiarę sprawiedliwości, obiaty i całopalenia:~\red{*} tedy nakładą na ołtarz twój cielców.}
 \EndParallel
+\pagebreak
 %% --- Oracja  ------
 \subsekcja{Oratio}
 \vspace{-23pt}
 \rubryka{Sine \textup{Oremus}, simili voce:}
 \BeginParallel
-\latNPs{\inicjal{R}{éspice}, quǽsumus, Dómine, super hanc famíliam tuam, pro qua Dóminus noster Jesus Christus non dubitávit mánibus tradi nocéntium, et crucis subíre torméntum:}\polPs{\inicjal{W}{ejrzyj}, prosimy Cię, Panie, na tę czeladkę Twoją, za którą Pan nasz Jezus Chrystus nie zawahał się ponieść męki krzyżowej i oddać się w ręce grzeszników.}
+\latNPs{\inicjal{R}{éspice}, quǽsumus, Dómine, super hanc famíliam tuam, pro qua Dóminus noster Jesus Christus non dubitávit mánibus tradi nocéntium, et crucis subíre torméntum:}\polPs{Wejrzyj, prosimy Cię, Panie, na tę czeladkę Twoją, za którą Pan nasz Jezus Chrystus nie zawahał się ponieść męki krzyżowej i oddać się w ręce grzeszników.}
 \EndParallel
 \rubryka{Et sub silentio concluditur:}
+\vspace{-23pt}
 \BeginParallel
-\latNPs{\inicjal{Q}{ui} tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. \red{\Rbar.}~Amen.}\polPs{\inicjal{K}{tóry} z Tobą żyje i króluje w jedności Ducha Świętego Bóg przez wszystkie wieki wieków. \red{\Rbar.}~Amen.}
+\latNPs{\inicjal{Q}{ui} tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. \red{\Rbar.}~Amen.}\polPs{Który z Tobą żyje i króluje w jedności Ducha Świętego Bóg przez wszystkie wieki wieków. \red{\Rbar.}~Amen.}
 \EndParallel
 %% ------- stopka i ostatnie modlitwy ---------
 \dekor{0.3}{DeoGratias.jpg}
@@ -1176,7 +1179,7 @@
 \thispagestyle{empty}
 \vspace{-6pt}
 \sekcja{Modlitwy końcowe}{}%{Odmawia się po cichu w pozycji klęczącej.}
-%\vspace{-26pt}
+\vspace{-26pt}
 \columnratio{0.5}
 \BeginParallel\fontsize{14}{18}\selectfont
 	 \latNPs{\inicjal{S}{acrosánctæ} et indivíduæ Trinitáti, crucifíxi Dómini nostri Jesu Christi humanitáti, beatíssimæ et gloriosíssimæ sempérque Vírginis Maríæ fœcúndæ integritáti, et ómnium Sanctórum universitáti sit sempitérna laus, honor, virtus et glória ab omni creatúra, nobísque remíssio ómnium peccatórum, per infiníta sǽcula sæculórum. Amen.} 
