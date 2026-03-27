@@ -1,311 +1,78 @@
 % !TEX TS-program = lualatex+se
 % !TEX encoding = UTF-8
 \documentclass[12pt, a4paper]{book}
-
-% --- USTAWIENIA STRONY ---
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
 \usepackage{geometry}
 \geometry{
-%	showframe=true,
-%	showcrop=true,
-	left=20mm,
-	right=20mm,
-	top=20mm,
-	bottom=18mm,
+	left=10mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
 	marginparwidth=0mm,
 	marginparsep=0mm
 	}
-%\usepackage[letterpaper,showframe]{geometry}	
-% usuwanie nagłówków/stopek z\,dokumentu
-\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
-%\setstretch{1.5} % półtorej linii odległości między wierszami
-\usepackage{titlesec} % ustawianie nagłówków
-%\usepackage{fullpage} % redukcja marginesów
-\usepackage{setspace} % odstępy między liniami
-\usepackage{enumitem}% listy numerowane
-% -----------------------------
+\newcommand{\wstawplik}[1]{\input{../../../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../../../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{20}%rozmiar wyniku GregorioTEX
+\gresetlastline{ragged}% justowanie do lewej
+\grechangestyle{initial}{\greIniZallmanCaps\fontsize{44}{26}\selectfont}% do wyboru: greIniZallmanCaps, greIniPreciosa, greIniFlorana
+% koniec 
 
-%----------- style nagłówków ----------------
-\newcommand{\headingone}{\scshape\Large}
-\newcommand{\headingtwo}{\large}
-\newcommand{\margintext}[1]{\textit{\small #1}}
-% przesunięcia poziome
-\newcommand{\smallwidth}{\hskip 1em}
-\newcommand{\medwidth}{\hskip 3pt}
-\newcommand{\largewidth}{\hskip 12pt}
-% przesunięcia pionowe
-\newcommand{\linespace}{\vskip 6pt}
-\newcommand{\paragraphspace}{\vskip 10pt}
-\newcommand{\segmentspace}{\vskip 16pt}
-\newcommand{\sectionspace}{\vskip 28pt}
-%------------------------------------------
-\newcommand{\wstawplik}[1]{\wstawplik{/Users/Laser/Documents/Latex/#1}}%skraca kod
-%----- Strona tytułowa -------------
-% --- CZCIONKI DOKUMENTU ---
-\usepackage[latin,polish]{babel}
-\usepackage{fontspec}
-%\usepackage{times}
-%\usepackage[math]{anttor}
-%\usepackage{tgtermes}
-%\usepackage{mathptmx}
-\usepackage{ebgaramond}
-\usepackage{libertine}
-\defaultfontfeatures{Ligatures=TeX}
-
-%\setmainfont{TeX Gyre Termes}
-%\setmainfont{TeX Gyre Heros}
-%\setmainfont{Calluna Regular}
-\setmainfont{EB Garamond}
-%\setmainfont{Bodoni Moda}
-%\newfontfamily{\sekfont}{Times New Roman}
-\newfontfamily{\sekfont}{Libertinus Serif}
-\newcommand\sekcjafont{\fontsize{16}{16}\selectfont \sekfont}
-\newfontfamily{\tytfont}{JSL Ancient}
-\newcommand\tytulfont[1]{\fontsize{36}{30}\selectfont \tytfont#1\par}
-\newcommand\podtytulfont[1]{\fontsize{18}{10}\selectfont \tytfont#1\par}
-
-%\setmainfont[<font features>]{<name of font>} % sets the roman font
-%\setsansfont[<font features>]{<name of font>} % sets the sans font
-%\setmonofont[<font features>]{<name of font>} % sets the monospace font
-
-% --- KONIEC CZCIONKI DOKUMENTU ---
-
-% --- GREGORIO ---	
-\usepackage{gregoriotex}
-\gresetlinecolor{gregoriocolor}
-\gresetheadercapture{annotation}{greannotation}{string}% odczytuje adnotacje nad inicjałem jako ciąg, co pozwala na jego renderowanie
-\gresetheadercapture{commentary}{grecommentary}{string}% odczytuje komentarz jako ciąg, co pozwala na jego renderowanie
-\grechangedim{commentaryraise}{0.3cm}{scalable} % podnosi komentarz wystarczająco ponad górną linię
-\grechangestyle{annotation}{\color{black}\small}% format adnotacji
-\grechangestyle{commentary}{\color{gregoriocolor}\small\itshape}% format komentarza
-\grechangestyle{abovelinestext}{\color{gregoriocolor}\small\itshape}% format napisu nad liniami
-\grechangestyle{initial}{\fontsize{36}{36}\selectfont} % zmniejsza wielkość inicjału do bardziej proporcjonalnego rozmiaru (=36pt)
-\grechangedim{intersyllablespacenotes}{0.26cm}{scalable}% Minimalna odległość między nutami różnych sylab.
-
-% umieszczenie zawartości składu ich unikalnego argumentu po lewej i prawej stronie każdej linii
-\let\grelocalleftbox\localleftbox
-\let\grelocalrightbox\localrightbox
-
-%\newcommand{\separator}{\greseparator{3}{40}}
-%\newfontface\vectis{VectisMonumentalW01-Regular}
-%\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
-% ------------------
-
-%\usepackage[hyperindex=true]{hyperref}% przypisy dolne
-
-%---- usun konflikt między paracol i luacolor ----
-\wstawplik{conparlua}
-%-----------------------------------------------
-
-% --- SPIS TREŚCI -------
-%\usepackage{imakeidx}
-%\makeindex[title=Alfabetyczny spis program=texindy,options=-M styl.xdy]
-%\usepackage{filecontents}
-%\begin{filecontents*}{styl.xdy}
-%;;; xindy style file
-%(markup-locclass-list :open "\dotfill" :sep "")
-%(define-attributes (( "textbf" "default" )) )
-%(markup-locref   :attr  "textbf"     :open "\textbf{\hyperpage{" :close "}}")
-%(markup-locref   :attr  "textit"     :open "\textit{\hyperpage{" :close "}}")
-%(markup-locref   :attr  "textttt"     :open "\textttt{\hyperpage{" :close "}}")
-%(markup-locref   :attr  "texttsc"     :open "\texttsc{\hyperpage{" :close "}}")
-%(markup-locref   :attr  "default"     :open "\hyperpage{" :close "}")
-%\end{filecontents*}
-% -------------------------
-
-% ---  Konfiguracja kolumn ---
-\usepackage{paracol}
-\setcolumnwidth{.49\textwidth, .49\textwidth}
-\setlength{\columnseprule}{0.4pt}
-\setlength{\columnsep}{.02\textwidth}
-\colseprulecolor{red}% wymagany pakiet xcolor
-\footnotelayout{m}
-% ----------------------------
-
-\makeatletter 
-\patchcmd\pcol@hfil
- {\copy\pcol@tempboxa}
- {\luacolorresetboxcolor\pcol@tempboxa\copy\pcol@tempboxa}{}{\fail}
-\makeatother
-% ----------------------------
-
-\footnotelayout{m}
-
-%% --- UKŁAD DWUKOLUMNOWY Z TŁUMACZENIEM ---
-%\usepackage{tcolorbox}
-%\newtcolorbox{nutybox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=center}
-%\newtcolorbox{tlumbox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=top, fontupper=\small\itshape} 
-%\newcommand{\nuty}[1]{\begin{nutybox}#1 \end{nutybox}}
-%\newcommand{\tlum}[1]{\begin{tlumbox}\tlumacz{#1} \end{tlumbox}}
-%% ------------------------------------------------------
-
-\usepackage{Tabbing}
-\usepackage{longtable}
-\usepackage[savepos]{zref}
-
-% --- GRAFIKA I KOLORY ---
-\usepackage{xcolor} % kolory
-\usepackage{graphicx} % umożliwia import obrazów
-\graphicspath{{img/}} % katalog obrazów
-\usepackage{pgfornament}% ornamenty graficzne
-% --- KONIEC GRAFIKA I KOLORY -----------
-
-% --- KOMENDY WŁASNE ---
-\newcommand{\red}[1]{\textcolor{red}{#1}}
-\newcommand{\black}[1]{\textcolor{black}{#1}}
-% --------------------------------
-\newcommand{\tlumacz}[1]{\textit{#1}}
-\newcommand{\inicjal}[2]{\textcolor{red}{\LARGE\textbf{#1}}{#2}}
-%--------------------------------
-\titlespacing*{\chapter}{0pt}{0pt}{5pt}	
-\titleformat{\chapter}[hang]{\filcenter\LARGE\scshape\bfseries}{}{0pt}{} % format nagłówków
-\titlespacing*{\section}{0pt}{0pt}{0pt}	
-\titleformat{\section}[hang]{\filcenter\large\scshape}{}{0pt}{} % format nagłówków
-
-% ----------- RUBRYKA -------------------
-\newcommand{\rubryka}[1]{
-	\begin{spacing}{0.8}
-	\begin{center}
-		\parbox{0.9\textwidth}{\centering\textcolor{red}{\small\textit{#1}}}
-	\end{center}
-	\end{spacing}
-	\linespace}
-% ----------- SEKCJA --------------------
-% -----------------------------------------
-%\renewcommand\fbox{\fcolorbox{red}{white}}% czerwona ramka fbox-a
-\newcommand{\sekcja}[2]{
-	\begin{spacing}{0.6}
-	\begin{center}
-		\section*{#1}
-		\linespace
-		\begin{minipage}{0.88\linewidth}
-			\red{\small\textit{#2}}
-		\end{minipage}
-	\end{center}	
-	\end{spacing}
-	\paragraphspace}
-%------------DEKOR ---------------------
-\newcommand{\dekor}[2]{
-	\begin{center}
-		\vspace*{\fill}
-		\includegraphics[width=#1\textwidth]{#2}
-		\vspace*{\fill}
-	\end{center}}
-%------- Zarządzanie wersami w psalmach z tlumaczeniem -------------------------
-\newcounter{licznik}
-\newcommand{\licznikZero}{\setcounter{licznik}{0}}% zeruj licznik
-\newcommand{\licznikUp}{\refstepcounter{licznik}}% zwiększ licznik 
-\licznikZero
-\newcommand{\BeginParallel}{\begin{spacing}{0.9} \begin{paracol}{2} \licznikZero}
-\newcommand{\lat}[1]{\selectlanguage{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}\ifnum \value{licznik}>0 \licznikUp \thelicznik .~{#1}\par \else \licznikUp{#1}\par \fi \end{minipage}\switchcolumn}
-\newcommand{\latN}[1]{\selectlanguage{latin}\ensurevspace{2\baselineskip}\begin{minipage}[t]{\linewidth}{#1}\par\end{minipage}\switchcolumn}% kolumna bez numeracji wersów
-\newcommand{\pol}[1]{\selectlanguage{polish}\begin{minipage}[t]{\linewidth}{#1}\par\end{minipage}\switchcolumn*}
-\newcommand{\EndParallel}{\end{paracol} \end{spacing}}
-
-% --- ZNAKI SPECJALNE ---
-% 
-%\newcommand <c>†</c>
-% --------------------------
-
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+\def\mydebug{1}% 0 - debugowanie, 1 - bez debugowania (wyłącza bloki \if\mydebug1)
 \begin{document}
-\pagestyle{plain}	
-\setlength{\parindent}{0pt}
+\makeatletter
+\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+\makeatother
+\pagestyle{empty}
+% -----------------------------------------------------------------------------------
+% ------------------------------ STRONA TYTUŁOWA  ------------------------------
+\thispagestyle{empty}
+\begin{center}
+	\includegraphics[width=1.0\linewidth]{HolyThursday03.jpg}
+	\vfill
+	\podtytulfont{Ad Matutinum et Laudes}
+	\tytulfont{ Feria Quinta\\in C\oe{}na Domini}
+	\vfill
+	\large\textit{Liber usualis, Solesmes, 1961, p.626}
+\end{center}%
+\pagebreak
+% <c><v>*</v></c>
+% <c><v>†</v></c>
+% <c><i>Ps.</i></c> 
+% <c><sp>V/</sp>.</c>
+% <c><i>ij.</i></c>
+% \tikz[overlay]\draw[red](-10,0)--++(15,0);
+% -------------------- I. Nocturno -------------------- 
+% ---------------------- Resp. 1 ---------------------- 
+\thispagestyle{empty}
+\wstawplik{modlitwy_wstepne_has}
+\pagebreak
+\setcounter{page}{1}
+\fancyhead{}% wyczyść wszystkie pola nagłówka
+\pagestyle{plain}% nagłówek i stopka pusta - UWAGA: przedefiniowany styl przez polecenie fancypagestyle w header.tex	
+%\setlength{\parindent}{0pt}
 \gresetbracerendering{font}
-\rozdzial{Feria Quinta in Cena Domini}{Ad Matutinum et Laudes}
+\if\mydebug1% ---------------------------------------------- blok wyłączony gdy mydebug = 1 ---------------------------------------------------------------------- ↓
 \sekcja{IN I. NOCTURNO}{}
 %% -------- 1. Ant. Zelus -----------
 \greannotation{1. Ant.}\greannotation{8 c}\gabcsnippet{(c4)ZE(j)lus(j) do(j)mus(j) tu(j_k)ae(ji/jkj') * com(h)é(j')dit(i) me,(g.) (;) et(f) op(h)pró(j')bri(i)a(g_[uh:l]h) ex(f)pro(h)brán(j')ti(k)um(i') ti(j)bi(h.) (,) ce(h)ci(g)dé(hi)runt(h') su(g)per(fg~) me.(g.) (::)}
 \subsekcja{Psalm 68}
 \gresetinitiallines{0}\gabcsnippet{(c4)<c>1. </c>Sal(g)vum(h) me(j) fac,(j) <b>De</b>(k jr)us:(j.) <c><v>\greheightstar</v></c>(:) quón(j)i(j)am(j) in(j)tra(j)vé(j)runt(j) a(j)quæ(j) us(j)que(j) ad(j) á(j)<i><ul>ni</ul></i>(h)<i><ul>mam</ul></i>(j) <b>me</b>(k jr)am.(j.) (::)}
-2. Infíxus sum in limo pro\uline{fún}di:~* et non \uuline{est} \uuline{sub}\uline{stán}tia.
-
-3. Veni in altitúdinem \uline{ma}ris:~* et tempés\uuline{tas} \uuline{de}\uline{mér}sit me.
-
-4. Laborávi clamans, raucæ factæ sunt fauces \uline{me}æ:~* defecérunt óculi mei, dum spero in \uuline{De}\uuline{um} \uline{me}um.
-
-5. Multiplicáti sunt super capíllos cápitis \uline{me}i,~* qui odé\uuline{runt} \uuline{me} \uline{gra}tis.
-
-6. Confortáti sunt qui persecúti sunt me inimíci mei in\uline{jús}te:~* quæ non rápui, tunc \uuline{ex}\uuline{sol}\uline{vé}bam.
-
-7. Deus, tu scis insipiéntiam \uline{me}am:~* et delícta mea a te non \uuline{sunt} \uuline{abs}\uline{cón}dita.
-
-8. Non erubéscant in me qui exspéctant te, \uline{Dó}mine,~* Dómi\uuline{ne} \uuline{vir}\uline{tú}tum
-
-9. Non confundántur \uline{su}per me~* qui quærunt te, \uuline{De}\uuline{us} \uline{Is}raël.
-
-10. Quóniam propter te sustínui op\uline{pró}brium:~* opéruit confúsio fá\uuline{ci}\uuline{em} \uline{me}am.
-
-11. Extráneus factus sum frátribus \uline{me}is,~* et peregrínus fíliis \uuline{ma}\uuline{tris} \uline{me}æ.
-
-12. Quóniam zelus domus tuæ com\uline{é}dit me:~* et oppróbria exprobrántium tibi ceci\uuline{dé}\uuline{runt} \uline{su}per me.
-
-13. Et opérui in jejúnio ánimam \uline{me}am:~* et factum est in oppró\uuline{bri}\uuline{um} \uline{mi}hi.
-
-14. Et pósui vestiméntum meum ci\uline{lí}cium:~* et factus sum illis \uuline{in} \uuline{pa}\uline{rá}bolam.
-
-15. Advérsum me loquebántur, qui sedébant in \uline{por}ta:~* et in me psallébant qui bi\uuline{bé}\uuline{bant} \uline{vi}num.
-
-16. Ego vero oratiónem meam ad te, \uline{Dó}mine:~* tempus beneplá\uuline{ci}\uuline{ti}, \uline{De}us.
-
-17. In multitúdine misericórdiæ tuæ ex\uline{áu}di me,~* in veritáte sa\uuline{lú}\uuline{tis} \uline{tu}æ:
-
-18. Eripe me de luto, ut non in\uline{fí}gar:~* líbera me ab iis, qui odérunt me, et de profún\uuline{dis} \uuline{a}\uline{quá}rum.
-
-19. Non me demérgat tempéstas aquæ,~† neque absórbeat me pro\uline{fún}dum:~* neque úrgeat super me púte\uuline{us} \uuline{os} \uline{su}um.
-
-20. Exáudi me, Dómine, quóniam benígna est misericórdia \uline{tu}a:~* secúndum multitúdinem miseratiónum tuárum ré\uuline{spi}\uuline{ce} \uline{in} me.
-
-21. Et ne avértas fáciem tuam a púero \uline{tu}o:~* quóniam tríbulor, velóci\uuline{ter} \uuline{ex}\uline{áu}di me.
-
-22. Inténde ánimæ meæ, et líbera \uline{e}am:~* propter inimícos meos \uuline{é}\uuline{ri}\uline{pe} me.
-
-23. Tu scis impropérium meum, et confusiónem \uline{me}am,~* et reverén\uuline{ti}\uuline{am} \uline{me}am.
-
-24. In conspéctu tuo sunt omnes qui tríbu\uline{lant} me:~* impropérium exspectávit cor meum, \uuline{et} \uuline{mi}\uline{sé}riam.
-
-25. Et sustínui qui simul contristarétur, et non \uline{fu}it:~* et qui consolarétur, et \uuline{non} \uuline{in}\uline{vé}ni.
-
-26. Et dedérunt in escam \uline{me}am fel:~* et in siti mea potavérunt \uuline{me} \uuline{a}\uline{cé}to.
-
-27. Fiat mensa eórum coram ipsis in \uline{lá}queum,~* et in retributiónes, \uuline{et} \uuline{in} \uline{scán}dalum.
-
-28. Obscuréntur óculi eórum ne \uline{ví}deant:~* et dorsum eórum sem\uuline{per} \uuline{in}\uline{cúr}va.
-
-29. Effúnde super eos iram \uline{tu}am:~* et furor iræ tuæ compre\uuline{hén}\uuline{dat} \uline{e}os.
-
-30. Fiat habitátio eórum de\uline{sér}ta:~* et in tabernáculis eórum non sit \uuline{qui} \uuline{in}\uline{há}bitet.
-
-31. Quóniam quem tu percussísti, perse\uline{cú}ti sunt:~* et super dolórem vúlnerum meórum \uuline{ad}\uuline{di}\uline{dé}runt.
-
-32. Appóne iniquitátem super iniquitátem e\uline{ó}rum:~* et non intrent in justí\uuline{ti}\uuline{am} \uline{tu}am.
-
-33. Deleántur de libro vi\uline{vén}tium:~* et cum justis \uuline{non} \uuline{scri}\uline{bán}tur.
-
-34. Ego sum pauper et \uline{do}lens:~* salus tua, De\uuline{us}, \uuline{su}\uline{scé}pit me.
-
-35. Laudábo nomen Dei cum \uline{cán}tico:~* et magnificábo e\uuline{um} \uuline{in} \uline{lau}de:
-
-36. Et placébit Deo super vítulum no\uline{vél}lum:~* córnua producén\uuline{tem} \uuline{et} \uline{ún}gulas.
-
-37. Vídeant páuperes et læ\uline{tén}tur:~* quǽrite Deum, et vivet á\uuline{ni}\uuline{ma} \uline{ves}tra.
-
-38. Quóniam exaudívit páuperes \uline{Dó}minus:~* et vinctos suos \uuline{non} \uuline{de}\uline{spé}xit.
-
-39. Laudent illum cæli et \uline{ter}ra,~* mare et ómnia reptíli\uuline{a} \uuline{in} \uline{e}is.
-
-40. Quóniam Deus salvam fáciet \uline{Si}on:~* et ædificabúntur civi\uuline{tá}\uuline{tes} \uline{Ju}da.
-
-41. Et inhabitábunt \uline{i}bi,~* et hereditáte ac\uuline{quí}\uuline{rent} \uline{e}am.
-
-42. Et semen servórum ejus possidébit \uline{e}am:~* et qui díligunt nomen ejus, habitá\uuline{bunt} \uuline{in} \uline{e}a.
 \paragraphspace
 %% -------- 2. Ant. Avertantur retrorsum -----------
 \gresetinitiallines{1}\greannotation{2. Ant.}\greannotation{8 c}\gabcsnippet{(c4) A(j)ver(j)tán(j_k)tur(k') re(k)trór(kj~)sum,(k_[hl:1]j_[hl:1]) *(,) et(j) e(ji)ru(h!iwj)bé(jkj)scant,(g.) (;) qui(j) có(i!kjk)gi(h)tant(f_h) mi(j_h)hi(i) ma(g.)la.(g.) (::)}
 \subsekcja{Psalm 69}
 \gresetinitiallines{0}\gabcsnippet{(c4)<c>1. </c>De(g)us,(h) in(j) ad(j)ju(j)tó(j)ri(j)um(j) me(j)um(j) in(j)<b>tén</b>(k jr)de:(j.) <c><v>\greheightstar</v></c>(:) Dó(j)mi(j)ne(j) ad(j) ad(j)ju(j)ván(j)dum(j) <i><ul>me</ul></i>(h) <i><ul>fes</ul></i>(j)<b>tí</b>(k jr)na.(j.) (::)}
-\begin{enumerate}[start=2]
-\begin{spacing}{0.8}
-\end{spacing}
-\end{enumerate}
 \paragraphspace
 %% -------- 3. Ant. Deus meus -----------
 \gresetinitiallines{1}\greannotation{3. Ant.}\greannotation{8 c}\gabcsnippet{(c4) DE(j)us(j') me(j)us,(jv_IH) *() é(i_[uh:l]j)ri(i)pe(g_[uh:l]h) me(g.) (,) de(j_k) ma(j)nu(ikjj) pec(h)ca(f')tó(g)ris.(g.) (::)}
