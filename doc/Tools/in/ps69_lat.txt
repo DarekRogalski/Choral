@@ -1,0 +1,7 @@
+\latNPs{\mred{1.}~Déus, in adjutórium méum in\textbf{tén}de:~* Dómine, ad adjuvándum \underline{\textit{me}} \underline{\textit{fes}}\textbf{tí}na.}\polPs{}%
+\latNPs{\mred{2.}~Confundántur et revere\textbf{án}tur,~* qúi quaérunt á\underline{\textit{ni}}\underline{\textit{mam}} \textbf{mé}am.}\polPs{}%
+\latNPs{\mred{3.}~Avertántur retrórsum, et eru\textbf{bés}cant,~* qúi vólunt \underline{\textit{mí}}\underline{\textit{hi}} \textbf{má}la.}\polPs{}%
+\latNPs{\mred{4.}~Avertántur státim erube\textbf{scén}tes,~* qúi dícunt míhi: Eú\underline{\textit{ge}}, \underline{\textit{e}}\textbf{ú}ge.}\polPs{}%
+\latNPs{\mred{5.}~Exsúltent et laeténtur in te ómnes qúi qua\textbf{é}runt te,~* et dícant sémper: Magnificétur Dóminus: qúi díligunt salu\underline{\textit{tá}}\underline{\textit{re}} \textbf{tú}um.}\polPs{}%
+\latNPs{\mred{6.}~Ego véro egénus, et pa\textbf{ú}per sum:~* Déus, \underline{\textit{ád}}\underline{\textit{ju}}\textbf{va} me.}\polPs{}%
+\latNPs{\mred{7.}~Adjútor méus, et liberátor méus \textbf{es} tu:~* Dómine, \underline{\textit{ne}} \underline{\textit{mo}}\textbf{ré}ris.}\polPs{}%

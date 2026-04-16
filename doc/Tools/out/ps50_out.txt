@@ -1,0 +1,20 @@
+\latNPs{\mred{1.}~Miserére méi, Déus,~\red{*} secúndum mágnam misericórdiam túam.}\polPs{Zmiłuj się nademną, Boże,~\red{*} według wielkiego miłosierdzia twego.}%
+\latNPs{\mred{2.}~Et secúndum multitúdinem miseratiónum tuárum,~\red{*} déle iniquitátem méam.}\polPs{A według mnóstwa litości twoich,~\red{*} zgładź nieprawość moję.}%
+\latNPs{\mred{3.}~Ámplius láva me ab iniquitáte méa:~\red{*} et a peccáto méo múnda me.}\polPs{Jeszcze więcéj omyj mię od nieprawości mojéj:~\red{*} i od grzechu mojego oczyść mię.}%
+\latNPs{\mred{4.}~Quóniam iniquitátem méam égo cognósco:~\red{*} et peccátum méum cóntra me est sémper.}\polPs{Albowiem ja znam nieprawość moję:~\red{*} i grzech mój jest zawżdy przeciwko mnie.}%
+\latNPs{\mred{5.}~Tíbi sóli peccávi, et málum córam te féci:~\red{*} ut justificéris in sermónibus túis, et víncas cum judicáris.}\polPs{Tobiem samemu zgrzeszył i uczyniłem złość przed tobą:~\red{*} abyś się usprawiedliwił w mowach twoich, a zwyciężył, gdy cię posądzają.}%
+\latNPs{\mred{6.}~Ecce énim, in iniquitátibus concéptus sum:~\red{*} et in peccátis concépit me máter méa.}\polPs{Oto bowiem w nieprawościach jestem poczęty:~\red{*} a w grzechach poczęła mię matka moja.}%
+\latNPs{\mred{7.}~Ecce énim, veritátem dilexísti:~\red{*} incérta et occúlta sapiéntiae túae manifestásti míhi.}\polPs{Oto bowiem, umiłowałeś prawdę:~\red{*} niewiadome i skryte rzeczy mądrości twojéj objawiłeś mi.}%
+\latNPs{\mred{8.}~Aspérges me hyssópo, et mundábor:~\red{*} lavábis me, et súper nívem dealbábor.}\polPs{Pokropisz mię Hyzopem, a będę oczyszczony:~\red{*} omyjesz mię, a będę nad śnieg wybielony.}%
+\latNPs{\mred{9.}~Audítui méo dábis gáudium et laetítiam:~\red{*} et exsultábunt óssa humiliáta.}\polPs{Słuchowi memu dasz radość i wesele:~\red{*} i rozradują się kości poniżone.}%
+\latNPs{\mred{10.}~Avérte fáciem túam a peccátis méis:~\red{*} et ómnes iniquitátes méas déle.}\polPs{Odwróć oblicze twoje od grzechów moich:~\red{*} a zgładź wszystkie nieprawości moje.}%
+\latNPs{\mred{11.}~Cor múndum créa in me, Déus:~\red{*} et spíritum réctum ínnova in viscéribus méis.}\polPs{Serce czyste stwórz we mnie, Boże:~\red{*} i ducha prawego odnów we wnętrznościach moich.}%
+\latNPs{\mred{12.}~Ne proícias me a fácie túa:~\red{*} et spíritum sánctum túum ne áuferas a me.}\polPs{Nie odrzucaj mię od oblicza twego:~\red{*} i Ducha Świętego twego nie bierz odemnie.}%
+\latNPs{\mred{13.}~Rédde míhi laetítiam salutáris túi:~\red{*} et spíritu principáli confírma me.}\polPs{Przywróć mi radość zbawienia twojego:~\red{*} i duchem przedniejszym potwierdź mię.}%
+\latNPs{\mred{14.}~Docébo iníquos vías túas:~\red{*} et ímpii ad te converténtur.}\polPs{Będę nauczał nieprawe dróg twoich:~\red{*} a niezbożni do ciebie się nawrócą.}%
+\latNPs{\mred{15.}~Líbera me de sanguínibus, Déus, Déus salútis méae:~\red{*} et exsultábit lingúa méa justítiam túam.}\polPs{Wybaw mię ze krwi, Boże, Boże zbawienia mego:~\red{*} a język mój z radością będzie wysławiał sprawiedliwość twoję.}%
+\latNPs{\mred{16.}~Dómine, lábia méa apéries:~\red{*} et os méum annuntiábit laúdem túam.}\polPs{Panie, otworzysz wargi moje:~\red{*} a usta moje opowiadać będą chwałę twoję.}%
+\latNPs{\mred{17.}~Quóniam si voluísses sacrifícium, dedíssem útique:~\red{*} holocáustis non delectáberis.}\polPs{Albowiem gdybyś był chciał ofiary, wżdybych był dał:~\red{*} w całopalonych nie będziesz się kochał.}%
+\latNPs{\mred{18.}~Sacrifícium Déo spíritus contribulátus:~\red{*} cor contrítum, et humiliátum, Déus, non despícies.}\polPs{Ofiara Bogu, duch strapiony:~\red{*} serca skruszonego i uniżonego, Boże, nie wzgardzisz.}%
+\latNPs{\mred{19.}~Benígne fac, Dómine, in bóna voluntáte túa Síon:~\red{*} ut aedificéntur múri Jerúsalem.}\polPs{Uczyń dobrze, Panie, Syonowi w dobréj woli twojéj:~\red{*} aby się zbudowały mury Jeruzalem.}%
+\latNPs{\mred{20.}~Tunc acceptábis sacrifícium justítiae, oblatiónes, et holocáusta:~\red{*} tunc impónent súper altáre túum vítulos.}\polPs{Tedy przyjmiesz ofiarę sprawiedliwości, obiaty i całopalenia:~\red{*} tedy nakładą na ołtarz twój cielców.}%

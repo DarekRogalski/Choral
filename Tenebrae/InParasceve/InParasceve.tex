@@ -53,11 +53,28 @@
 % <c><i>Ps.</i></c> 
 % <c><sp>V/</sp>.</c>
 % <c><i>ij.</i></c>
+% é á í ó ú ý æ ǽ œ Á, É, Í, Ó, Ú, Ý Æ Ǽ Œ \'{\oe} \'{\OE}
 % \tikz[overlay]\draw[red](-10,0)--++(15,0);
 % -------------------- I. Nocturno -------------------- 
 % ---------------------- Resp. 1 ---------------------- 
 \thispagestyle{empty}
-\wstawplik{modlitwy_wstepne_has}
+% --------- modlitwy wstępne ----------
+\sekcja{Ante Divinum officium}{}%{Odmawia się po cichu w pozycji klęczącej.}
+\vspace{-26pt}
+\columnratio{0.5}
+\BeginParallel\fontsize{14}{18}\selectfont
+	\latN{\inicjal{A}{péri},~\red{\grecross}~Dómine, os meum ad benedicéndum nomen sanctum tuum: munda quoque cor meum ab ómnibus vanis, pervérsis et aliénis cogitatiónibus; intelléctum illúmina, afféctum inflámma, ut digne, atténte ac devóte hoc Offícium recitáre váleam, et exaudíri mérear ante conspéctum divínæ Majestátis tuæ. Per Christum Dóminum nostrum. Amen.}
+	\pol{\inicjal{O}{twórz},~\red{\grecross}~Panie, usta moje, dla błogosławienia świętego imienia Twego: oczyść także serce moje od wszelkich myśli próżnych, przewrotnych i~niewłaściwych; oświeć rozum, rozpal uczucie, abym godnie, uważnie i~pobożnie mógł odmówić to oficjum, i~zasłużył na wysłuchanie przed obliczem Twego Boskiego majestatu. Przez Chrystusa, Pana naszego. Amen.}
+  	\latN{\inicjal{D}{ómine}, in unióne illíus divínæ intentiónis, qua ipse in terris laudes Deo persolvísti, has tibi Horas persólvo.}
+	\pol{\inicjal{P}{anie}, w~zjednoczeniu z~tą Boską intencją, z~którą Ty sam, na ziemi będąc, chwałę Bogu zanosiłeś, Tobie te godziny zanoszę.}
+	\latN{\inicjal{P}{ater} noster, qui es in cælis, sanctificétur nomen tuum: advéniat regnum tuum: fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie: et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris: et ne nos indúcas in tentatiónem: sed líbera nos a malo. Amen}
+	\pol{\inicjal{O}{jcze} nasz, któryś jest w niebie święć się imię Twoje; przyjdź królestwo Twoje; bądź wola Twoja jako w niebie tak i~na ziemi; chleba naszego powszedniego daj nam dzisiaj; i~odpuść nam nasze winy, jako i~my odpuszczamy naszym winowajcom; i~nie wódź nas na pokuszenie; ale nas zbaw od złego. Amen.}
+	\latN{\inicjal{A}{ve} María, grátia plena; Dóminus tecum: benedícta tu in muliéribus, et benedíctus fructus ventris tui Jesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.}
+	\pol{\inicjal{Z}{drowaś} Maryjo, łaski pełna, Pan z~Tobą, błogosławionaś Ty między niewiastami i~błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i~w~godzinę śmierci naszej. Amen.}
+	\latN{\inicjal{C}{redo} in Deum, Patrem omnipoténtem, Creatórem cæli et terræ. Et in Jesum Christum, Fílium ejus únicum, Dóminum nostrum: qui concéptus est de Spíritu Sancto, natus ex María Vírgine, passus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus: descéndit ad ínferos; tértia die resurréxit a~mórtuis; ascéndit ad cælos; sedet ad déxteram Déi Patris omnipoténtis: inde ventúrus est judicáre vivos et mórtuos. Credo in Spíritum Sanctum, sanctam Ecclésiam cathólicam, Sanctórum communiónem, remissiónem peccatórum, carnis resurrectiónem, vitam ætérnam. Amen.}
+	\pol{\inicjal{W}{ierzę} w Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, i w Jezusa Chrystusa, Syna Jego jedynego, Pana naszego, który się począł z Ducha Świętego, narodził się z Maryi Panny, umęczon pod Ponckim Piłatem, ukrzyżowan, umarł i pogrzebion. Zstąpił do piekieł, trzeciego dnia zmartwychwstał. Wstąpił na niebiosa, siedzi po prawicy Boga Ojca wszechmogącego. Stamtąd przyjdzie sądzić żywych i umarłych.
+Wierzę w Ducha Świętego, święty Kościół powszechny, świętych obcowanie, grzechów odpuszczenie, ciała zmartwychwstanie, żywot wieczny. Amen.}
+\EndParallel
 \pagebreak
 \fi% ---------------------------------------------- blok wyłączony gdy mydebug = 1 ---------------------------------------------------------------------- ↑
 \setcounter{page}{1}
@@ -81,7 +98,7 @@
 \setlength{\columnsep}{.02\textwidth}
 \BeginParallel
 \latNPs{\mred{2.}~Astitérunt reges terræ, et príncipes convenérunt in \textbf{u}num~\red{*} advérsus Dóminum, et advérsus \underline{\textit{Chris}}\underline{\textit{tum}} \textbf{e}jus.}\polPs{Stanęli wespół królowie ziemscy, a książęta zeszli się w gromadę~\red{*} przeciw Panu, i przeciw Chrystusowi jego.}%
-\latNPs{\mred{3.}~Dirumpámus víncula e\textbf{ó}rum:~\red{*} et projiciámus a nobis ju\underline{\textit{gum}} \underline{\textit{ip}}\textbf{só}rum. bs:\the\baselineskip}\polPs{Potargajmy związki ich:~\red{*} i zrzućmy z siebie jarzmo ich. \the\textfloatsep}%
+\latNPs{\mred{3.}~Dirumpámus víncula e\textbf{ó}rum:~\red{*} et projiciámus a nobis ju\underline{\textit{gum}} \underline{\textit{ip}}\textbf{só}rum.}\polPs{Potargajmy związki ich:~\red{*} i zrzućmy z siebie jarzmo ich.}%
 \latNPs{\mred{4.}~Qui hábitat in cælis, irridébit \textbf{e}os:~\red{*} et Dóminus subsan\underline{\textit{ná}}\underline{\textit{bit}} \textbf{e}os.}\polPs{Który mieszka w niebiesiech, naśmieje się z nich:~\red{*} a Pan szydzić z nich będzie.}%
 \latNPs{\mred{5.}~Tunc loquétur ad eos in ira \textbf{su}a,~\red{*} et in furóre suo contur\underline{\textit{bá}}\underline{\textit{bit}} \textbf{e}os.}\polPs{Tedy będzie mówił do nich w gniewie swoim,~\red{*} i w zapalczywości swéj potrwoży je.}%
 \latNPs{\mred{6.}~Ego autem constitútus sum Rex ab eo super Sion montem sanctum \textbf{e}jus,~\red{*} prǽdicans præ\underline{\textit{cép}}\underline{\textit{tum}} \textbf{e}jus.}\polPs{A jam jest postanowion królem od niego nad Syonem, górą świętą jego,~\red{*} opowiadając przykazanie jego.}%
@@ -101,7 +118,7 @@
 \paragraphspace
 \gresetinitiallines{1}\greannotation{1. Ant.}\greannotation{8 G}\gabcsnippet{(c4) A(g)sti(g)té(g)runt(g') () re(g)ges(g') ter(ixi)rae,(gg) (,) et(f) prín(g')ci(h)pes(g'_[oh:h]) con(g)ve(f')né(g)runt(h') in(ixi) u(h)num,(f.) (;) ad(h)vér(f')sus(h) Dó(j')mi(j)num,(i_[oh:h]g_[oh:h]) (,) et(i') ad(j)vér(h)sus(gf) Chri(gh)stum(h) e(g.)jus.(g.) (::)}
 \vspace{-25pt}
-\tlumaczR{Stanęli wespół królowie~\red{*} i książęta zeszli się\\gromadnie przeciw Panu i przeciw Chrystusowi jego.}\paragraphspace
+\tlumaczR{Stanęli wespół królowie i~książęta zeszli się\\gromadnie przeciw Panu i przeciw Chrystusowi jego.}\paragraphspace
 %% -------- 2. Ant. Divisérunt sibi vestiménta mea, et super vestem meam misérunt sortem. -----------
 \gresetinitiallines{1}\greannotation{2. Ant.}\greannotation{8 G}\gabcsnippet{(c4) DI(g)vi(g')sé(h)runt(h') si(g)bi(g'_[oh:h]) <c><v>*</v></c>(,) ve(i)sti(h')mén(j)ta(i') me(h)a,(h.) (;) et(h) su(j')per(i) ve(jk)stem(h) me(h_g)am(g.) (,) mi(g_[oh:h]f)sé(gh)runt(h) sor(g.)tem.(g.) (::)}
 \vspace{-10pt}
@@ -112,7 +129,7 @@
 \vspace{-25pt}
 \tlumaczR{Boże, Boże mój, wejrzyj na mię: czemuś mię opuścił?~\red{*}\\daleko od zbawienia mego słowa grzechów moich.}\paragraphspace
 \BeginParallel
-\latNPs{\mred{2.}~Deus meus, clamábo per diem, et non ex\textbf{áu}dies:~\red{*} et nocte, et non ad insipién\underline{\textit{ti}}\underline{\textit{am}} \textbf{mi}hi.}\polPs{Boże mój, będę wołał we dnie, a nie wysłuchasz:~\red{*} i w nocy, a nie ku głupstwu mnie.}%
+\latNPs{\mred{2.}~Déus meus, clamábo per diem, et non ex\textbf{áu}dies:~\red{*} et nocte, et non ad insipién\underline{\textit{ti}}\underline{\textit{am}} \textbf{mi}hi.}\polPs{Boże mój, będę wołał we dnie, a nie wysłuchasz:~\red{*} i w nocy, a nie ku głupstwu mnie.}%
 \latNPs{\mred{3.}~Tu autem in sancto \textbf{há}bitas:~\red{*} \underline{\textit{laus}} \textbf{Is}raël.}\polPs{A ty mieszkasz w świątnicy,~\red{*} chwało Izraelska.}%
 \latNPs{\mred{4.}~In te speravérunt patres \textbf{nos}tri:~\red{*} speravérunt, et libe\underline{\textit{rás}}\underline{\textit{ti}} \textbf{e}os.}\polPs{W tobie nadzieję mieli ojcowie nasi:~\red{*} nadzieję mieli, i wybawiłeś je.}%
 %\gresetinitiallines{0}\gabcsnippet{<c><v>\footnotesize{5. }</v></c>Ad(j) te(j) cla(j)ma(j)vé(j)runt,(j) et(j) sal(j)vi(j) <b>fac</b>(k)ti(jr) sunt:(j.) <c><v>*</v></c> (:) in(j) te(j) spe(j)ra(j)vé(j)runt,(j) et(j) non(j) <i><ul>sunt</i></ul>(i) <i><ul>con</i></ul>(j)<b>fú</b>(h gr)si.(g.) (::)}
@@ -127,19 +144,19 @@
 %\latNPs{\mred{7.}~Omnes vidéntes me deri\textbf{sé}runt me:~\red{*} locúti sunt lábiis, et mo\underline{\textit{vé}}\underline{\textit{runt}} \textbf{ca}put.}\polPs{Wszyscy, którzy mię widzieli, naśmiewali się ze mnie:~\red{*} mówili usty i kiwali głową.}%
 \BeginParallel
 \latNPs{\mred{8.}~Sperávit in Dómino, erípiat \textbf{e}um:~\red{*} salvum fáciat eum, quóni\underline{\textit{am}} \underline{\textit{vult}} \textbf{e}um.}\polPs{Nadzieję miał w Panu, niechaj go wyrwie:~\red{*} niechaj zbawi, ponieważ chce go.}%
-\latNPs{\mred{9.}~Quóniam tu es, qui extraxísti me de \textbf{ven}tre:~\red{*} spes mea ab ubéribus matris meæ. In te projéctus \underline{\textit{sum}} \underline{\textit{ex}} \textbf{ú}tero.}\polPs{Albowiem tyś jest, któryś mię wyciągnął z żywota:~\red{*} nadziejo moja od piersi matki mojéj. Na cię porzucony jestem:}%
-\latNPs{\mred{10.}~De ventre matris meæ Deus meus \textbf{es} tu,~\red{*} ne discés\underline{\textit{se}}\underline{\textit{ris}} \textbf{a} me:}\polPs{Żywota matki mojéj, tyś jest Bogiem moim,~\red{*} nie odstępuj odemnie:}%
+\latNPs{\mred{9.}~Quóniam tu es, qui extraxísti me de \textbf{ven}tre:~\red{*} spes méa ab ubéribus matris meæ. In te projéctus \underline{\textit{sum}} \underline{\textit{ex}} \textbf{ú}tero.}\polPs{Albowiem tyś jest, któryś mię wyciągnął z żywota:~\red{*} nadziejo moja od piersi matki mojéj. Na cię porzucony jestem:}%
+\latNPs{\mred{10.}~De ventre matris meæ Déus meus \textbf{es} tu,~\red{*} ne discés\underline{\textit{se}}\underline{\textit{ris}} \textbf{a} me:}\polPs{Żywota matki mojéj, tyś jest Bogiem moim,~\red{*} nie odstępuj odemnie:}%
 \latNPs{\mred{11.}~Quóniam tribulátio próxi\textbf{ma} est:~\red{*} quóniam non \underline{\textit{est}} \underline{\textit{qui}} \textbf{ád}juvet.}\polPs{Albowiem utrapienie bliskie jest:~\red{*} bo niemasz, ktoby ratował.}%
 \latNPs{\mred{12.}~Circumdedérunt me vítuli \textbf{mul}ti:~\red{*} tauri pingues \underline{\textit{ob}}\underline{\textit{se}}\textbf{dé}runt me.}\polPs{Obtoczyli mię cielcy mnodzy:~\red{*} bycy tłuści oblegli mię.}%
 \latNPs{\mred{13.}~Aperuérunt super me os \textbf{su}um:~\red{*} sicut leo rápi\underline{\textit{ens}} \underline{\textit{et}} \textbf{rú}giens.}\polPs{Otworzyli na mię gębę swą,~\red{*} jako lew porywający i ryczący.}%
 \latNPs{\mred{14.}~Sicut aqua ef\textbf{fú}sus sum:~\red{*} et dispérsa sunt ómnia \underline{\textit{os}}\underline{\textit{sa}} \textbf{me}a.}\polPs{Wylanym jest jako woda:~\red{*} i rozsypały się wszystkie kości moje.}%
 \latNPs{\mred{15.}~Factum est cor meum tamquam cera li\textbf{qué}scens:~\red{*} in médio \underline{\textit{ven}}\underline{\textit{tris}} \textbf{me}i.}\polPs{Stało się serce moje jako wosk topniejący~\red{*} w pośród żywota mego.}%
-\latNPs{\mred{16.}~Aruit tamquam testa virtus mea,~\red{†}  et lingua mea adhǽsit fáucibus \textbf{me}is:~\red{*} et in púlverem mortis \underline{\textit{de}}\underline{\textit{du}}\textbf{xís}ti me.}\polPs{Wyschła jako skorupa siła moja, a język mój przysechł do podniebienia mego:~\red{*} i obróciłeś mię w proch śmierci.}%
+\latNPs{\mred{16.}~Aruit tamquam testa virtus mea,~\red{†}  et lingua méa adhǽsit fáucibus \textbf{me}is:~\red{*} et in púlverem mortis \underline{\textit{de}}\underline{\textit{du}}\textbf{xís}ti me.}\polPs{Wyschła jako skorupa siła moja, a język mój przysechł do podniebienia mego:~\red{*} i obróciłeś mię w proch śmierci.}%
 \latNPs{\mred{17.}~Quóniam circumdedérunt me canes \textbf{mul}ti:~\red{*} concílium malignánti\underline{\textit{um}} \underline{\textit{ob}}\textbf{sé}dit me.}\polPs{Albowiem obstąpili mię psi mnodzy:~\red{*} zbór złośników obiegł mię.}%
 \latNPs{\mred{18.}~Fodérunt manus meas et pedes \textbf{me}os:~\red{*} dinumeravérunt ómnia \underline{\textit{os}}\underline{\textit{sa}} \textbf{me}a.}\polPs{Przebodli ręce moje i nogi moje:~\red{*} policzyli wszystkie kości moje.}%
 \latNPs{\mred{19.}~Ipsi vero consideravérunt et inspe\textbf{xé}runt me:~\red{*} divisérunt sibi vestiménta mea, et super vestem meam mi\underline{\textit{sé}}\underline{\textit{runt}} \textbf{sor}tem.}\polPs{A oni przypatrowali się i patrzyli na mię:~\red{*} rozdzielili sobie szaty moje, a o suknią moję los miotali.}%
 \latNPs{\mred{20.}~Tu autem, Dómine, ne elongáveris auxílium tuum \textbf{a}~me:~\red{*} ad defensiónem \underline{\textit{me}}\underline{\textit{am}} \textbf{cón}spice.}\polPs{Ale ty, Panie, nie oddalaj odemnie wspomożenia twego:~\red{*} wejrzyj na obronę moję.}%
-\latNPs{\mred{21.}~Erue a frámea, Deus, ánimam \textbf{me}am:~\red{*} et de manu canis ú\underline{\textit{ni}}\underline{\textit{cam}} \textbf{me}am.}\polPs{Wyrwij od miecza, Boże, duszę moję:~\red{*} a z ręki psiéj jedynaczkę moję:}%
+\latNPs{\mred{21.}~Erue a frámea, Déus, ánimam \textbf{me}am:~\red{*} et de manu canis ú\underline{\textit{ni}}\underline{\textit{cam}} \textbf{me}am.}\polPs{Wyrwij od miecza, Boże, duszę moję:~\red{*} a z ręki psiéj jedynaczkę moję:}%
 \latNPs{\mred{22.}~Salva me ex ore le\textbf{ó}nis:~\red{*} et a córnibus unicórnium humili\underline{\textit{tá}}\underline{\textit{tem}} \textbf{me}am.}\polPs{Wybaw mię z paszczęki lwiéj:~\red{*} a od rogów jednorożcowych uniżenie moje.}%
 \latNPs{\mred{23.}~Narrábo nomen tuum frátribus \textbf{me}is:~\red{*} in médio Ecclési\underline{\textit{æ}} \underline{\textit{lau}}\textbf{dá}bo te.}\polPs{Będę opowiadał imię twe braciéj mojéj:~\red{*} w pośród kościoła będę cię chwalił.}%
 \EndParallel
@@ -151,13 +168,13 @@
 \BeginParallel
 \latNPs{\mred{25.}~Tímeat eum omne semen \textbf{Is}raël:~\red{*} quóniam non sprevit, neque despéxit deprecati\underline{\textit{ó}}\underline{\textit{nem}} \textbf{páu}peris:}\polPs{Niech się go boi wszystko nasienie Izraelskie:~\red{*} albowiem nie wzgardził, ani odrzucił prośby ubogiego:}%
 \latNPs{\mred{26.}~Nec avértit fáciem suam \textbf{a} me:~\red{*} et cum clamárem ad eum, \underline{\textit{ex}}\underline{\textit{au}}\textbf{dí}vit me.}\polPs{Ani odwrócił oblicza swego odemnie:~\red{*} a gdym wołał do niego, wysłuchał mię.}%
-\latNPs{\mred{27.}~Apud te laus mea in ecclésia \textbf{ma}gna:~\red{*} vota mea reddam in conspéctu timén\underline{\textit{ti}}\underline{\textit{um}} \textbf{e}um.}\polPs{U ciebie chwała moja w kościele wielkim:~\red{*} śluby moje oddam przed oczyma bojących się jego.}%
+\latNPs{\mred{27.}~Apud te laus méa in ecclésia \textbf{ma}gna:~\red{*} vota méa reddam in conspéctu timén\underline{\textit{ti}}\underline{\textit{um}} \textbf{e}um.}\polPs{U ciebie chwała moja w kościele wielkim:~\red{*} śluby moje oddam przed oczyma bojących się jego.}%
 \latNPs{\mred{28.}~Edent páuperes, et saturabúntur:~\red{†}  et laudábunt Dóminum qui requírunt \textbf{e}um:~\red{*} vivent corda eórum in sǽ\underline{\textit{cu}}\underline{\textit{lum}} \textbf{sǽ}culi.}\polPs{Będą jedli ubodzy, i najedzą się: i będą chwalić Pana, którzy go szukają:~\red{*} będą żyć serca ich na wieki wieków.}%
 \latNPs{\mred{29.}~Reminiscéntur et converténtur ad \textbf{Dó}minum~\red{*} univérsi \underline{\textit{fi}}\underline{\textit{nes}} \textbf{ter}ræ:}\polPs{Wspomną i nawrócą się do Pana~\red{*} wszystkie kraje ziemie:}%
 \latNPs{\mred{30.}~Et adorábunt in conspéctu \textbf{e}jus~\red{*} univérsæ famí\underline{\textit{li}}\underline{\textit{æ}} \textbf{Gén}tium.}\polPs{I będą się kłaniać przed oblicznością jego~\red{*} wszystkie familie pogańskie.}%
 \latNPs{\mred{31.}~Quóniam Dómini est \textbf{re}gnum:~\red{*} et ipse dominá\underline{\textit{bi}}\underline{\textit{tur}} \textbf{Gén}tium.}\polPs{Albowiem Pańskie jest królestwo:~\red{*} i on będzie panował nad pogany.}%
 \latNPs{\mred{32.}~Manducavérunt et adoravérunt omnes pingues \textbf{ter}ræ:~\red{*} in conspéctu ejus cadent omnes qui descén\underline{\textit{dunt}} \underline{\textit{in}} \textbf{ter}ram.}\polPs{Jedli i kłaniali się wszyscy tłuści ziemscy:~\red{*} przed oblicznością jego będą padać wszyscy, którzy zstępują w ziemię.}%
-\latNPs{\mred{33.}~Et ánima mea illi \textbf{vi}vet:~\red{*} et semen meum sér\underline{\textit{vi}}\underline{\textit{et}} \textbf{ip}si.}\polPs{A dusza moja jemu będzie żyła:~\red{*} i nasienie moje będzie mu służyć.}%
+\latNPs{\mred{33.}~Et ánima méa illi \textbf{vi}vet:~\red{*} et semen meum sér\underline{\textit{vi}}\underline{\textit{et}} \textbf{ip}si.}\polPs{A dusza moja jemu będzie żyła:~\red{*} i nasienie moje będzie mu służyć.}%
 \latNPs{\mred{34.}~Annuntiábitur Dómino generátio ven\textbf{tú}ra:~\red{*} et annuntiábunt cæli justítiam ejus pópulo qui nascétur, quem \underline{\textit{fe}}\underline{\textit{cit}} \textbf{Dó}minus.}\polPs{Będzie opowiadan Panu rodzaj przyszły:~\red{*} i będą opowiadać niebiosa sprawiedliwość jego ludowi, który się narodzi, który uczynił Pan.}%
 \EndParallel
 \gresetinitiallines{1}\greannotation{2. Ant.}\greannotation{8 G}\gabcsnippet{(c4) DI(g)vi(g')sé(h)runt(h') si(g)bi(g'_[oh:h]) (,) ve(i)sti(h')mén(j)ta(i') me(h)a,(h.) (;) et(h) su(j')per(i) ve(jk)stem(h) me(h_g)am(g.) (,) mi(g_[oh:h]f)sé(gh)runt(h) sor(g.)tem.(g.) (::)}
@@ -190,8 +207,8 @@
 \tlumaczR{Nie odwracaj oblicza twego odemnie:~\red{*} nie odstępuj w gniewie od sługi twego.}\minispace
 \BeginParallel
 %\latNPs{\mred{14.}~Ne avértas fáciem tuam \textbf{a} me,~\red{*} ne declínes in ira a \underline{\textit{ser}}\underline{\textit{vo}} \textbf{tu}o.}\polPs{Nie odwracaj oblicza twego odemnie:~\red{*} nie odstępuj w gniewie od sługi twego.}%
-\latNPs{\mred{15.}~Adjútor meus \textbf{es}to:~\red{*} ne derelínquas me, neque despícias me, Deus, salu\underline{\textit{tá}}\underline{\textit{ris}} \textbf{me}us.}\polPs{Bądź pomocnikiem moim:~\red{*} nie opuszczaj mię, ani mię wzgardzaj, Boże, zbawicielu mój.}%
-\latNPs{\mred{16.}~Quóniam pater meus, et mater mea dereli\textbf{qué}runt me:~\red{*} Dóminus au\underline{\textit{tem}} \underline{\textit{as}}\textbf{súmp}sit me.}\polPs{Albowiem ojciec mój i matka moja opuścili mię:~\red{*} ale Pan przyjął mię.}%
+\latNPs{\mred{15.}~Adjútor meus \textbf{es}to:~\red{*} ne derelínquas me, neque despícias me, Déus, salu\underline{\textit{tá}}\underline{\textit{ris}} \textbf{me}us.}\polPs{Bądź pomocnikiem moim:~\red{*} nie opuszczaj mię, ani mię wzgardzaj, Boże, zbawicielu mój.}%
+\latNPs{\mred{16.}~Quóniam pater meus, et mater méa dereli\textbf{qué}runt me:~\red{*} Dóminus au\underline{\textit{tem}} \underline{\textit{as}}\textbf{súmp}sit me.}\polPs{Albowiem ojciec mój i matka moja opuścili mię:~\red{*} ale Pan przyjął mię.}%
 \latNPs{\mred{17.}~Legem pone mihi, Dómine, in via \textbf{tu}a:~\red{*} et dírige me in sémitam rectam propter ini\underline{\textit{mí}}\underline{\textit{cos}} \textbf{me}os.}\polPs{Zakon mi ustaw, Panie, w drodze twojéj:~\red{*} i prowadź mię prostą ścieżką dla nieprzyjaciół moich.}%
 \latNPs{\mred{18.}~Ne tradíderis me in ánimas tribulánti\textbf{um} me:~\red{*} quóniam insurrexérunt in me testes iníqui, et mentíta est iní\underline{\textit{qui}}\underline{\textit{tas}} \textbf{si}bi.}\polPs{Nie podawaj mię na dusze trapiących mię:~\red{*} albowiem powstali przeciwko mnie świadkowie fałszywi, i skłamała nieprawość sobie.}%
 \latNPs{\mred{19.}~Credo vidére bona \textbf{Dó}mini~\red{*} in ter\underline{\textit{ra}} \underline{\textit{vi}}\textbf{vén}tium.}\polPs{Wierzę, iż oglądam dobra Pańskie~\red{*} w ziemi żywiących.}%
@@ -279,7 +296,7 @@
 \EndParallel
 \linespace
 %% -----------------------------
-%% --- Resp. 3. Vinea mea ------
+%% --- Resp. 3. Vinea méa ------
 %% -----------------------------
 \subsekcja{Responsorium 3}
 \vspace{-16pt}
@@ -301,7 +318,7 @@
 \tlumaczR{Gwałt czynili~\red{*}\\szukający duszy mojej.}\minispace
 \noindent\subsekcja{Psalm 37}
 \vspace{-16pt}
-\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. } </v></c> Dó(g)mi(h)ne,(j) ne(j) in(j) fu(j)ró(j)re(j) tu(j)o(j) ár(j)gu(j)<b>as</b>(k jr) me,(j.) <c><v>*</v></c>(:) ne(j)que(j) in(j) i(j)ra(j) tu(j)a(j) cor(j)<i><ul>rí</i></ul>(i)<i><ul>pi</i></ul>(j)<b>as</b>(h gr) me.(g.) (::z-) <c><i>Flex:</i></c>()  con(j)tur(j)bá(j)tum(h) est, <c><v>†</v></c>(h.  ::)}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. } </v></c> Dó(g)mi(h)ne,(j) ne(j) in(j) fu(j)ró(j)re(j) tu(j)o(j) ár(j)gu(j)<b>as</b>(k jr) me,(j.) <c><v>*</v></c>(:) ne(j)que(j) in(j) i(j)ra(j) tu(j)a(j) cor(j)<i><ul>rí</i></ul>(i)<i><ul>pi</i></ul>(j)<b>as</b>(h gr) me.(g.) (::z-) <c><i>Flex:</i></c>()  con(j)tur(j)bá(j)tum(hr) est, <c><v>†</v></c>(h.  ::)}
 \vspace{-14pt}
 \tlumaczR{Panie, nie w zapalczywości twojéj strofuj mię,~\red{*} ani w gniewie twoim karz mię.}\minispace
 \columnratio{0.75}
@@ -309,7 +326,7 @@
 \setlength{\columnsep}{.02\textwidth}
 \BeginParallel
 \latNPs{\mred{2.}~Quóniam sagíttæ tuæ infíxæ sunt \textbf{mi}hi:~\red{*} et confirmásti super me \underline{\textit{ma}}\underline{\textit{num}} \textbf{tu}am.}\polPs{Albowiem strzały twoje utknęły we mnie:~\red{*} i zmocniłeś nademną rękę twoję.}%
-\latNPs{\mred{3.}~Non est sánitas in carne mea a fácie iræ \textbf{tu}æ:~\red{*} non est pax óssibus meis a fácie peccató\underline{\textit{rum}} \underline{\textit{me}}\textbf{ó}rum.}\polPs{Niemasz zdrowia w ciele mojem od oblicza gniewu twego:~\red{*} niemasz pokoju kościom moim od oblicza grzechów moich.}%
+\latNPs{\mred{3.}~Non est sánitas in carne méa a fácie iræ \textbf{tu}æ:~\red{*} non est pax óssibus meis a fácie peccató\underline{\textit{rum}} \underline{\textit{me}}\textbf{ó}rum.}\polPs{Niemasz zdrowia w ciele mojem od oblicza gniewu twego:~\red{*} niemasz pokoju kościom moim od oblicza grzechów moich.}%
 \latNPs{\mred{4.}~Quóniam iniquitátes meæ supergréssæ sunt caput \textbf{me}um:~\red{*} et sicut onus grave gravá\underline{\textit{tæ}} \underline{\textit{sunt}} \textbf{su}per me.}\polPs{Albowiem nieprawości moje przewyższyły głowę moję:~\red{*} a jako brzemię ciężkie obciężały na mnie.}%
 \latNPs{\mred{5.}~Putruérunt et corrúptæ sunt cicatríces \textbf{me}æ,~\red{*} a fácie insipién\underline{\textit{ti}}\underline{\textit{æ}} \textbf{me}æ.}\polPs{Pogniły i popsowały się blizny moje,~\red{*} od oblicza głupstwa mojego.}%
 \latNPs{\mred{6.}~Miser factus sum, et curvátus sum usque in \textbf{fi}nem:~\red{*} tota die contristátus in\underline{\textit{gre}}\underline{\textit{di}}\textbf{é}bar.}\polPs{Znędzniałem i skurczyłem się aż do końca:~\red{*} cały dzień chodziłem zasmucony.}%
@@ -334,8 +351,8 @@
 \latNPs{\mred{19.}~Quóniam iniquitátem meam annunti\textbf{á}bo:~\red{*} et cogitábo pro pec\underline{\textit{cá}}\underline{\textit{to}} \textbf{me}o.}\polPs{Albowiem nieprawość moję oznajmię:~\red{*} i będę myślił za grzech mój.}%
 \latNPs{\mred{20.}~Inimíci autem mei vivunt, et confirmáti sunt \textbf{su}per me:~\red{*} et multiplicáti sunt qui odérunt \underline{\textit{me}} \underline{\textit{in}}\textbf{í}que.}\polPs{Lecz nieprzyjaciele moi żywią i zmocnili się nademną:~\red{*} i rozmnożyli się, którzy mię nienawidzą niesprawiedliwie.}%
 \latNPs{\mred{21.}~Qui retríbuunt mala pro bonis, detrahébant \textbf{mi}hi:~\red{*} quóniam sequébar \underline{\textit{bo}}\underline{\textit{ni}}\textbf{tá}tem.}\polPs{Którzy oddawają złe za dobre, uwłaczali mi:~\red{*} iżem naśladował dobroci.}%
-\latNPs{\mred{22.}~Ne derelínquas me, Dómine, Deus \textbf{me}us:~\red{*} ne discés\underline{\textit{se}}\underline{\textit{ris}} \textbf{a} me.}\polPs{Nie opuszczaj mię, Panie, Boże mój:~\red{*} nie odstępuj odemnie.}%
-\latNPs{\mred{23.}~Inténde in adjutórium \textbf{me}um,~\red{*} Dómine, Deus, sa\underline{\textit{lú}}\underline{\textit{tis}} \textbf{me}æ.}\polPs{Bądź gotów na ratunek mój,~\red{*} Panie, Boże zbawienia mego.}%
+\latNPs{\mred{22.}~Ne derelínquas me, Dómine, Déus \textbf{me}us:~\red{*} ne discés\underline{\textit{se}}\underline{\textit{ris}} \textbf{a} me.}\polPs{Nie opuszczaj mię, Panie, Boże mój:~\red{*} nie odstępuj odemnie.}%
+\latNPs{\mred{23.}~Inténde in adjutórium \textbf{me}um,~\red{*} Dómine, Déus, sa\underline{\textit{lú}}\underline{\textit{tis}} \textbf{me}æ.}\polPs{Bądź gotów na ratunek mój,~\red{*} Panie, Boże zbawienia mego.}%
 \EndParallel
 \gresetinitiallines{1}\greannotation{4. Ant.}\greannotation{8 G}\gabcsnippet{(c4) VIM(g') fa(h)ci(h')é(g)bant(gf~) (,) qui(g_[uh:l]h) quae(ji)ré(h_j)bant(i_[oh:h]h) á(g')ni(h)mam(h) me(g.)am.(g.) (::)}
 \vspace{-25pt}
@@ -358,12 +375,12 @@
 \latNPs{\mred{4.}~Et immísit in os meum cán\underline{\textit{ti}}\underline{\textit{cum}} \textbf{no}vum~\red{*} car\underline{\textit{men}} \underline{\textit{De}}\underline{\textit{o}} \textbf{nos}tro.}\polPs{I wypuścił nową pieśń w usta moje,~\red{*} hymn Bogu naszemu.}%
 \latNPs{\mred{5.}~Vidébunt multi, \underline{\textit{et}} \underline{\textit{ti}}\textbf{mé}bunt:~\red{*} et spe\underline{\textit{rá}}\underline{\textit{bunt}} \underline{\textit{in}} \textbf{Dó}mino.}\polPs{Ujrzą mnodzy, i będą się bać:~\red{*} i będą mieć nadzieję w Panu.}%
 \latNPs{\mred{6.}~Beátus vir, cujus est nomen Dómi\underline{\textit{ni}} \underline{\textit{spes}} \textbf{e}jus~\red{*} et non respéxit in vanitátes et in\underline{\textit{sá}}\underline{\textit{ni}}\underline{\textit{as}} \textbf{fal}sas.}\polPs{Błogosławiony mąż, którego nadzieja jest imię Pańskie:~\red{*} a nie oglądał się na marności i na szaleństwa omylne.}%
-\latNPs{\mred{7.}~Multa fecísti tu, Dómine, Deus meus, mirabí\underline{\textit{li}}\underline{\textit{a}} \textbf{tu}a:~\red{*} et cogitatiónibus tuis non est qui sí\underline{\textit{mi}}\underline{\textit{lis}} \underline{\textit{sit}} \textbf{ti}bi.}\polPs{Wieleś uczynił ty, Panie, Boże mój, cudów twoich:~\red{*} a w myślach twoich nie jest, ktoby był podobien tobie.}%
+\latNPs{\mred{7.}~Multa fecísti tu, Dómine, Déus meus, mirabí\underline{\textit{li}}\underline{\textit{a}} \textbf{tu}a:~\red{*} et cogitatiónibus tuis non est qui sí\underline{\textit{mi}}\underline{\textit{lis}} \underline{\textit{sit}} \textbf{ti}bi.}\polPs{Wieleś uczynił ty, Panie, Boże mój, cudów twoich:~\red{*} a w myślach twoich nie jest, ktoby był podobien tobie.}%
 \latNPs{\mred{8.}~Annuntiávi \underline{\textit{et}} \underline{\textit{lo}}\textbf{cú}tus sum:~\red{*} multiplicáti \underline{\textit{sunt}} \underline{\textit{su}}\underline{\textit{per}} \textbf{nú}merum.}\polPs{Opowiadałem i mówiłem:~\red{*} rozmnożyli się nad liczbę.}%
 \latNPs{\mred{9.}~Sacrifícium et oblatiónem \underline{\textit{no}}\underline{\textit{lu}}\textbf{ís}ti:~\red{*} aures autem per\underline{\textit{fe}}\underline{\textit{cís}}\underline{\textit{ti}} \textbf{mi}hi.}\polPs{Ofiary i obiaty nie chciałeś:~\red{*} a uszy uczyniłeś mi doskonałe.}%
 \latNPs{\mred{10.}~Holocáustum et pro peccáto non \underline{\textit{pos}}\underline{\textit{tu}}\textbf{lás}ti:~\red{*} tunc di\underline{\textit{xi}}: \underline{\textit{Ec}}\underline{\textit{ce}} \textbf{vé}nio.}\polPs{Całopalenia i za grzech nie żądałeś:~\red{*} tedym rzekł: Oto idę.}%
-\latNPs{\mred{11.}~In cápite libri scriptum est de me ut fácerem volun\underline{\textit{tá}}\underline{\textit{tem}} \textbf{tu}am:~\red{*} Deus meus, vólui, et legem tuam in médi\underline{\textit{o}} \underline{\textit{cor}}\underline{\textit{dis}} \textbf{me}i.}\polPs{W summie ksiąg napisano o mnie, abych czynił wolą twoję:~\red{*} Boże mój, pragnąłem, i zakon twój w pośród serca mego.}%
-\latNPs{\mred{12.}~Annuntiávi justítiam tuam in ecclé\underline{\textit{si}}\underline{\textit{a}} \textbf{ma}gna,~\red{*} ecce lábia mea non prohibébo: Dó\underline{\textit{mi}}\underline{\textit{ne}}, \underline{\textit{tu}} \textbf{scis}ti.}\polPs{Opowiadałem sprawiedliwość twoję w kościele wielkim,~\red{*} oto warg moich nie będę hamował: Panie, tyś wiedział.}%
+\latNPs{\mred{11.}~In cápite libri scriptum est de me ut fácerem volun\underline{\textit{tá}}\underline{\textit{tem}} \textbf{tu}am:~\red{*} Déus meus, vólui, et legem tuam in médi\underline{\textit{o}} \underline{\textit{cor}}\underline{\textit{dis}} \textbf{me}i.}\polPs{W summie ksiąg napisano o mnie, abych czynił wolą twoję:~\red{*} Boże mój, pragnąłem, i zakon twój w pośród serca mego.}%
+\latNPs{\mred{12.}~Annuntiávi justítiam tuam in ecclé\underline{\textit{si}}\underline{\textit{a}} \textbf{ma}gna,~\red{*} ecce lábia méa non prohibébo: Dó\underline{\textit{mi}}\underline{\textit{ne}}, \underline{\textit{tu}} \textbf{scis}ti.}\polPs{Opowiadałem sprawiedliwość twoję w kościele wielkim,~\red{*} oto warg moich nie będę hamował: Panie, tyś wiedział.}%
 \latNPs{\mred{13.}~Justítiam tuam non abscóndi in \underline{\textit{cor}}\underline{\textit{de}} \textbf{me}o:~\red{*} veritátem tuam et salutá\underline{\textit{re}} \underline{\textit{tu}}\underline{\textit{um}} \textbf{di}xi.}\polPs{Sprawiedliwości twojéj nie skryłem w sercu mojem:~\red{*} prawdę twoję i zbawienie twe opowiadałem.}%
 \latNPs{\mred{14.}~Non abscóndi misericórdiam tuam et veri\underline{\textit{tá}}\underline{\textit{tem}} \textbf{tu}am~\red{*} a con\underline{\textit{cí}}\underline{\textit{li}}\underline{\textit{o}} \textbf{mul}to.}\polPs{Nie taiłem miłosierdzia twego i prawdy twojéj~\red{*} przed zgromadzeniem wielkiem.}%
 \latNPs{\mred{15.}~Tu autem, Dómine, ne longe fácias miseratiónes \underline{\textit{tu}}\underline{\textit{as}} \textbf{a} me:~\red{*} misericórdia tua et véritas tua sem\underline{\textit{per}} \underline{\textit{su}}\underline{\textit{sce}}\textbf{pé}runt me.}\polPs{A ty, Panie, nie oddalaj zmiłowania twego odemnie:~\red{*} miłosierdzie twoje i prawda twoja, zawżdy mię broniły.}%
@@ -381,7 +398,7 @@
 \latNPs{\mred{21.}~Ferant conféstim confusi\underline{\textit{ó}}\underline{\textit{nem}} \textbf{su}am:~\red{*} qui dicunt mi\underline{\textit{hi}}: \underline{\textit{Eu}}\underline{\textit{ge}}, \textbf{eu}ge.}\polPs{Niechaj odniosą natychmiast zelżywość swą,~\red{*} którzy mi mówią: Ehej, ehej!}%
 \latNPs{\mred{22.}~Exsúltent et læténtur super te om\underline{\textit{nes}} \underline{\textit{quæ}}\textbf{rén}tes te:~\red{*} et dicant semper: Magnificétur Dóminus: qui díligunt sa\underline{\textit{lu}}\underline{\textit{tá}}\underline{\textit{re}} \textbf{tu}um.}\polPs{Niech się rozradują i uweselą w tobie wszyscy, którzy cię szukają:~\red{*} i niech mówią zawżdy: Niechaj będzie uwielbiony Pan: którzy miłują zbawienie twoje.}%
 \latNPs{\mred{23.}~Ego autem mendícus \underline{\textit{sum}}, \underline{\textit{et}} \textbf{pau}per:~\red{*} Dóminus sollí\underline{\textit{ci}}\underline{\textit{tus}} \underline{\textit{est}} \textbf{me}i.}\polPs{Ja lepak jestem żebrak ubogi:~\red{*} Pan stara się o mię.}%
-\latNPs{\mred{24.}~Adjútor meus et protéctor \underline{\textit{me}}\underline{\textit{us}} \textbf{tu} es:~\red{*} Deus me\underline{\textit{us}}, \underline{\textit{ne}} \underline{\textit{tar}}\textbf{dá}veris.}\polPs{Pomocnikiem moim, i obrońcą moim jesteś ty:~\red{*} Boże mój, nie omieszkiwajże.}\minispace%
+\latNPs{\mred{24.}~Adjútor meus et protéctor \underline{\textit{me}}\underline{\textit{us}} \textbf{tu} es:~\red{*} Déus me\underline{\textit{us}}, \underline{\textit{ne}} \underline{\textit{tar}}\textbf{dá}veris.}\polPs{Pomocnikiem moim, i obrońcą moim jesteś ty:~\red{*} Boże mój, nie omieszkiwajże.}\minispace%
 \EndParallel
 \gresetinitiallines{1}\greannotation{5. Ant.}\greannotation{4 A*}\gabcsnippet{(c3) COn(e)fun(f)dán(h_i)tur(ii) (,) et(h') re(i)ve(j)re(ih)án(i.)tur,(i.) (;) qui(i) quae(f')runt(i) á(h')ni(g)mam(f) me(f_e)am,(f'_) (,) ut(e) áu(d_e)fe(f')rant(h) e(f.)am.(f.) (::)}
 \vspace{-10pt}
@@ -391,16 +408,16 @@
 \tlumaczR{Obcy~\red{*} powstali przeciwko mnie i mocarze szukają duszy mojej.}\minispace
 \noindent\subsekcja{Psalm 53}
 \vspace{-16pt}
-\gresetinitiallines{0}\gabcsnippet{(c3)<c><v>\footnotesize{1. } </v></c> De(i)us,(hi) in(i) nó(i)mi(i)ne(i) tu(i)o(i) <i><ul>sal</i></ul>(h)<i><ul>vum</i></ul>(i) <b>me</b>(j ir) fac:(i.) <c><v>*</v></c>(:) et(i) in(i) vir(i)tú(i)te(i) tu(i)<i><ul>a</i></ul>(h) <i><ul>jú</i></ul>(i)<i><ul>di</i></ul>(j)<b>ca</b>(h fr) me.(f.) (::z-) <c><i>Flex:</i></c> () ad(i)vér(i)sum(h) me, <c><v>†</v></c>(h. )  (::)}
+\gresetinitiallines{0}\gabcsnippet{(c3)<c><v>\footnotesize{1. } </v></c> De(i)us,(hi) in(i) nó(i)mi(i)ne(i) tu(i)o(i) <i><ul>sal</i></ul>(h)<i><ul>vum</i></ul>(i) <b>me</b>(j ir) fac:(i.) <c><v>*</v></c>(:) et(i) in(i) vir(i)tú(i)te(i) tu(i)<i><ul>a</i></ul>(h) <i><ul>jú</i></ul>(i)<i><ul>di</i></ul>(j)<b>ca</b>(h fr) me.(f.) (::z-) <c><i>Flex:</i></c> () ad(i)vér(i)sum(hr) me, <c><v>†</v></c>(h. )  (::)}
 \vspace{-14pt}
 \tlumaczR{Boże, w imię twoje zbaw mię:~\red{*} a w mocy twojéj sądź mię.}\paragraphspace
 \columnratio{0.75}
 \setlength{\columnseprule}{0.4pt}
 \setlength{\columnsep}{.02\textwidth}
 \BeginParallel
-\latNPs{\mred{2.}~Deus, exáudi orati\underline{\textit{ó}}\underline{\textit{nem}} \textbf{me}am:~\red{*} áuribus pércipe ver\underline{\textit{ba}} \underline{\textit{o}}\underline{\textit{ris}} \textbf{me}i.}\polPs{Boże, wysłuchaj modlitwę moję:~\red{*} przyjmij w uszy słowa ust moich.}%
+\latNPs{\mred{2.}~Déus, exáudi orati\underline{\textit{ó}}\underline{\textit{nem}} \textbf{me}am:~\red{*} áuribus pércipe ver\underline{\textit{ba}} \underline{\textit{o}}\underline{\textit{ris}} \textbf{me}i.}\polPs{Boże, wysłuchaj modlitwę moję:~\red{*} przyjmij w uszy słowa ust moich.}%
 \latNPs{\mred{3.}~Quóniam aliéni insurrexérunt advérsum me,~\red{†}  et fortes quæsiérunt á\underline{\textit{ni}}\underline{\textit{mam}} \textbf{me}am:~\red{*} et non proposuérunt Deum ante \underline{\textit{con}}\underline{\textit{spéc}}\underline{\textit{tum}} \textbf{su}um.}\polPs{Albowiem obcy powstali przeciwko mnie: a mocarze szukali dusze mojéj:~\red{*} a nie kładli Boga przed oczyma swemi.}%
-\latNPs{\mred{4.}~Ecce enim Deus \underline{\textit{ád}}\underline{\textit{ju}}\textbf{vat} me:~\red{*} et Dóminus suscéptor est \underline{\textit{á}}\underline{\textit{ni}}\underline{\textit{mæ}} \textbf{me}æ.}\polPs{Bo oto Bóg mię podpomaga:~\red{*} a Pan jest obrońcą dusze mojéj.}%
+\latNPs{\mred{4.}~Ecce enim Déus \underline{\textit{ád}}\underline{\textit{ju}}\textbf{vat} me:~\red{*} et Dóminus suscéptor est \underline{\textit{á}}\underline{\textit{ni}}\underline{\textit{mæ}} \textbf{me}æ.}\polPs{Bo oto Bóg mię podpomaga:~\red{*} a Pan jest obrońcą dusze mojéj.}%
 \latNPs{\mred{5.}~Avérte mala ini\underline{\textit{mí}}\underline{\textit{cis}} \textbf{me}is:~\red{*} et in veritáte tua \underline{\textit{dis}}\underline{\textit{pér}}\underline{\textit{de}} \textbf{il}los.}\polPs{Odwróć złe na nieprzyjaciele moje:~\red{*} a zatrać je według prawdy twojéj.}%
 \latNPs{\mred{6.}~Voluntárie sacrifi\underline{\textit{cá}}\underline{\textit{bo}} \textbf{ti}bi,~\red{*} et confitébor nómini tuo, Dómine: \underline{\textit{quón}}\underline{\textit{i}}\underline{\textit{am}} \textbf{bo}num est:}\polPs{Dobrowolnie będę ofiarował tobie,~\red{*} i będę wyznawał imieniowi twemu; albowiem dobre jest.}%
 \latNPs{\mred{7.}~Quóniam ex omni tribulatióne e\underline{\textit{ri}}\underline{\textit{pu}}\textbf{ís}ti me:~\red{*} et super inimícos meos despéxit \underline{\textit{ó}}\underline{\textit{cu}}\underline{\textit{lus}} \textbf{me}us.}\polPs{Bo ze wszelkiego utrapienia wyrwałeś mię:~\red{*} a oko moje wzgardziło nieprzyjacioły moje.}%
@@ -422,7 +439,7 @@
 %\setlength{\columnsep}{.02\textwidth}
 \vspace{-12pt}
 \BeginParallel
-\latN{\inicjal{P}{rotexísti} me, Deus, a convéntu malignántium, a multitúdine operántium iniquitátem. Iam ipsum caput}
+\latN{\inicjal{P}{rotexísti} me, Déus, a convéntu malignántium, a multitúdine operántium iniquitátem. Iam ipsum caput}
 %émur, quod illi expérti sunt. Protéctus est a multitúdine malignántium, protegénte se Deo, protegénte carnem suam ipso Fílio, et hómine, quem gerébat: quia fílius hóminis est, et Fílius Dei est. Fílius Dei, propter formam Dei: fílius hóminis, propter formam servi, habens in potestáte pónere ánimam suam, et recípere eam. Quid ei potuérunt fácere inimíci? Occidérunt corpus, ánimam non occidérunt. Inténdite. Parum ergo erat, Dóminum hortári Mártyres verbo, nisi firmáret exémplo.}
 \polPs{Obroniłeś mnie, Boże, od spisku złośliwych, od mnóstwa czyniących nieprawość. Tu wejrzyjmy na głowę naszą — Chrystusa.}
 %stało: lecz żaden z nich nie zajaśniał tak, jak głowa męczenników patrząc na Jego cierpienia lepiej rozumiemy, co oni przenieśli. Chrystus obroniony był od mnóstwa ludzi złych; bronił Go Bóg; bronił ciała swego Syn Boży, który się stał człowiekiem, gdyż jest i Synem człowieczym i Synem Bożym. Synem Bożym z powodu natury Boskiej; synem człowieczym z powodu natury sługi, którą wziął na siebie, mając moc wydać życie swoje lub zachować je. Cóż mogli mu uczynić nieprzyjaciele? Zabili ciało, ale duszy zabić nie mogli. Rozważcie. Mało byłoby Panu zagrzewać męczenników słowem, nie dając im przykładu.}
@@ -507,7 +524,7 @@
 
 \latNPs{\mred{4.}~Neque iníquitas mea, neque peccátum \underline{\textit{me}}\underline{\textit{um}}, \textbf{Dó}\textbf{mi}ne:~\red{*} sine iniquitáte cucúrri, \underline{\textit{et}} \underline{\textit{di}}\textbf{ré}xi.}\polPs{Ani nieprawość moja, ani grzech mój, Panie:~\red{*} bez nieprawości biegałem i prostom postępował.}%
 
-\latNPs{\mred{5.}~Exsúrge in occúrsum me\underline{\textit{um}}, \underline{\textit{et}} \textbf{vi}de:~\red{*} et tu, Dómine, Deus virtútum, \underline{\textit{De}}\underline{\textit{us}} \textbf{Is}raël.}\polPs{Powstań, abyś mi zabieżał, i obacz:~\red{*} a ty, Panie, Boże zastępów, Boże Izraelski.}%
+\latNPs{\mred{5.}~Exsúrge in occúrsum me\underline{\textit{um}}, \underline{\textit{et}} \textbf{vi}de:~\red{*} et tu, Dómine, Déus virtútum, \underline{\textit{De}}\underline{\textit{us}} \textbf{Is}raël.}\polPs{Powstań, abyś mi zabieżał, i obacz:~\red{*} a ty, Panie, Boże zastępów, Boże Izraelski.}%
 
 \latNPs{\mred{6.}~Inténde ad visitándas \underline{\textit{om}}\underline{\textit{nes}} \textbf{Gen}tes:~\red{*} non misereáris ómnibus, qui operántur in\underline{\textit{i}}\underline{\textit{qui}}\textbf{tá}tem.}\polPs{Udaj się na nawiedzenie wszech narodów:~\red{*} nie miéj litości nad wszystkimi, którzy broją nieprawość.}%
 
@@ -517,13 +534,13 @@
 
 \latNPs{\mred{9.}~Et tu, Dómine, deri\underline{\textit{dé}}\underline{\textit{bis}} \textbf{e}os:~\red{*} ad níhilum dedúces \underline{\textit{om}}\underline{\textit{nes}} \textbf{Gen}tes.}\polPs{A ty, Panie, naśmiejesz się z nich:~\red{*} wniwecz obrócisz wszystkie narody.}%
 
-\latNPs{\mred{10.}~Fortitúdinem meam ad te custódiam,~\red{†} quia, Deus, su\underline{\textit{scép}}\underline{\textit{tor}} \textbf{me}\textbf{us} es:~\red{*} Deus meus, misericórdia ejus præ\underline{\textit{vé}}\underline{\textit{ni}}\textbf{et} me.}\polPs{Moc moję u ciebie strzedz będę, albowiem, Boże, jesteś obrońca mój:~\red{*} Bóg mój, miłosierdzie jego uprzedzi mię.}%
+\latNPs{\mred{10.}~Fortitúdinem meam ad te custódiam,~\red{†} quia, Déus, su\underline{\textit{scép}}\underline{\textit{tor}} \textbf{me}\textbf{us} es:~\red{*} Déus meus, misericórdia ejus præ\underline{\textit{vé}}\underline{\textit{ni}}\textbf{et} me.}\polPs{Moc moję u ciebie strzedz będę, albowiem, Boże, jesteś obrońca mój:~\red{*} Bóg mój, miłosierdzie jego uprzedzi mię.}%
 \EndParallel
 \pagebreak
 \gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{11. }</v></c>De(h)us(h) os(h)tén(h)det(h) mi(h)hi(h) su(h)per(h) in(h)i(h)mí(h)cos(h) me(h)os,(h) ne(h) oc(h)<i><ul>cí</i></ul>(ixi)<i><ul>das</i></ul>(hr h) <b>e</b>(g)os:(hr h.) <c><v>*</v></c>(:) ne(h)quán(h)do(h) ob(h)li(h)vis(h)cán(h)tur(h) pó(h)<i><ul>pu</i></ul>(g)<i><ul>li</i></ul>(f) <b>me</b>(gh gr)i.(gf..) (::)}
 \vspace{-29pt}
 \tlumaczR{Bóg pokaże mi nad nieprzyjacioły mymi, nie zabijaj ich:~\red{*}\\by kiedy nie zapomnieli ludzie moi.}\minispace
-%\latNPs{\mred{11.}~Deus osténdet mihi super inimícos meos, ne oc\underline{\textit{cí}}\underline{\textit{das}} \textbf{e}os:~\red{*} nequándo obliviscántur pó\underline{\textit{pu}}\underline{\textit{li}} \textbf{me}i.}\polPs{Bóg pokaże mi nad nieprzyjacioły mymi, nie zabijaj ich:~\red{*} by kiedy nie zapomnieli ludzie moi.}%
+%\latNPs{\mred{11.}~Déus osténdet mihi super inimícos meos, ne oc\underline{\textit{cí}}\underline{\textit{das}} \textbf{e}os:~\red{*} nequándo obliviscántur pó\underline{\textit{pu}}\underline{\textit{li}} \textbf{me}i.}\polPs{Bóg pokaże mi nad nieprzyjacioły mymi, nie zabijaj ich:~\red{*} by kiedy nie zapomnieli ludzie moi.}%
 \BeginParallel
 \latNPs{\mred{12.}~Dispérge illos in vir\underline{\textit{tú}}\underline{\textit{te}} \textbf{tu}a:~\red{*} et depóne eos, protéctor \underline{\textit{me}}\underline{\textit{us}}, \textbf{Dó}mine:}\polPs{Rozprósz je mocą twoją:~\red{*} i zrzuć je, obrońco mój, Panie:}%
 
@@ -531,7 +548,7 @@
 
 \latNPs{\mred{14.}~Et de exsecratióne et mendácio annuntiabúntur in consum\underline{\textit{ma}}\underline{\textit{ti}}\textbf{ó}ne:~\red{*} in ira consummatiónis, \underline{\textit{et}} \underline{\textit{non}} \textbf{e}runt.}\polPs{I dla złorzeczenia i kłamstwa będą opowiedzeni na stracenie:~\red{*} w gniewie zatracenia, i nie będzie ich.}%
 
-\latNPs{\mred{15.}~Et scient quia Deus dominá\underline{\textit{bi}}\underline{\textit{tur}} \textbf{Ja}cob:~\red{*} et fí\underline{\textit{ni}}\underline{\textit{um}} \textbf{ter}ræ.}\polPs{I doznają, iż Bóg będzie panował Jakóbowi:~\red{*} i krajom ziemie.}%
+\latNPs{\mred{15.}~Et scient quia Déus dominá\underline{\textit{bi}}\underline{\textit{tur}} \textbf{Ja}cob:~\red{*} et fí\underline{\textit{ni}}\underline{\textit{um}} \textbf{ter}ræ.}\polPs{I doznają, iż Bóg będzie panował Jakóbowi:~\red{*} i krajom ziemie.}%
 
 \latNPs{\mred{16.}~Converténtur ad vésperam: et famem patién\underline{\textit{tur}} \underline{\textit{ut}} \textbf{ca}nes,~\red{*} et circuíbunt \underline{\textit{ci}}\underline{\textit{vi}}\textbf{tá}tem.}\polPs{Nawrócą się ku wieczorowi: i będą mrzeć głód, jako psi,~\red{*} i będą chodzić około miasta.}%
 
@@ -541,11 +558,11 @@
 
 \latNPs{\mred{19.}~Quia factus es su\underline{\textit{scép}}\underline{\textit{tor}} \textbf{me}us,~\red{*} et refúgium meum, in die tribulati\underline{\textit{ó}}\underline{\textit{nis}} \textbf{me}æ.}\polPs{Boś się stał obrońcą moim,~\red{*} i ucieczką moją w dzień utrapienia mego.}%
 
-\latNPs{\mred{20.}~Adjútor meus, tibi psallam,~\red{†} quia, Deus, su\underline{\textit{scép}}\underline{\textit{tor}} \textbf{me}\textbf{us} es:~\red{*} Deus meus, misericór\underline{\textit{di}}\underline{\textit{a}} \textbf{me}a.}\polPs{Pomocniku mój, tobie będę śpiewał, iżeś ty, Boże, obrońca mój:~\red{*} Bóg mój, miłosierdzie moje.}\paragraphspace
+\latNPs{\mred{20.}~Adjútor meus, tibi psallam,~\red{†} quia, Déus, su\underline{\textit{scép}}\underline{\textit{tor}} \textbf{me}\textbf{us} es:~\red{*} Déus meus, misericór\underline{\textit{di}}\underline{\textit{a}} \textbf{me}a.}\polPs{Pomocniku mój, tobie będę śpiewał, iżeś ty, Boże, obrońca mój:~\red{*} Bóg mój, miłosierdzie moje.}\paragraphspace
 \EndParallel
 \gresetinitiallines{1}\greannotation{7. Ant.}\greannotation{1 f}\gabcsnippet{(c4) AB(d) in(d)sur(dc~)gén(f)ti(g')bus(f) in(gh~) me(h.) (,) lí(ixi)be(h)ra(g) me,(g') Dó(h)mi(fe)ne,(d.) (;) qui(g')a(g) oc(g')cu(h)pa(g')vé(f)runt(f.) (,) á(f_g)ni(e)mam(f) me(d.)am.(d.) (::)}
 \vspace{-22pt}
-\tlumaczR{Od powstających przeciwko mnie~\red{*} wybaw\\mnie, Panie, ponieważ zajęli duszę moją.}\minispace
+\tlumaczR{Od powstających przeciwko mnie wybaw\\mnie, Panie, ponieważ zajęli duszę moją.}\minispace
 %% -------- 8. Ant. Longe fecísti  -----------
 \gresetinitiallines{1}\greannotation{8. Ant.}\greannotation{8 G}\gabcsnippet{(c4) LOn(g')ge(h) fe(h')cí(g)sti(g'_[oh:h]) <c><v>*</v></c>(,) no(i)tos(h') me(j)os(i') a(h) me :(h.) (;) trá(j_k)di(i_[uh:l]j)tus(h) sum,(g'_[oh:h]) (,) et(g) non(e') e(f)gre(gh)di(h)é(g.)bar.(g.) (::)}\minispace
 \tlumaczR{Oddaliłeś ode mnie~\red{*} znajomych moich, zdradzony jestem i wyjść nie mogę.}\minispace
@@ -560,7 +577,7 @@
 \BeginParallel
 \latNPs{\mred{2.}~Intret in conspéctu tuo orátio \textbf{me}a:~\red{*} inclína aurem tuam ad \underline{\textit{pre}}\underline{\textit{cem}} \textbf{me}am:}\polPs{Niechaj modlitwa moja przyjdzie przed obliczność twoję:~\red{*} nakłoń ucha twego ku prośbie mojéj:}%
 
-\latNPs{\mred{3.}~Quia repléta est malis ánima \textbf{me}a:~\red{*} et vita mea inférno ap\underline{\textit{pro}}\underline{\textit{pin}}\textbf{quá}vit.}\polPs{Albowiem dusza moja napełniona jest złem:~\red{*} a żywot mój przybliżył się do piekła.}%
+\latNPs{\mred{3.}~Quia repléta est malis ánima \textbf{me}a:~\red{*} et vita méa inférno ap\underline{\textit{pro}}\underline{\textit{pin}}\textbf{quá}vit.}\polPs{Albowiem dusza moja napełniona jest złem:~\red{*} a żywot mój przybliżył się do piekła.}%
 
 \latNPs{\mred{4.}~Æstimátus sum cum descendéntibus in \textbf{la}cum:~\red{*} factus sum sicut homo sine adjutório, inter mór\underline{\textit{tu}}\underline{\textit{os}} \textbf{li}ber.}\polPs{Poczytano mię z stępującymi do dołu:~\red{*} stałem się jako człowiek bez pomocy, między umarłymi wolny.}%
 
@@ -582,7 +599,7 @@
 
 \latNPs{\mred{13.}~Numquid cognoscéntur in ténebris mirabília \textbf{tu}a,~\red{*} et justítia tua in terra ob\underline{\textit{li}}\underline{\textit{vi}}\textbf{ó}nis?}\polPs{Izali poznane będą w ciemnościach cuda twoje,~\red{*} a sprawiedliwość twoja w ziemi zapamiętania?}%
 
-\latNPs{\mred{14.}~Et ego ad te, Dómine, cla\textbf{má}vi:~\red{*} et mane orátio mea præ\underline{\textit{vé}}\underline{\textit{ni}}\textbf{et} te.}\polPs{A jam, Panie, wołał ku tobie:~\red{*} a modlitwa moja uprzedzi cię rano.}%
+\latNPs{\mred{14.}~Et ego ad te, Dómine, cla\textbf{má}vi:~\red{*} et mane orátio méa præ\underline{\textit{vé}}\underline{\textit{ni}}\textbf{et} te.}\polPs{A jam, Panie, wołał ku tobie:~\red{*} a modlitwa moja uprzedzi cię rano.}%
 
 \latNPs{\mred{15.}~Ut quid, Dómine, repéllis oratiónem \textbf{me}am:~\red{*} avértis fáciem \underline{\textit{tu}}\underline{\textit{am}} \textbf{a} me?}\polPs{Przeczże, Panie, odrzucasz modlitwę moję:~\red{*} odwracasz oblicze twe odemnie?}%
 \EndParallel
@@ -605,7 +622,7 @@
 \tlumaczR{Zasadzają się~\red{*} na duszę sprawiedliwego, a krew niewinną potępiają.}\minispace
 \noindent\subsekcja{Psalm 93}
 \vspace{-16pt}
-\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>De(g)us(h) ul(j)ti(j)ó(j)num(j) <b>Dó</b>(k)mi(jr)nus:(j.) <c><v>*</v></c>(:) De(j)us(j) ul(j)ti(j)ó(j)num(j) lí(j)<i><ul>be</i></ul>(i)<i><ul>re</i></ul>(j) <b>e</b>(h gr)git.(g.) (::) () <c><i>Flex:</i></c>()ip(j)só(j)rum: <c><v>†</v></c>(h. ::)}\minispace
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>De(g)us(h) ul(j)ti(j)ó(j)num(j) <b>Dó</b>(k)mi(jr)nus:(j.) <c><v>*</v></c>(:) De(j)us(j) ul(j)ti(j)ó(j)num(j) lí(j)<i><ul>be</i></ul>(i)<i><ul>re</i></ul>(j) <b>e</b>(h gr)git.(g.) (::)}\minispace
 \tlumaczR{Bóg pomsty, Pan:~\red{*} Bóg pomsty wolno poczynał.}\minispace
 \columnratio{0.75}
 \setlength{\columnseprule}{0.4pt}
@@ -653,7 +670,7 @@
 
 \latNPs{\mred{21.}~Captábunt in ánimam \textbf{jus}ti:~\red{*} et sánguinem innocéntem \underline{\textit{con}}\underline{\textit{dem}}\textbf{ná}bunt.}\polPs{Zasadzą się na duszę sprawiedliwego:~\red{*} a krew niewinną potępią.}%
 
-\latNPs{\mred{22.}~Et factus est mihi Dóminus in re\textbf{fú}gium:~\red{*} et Deus meus in adjutórium \underline{\textit{spe}}\underline{\textit{i}} \textbf{me}æ.}\polPs{I stał mi się Pan ucieczką:~\red{*} a Bóg mój obroną nadzieje mojéj.}%
+\latNPs{\mred{22.}~Et factus est mihi Dóminus in re\textbf{fú}gium:~\red{*} et Déus meus in adjutórium \underline{\textit{spe}}\underline{\textit{i}} \textbf{me}æ.}\polPs{I stał mi się Pan ucieczką:~\red{*} a Bóg mój obroną nadzieje mojéj.}%
 \EndParallel
 \pagebreak
 \gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{23. }</v></c>Et(j) red(j)det(j) il(j)lis(j) in(j)i(j)qui(j)tá(j)tem(j) ip(j)só(j)rum: <c><v>†</v></c>(h.) et(j) in(j) ma(j)lí(j)ti(j)a(j) e(j)ó(j)rum(j) dis(j)pér(j)det(j) <b>e</b>(k jr)os:(j.) <c><v>*</v></c>(:) dis(j)pér(j)det(j) il(j)los(j) Dó(j)mi(j)nus(j) <i><ul>De</i></ul>(i)<i><ul>us</i></ul>(j) <b>nos</b>(h gr)ter.(g.) (::)}
@@ -783,13 +800,13 @@
 
 \latNPs{\mred{14.}~Docébo iníquos \textbf{vi}as \textbf{tu}as:~\red{*} et ímpii ad te \textbf{con}ver\textbf{tén}tur.}\polPs{Będę nauczał nieprawe dróg twoich:~\red{*} a niezbożni do ciebie się nawrócą.}%
 
-\latNPs{\mred{15.}~Líbera me de sanguínibus, Deus, Deus sa\textbf{lú}tis \textbf{me}æ:~\red{*} et exsultábit lingua mea jus\textbf{tí}tiam \textbf{tu}am.}\polPs{Wybaw mię ze krwi, Boże, Boże zbawienia mego:~\red{*} a język mój z radością będzie wysławiał sprawiedliwość twoję.}%
+\latNPs{\mred{15.}~Líbera me de sanguínibus, Déus, Déus sa\textbf{lú}tis \textbf{me}æ:~\red{*} et exsultábit lingua méa jus\textbf{tí}tiam \textbf{tu}am.}\polPs{Wybaw mię ze krwi, Boże, Boże zbawienia mego:~\red{*} a język mój z radością będzie wysławiał sprawiedliwość twoję.}%
 
 \latNPs{\mred{16.}~Dómine, lábia \textbf{me}a a\textbf{pé}ries:~\red{*} et os meum annuntiábit \textbf{lau}dem \textbf{tu}am.}\polPs{Panie, otworzysz wargi moje:~\red{*} a usta moje opowiadać będą chwałę twoję.}%
 
 \latNPs{\mred{17.}~Quóniam si voluísses sacrifícium, de\textbf{dís}sem \textbf{ú}tique:~\red{*} holocáustis non \textbf{de}lec\textbf{tá}beris.}\polPs{Albowiem gdybyś był chciał ofiary, wżdybych był dał:~\red{*} w całopalonych nie będziesz się kochał.}%
 
-\latNPs{\mred{18.}~Sacrifícium Deo spíritus con\textbf{tri}bu\textbf{lá}tus:~\red{*} cor contrítum et humiliátum, Deus, \textbf{non} de\textbf{spí}cies.}\polPs{Ofiara Bogu, duch strapiony:~\red{*} serca skruszonego i uniżonego, Boże, nie wzgardzisz.}%
+\latNPs{\mred{18.}~Sacrifícium Deo spíritus con\textbf{tri}bu\textbf{lá}tus:~\red{*} cor contrítum et humiliátum, Déus, \textbf{non} de\textbf{spí}cies.}\polPs{Ofiara Bogu, duch strapiony:~\red{*} serca skruszonego i uniżonego, Boże, nie wzgardzisz.}%
 
 \latNPs{\mred{19.}~Benígne fac, Dómine, in bona voluntáte \textbf{tu}a \textbf{Si}on:~\red{*} ut ædificéntur \textbf{mu}ri Je\textbf{rú}salem.}\polPs{Uczyń dobrze, Panie, Syonowi w dobréj woli twojéj:~\red{*} aby się zbudowały mury Jeruzalem.}%
 \EndParallel
@@ -801,7 +818,7 @@
 
 \gresetinitiallines{1}\greannotation{1. Ant.}\greannotation{7 c}\gabcsnippet{(c3) PRó(i_[oh:h])pri(g)o(i!jw!kv_[hl:1]JI) ()  Fí(i')li(h)o(g') su(h)o(g_[oh:h]f_[oh:h]) (,) non(e) pe(f)pér(g_[uh:l]hf~)cit(g') De(f)us,(e.) (;) sed(ghg___) pro(f') no(h)bis(g'_[oh:h]) ó(f)mni(e)bus(f.) (,) trá(f'_)di(h)dit(g) il(e.)lum.(e.) (::)}
 \vspace{-10pt}
-\tlumaczR{Własnemu~\red{*} Synowi swemu nie przepuścił Bóg, ale go za nas wszystkich wydał.}\minispace
+\tlumaczR{Własnemu Synowi swemu nie przepuścił Bóg, ale go za nas wszystkich wydał.}\minispace
 \gresetinitiallines{1}\greannotation{2. Ant.}\greannotation{4 E}\gabcsnippet{(c4) AN(f)xi(d)á(e')tus(f) est(g') in(f) me(e.) <c><v>*</v></c>(,) spí(f_d)ri(f_g)tus(f) me(d.)us :(d.) (;) in(dh~) me(h) tur(gf~)bá(gg)tum(f') est(g) cor(h_g) me(e.)um.(e.) (::)}\linespace
 \tlumaczR{Zafrasował się~\red{*} duch mój, serce me strwożyło się we mnie.}\minispace
 \noindent\subsekcja{Psalm 142}
@@ -823,7 +840,7 @@
 \pagebreak
 \gresetinitiallines{0}\gabcsnippet{(c3)<c><v>\footnotesize{6. }</v></c>Ex(h)pán(h)di(h) ma(h)<i><ul>nus</i></ul>(h) <i><ul>me</i></ul>(g)<i><ul>as</i></ul>(h) <b>ad</b>(i hr) te:(h.) <c><v>*</v></c>(:) á(h)ni(h)ma(h) me(h)a(h) sic(h)ut(h) ter(h)ra(h) si(h)<i><ul>ne</i></ul>(g) <i><ul>a</i></ul>(h)<i><ul>qua</i></ul>(ih gr[ocb:1{]) <b>ti</b>(gf[ocb:0}])bi.(e.) (::)}\minispace
 \tlumaczR{Wyciągnąłem ku tobie ręce swoje:~\red{*} dusza moja jako ziemia bez wody tobie.}
-%\latNPs{\mred{6.}~Expándi ma\underline{\textit{nus}} \underline{\textit{me}}\underline{\textit{as}} \textbf{ad} te:~\red{*}  ánima mea sicut terra si\underline{\textit{ne}} \underline{\textit{a}}\underline{\textit{qua}} \textbf{ti}bi.}\polPs{Wyciągnąłem ku tobie ręce swoje:~\red{*} dusza moja jako ziemia bez wody tobie.}%
+%\latNPs{\mred{6.}~Expándi ma\underline{\textit{nus}} \underline{\textit{me}}\underline{\textit{as}} \textbf{ad} te:~\red{*}  ánima méa sicut terra si\underline{\textit{ne}} \underline{\textit{a}}\underline{\textit{qua}} \textbf{ti}bi.}\polPs{Wyciągnąłem ku tobie ręce swoje:~\red{*} dusza moja jako ziemia bez wody tobie.}%
 \BeginParallel
 \latNPs{\mred{7.}~Velóciter ex\underline{\textit{áu}}\underline{\textit{di}} \underline{\textit{me}}, \textbf{Dó}mine:~\red{*}  defécit \underline{\textit{spí}}\underline{\textit{ri}}\underline{\textit{tus}} \textbf{me}us.}\polPs{Wysłuchajże mię prędko, Panie:~\red{*} duch mój ustał.}%
 
@@ -842,7 +859,7 @@
 \latNPs{\mred{14.}~Et perdes omnes, qui tríbulant \underline{\textit{á}}\underline{\textit{ni}}\underline{\textit{mam}} \textbf{me}am,~\red{*}  quóniam e\underline{\textit{go}} \underline{\textit{ser}}\underline{\textit{vus}} \textbf{tu}\textbf{us} sum.}\polPs{I zagubisz wszystkie, którzy dręczą duszę moję:~\red{*} bociem ja sługa twój.}%
 \EndParallel
 \gresetinitiallines{1}\greannotation{2. Ant.}\greannotation{4 E}\gabcsnippet{(c4) AN(f)xi(d)á(e')tus(f) est(g') in(f) me(e.) (,) spí(f_d)ri(f_g)tus(f) me(d.)us :(d.) (;) in(dh~) me(h) tur(gf~)bá(gg)tum(f') est(g) cor(h_g) me(e.)um.(e.) (::)}\minispace
-\tlumaczR{Zafrasował się~\red{*} duch mój, serce me strwożyło się we mnie.}\minispace
+\tlumaczR{Zafrasował się duch mój, serce me strwożyło się we mnie.}\minispace
 \gresetinitiallines{1}\greannotation{3. Ant.}\greannotation{1 f}\gabcsnippet{(c4) A(d)it(f') la(d)tro(dc) ad(f) la(g)tró(f_h)nem :(h'_) <c><v>*</v></c>(,) Nos(h) qui(h')dem(j) di(h')gna(g) fa(h')ctis(g) re(ge)cí(f_g)pi(h)mus,(g.) (;) hic(h_f) au(g')tem(f) quid(e') fe(f)cit?(d.) (:) Me(d)mén(f')to(d) me(e')i,(f) Dó(g_[uh:l]h)mi(g)ne,(f'_) (,) dum(f) vé(fg)ne(f)ris(c') in(e) re(g_[oh:h]e~)gnum(f_e) tu(d.)um.(d.) (::)}\linespace
 \tlumaczR{Rzekł łotr do łotra:~\red{*} My godną zapłatę za uczynki odnosimy, ten zaś\\co uczynił? Panie, pomnij na mię, gdy przyjdziesz do królestwa twego.}\minispace
 \noindent\subsekcja{Psalm 84}
@@ -856,11 +873,11 @@
 
 \latNPs{\mred{3.}~Mitigásti omnem \underline{\textit{i}}\underline{\textit{ram}} \textbf{tu}am:~\red{*}  avertísti ab ira indignati\underline{\textit{ó}}\underline{\textit{nis}} \textbf{tu}æ.}\polPs{Uśmierzyłeś twój wszystek gniew:~\red{*}  odwróciłeś się od gniewu popędliwości twojéj.}%
 
-\latNPs{\mred{4.}~Convérte nos, Deus, salu\underline{\textit{tá}}\underline{\textit{ris}} \textbf{nos}ter:~\red{*}  et avérte iram tu\underline{\textit{am}} \underline{\textit{a}} \textbf{no}bis.}\polPs{Nawróć nas, Boże, zbawicielu nasz:~\red{*}  a oddal gniew swój od nas.}%
+\latNPs{\mred{4.}~Convérte nos, Déus, salu\underline{\textit{tá}}\underline{\textit{ris}} \textbf{nos}ter:~\red{*}  et avérte iram tu\underline{\textit{am}} \underline{\textit{a}} \textbf{no}bis.}\polPs{Nawróć nas, Boże, zbawicielu nasz:~\red{*}  a oddal gniew swój od nas.}%
 
 \latNPs{\mred{5.}~Numquid in ætérnum ira\underline{\textit{scé}}\underline{\textit{ris}} \textbf{no}bis?~\red{*}  aut exténdes iram tuam a generatióne in gene\underline{\textit{ra}}\underline{\textit{ti}}\textbf{ó}nem?}\polPs{Izali na wieki będziesz się na nas gniewał?~\red{*}  albo rozciągniesz gniew twój od rodzaju do rodzaju?}%
 
-\latNPs{\mred{6.}~Deus, tu convérsus vi\underline{\textit{vi}}\underline{\textit{fi}}\textbf{cá}\textbf{bis} nos:~\red{*}  et plebs tua lætá\underline{\textit{bi}}\underline{\textit{tur}} \textbf{in} te.}\polPs{Boże, ty nawróciwszy się, ożywisz nas:~\red{*}  a lud twój rozweseli się w tobie.}%
+\latNPs{\mred{6.}~Déus, tu convérsus vi\underline{\textit{vi}}\underline{\textit{fi}}\textbf{cá}\textbf{bis} nos:~\red{*}  et plebs tua lætá\underline{\textit{bi}}\underline{\textit{tur}} \textbf{in} te.}\polPs{Boże, ty nawróciwszy się, ożywisz nas:~\red{*}  a lud twój rozweseli się w tobie.}%
 
 \latNPs{\mred{7.}~Osténde nobis, Dómine, misericór\underline{\textit{di}}\underline{\textit{am}} \textbf{tu}am:~\red{*}  et salutáre tu\underline{\textit{um}} \underline{\textit{da}} \textbf{no}bis.}\polPs{Okaż nam, Panie, miłosierdzie twoje:~\red{*}  a daj nam zbawienie twoje.}%
 
@@ -881,7 +898,7 @@
 \pagebreak
 \fi% ---------------------------------------------- blok wyłączony gdy mydebug = 1 ---------------------------------------------------------------------- ↑
 \gresetinitiallines{1}\greannotation{3. Ant.}\greannotation{1 f}\gabcsnippet{(c4) A(d)it(f') la(d)tro(dc) ad(f) la(g)tró(f_h)nem :(h'_) (,) Nos(h) qui(h')dem(j) di(h')gna(g) fa(h')ctis(g) re(ge)cí(f_g)pi(h)mus,(g.) (;) hic(h_f) au(g')tem(f) quid(e') fe(f)cit?(d.) (:) Me(d)mén(f')to(d) me(e')i,(f) Dó(g_[uh:l]h)mi(g)ne,(f'_) (,) dum(f) vé(fg)ne(f)ris(c') in(e) re(g_[oh:h]e~)gnum(f_e) tu(d.)um.(d.) (::)}\linespace
-\tlumaczR{Rzekł łotr do łotra:~\red{*} My godną zapłatę za uczynki odnosimy, ten zaś\\co uczynił? Panie, pomnij na mię, gdy przyjdziesz do królestwa twego.}
+\tlumaczR{Rzekł łotr do łotra: My godną zapłatę za uczynki odnosimy, ten zaś\\co uczynił? Panie, pomnij na mię, gdy przyjdziesz do królestwa twego.}
 %Antyfona i Psalm 4
 \gresetinitiallines{1}\greannotation{4. Ant.}\greannotation{1 f}\gabcsnippet{(c4) DUM(d) con(d)tur(dc~)bá(f)ta(g') fú(f)e(gh)rit(h.) <c><v>*</v></c>(,) á(ixi')ni(h)ma(g') me(g)a,(g') Dó(h)mi(fe)ne,(d.) (;) mi(gg)se(e')ri(g)cór(h')di(g)ae(f.) (,z) me(e_[oh:h]c)mor(e_[uh:l]f) e(d.)ris.(d.) (::)}
 \vspace{-11pt}
@@ -900,7 +917,7 @@
 
 \latNPs{\mred{3.}~In médio annórum \underline{\textit{no}}\underline{\textit{tum}} \textbf{fá}\textbf{ci}es:~\red{*}  cum irátus fúeris, misericórdiæ \underline{\textit{re}}\underline{\textit{cor}}\textbf{dá}beris.}\polPs{W pośrodku lat oznajmisz:~\red{*} gdy się rozgniewasz, wspomnisz na miłosierdzie.}%
 
-\latNPs{\mred{4.}~Deus ab \underline{\textit{Aus}}\underline{\textit{tro}} \textbf{vé}\textbf{ni}et,~\red{*}  et sanctus de \underline{\textit{mon}}\underline{\textit{te}} \textbf{Pha}ran:}\polPs{Bóg od południa przyjdzie,~\red{*} a Święty z góry Pharan:}%
+\latNPs{\mred{4.}~Déus ab \underline{\textit{Aus}}\underline{\textit{tro}} \textbf{vé}\textbf{ni}et,~\red{*}  et sanctus de \underline{\textit{mon}}\underline{\textit{te}} \textbf{Pha}ran:}\polPs{Bóg od południa przyjdzie,~\red{*} a Święty z góry Pharan:}%
 
 \latNPs{\mred{5.}~Opéruit cælos gló\underline{\textit{ri}}\underline{\textit{a}} \textbf{e}jus:~\red{*}  et laudis ejus ple\underline{\textit{na}} \underline{\textit{est}} \textbf{ter}ra.}\polPs{Okryła niebiosa chwała jego:~\red{*} a wysławiania jego pełna jest ziemia.}%
 
@@ -961,14 +978,14 @@
 
 \latNPs{\mred{30.}~Ego autem in Dómi\underline{\textit{no}} \underline{\textit{gau}}\textbf{dé}bo:~\red{*}  et exsultábo in Deo \underline{\textit{Je}}\underline{\textit{su}} \textbf{me}o.}\polPs{A ja będę się w Panu radował:~\red{*} i będę się weselił w Bogu, Jezusie moim.}%
 
-\latNPs{\mred{31.}~Deus Dóminus forti\underline{\textit{tú}}\underline{\textit{do}} \textbf{me}a:~\red{*}  et ponet pedes meos qua\underline{\textit{si}} \underline{\textit{cer}}\textbf{vó}rum.}\polPs{Bóg Pan jest moc moja:~\red{*} i postawi jako jeleń nogi moje.}%
+\latNPs{\mred{31.}~Déus Dóminus forti\underline{\textit{tú}}\underline{\textit{do}} \textbf{me}a:~\red{*}  et ponet pedes meos qua\underline{\textit{si}} \underline{\textit{cer}}\textbf{vó}rum.}\polPs{Bóg Pan jest moc moja:~\red{*} i postawi jako jeleń nogi moje.}%
 
-\latNPs{\mred{32.}~Et super excélsa mea dedú\underline{\textit{cet}} \underline{\textit{me}} \textbf{vic}tor~\red{*}  in psal\underline{\textit{mis}} \underline{\textit{ca}}\textbf{nén}tem.}\polPs{I po wysokościach moich poprowadzi mię zwyciężca~\red{*} psalmy śpiewającego.}%
+\latNPs{\mred{32.}~Et super excélsa méa dedú\underline{\textit{cet}} \underline{\textit{me}} \textbf{vic}tor~\red{*}  in psal\underline{\textit{mis}} \underline{\textit{ca}}\textbf{nén}tem.}\polPs{I po wysokościach moich poprowadzi mię zwyciężca~\red{*} psalmy śpiewającego.}%
 \EndParallel
 \minispace
 \gresetinitiallines{1}\greannotation{4. Ant.}\greannotation{1 f}\gabcsnippet{(c4) DUM(d) con(d)tur(dc~)bá(f)ta(g') fú(f)e(gh)rit(h.) (,) á(ixi')ni(h)ma(g') me(g)a,(g') Dó(h)mi(fe)ne,(d.) (;) mi(gg)se(e')ri(g)cór(h')di(g)ae(f.) (,z) me(e_[oh:h]c)mor(e_[uh:l]f) e(d.)ris.(d.) (::)}
 \vspace{-11pt}
-\tlumaczR{Gdy będzie strwożona~\red{*} dusza moja: Panie, wspomnisz na miłosierdzie.}\paragraphspace
+\tlumaczR{Gdy będzie strwożona dusza moja: Panie, wspomnisz na miłosierdzie.}\paragraphspace
 % Antyfona i Psalm 5
 \gresetinitiallines{1}\greannotation{5. Ant.}\greannotation{8 G}\gabcsnippet{(c4) ME(g')mén(h)to(f') me(g)i,(g.) <c><v>*</v></c> (,) Dó(h')mi(j)ne(i') De(j_)us,(h.) (;) dum(g) vé(hi)ne(hg)ris(h'_) in(f) re(gh)gnum(h) tu(g.)um.(g.) (::)}\linespace
 \tlumaczR{Panie pomnij na mnie~\red{*}  gdy przyjdziesz do królestwa twego.}\minispace
@@ -1000,7 +1017,7 @@
 \latNPs{\mred{9.}~Non fecit táliter omni nati\textbf{ó}ni:~\red{*} et judícia sua non manifes\underline{\textit{tá}}\underline{\textit{vit}} \textbf{e}is.}\polPs{Nie uczynił tak żadnemu narodowi:~\red{*}  i nie objawił im sądów swoich.}%
 \EndParallel
 \gresetinitiallines{1}\greannotation{5. Ant.}\greannotation{8 G}\gabcsnippet{(c4) ME(g')mén(h)to(f') me(g)i,(g.) (,) Dó(h')mi(j)ne(i') De(j_)us,(h.) (;) dum(g) vé(hi)ne(hg)ris(h'_) in(f) re(gh)gnum(h) tu(g.)um.(g.) (::)}\linespace
-\tlumaczR{Panie pomnij na mnie~\red{*}  gdy przyjdziesz do królestwa twego.}\segmentspace
+\tlumaczR{Panie pomnij na mnie gdy przyjdziesz do królestwa twego.}\segmentspace
 %--- Versus ---
 \gresetinitiallines{0}\gabcsnippet{(c4)<c><sp>V/</sp>.</c> Col(h)lo(h)cá(h)vit(h) me(h) <b>in</b>(i') obs(h)cú(g.)ris.(g.) (::)<c><sp>R/</sp>.</c> Sic(h)ut(h) <b>mór</b>(i)tu(h)os(h) sǽ(g')cu(g)li.(g.) (::)}\linespace
 \tlumaczR{\red{\Vbar.}~Umieścił mnie w ciemnościach. \red{\Rbar.}~Jako umarłych od wieków.}\paragraphspace%
@@ -1049,7 +1066,7 @@
 \vspace{-23pt}
 \rubryka{Aliquantulum altius:}
 \BeginParallel
-\latNPs{\mred{1.}~Miserére mei Deus,~\red{*} secúndum magnam misericórdiam tuam.}\polPs{Zmiłuj się nademną, Boże,~\red{*} według wielkiego miłosierdzia twego.}
+\latNPs{\mred{1.}~Miserére mei Déus,~\red{*} secúndum magnam misericórdiam tuam.}\polPs{Zmiłuj się nademną, Boże,~\red{*} według wielkiego miłosierdzia twego.}
 \latNPs{\mred{2.}~Et secúndum multitúdinem miseratiónum tuárum,~\red{*} dele iniquitátem meam.}\polPs{A według mnóstwa litości twoich,~\red{*} zgładź nieprawość moję.}
 \latNPs{\mred{3.}~Amplius lava me ab iniquitáte mea:~\red{*} et a peccáto meo munda me.}\polPs{Jeszcze więcéj omyj mię od nieprawości mojéj:~\red{*} i od grzechu mojego oczyść mię.}
 \latNPs{\mred{4.}~Quóniam iniquitátem meam ego cognósco:~\red{*} et peccátum meum contra me est semper.}\polPs{Albowiem ja znam nieprawość moję:~\red{*} i grzech mój jest zawżdy przeciwko mnie.}
@@ -1059,14 +1076,14 @@
 \latNPs{\mred{8.}~Aspérges me hyssópo, et mundábor:~\red{*} lavábis me, et super nivem dealbábor.}\polPs{Pokropisz mię Hyzopem, a będę oczyszczony:~\red{*} omyjesz mię, a będę nad śnieg wybielony.}
 \latNPs{\mred{9.}~Audítui meo dabis gáudium et lætítiam:~\red{*} et exsultábunt ossa humiliáta.}\polPs{Słuchowi memu dasz radość i wesele:~\red{*} i rozradują się kości poniżone.}
 \latNPs{\mred{10.}~Avérte fáciem tuam a peccátis meis:~\red{*} et omnes iniquitátes meas dele.}\polPs{Odwróć oblicze twoje od grzechów moich:~\red{*} a zgładź wszystkie nieprawości moje.}
-\latNPs{\mred{11.}~Cor mundum crea in me, Deus:~\red{*} et spíritum rectum ínnova in viscéribus meis.}\polPs{Serce czyste stwórz we mnie, Boże:~\red{*} i ducha prawego odnów we wnętrznościach moich.}
+\latNPs{\mred{11.}~Cor mundum crea in me, Déus:~\red{*} et spíritum rectum ínnova in viscéribus meis.}\polPs{Serce czyste stwórz we mnie, Boże:~\red{*} i ducha prawego odnów we wnętrznościach moich.}
 \latNPs{\mred{12.}~Ne projícias me a fácie tua:~\red{*} et spíritum sanctum tuum ne áuferas a me.}\polPs{Nie odrzucaj mię od oblicza twego:~\red{*} i Ducha Świętego twego nie bierz odemnie.}
 \latNPs{\mred{13.}~Redde mihi lætítiam salutáris tui:~\red{*} et spíritu principáli confírma me.}\polPs{Przywróć mi radość zbawienia twojego:~\red{*} i duchem przedniejszym potwierdź mię.}
 \latNPs{\mred{14.}~Docébo iníquos vias tuas:~\red{*} et ímpii ad te converténtur.}\polPs{Będę nauczał nieprawe dróg twoich:~\red{*} a niezbożni do ciebie się nawrócą.}
-\latNPs{\mred{15.}~Líbera me de sanguínibus, Deus, Deus salútis meæ:~\red{*} et exsultábit lingua mea justítiam tuam.}\polPs{Wybaw mię ze krwi, Boże, Boże zbawienia mego:~\red{*} a język mój z radością będzie wysławiał sprawiedliwość twoję.}
-\latNPs{\mred{16.}~Dómine, lábia mea apéries:~\red{*} et os meum annuntiábit laudem tuam.}\polPs{Panie, otworzysz wargi moje:~\red{*} a usta moje opowiadać będą chwałę twoję.}
+\latNPs{\mred{15.}~Líbera me de sanguínibus, Déus, Déus salútis meæ:~\red{*} et exsultábit lingua méa justítiam tuam.}\polPs{Wybaw mię ze krwi, Boże, Boże zbawienia mego:~\red{*} a język mój z radością będzie wysławiał sprawiedliwość twoję.}
+\latNPs{\mred{16.}~Dómine, lábia méa apéries:~\red{*} et os meum annuntiábit laudem tuam.}\polPs{Panie, otworzysz wargi moje:~\red{*} a usta moje opowiadać będą chwałę twoję.}
 \latNPs{\mred{17.}~Quóniam si voluísses sacrifícium, dedíssem útique:~\red{*} holocáustis non delectáberis.}\polPs{Albowiem gdybyś był chciał ofiary, wżdybych był dał:~\red{*} w całopalonych nie będziesz się kochał.}
-\latNPs{\mred{18.}~Sacrifícium Deo spíritus contribulátus:~\red{*} cor contrítum et humiliátum, Deus, non despícies.}\polPs{Ofiara Bogu, duch strapiony:~\red{*} serca skruszonego i uniżonego, Boże, nie wzgardzisz.}
+\latNPs{\mred{18.}~Sacrifícium Deo spíritus contribulátus:~\red{*} cor contrítum et humiliátum, Déus, non despícies.}\polPs{Ofiara Bogu, duch strapiony:~\red{*} serca skruszonego i uniżonego, Boże, nie wzgardzisz.}
 \latNPs{\mred{19.}~Benígne fac, Dómine, in bona voluntáte tua Sion:~\red{*} ut ædificéntur muri Jerúsalem.}\polPs{Uczyń dobrze, Panie, Syonowi w dobréj woli twojéj:~\red{*} aby się zbudowały mury Jeruzalem.}
 \latNPs{\mred{20.}~Tunc acceptábis sacrifícium justítiæ, oblatiónes, et holocáusta:~\red{*} tunc impónent super altáre tuum vítulos.}\polPs{Tedy przyjmiesz ofiarę sprawiedliwości, obiaty i całopalenia:~\red{*} tedy nakładą na ołtarz twój cielców.}
 \EndParallel
@@ -1078,17 +1095,17 @@
 \EndParallel
 \rubryka{Et sub silentio concluditur:}
 \BeginParallel
-\latNPs{\inicjal{Q}{ui} tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. \red{\Rbar.}~Amen.}\polPs{\inicjal{K}{tóry} z Tobą żyje i króluje w jedności Ducha Świętego Bóg przez wszystkie wieki wieków. \red{\Rbar.}~Amen.}
+\latNPs{\inicjal{Q}{ui} tecum vivit et regnat in unitáte Spíritus Sancti, Déus, per ómnia sǽcula sæculórum. \red{\Rbar.}~Amen.}\polPs{\inicjal{K}{tóry} z Tobą żyje i króluje w jedności Ducha Świętego Bóg przez wszystkie wieki wieków. \red{\Rbar.}~Amen.}
 \EndParallel
 \dekor{0.3}{DeoGratias.jpg}
 \pagebreak
 \gresetlastline{ragged}
 \thispagestyle{empty}
-\sekcja{Modlitwy końcowe}{Odmawia się po cichu w pozycji klęczącej.}
+\sekcja{Post Divinum officium}{}%{Odmawia się po cichu w pozycji klęczącej.}
 \vspace{-26pt}
 \columnratio{0.5}
-\BeginParallel\fontsize{16}{16}\selectfont
-	 \latN{\inicjal{S}{acrosánctæ} et indivíduæ Trinitáti, crucifíxi Dómini nostri Jesu Christi humanitáti, beatíssimæ et gloriosíssimæ sempérque Vírginis Maríæ fœcúndæ integritáti, et ómnium Sanctórum universitáti sit sempitérna laus, honor, virtus et glória ab omni creatúra, nobísque remíssio ómnium peccatórum, per infiníta sǽcula sæculórum. Amen.} 
+\BeginParallel\fontsize{14}{18}\selectfont
+	 \latN{\inicjal{S}{acrosánctæ} et indivíduæ Trinitáti, crucifíxi Dómini nóstri Jesu Christi humanitáti, beatíssimæ et gloriosíssimæ sempérque Vírginis Maríæ fœcúndæ integritáti, et ómnium Sanctórum universitáti sit sempitérna laus, honor, virtus et glória ab omni creatúra, nobísque remíssio ómnium peccatórum, per infiníta sǽcula sæculórum. Amen.} 
 	\pol{\inicjal{N}{ajświętszej} i~niepodzielnej Trójcy, człowieczeństwu ukrzyżowanego Pana naszego Jezusa Chrystusa, płodnemu dziewictwu błogosławionej i~najchwalebniejszej zawsze Dziewicy Maryi oraz wspólnocie wszystkich świętych niech będzie wieczna chwała, cześć, moc i~sława od wszelkiego stworzenia, a~nam odpuszczenie wszystkich grzechów, przez nieskończone wieki wieków. Amen.}
 	\latN{\red{\Vbar.}~Beáta viscera Mariæ Virginis quæ portavérunt ætérni Patris Filium.\\ \red{\Rbar.}~Et beáta úbera quæ lactavérunt Christum Dóminum.}
 	\pol{\red{\Vbar.}~Błogosławione łono Maryi Dziewicy, które nosiło Syna Ojca przedwiecznego.\\ \red{\Rbar.}~I~błogosławione piersi, które karmiły Chrystusa Pana.}
@@ -1096,7 +1113,7 @@
 	\pol{\inicjal{O}{jcze} nasz, któryś jest w niebie święć się imię Twoje; przyjdź królestwo Twoje; bądź wola Twoja jako w niebie tak i~na ziemi; chleba naszego powszedniego daj nam dzisiaj; i~odpuść nam nasze winy, jako i~my odpuszczamy naszym winowajcom; i~nie wódź nas na pokuszenie; ale nas zbaw od złego. Amen.}
 	\latN{\inicjal{A}{ve} María, grátia plena; Dóminus tecum: benedícta tu in muliéribus, et benedíctus fructus ventris tui Jesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.}
 	\pol{\inicjal{Z}{drowaś} Maryjo, łaski pełna, Pan z~Tobą, błogosławionaś Ty między niewiastami i~błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i~w~godzinę śmierci naszej. Amen.}
-	\latN{\inicjal{C}{redo} in Deum, Patrem omnipoténtem, Creatórem cæli et terræ. Et in Jesum Christum, Fílium ejus únicum, Dóminum nostrum: qui concéptus est de Spíritu Sancto, natus ex María Vírgine, passus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus: descéndit ad ínferos; tértia die resurréxit a~mórtuis; ascéndit ad cælos; sedet ad déxteram Dei Patris omnipoténtis: inde ventúrus est judicáre vivos et mórtuos. Credo in Spíritum Sanctum, sanctam Ecclésiam cathólicam, Sanctórum communiónem, remissiónem peccatórum, carnis resurrectiónem, vitam ætérnam. Amen.}
+	\latN{\inicjal{C}{redo} in Deum, Patrem omnipoténtem, Creatórem cæli et terræ. Et in Jesum Christum, Fílium ejus únicum, Dóminum nostrum: qui concéptus est de Spíritu Sancto, natus ex María Vírgine, passus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus: descéndit ad ínferos; tértia die resurréxit a~mórtuis; ascéndit ad cælos; sedet ad déxteram Déi Patris omnipoténtis: inde ventúrus est judicáre vivos et mórtuos. Credo in Spíritum Sanctum, sanctam Ecclésiam cathólicam, Sanctórum communiónem, remissiónem peccatórum, carnis resurrectiónem, vitam ætérnam. Amen.}
 	\pol{\inicjal{W}{ierzę} w Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, i w Jezusa Chrystusa, Syna Jego jedynego, Pana naszego, który się począł z Ducha Świętego, narodził się z Maryi Panny, umęczon pod Ponckim Piłatem, ukrzyżowan, umarł i pogrzebion. Zstąpił do piekieł, trzeciego dnia zmartwychwstał. Wstąpił na niebiosa, siedzi po prawicy Boga Ojca wszechmogącego. Stamtąd przyjdzie sądzić żywych i umarłych.
 Wierzę w Ducha Świętego, święty Kościół powszechny, świętych obcowanie, grzechów odpuszczenie, ciała zmartwychwstanie, żywot wieczny. Amen.}
 \EndParallel
@@ -1113,5 +1130,4 @@ Wierzę w Ducha Świętego, święty Kościół powszechny, świętych obcowanie
 % <c><sp>R/</sp>.</c>
 % <c><v>†</v></c>
 % é á í ó ú ý æ ǽ œ Á, É, Í, Ó, Ú, Ý Æ Ǽ Œ \'{\oe} \'{\OE}
-% ---------------------- é á í ó ú ý æ ǽ œ Á, É, Í, Ó, Ú, Ý Æ Ǽ Œ \'{\oe} \'{\OE}
 \end{document}
