@@ -4,13 +4,13 @@
 \GreBeginHeaders %
 \GreHeader{name}{Litany I}%
 \GreEndHeaders %
-\GreBeginScore{10a13470060d75773f1d25e74ed6f6659ea3834c}{12}{8}{0}{0}{}{4}{\GreInitialClefPosition{3}{0}}%
+\GreBeginScore{1deaecc8afffe68ed785036ff2e757601327435b}{12}{8}{0}{0}{}{4}{\GreInitialClefPosition{3}{0}}%
 \GreSetLargestClef{c}{3}{3}{c}{0}{3}%
 \GreScoreOpening{%
 }{%
 \GreSetInitialClef{c}{3}{3}{c}{0}{3}{1}%
 }{%
-}{\GreSyllable}{\GreSetFirstSyllableText{P}{a}{}{{}{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{a}}}}{}}{{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{P}}}}{\GreFirstWord{\GreFirstSyllable{a}}}{}}{}}{}{\GreFirstWord}{0}{\GreSetNextSyllable{}{}{}{}{}}{}{{18}{0}}{}{%
+}{\GreSyllable}{\GreSetFirstSyllableText{P}{a}{\GreForceHyphen}{{}{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{a}}}}{\GreFirstWord{\GreFirstSyllable{\GreForceHyphen}}}}{{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{P}}}}{\GreFirstWord{\GreFirstSyllable{a}}}{\GreFirstWord{\GreFirstSyllable{\GreForceHyphen}}}}{}}{}{\GreFirstWord}{0}{\GreSetNextSyllable{\GreFirstWord{t}}{\GreFirstWord{e}}{\GreFirstWord{r}}{\GreFirstWord{t}}{\GreFirstWord{e}\GreFirstWord{r}}}{}{{0}{0}}{}{%
 \GreSyllableNoteCount{1}%
 % verbatim text at element level:
 \grealign%
@@ -20,10 +20,6 @@
 \GreGlyphHeights{10}{10}%
 }{}{}%
 }%
-\GreNoNoteSyllable{\GreSetThisSyllable{}{}{}{}{}}{}{\GreFirstWord}{1}{\GreSetNextSyllable{\GreFirstWord{t}}{\GreFirstWord{e}}{\GreFirstWord{r}}{\GreFirstWord{t}}{\GreFirstWord{e}\GreFirstWord{r}}}{}{{0}{0}}{}{%
-\GreSyllableNoteCount{0}%
-}%
-%
 \GreSyllable{\GreSetThisSyllable{\GreFirstWord{t}}{\GreFirstWord{e}}{\GreFirstWord{r}}{\GreFirstWord{t}}{\GreFirstWord{e}\GreFirstWord{r}}}{}{\GreFirstWord}{1}{\GreSetNextSyllable{d}{e}{}{d}{e}}{}{{0}{0}}{}{%
 \GreSyllableNoteCount{1}%
 % verbatim text at element level:
@@ -44,6 +40,7 @@
 {%
 \GreGlyphHeights{10}{10}%
 }{}{}%
+\GreAdHocSpaceEndOfElement{2}{0}{1}%
 }%
 %
 \GreSyllable{\GreSetThisSyllable{}{}{}{}{}}{}{\GreUnstyled}{1}{\GreSetNextSyllable{c}{ae}{}{c}{ae}}{}{{0}{0}}{}{%
@@ -52,6 +49,7 @@
 {%
 \GreGlyphHeights{10}{10}%
 }{}{}%
+\GreAdHocSpaceEndOfElement{6}{0}{1}%
 }%
 %
 \GreSetFixedNextTextFormat{1}\GreSyllable{\GreSetThisSyllable{c}{ae}{}{c}{ae}}{}{\GreUnstyled}{0}{\GreSetNextSyllable{l}{i}{s}{l}{is}}{}{{2}{0}}{}{%
@@ -63,7 +61,7 @@
 {%
 \GreGlyphHeights{10}{10}%
 }{}{}%
-\GreAdHocSpaceEndOfElement{3}{0}{1}%
+\GreAdHocSpaceEndOfElement{1}{0}{1}%
 }%
 \GreSetFixedTextFormat{1}\GreSetFixedNextTextFormat{2}\GreSyllable{\GreSetThisSyllable{l}{i}{s}{l}{is}}{}{\GreUnstyled}{1}{\GreSetNextSyllable{D}{e}{}{D}{e}}{}{{8}{0}}{}{%
 \GreSyllableNoteCount{3}%

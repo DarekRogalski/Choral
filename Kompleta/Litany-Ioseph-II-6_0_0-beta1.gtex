@@ -4,7 +4,7 @@
 \GreBeginHeaders %
 \GreHeader{name}{Litany II}%
 \GreEndHeaders %
-\GreBeginScore{0f9a695dbce6abac950fd80df91125fd7c1845fd}{12}{8}{0}{0}{}{4}{\GreInitialClefPosition{3}{0}}%
+\GreBeginScore{1b63687b2d7d7146e6ccad537169af28ba050cd8}{12}{8}{0}{0}{}{4}{\GreInitialClefPosition{3}{0}}%
 \GreSetLargestClef{c}{3}{3}{c}{0}{3}%
 \GreScoreOpening{%
 }{%
@@ -39,10 +39,10 @@
 }{}{}%
 }%
 %
-\GreSetFixedTextFormat{1}\GreSetFixedNextTextFormat{1}\GreNoNoteSyllable{\GreSetThisSyllable{}{}{}{}{}}{}{\GreUnstyled}{0}{\GreSetNextSyllable{M}{a}{}{M}{a}}{}{{2}{0}}{}{%
+\GreSetFixedTextFormat{1}\GreSetFixedNextTextFormat{1}\GreNoNoteSyllable{\GreSetThisSyllable{}{}{}{}{}}{}{\GreUnstyled}{0}{\GreSetNextSyllable{M}{a}{\GreHyph{}}{M}{a\GreHyph{}}}{}{{2}{0}}{}{%
 \GreSyllableNoteCount{0}%
 }%
-\GreSetFixedTextFormat{1}\GreSyllable{\GreSetThisSyllable{M}{a}{}{M}{a}}{}{\GreUnstyled}{1}{\GreSetNextSyllable{}{}{}{}{}}{}{{0}{0}}{}{%
+\GreSetFixedTextFormat{1}\GreSyllable{\GreSetThisSyllable{M}{a}{\GreHyph{}}{M}{a\GreHyph{}}}{}{\GreUnstyled}{1}{\GreSetNextSyllable{}{}{}{}{}}{}{{0}{0}}{}{%
 \GreSyllableNoteCount{3}%
 % verbatim text at element level:
 \grealign%

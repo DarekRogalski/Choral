@@ -2,6 +2,8 @@
 % !TEX encoding = UTF-8 Unicode
 
 \documentclass[17pt, twoside, a4paper]{extreport}
+\usepackage{scrextend}
+\changefontsizes{16pt} % ustawia 16pt jako bazę dla całego dokumentu
 % -----------------------------------------------------------------------------------
 % ------------------------- USTAWIENIA STRONY--------------------------
 % -----------------------------------------------------------------------------------
@@ -32,7 +34,7 @@
 \def\mydebug{0}% 0 - debugowanie, 1 - bez debugowania (wyłącza bloki \if\mydebug1)
 \begin{document}
 % -----------------------------------------------------------------------------------
-% ------------------------- STRONA TYTUŁOWA  --------------------------
+% ------------------------- STRONA TYTUŁOWA --------------------------
 \thispagestyle{empty}
 \begin{center}
 	\includegraphics[width=1.0\textwidth]{divina_psalmodia.jpg}
@@ -48,7 +50,7 @@
 % <c><i>Ps.</i></c> 
 % <c><sp>V/</sp>.</c>
 % <c><i>ij.</i></c>
-% \noindent\hrulefill \red{†}~  \red{*}~ 
+% \noindent\hrulefill \red{†}~ \red{*}~ 
 % é á í ó ú ý æ ǽ œ Á, É, Í, Ó, Ú, Ý Æ Ǽ Œ \'{\oe} \'{\OE}
 % \tikz[overlay]\draw[red](-10,0)--++(15,0);
 \pagebreak
@@ -56,17 +58,18 @@
 \BeginParallel
 	\latN{\inicjal{A}{péri},~\red{\grecross}~Dómine, méum ad benedicéndum nómen sánctum túum: múnda quoqúe cor méum ab ómnibus vánis, pervérsis et aliénis cogitatiónibus; intelléctum illúmina, afféctum inflámma, ut dígne, atténte ac devóte hoc Offícium recitáre váleam, et exaudíri mérear ánte conspéctum divínae Majestátis túae. Per Chrístum Dóminum nóstrum. Amen.}
 	\pol{\inicjal{O}{twórz},~\red{\grecross}~Panie, usta moje, dla błogosławienia świętego imienia Twego: oczyść także serce moje od wszelkich myśli próżnych, przewrotnych i~niewłaściwych; oświeć rozum, rozpal uczucie, abym godnie, uważnie i~pobożnie mógł odmówić to oficjum, i~zasłużył na wysłuchanie przed obliczem Twego Boskiego majestatu. Przez Chrystusa, Pana naszego. Amen.}
-  	\latN{\inicjal{D}{ómine}, in unióne illíus divínae intentiónis, qúa ípse in térris laúdes Déo persolvísti, hanc tíbi Hóram persólvo.}
-	\pol{\inicjal{P}{anie}, w~zjednoczeniu z~tą Boską intencją, z~którą Ty sam, na ziemi będąc, chwałę Bogu zanosiłeś, Tobie te godziny zanoszę.}
+ 	\latN{\inicjal{D}{ómine}, in unióne illíus divínae intentiónis, qúa ípse in térris laúdes Déo persolvísti, hanc tíbi Hóram persólvo.\fsize \the\baselineskip}
+	\pol{\inicjal{P}{anie}, w~zjednoczeniu z~tą Boską intencją, z~którą Ty sam, na ziemi będąc, chwałę Bogu zanosiłeś, Tobie te godziny zanoszę.\fsize \the\baselineskip}
 \EndParallel
 \dekor{0.4}{benedicamus_domino.jpg}
 \pagebreak
 \setcounter{page}{1}
 \fancyhead{}% wyczyść wszystkie pola nagłówka
 \pagestyle{plain}% nagłówek i stopka pusta - UWAGA: przedefiniowany styl przez polecenie fancypagestyle w header.tex	
-%\setlength{\parindent}{0pt}
 \gresetbracerendering{font}%
-\sekcja{Incipit}{Wszyscy wstają. Lektor wychodzi na środek, przyklęka i skłaniając się w kierunku ołtarza prosi o bło-gosławieństwo. W~obecności kapłana: ``Júbe dómne benedicere''~w jego kierunku. Błogosławieństwo - odpowiada kapłan lub pod jego nieobecność hebdomadariusz.}
+\pasek{1.0}{pasek-incipit.jpg}
+\sectionspace%
+%\sekcja{Incipit}{}
 \gresetinitiallines{0}\gabcsnippet{(c3)<c><sp>V/</sp>.</c> Jú([alt:Lector]h)be(h) Dó(h)mi(h)ne(g'_) be(h)ne(h)dí(h)ce(d)re(d.::)}
 \vspace{-14pt}
 \tlumaczR{\red{\Vbar.}~Racz, Panie, pobłogosławić.}\paragraphspace% 
@@ -80,173 +83,202 @@
 \gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> Ad(h[alt:Hebdomadarius])ju(h)to(h)ri(h)um(h) nos(h)trum(h) <c><v>\grecross</v></c> in(h) no(h)mi(h)ne(h) Do(h)mi(f)ni(f.) (::) <c><sp>R/</sp>.</c> Qui fe(h[alt:Chorus])cit(h) cae(h)lum(h) et(h) ter(h)ram.(f.) (::)}\linespace
 \tlumaczR{\red{\Vbar.}~Wspomożenie nasze \red{\grecross}~w imieniu Pana. \red{\Rbar.}~Który stworzył niebo i ziemię.}
 \pagebreak
-\rubryka{Odmawia się \emph{Pater noster} po cichu, oraz czyni rachunek sumienia. W przypadku obecności kapłana, on pierwszy odmawia  \emph{Confiteor}, a~następnie wszyscy (analogicznie jak przy modlitwach u stopni ołtarza).}%
+\rubryka{Odmawia się \emph{Pater noster} po cichu, oraz czyni rachunek sumienia. W przypadku obecności kapłana, on pierwszy odmawia \emph{Confiteor}, a~następnie wszyscy (analogicznie jak przy modlitwach u stopni ołtarza).}%
 \par % Wymusza zamknięcie akapitu i przejście do trybu pionowego
 \nointerlineskip % Opcjonalnie: usuwa dodatkowy odstęp międzywierszowy
 \BeginParallel
 \latN{\inicjal{P}{áter} nóster, qúi es in caélis, sanctificétur nómen túum: advéniat régnum túum: fíat volúntas túa, sícut in caélo et in térra. Pánem nóstrum quotidiánum da nóbis hódie: et dimítte nóbis débita nóstra, sícut et nos dimíttimus debitóribus nóstris: et ne nos indúcas in tentatiónem: sed líbera nos a málo. Amen.}%
 \pol{\inicjal{O}{jcze} nasz, któryś jest w niebie, święć się imię Twoje: przyjdź królestwo Twoje: bądź wola Twoja, jako w niebie tak i na ziemi. Chleba naszego powszedniego daj nam dzisiaj: i odpuść nam nasze winy, jako i my odpuszczamy naszym winowajcom: i nie wódź nas na pokuszenie: ale nas zbaw ode złego. Amen.}%
-\latN{\inicjal{C}{onfíteor} Déo omnipoténti, beátæ Maríæ semper Vírgini, beáto Michaéli Archángelo, beáto Joánni Baptístæ, sánctis Apóstolis Pétro et Páulo, et ómnibus Sánctis, quia peccávi nimis, cogitatióne, vérbo et ópere: méa cúlpa, méa cúlpa, méa máxima cúlpa. Ídeo précor beátam Maríam semper Vírginem, beátum Michaélem Archángelum, beátum Joánnem Baptístam, sánctos Apóstolos Pétrum et Páulum, et ómnes Sánctos, oráre pro me ad Dóminum Déum nóstrum.}%
+\latN{\inicjal{C}{onfíteor} Déo omnipoténti, beátae Maríae semper Vírgini, beáto Michaéli Archángelo, beáto Joánni Baptístae, sánctis Apóstolis Pétro et Páulo, et ómnibus Sánctis, quia peccávi nimis, cogitatióne, vérbo et ópere: méa cúlpa, méa cúlpa, méa máxima cúlpa. Ídeo précor beátam Maríam semper Vírginem, beátum Michaélem Archángelum, beátum Joánnem Baptístam, sánctos Apóstolos Pétrum et Páulum, et ómnes Sánctos, oráre pro me ad Dóminum Déum nóstrum.}%
 \pol{\inicjal{S}{powiadam} się Bogu wszechmogącemu, Najświętszej Maryi zawsze Dziewicy, świętemu Michałowi Archaniołowi, świętemu Janowi Chrzcicielowi, świętym Apostołom Piotrowi i Pawłowi, i wszystkim Świętym, że bardzo zgrzeszyłem, myślą, mową i uczynkiem: bijąc się w piersi moja wina, moja wina, moja bardzo wielka wina. Przeto błagam Najświętszą Maryję zawsze Dziewicę, świętego Michała Archanioła, świętego Jana Chrzciciela, świętych Apostołów Piotra i Pawła, i wszystkich świętych, o modlitwę za mnie do Pana Boga naszego.}%
-\latN{\inicjal{M}{isereátur} nóstri omnípotens Déus, et dimíssis peccátis nóstris, perdúcat nos ad vitam ætérnam. Amen.}%
+\latN{\inicjal{M}{isereátur} nóstri omnípotens Déus, et dimíssis peccátis nóstris, perdúcat nos ad vitam aetérnam. Amen.}%
 \pol{\inicjal{N}{iech} się zmiłuje nad nami Bóg wszechmogący, a odpuściwszy nam grzechy, doprowadzi nas do życia wiecznego. Amen.}%
 \latN{\inicjal{I}{ndulgéntiam}, \red{\grecross}~absolutiónem et remissiónem peccatórum nostrórum tríbuat nóbis omnípotens et miséricors Dóminus. Amen.}%
 \pol{\inicjal{P}{rzebaczenia}, \red{\grecross}~rozgrzeszenia i odpuszczenia grzechów naszych, niech nam udzieli Pan wszechmogący i miłosierny. Amen.}%
 \EndParallel
-\if\mydebug1% ---------------------- blok wyłączony gdy mydebug = 1 -------------------------------------------------- ↓
 \rubryka{Czyni się znak krzyża na klatce piersiowej.}
 \vspace{-24pt}
-\gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> Con(h[alt:Hebdomadarius])vér(h)te(h) nos(h) <c><v>\grecross</v></c> Déus(h) sa(h)lu(h)tá(g)ris(f) nó(h)ster(h) (::) <c><sp>R/</sp>.</c> Et(h[alt:Chorus]) a(h)vér(h)te(h) í(h)ram(h)  tú(h)am(g) a(f) nó(h)bis.(h) (::)}\linespace
-\tlumaczR{\red{\Vbar.}~Nawróć nas \grecross~Boże, nasz zbawco. \red{\Rbar.}~I odwróć swój gniew od nas.}\sectionspace% 
+\gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> Con(h[alt:Hebdomadarius])vér(h)te(h) nos(h) <c><v>\grecross</v></c> Déus(h) sa(h)lu(h)tá(g)ris(f) nó(h)ster(h) (::) <c><sp>R/</sp>.</c> Et(h[alt:Chorus]) a(h)vér(h)te(h) í(h)ram(h) tú(h)am(g) a(f) nó(h)bis.(h) (::)}\linespace
+\tlumaczR{\red{\Vbar.}~Nawróć nas \red{\grecross}~Boże, nasz zbawco. \red{\Rbar.}~I odwróć swój gniew od nas.}\sectionspace% 
 \gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> De([alt:Hebdomadarius]h)us(h'_) <c><v>\grecross</v></c> (,) in(h) ad(h)ju(h)tó(i)ri(h)um(h) me(h)um(h'_) in(h)tén(g)de.(h.) (::) <c><sp>R/</sp>.</c> Dó([alt:Chorus]h)mi(h)ne(h'_) (,) ad(h) ad(h)ju(h)ván(h)dum(h) me(h'_) fe(h)stí(g)na.(h.) (:) Gló(h)ri(h)a(h) Pa(h)tri,(h) et(h) Fí(h)li(h)o,(h'_) (,) et(h) Spi(h)rí(h)tu(h)i(h) San(g)cto.(h.) (:) Sic(h)ut(h) e(h)rat(h) in(h) prin(h)cí(h)pi(h)o,(h) et(h) nunc,(h) et(h) sem(h)per,(h.) (,) et(h) in(h) saé(h)cu(h)la(h) sae(h)cu(h)ló(h)rum.(h) A(g)men.(h.) (;) Al(h)le(i)lú(hg~){ia}.(g.) (::) (z-) <alt>A Septuagesima usque ad Pascha, loco Alleluia, dicitur :</alt> Laus(h) ti(h)bi(h) Dó(h)mi(h)ne(h'_) Rex(h) ae(h)tér(h)nae(i) gló(h')ri(h)ae.(g.) (::)}\linespace
-\tlumaczR{\red{\Vbar.}~Boże, \grecross~wejrzyj ku wspomożeniu memu. \red{\Rbar.}~Panie, pośpiesz ku ratunkowi memu. Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen. Alleluja.~\emph{Lub:} Chwała Tobie Panie, Królu wiecznej chwały.}
-\sekcja{Psalmi}{Po zaintonowaniu antyfony, oficjant rozpoczyna pierwszy wers psalmu, wszyscy siadają, po czym drugi chór wspólnie śpiewa kolejny wers. Drugi psalm intonuje kantor (wstając), trzeci ponownie oficjant.}
+\tlumaczR{\red{\Vbar.}~Boże, \red{\grecross}~wejrzyj ku wspomożeniu memu. \red{\Rbar.}~Panie, pośpiesz ku ratunkowi memu. Chwała Ojcu i Synowi, i Duchowi Święte-\\mu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen. Alleluja.~\emph{Lub:} Chwała Tobie Panie, Królu wiecznej chwały.}
+\dekor{0.45}{amdg02.jpg}
+\pagebreak
+\pasek{1.0}{pasek-psalmi02.jpg}
+\segmentspace%
+%\sekcja{Psalmi}{Po zaintonowaniu antyfony, oficjant rozpoczyna pierwszy wers psalmu, wszyscy siadają, po czym drugi chór wspólnie śpiewa kolejny wers. Drugi psalm intonuje kantor (wstając), trzeci ponownie oficjant.}
 \begin{center}
 \begin{tabularx}{0.8\textwidth}{ p{150pt} p{50pt} p{150pt}}
- \small\emph{Per Annum} &  & \small\emph{Tempore Paschali}\\ 
-\begin{minipage}{150pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) MI(g)se-(g')ré-(h)re(gf) (::)}\end{minipage}  & & \begin{minipage}{150pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) AL(g)le-(g')lú-(h)ia(gf) (::)}\end{minipage}\\
+ \small\emph{Per Annum} & & \small\emph{Tempore Paschali}\\ 
+\begin{minipage}{150pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) MI(g)se-(g')ré-(h)re(gf) (::)}\end{minipage} & & \begin{minipage}{150pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) AL(g)le-(g')lú-(h)ia(gf) (::)}\end{minipage}\\
 \tlumaczR{Zmiłuj się} & & \tlumaczR{Alleluja}\\
 \end{tabularx}
 \end{center}
-\pagebreak
+\vspace{-26pt}
 \subsekcja{Psalm 4}
 \vspace{-16pt}
-\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Cum(g) in(h)vo(j)cá(j)rem(j) ex(j)au(j)dí(j)vit(j) me(j) Dé(j)us(j) jus(j)tí(j)ti(j)ae(j) <b>me</b>(k jr)ae:(j.) <c><v>*</v></c> (:) in(j) tri(j)bu(j)la(j)ti(j)ó(j)ne(j) di(j)la(j)<i><ul>tás</i></ul>(i)<i><ul>ti</i></ul>(j) <b>mi</b>(h gr)hi.(g.) (::) ()<c><i><v>\footnotesize{Flex:}</v></i></c>()  pec(j)cá(j)re: <c><v>†</v></c>(h. j j j  ::)}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Cum(g) in(h)vo(j)cá(j)rem(j) ex(j)au(j)dí(j)vit(j) me(j) Dé(j)us(j) jus(j)tí(j)ti(j)ae(j) <b>me</b>(k jr)ae:(j.) <c><v>*</v></c> (:) in(j) tri(j)bu(j)la(j)ti(j)ó(j)ne(j) di(j)la(j)<i><ul>tás</i></ul>(i)<i><ul>ti</i></ul>(j) <b>mi</b>(h gr)hi.(g.) (::) ()<c><i><v>\footnotesize{Flex:}</v></i></c>() pec(j)cá(j)re: <c><v>†</v></c>(h.) (::)}
 \vspace{-25pt}
 \tlumaczR{Kiedym wzywał, wysłuchał mię Bóg sprawiedliwości mojéj:~\red{*}\\w uciśnieniu rozprzestrzeniłeś mi.}\linespace
 \columnratio{0.7}
 \BeginParallel
-\latNPs{\mred{2.}~Miserére \textbf{mé}i,~\red{*} et exáudi orati\underline{\textit{ó}}\underline{\textit{nem}} \textbf{mé}am.}\polPs{Zmiłuj się nademną,~\red{*} a wysłuchaj modlitwę moję.}%
-\latNPs{\mred{3.}~Fílii hóminum, úsquequo grávi \textbf{cór}de?~\red{*} ut qúid dilígitis vanitátem, et quǽri\underline{\textit{tis}} \underline{\textit{men}}\textbf{dá}cium?}\polPs{Synowie człowieczy, pókiż ciężkiego serca?~\red{*} przecz miłujecie marność, i szukacie kłamstwa?}%
+\latNPs{\mred{2.}~Miserére \textbf{mé}i,~\red{*} et exáudi orati\underline{\textit{ónem}} \textbf{mé}am.}\polPs{Zmiłuj się nademną,~\red{*} a wysłuchaj modlitwę moję.}%
+\latNPs{\mred{3.}~Fílii hóminum, úsquequo grávi \textbf{cór}de?~\red{*} ut qúid dilígitis vanitátem, et quaéri\underline{\textit{tis}} \underline{\textit{men}}\textbf{dá}cium?}\polPs{Synowie człowieczy, pókiż ciężkiego serca?~\red{*} przecz miłujecie marność, i szukacie kłamstwa?}%
 \latNPs{\mred{4.}~Et scitóte quóniam mirificávit Dóminus sánctum \textbf{sú}um:~\red{*} Dóminus exáudiet me cum clamáve\underline{\textit{ro}} \underline{\textit{ad}} \textbf{é}um.}\polPs{Wiedzcież, iż dziwnym uczynił Pan świętego swego:~\red{*} wysłucha mię Pan, gdy zawołam do niego.}%
-\latNPs{\mred{5.}~Irascímini, et nolíte peccáre:~\red{†} quáe dícitis in córdibus \textbf{vés}tris,~\red{*} in cubílibus véstris \underline{\textit{com}}\underline{\textit{pun}}\textbf{gí}mini.}\polPs{Gniewajcie się, a nie grzeszcie: ‡ co mówicie w sercach waszych,~\red{*} na łóżkach waszych żałujcie.}%
-\latNPs{\mred{6.}~Sacrificáte sacrifícium justítiae,~\red{†} et speráte in \textbf{Dó}mino.~\red{*} Múlti dícunt: Qúis osténdit \underline{\textit{nó}}\underline{\textit{bis}} \textbf{bó}na?}\polPs{Ofiarujcie ofiarę sprawiedliwości,~\red{†} a ufajcie w Panu.~\red{*} Wiele ich mówią: Któż nam okazał dobra?}%
-\latNPs{\mred{7.}~Signátum est súper nos lúmen vúltus túi, \textbf{Dó}mine:~\red{*} dedísti laetítiam in \underline{\textit{cór}}\underline{\textit{de}} \textbf{mé}o.}\polPs{Naznamionowana jest nad nami światłość oblicza twego, Panie:~\red{*} dałeś wesele w sercu mojem.}%
-\latNPs{\mred{8.}~A frúctu fruménti, víni, et ólei \textbf{sú}i~\red{*} mul\underline{\textit{ti}}\underline{\textit{pli}}\textbf{cá}ti sunt.}\polPs{Od urodzaju zboża, wina i oliwy swéj~\red{*} rozmnożeni są.}%
-\latNPs{\mred{9.}~In páce in id\textbf{íp}sum~\red{*} dórmiam, et \underline{\textit{re}}\underline{\textit{qui}}\textbf{és}cam;}\polPs{W pokoju pospołu~\red{*} będę spał i odpoczywał:}%
-\latNPs{\mred{10.}~Quóniam tu, Dómine, singuláriter \textbf{in} spe~\red{*} con\underline{\textit{sti}}\underline{\textit{tu}}\textbf{ís}ti me.}\polPs{Bo ty, Panie, osobliwie w nadziei~\red{*} postanowiłeś mię.}%
-\latNPs{\mred{11.}~Glória Pátri, et \textbf{Fí}lio,~\red{*} et Spirí\underline{\textit{tu}}\underline{\textit{i}} \textbf{Sánc}to.}\polPs{Chwała Ojcu i Synowi,~\red{*} i Duchowi Świętemu.}%
-\latNPs{\mred{12.}~Sicut érat in princípio, et nunc, et \textbf{sém}per,~\red{*} et in saécula saecu\underline{\textit{ló}}\underline{\textit{rum}}. \textbf{A}men.}\polPs{Jak była na początku, teraz i zawsze,~\red{*} i na wieki wieków. Amen.}%
+\latNPs{\mred{5.}~Irascímini, et nolíte peccáre:~\red{†} quáe dícitis in córdibus \textbf{vés}tris,~\red{*} in cubílibus véstris \underline{\textit{compun}}\textbf{gí}mini.}\polPs{Gniewajcie się, a nie grzeszcie:~\red{†} co mówicie w sercach waszych,~\red{*} na łóżkach waszych żałujcie.}%
+\latNPs{\mred{6.}~Sacrificáte sacrifícium justítiae,~\red{†} et speráte in \textbf{Dó}mino.~\red{*} Múlti dícunt: Qúis osténdit \underline{\textit{nóbis}} \textbf{bó}na?}\polPs{Ofiarujcie ofiarę sprawiedliwości,~\red{†} a ufajcie w Panu.~\red{*} Wiele ich mówią: Któż nam okazał dobra?}%
+\latNPs{\mred{7.}~Signátum est súper nos lúmen vúltus túi, \textbf{Dó}mine:~\red{*} dedísti laetítiam in \underline{\textit{córde}} \textbf{mé}o.}\polPs{Naznamionowana jest nad nami światłość oblicza twego, Panie:~\red{*} dałeś wesele w sercu mojem.}%
+\latNPs{\mred{8.}~A frúctu fruménti, víni, et ólei \textbf{sú}i~\red{*} mul\underline{\textit{tipli}}\textbf{cá}ti sunt.}\polPs{Od urodzaju zboża, wina i oliwy swéj~\red{*} rozmnożeni są.}%
+\latNPs{\mred{9.}~In páce in id\textbf{íp}sum~\red{*} dórmiam, et \underline{\textit{requi}}\textbf{és}cam;}\polPs{W pokoju pospołu~\red{*} będę spał i odpoczywał:}%
+\latNPs{\mred{10.}~Quóniam tu, Dómine, singuláriter \textbf{in} spe~\red{*} con\underline{\textit{stitu}}\textbf{ís}ti me.}\polPs{Bo ty, Panie, osobliwie w nadziei~\red{*} postanowiłeś mię.}%
+\latNPs{\mred{11.}~Glória Pátri, et \textbf{Fí}lio,~\red{*} et Spirí\underline{\textit{tui}} \textbf{Sánc}to.}\polPs{Chwała Ojcu i Synowi,~\red{*} i Duchowi Świętemu.}%
+\latNPs{\mred{12.}~Sicut érat in princípio, et nunc, et \textbf{sém}per,~\red{*} et in saécula saecu\underline{\textit{lórum}}. \textbf{A}men.}\polPs{Jak była na początku, teraz i zawsze,~\red{*} i na wieki wieków. Amen.}%
 \EndParallel
 \vspace{-5pt}
 \subsekcja{Psalm 90}
-\vspace{-16pt}
+\vspace{-20pt}
 \grechangedim{spacelinestext}{18pt}{scalable} % odstęp między linią a dołem tekstu
-\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Qui(g) há(h)bi(j)tat(j) in(j) ad(j)ju(j)tó(j)ri(j)o(j) Al(j)<b>tís</b>(k)si(j)mi,(j.) <c><v>*</v></c> (:) in(j) pro(j)tec(j)ti(j)ó(j)ne(j) Dé(j)i(j) caé(j)li(j) <i><ul>com</i></ul>(i)<i><ul>mo</i></ul>(j)<b>rá</b>(h)bi(g)tur.(g.) (::) ()<c><i><v>\footnotesize{Flex:}</v></i></c>()  in(j) dí(j)e, <c><v>†</v></c>(h.) (::)}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Qui(g) há(h)bi(j)tat(j) in(j) ad(j)ju(j)tó(j)ri(j)o(j) Al(j)<b>tís</b>(k)si(j)mi,(j.) <c><v>*</v></c> (:) in(j) pro(j)tec(j)ti(j)ó(j)ne(j) Dé(j)i(j) caé(j)li(j) <i><ul>com</i></ul>(i)<i><ul>mo</i></ul>(j)<b>rá</b>(h)bi(g)tur.(g.) (::) ()<c><i><v>\footnotesize{Flex:}</v></i></c>() in(j) dí(j)e, <c><v>†</v></c>(h.) (::)}
 \vspace{-21pt}
 \tlumaczR{Kto mieszka w spomożeniu Najwyższego,~\red{*}\\w obronie Boga niebieskiego będzie przebywał.}
-\pagebreak
 %\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{2. }</v></c>Di(j)cet(j) Dó(j)mi(j)no:(j) Su(j)scép(j)tor(j) me(j)us(j) es(j) tu,(j) et(j) re(j)fú(j)gi(j)um(j) <b>me</b>(k jr)um:(j.) <c><v>*</v></c>(:) De(j)us(j) me(j)us(j) spe(j)rá(j)<i><ul>bo</i></ul>(i) <i><ul>in</i></ul>(j) <b>e</b>(h gr)um.(g.) (::)}
 %\vspace{-15pt}
 %\tlumaczR{Rzecze Panu: Obrońca mój, i ucieczka moja jesteś ty:~\red{*}\\ Bóg mój, w nim będę miał nadzieję.}\segmentspace
 \columnratio{0.7}
 \BeginParallel
 \latNPs{\mred{2.}~Dícet Dómino: Suscéptor méus es tu, et refúgium \textbf{mé}um:~\red{*} Déus méus sperá\underline{\textit{bo}} \underline{\textit{in}} \textbf{é}um.}\polPs{Rzecze Panu: Obrońca mój, i ucieczka moja jesteś ty:~\red{*} Bóg mój, w nim będę miał nadzieję.}%
-\latNPs{\mred{3.}~Quóniam ípse liberávit me de láqueo ve\textbf{nán}tium,~\red{*} et a \underline{\textit{vér}}\underline{\textit{bo}} \textbf{ás}pero.}\polPs{Albowiem on mię wyrwał z sidła łowiących,~\red{*} i od przykrego słowa.}%
+\latNPs{\mred{3.}~Quóniam ípse liberávit me de láqueo ve\textbf{nán}tium,~\red{*} et a \underline{\textit{vérbo}} \textbf{ás}pero.}\polPs{Albowiem on mię wyrwał z sidła łowiących,~\red{*} i od przykrego słowa.}%
 \latNPs{\mred{4.}~Scápulis súis obumbrábit \textbf{tí}bi:~\red{*} et sub pénnis é\underline{\textit{jus}} \underline{\textit{spe}}\textbf{rá}bis.}\polPs{Plecami swemi okryje cię:~\red{*} a pod skrzydłami jego nadzieję mieć będziesz.}%
 \latNPs{\mred{5.}~Scúto circúmdabit te véritas \textbf{é}jus:~\red{*} non timébis a timó\underline{\textit{re}} \underline{\textit{noc}}\textbf{túr}no,}\polPs{Tarczą ogarnie cię prawda jego:~\red{*} nie ulękniesz się od strachu nocnego.}%
-\latNPs{\mred{6.}~A sagítta volánte in díe,~\red{†} a negótio perambulánte in \textbf{té}nebris:~\red{*} ab incúrsu, et daemónio me\underline{\textit{ri}}\underline{\textit{di}}\textbf{á}no.}\polPs{Od strzały lecącéj we dnie,~\red{†} od sprawy chodzącéj w ciemności:~\red{*} od najazdu i od czarta południowego.}%
-\latNPs{\mred{7.}~Cádent a látere túo mílle,~\red{†} et décem míllia a déxtris \textbf{tú}is:~\red{*} ad te áutem non ap\underline{\textit{pro}}\underline{\textit{pin}}\textbf{quá}bit.}\polPs{Padnie po boku twoim tysiąc,~\red{†} a dziesięć tysięcy po prawéj stronie twojéj:~\red{*} a ku tobie się nie przybliży.}%
+\latNPs{\mred{6.}~A sagítta volánte in díe,~\red{†} a negótio perambulánte in \textbf{té}nebris:~\red{*} ab incúrsu, et daemónio me\underline{\textit{ridi}}\textbf{á}no.}\polPs{Od strzały lecącéj we dnie,~\red{†} od sprawy chodzącéj w ciemności:~\red{*} od najazdu i od czarta południowego.}%
+\latNPs{\mred{7.}~Cádent a látere túo mílle,~\red{†} et décem míllia a déxtris \textbf{tú}is:~\red{*} ad te áutem non ap\underline{\textit{propin}}\textbf{quá}bit.}\polPs{Padnie po boku twoim tysiąc,~\red{†} a dziesięć tysięcy po prawéj stronie twojéj:~\red{*} a ku tobie się nie przybliży.}%
 \latNPs{\mred{8.}~Verúmtamen óculis túis conside\textbf{rá}bis:~\red{*} et retributiónem peccató\underline{\textit{rum}} \underline{\textit{vi}}\textbf{dé}bis.}\polPs{Zaiste oczyma twemi oglądasz:~\red{*} a ujrzysz odpłatę grzeszników.}%
-\latNPs{\mred{9.}~Quóniam tu es, Dómine, spes \textbf{mé}a:~\red{*} Altíssimum posuísti refú\underline{\textit{gi}}\underline{\textit{um}} \textbf{tú}um.}\polPs{Albowiem ty, Panie, jesteś nadzieja moja:~\red{*} postawiłeś Najwyższego ucieczką twoją.}%
-\latNPs{\mred{10.}~Non accédet ad te \textbf{má}lum:~\red{*} et flagéllum non appropinquábit taberná\underline{\textit{cu}}\underline{\textit{lo}} \textbf{tú}o.}\polPs{Nie przystąpi do ciebie złe:~\red{*} i nie przybliży się bicz do przybytku twego.}%
-\latNPs{\mred{11.}~Quóniam Ángelis súis mandávit \textbf{de} te:~\red{*} ut custódiant te in ómnibus \underline{\textit{ví}}\underline{\textit{is}} \textbf{tú}is.}\polPs{Albowiem Aniołom swoim rozkazał o tobie:~\red{*} aby cię strzegli na wszystkich drogach twoich.}%
-\latNPs{\mred{12.}~In mánibus por\textbf{tá}bunt te:~\red{*} ne fórte offéndas ad lápidem \underline{\textit{pé}}\underline{\textit{dem}} \textbf{tú}um.}\polPs{Na ręku będą cię nosić:~\red{*} byś snadź nie obraził o kamień nogi twojéj.}%
+\latNPs{\mred{9.}~Quóniam tu es, Dómine, spes \textbf{mé}a:~\red{*} Altíssimum posuísti refú\underline{\textit{gium}} \textbf{tú}um.}\polPs{Albowiem ty, Panie, jesteś nadzieja moja:~\red{*} postawiłeś Najwyższego ucieczką twoją.}%
+\latNPs{\mred{10.}~Non accédet ad te \textbf{má}lum:~\red{*} et flagéllum non appropinquábit taberná\underline{\textit{culo}} \textbf{tú}o.}\polPs{Nie przystąpi do ciebie złe:~\red{*} i nie przybliży się bicz do przybytku twego.}%
+\latNPs{\mred{11.}~Quóniam Ángelis súis mandávit \textbf{de} te:~\red{*} ut custódiant te in ómnibus \underline{\textit{víis}} \textbf{tú}is.}\polPs{Albowiem Aniołom swoim rozkazał o tobie:~\red{*} aby cię strzegli na wszystkich drogach twoich.}%
+\latNPs{\mred{12.}~In mánibus por\textbf{tá}bunt te:~\red{*} ne fórte offéndas ad lápidem \underline{\textit{pédem}} \textbf{tú}um.}\polPs{Na ręku będą cię nosić:~\red{*} byś snadź nie obraził o kamień nogi twojéj.}%
 \latNPs{\mred{13.}~Súper áspidem, et basilíscum ambu\textbf{lá}bis:~\red{*} et conculcábis leónem \underline{\textit{et}} \underline{\textit{dra}}\textbf{có}nem.}\polPs{Po źmii i po bazyliszku chodzić będziesz:~\red{*} i podepczesz lwa i smoka.}%
-\latNPs{\mred{14.}~Quóniam in me sperávit, liberábo \textbf{é}um:~\red{*} prótegam éum, quóniam cognóvit \underline{\textit{nó}}\underline{\textit{men}} \textbf{mé}um.}\polPs{Iż we mnie nadzieję miał, wybawię go:~\red{*} obronię go, że poznał imię moje.}%
-\latNPs{\mred{15.}~Clamábit ad me, et égo exáudiam éum: ‡ cum ípso sum in tribulati\textbf{ó}ne:~\red{*} erípiam éum et glorifi\underline{\textit{cá}}\underline{\textit{bo}} \textbf{é}um.}\polPs{Będzie wołał ku mnie, a ja go wysłucham: ‡ z nim jestem w ucisku:~\red{*} wyrwę go i uwielbię go.}%
-\latNPs{\mred{16.}~Longitúdine diérum replébo \textbf{é}um:~\red{*} et osténdam ílli salu\underline{\textit{tá}}\underline{\textit{re}} \textbf{mé}um.}\polPs{Długością dni napełnię go:~\red{*} a okażę mu zbawienie moje.}%
-\latNPs{\mred{17.}~Glória Pátri, et \textbf{Fí}lio,~\red{*} et Spirí\underline{\textit{tu}}\underline{\textit{i}} \textbf{Sánc}to.}\polPs{Chwała Ojcu i Synowi,~\red{*} i Duchowi Świętemu.}%
-\latNPs{\mred{18.}~Sicut érat in princípio, et nunc, et \textbf{sém}per,~\red{*} et in saécula saecu\underline{\textit{ló}}\underline{\textit{rum}}. \textbf{A}men.}\polPs{Jak była na początku, teraz i zawsze,~\red{*} i na wieki wieków. Amen.}%
+\latNPs{\mred{14.}~Quóniam in me sperávit, liberábo \textbf{é}um:~\red{*} prótegam éum, quóniam cognóvit \underline{\textit{nómen}} \textbf{mé}um.}\polPs{Iż we mnie nadzieję miał, wybawię go:~\red{*} obronię go, że poznał imię moje.}%
+\latNPs{\mred{15.}~Clamábit ad me, et égo exáudiam éum:~\red{†} cum ípso sum in tribulati\textbf{ó}ne:~\red{*} erípiam éum et glorifi\underline{\textit{cábo}} \textbf{é}um.}\polPs{Będzie wołał ku mnie, a ja go wysłucham:~\red{†} z nim jestem w ucisku:~\red{*} wyrwę go i uwielbię go.}%
+\latNPs{\mred{16.}~Longitúdine diérum replébo \textbf{é}um:~\red{*} et osténdam ílli salu\underline{\textit{táre}} \textbf{mé}um.}\polPs{Długością dni napełnię go:~\red{*} a okażę mu zbawienie moje.}%
+\latNPs{\mred{17.}~Glória Pátri, et \textbf{Fí}lio,~\red{*} et Spirí\underline{\textit{tui}} \textbf{Sánc}to.}\polPs{Chwała Ojcu i Synowi,~\red{*} i Duchowi Świętemu.}%
+\latNPs{\mred{18.}~Sicut érat in princípio, et nunc, et \textbf{sém}per,~\red{*} et in saécula saecu\underline{\textit{lórum}}. \textbf{A}men.}\polPs{Jak była na początku, teraz i zawsze,~\red{*} i na wieki wieków. Amen.}%
 \EndParallel
-\vspace{-8pt}
 \subsekcja{Psalm 133}
 \vspace{-18pt}
 \grechangedim{spacelinestext}{24pt}{scalable} % odstęp między linią a dołem tekstu
 \gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Ec(g)ce(h) nunc(j) be(j)ne(j)dí(j)ci(j)te(j) <b>Dó</b>(k)mi(jr)num,(j.) <c><v>*</v></c> (:) óm(j)nes(j) <i><ul>ser</i></ul>(i)<i><ul>vi</i></ul>(j) <b>Dó</b>(h)mi(gr)ni:(g.) (::)}\minispace
-\tlumaczR{Otóż teraz błogosławcie Pana,~\red{*}  wszyscy słudzy Pańscy:}
-\pagebreak
+\tlumaczR{Otóż teraz błogosławcie Pana,~\red{*} wszyscy słudzy Pańscy:}
 \columnratio{0.7}
 %\setlength{\columnseprule}{0.4pt}
 %\setlength{\columnsep}{.02\textwidth}
 \BeginParallel
-\latNPs{\mred{2.}~Qúi státis in dómo \textbf{Dó}mini,~\red{*} in átriis dómus \underline{\textit{Dé}}\underline{\textit{i}} \textbf{nós}tri.}\polPs{Którzy stoicie w domu Pańskim,~\red{*} w sieniach domu Boga naszego.}%
-\latNPs{\mred{3.}~In nóctibus extóllite mánus véstras in \textbf{sánc}ta,~\red{*} et benedí\underline{\textit{ci}}\underline{\textit{te}} \textbf{Dó}minum.}\polPs{W nocy podnoście ręce wasze ku świątnicy,~\red{*} a błogosławcie Pana.}%
+\latNPs{\mred{2.}~Qúi státis in dómo \textbf{Dó}mini,~\red{*} in átriis dómus \underline{\textit{Déi}} \textbf{nós}tri.}\polPs{Którzy stoicie w domu Pańskim,~\red{*} w sieniach domu Boga naszego.}%
+\latNPs{\mred{3.}~In nóctibus extóllite mánus véstras in \textbf{sánc}ta,~\red{*} et benedí\underline{\textit{cite}} \textbf{Dó}minum.}\polPs{W nocy podnoście ręce wasze ku świątnicy,~\red{*} a błogosławcie Pana.}%
 \latNPs{\mred{4.}~Benedícat te Dóminus ex \textbf{Sí}on,~\red{*} qúi fécit caé\underline{\textit{lum}} \underline{\textit{et}} \textbf{tér}ram.}\polPs{Niechaj cię błogosławi Pan z Syonu,~\red{*} który stworzył niebo i ziemię.}%
-\latNPs{\mred{5.}~Glória Pátri, et \textbf{Fí}lio,~\red{*} et Spirí\underline{\textit{tu}}\underline{\textit{i}} \textbf{Sánc}to.}\polPs{Chwała Ojcu i Synowi,~\red{*} i Duchowi Świętemu.}%
-\latNPs{\mred{6.}~Sicut érat in princípio, et nunc, et \textbf{sém}per,~\red{*} et in saécula saecu\underline{\textit{ló}}\underline{\textit{rum}}. \textbf{A}men.}\polPs{Jak była na początku, teraz i zawsze,~\red{*} i na wieki wieków. Amen.}%
+\latNPs{\mred{5.}~Glória Pátri, et \textbf{Fí}lio,~\red{*} et Spirí\underline{\textit{tui}} \textbf{Sánc}to.}\polPs{Chwała Ojcu i Synowi,~\red{*} i Duchowi Świętemu.}%
+\latNPs{\mred{6.}~Sicut érat in princípio, et nunc, et \textbf{sém}per,~\red{*} et in saécula saecu\underline{\textit{lórum}}. \textbf{A}men.}\polPs{Jak była na początku, teraz i zawsze,~\red{*} i na wieki wieków. Amen.}%
 \EndParallel
 \sectionspace
 \begin{center}
 \begin{tabularx}{\textwidth}{p{250pt}p{10pt}p{250pt}}
 \small\emph{Per Annum} & & \small\emph{Tempore Paschali}\\ 
-\begin{minipage}{250pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) MI(g)se(g')ré(h)re(gf) () mí(gh)hi(h') Dó(g)mi(fg)ne,(g.) (;) et(h) ex(j)áu(i_[uh:l]j)di(h) o(h)ra(hg)ti(f)ó(gh)nem(h) mé(g.)am.(g.) (::)}\end{minipage}  & & \begin{minipage}{250pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) AL(g)le-(g')lú(h)ia,(gf__) (,) al(h)le-(j)lú-(i_j)ia,(h_GF) (z) al(gh)le-(h)lú-(g.)ia.(g.) (::)}\end{minipage}\\
+\begin{minipage}{250pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) MI(g)se(g')ré(h)re(gf) () mí(gh)hi(h') Dó(g)mi(fg)ne,(g.) (;) et(h) ex(j)áu(i_[uh:l]j)di(h) o(h)ra(hg)ti(f)ó(gh)nem(h) mé(g.)am.(g.) (::)}\end{minipage} & & \begin{minipage}{250pt}\gresetinitiallines{1}\greannotation{Ant.}\greannotation{8. G}\gabcsnippet{(c4) AL(g)le-(g')lú(h)ia,(gf__) (,) al(h)le-(j)lú-(i_j)ia,(h_GF) (z) al(gh)le-(h)lú-(g.)ia.(g.) (::)}\end{minipage}\\
 \tlumaczR{Zmiłuj się nademną, Panie, a wysłuchaj modlitwę moją.} & & \tlumacz{Alleluja, alleluja, alleluja.}\\
 \end{tabularx}
 \end{center}
 \dekor{0.4}{DeoGratias.jpg}
 \pagebreak
+\if\mydebug1% ---------------------- blok wyłączony gdy mydebug = 1 -------------------------------------------------- ↓
 %Wszyscy wstają. Po zaintonowaniu, pierwszą zwrotkę śpiewa pierwszy chór, drugą - drugi chór, trzecią - wspólnie.
 \sekcja{Hymnus}{}
 \vspace{-50pt}
 \subsubsekcja{Per Annum - in Festis Minoribus}\vspace{-12pt}
 \grechangedim{spacelinestext}{17pt}{scalable} % odstęp między linią a dołem tekstu
 \gresetinitiallines{1}\greannotation{8.}\gabcsnippet{(c4) TE(g) lú(i')cis(h) an(j)te(j) tér(j')mi(i)num,(h) (,) Ré(h)rum(j') Cre(j)á(j)tor,(g) pó(h')sci(g)mus,(f.) (;) Ut(h) pro(h') tu(g)a(j) cle(i)mén(h')ti(g)a,(hih') (,) Sis(h) praé(h')sul(g) et(f) cu(g)stó(h')di(g)a.(g.) 
-<c><v>\footnotesize{2. }</v></c> (::) Pro(g)cul(i') re(h)cé(j)dant(j) só(j')mni(i)a,(h) (,) Et(h) nó(j')cti(j)um(j) phan(g)tás(h')ma(g)ta :(f.) (;) Ho(h)stém(h')que(g) nó(j)strum(i) cóm(h')pri(g)me,(hih') (,) Ne(h) pol(h')lu(g)án(f)tur(g) cór(h')po(g)ra.(g.) 
-<c><v>\footnotesize{3. }</v></c> (::) Praé(g)sta,(i') Pá(h)ter(j) pi(j)ís(j')si(i)me,(h) (,) Pa(h)trí(j')que(j) cóm(j)par(g) U(h')ni(g)ce,(f.) (;) Cum(h) Spí(h')ri(g)tu(j) Pa(i)rá(h')cli(g)to,(hih') (,) Ré(h)gnans(h') per(g) ó(f)mne(g) saé(h')cu(g)lum.(g.) (::) A(ghg)men.(fg..) (::)}\linespace
-\tlumacz{1.~Ciebie przed zanikiem światła, Stwórco wszechrzeczy,~prosimy, Abyś według twej miłościwości, Był nam obrońcą i strażą. 2.~Niechaj daleko od nas odstąpią, Widziadła senne i zjawy nocne; Powstrzymaj nieprzyjaciela naszego, By ciała nie uległy zmazaniu. 3.~Udziel nam tego, Ojcze najmiłościwszy, I Ty Jedyny, równy Ojcu, Z Duchem Pocieszycielem Królujący po wszystek wiek.}\segmentspace
+(::) <c><v>\footnotesize{2. }</v></c> Pro(g)cul(i') re(h)cé(j)dant(j) só(j')mni(i)a,(h) (,) Et(h) nó(j')cti(j)um(j) phan(g)tás(h')ma(g)ta :(f.) (;) Ho(h)stém(h')que(g) nó(j)strum(i) cóm(h')pri(g)me,(hih') (,) Ne(h) pol(h')lu(g)án(f)tur(g) cór(h')po(g)ra.(g.) 
+(::) <c><v>\footnotesize{3. }</v></c> Praé(g)sta,(i') Pá(h)ter(j) pi(j)ís(j')si(i)me,(h) (,) Pa(h)trí(j')que(j) cóm(j)par(g) U(h')ni(g)ce,(f.) (;) Cum(h) Spí(h')ri(g)tu(j) Pa(i)rá(h')cli(g)to,(hih') (,) Ré(h)gnans(h') per(g) ó(f)mne(g) saé(h')cu(g)lum.(g.) (::) A(ghg)men.(fg..) (::)}\linespace
+\tlumacz{\red{1.}~Ciebie przed zanikiem światła, stwórco wszechrzeczy,~prosimy, abyś według twej miłościwości, był nam obrońcą i strażą. \red{2.}~Niechaj daleko od nas odstąpią, widziadła senne i zjawy nocne; powstrzymaj nieprzyjaciela naszego, by ciała nie uległy zmazaniu. \red{3.}~Udziel nam tego, Ojcze najmiłościwszy, i Ty Jedyny, równy Ojcu, z Duchem Pocieszycielem królujący po wszystek wiek.}\segmentspace
 \subsubsekcja{Per Annum - in Festis Majoribus}\vspace{-12pt}
 \grechangedim{spacelinestext}{17pt}{scalable} % odstęp między linią a dołem tekstu
 \gresetinitiallines{1}\greannotation{4.}\gabcsnippet{(c4) TE(f) lú(e')cis(g) an(hg)te(f) tér(gh)mi(gvFE)num,(e.) (,) Ré(dh)rum(hi) Cre(h)á(h)tor,(hg) pó(hj)sci(hg)mus,(h.) (;) Ut(h) pro(h') tú(g)a(hg) cle(f)mén(g)ti(fe)a,(d.) (,) Sis(f) praé(e')sul(g) et(hg) cu(f)stó(gh)di(gvFE)a.(e.) 
-<c><v>\footnotesize{2. }</v></c> (::) Pro(f)cul(e') re(g)cé(hg)dant(f) só(gh)mni(gvFE)a,(e.) (,) Et(dh) nó(hi)cti(h)um(h) phan(hg)tá(hj)sma(hg)ta:(h.) (;) Ho(h)stém(h')que(g) nó(hg)strum(f) cóm(g)pri(fe)me,(d.) (,) Ne(f) pol(e')lu(g)án(hg)tur(f) cór(gh)po(gvFE)ra.(e.) 
-<c><v>\footnotesize{3. }</v></c> (::) Praé(f)sta,(e') Pá(g)ter(hg) pi(f)ís(gh)si(gvFE)me,(e.) (,) Pa(dh)trí(hi)que(h) cóm(h)par(hg) U(hj)ni(hg)ce,(h.) (;) Cum(h) Spí(h')ri(g)tu(hg) Pa(f)rá(g)cli(fe)to,(d.) (,) Ré(f)gnans(e') per(g) ó(hg)mne(f) saé(gh)cu(gvFE)lum.(e.) (::) A(efe)men.(de..) (::)}\linespace
+(::) <c><v>\footnotesize{2. }</v></c> Pro(f)cul(e') re(g)cé(hg)dant(f) só(gh)mni(gvFE)a,(e.) (,) Et(dh) nó(hi)cti(h)um(h) phan(hg)tá(hj)sma(hg)ta:(h.) (;) Ho(h)stém(h')que(g) nó(hg)strum(f) cóm(g)pri(fe)me,(d.) (,) Ne(f) pol(e')lu(g)án(hg)tur(f) cór(gh)po(gvFE)ra.(e.) 
+(::) <c><v>\footnotesize{3. }</v></c> Praé(f)sta,(e') Pá(g)ter(hg) pi(f)ís(gh)si(gvFE)me,(e.) (,) Pa(dh)trí(hi)que(h) cóm(h)par(hg) U(hj)ni(hg)ce,(h.) (;) Cum(h) Spí(h')ri(g)tu(hg) Pa(f)rá(g)cli(fe)to,(d.) (,) Ré(f)gnans(e') per(g) ó(hg)mne(f) saé(gh)cu(gvFE)lum.(e.) (::) A(efe)men.(de..) (::)}\linespace
 \grechangedim{spacelinestext}{22pt}{scalable} % odstęp między linią a dołem tekstu
 \subsubsekcja{In Adventu}
 \gresetinitiallines{1}\greannotation{2.}\gabcsnippet{(f3) TE(ef) lú(f)cis(fh) an(e)te(fh) tér(hg)mi(f)num,(g'_[oh:h]) (,) Ré(i)rum(hg) Cre(f)á(g)tor,(hg) pó(f')sci(e)mus,(f.) (;) Ut(fi) pro(f) tú(fi)a(h) cle(hg)mén(fg)ti(f)a,(e'_[oh:h]) (,) Sis(e) praé(f')sul(g) et(hg) cu(f)stó(gf)di(e)a.(f.) 
-<c><v>\footnotesize{2. }</v></c> (::) Pro(ef)cul(f) re(fh)cé(e)dant(fh) só(hg)mni(f)a,(g'_[oh:h]) (,) Et(i) nó(hg)cti(f)um(g) phan(hg)tás(f')ma(e)ta :(f.) (;) Ho(fi)stém(f)que(fi) nó(h)strum(hg) cóm(fg)pri(f)me,(e'_[oh:h]) (,) Ne(e) pol(f')lu(g)án(hg)tur(f) cór(gf)po(e)ra.(f.) 
-<c><v>\footnotesize{3. }</v></c> (::) Praé(ef)sta,(f) Pá(fh)ter(e) pi(fh)ís(hg)si(f)me,(g'_[oh:h]) (,) Pa(i)trí(hg)que(f) cóm(g)par(hg) U(f')ni(e)ce,(f.) (;) Cum(fi) Spí(f)ri(fi)tu(h) Pa(hg)rá(fg)cli(f)to,(e'_[oh:h]) (,) Ré(e)gnans(f') per(g) ó(hg)mne(f) saé(gf)cu(e)lum.(f.) (::) A(fgf)men.(ef..) (::)}\linespace
-\subsubsekcja{In Nativitate Domini}
+(::) <c><v>\footnotesize{2. }</v></c> Pro(ef)cul(f) re(fh)cé(e)dant(fh) só(hg)mni(f)a,(g'_[oh:h]) (,) Et(i) nó(hg)cti(f)um(g) phan(hg)tás(f')ma(e)ta :(f.) (;) Ho(fi)stém(f)que(fi) nó(h)strum(hg) cóm(fg)pri(f)me,(e'_[oh:h]) (,) Ne(e) pol(f')lu(g)án(hg)tur(f) cór(gf)po(e)ra.(f.) 
+(::) <c><v>\footnotesize{3. }</v></c> Praé(ef)sta,(f) Pá(fh)ter(e) pi(fh)ís(hg)si(f)me,(g'_[oh:h]) (,) Pa(i)trí(hg)que(f) cóm(g)par(hg) U(f')ni(e)ce,(f.) (;) Cum(fi) Spí(f)ri(fi)tu(h) Pa(hg)rá(fg)cli(f)to,(e'_[oh:h]) (,) Ré(e)gnans(f') per(g) ó(hg)mne(f) saé(gf)cu(e)lum.(f.) (::) A(fgf)men.(ef..) (::)}\linespace
+\subsubsekcja{In Nativitate Domini / In Festo Corporis Christi}
 \gresetinitiallines{1}\greannotation{8.}\gabcsnippet{(c4) TE(g) lú(g')cis(f) an(e)te(d) tér(fhg)mi(f)num,(g'_[oh:h]) (,) Ré(hjji)rum(h') Cre(g)á(h)tor,(ig) pó(h')sci(g)mus,(f.) (;) Ut(g) pro(g') tú(f)a(g) cle(h)mén(j')ti(g)a,(hih.) (,) Sis(h) praé(h')sul(g) et(fvED') cu(f)stó(hg)di(f)a.(g.) 
-<c><v>\footnotesize{2. }</v></c> (::) Pro(g)cul(g') re(f)cé(e)dant(d) só(fhg)mni(f)a,(g'_[oh:h]) (,) Et(hjji) nó(h')cti(g)um(h) phan(ig)tás(h')ma(g)ta :(f.) (;) Ho(g)stém(g')que(f) nó(g)strum(h) cóm(j')pri(g)me,(hih.) (,) Ne(h) pol(h')lu(g)án(fvED')tur(f) cór(hg)po(f)ra.(g.) 
-<c><v>\footnotesize{3. }</v></c> (::) Jé(g)su,(g') tí(f)bi(e) sit(d) gló(fhg)ri(f)a,(g'_) (,) Qui(hjji) ná(h')tus(g) es(h) de(ig) Vír(h')gi(g)ne,(f.) (;) Cum(g) Pá(g')tr<i>e</i>(f) et(f) ál(g')mo(h) Spí(j')ri(g)tu,(hih.) (,) In(h) sem(h')pi(g)tér(fvED')na(f) saé(hg)cu(f)la.(g.) (::) A(ghg)men.(fg..) (::)}
+(::) <c><v>\footnotesize{2. }</v></c> Pro(g)cul(g') re(f)cé(e)dant(d) só(fhg)mni(f)a,(g'_[oh:h]) (,) Et(hjji) nó(h')cti(g)um(h) phan(ig)tás(h')ma(g)ta :(f.) (;) Ho(g)stém(g')que(f) nó(g)strum(h) cóm(j')pri(g)me,(hih.) (,) Ne(h) pol(h')lu(g)án(fvED')tur(f) cór(hg)po(f)ra.(g.) 
+(::) <c><v>\footnotesize{3. }</v></c> Jé(g)su,(g') tí(f)bi(e) sit(d) gló(fhg)ri(f)a,(g'_) (,) Qui(hjji) ná(h')tus(g) es(h) de(ig) Vír(h')gi(g)ne,(f.) (;) Cum(g) Pá(g')tr<i>e</i>(f) et(f) ál(g')mo(h) Spí(j')ri(g)tu,(hih.) (,) In(h) sem(h')pi(g)tér(fvED')na(f) saé(hg)cu(f)la.(g.) (::) A(ghg)men.(fg..) (::)}
 \vspace{-24pt}
-\tlumaczR{3.~Jezusie bądź pochwalony, Z Przeczystej Panny\\zrodzony: Z Ojcem, i Duchem światłości,\\Na nieskończone wieczności. Amen.}
-%\grechangedim{spacelinestext}{20pt}{scalable} % odstęp między linią a dołem tekstu
+\tlumaczR{\red{3.}~Jezusie bądź pochwalony, z Przeczystej Panny\\zrodzony: z Ojcem, i Duchem światłości, na\\nieskończone wieczności. Amen.}
+\pagebreak
 \subsubsekcja{In Epiphania Domini}
 \gresetinitiallines{1}\greannotation{8.}\gabcsnippet{(c3) TE(d) lú(e)cis(fh) an(h)te(e) tér(f')mi(d)num,(e'_[oh:h]) (,) Ré(h)rum(h') Cre(f)á(h)tor,(e) pó(f)sci(de)mus,(e.) (;) Ut(h) pro(h') tú(i)a(j) cle(h)mén(i')ti(h)a,(f_e) (,) Sis(e) praé(e')sul(d) et(c) cu(d)stó(f)di(de)a.(e.) 
-<c><v>\footnotesize{2. }</v></c> (::) Pro(d)cul(e) re(fh)cé(h)dant(e) só(f')mni(d)a,(e'_[oh:h]) (,) Et(h) nó(h')cti(f)um(h) phan(e)tás(f)ma(de)ta :(e.) (;) Ho(h)stém(h')que(i) nó(j)strum(h) cóm(i')pri(h)me,(f_e) (,) Ne(e) pol(e')lu(d)án(c)tur(d) cór(f)po(de)ra.(e.) 
-<c><v>\footnotesize{3. }</v></c> (::) Jé(d)su,(e) tí(fh)bi(h) sit(e) gló(f')ri(d)a,(e'_) (,) Qu<i>i</i>(h) ap(h)pa(h')ru(f)í(h)sti(e) gén(f)ti(de)bus,(e.) (;) Cum(h) Pá(h')tr<i>e</i>(h) et(i) ál(j)mo(h) Spí(i')ri(h)tu,(f_e) (,) In(e) sem(e')pi(d)tér(c)na(d) saé(f)cu(de)la.(e.) (::) A(efe)men.(de..) (::)}\linespace
-\tlumacz{3.~Jezusie bądź pochwalony, Któryś Poganom zjawiony: Z Ojcem, i Duchem światłości, Na nieskończone wieczności.}
+(::) <c><v>\footnotesize{2. }</v></c> Pro(d)cul(e) re(fh)cé(h)dant(e) só(f')mni(d)a,(e'_[oh:h]) (,) Et(h) nó(h')cti(f)um(h) phan(e)tás(f)ma(de)ta :(e.) (;) Ho(h)stém(h')que(i) nó(j)strum(h) cóm(i')pri(h)me,(f_e) (,) Ne(e) pol(e')lu(d)án(c)tur(d) cór(f)po(de)ra.(e.) 
+(::) <c><v>\footnotesize{3. }</v></c> Jé(d)su,(e) tí(fh)bi(h) sit(e) gló(f')ri(d)a,(e'_) (,) Qu<i>i</i>(h) ap(h)pa(h')ru(f)í(h)sti(e) gén(f)ti(de)bus,(e.) (;) Cum(h) Pá(h')tr<i>e</i>(h) et(i) ál(j)mo(h) Spí(i')ri(h)tu,(f_e) (,) In(e) sem(e')pi(d)tér(c)na(d) saé(f)cu(de)la.(e.) (::) A(efe)men.(de..) (::)}
+\vspace{-25pt}
+\tlumaczR{\red{3.}~Jezusie bądź pochwalony, któryś poganom zjawiony:\\z Ojcem, i Duchem światłości, na nieskończone wieczności.}
 \segmentspace
+\subsubsekcja{In Festo Sanctae Familiae}
+\gresetinitiallines{1}\greannotation{8.}\gabcsnippet{(c3) TE(d) lú(e)cis(fh) an(h)te(e) tér(f')mi(d)num,(e'_[oh:h]) (,) Ré(h)rum(h') Cre(f)á(h)tor,(e) pó(f)sci(de)mus,(e.) (;) Ut(h) pro(h') tú(i)a(j) cle(h)mén(i')ti(h)a,(f_e) (,) Sis(e) praé(e')sul(d) et(c) cu(d)stó(f)di(de)a.(e.) 
+(::) <c><v>\footnotesize{2. }</v></c> Pro(d)cul(e) re(fh)cé(h)dant(e) só(f')mni(d)a,(e'_[oh:h]) (,) Et(h) nó(h')cti(f)um(h) phan(e)tás(f)ma(de)ta :(e.) (;) Ho(h)stém(h')que(i) nó(j)strum(h) cóm(i')pri(h)me,(f_e) (,) Ne(e) pol(e')lu(d)án(c)tur(d) cór(f)po(de)ra.(e.) 
+(::) <c><v>\footnotesize{3. }</v></c> Je(d)su,(e) tu(fh)is(h) ob(e)é(f')di(d)ens(e'_[oh:h]) (,) Qui(h) fa(h')ctus(f) es(h) pa(e)rén(f)ti(de)bus,(e.) (;) Cum(h) Pa(h')tre(i) summ<e>o</e>(j) ac(h) Spí(i')ri(h)tu,(f_e) (,) Sem(e)per(e') ti(d)bi(c) sit(d) gló(f)ri(de)a.(e.) (::) 
+A(efe)men.(de..) (::)}
+\vspace{-25pt}
+\tlumaczR{\red{3.}~Tobie, Jezu, któryś stał się posłuszny swym rodzicom, niech będzie\\wieczna chwała, wraz z Ojcem i Najświętszym Duchem. Amen.}
+\pagebreak
 \subsubsekcja{In Quadragesima}
 \gresetinitiallines{1}\greannotation{2.}\gabcsnippet{(f3) TE(g) lú(h)cis(fe) an(f)te(g) tér(h')mi(f)num,(f') (,) Ré(e)rum(f') Cre(h)á(g)tor,(e) pó(f')sci(h)mus,(g.) (;) Ut(h) pro(i') tú(h)a(g) cle(fg)mén(h')ti(f)a,(f') (,) Sis(g) praé(h)sul(gvFE) et(f) cu(g)stó(h')di(f)a.(f.) 
-<c><v>\footnotesize{2. }</v></c> (::) Pro(g)cul(h) re(fe)cé(f)dant(g) só(h')mni(f)a,(f') (,) Et(e) nó(f')cti(h)um(g) phan(e)tá(f')sma(h)ta:(g.) (;) Ho(h)stém(i')que(h) nó(g)strum(fg) cóm(h')pri(f)me,(f') (,) Ne(g) pol(h)lu(gvFE)án(f)tur(g) cór(h')po(f)ra.(f.) 
-<c><v>\footnotesize{3. }</v></c> (::) Praé(g)sta,(h) Pá(fe)ter(f) pi(g)ís(h')si(f)me,(f') (,) Pa(e)trí(f')que(h) cóm(g)par(e) U(f')ni(h)ce,(g.) (;) Cum(h) Spí(i')ri(h)tu(g) Pa(fg)rá(h')cli(f)to,(f') (,) Ré(g)gnans(h) per(gvFE) ó(f)mne(g) saé(h')cu(f)lum.(f.) (::) A(fgf)men.(ef..) (::)}\linespace
+(::) <c><v>\footnotesize{2. }</v></c> Pro(g)cul(h) re(fe)cé(f)dant(g) só(h')mni(f)a,(f') (,) Et(e) nó(f')cti(h)um(g) phan(e)tá(f')sma(h)ta:(g.) (;) Ho(h)stém(i')que(h) nó(g)strum(fg) cóm(h')pri(f)me,(f') (,) Ne(g) pol(h)lu(gvFE)án(f)tur(g) cór(h')po(f)ra.(f.) 
+(::) <c><v>\footnotesize{3. }</v></c> Praé(g)sta,(h) Pá(fe)ter(f) pi(g)ís(h')si(f)me,(f') (,) Pa(e)trí(f')que(h) cóm(g)par(e) U(f')ni(h)ce,(g.) (;) Cum(h) Spí(i')ri(h)tu(g) Pa(fg)rá(h')cli(f)to,(f') (,) Ré(g)gnans(h) per(gvFE) ó(f)mne(g) saé(h')cu(f)lum.(f.) (::) A(fgf)men.(ef..) (::)}\linespace
 \subsubsekcja{Tempore Paschali}
 \grechangedim{spacelinestext}{20pt}{scalable} % odstęp między linią a dołem tekstu
 \gresetinitiallines{1}\greannotation{8.}\gabcsnippet{(c4) TE(g) lú(g')cis(e) an(g)te(h) tér(i')mi(j)num,(h) (,) Ré(g)rum(i') Cre(h)á(j)tor,(g) pó(hi)sci(i)mus,(i.) (;) Ut(h) pro(j') tú(k)a(ih) cle(j)mén(i')ti(j)a,(hvGF') (,) Sis(h) praé(hg)sul(j) et(ij) cu(h)stó(g)di(fg)a.(g.) 
-<c><v>\footnotesize{2. }</v></c> (::)  Pro(g)cul(g') re(e)cé(g)dant(h) só(i')mni(j)a,(h) (,) Et(g) nó(i')cti(h)um(j) phan(g)tás(hi)ma(i)ta :(i.) (;) Ho(h)stém(j')que(k) nó(ih)strum(j) cóm(i')pri(j)me,(hvGF') (,) Ne(h) pol(hg)lu(j)án(ij)tur(h) cór(g)po(fg)ra.(g.) 
-<c><v>\footnotesize{3. }</v></c> (::) Dé(g)o(g') Pá(e)tri(g) sit(h) gló(i')ri(j)a,(h) (,) Et(g) Fí(i')li(h)o,(j) qu<i>i</i>(g) a(g) mór(hi)tu(i)is(i.) (;) Sur(h)ré(j')xit,(k) ac(ih) Pa(j)rá(i')cli(j)to,(hvGF') (,) In(h) sem(hg)pi(j)tér(ij)na(h) saé(g)cu(fg)la.(g.) (::) A(ghg)men.(fg..) (::)}
+(::) <c><v>\footnotesize{2. }</v></c> Pro(g)cul(g') re(e)cé(g)dant(h) só(i')mni(j)a,(h) (,) Et(g) nó(i')cti(h)um(j) phan(g)tás(hi)ma(i)ta :(i.) (;) Ho(h)stém(j')que(k) nó(ih)strum(j) cóm(i')pri(j)me,(hvGF') (,) Ne(h) pol(hg)lu(j)án(ij)tur(h) cór(g)po(fg)ra.(g.) 
+(::) <c><v>\footnotesize{3. }</v></c> Dé(g)o(g') Pá(e)tri(g) sit(h) gló(i')ri(j)a,(h) (,) Et(g) Fí(i')li(h)o,(j) qu<i>i</i>(g) a(g) mór(hi)tu(i)is(i.) (;) Sur(h)ré(j')xit,(k) ac(ih) Pa(j)rá(i')cli(j)to,(hvGF') (,) In(h) sem(hg)pi(j)tér(ij)na(h) saé(g)cu(fg)la.(g.) (::) A(ghg)men.(fg..) (::)}
 \vspace{-24pt}
-\tlumaczR{3.~Bądź Ojcze Boże chwalony, Z Synem, który pogrzebiony Wstał\\z martwych, i Duch światłości Niech ma chwałę na wieczności.}
+\tlumaczR{\red{3.}~Bądź Ojcze Boże chwalony, z Synem, który pogrzebiony wstał\\z martwych, i Duch światłości niech ma chwałę na wieczności.}
 %\fi%
 \grechangedim{spacelinestext}{24pt}{scalable} % odstęp między linią a dołem tekstu
 \segmentspace
-% é á í ó ú ý æ ǽ œ Á, É, Í, Ó, Ú, Ý Æ Ǽ Œ \'{\oe} \'{\OE}
 \subsubsekcja{In Tempore Ascensionis}
 \gresetinitiallines{1}\greannotation{4.}\gabcsnippet{(c4) TE(f) lú(e!fwg'!hv)cis(g) an(fd)te(f) tér(efg)mi(f)num,(e.) (;) Ré(g)rum(hj) Cre(h)á(gf)tor,(g) pó(g')sci(f)mus,(e[ll:1]d..) (:) Ut(cd) pro(d) tú(dc)a(d) cle(fe)mén(de)ti(e)a,(e.) (;) Sis(g) praé(gh)sul(g) et(fd) cu(f)stó(efg)di(f)a.(e.) 
-<c><v>\footnotesize{2. }</v></c> (::) Pro(f)cul(e!fwg'!hv) re(g)cé(fd)dant(f) só(efg)mni(f)a,(e.) (;) Et(g) nó(hj)cti(h)um(gf) phan(g)tás(g')ma(f)ta,(e[ll:1]d..) (:) Ho(cd)stém(d)que(dc) nó(d)strum(fe) cóm(de)pri(e)me,(e.) (;) Ne(g) pol(gh)lu(g)án(fd)tur(f) cór(efg)po(f)ra.(e.) 
-<c><v>\footnotesize{2. }</v></c> (::) Praé(f)sta,(e!fwg'!hv) Pá(g)ter(fd) pi(f)ís(efg)si(f)me,(e.) (;) Pa(g)trí(hj)que(h) cóm(gf)par(g) U(g')ni(f)ce,(e[ll:1]d..) (:) Cum(cd) Spí(d)ri(dc)tu(d) Pa(fe)rá(de)cli(e)to,(e.) (;) Ré(g)gnans(gh) per(g) ó(fd)mne(f) saé(efg)cu(f)lum.(e.) (::) A(efe)men.(de..) (::)}\linespace
+(::) <c><v>\footnotesize{2. }</v></c> Pro(f)cul(e!fwg'!hv) re(g)cé(fd)dant(f) só(efg)mni(f)a,(e.) (;) Et(g) nó(hj)cti(h)um(gf) phan(g)tás(g')ma(f)ta,(e[ll:1]d..) (:) Ho(cd)stém(d)que(dc) nó(d)strum(fe) cóm(de)pri(e)me,(e.) (;) Ne(g) pol(gh)lu(g)án(fd)tur(f) cór(efg)po(f)ra.(e.) 
+(::) <c><v>\footnotesize{3. }</v></c> Praé(f)sta,(e!fwg'!hv) Pá(g)ter(fd) pi(f)ís(efg)si(f)me,(e.) (;) Pa(g)trí(hj)que(h) cóm(gf)par(g) U(g')ni(f)ce,(e[ll:1]d..) (:) Cum(cd) Spí(d)ri(dc)tu(d) Pa(fe)rá(de)cli(e)to,(e.) (;) Ré(g)gnans(gh) per(g) ó(fd)mne(f) saé(efg)cu(f)lum.(e.) (::) A(efe)men.(de..) (::)}\linespace
 \grechangedim{spacelinestext}{20pt}{scalable} % odstęp między linią a dołem tekstu
 \subsubsekcja{In Pentecoste}
 \gresetinitiallines{1}\greannotation{1.}\gabcsnippet{(c4) TE(d) lú(d')cis(f) an(d)te(c) tér(f')mi(g)num,(h.) (,) Ré(hg)rum(j) Cre(jk)á(j)tor,(ji) pó(h')sci(g)mus,(h.) (;) Ut(d) pro(h) tú(hih)a(g) cle(ge)mén(f)ti(e[ll:1]d)a,(d_e) (,) Sis(c) praé(e[ll:1]d)sul(g) et(ghg) cu(fe)stó(d')di(c)a.(d.) 
-<c><v>\footnotesize{2. }</v></c> (::) Pro(d)cul(d') re(f)cé(d)dant(c) só(f')mni(g)a,(h.) (,) Et(hg) nó(j)cti(jk)um(j) phan(ji)tás(h')ma(g)ta :(h.) (;) Ho(d)stém(h)que(hih) nó(g)strum(ge) cóm(f)pri(e[ll:1]d)me,(d_e) (,) Ne(c) pol(e[ll:1]d)lu(g)án(ghg)tur(fe) cór(d')po(c)ra.(d.) 
-<c><v>\footnotesize{3. }</v></c> (::) Praé(d)sta,(d') Pá(f)ter(d) pi(c)ís(f')si(g)me,(h.) (,) Pa(hg)trí(j)que(jk) cóm(j)par(ji) U(h')ni(g)ce,(h.) (;) Cum(d) Spí(h)ri(hih)tu(g) Pa(ge)rá(f)cli(e[ll:1]d)to,(d_e) (,) Ré(c)gnans(e[ll:1]d) per(g) ó(ghg)mne(fe) saé(d')cu(c)lum.(d.) (::) A(ded)men.(cd..) (::)}\linespace
-\subsubsekcja{In Festis B. Mariæ Virginis, ac infra eorum Octavas}
+(::) <c><v>\footnotesize{2. }</v></c> Pro(d)cul(d') re(f)cé(d)dant(c) só(f')mni(g)a,(h.) (,) Et(hg) nó(j)cti(jk)um(j) phan(ji)tás(h')ma(g)ta :(h.) (;) Ho(d)stém(h)que(hih) nó(g)strum(ge) cóm(f)pri(e[ll:1]d)me,(d_e) (,) Ne(c) pol(e[ll:1]d)lu(g)án(ghg)tur(fe) cór(d')po(c)ra.(d.) 
+(::) <c><v>\footnotesize{3. }</v></c> Praé(d)sta,(d') Pá(f)ter(d) pi(c)ís(f')si(g)me,(h.) (,) Pa(hg)trí(j)que(jk) cóm(j)par(ji) U(h')ni(g)ce,(h.) (;) Cum(d) Spí(h)ri(hih)tu(g) Pa(ge)rá(f)cli(e[ll:1]d)to,(d_e) (,) Ré(c)gnans(e[ll:1]d) per(g) ó(ghg)mne(fe) saé(d')cu(c)lum.(d.) (::) A(ded)men.(cd..) (::)}\linespace
+\subsubsekcja{In Festo Sacratissimi Cordis Jesu}
+\gresetinitiallines{1}\greannotation{3.}\gabcsnippet{(c4) TE(e[ll:1]d) lu(g)cis(hj) an(jji)te(hg) tér(hi)mi(hg)num,(g.) (,) Re(g)rum(ijk) Cre(j)á(ji)tor,(hg) pó(h)sci(gf)mus,(e[ll:1]d..) (;) Ut(dh) pro(h) tu(g)a(h!iwji) cle(hg)mén(hi)ti(hg)a,(g.) (,) Sis(h) prae(h')sul(g) et(fe) cu(d)stó(efg)di(fe)a.(e.) (::) 
+<c><v>\footnotesize{2. }</v></c> Pro(e[ll:1]d)cul(g) re(hj)cé(jji)dant(hg) só(hi)mni(hg)a,(g.) (,) Et(g) nó(ijk)cti(j)um(ji) phan(hg)tás(h)ma(gf)ta :(e[ll:1]d..) (;) Ho(dh)stém(h)que(g) no(h!iwji)strum(hg) cóm(hi)pri(hg)me,(g.) (,) Ne(h) pol(h')lu(g)án(fe)tur(d) cór(efg)po(fe)ra.(e.) (::) 
+<c><v>\footnotesize{3. }</v></c> Je(e[ll:1]d)su,(g) ti(hj)bi(jji) sit(hg) gló(hi)ri(hg)a,(g.) (,) Qui(g) Cor(ijk)de(j) fun(ji)dis(hg) grá(h)ti(gf)am,(e[ll:1]d..) (;) Cum(dh) Patr<e>e</e>(h) et(g) al(h!iwji)mo(hg) Spí(hi)ri(hg)tu,(g.) (,) In(h) sem(h')pi(g)tér(fe)na(d) saé(efg)cu(fe)la.(e.) (::) 
+A(efe)men.(de..) (::)}
+\vspace{-25pt}
+\tlumaczR{\red{3.}~Jezu, niech Tobie będzie chwała, który nam\\z serca łaski zlewasz, z Ojcem — z Ożywicielem,\\Duchem, i przez nieskończone wieki. Amen.}
+\subsubsekcja{In Transfiguratione}
+\gresetinitiallines{1}\greannotation{4.}\gabcsnippet{(c4) TE(f) lu(e!fwg'!hv)cis(g) an(fd)te(f) tér(e!fg)mi(f)num,(e.) (;) Re(g)rum(hj) Cre(h)á(gf)tor,(g) pó(g')sci(f)mus,(ed..) (:) Ut(cd) pro(d) tu(dc)a(d) cle(fe)mén(de)ti(e)a,(e.) (;) Sis(g) prae(gh)sul(g) et(fd) cu(f)stó(e!fg)di(f)a.(e.) 2.(::) Pro(f)cul(e!fwg'!hv) re(g)cé(fd)dant(f) só(e!fg)mni(f)a,(e.) (;) Et(g) nó(hj)cti(h)um(gf) phan(g)tá(g')sma(f)ta:(ed..) (:) Ho(cd)stém(d)que(dc) no(d)strum(fe) cóm(de)pri(e)me,(e.) (;) Ne(g) pol(gh)lu(g)án(fd)tur(f) cór(e!fg)po(f)ra.(e.) 3.(::) Je(f)su,(e!fwg'!hv) ti(g)bi(fd) sit(f) gló(e!fg)ri(f)a,(e.) (;) Qui(g) te(hj) re(h)vé(gf)las(g) pár(g')vu(f)lis,(ed..) (:) Cum(cd) Pa(d)tr<i>e</i>(d) et(dc) al(d)mo(fe) Spí(de)ri(e)tu,(e.) (;) In(g) sem(gh)pi(g)tér(fd)na(f) saé(e!fg)cu(f)la.(e.) (::) A(efe)men.(de..) (::)}
+\vspace{-25pt}
+\tlumaczR{\red{3.}~O Jezu, co się objawiasz maluczkim,\\niech Ci cześć będzie z Ożywicie-\\lem i~Ojcem w~nieskończone wieki. Amen.}
+\pagebreak
+\subsubsekcja{In Festo Christi Regis}
+\gresetinitiallines{1}\greannotation{1.}\gabcsnippet{(c4) TE(d) lu(d')cis(f) an(d)te(c) tér(f')mi(g)num,(h.) (,) Re(hg)rum(j) Cre(jk)á(j)tor,(ji) pó(h')sci(g)mus,(h.) (;) Ut(d) pro(h) tu(hih)a(g) cle(ge)mén(f)ti(e[ll:1]d)a,(d_e) (,) Sis(c) prae(e[ll:1]d)sul(g) et(ghg) cu(fe)stó(d')di(c)a.(d.) (::) 
+2. Pro(d)cul(d') re(f)cé(d)dant(c) só(f')mni(g)a,(h.) (,) Et(hg) nó(j)cti(jk)um(j) phan(ji)tás(h')ma(g)ta :(h.) (;) Ho(d)stém(h)que(hih) no(g)strum(ge) cóm(f)pri(e[ll:1]d)me,(d_e) (,) Ne(c) pol(e[ll:1]d)lu(g)án(ghg)tur(fe) cór(d')po(c)ra.(d.) (::) 
+3. Je(d)su,(d') ti(f)bi(d) sit(c) gló(f')ri(g)a(h.) (,) Qui(hg) sce(j)ptra(jk) mun(j)di(ji) tém(h')pe(g)ras,(h.) (;) Cum(d) Pa(h)tr{<e>e</e>},(h) et(hih) al(g)mo(ge) Spí(f)ri(e[ll:1]d)tu,(d_e) (,) In(c) sem(e[ll:1]d)pi(g)tér(ghg)na(fe) saé(d')cu(c)la.(d.) (::) 
+A(ded)men.(cd..) (::)}
+\vspace{-26pt}
+\tlumaczR{\red{3.}~Jezu, niech Tobie będzie chwała, który\\\tikz[overlay]\draw[red](-10,0)--++(15,0);berłami świata władasz, z Ojcem i Duchem Świętym,\\Boże, przez wszystkie wieki wieków. Amen.}
+\subsubsekcja{In Festis B. Mariae Virginis, ac infra eorum Octavas}
 \gresetinitiallines{1}\greannotation{2.}\gabcsnippet{(c4) TE(h) lú(h_g)cis(ed) an(g)te(hj) tér(ji)mi(h)num,(i.) (;) Ré(hk)rum(k) Cre(i)á(ji)tor,(h) pó(ih)sci(g)mus,(h.) (:) Ut(k) pro(k') tú(i)a(k) cle(klk)mén(ji)ti(hi)a,(ivHG.) (;) Sis(ji) praé(jk)sul(i) et(ji) cu(h)stó(ih)di(g)a.(h.)
-<c><v>\footnotesize{2. }</v></c> (::) Pro(h)cul(h_g) re(ed)cé(g)dant(hj) só(ji)mni(h)a,(i.) (;) Et(hk) nó(k)cti(i)um(ji) phan(h)tás(ih)ma(g)ta:(h.) (:) Ho(k)stém(k')que(i) nó(k)strum(klk) cóm(ji)pri(hi)me,(ivHG.) (;) Ne(ji) pol(jk)lu(i)án(ji)tur(h) cór(ih)po(g)ra.(h.)
-<c><v>\footnotesize{3. }</v></c> (::) Jé(h)su,(h_g) tí(ed)bi(g) sit(hj) gló(ji)ri(h)a,(i.) (;) Qui(hk) ná(k)tus(i) es(ji) de(h) Vír(ih)gi(g)ne,(h.) (:) Cum(k) Pá(k')tr<i>e</i>(i) et(i) ál(k)mo(klk) Spí(ji)ri(hi)tu,(ivHG.) (;) In(ji) sem(jk)pi(i)tér(ji)na(h) saé(ih)cu(g)la.(h.) (::) A(hih)men.(gh..) (::)}\linespace
-\tlumacz{3.~Jezusie bądź pochwalony, Z Przeczystej Panny zrodzony: Z Ojcem, i Duchem światłości, Na nieskończone wieczności. Amen.}
+(::) <c><v>\footnotesize{2. }</v></c> Pro(h)cul(h_g) re(ed)cé(g)dant(hj) só(ji)mni(h)a,(i.) (;) Et(hk) nó(k)cti(i)um(ji) phan(h)tás(ih)ma(g)ta:(h.) (:) Ho(k)stém(k')que(i) nó(k)strum(klk) cóm(ji)pri(hi)me,(ivHG.) (;) Ne(ji) pol(jk)lu(i)án(ji)tur(h) cór(ih)po(g)ra.(h.)
+(::) <c><v>\footnotesize{3. }</v></c> Jé(h)su,(h_g) tí(ed)bi(g) sit(hj) gló(ji)ri(h)a,(i.) (;) Qui(hk) ná(k)tus(i) es(ji) de(h) Vír(ih)gi(g)ne,(h.) (:) Cum(k) Pá(k')tr<i>e</i>(i) et(i) ál(k)mo(klk) Spí(ji)ri(hi)tu,(ivHG.) (;) In(ji) sem(jk)pi(i)tér(ji)na(h) saé(ih)cu(g)la.(h.) (::) A(hih)men.(gh..) (::)}
+\vspace{-25pt}
+\tlumaczR{\red{3.}~Jezusie bądź pochwalony, z Przeczystej Panny zrodzony:\\z Ojcem, i Duchem światłości, na nieskończone wieczności. Amen.}
 \pagebreak
 \grechangedim{spacelinestext}{16pt}{scalable} % odstęp między linią a dołem tekstu
 \vspace{-12pt}
@@ -254,29 +286,26 @@
 \vspace{-33pt}
 \gresetinitiallines{1}\grecommentary{Jer. 14,9~~}\gabcsnippet{(c3)Tu([alt:Hebdomadarius]h) au(h)tem(h) in(h) nó(h)bis(h) es(h), Dó(h)mi(f)ne,(f.) <c><v>†</v></c> (,) et(h) nó(h)men(h) sán(h)ctum(h) tú(h)um(h) in(h)vo(h)cá(h)tum(f) est(e) su(h)per(h) nos:(h.) <c><v>*</v></c> (;) ne(h) de(h)re(h)lín(h)quas(h) nos(h), Dó(h)mi(h)ne(h), De(h)us(h) nó(f)ster.(e.f.) (::z) <c><sp>R/</sp>.</c> Dé(h)o(h) grá(f)ti(e)as.(e.f.) (::)}\linespace
 \vspace{-24pt}
-\tlumaczR{Tyś jest między nami, Panie, a imienia twego wzywano nad nami: nie \\}
-\tlumaczR{opuszczajże nas, Panie, nasz Boże. \red{\Rbar.}~Bogu niech będą dzięki.}
+\tlumaczR{Tyś jest między nami, Panie, a imienia twego wzywano nad nami:\\nie opuszczajże nas, Panie, nasz Boże. \red{\Rbar.}~Bogu niech będą dzięki.}
 \sekcja{Responsorium breve}{}
 \vspace{-32pt}
 \subsubsekcja{Per Annum}
-\gresetinitiallines{1}\greannotation{6.}\gabcsnippet{(c4) IN([alt:Lector]f) má(f)nus(f) tú(fg)as(g) Dó(gf)mi(g)ne,(gh..) <c><v>*</v></c>(;)  Com(h')mén(f)do(gh) spí(g)ri(fd)tum(fg) mé(g.)um.(f.) (::) In(f) má(f)nus.(f) (::) <c><sp>V/</sp>.</c> Red(h)e(h)mí(ixhi)sti(h) nos(h) Dó(gh)mi(g)ne,(g'_[oh:h]) (,) Dé(h)us(g') ve(g)ri(gf)tá(g)tis.(gh..) (::) <c><v>*</v></c> Com(h')mén(f)do.(gh) (::) <c><sp>V/</sp>.</c> Gló(h)ri(h)a(h) Pá(ixhi)tri,(h'_) (,) et(h) Fí(gh)li(g)o,(g'_[oh:h]) (,) et(g) Spi(g)rí(h')tu(g)i(f') Sán(g)cto.(gh..) (::) In(f) má(f)nus.(f) (::) (f+)}\linespace
-\tlumaczR{\red{\Rbar.}~W ręce Twoje, Panie, Powierzam ducha mojego. \red{\Rbar.}~W ręce... \red{\Vbar.}~Ty nas odkupiłeś, Panie, Boże \newline}
-\tlumaczR{wierny. \red{\Rbar.}~Powierzam ducha mojego.  \red{\Vbar.}~Chwała Ojcu i Synowi, i Duchowi Świętemu.  \red{\Rbar.}~W ręce... }\linespace
+\gresetinitiallines{1}\greannotation{6.}\gabcsnippet{(c4) IN([alt:Lector]f) má(f)nus(f) tú(fg)as(g) Dó(gf)mi(g)ne,(gh..) <c><v>*</v></c>(;) Com(h')mén(f)do(gh) spí(g)ri(fd)tum(fg) mé(g.)um.(f.) (::) In(f) má(f)nus.(f) (::) <c><sp>V/</sp>.</c> Red(h)e(h)mí(ixhi)sti(h) nos(h) Dó(gh)mi(g)ne,(g'_[oh:h]) (,) Dé(h)us(g') ve(g)ri(gf)tá(g)tis.(gh..) (::) <c><v>*</v></c> Com(h')mén(f)do.(gh) (::) <c><sp>V/</sp>.</c> Gló(h)ri(h)a(h) Pá(ixhi)tri,(h'_) (,) et(h) Fí(gh)li(g)o,(g'_[oh:h]) (,) et(g) Spi(g)rí(h')tu(g)i(f') Sán(g)cto.(gh..) (::) In(f) má(f)nus.(f) (::) (f+)}\linespace
+\tlumaczR{\red{\Rbar.}~W ręce Twoje, Panie, powierzam ducha mojego. \red{\Rbar.}~W ręce... \red{\Vbar.}~Ty nas odkupiłeś, Panie, Boże\\wierny. \red{\Rbar.}~Powierzam ducha mojego. \red{\Vbar.}~Chwała Ojcu i Synowi, i Duchowi Świętemu. \red{\Rbar.}~W ręce...}\linespace
 \subsubsekcja{In Adventu}
 \gresetinitiallines{1}\greannotation{4.}\gabcsnippet{(f3) IN(h) má(h)nus(h) tú(h)as(hf) Dó(g')mi(h)ne,(i.) <c><v>*</v></c> (;) Com(i)mén(g')do(h) spí(fe)ri(f')tum(h) mé(h)um.(g.) (::) In(h) má(h)nus.(h) (::) <c><sp>V/</sp>.</c> Red(e)e(fh)mí(h)sti(h) nos(h) Dó(gh)mi(h)ne,(h'_) (,) Dé(h)us(h) ve(h)ri(hf)tá(gh)tis.(i.) <c><v>*</v></c>(::) Com(i)mén(g')do.(h) (::) <c><sp>V/</sp>.</c> Gló(i)ri(i)a(i) Pá(ij)tri,(j'_) (,) et(j) Fí(i)li(j)o,(g'_[oh:h]) (,) et(h) Spi(h)rí(h)tu(h)i(hf) Sán(gh)cto.(i.) (::) In(h) má(h)nus(h) (::) (h+)}\linespace
 \subsubsekcja{Tempore Paschali}
 \gresetinitiallines{1}\greannotation{6.}\gabcsnippet{(c4) IN(f) má(f)nus(f) tú(f)as(f) Dó(g)mi(f)ne,(f'_) (,) Com(f)mén(f)do(f) spí(f)ri(f)tum(e') mé(g)um.(h.) <c><v>*</v></c> (;) Al(h)le(h_g)lú(g)ia,(f'_z) al(d)le(f_g)lú(gf~)ia.(f.) (::)In(f) má(f)nus.(f) <c><sp>V/</sp>.</c> (::)Re(f)de(f)mí(f)sti(f) nos(f) Dó(g)mi(f)ne,(f'_) (,) Dé(f)us(f) ve(f)ri(e')tá(g)tis.(h.) <c><v>*</v></c> (::) Al(h)le(h_g)lú(g)ia,(f'_) al(d)le(f_g)lú(gf~)ia.(f.) <c><sp>V/</sp>.</c> (::) Gló(f)ri(f)a(e') Pá(g)tri,(h'_) (,) et(h) Fí(ixhi)li(h)o,(h'_) (,) et(h) Spi(h)rí(h')tu(g)i(h') Sán(g)cto.(gf..) (::) In(f) má(f)nus.(f) (::)}\linespace
-\tlumaczR{\red{\Rbar.}~W ręce Twoje, Panie, Powierzam ducha mojego. Alleluja, alleluja. \red{\Rbar.}~W ręce... \red{\Vbar.}~Ty nas odkupiłeś,\newline}
-\tlumaczR{Panie, Boże wierny. \red{\Rbar.}~Alleluja, alleluja. \red{\Vbar.}~Chwała Ojcu i Synowi, i Duchowi Świętemu.  \red{\Rbar.}~W ręce... }\segmentspace
+\tlumaczR{\red{\Rbar.}~W ręce Twoje, Panie, powierzam ducha mojego. Alleluja, alleluja. \red{\Rbar.}~W ręce... \red{\Vbar.}~Ty nas odkupiłeś,\\Panie, Boże wierny. \red{\Rbar.}~Alleluja, alleluja. \red{\Vbar.}~Chwała Ojcu i Synowi, i Duchowi Świętemu. \red{\Rbar.}~W ręce...}\segmentspace
 \sekcja{Versus}{}
 \vspace{-26pt}
 \subsubsekcja{Per Annum}
 \gresetinitiallines{0}\greannotation{6.}\gabcsnippet{(c4) <c><sp>V/</sp>.</c> Cu(h)stó(h)di(h) nos(h) Dó(h)mi(h)ne(h) ut(h) pu(h)píl(h)lam(h) ó(h)cu(h)li.(g'_//hvGF'E/fgf.) (::)}
-\hspace{2pt}\red{\Rbar.}~Sub umbra~ alárum tuárum~ prótege nos.\linespace
+\hspace{2pt}\red{\Rbar.}~Sub úmbra~ alárum tuárum~ prótege nos.\linespace
 \tlumaczR{\red{\Vbar.}~Strzeż nas Panie, jak źrenicy oka. \red{\Rbar.}~Pod cieniem Twych skrzydeł obroń nas.}\linespace
 \subsubsekcja{Tempore Paschali}
 \gresetinitiallines{0}\greannotation{6.}\gabcsnippet{(c4) <c><sp>V/</sp>.</c> Cu(f)stó(f)di(f) nos(f) Dó(f)mi(f)ne(f) ut(f) pu(f)píl(f)lam(f) ó(f)cu(f)li,(f'_) (,) al(f)le(f)lú(f)ia.(e'_//fvED'Cded.) (::)}
-\hspace{2pt}\red{\Rbar.}~Sub umbra~ alárum tuárum~ prótege nos, ~allelúia.\linespace
+\hspace{2pt}\red{\Rbar.}~Sub úmbra~ alárum tuárum~ prótege nos, ~allelúia.\linespace
 \tlumaczR{\red{\Vbar.}~Strzeż nas Panie, jak źrenicy oka, alleluja. \red{\Rbar.}~Pod cieniem Twych skrzydeł obroń nas, alleluja.}%
 \vfill
 \dekor{0.4}{justus.jpg}
@@ -286,175 +315,174 @@
 \gresetinitiallines{1}\greannotation{Ant.}\greannotation{3. a}\gabcsnippet{(c4) SAl(g)va(hj) nos,(j.) (::)}
 \vspace{-14pt}
 \tlumaczR{Strzeż nas.}\sectionspace
-\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Nunc(g[alt:Hebdomadarius]) di(hj)mít(j)tis(j) <c><v>\grecross</v></c> ser(j)vum(j) <b>tu</b>(k)um,(j) <b>Dó</b>(j)<b>mi</b>(ih)ne,(j.) <c><v>*</v></c> (:) se(j[alt:Chorus])cún(j)dum(j) ver(j)bum(j) tu(j)um(j) <i><ul>in</i></ul>(h) <b>pa</b>(j)ce:(ih..) (::)<c><v>\footnotesize{2. }</v></c>Qui(g)a(hj) vi(j)dé(j)runt(j) <b>ó</b>(k)cu(j)li(j) <b>me</b>(ih)i(j.) <c><v>*</v></c> (:) sa(j)lu(j)tá(j)<i><ul>re</i></ul>(h) <b>tu</b>(j)um,(ih..) (::)<c><v>\footnotesize{3. }</v></c><b>Quod</b>(k) pa(j)<b>rás</b>(ih)ti(j.) <c><v>*</v></c> (:) an(j)te(j) fá(j)ci(j)em(j) óm(j)ni(j)um(j) po(j)<i><ul>pu</i></ul>(h)<b>ló</b>(j)rum,(ih..) (::)<c><v>\footnotesize{4. }</v></c>Lu(g)men(hj) ad(j) re(j)ve(j)la(j)ti(j)<b>ó</b>(k)nem(j) <b>Gén</b>(j)<b>ti</b>(ih)um,(j.) <c><v>*</v></c> (:) et(j) gló(j)ri(j)am(j) ple(j)bis(j) tu(j)<i><ul>æ</i></ul>(h) <b>Is</b>(j)ra(j)ël.(ih..) (::)<c><v>\footnotesize{5. }</v></c>Gló(g)ri(hj)a(j) <b>Pa</b>(k)tri,(j) et(j) <b>Fí</b>(j)<b>li</b>(ih)o,(j.) <c><v>*</v></c> (:) et(j) Spi(j)rí(j)tu(j)<i><ul>i</i></ul>(h) <b>Sanc</b>(j)to.(ih..) (::)<c><v>\footnotesize{6. }</v></c>Sic(g)ut(hj) e(j)rat(j) in(j) prin(j)cí(j)pi(j)o,(j) et(j) <b>nunc</b>,(k) et(j) <b>sem</b>(ih)per,(j.) <c><v>*</v></c> (:) et(j) in(j) sǽ(j)cu(j)la(j) sæ(j)cu(j)ló(j)<i><ul>rum</i></ul>.(h) <b>A</b>(j)men.(ih..) (::)}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1. }</v></c>Nunc(g[alt:Hebdomadarius]) di(hj)mít(j)tis(j) <c><v>\grecross</v></c> sér(j)vum(j) <b>tú</b>(k)um,(j) <b>Dó</b>(j)<b>mi</b>(ih)ne,(j.) <c><v>*</v></c> (:) se(j[alt:Chorus])cún(j)dum(j) vér(j)bum(j) tú(j)um(j) <i><ul>in</i></ul>(h) <b>pá</b>(j)ce:(ih..) (::)<c><v>\footnotesize{2. }</v></c>Qui(g)a(hj) vi(j)dé(j)runt(j) <b>ó</b>(k)cu(j)li(j) <b>mé</b>(ih)i(j.) <c><v>*</v></c> (:) sa(j)lu(j)tá(j)<i><ul>re</i></ul>(h) <b>tú</b>(j)um,(ih..) (::)<c><v>\footnotesize{3. }</v></c><b>Quód</b>(k) pa(j)<b>rás</b>(ih)ti(j.) <c><v>*</v></c> (:) an(j)te(j) fá(j)ci(j)em(j) óm(j)ni(j)um(j) po(j)<i><ul>pu</i></ul>(h)<b>ló</b>(j)rum,(ih..) (::)<c><v>\footnotesize{4. }</v></c>Lú(g)men(hj) ad(j) re(j)ve(j)la(j)ti(j)<b>ó</b>(k)nem(j) <b>gén</b>(j)<b>ti</b>(ih)um,(j.) <c><v>*</v></c> (:) et(j) gló(j)ri(j)am(j) plé(j)bis(j) tú(j)<i><ul>ae</i></ul>(h) <b>Is</b>(j)ra(j)ël.(ih..) (::)<c><v>\footnotesize{5. }</v></c>Gló(g)ri(hj)a(j) <b>Pá</b>(k)tri,(j) et(j) <b>Fí</b>(j)<b>li</b>(ih)o,(j.) <c><v>*</v></c> (:) et(j) Spi(j)rí(j)tu(j)<i><ul>i</i></ul>(h) <b>Sánc</b>(j)to.(ih..) (::)<c><v>\footnotesize{6. }</v></c>Sic(g)ut(hj) é(j)rat(j) in(j) prin(j)cí(j)pi(j)o,(j) et(j) <b>núnc</b>,(k) et(j) <b>sém</b>(ih)per,(j.) <c><v>*</v></c> (:) et(j) in(j) saé(j)cu(j)la(j) sae(j)cu(j)ló(j)<i><ul>rum</i></ul>.(h) <b>A</b>(j)men.(ih..) (::)}
 \linespace
-\tlumaczR{1.~Teraz puszczasz \red{\grecross}~sługę twego, Panie,~\red{*} w pokoju według słowa twego: 2.~Gdyż oczy moje oglądały~\red{*} zbawienie twoje, 3.~Któreś zgotował~\red{*} przed oblicznością wszystkich narodów: 4.~Światłość na objawienie poganów,~\red{*} i chwałę ludu twego Izraelskiego. \red{\Vbar.}~Chwała Ojcu i Synowi,~\red{*} i Duchowi Świętemu. \red{\Rbar.}~Jak była na początku, teraz i zawsze,~\red{*} i na wieki wieków. Amen.}\sectionspace
-\gresetinitiallines{1}\greannotation{Ant.}\greannotation{3. a}\gabcsnippet{(c4) SAl(g)va(hj) nos,(j.) <c><v>*</v></c>() Dó(jk)mi(j)ne,(ji) vi(h)gi(i')lán(h)tes,(g.) (;) cu(g)stó(i')di(j) nos(k') dor(j)mi(h')én(j)tes :(i.) (;) ut(i) vi(g')gi(i)lé(k')mus(j) cum(h') Chri(j)sto,(i_[uh:l]j) (,) et(h) re(h)qui(h)e(h)scá(gf)mus(gh) in(gf) pa(e.)ce.(e.) (::) <c><i><v>\footnotesize{T. P.}</v></c></i> Al(g)le(gf)lú(e.){ia}.(e.) (::)}\linespace
+\tlumaczR{\red{1.}~Teraz puszczasz \red{\grecross} sługę twego, Panie,~\red{*} w~pokoju według słowa twego: \red{2.}~Gdyż oczy moje oglądały~\red{*} zbawienie twoje, \red{3.}~Któreś zgotował~\red{*} przed oblicznością wszystkich narodów: \red{4.}~Światłość na objawienie poganów,~\red{*} i~chwałę ludu twego Izraelskiego. \red{\Vbar.}~Chwała Ojcu i Synowi,~\red{*} i~Duchowi Świętemu. \red{\Rbar.}~Jak była na początku, teraz i zawsze,~\red{*} i~na wieki wieków. Amen.}\sectionspace
+\gresetinitiallines{1}\greannotation{Ant.}\greannotation{3. a}\gabcsnippet{(c4) SAl(g)va(hj) nos,(j.) <c><v>*</v></c>() Dó(jk)mi(j)ne,(ji) vi(h)gi(i')lán(h)tes,(g.) (;) cu(g)stó(i')di(j) nos(k') dor(j)mi(h')én(j)tes :(i.) (;) ut(i) vi(g')gi(i)lé(k')mus(j) cum(h') Chrí(j)sto,(i_[uh:l]j) (,) et(h) re(h)qui(h)e(h)scá(gf)mus(gh) in(gf) pá(e.)ce.(e.) (::) <c><i><v>\footnotesize{T. P.}</v></c></i> Al(g)le(gf)lú(e.){ia}.(e.) (::)}\linespace
 \tlumaczR{Strzeż nas, Panie, gdy czuwamy, podczas snu nas osłaniaj; abyśmy czuwali z Chrystusem i odpoczywali w pokoju.}
 \pagebreak
 \columnratio{0.5}
 \setlength{\columnseprule}{0.4pt}
 \setlength{\columnsep}{.02\textwidth}
 \sekcja{Preces Dominicales}{Precesy odmawia się na klęcząco we wszystkie niedziele rytu pół-zdwojonego. Pomija się je natomiast, gdy wypada komemoracja święta zdwojonego lub występuje oktawa podczas nieszporów.}
-\gresetinitiallines{1}\gabcsnippet{(c3)Ký([alt:Hebdomadarius]h)ri(h)e,(h) e(h)lé(h)i(h)son.(h.) (::) Chris(h)te,(h) e(h)lé(h)i(h)son.(h.) (,) Ký(h)ri(h)e,(h) e(f)lé(g)i(h)son.(h.) (::) Pa(h)ter(h) nos(h)ter.(f.)  <c><i><v>\footnotesize{(secreto)}</v></c></i> (::) Et(h) ne(h) nos(h) in(h)dú(h)cas(h) in(h) ten(h)ta(h)ti(h)ó(h)nem.(f.) (::) <c><sp>R/</sp>.</c> Sed(h) li(h)be(h)ra(h) nos(h) a(h) ma(h)lo.(f.) (::)}\linespace
+\gresetinitiallines{1}\gabcsnippet{(c3)Ký([alt:Hebdomadarius]h)ri(h)e,(h) e(h)lé(h)i(h)son.(h.) (::) Chrís(h)te,(h) e(h)lé(h)i(h)son.(h.) (,) Ký(h)ri(h)e,(h) e(f)lé(g)i(h)son.(h.) (::) Pá(h)ter(h) nós(h)ter.(f.) <c><i><v>\footnotesize{(secreto)}</v></c></i> (::) Et(h) ne(h) nos(h) in(h)dú(h)cas(h) in(h) ten(h)ta(h)ti(h)ó(h)nem.(f.) (::) <c><sp>R/</sp>.</c> Sed(h) lí(h)be(h)ra(h) nos(h) a(h) má(h)lo.(f.) (::)}\linespace
 \BeginParallel
-%\latN{\inicjal{P}{ater} noster, \red{(secreto)}  qui es in cælis, sanctificétur nomen tuum: advéniat regnum tuum: fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie: et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris:}\pol{\inicjal{O}{jcze} nasz, \red{(po cichu)} któryś jest w niebie, święć się imię Twoje: przyjdź królestwo Twoje: bądź wola Twoja, jako w niebie tak i na ziemi. Chleba naszego powszedniego daj nam dzisiaj: i odpuść nam nasze winy, jako i my odpuszczamy naszym winowajcom:}%
+%\latN{\inicjal{P}{ater} noster, \red{(secreto)} qui es in caelis, sanctificétur nomen tuum: advéniat regnum tuum: fiat volúntas tua, sicut in caelo et in terra. Panem nóstrum quotidiánum da nobis hódie: et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris:}\pol{\inicjal{O}{jcze} nasz, \red{(po cichu)} któryś jest w niebie, święć się imię Twoje: przyjdź królestwo Twoje: bądź wola Twoja, jako w niebie tak i na ziemi. Chleba naszego powszedniego daj nam dzisiaj: i odpuść nam nasze winy, jako i my odpuszczamy naszym winowajcom:}%
 %\latN{\red{\Vbar.}~Et ne nos indúcas in tentatiónem:}\pol{\red{\Vbar.}~I nie wódź nas na pokuszenie:}%
 %\latN{\red{\Rbar.}~Sed líbera nos a malo.}\pol{\red{\Rbar.}~Ale nas zbaw ode złego.}%
-\latN{\inicjal{C}{redo} in Deum, \red{(secreto)} Patrem omnipoténtem, Creatórem cæli et terræ. Et in Jesum Christum, Fílium ejus únicum, Dóminum nostrum: qui concéptus est de Spíritu Sancto, natus ex María Vírgine, passus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus: descéndit ad ínferos; tértia die resurréxit a mórtuis; ascéndit ad cælos; sedet ad déxteram Dei Patris omnipoténtis: inde ventúrus est judicáre vivos et mórtuos. Credo in Spíritum Sanctum, sanctam Ecclésiam cathólicam, Sanctórum communiónem, remissiónem peccatórum,}\pol{\inicjal{W}{ierzę} w Boga, \red{(po cichu)} Ojca wszechmogącego, Stworzyciela nieba i ziemi. I w Jezusa Chrystusa, Syna Jego jedynego, Pana naszego: który się począł z Ducha Świętego, narodził się z Maryi Panny, umęczon pod Ponckim Piłatem, ukrzyżowan, umarł, i pogrzebion: zstąpił do piekieł: trzeciego dnia zmartwychwstał; wstąpił na niebiosa; siedzi po prawicy Boga Ojca wszechmogącego: stamtąd przyjdzie sądzić żywych i umarłych. Wierzę w Ducha Świętego, święty Kościół powszechny, świętych obcowanie, grzechów odpuszczenie,}%
-\latN{\red{\Vbar.}~Carnis resurrectiónem.}\pol{\red{\Vbar.}~Ciała zmartwychwstanie.}%
-\latN{\red{\Rbar.}~Vitam ætérnam. Amen.}\pol{\red{\Rbar.}~Żywot wieczny. Amen.}%
-\latN{\red{\Vbar.}~Benedíctus es, Dómine, Deus patrum nostrórum.}\pol{\red{\Vbar.}~Błogosławiony jesteś, Panie, Boże ojców naszych.}%
-\latN{\red{\Rbar.}~Et laudábilis et gloriósus in sǽcula.}\pol{\red{\Rbar.}~I chwalebny i sławny na wieki.}%
-\latN{\red{\Vbar.}~Benedicámus Patrem et Fílium cum Sancto Spíritu.}\pol{\red{\Vbar.}~Błogosławmy Ojca i Syna z Duchem Świętym.}%
-\latN{\red{\Rbar.}~Laudémus, et superexaltémus eum in sǽcula.}\pol{\red{\Rbar.}~Chwalmy, i wywyższajmy Go na wieki.}%
-\latN{\red{\Vbar.}~Benedíctus es, Dómine, in firmaménto cæli.}\pol{\red{\Vbar.}~Błogosławiany jesteś, Panie, na sklepieniu nieba.}%
-\latN{\red{\Rbar.}~Et laudábilis, et gloriósus, et superexaltátus in sǽcula.}\pol{\red{\Rbar.}~I chwalebny, i sławny, i przenajwyższy na wieki.}%
+\latN{\inicjal{C}{rédo} in Déum, \red{(secreto)} Pátrem omnipoténtem, Creatórem caéli et térrae. Et in Jésum Chrístum, Fílium éjus únicum, Dóminum nóstrum: qúi concéptus est de Spíritu Sáncto, nátus ex María Vírgine, pássus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus: descéndit ad ínferos; tértia díe resurréxit a mórtuis; ascéndit ad caélos; sédet ad déxteram Déi Pátris omnipoténtis: índe ventúrus est judicáre vívos et mórtuos. Crédo in Spíritum Sánctum, sánctam Ecclésiam cathólicam, Sanctórum communiónem, remissiónem peccatórum,}\pol{\inicjal{W}{ierzę} w Boga, \red{(po cichu)} Ojca wszechmogącego, Stworzyciela nieba i ziemi. I w Jezusa Chrystusa, Syna Jego jedynego, Pana naszego: który się począł z Ducha Świętego, narodził się z Maryi Panny, umęczon pod Ponckim Piłatem, ukrzyżowan, umarł, i pogrzebion: zstąpił do piekieł: trzeciego dnia zmartwychwstał; wstąpił na niebiosa; siedzi po prawicy Boga Ojca wszechmogącego: stamtąd przyjdzie sądzić żywych i umarłych. Wierzę w Ducha Świętego, święty Kościół powszechny, świętych obcowanie, grzechów odpuszczenie,}%
+\latN{\red{\Vbar.}~Cárnis resurrectiónem.}\pol{\red{\Vbar.}~Ciała zmartwychwstanie.}%
+\latN{\red{\Rbar.}~Vítam aetérnam. Amen.}\pol{\red{\Rbar.}~Żywot wieczny. Amen.}%
+\latN{\red{\Vbar.}~Benedíctus es, Dómine, Déus pátrum nostrórum.}\pol{\red{\Vbar.}~Błogosławiony jesteś, Panie, Boże ojców naszych.}%
+\latN{\red{\Rbar.}~Et laudábilis et gloriósus in saécula.}\pol{\red{\Rbar.}~I chwalebny i sławny na wieki.}%
+\latN{\red{\Vbar.}~Benedicámus Pátrem et Fílium cum Sáncto Spíritu.}\pol{\red{\Vbar.}~Błogosławmy Ojca i Syna z Duchem Świętym.}%
+\latN{\red{\Rbar.}~Laudémus, et superexaltémus éum in saécula.}\pol{\red{\Rbar.}~Chwalmy, i wywyższajmy Go na wieki.}%
+\latN{\red{\Vbar.}~Benedíctus es, Dómine, in firmaménto caéli.}\pol{\red{\Vbar.}~Błogosławiany jesteś, Panie, na sklepieniu nieba.}%
+\latN{\red{\Rbar.}~Et laudábilis, et gloriósus, et superexaltátus in saécula.}\pol{\red{\Rbar.}~I chwalebny, i sławny, i przenajwyższy na wieki.}%
 \latN{\red{\Vbar.}~Benedícat et custódiat nos omnípotens et miséricors Dóminus.}\pol{\red{\Vbar.}~Niech nas błogosławi i strzeże wszechmogący i miłosierny Pan.}%
 \latN{\red{\Rbar.}~Amen.}\pol{\red{\Rbar.}~Amen.}%
-\latN{\red{\Vbar.}~Dignáre, Dómine, nocte ista.}\pol{\red{\Vbar.}~Racz Panie, tej nocy.}%
+\latN{\red{\Vbar.}~Dignáre, Dómine, nócte ista.}\pol{\red{\Vbar.}~Racz Panie, tej nocy.}%
 \latN{\red{\Rbar.}~Sine peccáto nos custodíre.}\pol{\red{\Rbar.}~Od grzechu nas zachować.}%
-\latN{\red{\Vbar.}~Miserére nostri, Dómine.}\pol{\red{\Vbar.}~Zmiłuj się nad nami, Panie.}%
-\latN{\red{\Rbar.}~Miserére nostri.}\pol{\red{\Rbar.}~Zmiłuj się nad nami.}%
-\latN{\red{\Vbar.}~Fiat misericórdia tua, Dómine, super nos.}\pol{\red{\Vbar.}~Niech miłosierdzie twoje trwa nad nami, Panie.}%
+\latN{\red{\Vbar.}~Miserére nóstri, Dómine.}\pol{\red{\Vbar.}~Zmiłuj się nad nami, Panie.}%
+\latN{\red{\Rbar.}~Miserére nóstri.}\pol{\red{\Rbar.}~Zmiłuj się nad nami.}%
+\latN{\red{\Vbar.}~Fíat misericórdia túa, Dómine, súper nos.}\pol{\red{\Vbar.}~Niech miłosierdzie twoje trwa nad nami, Panie.}%
 \latN{\red{\Rbar.}~Quemádmodum sperávimus in te.}\pol{\red{\Rbar.}~Bo w Tobie pokładamy nadzieję.}%
 \EndParallel
-%\vspace{-4pt}
 \sekcja{Oratio}{}
 \vspace{-32pt}
 \BeginParallel
 \latN{\red{\Vbar.}~Dómine, exáudi oratiónem meam.}\pol{\red{\Vbar.}~Panie, wysłuchaj modlitwy mojej.}%
-\latN{\red{\Rbar.}~Et clamor meus ad te véniat.}\pol{\red{\Rbar.}~A wołanie moje niech do Ciebie przyjdzie.}%
+\latN{\red{\Rbar.}~Et clámor méus ad te véniat.}\pol{\red{\Rbar.}~A wołanie moje niech do Ciebie przyjdzie.}%
 \EndParallel
-%\gresetinitiallines{0}\gabcsnippet{(c3) O([alt:Hebdomadarius]h)re(h)mus.(f.) (::) Ví(h)si(h)ta,(h) quǽ(h)su(h)mus,(h) Dó(h)mi(h)ne,(h) ha(h)bi(h)ta(h)ti(h)ó(h)nem(h) is(h)tam,(h) et(h) om(h)nes(h) in(h)sí(h)di(h)as(h) in(h)i(h)mí(h)ci(h) ab(h) e(h)a(h) lon(h)ge(h) re(h)pél(h)le:(f.) <c><v>†</v></c> (;) Án(h)ge(h)li(h) tu(h)i(h) sanc(h)ti(h) há(h)bi(h)tent(h) in(h) e(h)a,(h) qui(h) nos(h) in(h) pa(h)ce(g) cus(f)tó(h)di(h)ant;(h.) <c><v>*</v></c> (;) et(h) be(h)ne(h)díc(h)ti(h)o(h) tu(h)a(h) sit(h) su(h)per(h) nos(h) sem(h)per.(f.) (:) Per(h) Dó(h)mi(h)num(h) nos(h)trum(h) Je(h)sum(h) Chris(h)tum,(h) Fí(h)li(h)um(h) tu(h)um:(f.) <c><v>†</v></c> (;) qui(h) te(h)cum(h) vi(h)vit(h) et(h) re(h)gnat(h) in(h) u(h)ni(h)tá(h)te(h) Spí(h)ri(h)tus(h) Sanc(g)ti,(f) De(h)us,(h.) <c><v>*</v></c> (;) per(h) óm(h)ni(h)a(h) sǽ(h)cu(h)la(h) sæ(h)cu(h)ló(h)rum.(f.) (::) <c><sp>R/</sp>.</c>  A(g)men.(h.) (::)}\linespace
+%\gresetinitiallines{0}\gabcsnippet{(c3) O([alt:Hebdomadarius]h)re(h)mus.(f.) (::) Ví(h)si(h)ta,(h) quaé(h)su(h)mus,(h) Dó(h)mi(h)ne,(h) ha(h)bi(h)ta(h)ti(h)ó(h)nem(h) is(h)tam,(h) et(h) om(h)nes(h) in(h)sí(h)di(h)as(h) in(h)i(h)mí(h)ci(h) ab(h) e(h)a(h) lon(h)ge(h) re(h)pél(h)le:(f.) <c><v>†</v></c> (;) Án(h)ge(h)li(h) tu(h)i(h) sanc(h)ti(h) há(h)bi(h)tent(h) in(h) e(h)a,(h) qui(h) nos(h) in(h) pa(h)ce(g) cus(f)tó(h)di(h)ant;(h.) <c><v>*</v></c> (;) et(h) be(h)ne(h)díc(h)ti(h)o(h) tu(h)a(h) sit(h) su(h)per(h) nos(h) sem(h)per.(f.) (:) Per(h) Dó(h)mi(h)num(h) nos(h)trum(h) Je(h)sum(h) Chris(h)tum,(h) Fí(h)li(h)um(h) tu(h)um:(f.) <c><v>†</v></c> (;) qui(h) te(h)cum(h) vi(h)vit(h) et(h) re(h)gnat(h) in(h) u(h)ni(h)tá(h)te(h) Spí(h)ri(h)tus(h) Sanc(g)ti,(f) De(h)us,(h.) <c><v>*</v></c> (;) per(h) óm(h)ni(h)a(h) saé(h)cu(h)la(h) sae(h)cu(h)ló(h)rum.(f.) (::) <c><sp>R/</sp>.</c> A(g)men.(h.) (::)}\linespace
 \BeginParallel
 \latN{\inicjal{O}{rémus.}}\pol{\inicjal{M}{ódlmy} się. }
-\latN{\inicjal{V}{ísita}, quǽsumus, Dómine, habitatiónem istam, et omnes insídias inimíci ab ea longe repélle:~\red{†} Ángeli tui sancti hábitent in ea, qui nos in pace custódiant;~\red{*} et benedíctio tua sit super nos semper. Per Dóminum nostrum Jesum Christum, Fílium tuum:~\red{†} qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus,~\red{*} per ómnia sǽcula sæculórum. \red{\Rbar.}~Amen.}\pol{\inicjal{N}{awiedź}, prosimy Cię, Panie, ten dom, i oddal od niego wszelkie wrogie zasadzki:~\red{†} niech mieszkają w nim Twoi święci Aniołowie i strzegą nas w pokoju;~\red{*} a błogosławieństwo Twoje niech zawsze będzie z nami. Przez naszego Pana Jezusa Chrystusa, Twojego Syna:~\red{†} który z Tobą żyje i króluje w jedności Ducha Świętego Bóg,~\red{*} przez wszystkie wieki wieków. \red{\Rbar.}~Amen.}
+\latN{\inicjal{V}{ísita}, quaésumus, Dómine, habitatiónem ístam, et ómnes insídias inimíci ab ea lónge repélle:~\red{†} Ángeli túi sáncti hábitent in ea, qui nos in páce custódiant;~\red{*} et benedíctio túa sit súper nos sémper. Per Dóminum nóstrum Jésum Chrístum, Fílium túum:~\red{†} qui técum vívit et régnat in unitáte Spíritus Sáncti, Déus,~\red{*} per ómnia saécula saéculórum. \red{\Rbar.}~Amen.}\pol{\inicjal{N}{awiedź}, prosimy Cię, Panie, ten dom, i oddal od niego wszelkie wrogie zasadzki:~\red{†} niech mieszkają w nim Twoi święci Aniołowie i strzegą nas w pokoju;~\red{*} a błogosławieństwo Twoje niech zawsze będzie z nami. Przez naszego Pana Jezusa Chrystusa, Twojego Syna:~\red{†} który z Tobą żyje i króluje w jedności Ducha Świętego Bóg,~\red{*} przez wszystkie wieki wieków. \red{\Rbar.}~Amen.}
 \EndParallel
 \linespace
 \BeginParallel
 \latN{\red{\Vbar.}~Dómine, exáudi oratiónem meam.}\pol{\red{\Vbar.}~Panie, wysłuchaj modlitwy mojej.}%
-\latN{\red{\Rbar.}~Et clamor meus ad te véniat.}\pol{\red{\Rbar.}~A wołanie moje niech do Ciebie przyjdzie.}%
+\latN{\red{\Rbar.}~Et clámor méus ad te véniat.}\pol{\red{\Rbar.}~A wołanie moje niech do Ciebie przyjdzie.}%
 \EndParallel
 \pagebreak
-\gresetinitiallines{0}\gabcsnippet{(c3) Be([alt:Lector]h')ne(h)di(h)cá(hi)mus(h') Dó(h)mi(h)no.(hGF.) (::)  De(h)o(h') grá(h)ti(h)as.(hGF.) (::)}
+\gresetinitiallines{0}\gabcsnippet{(c3) Be([alt:Lector]h')ne(h)di(h)cá(hi)mus(h') Dó(h)mi(h)no.(hGF.) (::) Dé(h)o(h') grá(h)ti(h)as.(hGF.) (::)}
 \vspace{-15pt}
 \tlumaczR{\red{\Vbar.}~Błogosławmy Panu. \red{\Rbar.}~Bogu niech będą dzięki.}
 \rubryka{Błogosławieństwo odmawia się niskim głosem \emph{recto tono} wykonując znak krzyża na sobie.}
 \vspace{-8pt}
 \BeginParallel
-\latN{\red{\Vbar.}~Benedícat et custódiat nos omnípotens et miséricors Dóminus, \red{\grecross}~Pater, et Fílius, et Spíritus Sanctus.}\pol{\red{\Vbar.}~Niech nas błogosławi i strzeże wszechmogący i miłosierny Pan, \red{\grecross}~Ojciec, i Syn, i Duch Święty.}%
+\latN{\red{\Vbar.}~Benedícat et custódiat nos omnípotens et miséricors Dóminus, \red{\grecross}~Páter, et Fílius, et Spíritus Sánctus.}\pol{\red{\Vbar.}~Niech nas błogosławi i strzeże wszechmogący i miłosierny Pan, \red{\grecross}~Ojciec, i Syn, i Duch Święty.}%
 \latN{\red{\Rbar.} Amen.}\pol{\red{\Rbar.} Amen.}%
 \EndParallel
 \vspace{-4pt}
 \grechangedim{spacelinestext}{20pt}{scalable} % odstęp między linią a dołem tekstu
 \sekcja{Antiphona finalis B.M.V.}{}\vspace{-32pt}
 \subsubsekcja{1.~Od Nieszporów soboty przed I Niedzielą Adwentu do II Nieszporów 2 lutego.}\linespace
-\gresetinitiallines{1}\greannotation{Ant.}\greannotation{5.}\gabcsnippet{(cb3) AL(d.0f!gwhhv//ikkvJ'IH'Ghih'h)ma(fef.) <c><v>*</v></c>(,) Red(h)em(h')ptó(d)ris(ef) Ma(gvED)ter,(d.) (;) quae(h) pér(jk)vi(ih)a(gh) cae(h)li(h.) (,) por(de!fg)ta(f) ma(h.d!ewf'!gv)nes,(f.) (::) Et(k) stel(jki'ih~)la(g) ma(hif)ris,(f.) (;) suc(d)cúr(eg)re(g') ca(g)dén(fge'e[ll:1]d~)ti(d.) (,) súr(h')ge(h)re(h') qui(g) cu(hih)rat(gf) pó(e')pu(f)lo :(f.) (::) Tu(kvIH) quae(k') ge(j)nu(kl)í(kj)sti,(i_[oh:h]h_[oh:h]) (,) na(gh)tú(hvGF)ra(f') mi(g)rán(fge'e[ll:1]d~)te,(d.) (;) tu(d)um(ef) san(f)ctum(fe~) Ge(gf)ni(e[ll:1]d)tó(e)rem :(d.) (::) Vir(kvIG'h)go(h.) pri(hfgvE'D)us(d.) (,) ac(h) po(jk)sté(ih)ri(gh)us,(h.) (;) Ga(h')bri(h)é(hg)lis(f) ab(gh) o(hg)re(e_[oh:h][ll:1]d_[oh:h]) (,) su(d)mens(ef) il(g)lud(e[ll:1]d) A(ef)ve,(f.) <c><v>*</v></c> (,) pec(h)ca(g')tó(h)rum(de) mi(f')se(e)ré(d.)re.(d.) (::)}\linespace
+\gresetinitiallines{1}\greannotation{Ant.}\greannotation{5.}\gabcsnippet{(cb3) AL(d.0f!gwhhv//ikkvJ'IH'Ghih'h)ma(fef.) <c><v>*</v></c>(,) Red(h)em(h')ptó(d)ris(ef) Má(gvED)ter,(d.) (;) quae(h) pér(jk)vi(ih)a(gh) caé(h)li(h.) (,) pór(de!fg)ta(f) má(h.d!ewf'!gv)nes,(f.) (::) Et(k) stél(jki'ih~)la(g) má(hif)ris,(f.) (;) suc(d)cúr(eg)re(g') ca(g)dén(fge'e[ll:1]d~)ti(d.) (,) súr(h')ge(h)re(h') qui(g) cú(hih)rat(gf) pó(e')pu(f)lo :(f.) (::) Tu(kvIH) quae(k') ge(j)nu(kl)í(kj)sti,(i_[oh:h]h_[oh:h]) (,) na(gh)tú(hvGF)ra(f') mi(g)rán(fge'e[ll:1]d~)te,(d.) (;) tú(d)um(ef) sán(f)ctum(fe~) Ge(gf)ni(e[ll:1]d)tó(e)rem :(d.) (::) Vír(kvIG'h)go(h.) pri(hfgvE'D)us(d.) (,) ac(h) po(jk)sté(ih)ri(gh)us,(h.) (;) Ga(h')bri(h)é(hg)lis(f) ab(gh) ó(hg)re(e_[oh:h][ll:1]d_[oh:h]) (,) sú(d)mens(ef) íl(g)lud(e[ll:1]d) A(ef)ve,(f.) <c><v>*</v></c> (,) pec(h)ca(g')tó(h)rum(de) mi(f')se(e)ré(d.)re.(d.) (::)}\linespace
 \tlumacz{Święta Odkupiciela Matko, któraś otwartą nieba bramą pozostała, Gwiazdo morza! Wspomóż upadły lud, Gdy powstać usiłuje. Tyś zrodziła Ku zdumieniu całej natury, Twojego Świętego Stworzyciela, Panną będąc przedtem i potem, Pozdrowiona usty Gabriela, Okaż miłosierdzie grzesznikom.}
 \segmentspace
 \subsubsekcja{Do 23 grudnia:}
 \BeginParallel
-\latN{\red{\Vbar.}~Ángelus Dómini nuntiávit Maríæ.}\pol{\red{\Vbar.}~Anioł Pański zwiastował P. Maryi.}%
-\latN{\red{\Rbar.}~Et concépit de Spíritu Sancto.}\pol{\red{\Rbar.}~I poczęła z Ducha Świętego.}%
+\latN{\red{\Vbar.}~Ángelus Dómini nuntiávit Maríae.}\pol{\red{\Vbar.}~Anioł Pański zwiastował P. Maryi.}%
+\latN{\red{\Rbar.}~Et concépit de Spíritu Sáncto.}\pol{\red{\Rbar.}~I poczęła z Ducha Świętego.}%
 \EndParallel
 \BeginParallel
 \latN{\inicjal{O}{rémus.}}\pol{\inicjal{M}{ódlmy} się.}
-\latN{\inicjal{G}{rátiam} tuam, quǽsumus, Dómine, méntibus nostris infúnde:~\red{†} ut, qui, Ángelo nuntiánte, Christi Fílii tui incarnatiónem cognóvimus;~\red{*} per passiónem ejus et crucem, ad resurrectiónis glóriam perducámur. Per eúmdem Christum Dóminum nostrum. \red{\Rbar.}~Amen.}\pol{\inicjal{Ł}{askę} Twoją prosimy Cię Panie racz wlać w serca nasze,~\red{†} abyśmy, którzy za zwiastowaniem anielskim Wcielenie Chrystusa, Syna Twojego poznali,~\red{*} przez mękę Jego i krzyż do chwały zmartwychwstania byli doprowadzeni. Przez tegoż Chrystusa Pana naszego. \red{\Rbar.}~Amen.}\linespace%
+\latN{\inicjal{G}{rátiam} tuam, quaésumus, Dómine, méntibus nóstris infúnde:~\red{†} ut, qui, Ángelo nuntiánte, Christi Fílii tui incarnatiónem cognóvimus;~\red{*} per passiónem ejus et crúcem, ad resurrectiónis glóriam perducámur. Per eúmdem Chrístum Dóminum nóstrum. \red{\Rbar.}~Amen.}\pol{\inicjal{Ł}{askę} Twoją prosimy Cię Panie racz wlać w serca nasze,~\red{†} abyśmy, którzy za zwiastowaniem anielskim Wcielenie Chrystusa, Syna Twojego poznali,~\red{*} przez mękę Jego i krzyż do chwały zmartwychwstania byli doprowadzeni. Przez tegoż Chrystusa Pana naszego. \red{\Rbar.}~Amen.}\linespace%
 \EndParallel
 \subsubsekcja{Od 24 grudnia:}
 \BeginParallel
-\latN{\red{\Vbar.}~Post partum, Virgo, invioláta permansísti.}\pol{\red{\Vbar.}~Po porodzeniu Panno niepokalaną pozostałaś.}%
-\latN{\red{\Rbar.}~Dei Génitrix, intercéde pro nobis.}\pol{\red{\Rbar.}~Boża Rodzicielko, wstaw się za nami.}%
+\latN{\red{\Vbar.}~Post pártum, Vírgo, invioláta permansísti.}\pol{\red{\Vbar.}~Po porodzeniu Panno niepokalaną pozostałaś.}%
+\latN{\red{\Rbar.}~Déi Génitrix, intercéde pro nóbis.}\pol{\red{\Rbar.}~Boża Rodzicielko, wstaw się za nami.}%
 \latN{\inicjal{O}{rémus.}}\pol{\inicjal{M}{ódlmy} się.}
-\latN{\inicjal{D}{eus}, qui salútis ætérnæ, beátæ Maríæ virginitáte fecúnda, humáno géneri prǽmia præstitísti: \red{†} tríbue, quǽsumus; ut ipsam pro nobis intercédere sentiámus, \red{*} per quam merúimus auctórem vitæ suscípere, Dóminum nostrum Jesum Christum Fílium tuum. \red{\Rbar.}~Amen.}\pol{\inicjal{B}{oże}, któryś przez płodne Dziewictwo błogosławionej Maryi Panny zgotował rodzajowi ludzkiemu nagrodę żywota wiecznego, daj prosimy Cię, doznać skutków pośrednictwa Tej, przez którą otrzymaliśmy Dawcę żywota, Pana naszego Jezusa Chrystusa Syna Twego. \red{\Rbar.}~Amen.}\linespace%
+\latN{\inicjal{D}{éus}, qui salútis aetérnae, beátae Maríae virginitáte fecúnda, humáno géneri praémia praestitísti: \red{†} tríbue, quaésumus; ut ípsam pro nóbis intercédere sentiámus, \red{*} per quam merúimus auctórem vítae suscípere, Dóminum nóstrum Jésum Chrístum Fílium túum. \red{\Rbar.}~Amen.}\pol{\inicjal{B}{oże}, któryś przez płodne Dziewictwo błogosławionej Maryi Panny zgotował rodzajowi ludzkiemu nagrodę żywota wiecznego, daj prosimy Cię, doznać skutków pośrednictwa Tej, przez którą otrzymaliśmy Dawcę żywota, Pana naszego Jezusa Chrystusa Syna Twego. \red{\Rbar.}~Amen.}\linespace%
 \EndParallel
 \paragraphspace
 \subsubsekcja{2.~Od Komplety 2 lutego do Komplety Wielkiej Środy włącznie}\linespace
 \grechangedim{spacelinestext}{26pt}{scalable} % odstęp między linią a dołem tekstu
-\gresetinitiallines{1}\greannotation{Ant.}\greannotation{6.}\gabcsnippet{(c2) A(exfvED'e)ve(cdf.) <c><v>*</v></c> (,) Re(f)gí(gh)na(hgi) cae(hvGF)ló(ghf)rum,(f.) (;) A(exfvED'e)ve(cdf.) (,) Dó(f)mi(gh)na(hgi) An(hg~)ge(f)ló(ghf)rum :(f.) (::) Sal(f!gwh'!iv)ve(h) ra(ji)dix,(hvGF) sal(g')ve(h) por(gf~)ta,(f.) (;) Ex(f) qua(eyef) mun(fvDC'f)do(f'_) (,) lux(f) est(gh) or(ivHG'g)ta :(f.) (::) Gau(f)de(hj) Vir(ji)go(hvGF) glo(g')ri(h)ó(gf)sa,(f.) (;) Su(f)per(eyef) o(fvDC'f)mnes(f'_) (,) spe(f)ci(gh)ó(ivHG'g)sa :(f.) (::) Va(fh/jijIH)le,(h.) (,) o(j) val(ih)de(hg) de(f)có(gh)ra,(h.) (;) Et(ih~) pro(g) no(ghf)bis(f.) (,) Chri(gvFD'C)stum(f'_) <c><v>*</v></c> () ex(f)ó(ghf/ggf)ra.(f.) (::)}%
+\gresetinitiallines{1}\greannotation{Ant.}\greannotation{6.}\gabcsnippet{(c2) A(exfvED'e)ve(cdf.) <c><v>*</v></c> (,) Re(f)gí(gh)na(hgi) cae(hvGF)ló(ghf)rum,(f.) (;) A(exfvED'e)ve(cdf.) (,) Dó(f)mi(gh)na(hgi) An(hg~)ge(f)ló(ghf)rum :(f.) (::) Sál(f!gwh'!iv)ve(h) rá(ji)dix,(hvGF) sál(g')ve(h) pór(gf~)ta,(f.) (;) Ex(f) qua(eyef) mún(fvDC'f)do(f'_) (,) lux(f) est(gh) ór(ivHG'g)ta :(f.) (::) Gáu(f)de(hj) Vír(ji)go(hvGF) glo(g')ri(h)ó(gf)sa,(f.) (;) Sú(f)per(eyef) ó(fvDC'f)mnes(f'_) (,) spe(f)ci(gh)ó(ivHG'g)sa :(f.) (::) Vá(fh/jijIH)le,(h.) (,) o(j) vál(ih)de(hg) de(f)có(gh)ra,(h.) (;) Et(ih~) pro(g) nó(ghf)bis(f.) (,) Chrí(gvFD'C)stum(f'_) <c><v>*</v></c> () ex(f)ó(ghf/ggf)ra.(f.) (::)}%
 \vspace{-24pt}
 \tlumaczR{Witaj, niebios Królowo, Witaj, Pani aniołów, Witaj, Różdżko, witaj\\Bramo, Jasność zrodziłaś światu. Ciesz się, Panno chwalebna, Ponad\\wszystkie piękniejsza, Witaj, o Najśliczniejsza, Proś Chrystusa za nami.}
 \pagebreak
 \BeginParallel
-\latN{\red{\Vbar.}~Dignáre me laudáre te, Virgo sacráta.}\pol{\red{\Vbar.}~Dozwól mi chwalić Cię, o Pani święta.}%
-\latN{\red{\Rbar.}~Da mihi virtútem contra hostes tuos.}\pol{\red{\Rbar.}~Daj mi moc przeciw nieprzyjaciołom Twoim.}%
+\latN{\red{\Vbar.}~Dignáre me laudáre te, Vírgo sacráta.}\pol{\red{\Vbar.}~Dozwól mi chwalić Cię, o Pani święta.}%
+\latN{\red{\Rbar.}~Da míhi virtútem cóntra hóstes túos.}\pol{\red{\Rbar.}~Daj mi moc przeciw nieprzyjaciołom Twoim.}%
 \latN{\inicjal{O}{rémus.}}\pol{\inicjal{M}{ódlmy} się.}
-\latN{\inicjal{C}{oncéde}, miséricors Deus, fragilitáti nostræ præsídium;~\red{†} ut, qui sanctæ Dei Genitrícis memóriam ágimus;~\red{*} intercessiónis ejus auxílio, a nostris iniquitátibus resurgámus. Per eúmdem Christum Dóminum nostrum. \red{\Rbar.}~Amen.}\pol{\inicjal{U}{dziel} nam, prosimy Cię, miłosierny Boże, pomocy w słabościach naszych,~\red{†} abyśmy, którzy świętej Bożej Rodzicielce cześć oddajemy,~\red{*} za jej przyczyną i wstawiennictwem, powstali z nieprawości naszych. Przez tegoż Chrystusa, Pana naszego. \red{\Rbar.}~Amen.}%
+\latN{\inicjal{C}{oncéde}, miséricors Déus, fragilitáti nóstrae praesídium;~\red{†} ut, qui sánctae Déi  Genitrícis memóriam ágimus;~\red{*} intercessiónis éjus auxílio, a nóstris iniquitátibus resurgámus. Per eúmdem Chrístum Dóminum nóstrum. \red{\Rbar.}~Amen.}\pol{\inicjal{U}{dziel} nam, prosimy Cię, miłosierny Boże, pomocy w słabościach naszych,~\red{†} abyśmy, którzy świętej Bożej Rodzicielce cześć oddajemy,~\red{*} za jej przyczyną i wstawiennictwem, powstali z nieprawości naszych. Przez tegoż Chrystusa, Pana naszego. \red{\Rbar.}~Amen.}%
 \EndParallel
 \subsubsekcja{3.~Od Komplety Wielkiej Soboty do Nony soboty w oktawie Zesłania Ducha Św. włącznie}
-\gresetinitiallines{1}\greannotation{Ant.}\greannotation{6.}\gabcsnippet{(cb4) RE(f)gí(g')na(f) cae(gh)li(h.) <c><v>*</v></c> (,) lae(i)tá(hgivHF'gf.0/hg/hf/ggf)re,(f'_) (,) al(i)le(gf)lú(gh){ia} :(f.) (::) Qui(f)a(j'_) quem(jkkj) me(ih)ru(gf)í(gh)sti(h.) (,) por(iii'1g//ijf'/gf.0)(,)(iii'1g//ijf'/gf.0/ghgh)tá(f_[oh:h]g_[oh:h]f_[oh:h])re,(f.) (,) al(ih~)le(gf/gh//fhG'F)lú(ef){ia} :(f.) (::) Re(i)sur(j')ré(kj'ji)xit,(j'_) (,) sic(j)ut(f') di(g)xit,(f.) (,) al(ih~)le(gi!jvjf)lú(gf~){ia} :(f.) (::) O(jj)ra(f) pro(gh) no(ih)bis(gvFE) De(gf)um,(f.) (;) al(f)le(fh!jkj'jvIGh.jvIHF'gf.0)<clear><c><v>*</v></c> (;)(fh!jkj'jvIGh.jvIHF'gf.0)<clear><c><v>**</v></c> (,)(giH'Gh)lú(f_[oh:h]g_[oh:h]f_[oh:h]){ia}.(f.) (::)}
+\gresetinitiallines{1}\greannotation{Ant.}\greannotation{6.}\gabcsnippet{(cb4) RE(f)gí(g')na(f) caé(gh)li(h.) <c><v>*</v></c> (,) lae(i)tá(hgivHF'gf.0/hg/hf/ggf)re,(f'_) (,) al(i)le(gf)lú(gh){ia} :(f.) (::) Qui(f)a(j'_) quem(jkkj) me(ih)ru(gf)í(gh)sti(h.) (,) por(iii'1g//ijf'/gf.0)(,)(iii'1g//ijf'/gf.0/ghgh)tá(f_[oh:h]g_[oh:h]f_[oh:h])re,(f.) (,) al(ih~)le(gf/gh//fhG'F)lú(ef){ia} :(f.) (::) Re(i)sur(j')ré(kj'ji)xit,(j'_) (,) sic(j)ut(f') dí(g)xit,(f.) (,) al(ih~)le(gi!jvjf)lú(gf~){ia} :(f.) (::) O(jj)ra(f) pro(gh) nó(ih)bis(gvFE) Dé(gf)um,(f.) (;) al(f)le(fh!jkj'jvIGh.jvIHF'gf.0)<clear><c><v>*</v></c> (;)(fh!jkj'jvIGh.jvIHF'gf.0)<clear><c><v>**</v></c> (,)(giH'Gh)lú(f_[oh:h]g_[oh:h]f_[oh:h]){ia}.(f.) (::)}
 \vspace{-24pt}
 \tlumaczR{Królowo nieba, wesel się, alleluja, Bo Ten, któregoś nosiła, alleluja,\\Zmartwychwstał jak powiedział, alleluja,Módl się za nami do Boga, alleluja.}
 \vspace{16pt}
 \BeginParallel
-\latN{\red{\Vbar.}~Gaude et lætáre, Virgo María, allelúja.}\pol{\red{\Vbar.}~Raduj się i wesel, Panno Maryjo, alleluja.}%
+\latN{\red{\Vbar.}~Gáude et laetáre, Vírgo María, allelúja.}\pol{\red{\Vbar.}~Raduj się i wesel, Panno Maryjo, alleluja.}%
 \latN{\red{\Rbar.}~Quia surréxit Dóminus vere, allelúja.}\pol{\red{\Rbar.}~Bo zmartwychwstał Pan prawdziwie, alleluja.}%
 \latN{\inicjal{O}{rémus.}}\pol{\inicjal{M}{ódlmy} się.}
-\latN{\inicjal{D}{eus}, qui per resurrectiónem Fílii tui, Dómini nostri Jesu Christi, mundum lætificáre dignátus es:~\red{†} præsta, quǽsumus; ut, per ejus Genitrícem Vírginem Maríam,~\red{*} perpétuæ capiámus gáudia vitæ. Per eúmdem Christum Dóminum nostrum. \red{\Rbar.}~Amen.}\pol{\inicjal{B}{oże}, któryś przez zmartwychwstanie Syna swojego, Pana naszego Jezusa Chrystusa świat uweselić raczył,~\red{†} daj nam, prosimy, abyśmy przez Jego Rodzicielkę Pannę Maryję~\red{*} dostąpili radości życia wiecznego. Przez tegoż Chrystusa Pana naszego. \red{\Rbar.}~Amen.}%
+\latN{\inicjal{D}{eus}, qui per resurrectiónem Fílii tui, Dómini nóstri Jesu Christi, múndum laetificáre dignátus es:~\red{†} praésta, quaésumus; ut, per ejus Genitrícem Vírginem Maríam,~\red{*} perpétuae capiámus gáudia vítae. Per eúmdem Chrístum Dóminum nóstrum. \red{\Rbar.}~Amen.}\pol{\inicjal{B}{oże}, któryś przez zmartwychwstanie Syna swojego, Pana naszego Jezusa Chrystusa świat uweselić raczył,~\red{†} daj nam, prosimy, abyśmy przez Jego Rodzicielkę Pannę Maryję~\red{*} dostąpili radości życia wiecznego. Przez tegoż Chrystusa Pana naszego. \red{\Rbar.}~Amen.}%
 \EndParallel
 \segmentspace
 \grechangedim{spacelinestext}{22pt}{scalable} % odstęp między linią a dołem tekstu
 \subsubsekcja{4.~Od I Nieszporów Trójcy Przenajświętszej do Nony soboty przed I Niedzielą Adwentu włącznie}
 \vspace{-4pt}
 \grechangedim{spacelinestext}{26pt}{scalable} % odstęp między linią a dołem tekstu
-\gresetinitiallines{1}\greannotation{Ant.}\greannotation{1.}\gabcsnippet{(c4) SAl(hhgh)ve,(d.) <c><v>*</v></c> (,) Re(hg)gí(fe/fgf)na,(e[ll:1]d..) (;) ma(c)ter(d) mi(dc)se(d)ri(ef)cór(g)di(dec)ae :(d.) (::) Vi(hhgh)ta,(d.) (,) dul(hg)cé(fe/fgf)do,(e[ll:1]d..) (;) et(c) spes(d) no(ef)stra,(g.) (,) sal(dec)ve.(d.) (::) Ad(df) te(h') cla(g)má(gfh)mus,(e.) (;) éx(g)su(f)les,(edg.) (,) fí(c)li(d)i(edg) He(fe)vae.(d.) (::) Ad(df) te(h') su(j)spi(g)rá(gfg)mus,(h.) (;) ge(d)mén(fg~)tes(g') et(d) flen(fvED)tes(c.) (;) in(d) hac(dcf) la(gh)cri(g)má(fe)rum(g) val(fe~)le.(dcd.) (::) E(ffg){ia}(f) er(gh~)go,(h'_) (,) Ad(j)vo(g)cá(hvGF)ta(d') no(g)stra,(h.) (;) il(k)los(k) tu(ji/jk)os(h'_) (,) mi(k)se(j')ri(h)cór(gfh')des(g) ó(de)cu(f)los(evDC.) (;) ad(cd) nos(f) con(gf~)vér(dcd)te.(d.) (::) Et(d) Je(a)sum,(c_[ll:1]d) (,) be(d)ne(de)dí(e[ll:1]dd)ctum(c') fru(g)ctum(f) ven(e[ll:1]d~)tris(g) tu(fe)i,(dcd.) (;) no(ixdh'!iv)bis(h.) (,) post(hvGF) hoc(g') ex(d)sí(f)li(fe)um(dc__) (,) os(efe)tén(d.)de.(d.) (::) O(hhg/h!iwj) cle(ivHG)mens :(h.) (::) O(g.h!iwjji) pi(hg)a :(gh..) (::) O(hd__fvEDC'd) (,) (de!fg) dul(gf~)cis(g_[uh:l]h) <c><v>*</v></c> () Vir(d)go(c') Ma(d)rí(dgff)a.(e[ll:1]d..) (::)}\linespace
+\gresetinitiallines{1}\greannotation{Ant.}\greannotation{1.}\gabcsnippet{(c4) SAl(hhgh)ve,(d.) <c><v>*</v></c> (,) Re(hg)gí(fe/fgf)na,(e[ll:1]d..) (;) má(c)ter(d) mi(dc)se(d)ri(ef)cór(g)di(dec)ae :(d.) (::) Ví(hhgh)ta,(d.) (,) dul(hg)cé(fe/fgf)do,(e[ll:1]d..) (;) et(c) spes(d) nó(ef)stra,(g.) (,) sal(dec)ve.(d.) (::) Ad(df) te(h') cla(g)má(gfh)mus,(e.) (;) éx(g)su(f)les,(edg.) (,) fí(c)li(d)i(edg) Hé(fe)vae.(d.) (::) Ad(df) te(h') su(j)spi(g)rá(gfg)mus,(h.) (;) ge(d)mén(fg~)tes(g') et(d) flén(fvED)tes(c.) (;) in(d) hac(dcf) la(gh)cri(g)má(fe)rum(g) vál(fe~)le.(dcd.) (::) E(ffg){ia}(f) er(gh~)go,(h'_) (,) Ad(j)vo(g)cá(hvGF)ta(d') nó(g)stra,(h.) (;) íl(k)los(k) tú(ji/jk)os(h'_) (,) mi(k)se(j')ri(h)cór(gfh')des(g) ó(de)cu(f)los(evDC.) (;) ad(cd) nos(f) con(gf~)vér(dcd)te.(d.) (::) Et(d) Jé(a)sum,(c_[ll:1]d) (,) be(d)ne(de)dí(e[ll:1]dd)ctum(c') frú(g)ctum(f) vén(e[ll:1]d~)tris(g) tú(fe)i,(dcd.) (;) nó(ixdh'!iv)bis(h.) (,) post(hvGF) hoc(g') ex(d)sí(f)li(fe)um(dc__) (,) os(efe)tén(d.)de.(d.) (::) O(hhg/h!iwj) clé(ivHG)mens :(h.) (::) O(g.h!iwjji) pí(hg)a :(gh..) (::) O(hd__fvEDC'd) (,) (de!fg) dúl(gf~)cis(g_[uh:l]h) <c><v>*</v></c> () Vír(d)go(c') Ma(d)rí(dgff)a.(e[ll:1]d..) (::)}\linespace
 \tlumacz{Witaj Królowo, Matko Miłosierdzia, życie, słodyczy i nadziejo nasza, witaj! Do Ciebie wołamy wygnańcy, synowie Ewy; do Ciebie wzdychamy jęcząc i płacząc na tym łez padole. Przeto, Orędowniczko nasza, one miłosierne oczy Twoje na nas zwróć, a Jezusa, błogosławiony owoc żywota Twojego, po tym wygnaniu nam okaż. O łaskawa, o litościwa, o słodka Panno Maryjo!}
 \pagebreak
 \BeginParallel
-\latN{\red{\Vbar.}~Ora pro nobis, sancta Dei Génitrix.}\pol{\red{\Vbar.}~Módl się za nami święta Boża Rodzicielko.}%
-\latN{\red{\Rbar.}~Ut digni efficiámur promissiónibus Christi.}\pol{\red{\Rbar.}~Abyśmy się stali godnymi obietnic Chrystusowych.}%
+\latN{\red{\Vbar.}~Ora pro nóbis, sáncta Déi Génitrix.}\pol{\red{\Vbar.}~Módl się za nami święta Boża Rodzicielko.}%
+\latN{\red{\Rbar.}~Ut dígni efficiámur promissiónibus Chrísti.}\pol{\red{\Rbar.}~Abyśmy się stali godnymi obietnic Chrystusowych.}%
 \latN{\inicjal{O}{rémus.}}\pol{\inicjal{M}{ódlmy} się.}
-\latN{\inicjal{O}{mnípotens} sempitérne Deus, qui gloriósæ Vírginis Matris Maríæ corpus et ánimam, ut dignum Fílii tui habitáculum éffici mererétur, Spíritu Sancto cooperánte, præparásti: \red{†} da, ut, cujus commemoratióne lætámur, \red{*} ejus pia intercessióne, ab instántibus malis et a morte perpétua liberémur. Per eúmdem Christum Dóminum nostrum. \red{\Rbar.}~Amen.}\pol{\inicjal{W}{szechmogący}, wieczny Boże, który ciało i duszę chwalebnej Dziewicy Matki Maryi, przez działanie Ducha Świętego, przygotowałeś, aby było godnym zamieszkania przez Twego Syna: daj, abyśmy przez łaskawe wstawiennictwo tej, której wspomnieniem się cieszymy, byli uwolnieni od zła doczesnego i śmierci wiecznej. Przez tegoż Chrystusa, Pana naszego. \red{\Rbar.}~Amen.}%
-\latN{\red{\Vbar.}~Divínum auxílium  \red{\grecross}~máneat semper nobíscum. \red{\Rbar.}~Amen.}\pol{\red{\Vbar.}~Pomoc Boża  \red{\grecross}~niech będzie zawsze z nami. \red{\Rbar.}~Amen.}%
+\latN{\inicjal{O}{mnípotens} sempitérne Deus, qui gloriósae Vírginis Mátris Maríae córpus et ánimam, ut dígnum Fílii tui habitáculum éffici mererétur, Spíritu Sáncto cooperánte, praeparásti: \red{†} da, ut, cújus commemoratióne laetámur, \red{*} ejus pia intercessióne, ab instántibus mális et a mórte perpétua liberémur. Per eúmdem Chrístum Dóminum nóstrum. \red{\Rbar.}~Amen.}\pol{\inicjal{W}{szechmogący}, wieczny Boże, który ciało i duszę chwalebnej Dziewicy Matki Maryi, przez działanie Ducha Świętego, przygotowałeś, aby było godnym zamieszkania przez Twego Syna: daj, abyśmy przez łaskawe wstawiennictwo tej, której wspomnieniem się cieszymy, byli uwolnieni od zła doczesnego i śmierci wiecznej. Przez tegoż Chrystusa, Pana naszego. \red{\Rbar.}~Amen.}%
 \EndParallel
 \sectionspace
 \rubryka{Poniższy werset odmawia się po antyfonie niskim głosem \emph{recto tono}:}
 \linespace
 \BeginParallel
-\latN{\red{\Vbar.}~Divínum auxílium  \red{\grecross}~máneat semper nobíscum. \red{\Rbar.}~Amen.}\pol{\red{\Vbar.}~Pomoc Boża  \red{\grecross}~niech będzie zawsze z nami. \red{\Rbar.}~Amen.}%
+\latN{\red{\Vbar.}~Divínum auxílium \red{\grecross}~máneat sémper nobíscum. \red{\Rbar.}~Amen.}\pol{\red{\Vbar.}~Pomoc Boża \red{\grecross}~niech będzie zawsze z nami. \red{\Rbar.}~Amen.}%
 \EndParallel
 \dekor{0.5}{pax_vobis.png}
 \pagebreak
 \sekcja{Modlitwy wieczorne}{}\vspace{-60pt}
 \subsekcja{Modlitwa za Ojca Świętego}\vspace{-8pt}
-\gresetinitiallines{1}\greannotation{Ant.}\greannotation{1.}\gabcsnippet{(c4) O(g)ré(hg)mus(gj..) pro(i') Pon(j)tí(k')fi(j)ce(ij) no(hg)stro(gh) Le(g)ó(g)ne.(ef/gee/d.) (::) <c><sp>R/</sp>.</c> Dó(h)mi(g)nus(h') con(j)sér(ji)vet(hg) e(ij)um,(h.) (;) et(i) vi(j)ví(k')fi(j)cet(ij) e(hg)um,(gh..) (;) et(h) be(h')á(h)tum(hg) fá(hj)ci(g')at(g) e(gf)um(gh) in(g) ter(e.)ra,(e.) (:) et(f') non(e) tra(dg)dat(g') e(g)um(gf..) (;) in(g) á(gh)ni(g)mam(g') in(g)i(g')mi(g)có(gvFE)rum(dc) e(ef)jus.(d.) (::)}\linespace
-\tlumaczR{\red{\Vbar.}~Módlmy się za Papieża naszego Leona. \red{\Rbar.}~Niech go Pan zachowa i ożywi i błogosławionym uczyni na ziemi,\newline}
-\tlumacz{a niech go nie wydaje w moc nieprzyjaciół jego.}\linespace\linespace
+\gresetinitiallines{1}\greannotation{Ant.}\greannotation{1.}\gabcsnippet{(c4) O(g)ré(hg)mus(gj..) pro(i') Pon(j)tí(k')fi(j)ce(ij) nó(hg)stro(gh) Le(g)ó(g)ne.(ef/gee/d.) (::) <c><sp>R/</sp>.</c> Dó(h)mi(g)nus(h') con(j)sér(ji)vet(hg) é(ij)um,(h.) (;) et(i) vi(j)ví(k')fi(j)cet(ij) é(hg)um,(gh..) (;) et(h) be(h')á(h)tum(hg) fá(hj)ci(g')at(g) é(gf)um(gh) in(g) tér(e.)ra,(e.) (:) et(f') non(e) trá(dg)dat(g') é(g)um(gf..) (;) in(g) á(gh)ni(g)mam(g') in(g)i(g')mi(g)có(gvFE)rum(dc) é(ef)jus.(d.) (::)}\linespace
+\tlumaczR{\red{\Vbar.}~Módlmy się za Papieża naszego Leona. \red{\Rbar.}~Niech go Pan zachowa i ożywi\\i błogosławionym uczyni na ziemi, a niech go nie wydaje w moc nieprzyjaciół jego.}\linespace
 \BeginParallel
-\latN{\red{\Vbar.}~Fiat mánus tua super vírum déxteræ tuæ.}\pol{\red{\Vbar.}~Niech ręka Twoja będzie nad mężem Twej prawicy.}%
-\latN{\red{\Rbar.}~Et super fílium tuum quia confirmásti tibi.}\pol{\red{\Rbar.}~Nad synem człowieczym, którego utwierdził dla siebie.}%
+\latN{\red{\Vbar.}~Fíat mánus túa súper vírum déxterae túae.}\pol{\red{\Vbar.}~Niech ręka Twoja będzie nad mężem Twej prawicy.}%
+\latN{\red{\Rbar.}~Et súper fílium túum quia confirmásti tíbi.}\pol{\red{\Rbar.}~Nad synem człowieczym, którego utwierdził dla siebie.}%
 \EndParallel
 \linespace
 \BeginParallel
+% é á í ó ú ý æ ǽ œ Á, É, Í, Ó, Ú, Ý Æ Ǽ Œ \'{\oe} \'{\OE}
 \latN{\inicjal{O}{rémus.}}\pol{\inicjal{M}{ódlmy} się.}
-\latN{\inicjal{D}{eus}, ómnium fidélium pastor et rector, fámulum tuum Leónem, quem pastórem Ecclésiæ tuæ præésse voluísti, propítius réspice: \red{†} da ei, quǽsumus, verbo et exémplo, quibus præest, profícere; \red{*} ut ad vitam una cum grege sibi crédito, pervéniat sempitérnam. Per Christum Dóminum nostrum. \red{\Rbar.}~Amen.}\pol{\inicjal{B}{oże}, wszystkich wiernych Pasterzu i Rządco, wejrzyj łaskawie na sługę Twojego Leona, któregoś raczył postanowić Pasterzem Kościoła Twego ; daj mu, prosimy, łaskę, aby słowem i przykładem budował tych, którymi rządzi, i mógł razem z powierzoną mu trzodą przejść do żywota wiecznego. Przez Chrystusa Pana naszego. \red{\Rbar.}~Amen.}%
+\latN{\inicjal{D}{eus}, ómnium fidélium pástor et réctor, fámulum túum Leónem, quem pastórem Ecclésiae túae praeésse voluísti, propítius réspice: \red{†} da ei, quaésumus, vérbo et exémplo, quíbus práeest, profícere; \red{*} ut ad viítam una cum grége síbi crédito, pervéniat sempitérnam. Per Chrístum Dóminum nóstrum. \red{\Rbar.}~Amen.}\pol{\inicjal{B}{oże}, wszystkich wiernych Pasterzu i Rządco, wejrzyj łaskawie na sługę Twojego Leona, któregoś raczył postanowić Pasterzem Kościoła Twego ; daj mu, prosimy, łaskę, aby słowem i przykładem budował tych, którymi rządzi, i mógł razem z powierzoną mu trzodą przejść do żywota wiecznego. Przez Chrystusa Pana naszego. \red{\Rbar.}~Amen.}%
 \EndParallel
 \vspace{-4pt}
 \dekor{0.4}{tiara05.jpg}
 \pagebreak
 \subsekcja{Apel Jasnogórski}
 \BeginParallel
-\latN{\centering Maria Regina mundi,}\pol{\centering{Maryjo, Królowo Polski,}}
-\latN{\centering Maria Mater Ecclesíæ,}\pol{\centering Maryjo, Królowo Polski,}
-\latN{\centering Tibi assumus,}\pol{\centering Jestem przy Tobie, pamiętam,}
-\latN{\centering Tui memores}\pol{\centering Jestem przy Tobie, pamiętam,}
-\latN{\centering Vigilamus! Vigilamus!}\pol{\centering Czuwam.}
+\latN{\centering María Regína múndi,}\pol{\centering{Maryjo, Królowo Polski,}}
+\latN{\centering María Máter Ecclésiae,}\pol{\centering Maryjo, Królowo Polski,}
+\latN{\centering Tíbi ássumus,}\pol{\centering Jestem przy Tobie, pamiętam,}
+\latN{\centering Túi mémores.}\pol{\centering Jestem przy Tobie, pamiętam,}
+\latN{\centering Vigilámus! Vigilámus!}\pol{\centering Czuwam.}
 \EndParallel
 \dekor{1.0}{MariaReginaMundi.png}
 \subsekcja{Tajemnica Różańca Św.}
 \vspace{-20pt}
 \rubryka{Intencje: za Kościół Święty Katolicki Matkę naszą, o wolność i wywyższenie Jego, za x. Arcybiskupa Wiesława oraz za osoby przynależące do duszpasterstwa, w szczególności o pobudzenie ducha liturgicznego.}
 \BeginParallel
-	\latN{\inicjal{P}{áter} noster, qui es in cælis, sanctificétur nomen tuum: advéniat regnum tuum: fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie: et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris: et ne nos indúcas in tentatiónem: sed líbera nos a malo. Amen}\pol{\inicjal{O}{jcze} nasz, któryś jest w niebie święć się imię Twoje; przyjdź królestwo Twoje; bądź wola Twoja jako w niebie tak i~na ziemi; chleba naszego powszedniego daj nam dzisiaj; i~odpuść nam nasze winy, jako i~my odpuszczamy naszym winowajcom; i~nie wódź nas na pokuszenie; ale nas zbaw od złego. Amen.}
-	\latN{\inicjal{A}{ve} María, grátia plena; Dóminus tecum: benedícta tu in muliéribus, et benedíctus fructus ventris tui Jesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.}\pol{\inicjal{Z}{drowaś} Maryjo, łaski pełna, Pan z~Tobą, błogosławionaś Ty między niewiastami i~błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i~w~godzinę śmierci naszej. Amen.}
-	\latN{\inicjal{G}{lória} Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.}\pol{\inicjal{C}{hwała} Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.}
-\latN{\inicjal{D}{ómine} Iesu, dimitte nobis débita nostra, salva nos ab igne inferiori, perduc in caelum omnes ánimas, praesertim eas, quae misericórdiae tuae máxime indigent.}\pol{\inicjal{O}{ mój} Jezu, przebacz nam nasze grzechy, zachowaj nas od ognia piekielnego, zaprowadź wszystkie dusze do nieba, a szczególnie te, które najbardziej potrzebują Twojego miłosierdzia.}
-\latN{\inicjal{O}{ Maria}, sine labe originalli concepta, ora pro nobis, qui ad Te recurrimus, et pro omnibus qui ad Te non recurrunt et praesertim pro massonibus et commendatis Tibi.}\pol{\inicjal{O}{ Maryjo}, bez grzechu pierworodnego poczęta, módl się za nami, którzy się do Ciebie uciekamy i za wszystkimi, którzy się do Ciebie nie uciekają, a zwłaszcza za masonami i poleconymi Tobie.}
-\latN{\inicjal{S}{ub} tuum praesidium confúgimus, Sancta Dei Génetrix. Nostras deprecatiónes ne despicias in necessitátibus, sed a periculis cunctis libera nos semper, Virgo gloriósa et benedicta. Domina nostra, Mediatrix nostra, Advocata nostra, Consolatrix nostra. Tuo Filio nos reconcilia, tuo Filio nos commenda, tuo Filio nos repraesenta.}\pol{\inicjal{P}{od} Twoją obronę uciekamy się, święta Boża Rodzicielko, naszymi prośbami racz nie gardzić w potrzebach naszych, ale od wszelakich złych przygód racz nas zawsze wybawiać, Panno chwalebna i błogosławiona. O Pani nasza, Orędowniczko nasza, Pośredniczko nasza, Pocieszycielko nasza. Z Synem swoim nas pojednaj, Synowi swojemu nas polecaj, swojemu Synowi nas oddawaj.}
+	\latN{\inicjal{P}{áter} nóster, qúi es in caélis, sanctificétur nómen túum: advéniat régnum túum: fíat volúntas túa, sícut in caélo et in térra. Pánem nóstrum quotidiánum da nóbis hódie: et dimítte nóbis débita nóstra, sícut et nos dimíttimus debitóribus nóstris: et ne nos indúcas in tentatiónem: sed líbera nos a málo. Amen.}\pol{\inicjal{O}{jcze} nasz, któryś jest w niebie święć się imię Twoje; przyjdź królestwo Twoje; bądź wola Twoja jako w niebie tak i~na ziemi; chleba naszego powszedniego daj nam dzisiaj; i~odpuść nam nasze winy, jako i~my odpuszczamy naszym winowajcom; i~nie wódź nas na pokuszenie; ale nas zbaw od złego. Amen.}
+	\latN{\inicjal{A}{ve} María, grátia pléna; Dóminus técum: benedícta tu in muliéribus, et benedíctus frúctus véntris túi Jésus. Sáncta María, Máter Déi, óra pro nóbis peccatóribus, nunc et in hóra mórtis nóstrae. Amen.}\pol{\inicjal{Z}{drowaś} Maryjo, łaski pełna, Pan z~Tobą, błogosławionaś Ty między niewiastami i~błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i~w~godzinę śmierci naszej. Amen.}
+	\latN{\inicjal{G}{lória} Pátri, et Fílio, et Spirítui Sáncto. Sícut érat in princípio, et nunc, et sémper, et in saécula saeculórum. Ámen.}\pol{\inicjal{C}{hwała} Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.}
+\latN{\inicjal{D}{ómine} Iésu, dimítte nóbis débita nóstra, sálva nos ab ígne inferióri, perdúc in caélum ómnes ánimas, praesértim éas, quae misericórdiae túae máxime índigent.}\pol{\inicjal{O}{ mój} Jezu, przebacz nam nasze grzechy, zachowaj nas od ognia piekielnego, zaprowadź wszystkie dusze do nieba, a szczególnie te, które najbardziej potrzebują Twojego miłosierdzia.}
+\latN{\inicjal{O}{ María}, síne lábe origináli concépta, óra pro nóbis, qui ad Te recúrrimus, et pro ómnibus qui ad Te non recúrrunt et praesértim pro massónibus et commendátis Tíbi.}\pol{\inicjal{O}{ Maryjo}, bez grzechu pierworodnego poczęta, módl się za nami, którzy się do Ciebie uciekamy i za wszystkimi, którzy się do Ciebie nie uciekają, a zwłaszcza za masonami i poleconymi Tobie.}
+\latN{\inicjal{S}{ub} túum praesídium confúgimus, Sáncta Déi Génetrix. Nóstras deprecatiónes ne despícias in necessitátibus, sed a perículis cúnctis líbera nos sémper, Vírgo gloriósa et benedícta. Dómina nóstra, Mediatríx nóstra, Advocáta nóstra, Consolátrix nóstra. Túo Fílio nos reconcília, túo Fílio nos comménda, túo Fílio nos repraesénta.}\pol{\inicjal{P}{od} Twoją obronę uciekamy się, święta Boża Rodzicielko, naszymi prośbami racz nie gardzić w potrzebach naszych, ale od wszelakich złych przygód racz nas zawsze wybawiać, Panno chwalebna i błogosławiona. O Pani nasza, Orędowniczko nasza, Pośredniczko nasza, Pocieszycielko nasza. Z Synem swoim nas pojednaj, Synowi swojemu nas polecaj, swojemu Synowi nas oddawaj.}
 \EndParallel
 \dekor{0.4}{MARIA-monogram.png}
 \pagebreak
+\fi% koniec bloku debug
 \subsekcja{Litaníae Sancti Ioseph}
 \vspace{-4pt}
 \BeginParallel\fontsize{16}{14}\selectfont
@@ -499,7 +527,7 @@
 \pagebreak
 \BeginParallel\fontsize{16}{14}\selectfont
 \latN{\inicjal{O}{rémus.}}\pol{\inicjal{M}{ódlmy} się.}
-\latN{\inicjal{D}{eus}, qui ineffábili providéntia beátum Jóseph sanctíssimae Genetrícis túae Spónsum elígere dignátus es: \red{†}~praésta, quaésumus; ut, quém protectórem venerámur in térris, \red{*}~intercessórem habére mereámur in caélis: Qui vívis et régnas in saécula saeculórum. \red{\Rbar.}~Amen.}\pol{\inicjal{B}{oże}, któryś w niewysłowionej Opatrzności raczył wybrać Józefa na Oblubieńca Najświętszej Rodzicielki swojej; spraw, prosimy, abyśmy zasłużyli na jego orędownictwo w niebie, gdy jako opiekuna czcimy go na ziemi: Który żyjesz i królujesz na wieki wieków. \red{\Rbar.}~Amen.}%
+\latN{\inicjal{D}{éus}, qui ineffábili providéntia beátum Jóseph sanctíssimae Genetrícis túae Spónsum elígere dignátus es: \red{†}~praésta, quaésumus; ut, quém protectórem venerámur in térris, \red{*}~intercessórem habére mereámur in caélis: Qui vívis et régnas in saécula saeculórum. \red{\Rbar.}~Amen.}\pol{\inicjal{B}{oże}, któryś w niewysłowionej Opatrzności raczył wybrać Józefa na Oblubieńca Najświętszej Rodzicielki swojej; spraw, prosimy, abyśmy zasłużyli na jego orędownictwo w niebie, gdy jako opiekuna czcimy go na ziemi: Który żyjesz i królujesz na wieki wieków. \red{\Rbar.}~Amen.}%
 \EndParallel
 \sectionspace
 \subsubsekcja{Litania - wersja śpiewana }
@@ -509,9 +537,9 @@
 \grechangedim{spacelinestext}{18pt}{scalable} % odstęp między linią a dołem tekstu
 \gregorioscore{Litany-Ioseph-I}%
 \begin{nstabbing}
-\>Fí-\>li \>Redémptor \>mún-\>\textit{di} \>\textbf{Dé}-\>us, \>mi\>se\>\textit{ré}\>\textit{re} \>nó\>bis.\\
-\>Spí-\>ri-\>tus \>Sán-\>\textit{cte} \>\textbf{Dé}-\>us, \>mi\>se\>\textit{ré}\>\textit{re} \>nó\>bis.\\
-\>Sán-\>cta\>Trínitas \>ú-\>\textit{nus} \>\textbf{Dé}-\>us, \>mi\>se\>\textit{ré}\>\textit{re} \>nó\>bis.\\
+\>Fí-\>li \>Redémptor \>mún-\>\textit{di} \>\textbf{Dé}-\>us, \>mi-\>se\>\textit{ré}\>\textit{re} \>nó\>bis.\\
+\>Spí-\>ri-\>tus \>Sán-\>\textit{cte} \>\textbf{Dé}-\>us, \>mi-\>se\>\textit{ré}\>\textit{re} \>nó\>bis.\\
+\>Sán-\>cta\>Trínitas \>ú-\>\textit{nus} \>\textbf{Dé}-\>us, \>mi-\>se\>\textit{ré}\>\textit{re} \>nó\>bis.\\
 \end{nstabbing}%
 \vspace{-25pt}
 \gregorioscore{Litany-Ioseph-II}
@@ -523,7 +551,7 @@
 \>Cústos pudí-\>\>\textit{ce}\>Vír-\>\textbf{gi}-\>nis, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Fílii Déi\>\>\textit{nu}-\>trí-\>\textbf{ti}-\>e, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Chrísti defén-\>\>\textit{sor}\>sé-\>\textbf{du}-\>le, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
-\>Almæ Famíli-\>\>\textit{æ}\>\>\textbf{prǽ}-\>ses, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
+\>Almae Famíli-\>\>\textit{ae}\>\>\textbf{praé}-\>ses, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Ióseph\>\>\textit{iu}-\>stís-\>\textbf{si}-\>me, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Ióseph\>\>\textit{ca}-\>stís-\>\textbf{si}-\>me, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Ióseph pru-\>\>\textit{den}-\>tís-\>\textbf{si}-\>me, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
@@ -533,22 +561,22 @@
 \gregorioscore{Litany-Ioseph-III-2}
 \begin{nstabbing}
 %\>Ióseph fi-\>\>\textit{de}-\>lís-\>\textbf{si}-\>me, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
-\>Spéculum pa-\>\>\textit{ti}-\>én-\>\textbf{ti}-\>æ, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
+\>Spéculum pa-\>\>\textit{ti}-\>én-\>\textbf{ti}-\>ae, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Amátor pau-\>\>\textit{per}-\>\>\textbf{tá}-\>tis, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Exémplar\>\>\textit{o}-\>pí-\>\textbf{fi}-\>cum, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
-\>Domésticæ vi-\>\>\textit{tæ}\>\>\textbf{dé}-\>cus, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
+\>Domésticae vi-\>\>\textit{tae}\>\>\textbf{dé}-\>cus, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Cú-\>\>\textit{stos}\>vír-\>\textbf{gi}-\>num, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Familiá-\>\>\textit{rum}\>có-\>\textbf{lu}-\>men, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Solátium mi-\>\>\textit{se}-\>\>\textbf{ró}-\>rum, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
-\>Spes æ-\>\>\textit{gro}-\>tán-\>\textbf{ti}-\>um, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
+\>Spes ae-\>\>\textit{gro}-\>tán-\>\textbf{ti}-\>um, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Patróne mo-\>\>\textit{ri}-\>én-\>\textbf{ti}-\>um, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
-\>Tér-\>\>\textit{ror}\>dæ-\>\textbf{mó}-\>\hspace{8pt}num, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
-\>Protéctor sánctæ\>\>\textit{Ec}-\>clé-\>\textbf{si}-\>æ, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
+\>Tér-\>\>\textit{ror}\>dae-\>\textbf{mó}-\>\hspace{8pt}num, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
+\>Protéctor sánctae\>\>\textit{Ec}-\>clé-\>\textbf{si}-\>ae, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \end{nstabbing}%
 \gregorioscore{Litany-Ioseph-IV}
 \begin{nstabbing}
-\>Agnus\>Dé-\>i \>qui\>tóllis\>peccáta\>múndi\>exáu-\>di \textit{nos}\>Dó\>mine.\\
-\>Agnus\>Dé-\>i \>qui\>tóllis\>peccáta\>múndi\>mise-\>re\textit{ré}\>\>nóbis.\\
+\>Ágnus\>Dé-\>i \>qui\>tóllis\>peccáta\>múndi\>exáu-\>di \textit{nos}\>Dó\>mine.\\
+\>Ágnus\>Dé-\>i \>qui\>tóllis\>peccáta\>múndi\>mise-\>re\textit{ré}\>\>nóbis.\\
 \end{nstabbing}%
 \gresetinitiallines{0}\gabcsnippet{(c4) <c><sp>V/</sp>.</c> Con(h)stí(h)tu(h)it(h) éum(h) dó(h)mi(h)num(h) dó(h)mus(h) sú(h)ae.(f.) (::)}
 \hspace{2pt}\red{\Rbar.} Et \hspace{3pt}príncipem \hspace{3pt}ómnis \hspace{3pt}possessiónis \hspace{3pt}súae.\segmentspace
@@ -559,10 +587,8 @@
 \grechangedim{spacelinestext}{24pt}{scalable} % odstęp między linią a dołem tekstu
 \grechangedim{intersyllablespacenotes}{0.2cm}{scalable}% Minimalna odległość między nutami różnych sylab.
 \gresetinitiallines{1}\gabcsnippet{(c4) Bo(d)gu(c)ro(f)dzi(eDC)ca(d.) (;) Dzie(f)wi(gfg)ca(h.) (,) Bo(j)giem(k) sła(j)wie(hGF)na(f_) Ma(fghg)ry(ec)ja!(d.) (:) U(k) Twe(j)go(hGF) Sy(gfg)na,(h'.) Gos(j)po(k)dzi(jHG)na,(f.) (,) Ma(j)tko(hGF) zwo(fghg)le(ec)na,(d.)(;) Ma(fghg)ry(ec)ja.(d.) (:) Z(f)iści(gfg) nam,(h.) (,) spu(j)ści(i) nam!(k.) (:) Ky(j)ri(h)e,(gf_) e(fghg)le(e)i(d)son.(d.)(:) Twe(de)go(dc) dzie(f)la(g) Chrzci(e)cie(c)la,(d.)(,) Bo(fghg)życ(ec)ze,(d.)(:) u(h)słysz(gf) gło(gfg)sy,(h.)(,) na(d)pełń(c) my(f)śli(g) czło(e)wie(c)cze.(d.) (,) Słysz(c) mo(f)dli(g)twę,(ede) jąż(c) no(d)si(e)my.(d.) (;) A(h) dać(gf) ra(gfg)czy,(h.) (,)Je(de)goż(dc) pro(f)si(g)my:(h.) (;) A(j) na(h) świe(j)cie(g_) zbo(j)żny(hGF) po(gfg)byt,(h.) (,) po(h) ży(j)wo(k)cie(g_) raj(j)ski(hGF) prze(gfg)byt!(h.) (:) Ky(h)ri(g)e,(f_) e(fghg)le(e)i(d)son.(d.) (::)}\segmentspace
-\gresetinitiallines{1}\gabcsnippet{(c4) Sanc(h)ta(g) Ma(h)ri(j)a,(j.) (,)Ma(j_)ter(ij) nos(h)tra(h) dul(ij)cis(k)si(ji)ma,(g.) (,)pro(h)te(e)ge(h) fi(j)li(j)os(ij) tu(h.)os,(h.)(:) qui(h) sub(ij) tu(k)um(i) con(kl)fu(j)gi(h)mus(g.) (,) pa(h)tro(e)ci(g)ni(h)um.(h.) (::)}
-\vspace{-16pt}
-\tlumaczR{Święta Maryjo, Matko nasza najsłodsza, chroń swo-\newline}
-\tlumaczR{je dzieci, które schroniły się pod Twoim patronatem.}
+\gresetinitiallines{1}\gabcsnippet{(c4) Sanc(h)ta(g) Ma(h)ri(j)a,(j.) (,)Ma(j_)ter(ij) nos(h)tra(h) dul(ij)cis(k)si(ji)ma,(g.) (,)pro(h)te(e)ge(h) fi(j)li(j)os(ij) tu(h.)os,(h.)(:) qui(h) sub(ij) tu(k)um(i) con(kl)fu(j)gi(h)mus(g.) (,) pa(h)tro(e)ci(g)ni(h)um.(h.) (::)}\linespace
+\tlumaczR{Święta Maryjo, Matko nasza najsłodsza, chroń swoje dzieci, które uciekają się pod Twój patronat.}
 \dekor{0.4}{maria02.jpg}
 \pagebreak
 \thispagestyle{empty}
@@ -570,7 +596,7 @@
 \vspace{-26pt}
 \columnratio{0.5}
 \BeginParallel\fontsize{14}{18}\selectfont
-	 \latN{\inicjal{S}{acrosánctae} t indivíduae Trinitáti, crucifíxi Dómini nóstri Jésu Chrísti humanitáti, beatíssimae et gloriosíssimae sempérque Vírginis Maríae foecúndae integritáti, et ómnium Sanctórum universitáti sit sempitérna láus, hónor, vírtus et glória ab ómni creatúra, nobísque remíssio ómnium peccatórum, per infiníta saécula saeculórum. Amen.} 
+	 \latN{\inicjal{S}{acrosánctae} et indivíduae Trinitáti, crucifíxi Dómini nóstri Jésu Chrísti humanitáti, beatíssimae et gloriosíssimae sempérque Vírginis Maríae foecúndae integritáti, et ómnium Sanctórum universitáti sit sempitérna láus, hónor, vírtus et glória ab ómni creatúra, nobísque remíssio ómnium peccatórum, per infiníta saécula saeculórum. Amen.} 
 	\pol{\inicjal{N}{ajświętszej} i~niepodzielnej Trójcy, człowieczeństwu ukrzyżowanego Pana naszego Jezusa Chrystusa, płodnemu dziewictwu błogosławionej i~najchwalebniejszej zawsze Dziewicy Maryi oraz wspólnocie wszystkich świętych niech będzie wieczna chwała, cześć, moc i~sława od wszelkiego stworzenia, a~nam odpuszczenie wszystkich grzechów, przez nieskończone wieki wieków. Amen.}
 	\latN{\red{\Vbar.}~Beáta víscera Maríae Vírginis, quáe portavérunt aetérni Pátris Fílium.\\ \red{\Rbar.}~Et beáta úbera, quáe lactavérunt Chrístum Dóminum.}
 	\pol{\red{\Vbar.}~Błogosławione łono Maryi Dziewicy, które nosiło Syna Ojca przedwiecznego.\\ \red{\Rbar.}~I~błogosławione piersi, które karmiły Chrystusa Pana.}
@@ -586,6 +612,4 @@ Wierzę w Ducha Świętego, święty Kościół powszechny, świętych obcowanie
 \pagenumbering{gobble}
 \dekor{0.35}{logo_ua.jpg}
 % ----------------------.
-\fi% koniec bloku debug | \noindent\hrulefill \red{†}~  \red{*}~
-% ----------------------' é á í ó ú ý æ ǽ œ Á, É, Í, Ó, Ú, Ý Æ Ǽ Œ \'{\oe} \'{\OE}
 \end{document}

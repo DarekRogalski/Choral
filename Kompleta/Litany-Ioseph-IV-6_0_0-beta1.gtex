@@ -4,13 +4,13 @@
 \GreBeginHeaders %
 \GreHeader{name}{Litany IV}%
 \GreEndHeaders %
-\GreBeginScore{de0ac41fc2d821cea888f65b6c1cf0c994157d51}{13}{8}{0}{0}{}{4}{\GreInitialClefPosition{4}{0}}%
+\GreBeginScore{0c2d7bf6479f536b4ad38645e4a39392399ae7ec}{13}{8}{0}{0}{}{4}{\GreInitialClefPosition{4}{0}}%
 \GreSetLargestClef{c}{4}{3}{c}{0}{3}%
 \GreScoreOpening{%
 }{%
 \GreSetInitialClef{c}{4}{3}{c}{0}{3}{1}%
 }{%
-}{\GreSyllable}{\GreSetFirstSyllableText{A}{}{}{{}{\GreFirstWord{}}{}}{{}{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{A}}}}{}}{\GreEmptyFirstSyllableHyphen}}{}{\GreFirstWord}{0}{\GreSetNextSyllable{\GreFirstWord{gn}}{\GreFirstWord{u}}{\GreFirstWord{s}}{\GreFirstWord{g}}{\GreFirstWord{n}\GreFirstWord{u}\GreFirstWord{s}}}{}{{0}{0}}{}{%
+}{\GreSyllable}{\GreSetFirstSyllableText{Á}{}{}{{}{\GreFirstWord{}}{}}{{}{\GreFirstWord{\GreFirstSyllable{\GreFirstSyllableInitial{Á}}}}{}}{\GreEmptyFirstSyllableHyphen}}{}{\GreFirstWord}{0}{\GreSetNextSyllable{\GreFirstWord{gn}}{\GreFirstWord{u}}{\GreFirstWord{s}}{\GreFirstWord{g}}{\GreFirstWord{n}\GreFirstWord{u}\GreFirstWord{s}}}{}{{0}{0}}{}{%
 \GreSyllableNoteCount{1}%
 % verbatim text at element level:
 \grealign%
