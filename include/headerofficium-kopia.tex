@@ -33,6 +33,8 @@
 %\renewcommand*{\thepage}{\footnotesize{\arabic{page}}}% mniejsza czcionka numeru strony, dodanie czegokolwiek przed numerem: {A--\arabic{page}}
 
 % --------------------------------------------------------------------------------------
+\setlength{\topskip}{0pt}
+\setlength{\parskip}{0pt}
 \newcommand{\margintext}[1]{\textit{\small #1}}
 % przesunięcia poziome
 \newcommand{\smallwidth}{\hskip 1em}
@@ -254,9 +256,9 @@
 \newcommand{\rubryka}[1]{
 	\begin{spacing}{1}
 	\begin{center}
-	\begin{polish}
+	\begin{otherlanguage*}{polish}%
 		\parbox{\textwidth}{\centering\footnotesize\textit{\red{#1}}}
-	\end{polish}	
+	\end{otherlanguage*}%	
 	\end{center}
 	\end{spacing}
 	\linespace}
@@ -268,11 +270,11 @@
 \titlespacing*{\chapter}{0pt}{-40pt}{0pt}	
 \titleformat{\chapter}[hang]{\filcenter\scshape\bfseries\Large\sekcjafont}{}{0pt}{} % format nagłówków
 \newcommand{\rozdzial}[2]{
-	\begin{latin}
+	\begin{otherlanguage*}{latin}%
 		\chapter{#1}
 		\vspace{-1em}
 		\rubryka{#2}
-	\end{latin}}
+	\end{otherlanguage*}}%
 % -----------------------------------------------------------------------------------
 % ----------------------------------- SEKCJA -------------------------------------
 % -----------------------------------------------------------------------------------
@@ -281,11 +283,11 @@
 \newcommand{\sekcja}[2]{
 	\begin{spacing}{0.6}
 	\begin{center}
-	\begin{latin}
+	\begin{otherlanguage*}{latin}%
 		\segmentspace
 		\section*{#1}
 		\rubryka{#2}
-	\end{latin}
+	\end{otherlanguage*}%
 	\end{center}	
 	\end{spacing}
 	\linespace}	
@@ -297,9 +299,9 @@
 \newcommand{\subsekcja}[1]{
 	\segmentspace
 %	\begin{center}
-	\begin{latin}
+	\begin{otherlanguage*}{latin}%
 		\subsection*{\red{#1}}
-	\end{latin}		
+	\end{otherlanguage*}%		
 %	\end{center}
 	\segmentspace}
 % -----------------------------------------------------------------------------------
@@ -309,26 +311,26 @@
 \titleformat{\subsubsection}[hang]{\normalfont\subsubsekcjafont}{}{0pt}{} % format podnagłówków
 \newcommand{\subsubsekcja}[1]{
 	\linespace
-	\begin{latin}
+	\begin{otherlanguage*}{latin}%
 		\subsubsection*{#1}
-	\end{latin}		
+	\end{otherlanguage*}%	
 	\linespace}
 % -----------------------------------------------------------------------------------
 % ----------------------------------- TYTUŁ -------------------------------------
 % -----------------------------------------------------------------------------------
 \newcommand{\tytul}[1]{
-	\begin{latin}
+	\begin{otherlanguage*}{latin}%
 		\red{\large\scshape{#1}}
 		\linespace
-	\end{latin}}
+	\end{otherlanguage*}}%
 % -----------------------------------------------------------------------------------
 % --------------------------------- PODTYTUŁ ---------------------------------
 % -----------------------------------------------------------------------------------
 \newcommand{\podtytul}[1]{
-	\begin{latin}
+	\begin{otherlanguage*}{latin}%
 		\red{\normalfont\scshape{#1}}
 		\linespace
-	\end{latin}}
+	\end{otherlanguage*}}%
 % -----------------------------------------------------------------------------------
 % ----------------------------------- DEKOR ------------------------------------
 % -----------------------------------------------------------------------------------
@@ -394,10 +396,23 @@
 % ----------------------------- sztuczny znak (linia) wymuszająca wysokość pierwszej linii tekstu -----------------------------------
 \newcommand\mystrut{\rule{0pt}{17pt}} %\tikz[overlay]\draw[red](0,0)--++(16,0)%\footnotesize
  %-----------------------------------------------------------------------------------------------------
-\newcommand{\BeginParallel}{\begin{sloppypar}\begin{paracol}{2}\licznikZero \lineskip=0pt}
+ % 
+ %
+ %
+ %
+ %-----------------------------------------------------------------------------------------------------
+\newcommand{\BeginParallel}[1]{%
+	\setlength{\parskip}{0pt}%
+	\columnratio{#1}%
+	\begin{sloppypar}
+	\begin{paracol}{2}
+	\licznikZero
+	\lineskip=0pt
+}%
 % dwie kolumny z automatyczną numeracją:
-\newcommand{\lat}[1]{
-		\begin{leftcolumn*}\noindent\mystrut
+\newcommand{\latNum}[1]{% kolumna lat z aut. numeracją normalny tekst, odstęp między akapitami 1em
+		\begin{leftcolumn*}%
+			\noindent\mystrut
 			\ifnum \value{licznik}>0 
 				\licznikUp
 				\latinfont\textlatin{\thelicznik .~#1}
@@ -406,26 +421,45 @@
 				\latinfont#1 
 			\fi
 		\end{leftcolumn*}
+		\setlength{\parskip}{1em}
 }
-\newcommand{\pol}[1]{%
+\newcommand{\lat}[1]{% kolumna lat bez aut. numeracji normalny tekst, odstęp między akapitami 0
+	\begin{leftcolumn*}
+	\begin{otherlanguage*}{latin}
+			{#1}
+	\end{otherlanguage*}
+	\end{leftcolumn*}
+	%\setlength{\parskip}{1em}	
+}
+\newcommand{\pol}[1]{% kolumna lat bez aut. numeracji normalny tekst, odstęp między akapitami 1em
 	\begin{rightcolumn}
 	\begin{otherlanguage*}{polish}%
 				\textit{#1}
 	\end{otherlanguage*}
-	\end{rightcolumn}	
+	\end{rightcolumn}
+	\setlength{\parskip}{1em}	
 }% wersja dla tłumaczenia psalmów z dużą czcionką
-\newcommand{\latN}[1]{% kolumna lat bez aut. numeracji normalny tekst
+\newcommand{\latN}[1]{% kolumna lat bez aut. numeracji normalny tekst, odstęp między akapitami 0
 	\begin{leftcolumn*}
 	\begin{otherlanguage*}{latin}
 			{#1}
 	\end{otherlanguage*}
 	\end{leftcolumn*}
 }
+\newcommand{\polN}[1]{% kolumna lat bez aut. numeracji normalny tekst, odstęp między akapitami 0
+	\begin{rightcolumn}
+	\begin{otherlanguage*}{polish}
+			{#1}
+	\end{otherlanguage*}
+	\end{rightcolumn}
+}
 \newcommand{\latNPs}[1]{% kolumna lat bez aut. numeracji dla psalmów - zagęszczony tekst
-	\begin{leftcolumn*}\begin{minipage}{\columnwidth}\vspace{-3pt}\noindent\mystrut
+	\begin{leftcolumn*}
+	\begin{minipage}{\columnwidth}\vspace{-3pt}\noindent\mystrut
 			%\ensurevspace{2\baselineskip}
 			\latinfontPs{#1}
-	\end{minipage}\end{leftcolumn*}
+	\end{minipage}
+	\end{leftcolumn*}
 }
 \newcommand{\polPs}[1]{% kolumna pl bez numeracji wersów
 	\begin{rightcolumn}
@@ -435,7 +469,10 @@
 	\end{minipage}
 	\end{rightcolumn}	
 }% wersja dla tłumaczenia psalmów z mniejszą czcionką \justifying 
-\newcommand{\EndParallel}{\end{paracol}\end{sloppypar}}
+\newcommand{\EndParallel}{%
+	\end{paracol}
+	\end{sloppypar}
+}
 % ------------------------------------------------------------------------------------------
 % ------------------------ pokazuje bieżącą wielkość czcionki -----------------------------
 \makeatletter
