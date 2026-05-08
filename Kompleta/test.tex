@@ -1,0 +1,78 @@
+% !TEX program = lualatex
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape -halt-on-error %DOC%
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[twoside, a4paper]{extreport}
+\usepackage{scrextend}
+\changefontsizes{16pt} % ustawia 16pt jako bazę dla całego dokumentu
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium-kopia}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\gresetlastline{ragged}
+% koniec 
+
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+\def\mydebug{1}% 0 - debugowanie, 1 - bez debugowania (wyłącza bloki \if\mydebug1)
+\begin{document}
+% -----------------------------------------------------------------------------------
+% ------------------------- STRONA TYTUŁOWA --------------------------
+\thispagestyle{empty}
+\BeginParallel{0.5}
+\fontsize{17}{16}\selectfont
+\latN{Kýrie, eléison. Chríste, eléison. Kýrie, eléison.}\polN{Kyrie, eleison. Chryste, eleison. Kýrie, eléison.}%
+\latN{Chríste, áudi nos. Chríste, exáudi nos.}\polN{Chryste, usłysz nas. Chryste, wysłuchaj nas.}%
+\latN{Páter de caélis, Déus, \textbf{miserére nóbis.}}\polN{Ojcze z nieba, Boże, \textbf{zmiłuj się nad nami.}}%
+\latN{Fíli, Redémptor múndi, Déus, }\polN{Synu, Odkupicielu świata, Boże,}%
+\latN{Spíritus Sáncte, Déus, }\polN{Duchu Święty, Boże,}%
+\latN{Sáncta Trínitas, únus Déus, }\polN{Święta Trójco, Jedyny Boże,}%
+\latN{Sáncta María, \textbf{ora pro nobis.}}\polN{Święta Maryjo, \textbf{módl się za nami.}}%
+\latN{Sáncte Ióseph,}\polN{Święty Józefie,}%
+\latN{Próles Dávid ínclita,}\polN{Przesławny potomku Dawida,}%
+\latN{Lúmen Patriarchárum,}\polN{Światło Patriarchów,}%
+\latN{Déi Genitrícis Spónse,}\polN{Oblubieńcze Bogarodzicy,}%
+\latN{Cústos pudíce Vírginis,}\polN{Przeczysty stróżu Dziewicy,}%
+\latN{Fílii Déi nutrície,}\polN{Żywicielu Syna Bożego,}%
+\latN{Chrísti defénsor sédule,}\pol{Troskliwy obrońco Chrystusa,}%
+\latN{Almae Famíliae praéses,}\polN{Głowo Najświętszej Rodziny,}%
+\latN{Ióseph iustíssime,}\polN{Józefie najsprawiedliwszy, }%
+\latN{Ióseph castíssime,}\polN{Józefie najczystszy,}%
+\latN{Ióseph prudentíssime,}\polN{Józefie najroztropniejszy,}%
+\latN{Ióseph fortíssime,}\polN{Józefie najmężniejszy,}%
+\latN{Ióseph oboedientíssime,}\polN{Józefie najposłuszniejszy,}%
+\latN{Ióseph fidelíssime,}\polN{Józefie najwierniejszy,}%
+\latN{Spéculum patiéntiae,}\polN{Zwierciadło cierpliwości,}%
+\latN{Amátor paupertátis,}\polN{Miłośniku ubóstwa,}%
+\latN{Exémplar opíficum,}\polN{Wzorze pracujących,}%
+\latN{Domésticae vítae décus,}\polN{Ozdobo życia rodzinnego,}%
+\latN{Cústos vírginum,}\polN{Opiekunie dziewic,}%
+\latN{Familiárum colúmen,}\polN{Podporo rodzin,}%
+\latN{Solátium miserórum,}\polN{Pociecho nieszczęśliwych,}%
+\latN{Spés aegrotántium,}\polN{Nadziejo chorych,}%
+\latN{Patróne moriéntium,}\polN{Patronie umierających,}%
+\latN{Térror daémonum,}\polN{Postrachu duchów piekielnych,}%
+\latN{Protéctor sánctae Ecclésiae,}\polN{Opiekunie Kościoła świętego,}%
+\latN{Agnus Déi, quí tóllis peccáta múndi, párce nóbis, Dómine.}\polN{Baranku Boży, który gładzisz grzechy świata, przepuść nam, Panie.}%
+\latN{Agnus Déi, quí tóllis peccáta múndi, exáudi nos, Dómine.}\polN{Baranku Boży, który gładzisz grzechy świata, wysłuchaj nas, Panie.}%
+\latN{Agnus Déi, quí tóllis peccáta múndi, miserére nóbis.}\polN{Baranku Boży, który gładzisz grzechy świata, zmiłuj się nad nami.}%
+\latN{\red{\Vbar.} Constítuit éum dóminum dómus súae.}\polN{\red{\Vbar.} Ustanowił go panem domu swego.}%
+\latN{\red{\Rbar.} Et príncipem ómnis possessiónis súae.}\polN{\red{\Rbar.} I zarządcą wszystkich posiadłości swoich.}%
+\EndParallel
+\end{document}

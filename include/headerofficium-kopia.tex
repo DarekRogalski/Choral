@@ -31,7 +31,7 @@
 	\renewcommand{\footrulewidth}{0pt}%
 	}
 %\renewcommand*{\thepage}{\footnotesize{\arabic{page}}}% mniejsza czcionka numeru strony, dodanie czegokolwiek przed numerem: {A--\arabic{page}}
-
+\hbadness=10000 % TeX zignoruje luzy w liniach poniżej tej wartości
 % --------------------------------------------------------------------------------------
 \setlength{\topskip}{0pt}
 \setlength{\parskip}{0pt}
@@ -257,7 +257,7 @@
 	\begin{spacing}{1}
 	\begin{center}
 	\begin{otherlanguage*}{polish}%
-		\parbox{\textwidth}{\centering\footnotesize\textit{\red{#1}}}
+		\parbox{\textwidth}{\centering\footnotesize\itshape\textcolor{myRed}{#1}}
 	\end{otherlanguage*}%	
 	\end{center}
 	\end{spacing}
@@ -428,8 +428,8 @@
 	\begin{otherlanguage*}{latin}
 			{#1}
 	\end{otherlanguage*}
-	\end{leftcolumn*}
-	%\setlength{\parskip}{1em}	
+	\end{leftcolumn*}	
+	\setlength{\parskip}{1em}
 }
 \newcommand{\pol}[1]{% kolumna lat bez aut. numeracji normalny tekst, odstęp między akapitami 1em
 	\begin{rightcolumn}
@@ -437,7 +437,7 @@
 				\textit{#1}
 	\end{otherlanguage*}
 	\end{rightcolumn}
-	\setlength{\parskip}{1em}	
+%	\setlength{\parskip}{1em}	
 }% wersja dla tłumaczenia psalmów z dużą czcionką
 \newcommand{\latN}[1]{% kolumna lat bez aut. numeracji normalny tekst, odstęp między akapitami 0
 	\begin{leftcolumn*}
