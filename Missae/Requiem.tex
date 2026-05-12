@@ -1,0 +1,190 @@
+% !TEX TS-program = lualatex+se+debug
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=10mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{22}%rozmiar wyniku GregorioTEX
+\gresetlastline{ragged}% justowanie do lewej
+\grechangestyle{initial}{\greIniZallmanCaps\fontsize{36}{20}\selectfont} 
+\grechangedim{commentaryraise}{4pt}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+% koniec 
+
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+%\def\mydebug{1}
+\begin{document}
+%\makeatletter
+%\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+%\makeatother
+\pagestyle{empty}
+%\pagestyle{plain}	
+\large
+\begin{spacing}{0.7}
+\begin{center}
+	\section*{Missa pro Defunctis}
+	\small\textit{Liber Usualis, p.1807\\}
+	\small\textit{}
+	%\vspace{1mm}
+\end{center}	
+\end{spacing}
+% <c><v>*</v></c>
+% <c><v>†</v></c>
+% <c><i>Ps.</i></c> 
+% <c><c><c><sp>V/</sp>.</c></c>.</c>
+% <c><i>ij.</i></c>
+% -------------------- INTROIT -------------------- 
+%\greannotation{} 
+\vspace{-5pt}
+\greannotation{Intr.} 
+\greannotation{6.} 
+\grecommentary[4mm]{4 Esdr 2: 34, 35; Ps 64: 2-3}
+\gresetinitiallines{1}\gabcsnippet{(c4) RE(ffg)qui(f)em(f) <c><v>*</v></c>() æ(fg'h)tér(hggfg)nam(gf..) (;) do(fg'h)na(hg) e(h)is(ixhjHG'hw!ivHG') Dó(f)mi(fg!hvGF'g)ne:(gf..) (:)
+et(hg~) lux(hvGF') per(h)pé(gh)tu(gf)a(f.) (;) lú(hg)ce(h)at(ixhjHG'hw!ivHG) e(fg!hvGF'g)is.(gf..) (::)
+<c><i>Ps.</i></c> Te(fg) de(gf)cet(gh) hym(h)nus(h) De(h)us(h) in(h) Si(g)on,(h.) (;) et(f) ti(g)bi(h) red(h)dé(h)tur(h) vo(h)tum(h) in(h) Je(g)rú(ixi)sa(g)lem:(h.) <c><v>*</v></c>(:)
+ex(f)áu(gh~)di(h) o(h)ra(h)ti(h)ó(h)nem(h) me(h)am,(h.) (;) ad(h) te(h) om(h)nis(h) ca(f)ro(gh) vé(g)ni(f)et.(f.) (::)
+Ré(ffg)qui(f)em.(f) (::)
+}
+\linespace
+%\tlumaczR{\red{Ga 6:14} A myśmy się chlubić powinni Krzyżem Pana naszego Jezusa Chrystusa; w Nim jest zbawienie, życie i zmartwychwstanie nasze; przez Niego jesteśmy zbawieni i oswobodzeni. \red{Ps 66:2} Niech Bóg się zmiłuje nad nami i nam błogosławi: niech nam ukaże pogodne oblicze i zmiłuje się nad nami. Chwała Ojcu…}\sectionspace
+%
+% -------------------- GRADUALE -------------------- 
+%
+%\greannotation{} 
+\grechangedim{commentaryraise}{10pt}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+\greannotation{Grad.} 
+\greannotation{2.} 
+\grecommentary[4mm]{4 Esdr 2: 34, 35; Ps 111: 7}
+\gresetinitiallines{1}\gabcsnippet{(c3) RE(egf)qui(f)em(f.) <c><v>*</v></c>() æ(f)tér(hfghvF'Ege/fg)nam(f.) (;) do(hf/hi'j)na(hvGF') e(f)is(gxfegvFE.) (,) Dó(e[ll:1]d/fef)mi(fef)ne:(fd/ef!hvvF'E//f!gwh/ihh/fgf.) (:)
+et(hh) lux(h) per(h)pé(hg/hi!jvHGhhg,i_hivHF')tu(f)a(fhF'Efhhf//hvvGF'hee[ll:1]d.0) (:)
+lú(de'fhvGF'g)ce(e)at(f) e(hf/h_i)is.(ih/ijI'H) (,) (jh/jkIG'hvF'E//f!gwh!iv.hi'j) (,) (ijijHF'gwhf.1) (::)
+<c><sp>V/</sp>.</c> In(f) me(h)mó(hi)ri(i)a(i) æ(ij)tér(jvI'HG'hvF'E,ge/f!hh/ijij.,hj!kvIG'hvF'E//fgF'Ef.,i!jwk_[hl:1]jkvJI'j)na(ji..) (:)
+e(i!jw!kvJI'jw!kvJI)rit(ij) jus(j_hjvIH'hf//hhfhv.hhh_f,hi!jvIHjvIHif)tus:(f.) (:)
+ab(hh) au(h)di(h)ti(h)ó(h)ne(hi) ma(ivH'GE//fhGEfh..,gi!jvHF)la(fhF'Efhhf//hvvGF'/!hee[ll:1]d.0) <c><v>*</v></c>(:)
+non(de'fhvGF'g) ti(ef)mé(hf/h_i)bit.(i_jH'Ghi..) (,) (ef'hh'jIH'GF'gwhf.1) (::)}
+\grechangedim{commentaryraise}{4pt}{scalable} % podnosi komentarz wystarczająco ponad górną linię
+\pagebreak
+\grechangestaffsize{22}%rozmiar wyniku GregorioTEX
+%
+% -------------------- ALLELUIA -------------------- 
+%
+%\greannotation{} 
+\greannotation{Tractus} 
+\greannotation{8.} 
+\grecommentary[4mm]{}
+\gresetinitiallines{1}\gabcsnippet{(c4) AB(g)sól(g/hih)ve,(g/hhg.) (,) ~~~<c><v>*</v></c> Dó(gjjk)mi(h)ne,(gf/ghhg.) (;) á(gj)ni(j)mas(j) óm(j)ni(j)um(j) fi(j)dé(hj)li(j)um(j.) (,) de(j)func(j)tó(ik/ljjh)rum(jhhg/hg/jjh/jggf.0) (:)
+ab(f) om(hj)ni(igh) vín(gf/gh)cu(g)lo(g.) (,) de(g)lic(gh/jij)tó(j.h!iwj)rum.(jjjvIHivHGhg..) (::)
+<c><sp>V/</sp>. 2.</c> Et(g) grá(gj)ti(j)a(j) tu(j)a(j.) (,) il(j)lis(j) suc(j)cur(j)rén(ik/ljjh)te,(jhhg/hg/jjh/jggf.0) (:)
+me(f)re(f)án(hj)tur(igh) e(gf)vá(gh)de(g)re(g.) (,) ju(g)dí(gh)ci(g)um(g) ul(g)ti(gh/jij)ó(j.h!iwj)nis.(jjjvIHivHGhg..) (::)
+<c><sp>V/</sp>. 3.</c> Et(g) lu(gj)cis(j) æ(j)tér(ik/ljjh)næ(jhhg/!hg/!jjh/!jggf.0) (:)
+be(g)a(g)ti(g)tú(h_g/h!iwj)di(ghG'F)ne(f.) <c><v>*</v></c>(,) pér(f.0h!iwj'!kv)fru(j)i.(jijHGg'g/hggfg.) (,) (jjjkvJ'IH'/!hg/hjI'HG'ghf.1) (,) (h!iw!jvIH'ihhg.) (::)}
+
+%
+% -------------------- OFFERTORIUM -------------------- 
+%
+\grechangestaffsize{23}%rozmiar wyniku GregorioTEX
+%\greannotation{} 
+\greannotation{Offert.} 
+\greannotation{2.} 
+\grecommentary[4mm]{}
+\gresetinitiallines{1}\gabcsnippet{(f3) DO(f)mi(ef)ne(f) Je(f)su(fe) Chris(f)te,(fhffe.) <c><v>*</v></c>(,)
+Rex(hv.ghi) gló(gfh./ghf/gf)ri(ef)æ,(fhffe.) (;) lí(g)be(ef)ra(f) á(fg)ni(f)mas(f.) (,) óm(fg~)ni(f)um(f) fi(g)dé(gfh)li(fge)um(e) de(efh)func(gh)tó(f_g_f_)rum(f.) (;) de(f) pœ(ef)nis(f) in(f)fér(f!gwh_f)ni,(f.) (,) et(g) de(e) pro(f)fún(h)do(g) la(f_g_f_)cu:(f.) (:)
+lí(g)be(e)ra(f) e(h)as(hg) de(f) o(g)re(f) le(i)ó(ivvHF'E)nis,(f!gwhg.) (;) ne(e) ab(f)sór(h)be(g)at(f) e(g)as(f.) tár(ghf)ta(ef)rus,(f.) (;) ne(f) ca(f)dant(ec~) in(e) obs(fg)cú(g.f!gwh_f)rum:(f.) (:)
+sed(f.g!hwi) sí(hg~)gni(fg)fer(g.) sanc(gf~)tus(f!gwhg) Mí(fgf)cha(ef)el(f.) (;) re(f)præ(f)sén(hg~)tet(hi) e(ivvHF'E)as(fg..) (,) in(eg~) lu(g.f!gwh)cem(gf~) sanc(eg/hf~)tam:(f.) (:)
+<c><v>*</v></c>~Quam(f) o(f)lim(ec~) A(e)bra(fg)hæ(gf) pro(h)mi(hg)sís(fg)ti,(ffe.) (;) et(hi) sé(gf//hiHF'fe.//fhg/hig,fhg)mi(fge)ni(e_c) e(e!fwg/hf~)jus.(f.) (::)
+<c><sp>V/</sp>.</c>~Hós(e)ti(fh)as(hhg) et(fe~) pre(fh)ces(hhg.) (,) ti(e)bi(fh) Dó(h)mi(fgF'E)ne(e.) (,) lau(gf~)dis(gh) of(gf)fé(e)ri(ef)mus:(f.) (:)
+tu(f.g!hwi) sú(hg)sci(fg)pe(g.) (,) pro(f) a(f)ni(e)má(fh)bus(ghg) il(f.)lis,(f.) (;) qua(ih)rum(iji') hó(h)di(gh)e(f.) (,) me(f)mó(fe)ri(f)am(hg) fá(fg)ci(fe)mus:(e.) (:)
+fac(fg) e(e)as,(ec) Dó(e)mi(ef)ne,(f.) (,) de(h) mor(gff)te(e) trans(ghi~)í(iih)re(gf) ad(ghg) vi(f.)tam.(f.) (::)
+<c><v>*</v></c>~Quam(f) o(f)lim.(ec~) (::)}
+\linespace
+\grechangestaffsize{23}%rozmiar wyniku GregorioTEX
+%
+% -------------------- COMMUNIO -------------------- 
+%
+% <c><v>*</v></c>
+% <c><i>Ps.</i></c> 
+% <c><c><sp>V/</sp>.</c></c>
+% <c><i>ij.</i></c>
+%\greannotation{} 
+\greannotation{Comm.} 
+\greannotation{8.} 
+\grecommentary[4mm]{4 Esdrae 2: 35, 34}
+\gresetinitiallines{1}\gabcsnippet{(c4) LUX(h) æ(gf)tér(gh)na(g.) <c><v>*</v></c>(,)
+lú(h)ce(j)at(i) e(j)is,(h) Dó(g)mi(fg)ne:(g.) <c><v>*</v></c>(:)
+Cum(h) sanc(j)tis(i) tu(j)is(h) in(i) æ(j)tér(h)num,(ghg.) (,) qui(e)a(f) pi(gh)us(h) es.(g.) (::)
+<c><sp>V/</sp>.</c> Ré(g)qui(h)em(j) æ(j)tér(j)nam(j) do(j)na(j) e(j)is(k) Dó(k)mi(j)ne,(j.) (;) et(h) lux(j) per(j)pé(j)tu(j)a(j) lú(j)ce(i)at(j) e(h)is.(g.) <c><v>*</v></c>(::)
+Cum(h) sanc(j)tis(i) tu(j)is(h) in(i) æ(j)tér(h)num,(ghg.) (,) qui(e)a(f) pi(gh)us(h) es.(g.) (::)}
+%\tlumaczR{Chlebem, który Ja dam, jest Ciało moje na życie świata.}
+%
+% -------------------- COMMUNIO PSALTERIUM-------------------- 
+%
+\grechangestaffsize{18}%rozmiar wyniku GregorioTEX
+\greseteolcustos{manual}% ręczne ustawianie custosa
+%  <c>1. </c> (d+) - kustos przed linią
+%  (::Z-) - koniec linii bez kustosa
+%  (:: d+ Z) - koniec lini z kustosem d
+% <c><i> Ant.</i> </c> - dopisek czerwony Ant. po kustosu
+%\greannotation{} 
+\greannotation{} 
+\greannotation{5.} 
+\grecommentary[4mm]{Ps 5: 5-8, 12-13}
+\gresetinitiallines{0}\gabcsnippet{(c4)<c><v>\footnotesize{1.  }</v></c>De(g) pro(h)fún(j)dis(j) cla(j)má(j)vi(j) ad(j) <i>te</i>,(k) <b>Dó</b>(k)mi(jr)ne:(j.) <c><v>*</v></c>(:) Dó(h)mi(j)ne,(j) ex(j)áu(j)di(j) <i>vó</i>(i)<i>cem</i>(j) <b>mé</b>(h gr)am:(g.) (h+ ::)
+<c><v>\footnotesize{2.  }</v></c>Fí(g)ant(h) a(j)ú(j)res(j) tú(j)a(j)e(j) in(j)<i>ten</i>(k)<b>dén</b>(k jr)tes,(j.) <c><v>*</v></c>(:) in(h) vó(j)cem(j) de(j)pre(j)ca(j)ti(j)<i>ó</i>(i)<i>nis</i>(j) <b>mé</b>(h)a(gr)e.(g.) (h+ ::)
+<c><v>\footnotesize{3.  }</v></c>Si(g) in(h)i(j)qui(j)tá(j)tes(j) ob(j)ser(j)vá(j)ve(j)<i>ris</i>,(k) <b>Dó</b>(k)mi(jr)ne:(j.) <c><v>*</v></c>(:) Dó(h)mi(j)ne,(j) qú(j)is(j) <i>sus</i>(i)<i>ti</i>(j)<b>né</b>(h gr)bit?(g.) (h+ ::)
+<c><v>\footnotesize{4.  }</v></c>Quí(g)a(h) á(j)pud(j) te(j) pro(j)pi(j)ti(j)á(j)<i>ti</i>(k)<b>o</b>(k jr) est:(j.) <c><v>*</v></c>(:) et(h) próp(j)ter(j) lé(j)gem(j) tú(j)am(j) sus(j)tí(j)nu(j)<i>i</i>(i) <i>te</i>,(j) <b>Dó</b>(h)mi(gr)ne.(g.) (h+ ::)
+<c><v>\footnotesize{5.  }</v></c>Sus(g)tí(h)nu(j)it(j) á(j)ni(j)ma(j) mé(j)a(j) in(j) vér(j)<i>bo</i>(k) <b>é</b>(k jr)jus:(j.) <c><v>*</v></c>(:) spe(h)rá(j)vit(j) á(j)ni(j)ma(j) mé(j)<i>a</i>(i) <i>in</i>(j) <b>Dó</b>(h)mi(gr)no.(g.) (h+ ::)
+<c><v>\footnotesize{6.  }</v></c>A(g) cus(h)tó(j)di(j)a(j) ma(j)tu(j)tí(j)na(j) usqú(j)e(j) <i>ad</i>(k) <b>nóc</b>(k jr)tem:(j.) <c><v>*</v></c>(:) spé(h)ret(j) Is(j)ra(j)<i>ël</i>(i) <i>in</i>(j) <b>Dó</b>(h)mi(gr)no.(g.) (h+ ::)
+<c><v>\footnotesize{7.  }</v></c>Quí(g)a(h) á(j)pud(j) Dó(j)mi(j)num(j) mi(j)se(j)<i>ri</i>(k)<b>cór</b>(k)di(jr)a:(j.) <c><v>*</v></c>(:) et(h) co(j)pi(j)ó(j)sa(j) á(j)pud(j) é(j)<i>um</i>(i) <i>red</i>(j)<b>émp</b>(h)ti(gr)o.(g.) (h+ ::)
+<c><v>\footnotesize{8.  }</v></c>Et(g) íp(h)se(j) réd(j)i(j)<i>met</i>(k) <b>Is</b>(k)ra(jr)ël,(j.) <c><v>*</v></c>(:) ex(h) óm(j)ni(j)bus(j) in(j)i(j)qui(j)tá(j)<i>ti</i>(i)<i>bus</i>(j) <b>é</b>(h gr)jus.(g.) (h+ ::)
+}
+%\sectionspace
+%
+% -------------------- COMMUNIO powtórzone-------------------- 
+%
+\grechangestaffsize{23}%rozmiar wyniku GregorioTEX
+\greannotation{} 
+\greannotation{Resp.} 
+\greannotation{1.} 
+\grecommentary[4mm]{}
+\gresetinitiallines{1}\gabcsnippet{(c4) LI(d)be(dc)ra(d) me,(f.) Dó(e[ll:1]d/efd)mi(cd)ne,(d.) <c><v>*</v></c>(,) de(ef'g) mor(gf~)te(d') ae(f)tér(e[ll:1]d/ffd)na,(d.) (;) in(dec~) di(d)e(dg) il(g)la(gf'fe) tre(dc)mén(de!fvE~C~)da :(dc..) (:) <c><v>*</v></c> Quan(cd~)do(d) cae(ef'g)li(gvFE.) mo(ixeg/hig')vén(f)di(ef) sunt(d.) (,) et(deD'C) ter(d!ewf)ra :(e[ll:1]d..) (:) 
+<c><v>†</v></c> Dum(h) vé(ixhghf.0/g/higfvED)ne(e[ll:1]d)ris(d.) (,) ju(h)di(hg)cá(hjI'G)re(ghGF'ED.) saé(ef/gefe)cu(cd)lum(d.) (,) per(cfe/fg) i(g_[oh:h]c/d!ewf)gnem.(e[ll:1]d..) (::) 
+<c><sp>V/</sp>.</c> Tre(f)mens(e) fa(f')ctus(e) sum(d') e(e)go,(d.) (,) et(dc) tí(d!ewfe)me(dc)o,(c.) (;) dum(e) dis(f)cús(g')si(f)o(e') vé(f)ne(e[ll:1]d)rit,(d.) (,) at(dedd)que(c) ven(eg~)tú(ge)ra(fe) i(cd)ra.(d.) (::) <c><v>*</v></c> Quan(cd~)do(d) cae(ef'g)li(gvFE.) mo(ixeg/hig')vén(f)di(ef) sunt(d.) (,) et(deD'C) ter(d!ewf)ra.(e[ll:1]d..) (::) 
+<c><sp>V/</sp>.</c> Di(f)es(e') il(f)la,(d'_) di(e)es(dc) i(de)rae,(d.) (,) ca(d)la(e')mi(f)tá(g)tis(gh) et(gf~) mi(d')sé(f)ri(gf)ae,(f.) (;) di(e')es(f) ma(g)gna(f.) (,) et(fe) a(dc)má(d')ra(f) val(evD~C~)de.(d.) (::) <c><v>†</v></c> Dum(h) vé(ixhghf.0/g/higfvED)ne(e[ll:1]d)ris(d.) (,) ju(h)di(hg)cá(hjI'G)re(ghGF'ED.) saé(ef/gefe)cu(cd)lum(d.) (,) per(cfe/fg) i(g_[oh:h]c/d!ewf)gnem.(e[ll:1]d..) (::) 
+<c><sp>V/</sp>.</c> Ré(f)qui(e)em(f) ae(d')tér(e)nam(d.) (,) do(d)na(e) e(f)is(g) Dó(gf)mi(dc)ne :(c.) (;) et(fh) lux(hg) per(f)pé(g)tu(fe)a(d.) (,) lú(dc)ce(e)at(fe) e(d.)is.(d.) (::)}
+%\vspace{-22pt}
+\tlumaczR{}
+\sectionspace
+%\small{Tłumaczenia:}
+\tlumacz{\red{Introit: 4 Ezd 2:34; 2:35} Wieczny odpoczynek racz im dać, Panie, a światłość wiekuista niechaj im świeci.\\}
+\tlumacz{\red{Graduale: 4 Ezdr 2:34-35, Ps 111:7} Wieczny odpoczynek racz im dać, Panie, a światłość wiekuista niechaj im świeci. \red{\Vbar.}~W wiecznej pamięci będzie sprawiedliwy: nie będzie się lękał smutnej nowiny.\\}
+\tlumacz{\red{Tractus} Uwolnij, Panie, dusze wszystkich wiernych zmarłych od wszelkich więzów grzechowych. \red{\Vbar.}~A przy pomocy Twojej łaski niechaj unikną strasznego wyroku zatracenia. \red{\Vbar.}~I niech zażywają szczęścia wiecznej światłości.\\}
+\tlumacz{\red{Offertorium} Panie Jezu Chryste, Królu chwały, zachowaj dusze wszystkich wiernych zmarłych od kar piekielnych i głębokiej czeluści. Wybaw je z lwiej paszczęki, niech ich nie pochłonie piekło, niech nie wpadają w ciemności. Lecz chorąży święty Michał niech je stawi w światłości świętej:~\red{*} Którą niegdyś obiecałeś Abrahamowi i jego potomstwu. \red{\Vbar.}~Składamy Ci, Panie, ofiary i modły pochwalne, a Ty je przyjmij za te dusze, które dzisiaj wspominamy. Spraw, o Panie, niech przejdą ze śmierci do życia.~\red{*} Którą ...\\}
+\tlumacz{\red{Communio: 4 Ezdr 2:35; 2:34} Światłość wiekuista niechaj im świeci, o Panie:~\red{*}  Wśród Świętych Twoich na wieki, bo jesteś pełen dobroci.
+\red{\Vbar.}~Wieczny odpoczynek racz im dać, Panie, a światłość wiekuista niechaj im świeci.~\red{*} Wśród świętych Twoich na wieki, bo jesteś pełen dobroci.\\}
+
+% -------------------- Antyfona -------------------- 
+%\subsekcja{Ave Regina caelorum}
+%\greannotation{} 
+%\greannotation{Ant.} 
+%\greannotation{6.} 
+%%\grecommentary[4mm]{Joann 2: 7, 8, 9, 10-11}
+%\gresetinitiallines{1}\gabcsnippet{(c2) A(exfvED'e)ve(cdf.) <c><v>*</v></c>(,) Re(f)gí(gh)na(hgi) cae(hvGF)ló(ghf)rum,(f.) (;) A(exfvED'e)ve(cdf.) (,) Dó(f)mi(gh)na(hgi) An(hg~)ge(f)ló(ghf)rum :(f.) (::) Sal(f!gwh'!iv)ve(h) ra(ji)dix,(hvGF) sal(g')ve(h) por(gf~)ta,(f.) (;) Ex(f) qua(eyef) mun(fvDC'f)do(f'_) (,) lux(f) est(gh) or(ivHG'g)ta :(f.) (::) Gau(f)de(hj) Vir(ji)go(hvGF) glo(g')ri(h)ó(gf)sa,(f.) (;) Su(f)per(eyef) o(fvDC'f)mnes(f'_) (,) spe(f)ci(gh)ó(ivHG'g)sa :(f.) (::) Va(fh/jijIH)le,(h.) (,) o(j) val(ih)de(hg) de(f)có(gh)ra,(h.) (;) Et(ih~) pro(g) no(ghf)bis(f.) (,) Chri(gvFD'C)stum(f'_) <c><v>*</v></c>() ex(f)ó(ghf/ggf)ra.(f.) (::)}
+\end{document}
