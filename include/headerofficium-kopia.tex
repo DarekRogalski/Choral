@@ -188,7 +188,7 @@
 \newfontface\greIniZallmanCaps{Zallman Caps}% czcionka inicjału w czterolinii
 \newfontface\greIniPreciosa{Preciosa}% czcionka inicjału w czterolinii
 \newfontface\greIniFlorana{Florana}% czcionka inicjału w czterolinii
-\setdefaultlanguage[variant=ecclesiastic, hyphenation=liturgical,babelshorthands = true]{latin}
+\setdefaultlanguage[variant=ecclesiastic, hyphenation=liturgical,babelshorthands=false]{latin}
 \setotherlanguage{polish}
 
 %\setmainfont{Crimson}%ok
@@ -253,22 +253,38 @@
 % -------------------------------------------------------------------------------
 % ----------------------------------- RUBRYKA ---------------------------------
 % -------------------------------------------------------------------------------
-\newcommand{\rubryka}[1]{
-	\begin{spacing}{1}
-	\begin{center}
-	\begin{otherlanguage*}{polish}%
-		\parbox{\textwidth}{\centering\footnotesize\itshape\textcolor{myRed}{#1}}
-	\end{otherlanguage*}%	
-	\end{center}
-	\end{spacing}
-	\linespace}
+% wersja poprzednia \rubryka
+% \newcommand{\rubryka}[1]{
+% 	\begin{spacing}{1}
+% 	\begin{center}
+% 	\begin{otherlanguage*}{polish}%
+% 		\parbox{\linewidth}{\centering\footnotesize\itshape\textcolor{myRed}{#1}\par}
+% 	\end{otherlanguage*}%	
+% 	\end{center}
+% 	\end{spacing}
+% 	\linespace}
+
+\newcommand{\rubryka}[1]{%
+    \par\addvspace{6pt}% Inteligentny odstęp przed rubryką
+    \begin{otherlanguage*}{polish}%
+        \noindent% Likwiduje wcięcie akapitowe
+        \parbox{\textwidth}{% Szerokość pełnej strony A4
+            \footnotesize% Aktywuje relatywny rozmiar footnotesize dla aktualnej bazy
+            % Dynamicznie ustawiamy interlinię równą aktualnemu rozmiarowi czcionki 
+            % pomnożonemu przez 1.2 (standard dla pojedynczego odstępu w TeX)
+            \fontsize{\fsize}{\fpeval{1.2*\fsize}}\selectfont% fpeval mechanizm obliczeniowy wbudowany w LaTeX
+            \centering\itshape\textcolor{myRed}{#1}\par%
+        }%
+    \end{otherlanguage*}%
+    \par\addvspace{6pt}% Inteligentny odstęp po rubryce
+}
 % -----------------------------------------------------------------------------------
 % ---------------------------- STYLE NAGŁÓWKÓW------------------------
 % -----------------------------------------------------------------------------------
 % ----------------------------------- ROZDZIAŁ --------------------------------
 % -----------------------------------------------------------------------------------
 \titlespacing*{\chapter}{0pt}{-40pt}{0pt}	
-\titleformat{\chapter}[hang]{\filcenter\scshape\bfseries\Large\sekcjafont}{}{0pt}{} % format nagłówków
+\titleformat{\chapter}[hang]{\filcenter\Large\scshape\bfseries\sekcjafont}{}{0pt}{} % format nagłówków
 \newcommand{\rozdzial}[2]{
 	\begin{otherlanguage*}{latin}%
 		\chapter{#1}
@@ -279,7 +295,7 @@
 % ----------------------------------- SEKCJA -------------------------------------
 % -----------------------------------------------------------------------------------
 \titlespacing*{\section}{0pt}{0pt}{0pt}	
-\titleformat{\section}[hang]{\filcenter\scshape\normalfont\sekcjafont}{}{0pt}{} % format nagłówków
+\titleformat{\section}[hang]{\filcenter\normalfont\scshape\sekcjafont}{}{0pt}{} % format nagłówków
 \newcommand{\sekcja}[2]{
 	\begin{spacing}{0.6}
 	\begin{center}
@@ -477,7 +493,7 @@
 % ------------------------ pokazuje bieżącą wielkość czcionki -----------------------------
 \makeatletter
 \newcommand\fblsize{\f@baselineskip}
-\newcommand\fsize{\f@size pt}% informacje o czcionce: rozmiar
+\newcommand\fsize{\f@size}% informacje o czcionce: rozmiar
 \makeatother
 % --- ZNAKI SPECJALNE ---
 % 
