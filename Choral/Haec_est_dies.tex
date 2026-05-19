@@ -1,4 +1,5 @@
-% !TEX TS-program = lualatex+se+debug
+% !TEX program = lualatex
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape -halt-on-error %DOC%
 % !TEX encoding = UTF-8 Unicode
 
 \documentclass[14pt, twoside, a4paper]{extreport}
@@ -7,7 +8,7 @@
 % -----------------------------------------------------------------------------------
 \usepackage{geometry}
 \geometry{
-	left=10mm,
+	left=12mm,
 	right=10mm,
 	top=15mm,
 	bottom=15mm,
@@ -19,7 +20,7 @@
 % elementy zmienne co do headerofficium:
 \graphicspath{{../img/}} % katalog obrazów
 %\svgpath{{../include/}}
-\grechangestaffsize{20}%rozmiar wyniku GregorioTEX
+\grechangestaffsize{23}%rozmiar wyniku GregorioTEX
 % koniec 
 \gresetlastline{ragged}% justowanie do lewej
 % debugowanie:
@@ -29,20 +30,21 @@
 % \errorcontextlines
 %\def\mydebug{1}
 \begin{document}
+% ---- nuty bardziej ściśnięte -----
+% \makeatletter
+% \grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+% \makeatother
+% ------ nuty mniej ściśnięte ------
 \makeatletter
-\grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+% Zwiększa podstawowy odstęp między nutami i pozwala mu się mocno rozciągać
+\grechangedim{interwordspacenotes}{1.20063pc plus 1.0pc minus 0.15pc}{scalable}
+% Zwiększa przestrzeń między samymi słowami w tekście pod nutami
+\grechangedim{interwordspacetext}{0.35em plus 0.25em minus 0.1em}{scalable}
 \makeatother
+% ----------------------------------
 \pagestyle{empty}
 %\pagestyle{plain}	
-\large
-\begin{spacing}{0.7}
-\begin{center}
-	\section*{Haec est dies}
-	%\small\textit{Fontevraud Gradual\\}
-	\small\textit{Cantionale ecclesiasticum (Poznań 1933), p.1}
-	\vspace{5mm}
-\end{center}	
-\end{spacing}
+\sekcja{Haec est dies}{Cantionale ecclesiasticum (Poznań 1933), p.1}
 \greannotation{Ant.} 
 \greannotation{IV.2} 
 %\grecommentary[4mm]{}
