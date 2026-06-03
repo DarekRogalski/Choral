@@ -1,11 +1,8 @@
-% !TEX TS-program = lualatex+se
-% !TEX encoding = UTF-8
+% !TEX program = lualatex
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape -halt-on-error %DOC%
+% !TEX encoding = UTF-8 Unicode
 
-\documentclass[oneside, 12pt, a4paper]{book}
-%\usepackage[letterpaper,showframe]{geometry}
-\usepackage{fullpage} % redukcja marginesów
-\usepackage{setspace} % odstępy między liniami
-\usepackage{enumitem}% listy numerowane
+\documentclass[twoside, 12pt, a4paper]{extreport}
 \usepackage{geometry}
 \geometry{
 	left=15mm,
@@ -16,119 +13,22 @@
 	marginparsep=0mm
 	}
 	
-% --- GREGORIO ---	
-\usepackage{gregoriotex}
-\gresetlinecolor{gregoriocolor}
-\gresetheadercapture{annotation}{greannotation}{string}
-% Format annotation above initial
-\grechangestyle{annotation}{\small\bfseries}%
-\grechangedim{intersyllablespacenotes}{0.18cm}{scalable}%
+\newcommand{\wstawplik}[1]{\input{../../include/#1}}%skraca kod
+\wstawplik{headerofficium-kopia}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{20}%rozmiar wyniku GregorioTEX
+\grechangestyle{initial}{\greIniZallmanCaps\fontsize{36}{20}\selectfont} % ustawia czcionkę zdefiniowaną w sekcji czcionek o zmniejsza wielkość
+\gresetlastline{ragged}
+% koniec 
 
-\let\grelocalleftbox\localleftbox
-\let\grelocalrightbox\localrightbox
-
-% ------------------
-
-\usepackage[hyperindex=true]{hyperref}
-
-
-% --- SPIS TREŚCI -------
-%\usepackage{imakeidx}
-%\makeindex[title=Alfabetyczny spis program=texindy,options=-M styl.xdy]
-%\usepackage{filecontents}
-%\begin{filecontents*}{styl.xdy}
-%;;; xindy style file
-%(markup-locclass-list :open "\dotfill" :sep "")
-%(define-attributes (( "textbf" "default" )) )
-%(markup-locref   :attr  "textbf"     :open "\textbf{\hyperpage{" :close "}}")
-%(markup-locref   :attr  "textit"     :open "\textit{\hyperpage{" :close "}}")
-%(markup-locref   :attr  "textttt"     :open "\textttt{\hyperpage{" :close "}}")
-%(markup-locref   :attr  "texttsc"     :open "\texttsc{\hyperpage{" :close "}}")
-%(markup-locref   :attr  "default"     :open "\hyperpage{" :close "}")
-%\end{filecontents*}
-% -------------------------
-
-\usepackage{fullpage}
-\usepackage{multicol}
-
-% ---  Konfiguracja kolumn ---
-\usepackage{paracol}
-% \setlength{\columnseprule}{0.4pt}
-\colseprulecolor{red}
-\setcolumnwidth{.48\textwidth, .48\textwidth}
-\setlength{\columnsep}{.03\textwidth}
-\setlength{\columnseprule}{.1mm}
-% ----------------------------
-
-\footnotelayout{m}
-
-% --- UKŁAD DWUKOLUMNOWY Z TŁUMACZENIEM ---
-%\usepackage{tcolorbox}
-%\newtcolorbox{nutybox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=center}
-%\newtcolorbox{tlumbox}{size=minimal, colback=white, colframe=red, arc=0mm, width=\linewidth, halign=left, valign=top}
-% ------------------------------------------------------
-
-\usepackage{Tabbing}
-\usepackage{longtable}
-\usepackage[savepos]{zref}
-
-% --- CZCIONKI DOKUMENTU ---
-\usepackage[latin,polish]{babel}
-\usepackage{fontspec}
-\usepackage{times}
-\defaultfontfeatures{Ligatures=TeX}
-
-%\setmainfont[<font features>]{<name of font>} % sets the roman font
-%\setsansfont[<font features>]{<name of font>} % sets the sans font
-%\setmonofont[<font features>]{<name of font>} % sets the monospace font
-
-
-%\setmainfont{Libertinus Serif}
-%\newfontface\vectis{VectisMonumentalW01-Regular}
-%\def\greinitialformat#1{\fontsize{20}{20}\vectis #1}
-% --------------------------------
-
-% --- USTAWIENIA STRONY ---
-% usuwanie nagłówków/stopek z\,dokumentu
-\usepackage[indent=0pt]{parskip} % ustawianie paragrafów
-%\usepackage{setspace} % odstępy między liniami
-%\setstretch{1.5} % półtorej linii odległości między wierszami
-\usepackage{titlesec} % ustawianie nagłówków
-% -----------------------------
-
-% --- GRAFIKA I KOLORY ---
-\usepackage{xcolor} % kolory
-\usepackage{graphicx} % umożliwia import obrazów
-\graphicspath{{img/}} % katalog obrazów
-\usepackage{pgfornament}% ornamenty graficzne
-% --------------------------
-
-% --- KOMENDY WŁASNE ---
-\newcommand{\red}[1]{\textcolor{red}{#1}}
-\newcommand{\black}[1]{\textcolor{black}{#1}}
-\newcommand{\rubryka}[1]{
-	\begin{spacing}{0.8}
-	\centering 
-	\parbox{0.9\textwidth}{\centering\textcolor{red}{\small\textit{#1}}}
-	\end{spacing}
-	\vspace{3mm}
-	\normalsize\normalfont}
-\newcommand{\tlumacz}[1]{\textit{#1}}
-\newcommand{\inicjal}[2]{\textcolor{red}{\large\textbf{#1}}{#2}}
-% ---------------------------- 
-
-\newcommand{\dekor}[2]{
-	\begin{center}
-		\vspace*{\fill}
-		\includegraphics[width=#1\textwidth]{#2}
-		\vspace*{\fill}
-	\end{center}}
-
-% --- ZNAKI SPECJALNE ---
-% 
-%\newcommand †
-% --------------------------
-
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+\def\mydebug{1}% 0 - debugowanie, 1 - bez debugowania (wyłącza bloki \if\mydebug1)
 \begin{document}
 \pagestyle{plain}	
 \fontspec{times}
@@ -157,11 +57,17 @@
 	\vfill
 	\large\textit{Liber usualis, Solesmes, 1961, p.1320}
 \end{center}
-\newpage
-\pagenumbering{arabic}
-\input(include/modlitwy_wstepne.tex)
+\pagebreak
+\thispagestyle{empty}
+\sekcja{Ante Divinum officium}{Odmawia się po cichu w pozycji klęczącej kreśląc znak krzyża na ustach.}%
+\BeginParallel{0.5}
+	\latN{\inicjal{A}{péri},~\red{\grecross}~Dómine, méum ad benedicéndum nómen sánctum túum: múnda quoqúe cor méum ab ómnibus vánis, pervérsis et aliénis cogitatiónibus; intelléctum illúmina, afféctum inflámma, ut dígne, atténte ac devóte hoc Offícium recitáre váleam, et exaudíri mérear ánte conspéctum divínae Majestátis túae. Per Chrístum Dóminum nóstrum. Amen.\linespace}
+	\polN{\inicjal{O}{twórz},~\red{\grecross}~Panie, usta moje, dla błogosławienia świętego imienia Twego: oczyść także serce moje od wszelkich myśli próżnych, przewrotnych i~niewłaściwych; oświeć rozum, rozpal uczucie, abym godnie, uważnie i~pobożnie mógł odmówić to oficjum, i~zasłużył na wysłuchanie przed obliczem Twego Boskiego majestatu. Przez Chrystusa, Pana naszego. Amen.\linespace}
+ 	\latN{\inicjal{D}{ómine}, in unióne illíus divínae intentiónis, qúa ípse in térris laúdes Déo persolvísti, hanc tíbi Hóram persólvo.}
+	\polN{\inicjal{P}{anie}, w~zjednoczeniu z~tą Boską intencją, z~którą Ty sam, na ziemi będąc, chwałę Bogu zanosiłeś, Tobie te godziny zanoszę.}
+\EndParallel
 \dekor{0.4}{amdg800x533.jpg}
-\newpage
+\pagebreak
 %% -----------------  INCIPIT ---------------------
 \large
 \setstretch{1.1} 
@@ -304,7 +210,7 @@ Al(h)le(ixi)lú(hg~){ia}.(g.) (::)}
 \end{spacing}
 \inicjal{D}{óminus} possédit me in inítio viárum suárum, ántequam quidquam fáceret a princípio.\red{†} Ab ætérno ordináta sum, et ex antíquis ántequam terra fíeret.\red{*} Nondum erant abýssi, et ego iam concépta eram.
 \vspace{4mm}
-\input{include/capitulum_deo_gratias.tex}
+\wstawplik{capitulum_deo_gratias.tex}
 %% --- Hymnus ---
 \begin{spacing}{0.7}
 \begin{center}
@@ -362,7 +268,7 @@ A(ded)men.(cd..) (::)}
  <c>10.</c> Sic(e)ut(fe) lo(eh)cú(h)tus(h) est(h) <i>ad</i>(hg) <i>pa</i>(hi)<i>tres</i>(i) <b>nos</b>(hi)tros,(h.) <c><v>\greheightstar</v></c>(:) A(h)bra(h)ham(h) et(h) sé(h)mi(h)ni(h) e(h)<i>jus</i>(g) <i>in</i>(h) <b>sǽ</b>(f)cu(e)la.(e.) (::)
  <c>11.</c> Gló(e)ri(fe)a(eh) <i>Pa</i>(hg)<i>tri</i>,(hi) <i>et</i>(i) <b>Fí</b>(hi)li(h)o,(h.) <c><v>\greheightstar</v></c>(:) et(h) Spi(h)rí(h)<i>tu</i>(g)<i>i</i>(h) <b>Sanc</b>(f)to.(e.) (::)
  <c>12.</c> Sic(e)ut(fe) e(eh)rat(h) in(h) prin(h)cí(h)pi(h)o,(h) <i>et</i>(hg) <i>nunc</i>,(hi) <i>et</i>(i) <b>sem</b>(hi)per,(h.) <c><v>\greheightstar</v></c>(:) et(h) in(h) sǽ(h)cu(h)la(h) sæ(h)cu(h)<i>ló</i>(g)<i>rum</i>.(h) <b>A</b>(f)men.(e.) (::)}
- \newpage
+ \pagebreak
 \gresetinitiallines{1}\greannotation{Ant. 8. G}\gabcsnippet{(c3) BE(e)á(eh)tam(f) me(e') di(f)cent(e[ll:1]d~) (,) o(e_[uh:l]f)mnes(e'_[oh:h]) ge(f)ne(e[ll:1]d)ra(e)ti(ef)ó(d.)nes,(d.) (;) qui(d)a(e') fe(f)cit(e[ll:1]d) mi(e)hi(f) ma(h_i)gna(hg/hih.) (,) qui(f'_) pot(h)ens(g) est,(e[ll:1]d) al(ef)le(f)lú(e.){ia}.(e.) (::)}
 %% --- Oratio ---
 \begin{spacing}{0.7}
@@ -390,7 +296,7 @@ Orémus.\\
 \vspace{8mm}
 \gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>V/</sp>.</c> Ro(h)rá(h)te(h) caé(h)li(h) dé(h)su(h)per,(h) et(h) nú(h)bes(h) plú(h)ant(h) jús(h)tum.(f.) (::)}
 \gresetinitiallines{0}\gabcsnippet{(c3) <c><sp>R/</sp>.</c> A(h)pe(h)ri(h)á(h)tur(h) tér(h)ra(h) et(h) ger(h)mi(h)net(h) Sal(h)va(h)tó(h)rem.(f.) (::)}
-\newpage
+\pagebreak
 Orémus.\\
 \inicjal{E}{xcita}, Dómine, corda nostra ad præparándas Unigéniti tui vias: \red{†} ut, per eius advéntum,  \red{*} purificátis tibi méntibus servíre mereámur: Qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum.  
 \vspace{4mm}
@@ -421,34 +327,25 @@ Orémus.\\
 \gabcsnippet{(c3) <c><sp>R/</sp>.</c> A(e.)men(e.) (::)}
 \vspace{4mm}
 \dekor{0.2}{serceM.jpg}	
-\newpage
-\begin{spacing}{0.7}
-\begin{center}
-	\fontspec{Libertinus Serif}
-	\section*{Modlitwy końcowe}
-	\red{\footnotesize\textit{Odmawia się po cichu w~pozycji klęczącej jako dziękczynienie po oficjum.}}
-	\vspace{10mm}
-\end{center}	
-\end{spacing}
-\begin{paracol}{2}
-	\inicjal{S}{acrosánctæ} et indivíduæ Trinitáti, crucifíxi Dómini nostri Jesu Christi humanitáti, beatíssimæ et gloriosíssimæ sempérque Vírginis Maríæ fœcúndæ integritáti, et ómnium Sanctórum universitáti sit sempitérna laus, honor, virtus et glória ab omni creatúra, nobísque remíssio ómnium peccatórum, per infiníta sǽcula sæculórum. 
-	\switchcolumn 
-	\tlumacz{\inicjal{N}{ajświętszej} i~niepodzielnej Trójcy, człowieczeństwu ukrzyżowanego Pana naszego Jezusa Chrystusa, płodnemu dziewictwu błogosławionej i~najchwalebniejszej zawsze\\Dziewicy Maryi oraz wspólnocie wszystkich świętych niech będzie wieczna chwała, cześć, moc i~sława od wszelkiego stworzenia, a~nam odpuszczenie wszystkich grzechów, przez nieskończone wieki wieków. }
-	\switchcolumn *
-	\parbox{\columnwidth}{\red{\Vbar.}~Beáta viscera Mariæ Virginis quæ portavérunt ætérni Patris Filium.\\ \red{\Rbar.}~Et beáta úbera quæ lactavérunt Christum Dóminum.}
-	\switchcolumn 
-	\parbox{\columnwidth}{\tlumacz{\red{\Vbar.}~Błogosławione łono Maryi Dziewicy, które nosiło Syna Ojca przedwiecznego.\\ \red{\Rbar.}~I~błogosławione piersi, które karmiły Chrystusa Pana.}}
-	\switchcolumn* 
-	\parbox{\columnwidth}{\inicjal{P}{ater} noster, qui es in cælis, sanctificétur nomen tuum: advéniat regnum tuum: fiat volúntas tua, sicut in cælo et in terra. Panem nostrum quotidiánum da nobis hódie: et dimítte nobis débita nostra, sicut et nos dimíttimus debitóribus nostris: et ne nos indúcas in tentatiónem: sed líbera nos a malo. Amen}
-	\switchcolumn 
-	\parbox{\columnwidth}{\tlumacz{\inicjal{O}{jcze} nasz, któryś jest w niebie święć się imię Twoje; przyjdź królestwo Twoje; bądź wola Twoja jako w niebie tak i~na ziemi; chleba naszego powszedniego daj nam dzisiaj; i~odpuść nam nasze winy, jako i~my odpuszczamy naszym winowajcom; i~nie wódź nas na pokuszenie; ale nas zbaw od złego. Amen.}}
-	\switchcolumn *
-	\parbox{\columnwidth}{\inicjal{A}{ve} María, grátia plena; Dóminus tecum: benedícta tu in muliéribus, et benedíctus fructus ventris tui Jesus. Sancta María, Mater Dei, ora pro nobis peccatóribus, nunc et in hora mortis nostræ. Amen.}
-	\switchcolumn 
-	\parbox{\columnwidth}{\tlumacz{\inicjal{Z}{drowaś} Maryjo, łaski pełna, Pan z~Tobą, błogosławionaś Ty między niewiastami i~błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i~w~godzinę śmierci naszej. Amen.}}
-\end{paracol}
+\pagebreak
+\thispagestyle{empty}
+\sekcja{Post Divinum officium}{Odmawia się po cichu w pozycji klęczącej.}
+\BeginParallel{0.5}
+\fontsize{14}{18}\selectfont
+	 \latN{\inicjal{S}{acrosánctae} et indivíduae Trinitáti, crucifíxi Dómini nóstri Jésu Chrísti humanitáti, beatíssimae et gloriosíssimae sempérque Vírginis Maríae foecúndae integritáti, et ómnium Sanctórum universitáti sit sempitérna láus, hónor, vírtus et glória ab ómni creatúra, nobísque remíssio ómnium peccatórum, per infiníta saécula saeculórum. Amen.\linespace} 
+	\polN{\inicjal{N}{ajświętszej} i~niepodzielnej Trójcy, człowieczeństwu ukrzyżowanego Pana naszego Jezusa Chrystusa, płodnemu dziewictwu błogosławionej i~najchwalebniejszej zawsze Dziewicy Maryi oraz wspólnocie wszystkich świętych niech będzie wieczna chwała, cześć, moc i~sława od wszelkiego stworzenia, a~nam odpuszczenie wszystkich grzechów, przez nieskończone wieki wieków. Amen.\linespace}
+	\latN{\red{\Vbar.}~Beáta víscera Maríae Vírginis, quáe portavérunt aetérni Pátris Fílium.\\ \red{\Rbar.}~Et beáta úbera, quáe lactavérunt Chrístum Dóminum.\linespace}
+	\polN{\red{\Vbar.}~Błogosławione łono Maryi Dziewicy, które nosiło Syna Ojca przedwiecznego.\\ \red{\Rbar.}~I~błogosławione piersi, które karmiły Chrystusa Pana.\linespace}
+	\latN{\inicjal{P}{áter} nóster, qúi es in caélis, sanctificétur nómen túum: advéniat régnum túum: fíat volúntas túa, sícut in caélo et in térra. Pánem nóstrum quotidiánum da nóbis hódie: et dimítte nóbis débita nóstra, sícut et nos dimíttimus debitóribus nóstris: et ne nos indúcas in tentatiónem: sed líbera nos a málo. Amen.\linespace}
+	\polN{\inicjal{O}{jcze} nasz, któryś jest w niebie święć się imię Twoje; przyjdź królestwo Twoje; bądź wola Twoja jako w niebie tak i~na ziemi; chleba naszego powszedniego daj nam dzisiaj; i~odpuść nam nasze winy, jako i~my odpuszczamy naszym winowajcom; i~nie wódź nas na pokuszenie; ale nas zbaw od złego. Amen.\linespace}
+	\latN{\inicjal{Á}{ve} María, grátia pléna; Dóminus técum: benedícta tu in muliéribus, et benedíctus frúctus véntris túi Jésus. Sáncta María, Máter Déi, óra pro nóbis peccatóribus, nunc et in hóra mórtis nóstrae. Amen.\linespace}
+	\polN{\inicjal{Z}{drowaś} Maryjo, łaski pełna, Pan z~Tobą, błogosławionaś Ty między niewiastami i~błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i~w~godzinę śmierci naszej. Amen.\linespace}
+	\latN{\inicjal{C}{rédo} in Déum, Pátrem omnipoténtem, Creatórem caéli et térrae. Et in Jésum Chrístum, Fílium éjus únicum, Dóminum nóstrum: qúi concéptus est de Spíritu Sáncto, nátus ex María Vírgine, pássus sub Póntio Piláto, crucifíxus, mórtuus, et sepúltus: descéndit ad ínferos; tértia díe resurréxit a mórtuis; ascéndit ad caélos; sédet ad déxteram Déi Pátris omnipoténtis: índe ventúrus est judicáre vívos et mórtuos. Crédo in Spíritum Sánctum, sánctam Ecclésiam cathólicam, Sanctórum communiónem, remissiónem peccatórum, cárnis resurrectiónem, vítam aetérnam. Amen.}
+	\polN{\inicjal{W}{ierzę} w Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, i w Jezusa Chrystusa, Syna Jego jedynego, Pana naszego, który się począł z Ducha Świętego, narodził się z Maryi Panny, umęczon pod Ponckim Piłatem, ukrzyżowan, umarł i pogrzebion. Zstąpił do piekieł, trzeciego dnia zmartwychwstał. Wstąpił na niebiosa, siedzi po prawicy Boga Ojca wszechmogącego. Stamtąd przyjdzie sądzić żywych i umarłych.
+Wierzę w Ducha Świętego, święty Kościół powszechny, świętych obcowanie, grzechów odpuszczenie, ciała zmartwychwstanie, żywot wieczny. Amen.}
+\EndParallel
 \dekor{0.3}{anioly.jpg}
-\newpage
+\pagebreak
 \pagenumbering{gobble}
 \dekor{0.45}{logo_ua.jpg}
 %% -----------------
