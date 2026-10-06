@@ -32,7 +32,7 @@
 % \tracingall przed problematycznym kodem - bardzo dużo informacji
 % lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
 % \errorcontextlines
-\def\mydebug{1}% 0 - debugowanie, 1 - bez debugowania (wyłącza bloki \if\mydebug1)
+\def\mydebug{1}% 0 - debugowanie, 1 - bez debugowania (wyłącza bloki \if\mydebug=0)
 \begin{document}
 % -----------------------------------------------------------------------------------
 % ------------------------- STRONA TYTUŁOWA --------------------------
@@ -573,16 +573,14 @@ A(ded)men.(cd..) (::)}
 \paragraphspace
 \gresetinitiallines{0}
 %\grechangedim{spacelinestext}{18pt}{scalable} % odstęp między linią a dołem tekstu
-%\gregorioscore{Litany-Ioseph-I}%
-\gresetinitiallines{0}\gabcsnippet{(c4) Pa-([gv:\grealign]h)ter([gv:\grealign]h) de([gv:\grealign]h/[2]) (hr/[6]) cae([gv:\grealign]h/[1])<i>lis</i>([gv:\grealign]hgh) <b>De</b>([gv:\grealign]ji)us,([gv:\grealign]h.) (;) mi([gv:\grealign]h)se([gv:\grealign]h')<i>ré</i>([gv:\grealign]i)<i>re</i>([gv:\grealign]g') no([gv:\grealign]i)bis.([gv:\grealign]h.) (::)}
+\gregorioscore{Litany-Ioseph-I}%
 \begin{nstabbing}
 \>Fí-\>li \>Redémptor \>mún-\>\textit{di} \>\textbf{Dé}-\>us, \>mi-\>se\>\textit{ré}\>\textit{re} \>nó\>bis.\\
 \>Spí-\>ri-\>tus \>Sán-\>\textit{cte} \>\textbf{Dé}-\>us, \>mi-\>se\>\textit{ré}\>\textit{re} \>nó\>bis.\\
 \>Sán-\>cta\>Trínitas \>ú-\>\textit{nus} \>\textbf{Dé}-\>us, \>mi-\>se\>\textit{ré}\>\textit{re} \>nó\>bis.\\
 \end{nstabbing}%
 \vspace{-25pt}
-%\gregorioscore{Litany-Ioseph-II}
-\gresetinitiallines{0}\gabcsnippet{(c4) Sanc([gv:\grealign]h)ta([gv:\grealign]h) (hr) <i>()Ma-</i>([gv:\grealign]hgh) ([gv:\grealign]jr[ocba:1{]) <b>rí</b> ([gv:\grealign]ji[ocba:0}])a,([gv:\grealign]h.) (;)  ó([gv:\grealign]h')<i>ra</i>([gv:\grealign]i) <i>pro</i>([gv:\grealign]g') no([gv:\grealign]i)bis.([gv:\grealign]h.) (::)}
+\gregorioscore{Litany-Ioseph-II}
 \begin{nstabbing}
 \>Sán-\>\>\textit{cte}\>\>\textbf{Jo-}\>seph,\>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Próles Da-\>\>\textit{vid}\>ín-\>\textbf{cly-}\>ta,\>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
@@ -597,8 +595,7 @@ A(ded)men.(cd..) (::)}
 \>Ióseph pru-\>\>\textit{den}-\>tís-\>\textbf{si}-\>me, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \end{nstabbing}%
 \vspace{-25pt}
-%\gregorioscore{Litany-Ioseph-III-3}
-\gresetinitiallines{0}\gabcsnippet{(c4) Ió([gv:\grealign]h)seph([gv:\grealign]h) (hr) <i>for-</i>([gv:\grealign]hgh) tís-([gv:\grealign]jr[ocba:1{]) <b>si-</b> ([gv:\grealign]ji[ocba:0}])me,(/[3][gv:\grealign]h.) (;)  ó([gv:\grealign]h')<i>ra</i>([gv:\grealign]i) <i>pro</i>([gv:\grealign]g') no([gv:\grealign]i)bis.([gv:\grealign]h.) (::)}
+\gregorioscore{Litany-Ioseph-III-3}
 \begin{nstabbing}
 %\>Ióseph\>\>\textit{for}-\>tís-\>\textbf{si}-\>me, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \>Ióseph obedi-\>\>\textit{en}-\>tís-\>\textbf{si}-\>me, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
@@ -616,19 +613,12 @@ A(ded)men.(cd..) (::)}
 \>Protéctor sánctae\>\>\textit{Ec}-\>clé-\>\textbf{si}-\>ae, \>ó\>\textit{ra} \>\textit{pro} \>nó\>bis.\\
 \end{nstabbing}%
 \vspace{-20pt}
-%\gregorioscore{Litany-Ioseph-IV}
-% \gresetinitiallines{0}\gabcsnippet{(c4) Á([gv:\grealign]h)gnus(g') Dé([gv:\grealign]i)i,([gv:\grealign]h.) (,) qui([gv:\grealign]h') tól([gv:\grealign]h)lis(h') pec([gv:\grealign]i)cá(j')ta(i) mún([gv:\grealign]kj)di,(h.) (;) pár([gv:\grealign]h)ce(h') nó([gv:\grealign]h)<i>bis</i>(hgh) Dó([gv:\grealign]jr)mi([gv:\grealign]ji)ne.(h.) (::)}
-% \begin{nstabbing}
-% \>Ágnus\>Dé-\>i \>qui\>tóllis\>peccáta\>múndi\>exáu-\>di \textit{nos}\>Dó\>mine.\\
-% \>Ágnus\>Dé-\>i \>qui\>tóllis\>peccáta\>múndi\>mise-\>re\textit{ré}\>\>nóbis.\\
-% \end{nstabbing}%
-\gresetinitiallines{0}
-\gabcsnippet{def-m1: \gretwosavepos{poczatekchoralu};(c4) Á(h)gnus(g') Dé(i)i,(h.) (,) qui(h') tól(h)lis(h') pec(i)cá(j')ta(i) mún(kj)di,(h.) (;) pár(h)ce(h') nó(h)<i>bis</i>(hgh) Dó(jr)mi(ji)ne.(h.) (::)}
+\gregorioscore{Litany-Ioseph-IV}
 \begin{nstabbing}
-\grealignandhskip{poczatekchoralu} \= Ágnus \= Dé- \= i \= qui \= tóllis \= peccáta \= múndi \= exáu- \= di \textit{nos} \= Dó \= mine. \kill
-\> Ágnus \> Dé- \> i \> qui \> tóllis \> peccáta \> múndi \> exáu- \> di \textit{nos} \> Dó \> mine.
-\end{nstabbing}
-\vspace{-10pt}
+\>Ágnus\>Dé-\>i \>qui\>tóllis\>peccá-\hspace{10pt}ta\>múndi\>exáu-\>di\>\textit{nos}\>Dó\>mi-\>ne.\\
+\>Ágnus\>Dé-\>i \>qui\>tóllis\>peccá-\hspace{10pt}ta\>múndi\>mise-\>re-\>\textit{ré}\>\>nó-\>bis.
+\end{nstabbing}%
+%\vspace{-10pt}
 \gresetlastline{ragged}
 \gresetinitiallines{0}\gabcsnippet{(c4) <c><sp>V/</sp>.</c> Con(h)stí(h)tu(h)it(h) éum(h) dó(h)mi(h)num(h) dó(h)mus(h) sú(h)ae.(f.) (::)}
 \hspace{2pt}\red{\Rbar.} Et \hspace{3pt}príncipem \hspace{3pt}ómnis \hspace{3pt}possessiónis \hspace{3pt}súae.\paragraphspace
@@ -638,7 +628,7 @@ A(ded)men.(cd..) (::)}
 \pagebreak
 \subsekcja{Bogurodzica}
 %\grechangedim{spacelinestext}{24pt}{scalable} % odstęp między linią a dołem tekstu
-\grechangedim{intersyllablespacenotes}{0.2cm}{scalable}% Minimalna odległość między nutami różnych sylab.
+%\grechangedim{intersyllablespacenotes}{0.2cm}{scalable}% Minimalna odległość między nutami różnych sylab.
 \gresetinitiallines{1}\gabcsnippet{(c4) Bo(d)gu(c)ro(f)dzi(eDC)ca(d.) (;) Dzie(f)wi(gfg)ca(h.) (,) Bo(j)giem(k) sła(j)wie(hGF)na(f_) Ma(fghg)ry(ec)ja!(d.) (:) U(k) Twe(j)go(hGF) Sy(gfg)na,(h'.) Gos(j)po(k)dzi(jHG)na,(f.) (,) Ma(j)tko(hGF) zwo(fghg)le(ec)na,(d.)(;) Ma(fghg)ry(ec)ja.(d.) (:) Z(f)iści(gfg) nam,(h.) (,) spu(j)ści(i) nam!(k.) (:) Ky(j)ri(h)e,(gf_) e(fghg)le(e)i(d)son.(d.)(:) Twe(de)go(dc) dzie(f)la(g) Chrzci(e)cie(c)la,(d.)(,) Bo(fghg)życ(ec)ze,(d.)(:) u(h)słysz(gf) gło(gfg)sy,(h.)(,) na(d)pełń(c) my(f)śli(g) czło(e)wie(c)cze.(d.) (,) Słysz(c) mo(f)dli(g)twę,(ede) jąż(c) no(d)si(e)my.(d.) (;) A(h) dać(gf) ra(gfg)czy,(h.) (,)Je(de)goż(dc) pro(f)si(g)my:(h.) (;) A(j) na(h) świe(j)cie(g_) zbo(j)żny(hGF) po(gfg)byt,(h.) (,) po(h) ży(j)wo(k)cie(g_) raj(j)ski(hGF) prze(gfg)byt!(h.) (:) Ky(h)ri(g)e,(f_) e(fghg)le(e)i(d)son.(d.) (::)}\segmentspace
 \gresetinitiallines{1}\gabcsnippet{(c4) Sanc(h)ta(g) Ma(h)ri(j)a,(j.) (,)Ma(j_)ter(ij) nos(h)tra(h) dul(ij)cis(k)si(ji)ma,(g.) (,)pro(h)te(e)ge(h) fi(j)li(j)os(ij) tu(h.)os,(h.)(:) qui(h) sub(ij) tu(k)um(j) con(kl)fu(j)gi(i)mus(g.) (,) pa(h)tro(g)ci(f)ni(g)um.(g.) (::)}\linespace
 \tlumaczR{Święta Maryjo, Matko nasza najsłodsza, chroń swoje dzieci, które uciekają się pod Twój patronat.}
