@@ -1,0 +1,79 @@
+% !TEX program = lualatex
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape -halt-on-error %DOC%
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[14pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=12mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{23}%rozmiar wyniku GregorioTEX
+% koniec 
+\gresetlastline{ragged}% justowanie do lewej
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+%\def\mydebug{1}
+\begin{document}
+% ---- nuty bardziej ściśnięte -----
+% \makeatletter
+% \grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+% \makeatother
+% ------ nuty mniej ściśnięte ------
+\makeatletter
+% Zwiększa podstawowy odstęp między nutami i pozwala mu się mocno rozciągać
+\grechangedim{interwordspacenotes}{1.20063pc plus 1.0pc minus 0.15pc}{scalable}
+% Zwiększa przestrzeń między samymi słowami w tekście pod nutami
+\grechangedim{interwordspacetext}{0.35em plus 0.25em minus 0.1em}{scalable}
+\makeatother
+% ----------------------------------
+\pagestyle{empty}
+%\pagestyle{plain}	
+\sekcja{Christe Sanctorum (S. Mich.)}{Liber antiphonarius, 1960, p. 857}
+\greannotation{Hymn.} 
+\greannotation{1} 
+%\grecommentary[4mm]{}
+\gresetinitiallines{1}\gabcsnippet{(c4) CHri(h)ste,(g') san(h)ctó(gf)rum(e.) (,) de(f)cus(g) An(e')ge(f)ló(e)rum,(d.) (;) Gen(d)tis(d) hu(dh)má(hg)nae(gj) sa(j')tor(i) ac(g') re(h)dém(gf)ptor.(e.) (:) Caé(e)li(g')tum(h) no(gf)bis(ed) trí(e')bu(g)as(e) be(f)á(ed)tas(c.) (,) Scán(f)de(e')re(g) se(fe)des.(d.) 2.(::) An(h)ge(g')lus(h) pa(gf)cis(e.) (,) Mí(f)cha(g)el(e') in(f) ae(e)des(d.) (;) Caé(d)li(d)tus(dh) no(hg)stras(gj) vé(j')ni(i)at,(g') se(h)ré(gf)nae(e.) (:) Au(e)ctor(g') ut(h) pa(gf)cis(ed) la(e')cri(g)mó(e)s<i>a</i>() in(f) or(ed)cum(c.) (,) Bel(f)la(e') re(g)lé(fe)get.(d.) 3.(::) An(h)ge(g')lus(h) for(gf)tis(e.) (,) Gá(f)bri(g)el,(e') ut(f) ho(e)stes(d.) (;) Pel(d)lat(d) an(dh)tí(hg)quos,(gj) et(j') a(i)mí(g')ca(h) cae(gf)lo,(e.) (:) Quae(e) tri(g')um(h)phá(gf)tor(ed) stá(e')tu(g)it(e) per(f) or(ed)bem(c.) (,) Tem(f)pla(e') re(g)ví(fe)sat.(d.) 4.(::) An(h)ge(g')lus(h) no(gf)strae(e.) (,) mé(f)di(g)cus(e') sa(f)lú(e)tis,(d.) (;) Ad(d)sit(d) e(dh) cae(hg)lo(gj) Rá(j')pha(i)el,(g') ut(h) o(gf)mnes(e.) (:) Sa(e)net(g') ae(h)gró(gf)tos,(ed) du(e')bi(g)ó(e)sque(f) vi(ed)tae(c.) (,) Dí(f)ri(e')gat(g) a(fe)ctus.(d.) 5.(::) Vir(h)go(g') dux(h) pa(gf)cis,(e.) (,) Ge(f)ni(g)tríx(e')que(f) lu(e)cis,(d.) (;) Et(d) sa(d)cer(dh) no(hg)bis(gj) cho(j')rus(i) An(g')ge(h)ló(gf)rum(e.) (:) Sem(e)per(g') as(h)sí(gf)stat,(ed) si(e')mul(g) et(e) mi(f)cán(ed)tis(c.) (,) Ré(f)gi(e')a(g) cae(fe)li.(d.) 6.(::) Prae(h)stet(g') hoc(h) no(gf)bis(e.) (,) Dé(f)i(g)tas(e') be(f)á(e)ta(d.) (;) Pa(d)tris,(d) ac(dh) Na(hg)ti,(gj) pa(j')ri(i)tér(g')que(h) San(gf)cti(e.) (:) Spí(e)ri(g')tus,(h) cu(gf)jus(ed) ré(e')so(g)nat(e) per(f) o(ed)mnem(c.) (,) Gló(f)ri(e')a(g) mun(fe)dum.(d.) (::) A(ded)men.(cd..) (::)}
+\vspace{5mm}
+\setstretch{1}% odstęp między liniami
+\small
+Chrystusie, świętych aniołów ozdobo!
+Ludzkiego Stwórco rodzaju i Zbawco!
+O, pozwól i nam osiągnąć szczęśliwe
+Niebian siedziby.\\
+Niech Michał, święty Archanioł pokoju,
+Do domów naszych i niebiosów, przybędzie.
+Pokoju sprawca, niech wojny żałosne
+Od nas oddali!\\
+Niech anioł mocy, Gabriel, wypędza
+Odwiecznych wrogów, nawiedza świątynie —
+Te, które Chrystus po świecie zbudował.
+Mile dla nieba.\\
+Anielski lekarz naszego zbawienia
+Niech spłynie, Rafał, z niebiosów, by wszystkich
+Uleczyć chorych i chwiejnych żywota
+Krokiem kierować.\\
+Pokoju Panna, Światłości Rodzica
+I święty zawsze niech chór nam aniołów
+Na pomoc stają, i wszyscy mieszkańcy
+Jasnych niebiosów.\\
+Daj to nam, prosim, o Boska świętości
+Tak Ojca, Syna, jak Ducha Świętego;
+Ty, której chwała rozbrzmiewa od wieków,
+Po całym świecie!\footnote{Tłumaczenie: ks. dr Jan Piwowarczyk}
+\end{document}
