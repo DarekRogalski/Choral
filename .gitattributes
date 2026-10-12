@@ -1,0 +1,3 @@
+*.pdf binary
+Books/ binary
+Books/**/*.* -text -macro
