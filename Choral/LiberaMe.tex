@@ -1,0 +1,62 @@
+% !TEX program = lualatex
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape -halt-on-error %DOC%
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[14pt, twoside, a4paper]{extreport}
+% -----------------------------------------------------------------------------------
+% ------------------------- USTAWIENIA STRONY--------------------------
+% -----------------------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+	left=12mm,
+	right=10mm,
+	top=15mm,
+	bottom=15mm,
+	marginparwidth=0mm,
+	marginparsep=0mm
+	}
+\newcommand{\wstawplik}[1]{\input{../include/#1}}%skraca kod
+\wstawplik{headerofficium}
+% elementy zmienne co do headerofficium:
+\graphicspath{{../img/}} % katalog obrazów
+%\svgpath{{../include/}}
+\grechangestaffsize{23}%rozmiar wyniku GregorioTEX
+% koniec 
+\gresetlastline{ragged}% justowanie do lewej
+% debugowanie:
+% %\iffalse %*** %\fi %***
+% \tracingall przed problematycznym kodem - bardzo dużo informacji
+% lualatex+se+debug - dodatkowe opcje: -file-line-error i -halt-on-error 
+% \errorcontextlines
+%\def\mydebug{1}
+\begin{document}
+% ---- nuty bardziej ściśnięte -----
+% \makeatletter
+% \grechangedim{interwordspacetext}{\unexpanded{\the\fontdimen2\font plus \the\gluestretch\gre@space@skip@interwordspacenotes minus \the\glueshrink\gre@space@skip@interwordspacenotes}}{fixed}%
+% \makeatother
+% ------ nuty mniej ściśnięte ------
+\makeatletter
+% Zwiększa podstawowy odstęp między nutami i pozwala mu się mocno rozciągać
+\grechangedim{interwordspacenotes}{1.20063pc plus 1.0pc minus 0.15pc}{scalable}
+% Zwiększa przestrzeń między samymi słowami w tekście pod nutami
+\grechangedim{interwordspacetext}{0.35em plus 0.25em minus 0.1em}{scalable}
+\makeatother
+% ----------------------------------
+\pagestyle{empty}
+%\pagestyle{plain}	
+\sekcja{Libera me}{Cantionale ecclesiasticum (Poznań 1933), p.1}
+\greannotation{Ant.} 
+\greannotation{IV.2} 
+%\grecommentary[4mm]{}
+\gresetinitiallines{1}\gabcsnippet{(cb3) Lí(c)be(d)ra(cc) me(de) Dó(c)mi(dc)ne(c) de(f) mor(fedef) te(g) ae(g)tér(gfef) na,(fe)
+in(e) di(e)e(ed) (:) il(e)la(dc) tre(d)mén(dcd)da.(c) (::) Quan(c)do(egg) cœ(fef)li(g)mo(gh)(:) vén(hgf)(z)di(f) sunt(e) et(edfedc) ter(decd)ra.(c) (::) Dum(g) vé(h)ne(h)ris(ig) judi(hg)cá(ef)re(gg) sæ(fef)cu(e)lum(e) per(edfedc) i(ded)gnem.(c) (::) 
+℣. Tremens(gghgfefeg) factus(g) sum(g) e(hg)go(ff) et(eh) ti(gfghgh)me(h)o,(hg) dum(c) dis(e)cús(g)si(g)o(gg) vé(gh)nerit(gg) at(ghg)que(f) ven(gh)tú(g)ra(fe) i(f)ra.(fe) (::) Quan(c)do.(eg) (::) ℣. Di(g)es(gg) il(g)la,(ghgfefe) (;) di(g)es(g) (,) i(gh) ræ,(g) (;) ca(g)la(gg)mitá(gf)tis(e) (;) et(eh) mi(h)sé(gfghghh)ri(h)ae,(hg) di(c)es mag(g)na(g) et a(g)má(ghgfghg)ra(fe) val(f)de.(e) (::) Dum(g) vé(hh)ne(g)ris.(g) (::) ℣. Ré(g)qui(g)em(ghgff) ae(g)tér(gh)nam(g) do(g)na(fe) e(eh)is(h) Dó(gfghghh)(:)mi(h)ne(h) et(c) lux(eg) per(g)pé(gh)tu(g)a(g) lú(g)ce(f)at(e) e(ghgfghgfef)is.(fec) (z)}
+\vspace{5mm}
+\setstretch{1}% odstęp między liniami
+\small
+Ten jest dzień, jenże Bóg uczynił jest. Dzisiaj Bóg na ugabanie luda swego wejrzał jest i posłał
+odkupienie. Dzisiaj śmierć, jąż niewiasta zadała, niewiasta oddaliła. Dzisiaj Bóg Człowiek uczynion jest,
+jen przed tym był, ostał, a co nie było, wsioł. Tego dla zbawienia naszego bąć obyczaj, nabożnymi słowy
+chwalmy rzekąc: Chwała Tobie, Gospodnie, Alleluja!\footnote{Przekład polski datowany na XIV wiek, cyt. za: J. Zathey, Fragment nieznanego modlitewnika staropolskiego z XIV wieku. „Biuletyn Biblioteki Jagiellońskiej” 1963, nr 1/2, s. 37}\newline\newline
+Oto jest dzień, który Pan uczynił. Dziś Pan wejrzał na cierpienie swojego ludu i zesłał odkupienie. Dziś śmierć, którą niewiasta sprowadziła, przez niewiastę została przepędzona. Dzisiaj Bóg, który stał się człowiekiem, pozostał Tym, czym był, a przyjął to, czym nie był. Dlatego nabożnie wspominajmy początek naszego odkupienia i radujmy się, mówiąc: Chwała Tobie, Panie. Alleluja, alleluja.\footnote{Tłumaczenie: o. Grzegorz Brodacki OCist}
+\end{document}
