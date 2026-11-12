@@ -242,7 +242,13 @@
 %%\grechangedim{afterinitialshift}{1.0mm}{scalable}
 \grechangestaffsize{24}%rozmiar wyniku GregorioTEX
 %\grechangedim{lineskip}{1 cm plus 0.36 cm minus 0.09 cm}{scalable}% odstęp między liniami
-%\grechangedim{spaceafterlineclef}{1pt}{scalable}% Minimalna odległość między kluczem a nutami 
+% Standardowy odstęp po kluczu na początku każdej linii (domyślnie ok. 0.27 cm)
+\grechangedim{spaceafterlineclef}{0.10 cm plus 0.05 cm minus 0.01 cm}{scalable}
+
+% Krótszy odstęp w pierwszej linii przy inicjale, gdy nuta nie koliduje z kluczem
+\grechangedim{shortspaceafterlineclef}{0.08 cm plus 0.04 cm minus 0.01 cm}{scalable}
+% Minimalny odstęp tekstu od lewej krawędzi linii (domyślnie ok. 0.24 cm)
+\grechangedim{minimalspaceatlinebeginning}{0pt}{scalable}
 % umieszczenie zawartości składu ich unikalnego argumentu po lewej i prawej stronie każdej linii
 \let\grelocalleftbox\localleftbox
 \let\grelocalrightbox\localrightbox
